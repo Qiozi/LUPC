@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27570.jpg?imageView/3/w/150/h/150" alt="Western Digital Red 4TB Hard Drive 5400rpm 64MB 3.5" SATA WD40EFRX" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27570'>
+                                       Western Digital Red 4TB Hard Drive 5400rpm 64MB 3.5" SATA WD40EFRX
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $207.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27190.jpg?imageView/3/w/150/h/150" alt="Seagate Hybrid 4TB Hard Drive 8GB SSD Cache 7200RPM 64MB  3.5" SATAST4000DX001" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27190'>
+                                       Seagate Hybrid 4TB Hard Drive 8GB SSD Cache 7200RPM 64MB  3.5" SATAST4000DX001
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $194.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/23786.jpg?imageView/3/w/150/h/150" alt="Western Digital Red 3TB Hard Drive 64MB SATA 3.5 WD30EFRX" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=23786'>
+                                       Western Digital Red 3TB Hard Drive 64MB SATA 3.5 WD30EFRX
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $151.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27195.jpg?imageView/3/w/150/h/150" alt="Western Digital Blue WD10JPVX 1TB 2.5" Hard Drive -SATA - 5400 rpm- 8 MB Buffer" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27195'>
+                                       Western Digital Blue WD10JPVX 1TB 2.5" Hard Drive -SATA - 5400 rpm- 8 MB Buffer
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $84.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27190.jpg?imageView/3/w/150/h/150" alt="Seagate Hybrid 4TB Hard Drive 8GB SSD Cache 7200RPM 64MB  3.5" SATAST4000DX001" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27190'>
+                                       Seagate Hybrid 4TB Hard Drive 8GB SSD Cache 7200RPM 64MB  3.5" SATAST4000DX001
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $194.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

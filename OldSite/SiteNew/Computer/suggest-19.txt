@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ICUSBAUDIO7/30451.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30451_list_1.jpg" alt="Startech Usb Sound Card ICUSBAUDIO7 Turn a USB port into a virtual 7.1 channel" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ICUSBAUDIO7/30451.html'>
+                                       Startech Usb Sound Card ICUSBAUDIO7 Turn a USB port into a virtual 7.1 channel
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ICUSBAUDIO7/30451.html'><label class="price">Price: $23.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ICUSBAUDIO7D/30450.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30450_list_1.jpg" alt="Startech Usb Sound Card ICUSBAUDIO7D Turn your laptop or PC into a 7.1-channel" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ICUSBAUDIO7D/30450.html'>
+                                       Startech Usb Sound Card ICUSBAUDIO7D Turn your laptop or PC into a 7.1-channel
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ICUSBAUDIO7D/30450.html'><label class="price">Price: $42.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ICUSBAUDIOB/30449.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30449_list_1.jpg" alt="Startech Usb Sound Card ICUSBAUDIOB Add headphone and MIC audio" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ICUSBAUDIOB/30449.html'>
+                                       Startech Usb Sound Card ICUSBAUDIOB Add headphone and MIC audio
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ICUSBAUDIOB/30449.html'><label class="price">Price: $22.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/Xonar-U7/28041.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28041_list_1.jpg" alt="Asus Xonar U7 Sound Card External,True 7.1-channel" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/Xonar-U7/28041.html'>
+                                       Asus Xonar U7 Sound Card External,True 7.1-channel
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/Xonar-U7/28041.html'><label class="price">Price: $116.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/70SB135A00002/26923.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/26923_list_1.jpg" alt="Creative Sound Blaster Recon3D PCIe Sound Card 70SB135A00002" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/70SB135A00002/26923.html'>
+                                       Creative Sound Blaster Recon3D PCIe Sound Card 70SB135A00002
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/70SB135A00002/26923.html'><label class="price">Price: $80.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

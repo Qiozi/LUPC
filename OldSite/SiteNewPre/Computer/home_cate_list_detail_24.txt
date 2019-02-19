@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/VANTEC-NEXSTAR-WiFi-HARD-DRIVE-DOCK.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/24753.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>VANTEC NEXSTAR WiFi HARD DRIVE DOCK</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=24753'>
+										<del>...</del>
+										<span class="price itemprice" sku='24753'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/VANTEC-NEXSTAR-HX-QUAD-3-5-HD-ENCLOSURE.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/24750.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>VANTEC NEXSTAR HX QUAD 3.5"HD ENCLOSURE</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=24750'>
+										<del>...</del>
+										<span class="price itemprice" sku='24750'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/VANTEC-NEXSTAR-HX4R-3-5-HD-ENCL-W-RAID.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/24749.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>VANTEC NEXSTAR HX4R 3.5"HD ENCL W/RAID</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=24749'>
+										<del>...</del>
+										<span class="price itemprice" sku='24749'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/VANTEC-NEXSTAR-FX-GIGABIT-NAS-ENCLOSURE.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/24748.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>VANTEC NEXSTAR FX GIGABIT NAS ENCLOSURE</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=24748'>
+										<del>...</del>
+										<span class="price itemprice" sku='24748'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

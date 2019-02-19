@@ -1,0 +1,17 @@
+E:\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteDB.dll
+E:\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteDB.pdb
+E:\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteModels.dll
+E:\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteModels.pdb
+E:\Projects\LUcomputer\Src\SiteDB\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LUcomputer\Src\SiteDB\obj\Debug\SiteDB.dll
+E:\Projects\LUcomputer\Src\SiteDB\obj\Debug\SiteDB.pdb
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteDB.dll
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteDB.pdb
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteModels.dll
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\bin\Debug\SiteModels.pdb
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\obj\Debug\SiteDB.csprojResolveAssemblyReference.cache
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\obj\Debug\SiteDB.dll
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteDB\obj\Debug\SiteDB.pdb
+C:\Workspaces\LUComputer\Src\OldSite\SiteDB\obj\Debug\SiteDB.csprojResolveAssemblyReference.cache
+C:\Workspaces\LUComputer\Src\OldSite\SiteDB\obj\Debug\SiteDB.dll
+C:\Workspaces\LUComputer\Src\OldSite\SiteDB\obj\Debug\SiteDB.pdb

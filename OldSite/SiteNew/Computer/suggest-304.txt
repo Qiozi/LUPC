@@ -1,0 +1,71 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CWABT310/29122.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/29122.jpg?imageView/3/w/150/h/150" alt="BLUETOOTH SMART CWA BT310 AIRWAVE" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CWABT310/29122.html'>
+                                       BLUETOOTH SMART CWA BT310 AIRWAVE
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CWABT310/29122.html'><label class="price">Price: $109.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CWR200/29121.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/29121.jpg?imageView/3/w/150/h/150" alt="CWR200 WEATHER EMERGENCY RADIO, 3-LV ALERT LED INDICATOR, TORNADO MODE BUTTON, DESKTOP CHARGER & RECHARGEABLE BATTERIES" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CWR200/29121.html'>
+                                       CWR200 WEATHER EMERGENCY RADIO, 3-LV ALERT LED INDICATOR, TORNADO MODE BUTTON, DESKTOP CHARGER & RECHARGEABLE BATTERIES
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CWR200/29121.html'><label class="price">Price: $23.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GPSP-2/29120.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/29120.jpg?imageView/3/w/150/h/150" alt="GPSP-2 4.3 inch Flatscreen GPS Case Pro Int Dim 5.25INX3.5INX1.9 inch" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GPSP-2/29120.html'>
+                                       GPSP-2 4.3 inch Flatscreen GPS Case Pro Int Dim 5.25INX3.5INX1.9 inch
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GPSP-2/29120.html'><label class="price">Price: $14.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

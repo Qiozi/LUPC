@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/1231.jpg?imageView/3/w/150/h/150" alt="QTY 50 RiTek 80min 700MB 52x CD R Media" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=1231'>
+                                       QTY 50 RiTek 80min 700MB 52x CD R Media
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $16.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/1231.jpg?imageView/3/w/150/h/150" alt="QTY 50 RiTek 80min 700MB 52x CD R Media" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=1231'>
+                                       QTY 50 RiTek 80min 700MB 52x CD R Media
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $16.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/1218.jpg?imageView/3/w/150/h/150" alt="QTY 50 RiData 8x DVD R Media" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=1218'>
+                                       QTY 50 RiData 8x DVD R Media
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $15.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/2307.jpg?imageView/3/w/150/h/150" alt="QTY 50 RiData 16x DVD R Media" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=2307'>
+                                       QTY 50 RiData 16x DVD R Media
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $17.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/2307.jpg?imageView/3/w/150/h/150" alt="QTY 50 RiData 16x DVD R Media" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=2307'>
+                                       QTY 50 RiData 16x DVD R Media
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $17.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

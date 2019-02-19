@@ -1,0 +1,14 @@
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\Util.dll.config
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\Util.dll
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\Util.pdb
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\EntityFramework.dll
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\NPOI.dll
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\EntityFramework.xml
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Debug\Util.csprojAssemblyReference.cache
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Debug\Util.csproj.CopyComplete
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Debug\Util.dll
+C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Debug\Util.pdb

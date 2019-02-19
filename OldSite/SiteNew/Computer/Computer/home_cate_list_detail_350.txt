@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/81FV010QUS/computer/81FV010QUS/35664.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35577.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo Legion Y530 Notebook ,i7-8750H 6Core,16GB,1TB HDD+256GB SSD,GTX 1050 Ti</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=223333836815"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1787.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35664'>
+										<del>...</del>
+										<span class="price itemprice" sku='35664'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/81FK009UUS/computer/81FK009UUS/35661.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35148.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo IdeaPad 330-15ICH Notebook,Intel i7-8750H,12GB RAM,1TB HDD,GTX1050, Win10</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=254083453316"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1511.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35661'>
+										<del>...</del>
+										<span class="price itemprice" sku='35661'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/20KV000YUS/computer/20KV000YUS/35658.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35277.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo ThinkPad E585 Notebook, AMD Ryzen7 2700U, 15.6", 8GB RAM, 256GB SSD,Win10</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=254088328301"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1168.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35658'>
+										<del>...</del>
+										<span class="price itemprice" sku='35658'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/81FV0001US/computer/81FV0001US/35577.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35577.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo Legion Y530-15ICH Gaming Notebook ,i7-8750H 6Core,8GB RAM,1TB ,GTX1050Ti</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=372526254098"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1622.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35577'>
+										<del>...</del>
+										<span class="price itemprice" sku='35577'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

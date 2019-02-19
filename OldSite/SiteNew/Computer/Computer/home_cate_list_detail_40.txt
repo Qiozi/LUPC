@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/6W11-016GR2TSC/computer/6W11-016GR2TSC/30112.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/30112.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>PQI Memory Flash 6W11-016GR2TSC 16GB</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=30112'>
+										<del>...</del>
+										<span class="price itemprice" sku='30112'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/SDSDU-064G-U46S/computer/SDSDU-064G-U46S/28936.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28936.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Sandisk Flash Memory Card 64 GB SDSDU-064G-U46S</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28936'>
+										<del>...</del>
+										<span class="price itemprice" sku='28936'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/SDSDU-032G-U46S/computer/SDSDU-032G-U46S/28935.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28935.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Sandisk Flash Memory Card 32 GB SDSDU-032G-U46S - SDHC Memory Card</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28935'>
+										<del>...</del>
+										<span class="price itemprice" sku='28935'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/SDSDU-016G-U46S/computer/SDSDU-016G-U46S/28934.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28934.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Sandisk  Flash Memory Card - 16 GB - SDHC Memory Card - SDSDU-016G-U46S</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28934'>
+										<del>...</del>
+										<span class="price itemprice" sku='28934'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

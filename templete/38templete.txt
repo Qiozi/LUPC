@@ -1,0 +1,227 @@
+<style>
+<!--
+
+.part_detail_desc td { font-family:Verdana, Arial, Helvetica, sans-serif; font-size: 8.5pt; color: #111111;}
+-->
+</style>
+</head>
+
+<body>
+
+<table cellpadding="3" cellspacing="0" height="100%" bgcolor="#CDE3F2" width="1000" style="border: 1px solid #999999;">
+	<!-- MSTableType="layout" -->
+	<tr>
+
+		<td valign="top" height="100%">
+		<!-- MSCellType="ContentHead2" -->
+		<TABLE CELLSPACING="0" CELLPADDING="0" width="770"><TR><TD VALIGN="top"><div>
+<table width="775" bgcolor="#cde3f2" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td style="padding-bottom:3px" valign="top">
+<table id="__2" width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_01.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/images/in_box7_02.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_02.gif" width="1" height="6"></td>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_03.gif" width="6" height="6"></td></tr>
+<tr>
+<td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_04.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_04.gif" width="6" height="1"></td>
+<td valign="top" bgcolor="#ffffff" style="text-align:center">[lu_web_ebay_system_big_img]</td>
+<td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_06.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_06.gif" width="6" height="1"></td></tr>
+<tr>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_07.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/images/in_box7_08.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_08.gif" width="1" height="6"></td>
+
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_09.gif" width="6" height="6"></td></tr></table></td></tr>
+[lu_web_ebay_system_main_comment]
+</tbody></table>
+<table width="775" bgcolor="#cde3f2" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td style="padding: 0px;"><a name="sList"></a>
+<table id="__01" border="0" cellpadding="0" cellspacing="0" height="27" style="margin: 3px auto 3px 3px;">
+
+
+<tbody><tr>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/bar_title_01.gif" width="47" height="27"></td>
+<td style="padding-right: 10px; padding-left: 10px;" background="http://www.lucomputers.com/ebay/newebaytemplate/bar_title_02.gif">
+
+<table id="table257"  border="0" cellpadding="0" cellspacing="0">
+
+<tbody><tr>
+<td style="font-family: 'Verdana'; font-style: normal; font-variant: normal; font-weight: 700; font-size: 13px; line-height: 16px; font-size-adjust: none; font-stretch: normal; color: rgb(255, 255, 255); letter-spacing: 0px; text-align:center; width:300px">
+System Specifications</td></tr></tbody></table></td>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/bar_title_03.gif" width="106" height="27"></td></tr></tbody></table></td></tr></tbody></table>
+
+<table id="__" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:3px; ">
+          <tr>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_01.gif" width="6" height="6" /></td>
+            <td background="http://www.lucomputers.com/ebay/images/in_box7_02.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_02.gif" width="1" height="6" /></td>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_03.gif" width="6" height="6" /></td>
+          </tr>
+          <tr>
+            <td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_04.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_04.gif" width="6" height="1" /></td>
+            <td style="padding-left:5px; padding-right:5px; padding-top:15px; padding-bottom:15px" valign="top" bgcolor="#ffffff"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+              [lu_web_top_row]
+               
+            </table></td>
+            <td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_06.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_06.gif" width="6" height="1" /></td>
+          </tr>
+          <tr>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_07.gif" width="6" height="6" /></td>
+            <td background="http://www.lucomputers.com/ebay/images/in_box7_08.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_08.gif" width="1" height="6" /></td>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_09.gif" width="6" height="6" /></td>
+          </tr>
+        </table>
+        
+        [lu_web_top_row2]
+
+<table style="border-left: 1px solid rgb(142, 154, 168); border-right: 1px solid rgb(142, 154, 168);" width="770" bgcolor="#cde3f2" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td style="padding-right: 0px; padding-left: 3px;">
+</td></tr></tbody></table>
+<table width="775" bgcolor="#cde3f2" cellpadding="0" cellspacing="0">
+
+<tbody><tr background="../eBay Listing Pictures/demo.gif">
+<td style="padding: 0px;">
+<table id="__01" border="0" cellpadding="0" cellspacing="0" height="27" style="margin:3px auto 3px 3px;">
+
+
+<tbody><tr>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/bar_title_01.gif" width="47" height="27"></td>
+<td style="padding-right: 10px; padding-left: 10px;" background="http://www.lucomputers.com/ebay/newebaytemplate/bar_title_02.gif">
+
+<table id="table257" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+<tbody><tr>
+<td style="font-family: 'Verdana'; font-style: normal; font-variant: normal; font-weight: 700; font-size: 13px; line-height: 16px; font-size-adjust: none; font-stretch: normal; color: rgb(255, 255, 255); letter-spacing: 0px; text-align:center; width:300px">
+Description</td></tr></tbody></table></td>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/bar_title_03.gif" width="106" height="27"></td></tr></tbody></table></td></tr></tbody></table>
+<table width="775" bgcolor="#cde3f2" cellpadding="0" cellspacing="0">
+
+
+<tbody><tr style="display: none;">
+<td style="">
+<table id="__23" width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_01.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_02.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_02.gif" width="1" height="6"></td>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_03.gif" width="6" height="6"></td></tr>
+<tr>
+<td width="6" background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_04.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_04.gif" width="6" height="1"></td>
+<td style="padding-top: 0pt;" bgcolor="#ffffff">
+<a name="FAQ4"></a>
+<a name="Contact4"></a>
+<span align="center">[lu_web_flash_view]</span>
+</td>
+
+
+<td width="6" background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_06.gif">
+
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_06.gif" width="6" height="1"></td></tr>
+<tr>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_07.gif" width="6" height="6"></td>
+<td background="in_box7_08.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_08.gif" width="1" height="6"></td>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_09.gif" width="6" height="6"></td></tr></tbody></table></td></tr></tbody></table>
+<table width="770" bgcolor="#cde3f2" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td style="padding-right: 0px;">
+<table id="__25" width="775" align="center" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_01.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/images/in_box7_02.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_02.gif" width="1" height="6"></td>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_03.gif" width="6" height="6"></td></tr>
+<tr>
+<td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_04.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_04.gif" width="6" height="1"></td>
+<td style="padding: 5px;" valign="top" bgcolor="#ffffff">
+[lu_web_info_row]
+
+</td>
+<td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_06.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_06.gif" width="6" height="1"></td></tr>
+<tr>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_07.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/images/in_box7_08.gif"><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_08.gif" width="1" height="6"></td>
+<td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_09.gif" width="6" height="6"></td></tr></table>
+
+</td></tr></tbody></table>
+
+
+
+<!-- comment -->
+<table id="__01" width="775" border="0" cellpadding="0" cellspacing="0" align="right" style="margin-top:3px;">
+<tbody>
+<tr>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_01.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_02.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_02.gif" width="1" height="6"></td>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_03.gif" width="6" height="6"></td></tr>
+<tr>
+<td width="6" background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_04.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_04.gif" width="6" height="1"></td>
+<td style="padding: 0px; font-size: 12px; color: rgb(102, 102, 102); font-family: Verdana; letter-spacing: 0px;" valign="top" align="middle" bgcolor="#ffffff">
+			<p align="center">
+  <font face="Verdana" size="2" color="#A53411">
+  <b><a href="#sList" style="text-decoration: none"><font color="#006699">Specifics&nbsp;&nbsp;
+
+	</font></a></b><a href="#sList" style="text-decoration: none">
+	<font color="#006699">|</font></a><b><font face="Verdana" size="2" color="#006699">&nbsp;&nbsp;
+	<a style="text-decoration: none" target="_blank" href="http://stores.shop.ebay.ca/LU-Computers-Inc">
+	<font color="#006699">Store </font></a></font><font color="#006699">&nbsp;</font><a style="text-decoration: none" href="http://stores.shop.ebay.ca/LU-Computers-Inc"><font color="#006699">
+
+	</font></a></b>
+	<a style="text-decoration: none" href="http://stores.shop.ebay.ca/LU-Computers-Inc">
+	<font color="#006699">|</font></a><b><font face="Verdana" size="2" color="#006699">&nbsp;&nbsp; </font>
+	<a href="#Terms" style="text-decoration: none"><font color="#006699">Shipping&nbsp;&nbsp;
+	</font></a></b><font color="#006699">
+	<a href="#Terms" style="text-decoration: none">|<b> <font color="#006699">&nbsp; Payment&nbsp;&nbsp;
+
+	</font></b><font color="#006699">|</font><b><font color="#006699">&nbsp;&nbsp; Tax&nbsp;
+	</font></b></a></font>
+  <b><font face="Verdana" size="2" color="#006699"> <br>
+	</font><a href="#Terms" style="text-decoration: none"><font color="#006699">Return Policy&nbsp;&nbsp;
+	</font></a></b><a href="#Terms" style="text-decoration: none">
+	<font color="#006699">|<b>&nbsp;&nbsp; Warranty&nbsp;&nbsp; </b></font></a>
+
+	<a href="#me" style="text-decoration: none"><font color="#006699">|<b>&nbsp;&nbsp; About Us&nbsp;&nbsp; </b>|</font></a><b><font face="Verdana" size="2" color="#006699">&nbsp;&nbsp; </font>
+	<a href="#contact" style="text-decoration: none"><font color="#006699">Contact Us&nbsp;
+	</font></a></b><a href="#contact" style="text-decoration: none">
+	<font color="#006699">&nbsp;|</font></a><b><font face="Verdana" size="2" color="#006699">&nbsp;&nbsp; </font>
+
+	<a style="text-decoration: none" target="_blank" href="http://feedback.ebay.ca/ws/eBayISAPI.dll?ViewFeedback2&userid=dpowerseller&&sspagename=VIP:feedback&ftab=FeedbackAsSeller">
+	<font color="#006699">Feedback</font></a></b></font></p></td>
+
+<td width="6" background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_06.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_06.gif" width="6" height="1"></td></tr>
+<tr>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_07.gif" width="6" height="6"></td>
+<td background="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_08.gif">
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_08.gif" width="1" height="6"></td>
+<td>
+<img alt="" src="http://www.lucomputers.com/ebay/newebaytemplate/in_box7_09.gif" width="6" height="6"></td></tr></tbody></table>
+<!-- end -->
+</div></TD></TR><TR><TD VALIGN="top" ALIGN="center"></TD></TR></TABLE></td>
+<td valign="top" rowspan="2" width="239" style="padding-left:0px">[web_page_right]</td>
+	</tr>
+	<tr>
+		<td valign="top" height="19" width="770">
+		<!-- MSCellType="ContentBody" -->
+		<p align="center">
+<font color="#006699" face="Verdana" style="font-size: 9pt">[Copyrights]</font><br>
+&nbsp;</td>
+
+	</tr>
+</table>

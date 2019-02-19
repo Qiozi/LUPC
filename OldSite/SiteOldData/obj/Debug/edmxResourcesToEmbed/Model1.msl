@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nicklu2ModelStoreContainer" CdmEntityContainer="nicklu2Entities">
+    <EntitySetMapping Name="tb_ebay_system_item_specifics">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_item_specifics">
+        <MappingFragment StoreEntitySet="tb_ebay_system_item_specifics">
+          <ScalarProperty Name="ItemSpecificsValue" ColumnName="ItemSpecificsValue" />
+          <ScalarProperty Name="ItemSpecificsName" ColumnName="ItemSpecificsName" />
+          <ScalarProperty Name="system_sku" ColumnName="system_sku" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system">
+        <MappingFragment StoreEntitySet="tb_ebay_system">
+          <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+          <ScalarProperty Name="batch" ColumnName="batch" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="eBayCategoryName" ColumnName="eBayCategoryName" />
+          <ScalarProperty Name="tmp_discount" ColumnName="tmp_discount" />
+          <ScalarProperty Name="tmp_sell" ColumnName="tmp_sell" />
+          <ScalarProperty Name="profit" ColumnName="profit" />
+          <ScalarProperty Name="shipping_fee" ColumnName="shipping_fee" />
+          <ScalarProperty Name="ebay_fee" ColumnName="ebay_fee" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="sub_part_quantity" ColumnName="sub_part_quantity" />
+          <ScalarProperty Name="templete_id" ColumnName="templete_id" />
+          <ScalarProperty Name="is_barebone" ColumnName="is_barebone" />
+          <ScalarProperty Name="flashVersion" ColumnName="flashVersion" />
+          <ScalarProperty Name="parent_ebay_itemid" ColumnName="parent_ebay_itemid" />
+          <ScalarProperty Name="parentID" ColumnName="parentID" />
+          <ScalarProperty Name="is_shrink" ColumnName="is_shrink" />
+          <ScalarProperty Name="is_disable_flash_customize" ColumnName="is_disable_flash_customize" />
+          <ScalarProperty Name="is_online" ColumnName="is_online" />
+          <ScalarProperty Name="source_code" ColumnName="source_code" />
+          <ScalarProperty Name="adjustment" ColumnName="adjustment" />
+          <ScalarProperty Name="is_from_ebay" ColumnName="is_from_ebay" />
+          <ScalarProperty Name="large_pic_name" ColumnName="large_pic_name" />
+          <ScalarProperty Name="is_issue" ColumnName="is_issue" />
+          <ScalarProperty Name="main_comment_ids" ColumnName="main_comment_ids" />
+          <ScalarProperty Name="cutom_label" ColumnName="cutom_label" />
+          <ScalarProperty Name="system_title3" ColumnName="system_title3" />
+          <ScalarProperty Name="system_title2" ColumnName="system_title2" />
+          <ScalarProperty Name="system_title1" ColumnName="system_title1" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="logo_filenames" ColumnName="logo_filenames" />
+          <ScalarProperty Name="view_count" ColumnName="view_count" />
+          <ScalarProperty Name="showit" ColumnName="showit" />
+          <ScalarProperty Name="is_include_shipping" ColumnName="is_include_shipping" />
+          <ScalarProperty Name="no_selected_ebay_sell" ColumnName="no_selected_ebay_sell" />
+          <ScalarProperty Name="selected_ebay_sell" ColumnName="selected_ebay_sell" />
+          <ScalarProperty Name="ebay_system_current_number" ColumnName="ebay_system_current_number" />
+          <ScalarProperty Name="ebay_system_price" ColumnName="ebay_system_price" />
+          <ScalarProperty Name="ebay_subtitle" ColumnName="ebay_subtitle" />
+          <ScalarProperty Name="ebay_system_name" ColumnName="ebay_system_name" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_item_specifics_keyword">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_item_specifics_keyword">
+        <MappingFragment StoreEntitySet="tb_ebay_system_item_specifics_keyword">
+          <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+          <ScalarProperty Name="SpecificsValue" ColumnName="SpecificsValue" />
+          <ScalarProperty Name="SpecificsName" ColumnName="SpecificsName" />
+          <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_product">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_product">
+        <MappingFragment StoreEntitySet="tb_product">
+          <ScalarProperty Name="SpecificsCount" ColumnName="SpecificsCount" />
+          <ScalarProperty Name="new_href_url" ColumnName="new_href_url" />
+          <ScalarProperty Name="for_sys" ColumnName="for_sys" />
+          <ScalarProperty Name="is_fixed" ColumnName="is_fixed" />
+          <ScalarProperty Name="short_name_for_sys" ColumnName="short_name_for_sys" />
+          <ScalarProperty Name="href_url" ColumnName="href_url" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="UPC" ColumnName="UPC" />
+          <ScalarProperty Name="img_url" ColumnName="img_url" />
+          <ScalarProperty Name="prodType" ColumnName="prodType" />
+          <ScalarProperty Name="is_top" ColumnName="is_top" />
+          <ScalarProperty Name="is_modify" ColumnName="is_modify" />
+          <ScalarProperty Name="ebay_system_short_name" ColumnName="ebay_system_short_name" />
+          <ScalarProperty Name="curr_change_regdate" ColumnName="curr_change_regdate" />
+          <ScalarProperty Name="curr_change_quantity" ColumnName="curr_change_quantity" />
+          <ScalarProperty Name="curr_change_ltd" ColumnName="curr_change_ltd" />
+          <ScalarProperty Name="curr_change_price" ColumnName="curr_change_price" />
+          <ScalarProperty Name="curr_change_cost" ColumnName="curr_change_cost" />
+          <ScalarProperty Name="price_sku_quantity" ColumnName="price_sku_quantity" />
+          <ScalarProperty Name="price_sku" ColumnName="price_sku" />
+          <ScalarProperty Name="screen_size" ColumnName="screen_size" />
+          <ScalarProperty Name="part_ebay_describe" ColumnName="part_ebay_describe" />
+          <ScalarProperty Name="adjustment_enddate" ColumnName="adjustment_enddate" />
+          <ScalarProperty Name="adjustment_regdate" ColumnName="adjustment_regdate" />
+          <ScalarProperty Name="adjustment" ColumnName="adjustment" />
+          <ScalarProperty Name="split_name" ColumnName="split_name" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="view_count" ColumnName="view_count" />
+          <ScalarProperty Name="issue" ColumnName="issue" />
+          <ScalarProperty Name="real_cost_regdate" ColumnName="real_cost_regdate" />
+          <ScalarProperty Name="part_ebay_price" ColumnName="part_ebay_price" />
+          <ScalarProperty Name="part_ebay_cost" ColumnName="part_ebay_cost" />
+          <ScalarProperty Name="last_regdate" ColumnName="last_regdate" />
+          <ScalarProperty Name="product_current_discount" ColumnName="product_current_discount" />
+          <ScalarProperty Name="export" ColumnName="export" />
+          <ScalarProperty Name="category_idss" ColumnName="category_idss" />
+          <ScalarProperty Name="other_product_sku" ColumnName="other_product_sku" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="agent_stock" ColumnName="agent_stock" />
+          <ScalarProperty Name="old_db_id" ColumnName="old_db_id" />
+          <ScalarProperty Name="producter_serial_no" ColumnName="producter_serial_no" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="shortcomment" ColumnName="shortcomment" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="is_non" ColumnName="is_non" />
+          <ScalarProperty Name="product_size_id" ColumnName="product_size_id" />
+          <ScalarProperty Name="product_img_sum" ColumnName="product_img_sum" />
+          <ScalarProperty Name="shopbot_info" ColumnName="shopbot_info" />
+          <ScalarProperty Name="product_name_long_en" ColumnName="product_name_long_en" />
+          <ScalarProperty Name="split_line" ColumnName="split_line" />
+          <ScalarProperty Name="product_compatibility" ColumnName="product_compatibility" />
+          <ScalarProperty Name="producter_serial_no_bak" ColumnName="producter_serial_no_bak" />
+          <ScalarProperty Name="new" ColumnName="new" />
+          <ScalarProperty Name="hot" ColumnName="hot" />
+          <ScalarProperty Name="product_short_name_f" ColumnName="product_short_name_f" />
+          <ScalarProperty Name="product_ebay_name" ColumnName="product_ebay_name" />
+          <ScalarProperty Name="product_ebay_name_2" ColumnName="product_ebay_name_2" />
+          <ScalarProperty Name="product_ship_price_2" ColumnName="product_ship_price_2" />
+          <ScalarProperty Name="product_current_cost_2" ColumnName="product_current_cost_2" />
+          <ScalarProperty Name="product_sale_sum_2" ColumnName="product_sale_sum_2" />
+          <ScalarProperty Name="ltd_stock" ColumnName="ltd_stock" />
+          <ScalarProperty Name="manufacturer_part_number" ColumnName="manufacturer_part_number" />
+          <ScalarProperty Name="supplier_sku" ColumnName="supplier_sku" />
+          <ScalarProperty Name="product_order" ColumnName="product_order" />
+          <ScalarProperty Name="producter_url" ColumnName="producter_url" />
+          <ScalarProperty Name="product_ship_price" ColumnName="product_ship_price" />
+          <ScalarProperty Name="product_current_cost" ColumnName="product_current_cost" />
+          <ScalarProperty Name="product_current_price" ColumnName="product_current_price" />
+          <ScalarProperty Name="product_current_special_cash_price" ColumnName="product_current_special_cash_price" />
+          <ScalarProperty Name="product_current_real_cost" ColumnName="product_current_real_cost" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="product_filename" ColumnName="product_filename" />
+          <ScalarProperty Name="menu_child_serial_no" ColumnName="menu_child_serial_no" />
+          <ScalarProperty Name="product_sale_sum" ColumnName="product_sale_sum" />
+          <ScalarProperty Name="product_store_sum" ColumnName="product_store_sum" />
+          <ScalarProperty Name="product_short_name" ColumnName="product_short_name" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_serial_no" ColumnName="product_serial_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_timer_href">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_timer_href">
+        <MappingFragment StoreEntitySet="tb_timer_href">
+          <ScalarProperty Name="UrlToken" ColumnName="UrlToken" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_case_group">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_case_group">
+        <MappingFragment StoreEntitySet="tb_ebay_system_case_group">
+          <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+          <ScalarProperty Name="CaseSku" ColumnName="CaseSku" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_hdd_group">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_hdd_group">
+        <MappingFragment StoreEntitySet="tb_ebay_system_hdd_group">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_memory_group">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_memory_group">
+        <MappingFragment StoreEntitySet="tb_ebay_system_memory_group">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_part_comment">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_part_comment">
+        <MappingFragment StoreEntitySet="tb_ebay_system_part_comment">
+          <ScalarProperty Name="defaultPartGroupId" ColumnName="defaultPartGroupId" />
+          <ScalarProperty Name="eBayShowit" ColumnName="eBayShowit" />
+          <ScalarProperty Name="e_field_name" ColumnName="e_field_name" />
+          <ScalarProperty Name="section" ColumnName="section" />
+          <ScalarProperty Name="append_charge" ColumnName="append_charge" />
+          <ScalarProperty Name="showit" ColumnName="showit" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="max_quantity" ColumnName="max_quantity" />
+          <ScalarProperty Name="is_cpu_fan" ColumnName="is_cpu_fan" />
+          <ScalarProperty Name="is_network" ColumnName="is_network" />
+          <ScalarProperty Name="is_audio" ColumnName="is_audio" />
+          <ScalarProperty Name="is_video" ColumnName="is_video" />
+          <ScalarProperty Name="is_mb" ColumnName="is_mb" />
+          <ScalarProperty Name="is_lcd" ColumnName="is_lcd" />
+          <ScalarProperty Name="is_cpu" ColumnName="is_cpu" />
+          <ScalarProperty Name="is_case" ColumnName="is_case" />
+          <ScalarProperty Name="category_ids" ColumnName="category_ids" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_parts">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_parts">
+        <MappingFragment StoreEntitySet="tb_ebay_system_parts">
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="eBayShowit" ColumnName="eBayShowit" />
+          <ScalarProperty Name="is_belong_price" ColumnName="is_belong_price" />
+          <ScalarProperty Name="is_label_of_flash" ColumnName="is_label_of_flash" />
+          <ScalarProperty Name="is_online" ColumnName="is_online" />
+          <ScalarProperty Name="part_group_id" ColumnName="part_group_id" />
+          <ScalarProperty Name="compatibility_parts" ColumnName="compatibility_parts" />
+          <ScalarProperty Name="max_quantity" ColumnName="max_quantity" />
+          <ScalarProperty Name="part_quantity" ColumnName="part_quantity" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="comment_name" ColumnName="comment_name" />
+          <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="system_sku" ColumnName="system_sku" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_ssd_group">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_ssd_group">
+        <MappingFragment StoreEntitySet="tb_ebay_system_ssd_group">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_ssdm2_group">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_ssdm2_group">
+        <MappingFragment StoreEntitySet="tb_ebay_system_ssdm2_group">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_system_vc_group">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_system_vc_group">
+        <MappingFragment StoreEntitySet="tb_ebay_system_vc_group">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ebay_selling">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_selling">
+        <MappingFragment StoreEntitySet="tb_ebay_selling">
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="BuyItNowPriceNew" ColumnName="BuyItNowPriceNew" />
+          <ScalarProperty Name="sys_sku" ColumnName="sys_sku" />
+          <ScalarProperty Name="luc_sku" ColumnName="luc_sku" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="ClassifiedAdPayPerLeadFee" ColumnName="ClassifiedAdPayPerLeadFee" />
+          <ScalarProperty Name="PictureDetails_GalleryURL" ColumnName="PictureDetails_GalleryURL" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+          <ScalarProperty Name="WatchCount" ColumnName="WatchCount" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TimeLeft" ColumnName="TimeLeft" />
+          <ScalarProperty Name="ShippingDetails_ShippingServiceCost" ColumnName="ShippingDetails_ShippingServiceCost" />
+          <ScalarProperty Name="SellingStatus_CurrentPrice_currencyID" ColumnName="SellingStatus_CurrentPrice_currencyID" />
+          <ScalarProperty Name="SellingStatus_CurrentPrice" ColumnName="SellingStatus_CurrentPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ListingType" ColumnName="ListingType" />
+          <ScalarProperty Name="ListingDetails_ViewItemURLForNaturalSearch" ColumnName="ListingDetails_ViewItemURLForNaturalSearch" />
+          <ScalarProperty Name="ListingDetails_ViewItemURL" ColumnName="ListingDetails_ViewItemURL" />
+          <ScalarProperty Name="ListingDetails_StartTime" ColumnName="ListingDetails_StartTime" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="BuyItNowPrice_currencyID" ColumnName="BuyItNowPrice_currencyID" />
+          <ScalarProperty Name="BuyItNowPrice" ColumnName="BuyItNowPrice" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

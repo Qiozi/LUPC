@@ -1,0 +1,5 @@
+{"cpu":["AMD AM4 A8 9600 3.1GHz","AMD Ryzen 5 2600 3.4GHz","AMD Ryzen3 2200G","AMD Ryzen5 2400G","Intel Core i7-8700","Intel i3-8100 3.6GHz","Intel i5-7500 3.4GHz","Intel i5-8400 2.8GHz","Intel i5-8500 3.00 GHz"]
+                ,"vc":["NV GTX 1050","NV GTX1050"]
+                ,"memory":["16G DDR4 RAM","32G DDR4 RAM","4G DDR4 RAM","8G DDR4 RAM"]
+                ,"ssd":["120GB SSD","240GB SSD","250GB SSD","480GB SSD"]
+                ,"hd":["1TB HDD","2TB HDD"]}

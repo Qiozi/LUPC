@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30192.jpg?imageView/3/w/150/h/150" alt="MSI 970 GAMING Motherboard AMD 970 AM3+ USb3.0" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30192'>
+                                       MSI 970 GAMING Motherboard AMD 970 AM3+ USb3.0
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $130.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30676.jpg?imageView/3/w/150/h/150" alt="MSI Z170A GAMING M7 Motherboard USB 3.1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30676'>
+                                       MSI Z170A GAMING M7 Motherboard USB 3.1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $296.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30192.jpg?imageView/3/w/150/h/150" alt="MSI 970 GAMING Motherboard AMD 970 AM3+ USb3.0" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30192'>
+                                       MSI 970 GAMING Motherboard AMD 970 AM3+ USb3.0
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $130.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/31080.jpg?imageView/3/w/150/h/150" alt="ASUS 970 PRO GAMING/AURA Motherboard AMD AM3+" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=31080'>
+                                       ASUS 970 PRO GAMING/AURA Motherboard AMD AM3+
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $153.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26106.jpg?imageView/3/w/150/h/150" alt="GIGABYTE GA-970A-DS3P Motherboard, SKT AM3+ 970, USB3" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26106'>
+                                       GIGABYTE GA-970A-DS3P Motherboard, SKT AM3+ 970, USB3
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $100.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

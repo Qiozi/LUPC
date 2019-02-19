@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  This file contains basic settings needed for most web apps.
+  For full Combres settings (with explanation), refer to the sample definition file: combres_full_with_annotation.xml
+  Also, refer to Combres' documentation: http://combres.codeplex.com/documentation	
+-->
+<combres xmlns='urn:combres'>
+  <filters>
+    <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" />
+  </filters>
+  <!--<jsMinifiers>
+    <minifier name="msajax" type="Combres.Minifiers.MSAjaxJSMinifier, Combres"
+ binderType="Combres.Binders.SimpleObjectBinder, Combres">
+      <param name="CollapseToLiteral" type="bool" value="true" />
+      <param name="EvalsAreSafe" type="bool" value="false" />
+      <param name="MacSafariQuirks" type="bool" value="true" />
+      <param name="CatchAsLocal" type="bool" value="true" />
+      <param name="LocalRenaming" type="string" value="CrunchAll" />
+      <param name="OutputMode" type="string" value="SingleLine" />
+      <param name="RemoveUnneededCode" type="bool" value="true" />
+      <param name="StripDebugStatements" type="bool" value="true" />
+    </minifier>
+  </jsMinifiers>-->
+  <resourceSets url="~/combres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                defaultDebugEnabled="true"
+                defaultIgnorePipelineWhenDebug="true"
+                localChangeMonitorInterval="30"
+                remoteChangeMonitorInterval="60"
+
+                >
+    <!--当这个(defaultDebugEnabled = false)值为false时， js加载会报 500 错误   -->
+    <resourceSet name="siteCss" type="css" >
+      <resource path="~/content/bootstrap.css" />
+      <resource path="~/Content/fixedsticky.css"></resource>
+      <resource path="~/content/bootstrap-datetimepicker.css" />
+      <!--<resource path="~/Content/sweetalert/sweetalert.css"  />-->
+      <resource path="~/Content/bootstrap-theme.css"  />
+      <resource path="~/Content/swiper.3.4.2/css/swiper.css"  />
+      <resource path="~/Content/iconfont.css"  />
+      <resource path="~/Content/share.css"  />
+      <resource path="~/Content/skins/square/_all.css"  />
+      <resource path="~/Content/normal.css"/>
+      <resource path="~/Content/p.min.css" />
+      <resource path="~/Content/media.css" />
+      <resource path="~/Content/wyy-pageheader.css" />
+    </resourceSet>
+    <resourceSet name="siteJs" type="js" >
+      <resource path="~/Scripts/jquery-2.0.0.js"  />     
+      <!--<resource path="~/Scripts/require.js"  />-->
+      <resource path="~/js/libs/md5.js" />
+      <resource path="~/Scripts/bootstrap.js"  />
+      <resource path="~/Scripts/bootstrap-datetimepicker.js"  />
+      <!--<resource path="~/Content/sweetalert/sweetalert.js" />-->
+      <resource path="~/Scripts/lazyload/jquery.lazyload.js" />
+      <resource path="~/Scripts/jquery.cookie.js" />
+      <resource path="~/Scripts/jquery.validate.js" />
+      <resource path="~/Scripts/jquery.qrcode.min.js"></resource>
+      <resource path="~/Scripts/jquery.share.js" />
+      <!-->resource path="~/Scripts/icheck.js"/-->
+      <resource path="~/Scripts/icheck.js" ></resource>
+      <resource path="~/Scripts/bootstrap3-typeahead.js" />
+      <resource path="~/Content/swiper.3.4.2/js/swiper.jquery.js" />
+      <resource path="~/Scripts/fixedsticky.js" ></resource>
+
+      <resource path="~/Scripts/util.js" />
+      <resource path="~/Scripts/wyy-pageheader.js" />
+      <resource path="~/Scripts/web.js" />
+    </resourceSet>
+    <resourceSet name="siteHomeJs" type="js" >     
+      <resource path="~/Scripts/home.js" />
+    </resourceSet>
+    <resourceSet name="siteJsLogin" type="js" >
+      <resource path="~/Scripts/page/login.js" />
+    </resourceSet>
+    <resourceSet name="siteJsCart" type="js" >
+      <resource path="~/Scripts/cart.js" />
+    </resourceSet>
+  </resourceSets>
+</combres>

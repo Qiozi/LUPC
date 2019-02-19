@@ -1,0 +1,1 @@
+[{"SKU":7307,"ShortName":"All in 1 Card Reader","Name":"All in 1 Memory Card Reader","Price":14.99,"Discount":0.00,"Sold":14.99,"ImgSku":7307,"IsOnsale":0,"IsRebate":0,"priceUnit":"CAD","Keyword":"[other]","PageUrl":"/computer//7307.html"}]

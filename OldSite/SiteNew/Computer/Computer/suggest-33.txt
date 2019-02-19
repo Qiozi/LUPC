@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/TL-WPA8630-KIT/34560.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34560_list_1.jpg" alt="TP-Link Accessory TL-WPA8630 KIT AV1200 Gigabit Powerline ac Wi-Fi KIT Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/TL-WPA8630-KIT/34560.html'>
+                                       TP-Link Accessory TL-WPA8630 KIT AV1200 Gigabit Powerline ac Wi-Fi KIT Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/TL-WPA8630-KIT/34560.html'><label class="price">Price: $134.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/TL-WR941HP/32846.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32846_list_1.jpg" alt="TP-Link Network Wireless TL-WR941HP 450Mbps High Power Wireless N Router Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/TL-WR941HP/32846.html'>
+                                       TP-Link Network Wireless TL-WR941HP 450Mbps High Power Wireless N Router Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/TL-WR941HP/32846.html'><label class="price">Price: $74.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/EW-7833UAC/32759.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32759_list_1.jpg" alt="Edimax Network EW-7833UAC AC1750 Wireless Dual-Band Wi-Fi USB3.0 Adapter Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/EW-7833UAC/32759.html'>
+                                       Edimax Network EW-7833UAC AC1750 Wireless Dual-Band Wi-Fi USB3.0 Adapter Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/EW-7833UAC/32759.html'><label class="price">Price: $74.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ARCHER-C3150/32754.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32754_list_1.jpg" alt="TP-Link Network Archer C3150 Wireless AC3150 MU-MIMO Gigabit Router 4xAntenna" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ARCHER-C3150/32754.html'>
+                                       TP-Link Network Archer C3150 Wireless AC3150 MU-MIMO Gigabit Router 4xAntenna
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ARCHER-C3150/32754.html'><label class="price">Price: $203.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CPE210/32751.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32751_list_1.jpg" alt="TP-Link Network CPE210 2.4GHz 300Mbps 9dBi Outdoor CPE Access Point Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CPE210/32751.html'>
+                                       TP-Link Network CPE210 2.4GHz 300Mbps 9dBi Outdoor CPE Access Point Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CPE210/32751.html'><label class="price">Price: $61.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

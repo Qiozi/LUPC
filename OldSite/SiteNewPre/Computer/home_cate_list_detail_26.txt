@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Logitech-Wireless-Illuminated-Keyboard-K800-French-CDN-Layout-920-002368.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/26654.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Logitech Wireless Illuminated Keyboard K800 (French CDN Layout) 920-002368</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=252008847347"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$145.81</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=26654'>
+										<del>...</del>
+										<span class="price itemprice" sku='26654'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/LOGITECH-WIRELESS-SOLAR-KEYBOARD-K750-FOR-MAC-920-003677.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/26659.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>LOGITECH WIRELESS SOLAR KEYBOARD K750 FOR MAC 920-003677</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=252472529031"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$116.58</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=26659'>
+										<del>...</del>
+										<span class="price itemprice" sku='26659'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Logitech-Wireless-Keyboard-K360-Glossy-Black-French-CDN-Layout-920-004090.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/26658.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Logitech Wireless Keyboard K360 - Glossy Black (French CDN Layout) 920-004090</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=221414433043"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$55.95</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=26658'>
+										<del>...</del>
+										<span class="price itemprice" sku='26658'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Logitech-Wireless-Keyboard-K360-Glossy-Black-920-004088.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/26657.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Logitech Wireless Keyboard K360 - Glossy Black - 920-004088</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=370966338984"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$55.95</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=26657'>
+										<del>...</del>
+										<span class="price itemprice" sku='26657'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

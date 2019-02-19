@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-video-Card-NV-GTX960-Gaming-4GB-GDDR5-DVI-HDMI-128-Bit-GTX-960-GAMING-4G.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/30681.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI video Card NV GTX960 Gaming 4GB GDDR5, DVI HDMI 128-Bit, GTX 960 GAMING 4G</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371569324128"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$381.70</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=30681'>
+										<del>...</del>
+										<span class="price itemprice" sku='30681'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-Video-Card-R7-360-2GD5-OC-R7-360-2GB-DDR5-128Bit-HDMI-Dual-DVI-I-DisplayPort-Retail.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31824.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI Video Card R7 360 2GD5 OC R7 360 2GB DDR5</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31824'>
+										<del>...</del>
+										<span class="price itemprice" sku='31824'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-Video-Card-GTX-980TI-GAMING-6G-GOLDEN-EDITION-6GB-DDR5-384Bit-PCI-Express-HDMI-DVI-I-3xDisplayPo.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31823.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI Video Card GTX 980TI GAMING 6G</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31823'>
+										<del>...</del>
+										<span class="price itemprice" sku='31823'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Gigabyte-Video-Card-GV-N950WF2OC-2GD-GTX-950-2GB-DDR5-OC-WindForce-2X-128Bit-DVI-I-DVI-D-HDMI-Displa.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31822.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Gigabyte Video Card GV-N950WF2OC-2GD GTX 950 2GB DDR5 OC</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31822'>
+										<del>...</del>
+										<span class="price itemprice" sku='31822'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

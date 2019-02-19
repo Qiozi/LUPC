@@ -1,0 +1,14 @@
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\bin\Release\TransitShipment.exe.config
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\bin\Release\TransitShipment.exe
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\bin\Release\TransitShipment.pdb
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\bin\Release\Util.dll
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\bin\Release\Util.pdb
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\TransitShipment.Form1.resources
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\TransitShipment.Properties.Resources.resources
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\TransitShipment.exe
+C:\Users\Qiozi\Documents\Wth\Projects\LUcomputer\Src\MIS\TransitShipment\obj\x86\Release\TransitShipment.pdb
+C:\Workspaces\MyProjects\LUComputer\LUWin\TransitShipment\obj\x86\Release\TransitShipment.exe
+C:\Workspaces\MyProjects\LUComputer\LUWin\TransitShipment\obj\x86\Release\TransitShipment.pdb

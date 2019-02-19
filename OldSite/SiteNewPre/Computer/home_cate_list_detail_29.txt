@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Kingston-16GB-2x8G-DDR4-2666MHz-Memory-HX426C15FBK2-16-Unbuffered.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31439.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Kingston 16GB(2x8G) DDR4 2666MHz Memory HX426C15FBK2/16 Unbuffered</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=252402019691"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$131.74</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31439'>
+										<del>...</del>
+										<span class="price itemprice" sku='31439'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Crucial-Memory-CT4G3S1339M-4GB-DDR3-1333-SODIMM-MAC-1-35V-Retail.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31753.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Crucial Memory 4GB DDR3 1333MHz</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31753'>
+										<del>...</del>
+										<span class="price itemprice" sku='31753'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Crucial-Memory-BLS2KIT4G3D1609DS1S00-8GB-DDR3-1600-Ballistix-2x4GB-Retail.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31752.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Crucial Memory 8GB DDR3 1600MHz</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31752'>
+										<del>...</del>
+										<span class="price itemprice" sku='31752'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Crucail-Memory-CT4G4SFS8213-4GB-DDR4-2133-SODIMM-Retail.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31436.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Crucail Memory 4GB DDR4 2133MHz</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31751'>
+										<del>...</del>
+										<span class="price itemprice" sku='31751'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

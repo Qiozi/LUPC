@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-Motherboard-970A-SLI-Krait-Edition-AMD-FX-AM3-970-SB950-32GB-DDR3-SATA.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31413.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI Motherboard 970A SLI Krait Edition AMD FX AM3+ 970+SB950 32GB DDR3 SATA</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=222158232130"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$145.81</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31413'>
+										<del>...</del>
+										<span class="price itemprice" sku='31413'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-Motherboard-Z170A-SLI-PLUS-Core-i7-i5-i3-Z170-LGA1151-DDR4-SATA-PCI-Express.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31420.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI Motherboard Z170A SLI PLUS Core i7/i5/i3 Z170 LGA1151 DDR4 SATA PCI Express</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371660371466"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$220.52</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31420'>
+										<del>...</del>
+										<span class="price itemprice" sku='31420'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-Motherboard-H110M-Pro-VD-LGA1151-DDR4-32GB-SATA-PCI-Express.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31419.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI Motherboard H110M Pro-VD LGA1151 DDR4 32GB SATA PCI Express</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371660371740"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$99.26</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31419'>
+										<del>...</del>
+										<span class="price itemprice" sku='31419'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/MSI-Motherboard-B150-PC-Mate-S1151-B150-DDR4-SATA-PCI-Express-ATX.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31418.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>MSI Motherboard B150 PC Mate S1151 B150 DDR4 SATA PCI-Express ATX</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371660372019"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$145.81</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31418'>
+										<del>...</del>
+										<span class="price itemprice" sku='31418'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

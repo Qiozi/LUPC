@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeteBayDetailsResponse xmlns="urn:ebay:apis:eBLBaseComponents"><Timestamp>2016-03-27T03:59:40.412Z</Timestamp><Ack>Failure</Ack><Errors><ShortMessage>Auth token is invalid.</ShortMessage><LongMessage>Validation of the authentication token in API request failed.</LongMessage><ErrorCode>931</ErrorCode><SeverityCode>Error</SeverityCode><ErrorClassification>RequestError</ErrorClassification></Errors><Version>959</Version><Build>E959_INTL_API6_17874302_R1</Build></GeteBayDetailsResponse>

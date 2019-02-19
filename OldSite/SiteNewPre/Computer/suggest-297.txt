@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/19243.jpg?imageView/3/w/150/h/150" alt="APC POWER SAVING BACK-UPS PRO S19243" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=19243'>
+                                       APC POWER SAVING BACK-UPS PRO S19243
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $201.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/19239.jpg?imageView/3/w/150/h/150" alt="APC BACK-UPS ES 8 OUTLET 550VA 120V S19239" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=19239'>
+                                       APC BACK-UPS ES 8 OUTLET 550VA 120V S19239
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $83.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/19246.jpg?imageView/3/w/150/h/150" alt="APC BACK-UPS RS 450 WATTS 700 VA,INPUT 120V / OUTPUT 120V LCD 700 MASTER CONTROL" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=19246'>
+                                       APC BACK-UPS RS 450 WATTS 700 VA,INPUT 120V / OUTPUT 120V LCD 700 MASTER CONTROL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $142.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/19246.jpg?imageView/3/w/150/h/150" alt="APC BACK-UPS RS 450 WATTS 700 VA,INPUT 120V / OUTPUT 120V LCD 700 MASTER CONTROL" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=19246'>
+                                       APC BACK-UPS RS 450 WATTS 700 VA,INPUT 120V / OUTPUT 120V LCD 700 MASTER CONTROL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $142.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/19239.jpg?imageView/3/w/150/h/150" alt="APC BACK-UPS ES 8 OUTLET 550VA 120V S19239" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=19239'>
+                                       APC BACK-UPS ES 8 OUTLET 550VA 120V S19239
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $83.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25794.jpg?imageView/3/w/150/h/150" alt="EPSON Bilingual packaging Stylus C88+ Printer C11C617121F" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25794'>
+                                       EPSON Bilingual packaging Stylus C88+ Printer C11C617121F
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $107.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25794.jpg?imageView/3/w/150/h/150" alt="EPSON Bilingual packaging Stylus C88+ Printer C11C617121F" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25794'>
+                                       EPSON Bilingual packaging Stylus C88+ Printer C11C617121F
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $107.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25794.jpg?imageView/3/w/150/h/150" alt="EPSON Bilingual packaging Stylus C88+ Printer C11C617121F" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25794'>
+                                       EPSON Bilingual packaging Stylus C88+ Printer C11C617121F
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $107.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/24429.jpg?imageView/3/w/150/h/150" alt="Fujitsu PA03643-B002 ScanSnap S1300i Sheetfed Scanner USB CIS Color MAC PC New" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=24429'>
+                                       Fujitsu PA03643-B002 ScanSnap S1300i Sheetfed Scanner USB CIS Color MAC PC New
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $316.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25794.jpg?imageView/3/w/150/h/150" alt="EPSON Bilingual packaging Stylus C88+ Printer C11C617121F" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25794'>
+                                       EPSON Bilingual packaging Stylus C88+ Printer C11C617121F
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $107.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

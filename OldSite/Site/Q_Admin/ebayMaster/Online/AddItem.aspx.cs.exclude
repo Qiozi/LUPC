@@ -1,0 +1,877 @@
+﻿using System;
+using System.Data;
+using System.Xml;
+using System.Web.UI.WebControls;
+using System.Text;
+using System.Net;
+using System.IO;
+using System.Security.Permissions;
+using System.Collections.Generic;
+
+[PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+[System.Runtime.InteropServices.ComVisibleAttribute(true)]
+public partial class Q_Admin_ebayMaster_Online_AddItem : PageBase
+{
+    string XmlPath = EbaySettings.ebayMasterXmlPath;
+    decimal _profit = 0M;
+    decimal _ebay_fee = 0M;
+    decimal _shiping_fee = 0M;
+//    decimal _weight = 0M;
+    EbaySystemModel ESM
+    {
+        get
+        {
+            if (ViewState["EbaySystemModel"] == null)
+            {
+                EbaySystemModel _es = EbaySystemModel.GetEbaySystemModel(SKU);
+                ViewState["EbaySystemModel"] = _es;
+                return _es;
+            }
+            else
+                return (EbaySystemModel)ViewState["EbaySystemModel"];
+        }
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            //ESM = EbaySystemModel.GetEbaySystemModel(SKU);
+            InitialDatabase();
+        }
+    }
+    public override void InitialDatabase()
+    {
+        base.InitialDatabase();
+
+        LoadShippingService();
+
+        InitialProdInfo();
+
+        BindStoreCategory();
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    private void BindStoreCategory()
+    {
+        //DataTable dt = Config.ExecuteDataTable("Select store_category_id, store_comment from tb_ebay_store_category where showit=1 order by store_comment asc");
+        List<eBayCategory> scList = new GetEbayCategoryIDs().GetStoreCategory(Server.MapPath("~/soft_img/eBayXml/GetStoreResponse.xml"));
+        this.ddl_store_category_list.DataSource = scList;
+        this.ddl_store_category_list.DataValueField = "Id";
+        this.ddl_store_category_list.DataTextField = "Name";
+        this.ddl_store_category_list.DataBind();
+
+        this.ddl_store_category_list2.DataSource = scList;
+        this.ddl_store_category_list2.DataValueField = "Id";
+        this.ddl_store_category_list2.DataTextField = "Name";
+        this.ddl_store_category_list2.DataBind();
+        this.ddl_store_category_list2.Items.Insert(0, new ListItem("Selected", ""));
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    private void InitialProdInfo()
+    {
+        EbayHelper eh = new EbayHelper();
+        if (IsSystem)
+        {
+            //EbaySystemModel esm = EbaySystemModel.GetEbaySystemModel(SKU);
+            this.txt_title.Text = ESM.ebay_system_name;
+            this.txt_custom_label.Text = ESM.cutom_label;
+
+            this.txt_buy_it_now_price.Text = ESM.is_shrink ? ESM.selected_ebay_sell.ToString() : ESM.ebay_system_price.ToString();// new EbayHelper().GetSysPrice(SKU).ToString("###.00");// esm.ebay_system_price.ToString();
+            button_go_ebay_price_Click(null, null);
+            this.txt_picture1.Text = "http://www.lucomputers.com/ebay/" + ESM.logo_filenames + ".jpg";
+            this.Literal_prview_pricture.Text = "<img width='100' src='http://www.lucomputers.com/ebay/" + ESM.logo_filenames + ".jpg' />";
+            this.txt_description.Text = new EbayPageText().GetEbayPageHtml(SKU, eBayProdType.system, false, eBaySystemWorker.GetFlashType(ESM));
+        }
+        else// part
+        {
+            var pm = ProductModel.GetProductModel(SKU);
+            this.txt_title.Text = pm.product_ebay_name;
+            this.txt_picture1.Text = "http://www.lucomputers.com/pro_img/COMPONENTS/" + (pm.other_product_sku > 1 ? pm.other_product_sku.ToString() : pm.product_serial_no.ToString()) + "_g_1.jpg";
+            this.Literal_prview_pricture.Text = "<img src='http://www.lucomputers.com/pro_img/COMPONENTS/" + (pm.other_product_sku > 1 ? pm.other_product_sku.ToString() : pm.product_serial_no.ToString()) + "_t.jpg'>";
+
+            this.Literal_price_summary.Text = string.Format("(Cost: <span style='color:green;'>${0}</span>) + <span style='color:green;'>{2}</span> + (bank: <span style='color:green;'>{3}</span>) = Price: <span style='color:green;'>${1}</span>"
+                , pm.product_current_cost
+                , pm.product_current_price
+                , Config.ConvertPrice(pm.product_current_price - (pm.product_current_price / 1.022M) * 0.022M - pm.product_current_cost)
+                , Config.ConvertPrice((pm.product_current_price / 1.022M) * 0.022M)
+                );
+
+            //this.txt_subtitle.Text = pm.keywords.Replace("][", ", ").Replace("[","").Replace("]","").Replace(pm.producter_serial_no+",", "").Trim();
+            this.txt_custom_label.Text = eh.GetProdCustomLabel(false, SKU);
+            this.TextBox_cost.Text = pm.product_current_cost.ToString();
+            this.TextBox_adjustment.Text = pm.adjustment.ToString();
+            //this.txt_buy_it_now_price.Text = pm.product_current_price.ToString();
+            // 
+            // comment
+            //
+            #region comment
+
+            string fullfile = Server.MapPath(Config.Part_Comment_Path + string.Format("{0}_comment.html", pm.product_serial_no));
+            try
+            {
+                this.txt_description.Text = new eBayPageHelper(this).GetPageString(SKU);
+            }
+            catch (Exception ex)
+            {
+                this.txt_description.Text = ex.Message;
+            }
+            if (File.Exists(fullfile))
+            {
+                //this.txt_description.Text = FileHelper.ReadFile(fullfile);
+            }
+            else
+            {
+                this.btn_generate_templete.Text = "Comment file isn't find.";
+                this.btn_generate_templete.ForeColor = System.Drawing.Color.Red;
+                //this.btn_view_templete.Enabled = false;
+            }
+            #endregion
+        }
+    }
+
+
+
+    #region Get XML
+
+
+
+    #region Shipping service Method
+    private void LoadShippingServiceCategory(XmlNode categoriesNode)
+    {
+
+        //get the "Categories" node    
+        //throw new Exception(categoriesNode.ChildNodes.Count.ToString());
+        foreach (XmlNode cat in categoriesNode.ChildNodes)
+        {
+            //if this category has a categoryID equal to its parent category id
+            //then it is a main category
+            //if (cat.Name == "Category" && cat["CategoryParentID"].InnerText == cat["CategoryID"].InnerText)
+            //{
+            //    Response.Write(string.Format("{0} ({1})", cat["CategoryName"].InnerText, cat["CategoryID"].InnerText));
+            //}
+            //if (cat["InternationalService"].InnerText.ToLower() == "false")
+            if (cat.ChildNodes.Count > 5)
+            {
+                //throw new Exception(cat.InnerText);
+                if (cat.InnerText.IndexOf("Calculated") == -1)
+                {
+                    this.ddl_domestic_services_1.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                    this.ddl_domestic_services_2.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                    this.ddl_domestic_services_3.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                    this.ddl_domestic_services_4.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+
+                    this.ddl_International_services_1.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                    this.ddl_International_services_2.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                    this.ddl_International_services_3.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                    this.ddl_International_services_4.Items.Add(new ListItem(cat["Description"].InnerText, cat["ShippingService"].InnerText));
+                }
+                //else
+                //    Response.Write("DDD");
+            }
+        }
+
+        this.ddl_domestic_services_1.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_domestic_services_1.SelectedValue = "CA_Pickup";
+        this.ddl_domestic_services_2.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_domestic_services_2.SelectedValue = "CA_UPSStandardCanada";
+        this.ddl_domestic_services_3.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_domestic_services_3.SelectedValue = "CA_UPSExpeditedCanada";
+        this.ddl_domestic_services_4.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_domestic_services_4.SelectedValue = "CA_UPSExpeditedCanada";
+
+        this.ddl_International_services_1.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_International_services_1.SelectedValue = "CA_UPSStandardUnitedStates";
+        this.ddl_International_services_2.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_International_services_2.SelectedValue = "CA_UPS3DaySelectUnitedStates";
+        this.ddl_International_services_3.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_International_services_3.SelectedValue = "CA_UPSWorldWideExpedited";
+        this.ddl_International_services_4.Items.Insert(0, new ListItem("Select", "-1"));
+        this.ddl_International_services_4.SelectedValue = "CA_UPSWorldWideExpress";
+    }
+
+    private void LoadShippingService()
+    {
+        LoadShippingServiceCategory(new EbayGetXmlHelper().GetShippingServiceXML());
+    }
+
+    #endregion
+
+
+    #endregion
+
+    public string AddItem(EbayItem ei)
+    {
+        #region settings
+
+        string devID = EbaySettings.devID;
+        string appID = EbaySettings.appID;
+        string certID = EbaySettings.certID;
+
+        //Get the Server to use (Sandbox or Production)
+        string serverUrl = EbaySettings.serverUrl;
+
+        //Get the User Token to Use
+        string userToken = EbaySettings.userToken;
+
+        //SiteID = 0  (US) - UK = 3, Canada = 2, Australia = 15, ....
+        //SiteID Indicates the eBay site to associate the call with
+        int siteID = EbaySettings.siteID;
+        #endregion
+
+
+        #region Load The XML Document Template and Set the Neccessary Values
+        //Load the XML Document to Use for this Request
+        XmlDocument xmlDoc = new XmlDocument();
+
+        ////Get XML Document from Embedded  Resources
+        //xmlDoc.Load((Server.MapPath("/q_admin/ebayMaster/Online/Xml/GeteBayOfficialTimeRequest.xml")));
+
+        ////Set the various node values   attr1858_26443
+        //xmlDoc["GeteBayOfficialTimeRequest"]["RequesterCredentials"]["eBayAuthToken"].InnerText = userToken;
+
+        string sendXml = string.Format(@"<?xml version=""1.0"" encoding=""utf-8""?>
+<AddItemRequest xmlns=""urn:ebay:apis:eBLBaseComponents"">
+  <RequesterCredentials>
+    <eBayAuthToken>{0}</eBayAuthToken>
+  </RequesterCredentials>
+  <ErrorLanguage>en_US</ErrorLanguage>
+  <WarningLevel>High</WarningLevel>
+  <Item>
+    {10}
+    <Title>{2}</Title>
+    <SubTitle>{9}</SubTitle>
+    <SKU><![CDATA[{11}]]></SKU>
+    {12}
+    {15}
+    {16}
+    <Description>
+        {3}
+    </Description>
+    <PrimaryCategory>
+      <CategoryID>{4}</CategoryID>
+    </PrimaryCategory>
+    <CategoryMappingAllowed>true</CategoryMappingAllowed>
+    <Site>US</Site>
+    <Quantity>{13}</Quantity>
+    <StartPrice>{1}</StartPrice>
+    <ListingDuration>{14}</ListingDuration>
+    <ListingType>FixedPriceItem</ListingType>
+    <DispatchTimeMax>3</DispatchTimeMax>
+    <ShippingDetails>
+      {5}
+    </ShippingDetails>
+    {17}
+    <Country>CA</Country>
+    <Currency>CAD</Currency>
+    <PostalCode>M3B 2M5</PostalCode>
+    <PaymentMethods>{6}</PaymentMethods>
+    <PayPalEmailAddress>{7}</PayPalEmailAddress>
+    <PictureDetails>
+      {8}
+    </PictureDetails>
+    <UseTaxTable>true</UseTaxTable>
+    <ConditionID>1000</ConditionID>    
+  </Item>
+</AddItemRequest>", userToken
+                  , ei.Buy_it_now_price
+                  , ei.Title
+                  , @"<![CDATA[" + ei.Description + "]]>"
+                  , ei.Category
+                  , GetShippingDetail()
+                  , ei.PaymentMethods
+                  , ei.PayPalEmailAddress
+                  , ei.GetPrictureDetail(ei)
+                  , ei.Subtitle
+                  , ei.AttriatesXml(this.Vcsid, new EbayGetXmlHelper().GetAttributeSetVersion(Vcsid))
+                  , ei.cutom_label
+                  , ei.ItemSpecificsString()
+                  , ei.Quantity
+                  , ei.Duration
+                  , ei.Store_category.Length > 2 ? string.Format("<Storefront><StoreCategoryID>{0}</StoreCategoryID>" + (ei.Store_category2.Length > 2 ? "<StoreCategory2ID>" + ei.Store_category2 + "</StoreCategory2ID>" : "") + "</Storefront>", ei.Store_category) : ""
+                  , ei.AutoPay == true ? "<AutoPay>True</AutoPay>" : (ei.AutoPay == false ? "<AutoPay>False</AutoPay>" : "")
+                  , EbayHelper.GetReturnPolicy(IsSystem ? 0 : SKU)
+                  );
+
+        //throw new Exception(sendXml);
+        EbaySendXmlHistoryModel esxhm = new EbaySendXmlHistoryModel();
+        esxhm.Content = sendXml;
+        esxhm.is_sys = true;
+        esxhm.SKU = SKU;
+        esxhm.Create();
+
+        //throw new Exception(ItemAttribates);
+
+        xmlDoc.LoadXml(sendXml);
+        //Get XML into a string for use in encoding
+        string xmlText = xmlDoc.InnerXml;
+        //eBay.Service.Call.AddItemCall aic = new eBay.Service.Call.AddItemCall();
+
+
+        //Put the data into a UTF8 encoded  byte array
+        UTF8Encoding encoding = new UTF8Encoding();
+        int dataLen = encoding.GetByteCount(xmlText);
+        byte[] utf8Bytes = new byte[dataLen];
+        Encoding.UTF8.GetBytes(xmlText, 0, xmlText.Length, utf8Bytes, 0);
+        #endregion
+
+
+        #region Setup The Request (inc. HTTP Headers
+        //Create a new HttpWebRequest object for the ServerUrl
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serverUrl);
+
+        //Set Request Method (POST) and Content Type (text/xml)
+        request.Method = "POST";
+        request.ContentType = "text/xml";
+        request.ContentLength = utf8Bytes.Length;
+
+        //Add the Keys to the HTTP Headers
+        request.Headers.Add("X-EBAY-API-DEV-NAME: " + devID);
+        request.Headers.Add("X-EBAY-API-APP-NAME: " + appID);
+        request.Headers.Add("X-EBAY-API-CERT-NAME: " + certID);
+
+        //Add Compatability Level to HTTP Headers
+        //Regulates versioning of the XML interface for the API
+        request.Headers.Add("X-EBAY-API-COMPATIBILITY-LEVEL: 761");
+
+        //Add function name, SiteID and Detail Level to HTTP Headers
+        request.Headers.Add("X-EBAY-API-CALL-NAME: AddItem");
+        request.Headers.Add("X-EBAY-API-SITEID: " + siteID.ToString());
+
+        //Time out = 15 seconds,  set to -1 for no timeout.
+        //If times-out - throws a WebException with the
+        //Status property set to WebExceptionStatus.Timeout.
+        request.Timeout = 15000;
+
+        #endregion
+
+
+        #region Send The Request
+        Stream str = null;
+        try
+        {
+            //Set the request Stream
+            str = request.GetRequestStream();
+            //Write the equest to the Request Steam
+            str.Write(utf8Bytes, 0, utf8Bytes.Length);
+            str.Close();
+            //Get response into stream
+            WebResponse resp = request.GetResponse();
+            str = resp.GetResponseStream();
+        }
+        catch (WebException wEx)
+        {
+            //Error has occured whilst requesting
+            //Display error message and exit.
+            if (wEx.Status == WebExceptionStatus.Timeout)
+                Response.Write("Request Timed-Out.");
+            else
+                Response.Write(wEx.Message);
+
+            Response.Write("Press Enter to Continue...");
+
+            return wEx.Message;
+        }
+        #endregion
+
+        //StreamWriter sw = new StreamWriter(Server.MapPath("/q_admin/ebayMaster/Online/Xml/additem.txt"));
+        //sw.Write(str);
+        //sw.Close();
+        //sw.Dispose();
+
+
+        #region Process Response
+        // Get Response into String
+        StreamReader sr = new StreamReader(str);
+        string sssss = sr.ReadToEnd();
+        xmlDoc.LoadXml(sssss);
+        sr.Close();
+        str.Close();
+
+        //StreamWriter sw = new StreamWriter(Server.MapPath(string.Format("{0}/{1}_{2}.txt"
+        //    , AddResultPath
+        //    , SKU, DateTime.Now.ToString("yyyyMMddhhmmss"))));
+        //sw.Write(sssss);
+        //sw.Close();
+        //sw.Dispose();
+
+        EbaySendXmlResultHistoryModel esrhm = new EbaySendXmlResultHistoryModel();
+        esrhm.Content = sssss;
+        esrhm.is_sys = IsSystem;
+        esrhm.SKU = SKU;
+        esrhm.Create();
+
+        //get the root node, for ease of use
+        XmlNode root = xmlDoc["AddItemResponse"];
+
+        //There have been Errors
+        if (root["Errors"] != null)
+        {
+            try
+            {
+                if (root["ItemID"].InnerText.Length == 12)
+                    return root["ItemID"].InnerText;
+            }
+            catch { }
+            return (sssss);
+        }
+        else
+        {
+            return root["ItemID"].InnerText;
+            //Get Result String
+            //string theTime = root["Timestamp"].InnerText;
+            //Put into a DateTime object
+            // DateTime dt = DateTime.Parse(theTime);
+            //Display the result
+            //Response.Write("Current eBay time is: " + DateTime.Now.ToString("dd-MMM-yyyy  HH:mm:ss") + " GMT");
+        }
+        #endregion
+        //        return "Error...";
+        //Response.Write("Press Enter to Close.");
+    }
+
+    private string GetShippingDetail()
+    {
+        System.Text.StringBuilder sb = new StringBuilder();
+        decimal domestic_service_1_cost;
+        decimal.TryParse(this.txt_domestic_service_1_cost.Text, out domestic_service_1_cost);
+
+        decimal domestic_service_2_cost;
+        decimal.TryParse(this.txt_domestic_service_2_cost.Text, out domestic_service_2_cost);
+        //throw new Exception(ESM.is_shrink.ToString());
+
+        decimal domestic_service_3_cost;
+        decimal.TryParse(this.txt_domestic_service_3_cost.Text, out domestic_service_3_cost);
+
+        decimal domestic_service_4_cost;
+        decimal.TryParse(this.txt_domestic_service_4_cost.Text, out domestic_service_4_cost);
+
+
+        decimal international_service_1_cost;
+        decimal.TryParse(this.txt_international_service_1_cost.Text, out international_service_1_cost);
+
+        decimal international_service_2_cost;
+        decimal.TryParse(this.txt_international_service_2_cost.Text, out international_service_2_cost);
+
+        decimal international_service_3_cost = 0M;
+        decimal.TryParse(this.txt_international_service_3_cost.Text, out international_service_3_cost);
+
+        decimal international_service_4_cost;
+        decimal.TryParse(this.txt_international_service_4_cost.Text, out international_service_4_cost);
+
+
+        return eBayShipping.GetShippingDetail2(!IsSystem, SKU, IsSystem
+            , (ESM.is_shrink || ESM.is_barebone)
+            , ddl_domestic_services_1.SelectedValue
+            , domestic_service_1_cost
+            , this.cb_domestic_free_shipping.Checked
+            , ddl_domestic_services_2.SelectedValue.ToString()
+            , domestic_service_2_cost
+            , ddl_domestic_services_3.SelectedValue.ToString()
+            , domestic_service_3_cost
+            , ddl_domestic_services_4.SelectedValue.ToString()
+            , domestic_service_4_cost
+            , ddl_International_services_1.SelectedValue.ToString()
+            , international_service_1_cost
+            , ddl_International_services_2.SelectedValue.ToString()
+            , international_service_2_cost
+            , ddl_International_services_3.SelectedValue.ToString()
+            , international_service_3_cost
+            , ddl_International_services_4.SelectedValue.ToString()
+            , international_service_4_cost
+            , 0M
+            , 0M
+            , this.Page.Server);
+        // return sb.ToString();
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void btn_generate_templete_Click(object sender, EventArgs e)
+    {
+        EbayPageText ept = new EbayPageText();
+        this.txt_description.Text = ept.GetEbayPageHtml(SKU, eBayProdType.system, false, eBaySystemWorker.GetFlashType(ESM));
+        FileHelper.GenerateFile(Server.MapPath(EbaySettings.ebayMasterXmlPath + "tpl_comment/" + SKU.ToString() + ".htm"), this.txt_description.Text);
+
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void btn_generate_ebayItem_Click(object sender, EventArgs e)
+    {
+        EbayGetXmlHelper egxh = new EbayGetXmlHelper();
+        egxh.GetCategoryFeatures(177);
+        egxh.GetCategorySpecifics(177);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void btn_generate_fee_Click(object sender, EventArgs e)
+    {
+        // try
+        {
+            DataTable itemDT = Config.ExecuteDataTable(string.Format("Select ItemID from tb_ebay_selling where luc_sku='{0}' or sys_sku='{0}'", SKU));
+            if (itemDT.Rows.Count > 0
+                && SKU > 0)
+            {
+                CH.Alert("exist! <a target='_blank' href='http://cgi.ebay.ca/ws/eBayISAPI.dll?ViewItem&item=" + itemDT.Rows[0][0].ToString() + "'>" + itemDT.Rows[0][0].ToString() + "</a>", this.Literal1);
+                return;
+            }
+
+
+            EbayItem ei = new EbayItem();
+
+            ei.cutom_label = this.txt_custom_label.Text.Trim();
+            ei.Title = this.txt_title.Text.Trim();
+            if (!Config.isLocalhost)
+                ei.Store_category = this.ddl_store_category_list.SelectedValue.ToString();
+            if (!Config.isLocalhost)
+                ei.Store_category2 = this.ddl_store_category_list2.SelectedValue.ToString();
+            if (ei.Title.Length == 0)
+            {
+                CH.Alert("Please input Title", this.Literal1);
+                this.txt_title.Focus();
+                return;
+            }
+
+
+            ei.Subtitle = this.txt_subtitle.Text.Trim();
+
+            ei.Description = this.txt_description.Text;
+
+            if (ei.Description.Length < 20)
+            {
+                CH.Alert("Description Length is shorter then 20", this.Literal1);
+                this.txt_description.Focus();
+                return;
+            }
+
+
+            //ei.Buy_it_now_price = 99.9M;
+            //decimal.TryParse(this.txt_buy_it_now_price.Text, out ei.Buy_it_now_price);
+            decimal price;
+            decimal.TryParse(this.txt_buy_it_now_price.Text, out price);
+            ei.Buy_it_now_price = price;
+            ei.AutoPay = ei.Buy_it_now_price >= 2000 ? false : true;
+            if (ei.Buy_it_now_price == 0M)
+            {
+                CH.Alert("Please input Buy It Now Price", this.Literal1);
+                this.txt_buy_it_now_price.Focus();
+                return;
+            }
+
+            int quantity;
+            int.TryParse(this.txt_sell_quantity.Text, out quantity);
+            ei.Quantity = quantity;
+            if (ei.Quantity == 0)
+            {
+                CH.Alert("Please input Quantity", this.Literal1);
+                this.txt_sell_quantity.Focus();
+                return;
+            }
+
+            ei.Category = CID.ToString();// GetEbayCategoryID;
+            if (ei.Category == "-1")
+            {
+                CH.Alert("Category is Null.", this.Literal1);
+                return;
+            }
+
+            //if (ItemSpecificsLabel.Length > 2)
+            //{
+            //    ei.item_specifics_label = ItemSpecificsLabel;
+            //    ei.item_specifics = ItemSpecifics;
+            //}
+
+            ei.Duration = this.ddl_duration.SelectedValue.ToString();
+
+            ei.SplitAttribatesStr(ItemAttribates);
+            //int.TryParse(this.txt_sell_quantity.Text, out ei.Quantity);
+
+            if (this.txt_picture1.Text.Trim().Length > 10)
+                ei.Pictures_url1 = this.txt_picture1.Text;
+
+            //ei.SplitAttribatesStr(this.ItemAttribates);
+            //Response.Write(ItemAttribates);
+            //Response.End();
+            string ebayCode = AddItem(ei);
+            if (ebayCode.Trim().Length > 12)
+            {
+                Response.Clear();
+                Response.Write(Server.HtmlDecode(ebayCode));
+                Response.End();
+            }
+            CH.Alert("<a target='_blank' href='http://cgi.ebay.ca/ws/eBayISAPI.dll?ViewItem&item=" + ebayCode.ToString() + "'>" + ebayCode.ToString() + "</a>", this.Literal1);
+
+            // save itemid
+            Config.ExecuteNonQuery(string.Format(@"Insert into tb_ebay_selling (itemid, luc_sku, sys_sku) values 
+                ('{0}', '{1}', '{2}')", ebayCode
+                                      , IsSystem ? SKU : 0
+                                      , IsSystem ? 0 : SKU));
+
+            if (ebayCode.Trim().Length == 12)
+            {
+                EbayCodeAndLucSkuModel ecals = new EbayCodeAndLucSkuModel();
+                ecals.ebay_code = ebayCode;
+                ecals.is_sys = IsSystem;
+                ecals.SKU = SKU;
+                ecals.is_online = true;
+                ecals.Create();
+
+                if (IsSystem)
+                {
+                    //
+                    // Save system price history records.
+                    eBaySystemWorker.SaveHistory(ebayCode, SKU, false);
+                }
+                else
+                {
+                    //
+                    // Save parts price history records.
+                    var pm = ProductModel.GetProductModel(SKU);
+                    EbayPartPriceHistoryModel epphm = new EbayPartPriceHistoryModel();
+                    epphm.cost = decimal.Parse(this.TextBox_cost.Text);
+                    epphm.custom_label = this.txt_custom_label.Text;
+                    epphm.part_ebay_name = this.txt_title.Text;
+                    epphm.ebay_fee = eBayFee;
+                    epphm.ebay_itemid = ebayCode;
+                    epphm.ebay_price = decimal.Parse(this.txt_buy_it_now_price.Text);
+                    epphm.luc_sku = SKU;
+                    epphm.mfp = pm.manufacturer_part_number;
+                    epphm.profit = Profit;
+                    epphm.shipping = ShippingFee;
+                    epphm.web_price = pm.product_current_price - pm.product_current_discount;
+                    epphm.Create();
+                }
+            }
+
+            if (IsSystem)
+            {
+               var esm = EbaySystemModel.GetEbaySystemModel(SKU);
+                esm.ebay_system_name = ei.Title;
+                if (esm.is_shrink)
+                {
+                    esm.selected_ebay_sell = ei.Buy_it_now_price;
+                }
+                else
+                {
+                    esm.ebay_system_price = ei.Buy_it_now_price;
+                }
+                esm.Update();
+            }
+        }
+        // catch (Exception ex)
+        {
+            //     CH.Alert(ex.Message, this.Literal1);
+        }
+    }
+
+    #region properties
+    public decimal Profit
+    {
+        get
+        {
+            if (ViewState["profit"] != null)
+                return decimal.Parse(ViewState["profit"].ToString());
+            return 0M;
+        }
+        set
+        {
+            ViewState["profit"] = value;
+        }
+    }
+    public decimal eBayFee
+    {
+        get
+        {
+            if (ViewState["eBayFee"] != null)
+                return decimal.Parse(ViewState["eBayFee"].ToString());
+            return 0M;
+        }
+        set
+        {
+            ViewState["eBayFee"] = value;
+        }
+    }
+    public decimal ShippingFee
+    {
+        get
+        {
+            if (ViewState["ShippingFee"] != null)
+                return decimal.Parse(ViewState["ShippingFee"].ToString());
+            return 0M;
+        }
+        set
+        {
+            ViewState["ShippingFee"] = value;
+        }
+    }
+    public string ItemAttribates
+    {
+        get { return Util.GetStringSafeFromQueryString(Page, "attribates"); }
+    }
+
+    public int CID
+    {
+        get { return Util.GetInt32SafeFromQueryString(Page, "cid", -1); }
+    }
+
+    public int Vcsid
+    {
+        get { return Util.GetInt32SafeFromQueryString(Page, "vcsid", -1); }
+    }
+
+    public int SKU
+    {
+        get { return Util.GetInt32SafeFromQueryString(Page, "system_sku", -1); }
+    }
+
+
+    public bool IsSystem
+    {
+        get
+        {
+            if (200000 <= SKU && SKU <= 299999)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+    }
+
+    public string ItemSpecificsLabel
+    {
+        get { return Util.GetStringSafeFromQueryString(Page, "item_specifics_label"); }
+    }
+
+    public string ItemSpecifics
+    {
+        get { return Util.GetStringSafeFromQueryString(Page, "item_specifics"); }
+    }
+
+    #endregion
+
+    #region View Item Specail
+    private void ViewItemSpecial(int categoryID)
+    {
+        CH.RunJavaScript("setCategoryID('ss');", this.Literal1);
+    }
+    #endregion
+
+    protected void cb_domestic_free_shipping_CheckedChanged(object sender, EventArgs e)
+    {
+        //CheckBox cb = (CheckBox)sender;
+
+        //if (cb.Checked)
+        //{
+        //    this.txt_domestic_service_1_cost.Text = "";
+        //}
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void btn_view_templete_Click(object sender, EventArgs e)
+    {
+        string fileName = Server.MapPath(EbaySettings.ebayMasterXmlPath + "tpl_comment/" + SKU.ToString() + ".htm");
+        StreamWriter sw = new StreamWriter(fileName);
+        sw.Write(this.txt_description.Text);
+        sw.Close();
+
+        CH.RunJavaScript("js_callpage_name_custom('ebay_tpl_preview.aspx?system_sku=" + SKU.ToString() + "','ebay_tpl_preview', 1050, 700);", this.Literal1);
+    }
+    protected void btn_go_back_Click(object sender, EventArgs e)
+    {
+        CH.RunJavaScript("window.location.href='/q_admin/ebayMaster/online/get_categories.aspx?system_sku=" + SKU.ToString() + "';", this.Literal1);
+    }
+
+    /// <summary>
+    /// Generate eBay price, shipping fee.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void button_go_ebay_price_Click(object sender, EventArgs e)
+    {
+        eBayPriceHelper eH = new eBayPriceHelper();
+        if (IsSystem)
+        {
+            if (ESM == null)
+                return;
+
+            decimal price;
+            decimal.TryParse(this.txt_buy_it_now_price.Text, out price);
+
+            decimal standardPrice = eBayShipping.SysShippingCa(price);
+            if (this.ddl_domestic_services_2.SelectedValue == "CA_UPSStandardCanada")
+                this.txt_domestic_service_2_cost.Text = (ESM.is_shrink || ESM.is_barebone) ? "0" : standardPrice.ToString();
+            if (this.ddl_domestic_services_3.SelectedValue == "CA_UPSExpeditedCanada")
+                this.txt_domestic_service_3_cost.Text = (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingScLvlCA(price) - standardPrice).ToString() : eBayShipping.SysShippingScLvlCA(price).ToString();
+
+
+            if (this.ddl_International_services_1.SelectedValue == "CA_UPSStandardUnitedStates")
+                this.txt_international_service_1_cost.Text = (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingUS(price) - standardPrice).ToString() : eBayShipping.SysShippingUS(price).ToString();
+            if (this.ddl_International_services_2.SelectedValue == "CA_UPS3DaySelectUnitedStates")
+                this.txt_international_service_2_cost.Text = (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingScLvlUS(price) - standardPrice).ToString() : eBayShipping.SysShippingScLvlUS(price).ToString();
+
+            string cutomLabel = this.txt_custom_label.Text;
+            if (cutomLabel.IndexOf(SKU.ToString()) == -1)
+            {
+                this.txt_custom_label.Text += " " + SKU.ToString();
+            }
+            this.txt_title.Text = eH.GetEbayTitle(price, SKU);
+        }
+        else
+        {
+            decimal cost;
+            decimal.TryParse(this.TextBox_cost.Text, out cost);
+
+            decimal screen;
+            decimal.TryParse(this.TextBox_screen.Text, out screen);
+            Config.ExecuteNonQuery("Update tb_product set screen_size='" + screen.ToString() + "',is_modify=1 where product_serial_no='" + SKU.ToString() + "'");
+
+            decimal adjustment;
+            decimal.TryParse(this.TextBox_adjustment.Text, out adjustment);
+            decimal bank_fee = 0M;
+
+            this.txt_buy_it_now_price.Text = eH.eBayNetbookPartPrice(cost
+                , screen
+                , adjustment
+                , ref _shiping_fee
+                , ref _profit
+                , ref _ebay_fee
+                , ref bank_fee).ToString();
+
+            Profit = _profit;
+            eBayFee = _ebay_fee;
+            ShippingFee = _shiping_fee;
+
+            var pm = ProductModel.GetProductModel(SKU);
+
+            var weight = pm == null ? 0M : pm.weight;
+            if (this.ddl_domestic_services_2.SelectedValue == "CA_UPSStandardCanada")
+                this.txt_domestic_service_2_cost.Text = eBayShipping.BasicShippingFee(screen).ToString();
+            if (this.ddl_domestic_services_3.SelectedValue == "CA_UPSExpeditedCanada")
+                this.txt_domestic_service_3_cost.Text = eBayShipping.ExpeditedCanada_UPS3Days_ShippingFee(screen, weight).ToString();
+
+            if (this.ddl_International_services_1.SelectedValue == "CA_UPSStandardUnitedStates")
+                this.txt_international_service_1_cost.Text = eBayShipping.BasicShippingFee(screen).ToString();
+            if (this.ddl_International_services_2.SelectedValue == "CA_UPS3DaySelectUnitedStates")
+                this.txt_international_service_2_cost.Text = eBayShipping.ExpeditedCanada_UPS3Days_ShippingFee(screen, weight).ToString();
+            if (this.ddl_International_services_3.SelectedValue == "CA_UPSWorldWideExpedited")
+                this.txt_international_service_3_cost.Text = eBayShipping.US2days_WorldExpedited_ShippingFee(screen, weight).ToString();
+
+        }
+    }
+}
+

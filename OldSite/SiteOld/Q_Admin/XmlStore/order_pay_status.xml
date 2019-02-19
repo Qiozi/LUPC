@@ -1,0 +1,4 @@
+<data><row><id>1</id><order_pay_status_name>Not Paid</order_pay_status_name><order_pay_status_short_name>NP</order_pay_status_short_name><tag>1</tag></row>
+<row><id>2</id><order_pay_status_name>Paid</order_pay_status_name><order_pay_status_short_name>PA</order_pay_status_short_name><tag>1</tag></row>
+<row><id>3</id><order_pay_status_name>Paid Parti</order_pay_status_name><order_pay_status_short_name>PAP</order_pay_status_short_name><tag>1</tag></row>
+</data>

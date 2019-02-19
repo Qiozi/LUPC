@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.props" Condition="Exists('..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{714DCDBD-7190-4656-9C3D-5399E6DAC7BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LUComputers</RootNamespace>
+    <AssemblyName>LUComputers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <StartupObject>LUComputers.Program</StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D4669057389018545D8A9A4E527E4D76F913902D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LUComputers_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.6\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1-beta3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addProduct.Designer.cs">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G.cs" />
+    <Compile Include="Helper\CharHelper.cs" />
+    <Compile Include="ConvertGallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvertGallery.Designer.cs">
+      <DependentUpon>ConvertGallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo.Designer.cs">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\EmailHelper.cs" />
+    <Compile Include="Helper\ProcessHelper.cs" />
+    <Compile Include="Helper\SaveNewMatch.cs" />
+    <Compile Include="ltdD2aReadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ltdD2aReadFile.Designer.cs">
+      <DependentUpon>ltdD2aReadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ltd_ASI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_ASI.Designer.cs">
+      <DependentUpon>Ltd_ASI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ltd_ASI_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ltd_ASI_View.Designer.cs">
+      <DependentUpon>ltd_ASI_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ltd_DanDh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_DanDh.Designer.cs">
+      <DependentUpon>Ltd_DanDh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ltd_View_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_View_Detail.Designer.cs">
+      <DependentUpon>Ltd_View_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ltd_View_Detail2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_View_Detail2.Designer.cs">
+      <DependentUpon>Ltd_View_Detail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\HttpHelper.cs" />
+    <Compile Include="Helper\Ltd.cs" />
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdType.cs" />
+    <Compile Include="Nicklu2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nicklu2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunTimer\WatcherInfo.cs" />
+    <Compile Include="RunTimer\WatcherWork.cs" />
+    <Compile Include="Watch\Supercom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Watch\UpdateStock.cs" />
+    <EmbeddedResource Include="addProduct.resx">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConvertGallery.resx">
+      <DependentUpon>ConvertGallery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demo.resx">
+      <DependentUpon>Demo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eBayPrice.resx">
+      <DependentUpon>eBayPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPriceToRemote.resx">
+      <DependentUpon>EditPriceToRemote.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ltdD2aReadFile.resx">
+      <DependentUpon>ltdD2aReadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_ASI.resx">
+      <DependentUpon>Ltd_ASI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ltd_ASI_View.resx">
+      <DependentUpon>ltd_ASI_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_DanDh.resx">
+      <DependentUpon>Ltd_DanDh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_DanDh_view.resx">
+      <DependentUpon>Ltd_DanDh_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_View_Detail.resx">
+      <DependentUpon>Ltd_View_Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_View_Detail2.resx">
+      <DependentUpon>Ltd_View_Detail2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupercomALL_View.resx">
+      <DependentUpon>SupercomALL_View.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SynnexWatch.resx">
+      <DependentUpon>SynnexWatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_all_notebook.resx">
+      <DependentUpon>view_all_notebook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LUComputers_TemporaryKey.pfx" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Nicklu2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Nicklu2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\englishschoolEntities1.datasource" />
+    <None Include="Properties\DataSources\HospitalRecipeEntities.datasource" />
+    <None Include="Properties\DataSources\ltd_infoEntities.datasource" />
+    <None Include="Properties\DataSources\ltd_infoEntities11.datasource" />
+    <None Include="Properties\DataSources\LUOnlineContainer.datasource" />
+    <None Include="Properties\DataSources\nicklu2Entities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Helper\ValidLuSku.cs" />
+    <Compile Include="SupercomALL_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupercomALL_View.Designer.cs">
+      <DependentUpon>SupercomALL_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\ASI.cs" />
+    <Compile Include="Watch\ComparePrice.cs" />
+    <Compile Include="Watch\D2A.cs" />
+    <Compile Include="Watch\DanDh.cs" />
+    <Compile Include="Watch\LU.cs" />
+    <Compile Include="Watch\MatchStore.cs" />
+    <Compile Include="Watch\OtherIncInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Compile Include="eBayPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eBayPrice.Designer.cs">
+      <DependentUpon>eBayPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPriceToRemote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPriceToRemote.Designer.cs">
+      <DependentUpon>EditPriceToRemote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\UrlEvent.cs" />
+    <Compile Include="Helper\Compare.cs" />
+    <Compile Include="Helper\eBayPriceHelper.cs" />
+    <Compile Include="Helper\FFHelper.cs" />
+    <Compile Include="Helper\Logs.cs" />
+    <Compile Include="Ltd_DanDh_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_DanDh_view.Designer.cs">
+      <DependentUpon>Ltd_DanDh_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynnexWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SynnexWatch.Designer.cs">
+      <DependentUpon>SynnexWatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_all_notebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_all_notebook.Designer.cs">
+      <DependentUpon>view_all_notebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\eBay.cs" />
+    <Compile Include="Watch\Eprom.cs" />
+    <Compile Include="Watch\Synnex.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MIS\Util\Util.csproj">
+      <Project>{e0af7733-ee6c-48f9-b32e-f2f2840135c4}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DBProvider\DBProvider.csproj">
+      <Project>{14f0e4c0-9df0-44c3-aa5e-b6e4fb06824b}</Project>
+      <Name>DBProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.props'))" />
+    <Error Condition="!Exists('..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.targets'))" />
+  </Target>
+  <Import Project="..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.targets" Condition="Exists('..\packages\Pta.Build.WebEssentialsBundleTask.1.0.2\build\Pta.Build.WebEssentialsBundleTask.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

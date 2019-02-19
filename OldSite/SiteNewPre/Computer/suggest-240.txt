@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28610.jpg?imageView/3/w/150/h/150" alt="Asus Black External 12X Blu-Ray Writer BW-12D1S-U LITE/BLK/G/AS" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28610'>
+                                       Asus Black External 12X Blu-Ray Writer BW-12D1S-U LITE/BLK/G/AS
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $136.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27573.jpg?imageView/3/w/150/h/150" alt="ASUS BW-16D1HT Internal Blu-ray Writer" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27573'>
+                                       ASUS BW-16D1HT Internal Blu-ray Writer
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $118.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/24906.jpg?imageView/3/w/150/h/150" alt="LG GP50NB40 BLACK 8X USB2.0 SUPER MULTI DVD R RETAIL CABLE:O(USB)" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=24906'>
+                                       LG GP50NB40 BLACK 8X USB2.0 SUPER MULTI DVD R RETAIL CABLE:O(USB)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $34.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28611.jpg?imageView/3/w/150/h/150" alt="LG BH16NS40 Blu-Ray,Blu Ray ReWriter,SATA,Black," onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28611'>
+                                       LG BH16NS40 Blu-Ray,Blu Ray ReWriter,SATA,Black,
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $131.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28610.jpg?imageView/3/w/150/h/150" alt="Asus Black External 12X Blu-Ray Writer BW-12D1S-U LITE/BLK/G/AS" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28610'>
+                                       Asus Black External 12X Blu-Ray Writer BW-12D1S-U LITE/BLK/G/AS
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $136.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

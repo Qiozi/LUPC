@@ -1,0 +1,127 @@
+========== 1/12/2019 6:54:24 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/sales_order_detail.aspx?order_code=763485
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_sales_order_detail.SetControls(String order_code) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 103
+   at Q_Admin_sales_order_detail.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 47
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================
+========== 1/12/2019 6:54:37 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/sales_order_detail.aspx?order_code=763485
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_sales_order_detail.SetControls(String order_code) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 103
+   at Q_Admin_sales_order_detail.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 47
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================
+========== 1/12/2019 6:57:01 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/sales_order_detail.aspx?order_code=763485
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_sales_order_detail.SetControls(String order_code) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 105
+   at Q_Admin_sales_order_detail.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 47
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================
+========== 1/12/2019 6:58:36 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/sales_order_detail.aspx?order_code=763485
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_sales_order_detail.SetControls(String order_code) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 190
+   at Q_Admin_sales_order_detail.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 47
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================
+========== 1/12/2019 7:00:59 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/sales_order_detail.aspx?order_code=763485
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_sales_order_detail.SetControls(String order_code) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 192
+   at Q_Admin_sales_order_detail.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 47
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================
+========== 1/12/2019 7:01:16 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/sales_order_detail.aspx?order_code=763485
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_sales_order_detail.SetControls(String order_code) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 190
+   at Q_Admin_sales_order_detail.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\sales_order_detail.aspx.cs:line 47
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================
+========== 1/12/2019 7:03:58 PM Application_Error BEGIN ==========
+Ip:127.0.0.1
+浏览器:Chrome
+浏览器版本:71
+操作系统:WinNT
+页面：http://m.lu.com/q_admin/orders_edit_detail_new.aspx?order_code=311999
+错误信息：Nullable object must have a value.
+错误源：mscorlib
+异常方法：Void ThrowInvalidOperationException(System.ExceptionResource)
+堆栈信息：   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Q_Admin_orders_edit_detail_new.ViewPrice() in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\orders_edit_detail_new.aspx.cs:line 124
+   at Q_Admin_orders_edit_detail_new.InitPage() in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\orders_edit_detail_new.aspx.cs:line 53
+   at Q_Admin_orders_edit_detail_new.Page_Load(Object sender, EventArgs e) in c:\Workspaces\MyProjects\lucomputer\OldSite\Site\Q_Admin\orders_edit_detail_new.aspx.cs:line 19
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+========== Application_Error END ===================

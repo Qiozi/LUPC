@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26467.jpg?imageView/3/w/150/h/150" alt="Acer 19" Monitor V196WLB EPEAT Gold 19IN 1440X900 100000000:1 250 cd/m2 5ms " onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26467'>
+                                       Acer 19" Monitor V196WLB EPEAT Gold 19IN 1440X900 100000000:1 250 cd/m2 5ms 
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $125.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26430.jpg?imageView/3/w/150/h/150" alt="ASUS 29" MX299Q Monitor, 21:9 , 2560 x 1080, 5ms, 16.7M, 80,000,000:1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26430'>
+                                       ASUS 29" MX299Q Monitor, 21:9 , 2560 x 1080, 5ms, 16.7M, 80,000,000:1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $528.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26430.jpg?imageView/3/w/150/h/150" alt="ASUS 29" MX299Q Monitor, 21:9 , 2560 x 1080, 5ms, 16.7M, 80,000,000:1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26430'>
+                                       ASUS 29" MX299Q Monitor, 21:9 , 2560 x 1080, 5ms, 16.7M, 80,000,000:1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $528.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26430.jpg?imageView/3/w/150/h/150" alt="ASUS 29" MX299Q Monitor, 21:9 , 2560 x 1080, 5ms, 16.7M, 80,000,000:1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26430'>
+                                       ASUS 29" MX299Q Monitor, 21:9 , 2560 x 1080, 5ms, 16.7M, 80,000,000:1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $528.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/22754.jpg?imageView/3/w/150/h/150" alt="ASUS PA248Q IPS 24" 16:10 1920X1200 HDMI DP D-SUB DVI-D 4X USB 3.0 T/S/P/H" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=22754'>
+                                       ASUS PA248Q IPS 24" 16:10 1920X1200 HDMI DP D-SUB DVI-D 4X USB 3.0 T/S/P/H
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $437.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

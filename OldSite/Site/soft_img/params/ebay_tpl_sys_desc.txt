@@ -1,0 +1,22 @@
+﻿<table width="100%" border="0" cellpadding="2" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" align="middle" colspan="2">
+<table width="100%" bgcolor="#d0dae1" border="0" cellpadding="0" cellspacing="1">
+<tbody>
+<tr>
+<td bgcolor="#CDE3F2" height="7" style="padding-left: 8px; padding-top: 3px; padding-bottom: 3px">
+<b><font face="Verdana" size="2" color="#006699">{0}</font></b><br></td><td width='20' bgcolor="#CDE3F2"><a href='#sList'><img src='http://www.lucomputers.com/ebay/images/backUp2.jpg' border=0></a></td></tr></tbody></table></td>
+</tr>
+<tr>
+<td valign="top" width="19%" align="middle">
+<a onclick="javascript:popImage('{3}','Lu Computers','middle_center',true,true);return false;" href="#"></a>
+<img alt="" src="{1}"  border="0" ></td>
+<td valign="top">
+<table width="100%" border="0" cellpadding="2" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-size: 11px; color: rgb(102, 102, 102); line-height: 14px; font-family: Verdana; letter-spacing: 0px;" class="part_detail_desc">
+{2}
+</td></tr>
+</tbody></table></td></tr></tbody></table>

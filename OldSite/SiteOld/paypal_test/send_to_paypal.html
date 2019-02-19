@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<form action="https://api.sandbox.paypal.com/nvp" method="post" name="form1" id="form1">
+            <input type=hidden name=USER value="qiozi4_1206899598_biz_api1.163.com">
+            <input type=hidden name=PWD value="1206899607">
+            <input type=hidden name=SIGNATURE value="Ab.--knS-exvZZP3DONGdTh.Z32eAmLcNYNggqRzRox4Ft.eAAPdAar-"> 
+
+        <input type="text" name="AMT" value="1" />
+		<input type="text" name="ReturnURL" value="https://www.lucomputers.com/paypal_test/paypal_return_ok.asp" />
+		<input type="text" name="CancelURL" value="https://www.lucomputers.com/paypal_test/paypal_return_cancel.asp" />
+        <input type="text" name="method" value="SetExpressCheckout" />
+		<!--<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="useraction" value="commit">
+		<input type="hidden" name="business" value="paypal@lucomputers.com">
+		<input type="hidden" name="item_name" value="lucomputer_cart">
+		<input type="hidden" name="return" value="<%= paypal_return_path_file %>" />
+		<input type="hidden" name="currency_code" value="<%= price_unit_2%>">
+		<input type="hidden" name="amount" value="<%= rs(0)%>">
+		<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">-->
+        <input type="submit" value="Submit To Paypal" />
+	</form>
+<body>
+</body>
+</html>

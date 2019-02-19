@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ZT-T20800D-10P/35604.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35604_list_1.jpg" alt="ZOTAC GeForce RTX 2080 Video Card AMP 8GB GDDR6 256bit 3xDisplay Port/HDMI/USB" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ZT-T20800D-10P/35604.html'>
+                                       ZOTAC GeForce RTX 2080 Video Card AMP 8GB GDDR6 256bit 3xDisplay Port/HDMI/USB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ZT-T20800D-10P/35604.html'><label class="price">Price: $1109.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-STRIX-RX580-O8G-Gaming/34957.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34957_list_1.jpg" alt="Asus Radeon RX 580 Graphic Card, OpenGL 4.5, GDDR5 8GB,1380MHz, 256bit" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-STRIX-RX580-O8G-Gaming/34957.html'>
+                                       Asus Radeon RX 580 Graphic Card, OpenGL 4.5, GDDR5 8GB,1380MHz, 256bit
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ROG-STRIX-RX580-O8G-Gaming/34957.html'><label class="price">Price: $521.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GV-R736OC-2GD-REV-3-0/34646.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34646_list_1.jpg" alt="Gigabyte AMD Radeon R7-360 2GB GDDR5 Video Card DVI-I/DVI-D/HDMI/DisplayPort" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GV-R736OC-2GD-REV-3-0/34646.html'>
+                                       Gigabyte AMD Radeon R7-360 2GB GDDR5 Video Card DVI-I/DVI-D/HDMI/DisplayPort
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GV-R736OC-2GD-REV-3-0/34646.html'><label class="price">Price: $139.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/RX560-O4G-EVO/34505.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34505_list_1.jpg" alt="Asus AMD Radeon RX 560 Video Card, OpenGL 4.5, GDDR5 4GB, DVI, HDMI, DP" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/RX560-O4G-EVO/34505.html'>
+                                       Asus AMD Radeon RX 560 Video Card, OpenGL 4.5, GDDR5 4GB, DVI, HDMI, DP
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/RX560-O4G-EVO/34505.html'><label class="price">Price: $237.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GT710-SL-1GD5-BRK/34412.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34412_list_1.jpg" alt="Asus GeForce GT 710 1GB GDDR5 Graphic Card, 32bit, VGA, DVI, HDMI,OpenGL 4.5" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GT710-SL-1GD5-BRK/34412.html'>
+                                       Asus GeForce GT 710 1GB GDDR5 Graphic Card, 32bit, VGA, DVI, HDMI,OpenGL 4.5
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GT710-SL-1GD5-BRK/34412.html'><label class="price">Price: $68.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

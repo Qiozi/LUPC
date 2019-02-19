@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/TUF-B360M-PLUS-Gaming-S/35517.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35517_list_1.jpg" alt="Asus TUF B360M-PLUS Gaming S Motherboard LGA1151 (300 Series) DDR4 HDMI VGA M.2" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/TUF-B360M-PLUS-Gaming-S/35517.html'>
+                                       Asus TUF B360M-PLUS Gaming S Motherboard LGA1151 (300 Series) DDR4 HDMI VGA M.2
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/TUF-B360M-PLUS-Gaming-S/35517.html'><label class="price">Price: $135.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/PRIME-H370-A-CSM/35058.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35058_list_1.jpg" alt="Asus Prime H370-A/CSM Motherboard LGA1151 Interfaces:M.2, USB3.1, DVI, VGA, HDMI" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/PRIME-H370-A-CSM/35058.html'>
+                                       Asus Prime H370-A/CSM Motherboard LGA1151 Interfaces:M.2, USB3.1, DVI, VGA, HDMI
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/PRIME-H370-A-CSM/35058.html'><label class="price">Price: $153.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-RAMPAGE-VI-EXTREME/34777.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34777_list_1.jpg" alt="Asus ROG RAMPAGE VI EXTREME Motherboard, ATX , Intel Socket 2066, USB3.1, M.2" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-RAMPAGE-VI-EXTREME/34777.html'>
+                                       Asus ROG RAMPAGE VI EXTREME Motherboard, ATX , Intel Socket 2066, USB3.1, M.2
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ROG-RAMPAGE-VI-EXTREME/34777.html'><label class="price">Price: $851.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-MAXIMUS-X-FORMULA/34769.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34769_list_1.jpg" alt="Asus ROG MAXIMUS X FORMULA Motherboard Socket H4 LGA1151,HDMI M.2 Intel Z370 ATX" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-MAXIMUS-X-FORMULA/34769.html'>
+                                       Asus ROG MAXIMUS X FORMULA Motherboard Socket H4 LGA1151,HDMI M.2 Intel Z370 ATX
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ROG-MAXIMUS-X-FORMULA/34769.html'><label class="price">Price: $446.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-MAXIMUS-X-APEX/34541.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34541_list_1.jpg" alt="Asus ROG MAXIMUS X APEX Motherboard Socket LGA1151, Extended ATX, 8xUSB3.1, HDMI" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ROG-MAXIMUS-X-APEX/34541.html'>
+                                       Asus ROG MAXIMUS X APEX Motherboard Socket LGA1151, Extended ATX, 8xUSB3.1, HDMI
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ROG-MAXIMUS-X-APEX/34541.html'><label class="price">Price: $439.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

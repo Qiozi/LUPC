@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GeteBayDetailsRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+  <RequesterCredentials>
+    <eBayAuthToken>{0}</eBayAuthToken>
+  </RequesterCredentials>
+  <WarningLevel>High</WarningLevel>
+  <DetailName>CountryDetails</DetailName>
+</GeteBayDetailsRequest>

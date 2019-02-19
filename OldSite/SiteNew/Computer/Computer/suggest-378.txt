@@ -1,0 +1,117 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-win7-1/25116.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25116_list_1.jpg" alt="MS Microsoft Windows 7 Home Premium 32 bit Full Version" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-win7-1/25116.html'>
+                                       MS Microsoft Windows 7 Home Premium 32 bit Full Version
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/lucomputer-win7-1/25116.html'><label class="price">Price: $109.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-lenovo-memory2/25115.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25115_list_1.jpg" alt="NEW Genuine Lenovo 2GB PC3-8500 DDR3-1066 SODIMM Memory" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-lenovo-memory2/25115.html'>
+                                       NEW Genuine Lenovo 2GB PC3-8500 DDR3-1066 SODIMM Memory
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/lucomputer-lenovo-memory2/25115.html'><label class="price">Price: $53.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-logitech-mouse-use2b/25114.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25114_list_1.jpg" alt="Logitech black USB 2 button wheel mouse. Precice & comfortablfor for either hand" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-logitech-mouse-use2b/25114.html'>
+                                       Logitech black USB 2 button wheel mouse. Precice & comfortablfor for either hand
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/lucomputer-logitech-mouse-use2b/25114.html'><label class="price">Price: $12.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-lenovo-thinkpad-adapter/25113.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25113_list_1.jpg" alt="NEW Genuine Lenovo ThinkPad 90W AC Power Adapter
+." style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-lenovo-thinkpad-adapter/25113.html'>
+                                       NEW Genuine Lenovo ThinkPad 90W AC Power Adapter
+.
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/lucomputer-lenovo-thinkpad-adapter/25113.html'><label class="price">Price: $25.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-asus-targus-backpack/25112.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25112_list_1.jpg" alt="New Asus Targus Backpack for 15.6 Laptop" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/lucomputer-asus-targus-backpack/25112.html'>
+                                       New Asus Targus Backpack for 15.6 Laptop
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/lucomputer-asus-targus-backpack/25112.html'><label class="price">Price: $17.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

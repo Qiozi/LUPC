@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Intel-Core-i7-4790K-Haswell-4-0GHz-CPU-FCLGA1150-8MB-4-cores-8-threads-22NM-84W-CPU-BX80646I74790K.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/25601.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Intel Core i7-4790K Haswell 4.0GHz CPU FCLGA1150 8MB 4 cores/8 threads 22NM 84W CPU BX80646I74790K</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371100425287"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$509.65</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28218'>
+										<del>...</del>
+										<span class="price itemprice" sku='28218'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Intel-Core-i7-5960X-Haswell-E-8-Core-3-0GHz-LGA-2011-v3-140W-CPU-BX80648I75960X.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/26457.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Intel Core i7-5960X Haswell-E 8-Core 3.0GHz LGA 2011-v3 140W CPU BX80648I75960X</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=221861386162"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1498.43</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28751'>
+										<del>...</del>
+										<span class="price itemprice" sku='28751'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Intel-Core-i5-4690K-3-5GHz-CPU-FCLGA1150-6MB-4-cores-4-threads-22NM-84W-CPU-BX80646I54690K.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/25602.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Intel Core i5-4690K 3.5GHz CPU FCLGA1150 6MB 4 cores/4 threads 22NM 84W CPU BX80646I54690K</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371100424832"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$350.49</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28219'>
+										<del>...</del>
+										<span class="price itemprice" sku='28219'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Intel-Core-i7-5820K-Haswell-E-6-Core-3-3GHz-LGA-2011-v3-140W-CPU-BX80648I75820K.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/26457.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Intel Core i7-5820K Haswell-E 6-Core 3.3GHz LGA 2011-v3 140W CPU BX80648I75820K</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371240086590"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$572.45</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28753'>
+										<del>...</del>
+										<span class="price itemprice" sku='28753'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

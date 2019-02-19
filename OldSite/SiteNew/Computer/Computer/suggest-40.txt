@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/6W11-016GR2TSC/30112.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30112_list_1.jpg" alt="PQI Memory Flash 6W11-016GR2TSC Air Drive A100 TSC ONLY 16GB 802.11n SDHC Iron Grey Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/6W11-016GR2TSC/30112.html'>
+                                       PQI Memory Flash 6W11-016GR2TSC Air Drive A100 TSC ONLY 16GB 802.11n SDHC Iron Grey Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/6W11-016GR2TSC/30112.html'><label class="price">Price: $50.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/DT100G3-16GBCR/30111.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30111_list_1.jpg" alt="Kingston Memory Flash DT100G3/16GBCR 16GB USB 3.0 Canadian Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/DT100G3-16GBCR/30111.html'>
+                                       Kingston Memory Flash DT100G3/16GBCR 16GB USB 3.0 Canadian Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/DT100G3-16GBCR/30111.html'><label class="price">Price: $8.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDSDU-016G-U46S/28934.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28934_list_1.jpg" alt="Sandisk  Flash Memory Card - 16 GB - SDHC Memory Card - SDSDU-016G-U46S" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDSDU-016G-U46S/28934.html'>
+                                       Sandisk  Flash Memory Card - 16 GB - SDHC Memory Card - SDSDU-016G-U46S
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SDSDU-016G-U46S/28934.html'><label class="price">Price: $20.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/6W25-016GR1M1A/26505.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/26505_list_1.jpg" alt="PQI Memory Flash 6W25-016GR1M1A Air Card 16GB 802.11n WIFI SD Micro iOS Android" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/6W25-016GR1M1A/26505.html'>
+                                       PQI Memory Flash 6W25-016GR1M1A Air Card 16GB 802.11n WIFI SD Micro iOS Android
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/6W25-016GR1M1A/26505.html'><label class="price">Price: $57.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDSDQM-004G-B35SA/25697.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25697_list_1.jpg" alt="Sandisk 4GB SDSDQM-004G-B35A, CARD+ADAPTER,MOBILE" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDSDQM-004G-B35SA/25697.html'>
+                                       Sandisk 4GB SDSDQM-004G-B35A, CARD+ADAPTER,MOBILE
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SDSDQM-004G-B35SA/25697.html'><label class="price">Price: $9.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

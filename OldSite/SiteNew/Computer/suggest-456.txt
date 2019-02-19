@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/MZ-V7E2T0BW/35293.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35293_list_1.jpg" alt="Samsung SSD 970 EVO 2TB Nvme M.2 SSD, Max Read:3.42 GB/s ;MaxWrite: 2.44 GB/s ;" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/MZ-V7E2T0BW/35293.html'>
+                                       Samsung SSD 970 EVO 2TB Nvme M.2 SSD, Max Read:3.42 GB/s ;MaxWrite: 2.44 GB/s ;
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/MZ-V7E2T0BW/35293.html'><label class="price">Price: $917.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SA400S37-960G/35288.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35288_list_1.jpg" alt="Kingston 960GB A400 SSD SATA3 2.5",Maximum Read: 500MB/s, Maximum Write: 450MB/s" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SA400S37-960G/35288.html'>
+                                       Kingston 960GB A400 SSD SATA3 2.5",Maximum Read: 500MB/s, Maximum Write: 450MB/s
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SA400S37-960G/35288.html'><label class="price">Price: $175.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CT250MX500SSD1/34807.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34806_list_1.jpg" alt="Crucial 250GB MX500 SSD, 2.5inch, 7MM,256-bit, MaxRead:560MB/s, MaxWrite:510MB/s" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CT250MX500SSD1/34807.html'>
+                                       Crucial 250GB MX500 SSD, 2.5inch, 7MM,256-bit, MaxRead:560MB/s, MaxWrite:510MB/s
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CT250MX500SSD1/34807.html'><label class="price">Price: $74.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/MU-PA250B-AM/34525.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34525_list_1.jpg" alt="Samsung Portable SSD T5 250GB, USB3.1, Max Read: 540 MB/s, Max Write: 515 MB/s" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/MU-PA250B-AM/34525.html'>
+                                       Samsung Portable SSD T5 250GB, USB3.1, Max Read: 540 MB/s, Max Write: 515 MB/s
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/MU-PA250B-AM/34525.html'><label class="price">Price: $178.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SA400S37-120G/34318.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34316_list_1.jpg" alt="Kingston 120GB A400 SSD; Max Read: 500MB/s; Max Write: 320MB/s; SA400S37/120G" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SA400S37-120G/34318.html'>
+                                       Kingston 120GB A400 SSD; Max Read: 500MB/s; Max Write: 320MB/s; SA400S37/120G
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SA400S37-120G/34318.html'><label class="price">Price: $33.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <style>
+        body:{
+            display:flex;
+        }
+        img {
+            height: 15px;
+            width: 15px;
+            display: block;
+            margin: 15px auto;
+            transition: 1s height, 1s 1s width;
+        }
+
+            img:hover {
+                height: 450px;
+                width: 450px;
+            }
+div {
+	width: 9em;
+	padding: .6em 1em;
+	margin: 1em auto;
+	background: yellowgreen;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;    
+}
+
+@keyframes spin {
+	to {
+		-webkit-transform: rotate(1turn);
+	}
+}
+
+@-webkit-keyframes spin {
+	to {
+		-webkit-transform: rotate(1turn);
+	}
+}
+
+div:hover {
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+}
+    </style>
+  
+
+    <div></div>
+</body>
+</html>

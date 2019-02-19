@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/service019/11991.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/999999_list_1.jpg" alt="Data Backup" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/service019/11991.html'>
+                                       Data Backup
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/service019/11991.html'><label class="price">Price: $74.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/service018/10723.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/999999_list_1.jpg" alt="On Site Service Travel (GTA)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/service018/10723.html'>
+                                       On Site Service Travel (GTA)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/service018/10723.html'><label class="price">Price: $41.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/service017/10722.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/999999_list_1.jpg" alt="On Site Service Extended Hour" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/service017/10722.html'>
+                                       On Site Service Extended Hour
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/service017/10722.html'><label class="price">Price: $41.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/service016/10721.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/999999_list_1.jpg" alt="On Site Service Initial Hour (Minimum)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/service016/10721.html'>
+                                       On Site Service Initial Hour (Minimum)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/service016/10721.html'><label class="price">Price: $68.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/service015/10720.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/999999_list_1.jpg" alt="System Assemble (Complex)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/service015/10720.html'>
+                                       System Assemble (Complex)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/service015/10720.html'><label class="price">Price: $63.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

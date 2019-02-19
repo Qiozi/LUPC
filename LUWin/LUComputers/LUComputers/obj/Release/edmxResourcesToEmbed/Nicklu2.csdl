@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nicklu2Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="nicklu2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_product" EntityType="nicklu2Model.tb_product" />
+  </EntityContainer>
+  <EntityType Name="tb_product">
+    <Key>
+      <PropertyRef Name="product_serial_no" />
+    </Key>
+    <Property Name="product_serial_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+    <Property Name="product_short_name" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+    <Property Name="product_store_sum" Type="Int32" />
+    <Property Name="product_sale_sum" Type="Int32" />
+    <Property Name="menu_child_serial_no" Type="Int32" />
+    <Property Name="product_filename" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="tag" Type="SByte" />
+    <Property Name="product_current_real_cost" Type="Decimal" />
+    <Property Name="product_current_special_cash_price" Type="Decimal" />
+    <Property Name="product_current_price" Type="Decimal" />
+    <Property Name="product_current_cost" Type="Decimal" />
+    <Property Name="product_ship_price" Type="Decimal" />
+    <Property Name="producter_url" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="product_order" Type="Int32" />
+    <Property Name="supplier_sku" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="manufacturer_part_number" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ltd_stock" Type="Int32" />
+    <Property Name="product_sale_sum_2" Type="Int32" />
+    <Property Name="product_current_cost_2" Type="Decimal" />
+    <Property Name="product_ship_price_2" Type="Int32" />
+    <Property Name="product_ebay_name_2" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="product_ebay_name" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+    <Property Name="product_short_name_f" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+    <Property Name="hot" Type="SByte" />
+    <Property Name="new" Type="SByte" />
+    <Property Name="producter_serial_no_bak" Type="Int32" />
+    <Property Name="product_compatibility" Type="SByte" />
+    <Property Name="split_line" Type="SByte" />
+    <Property Name="product_name_long_en" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="shopbot_info" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="product_img_sum" Type="SByte" />
+    <Property Name="product_size_id" Type="Int32" />
+    <Property Name="is_non" Type="SByte" />
+    <Property Name="keywords" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="shortcomment" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="comment" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="producter_serial_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="old_db_id" Type="Int32" />
+    <Property Name="agent_stock" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="regdate" Type="DateTime" />
+    <Property Name="other_product_sku" Type="Int32" />
+    <Property Name="category_idss" Type="Int32" />
+    <Property Name="export" Type="Boolean" />
+    <Property Name="product_current_discount" Type="Decimal" />
+    <Property Name="last_regdate" Type="DateTime" />
+    <Property Name="part_ebay_cost" Type="Decimal" />
+    <Property Name="part_ebay_price" Type="Decimal" />
+    <Property Name="real_cost_regdate" Type="DateTime" />
+    <Property Name="issue" Type="Boolean" />
+    <Property Name="view_count" Type="Int32" />
+    <Property Name="model" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="split_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="adjustment" Type="Decimal" />
+    <Property Name="adjustment_regdate" Type="DateTime" />
+    <Property Name="adjustment_enddate" Type="DateTime" />
+    <Property Name="part_ebay_describe" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="screen_size" Type="Decimal" />
+    <Property Name="price_sku" Type="Int32" />
+    <Property Name="price_sku_quantity" Type="Int32" />
+    <Property Name="curr_change_cost" Type="Decimal" />
+    <Property Name="curr_change_price" Type="Decimal" />
+    <Property Name="curr_change_ltd" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="curr_change_quantity" Type="Int32" />
+    <Property Name="curr_change_regdate" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="ebay_system_short_name" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+    <Property Name="is_modify" Type="Boolean" />
+    <Property Name="is_top" Type="Boolean" />
+    <Property Name="prodType" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="img_url" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="UPC" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ETA" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="weight" Type="Decimal" />
+    <Property Name="href_url" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="short_name_for_sys" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="is_fixed" Type="Boolean" />
+    <Property Name="for_sys" Type="Boolean" />
+    <Property Name="new_href_url" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/DRW-24B1ST-BLK-B-AS/31478.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31478_list_1.jpg" alt="Asus Storage DRW-24B1ST/BLK/B/AS DVDRW SATA 24X Green Environment with Software" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/DRW-24B1ST-BLK-B-AS/31478.html'>
+                                       Asus Storage DRW-24B1ST/BLK/B/AS DVDRW SATA 24X Green Environment with Software
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/DRW-24B1ST-BLK-B-AS/31478.html'><label class="price">Price: $27.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GP65NG60/30136.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30136_list_1.jpg" alt="LG Storage GP65NG60 External Slim DVDRW 8X USB Gold with Cyberlink Software" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GP65NG60/30136.html'>
+                                       LG Storage GP65NG60 External Slim DVDRW 8X USB Gold with Cyberlink Software
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GP65NG60/30136.html'><label class="price">Price: $42.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GH24NSC0B/29082.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/29082_list_1.jpg" alt="LG Storage GH24NSC0 DVDRW 24X SATA without software Black Bare" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GH24NSC0B/29082.html'>
+                                       LG Storage GH24NSC0 DVDRW 24X SATA without software Black Bare
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GH24NSC0B/29082.html'><label class="price">Price: $26.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GH24NSC0/28612.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28612_list_1.jpg" alt="LG Super Multi DVD-Rewriter Windows 8 Compatible GH24NSC0" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GH24NSC0/28612.html'>
+                                       LG Super Multi DVD-Rewriter Windows 8 Compatible GH24NSC0
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GH24NSC0/28612.html'><label class="price">Price: $24.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/BH16NS40/28611.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28611_list_1.jpg" alt="LG BH16NS40 Blu-Ray,Blu Ray ReWriter,SATA,Black," style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/BH16NS40/28611.html'>
+                                       LG BH16NS40 Blu-Ray,Blu Ray ReWriter,SATA,Black,
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/BH16NS40/28611.html'><label class="price">Price: $150.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/KVR21N15S8-8/33960.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33960_list_1.jpg" alt="Kingston 8GB 2133MHz DDR4 Non-ECC CL15 DIMM" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/KVR21N15S8-8/33960.html'>
+                                       Kingston 8GB 2133MHz DDR4 Non-ECC CL15 DIMM
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/KVR21N15S8-8/33960.html'><label class="price">Price: $123.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/BLS2KIT4G3D1609DS1S00/31752.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31752_list_1.jpg" alt="Crucial Memory BLS2KIT4G3D1609DS1S00 8GB DDR3 1600 Ballistix 2x4GB Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/BLS2KIT4G3D1609DS1S00/31752.html'>
+                                       Crucial Memory BLS2KIT4G3D1609DS1S00 8GB DDR3 1600 Ballistix 2x4GB Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/BLS2KIT4G3D1609DS1S00/31752.html'><label class="price">Price: $89.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/HX424C15FB2-8/31639.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31639_list_1.jpg" alt="Kingston 8GB(1x8G)DDR4 2400MHz Memory Unbuffered HyperX Fury Black HX424C15FB2/8" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/HX424C15FB2-8/31639.html'>
+                                       Kingston 8GB(1x8G)DDR4 2400MHz Memory Unbuffered HyperX Fury Black HX424C15FB2/8
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/HX424C15FB2-8/31639.html'><label class="price">Price: $89.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/HX426C15FBK2-16/31439.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31439_list_1.jpg" alt="Kingston 16GB(2x8G) DDR4 2666MHz Memory HX426C15FBK2/16 Unbuffered" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/HX426C15FBK2-16/31439.html'>
+                                       Kingston 16GB(2x8G) DDR4 2666MHz Memory HX426C15FBK2/16 Unbuffered
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/HX426C15FBK2-16/31439.html'><label class="price">Price: $186.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CT8G4SFD8213/31437.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31436_list_1.jpg" alt="Crucial 8GB DDR4 2133MHz Memory SODIMM Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CT8G4SFD8213/31437.html'>
+                                       Crucial 8GB DDR4 2133MHz Memory SODIMM Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CT8G4SFD8213/31437.html'><label class="price">Price: $118.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

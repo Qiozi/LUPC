@@ -1,0 +1,1016 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Config" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ExecuteDataTable(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="57">可以在方法 'Config.ExecuteDataTable(string)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 57</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="53">传递给 'Config.ExecuteDataTable(string)' 中的 'MySqlDataAdapter.MySqlDataAdapter(string, MySqlConnection)' 的查询字符串可能包含以下变量 'sql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteNonQuery(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="76">'Config.ExecuteNonQuery(string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="82">可以在方法 'Config.ExecuteNonQuery(string)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 82</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="67">传递给 'Config.ExecuteNonQuery(string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'sql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteScalar(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="96">可以在方法 'Config.ExecuteScalar(string)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 96</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="Config.cs" Line="92">传递给 'Config.ExecuteScalar(string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'sql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CountryCategoryHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetCountryCategoryByValue(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\enums" File="CountryCategoryHelper.cs" Line="49">'CountryCategoryHelper.GetCountryCategoryByValue(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="eBayCmdReviseItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Revise(System.String,System.Boolean,System.String,System.Decimal,System.Int32,System.String,System.Nullable`1&lt;System.Boolean&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="eBayCmdReviseItem.cs" Line="173">可以在方法 'eBayCmdReviseItem.Revise(string, bool, string, decimal, int, string, bool?)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 173</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReviseItem(System.String,System.Boolean,System.String,System.Decimal,System.Int32,System.String,System.String,System.String,System.String,eBayModifyType)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="eBayCmdReviseItem.cs" Line="389">可以在方法 'eBayCmdReviseItem.ReviseItem(string, bool, string, decimal, int, string, string, string, string, eBayModifyType)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 389</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="eBayGetActiveItems" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetMySelling(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="eBayGetActiveItems.cs" Line="157">可以在方法 'eBayGetActiveItems.GetMySelling(int)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 157</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="eBayGetActiveItems.cs" Line="167">可以在方法 'eBayGetActiveItems.GetMySelling(int)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 167</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EbayGetXmlHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetEbayXml(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="EbayGetXmlHelper.cs" Line="107">'EbayGetXmlHelper.GetEbayXml(string, string, string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="EbayGetXmlHelper.cs" Line="131">可以在方法 'EbayGetXmlHelper.GetEbayXml(string, string, string)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 131</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EbayItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AttriatesXml(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="为格式化方法提高正确的参数" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="MissingFormatItem" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="EbayItem.cs" Line="376">方法 'EbayItem.AttriatesXml(int, int)' 调用 'string.Format(string, object, object, object)' 并且不为参数 "3" 提供格式项。提供的格式字符串为:“"\r\n&lt;Attribute attributeID=\"{0}\"&gt;    \r\n        {1}    \r\n&lt;/Attribute&gt;\r\n"”</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EbayItemGenerate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddItem(EbayItem,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="EbayItemGenerate.cs" Line="250">可以在方法 'EbayItemGenerate.AddItem(EbayItem, string, int, int, bool, bool)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 250</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetItem(System.String,System.String,System.Int32,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="EbayItemGenerate.cs" Line="434">可以在方法 'EbayItemGenerate.GetItem(string, string, int, bool)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 434</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EbayPageText" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GenerateEbayPage(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="EbayPageText.cs" Line="589">'EbayPageText.GenerateEbayPage(string, string, string, int, int, bool, bool, bool)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GenerateEbayPageNew(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Decimal)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="EbayPageText.cs" Line="1053">'EbayPageText.GenerateEbayPageNew(string, string, string, int, int, bool, bool, bool, decimal)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GenerateEbayPageNewSub(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Decimal,System.Decimal)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="EbayPageText.cs" Line="1555">'EbayPageText.GenerateEbayPageNewSub(string, string, string, int, int, bool, bool, bool, decimal, decimal)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="eBaySysDescription" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FilterTemplete(System.String,System.String,System.String,System.Int32,System.Int32,System.Web.HttpServerUtility)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="eBaySysDescription.cs" Line="507">'eBaySysDescription.FilterTemplete(string, string, string, int, int, HttpServerUtility)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\ebayConfig" File="eBaySysDescription.cs" Line="416">可以在方法 'eBaySysDescription.FilterTemplete(string, string, string, int, int, HttpServerUtility)' 中多次释放对象 'sr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 416</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FileHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ReadFile(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\Helper" File="FileHelper.cs" Line="104">可以在方法 'FileHelper.ReadFile(string)' 中多次释放对象 'sr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 104</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GenerateFlashViewFile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Export()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code" File="GenerateFlashViewFile.cs" Line="112">'GenerateFlashViewFile.Export()' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FlashFilePath(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="为格式化方法提高正确的参数" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="MissingFormatItem" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code" File="GenerateFlashViewFile.cs" Line="126">方法 'GenerateFlashViewFile.FlashFilePath(string)' 调用 'string.Format(string, object)' 并且不为参数 "1" 提供格式项。提供的格式字符串为:“"~/ebay_page_store/part/"”</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GetAllValidCategory" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GenerateAllValidCategory()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider" File="GetAllValidCategory.cs" Line="77">可以在方法 'GetAllValidCategory.GenerateAllValidCategory()' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 77</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LtdHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#LtdModelByValue(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\enums" File="Ltd.cs" Line="107">'LtdHelper.LtdModelByValue(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MakeThumbnail" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Run(System.String,System.String,System.Int32,System.Int32,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\Helper" File="MakeThumbnail.cs" Line="88">'MakeThumbnail.Run(string, string, int, int, string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OrderHelperModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CancelInvoiceOfOrder(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider\Auto" File="OrderHelperModel.cs" Line="1302">'OrderHelperModel.CancelInvoiceOfOrder(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider\Auto" File="OrderHelperModel.cs" Line="1310">可以在方法 'OrderHelperModel.CancelInvoiceOfOrder(int)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 1310</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider\Auto" File="OrderHelperModel.cs" Line="1289">传递给 'OrderHelperModel.CancelInvoiceOfOrder(int)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'dt.Rows[0][0]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider\Auto" File="OrderHelperModel.cs" Line="1294">传递给 'OrderHelperModel.CancelInvoiceOfOrder(int)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'dt.Rows[0][0]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider\Auto" File="OrderHelperModel.cs" Line="1285">传递给 'OrderHelperModel.CancelInvoiceOfOrder(int)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'order_code'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\DataProvider\Auto" File="OrderHelperModel.cs" Line="1274">传递给 'OrderHelperModel.CancelInvoiceOfOrder(int)' 中的 'MySqlDataAdapter.MySqlDataAdapter(string, MySqlConnection)' 的查询字符串可能包含以下变量 'order_code'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OrderPriceWork" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AccountOrder(System.String,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\OrderPriceAccount" File="OrderPriceWork.cs" Line="352">'OrderPriceWork.AccountOrder(string, bool)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OrderSourceHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetOrderSourceByValue(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\enums" File="OrderSource.cs" Line="51">'OrderSourceHelper.GetOrderSourceByValue(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Product_category_helper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetProductCategoryByValue(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\enums" File="Product_category.cs" Line="39">'Product_category_helper.GetProductCategoryByValue(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RivalHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RivalByValue(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\enums" File="RivalHelper.cs" Line="49">'RivalHelper.RivalByValue(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetRoleByValue(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\App_Code\enums" File="Role.cs" Line="38">'RoleHelper.GetRoleByValue(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_1ko0mk4f.dll">
+   <Modules>
+    <Module Name="app_web_1ko0mk4f.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="AccountCharge" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#UpdateStateCompanyCountry()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site" File="AccountCharge.aspx.cs" Line="424">'AccountCharge.UpdateStateCompanyCountry()' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccountCharge_new" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CurrentSystem" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_CurrentSystem()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="Breaking">
+               <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site" File="AccountCharge_new.aspx.cs" Line="399">'AccountCharge_new.CurrentSystem.get()' 创建 'Exception' 类型的异常，该异常类型不应当在属性中引发。如果有可能会引发此异常实例，请使用其他异常类型，将该属性转换为方法，或者更改该属性的逻辑，使它不再引发异常。</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#UpdateStateCompanyCountry()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site" File="AccountCharge_new.aspx.cs" Line="482">'AccountCharge_new.UpdateStateCompanyCountry()' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccountCharge2_new" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CC" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_CC()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="Breaking">
+               <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site" File="AccountCharge2_new.aspx.cs" Line="194">'AccountCharge2_new.CC.get()' 创建 'Exception' 类型的异常，该异常类型不应当在属性中引发。如果有可能会引发此异常实例，请使用其他异常类型，将该属性转换为方法，或者更改该属性的逻辑，使它不再引发异常。</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="right_manage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreatePageContent(System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site" File="right_manage.aspx.cs" Line="162">'right_manage.CreatePageContent(string, string, string, string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SavePaypalShippingInfo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site" File="SavePaypalShippingInfo.aspx.cs" Line="35">可以在方法 'SavePaypalShippingInfo.Page_Load(object, EventArgs)' 中多次释放对象 'httpr.GetResponse().GetResponseStream()'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 35</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site" File="SavePaypalShippingInfo.aspx.cs" Line="35">可以在方法 'SavePaypalShippingInfo.Page_Load(object, EventArgs)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 35</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_2qdtqqbs.dll">
+   <Modules>
+    <Module Name="app_web_2qdtqqbs.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_advertisement_banner" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_save_banner_type_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="advertisement_banner.aspx.cs" Line="322">可以在方法 'Q_Admin_advertisement_banner.btn_save_banner_type_Click(object, EventArgs)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 322</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_orders_ebay_import" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Button1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_ebay_import.aspx.cs" Line="175">可以在方法 'Q_Admin_orders_ebay_import.Button1_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 175</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_bxub3vsq.dll">
+   <Modules>
+    <Module Name="app_web_bxub3vsq.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_ebayMaster_ebay_number_update" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_upload_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster" File="ebay_number_update.aspx.cs" Line="174">可以在方法 'Q_Admin_ebayMaster_ebay_number_update.btn_upload_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 174</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_ebayMaster_ebay_part_list" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SeteBayOnSale(System.Decimal,System.DateTime,System.DateTime)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster" File="ebay_part_list.aspx.cs" Line="359">可以在方法 'Q_Admin_ebayMaster_ebay_part_list.SeteBayOnSale(decimal, DateTime, DateTime)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 359</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetPromotionalSaleListings(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster" File="ebay_part_list.aspx.cs" Line="194">可以在方法 'Q_Admin_ebayMaster_ebay_part_list.SetPromotionalSaleListings(string, string)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 194</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_ebayMaster_ebay_system_updata_excel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Button_updata_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster" File="ebay_system_updata_excel.aspx.cs" Line="108">可以在方法 'Q_Admin_ebayMaster_ebay_system_updata_excel.Button_updata_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 108</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Button1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster" File="ebay_system_updata_excel.aspx.cs" Line="166">可以在方法 'Q_Admin_ebayMaster_ebay_system_updata_excel.Button1_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 166</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_ebayMaster_ebay_system_updata_excel_create" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Button_updata_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster" File="ebay_system_updata_excel_create.aspx.cs" Line="378">可以在方法 'Q_Admin_ebayMaster_ebay_system_updata_excel_create.Button_updata_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 378</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_g3r2srjz.dll">
+   <Modules>
+    <Module Name="app_web_g3r2srjz.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="LUAdmin_NetCmd_ChangeHomePageAndPrice" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\NetCmd" File="ChangeHomePageAndPrice.aspx.cs" Line="32">可以在方法 'LUAdmin_NetCmd_ChangeHomePageAndPrice.Page_Load(object, EventArgs)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 32, 35</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_NetCmd_ChangePartPrice" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ChangeStoreInLU()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\NetCmd" File="ChangePartPrice.aspx.cs" Line="314">'Q_Admin_NetCmd_ChangePartPrice.ChangeStoreInLU()' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_NetCmd_Create_Part_Json" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\NetCmd" File="Create_Part_Json.aspx.cs" Line="51">可以在方法 'Q_Admin_NetCmd_Create_Part_Json.Page_Load(object, EventArgs)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 51</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_NetCmd_export_all_ebay_sys_to_xml" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#WriteEbaySys()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\NetCmd" File="export_all_ebay_sys_to_xml.aspx.cs" Line="131">可以在方法 'Q_Admin_NetCmd_export_all_ebay_sys_to_xml.WriteEbaySys()' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 131</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_h5rhiots.dll">
+   <Modules>
+    <Module Name="app_web_h5rhiots.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_orders_edit_detail_new" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BindSysList(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_edit_detail_new.aspx.cs" Line="116">'Q_Admin_orders_edit_detail_new.BindSysList(string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_product_helper_virtual_update_info" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_upload_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="product_helper_virtual_update_info.aspx.cs" Line="167">可以在方法 'Q_Admin_product_helper_virtual_update_info.btn_upload_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 167</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_hgq0czfq.dll">
+   <Modules>
+    <Module Name="app_web_hgq0czfq.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_product_helper_import_store_price_2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#UpdateDB(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="product_helper_import_store_price_2.aspx.cs" Line="87">可以在方法 'Q_Admin_product_helper_import_store_price_2.UpdateDB(string)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 87</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_Sale_on_sale_settings_download_up" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_upload_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="Sale_on_sale_settings_download_up.aspx.cs" Line="210">可以在方法 'Q_Admin_Sale_on_sale_settings_download_up.btn_upload_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 210</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_lyg2uobh.dll">
+   <Modules>
+    <Module Name="app_web_lyg2uobh.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_inc_upload_part_info" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_upload_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\inc" File="upload_part_info.aspx.cs" Line="187">可以在方法 'Q_Admin_inc_upload_part_info.btn_upload_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 187</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateNullCommentFile(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\inc" File="upload_part_info.aspx.cs" Line="216">可以在方法 'Q_Admin_inc_upload_part_info.CreateNullCommentFile(int)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 216</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_o02dfy4x.dll">
+   <Modules>
+    <Module Name="app_web_o02dfy4x.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_ebayMaster_Online_AddItemFromFlash" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="AddItemFromFlash.aspx.cs" Line="166">'Q_Admin_ebayMaster_Online_AddItemFromFlash.Page_Load(object, EventArgs)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_ebayMaster_Online_EndItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EndItem(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="EndItem.aspx.cs" Line="157">可以在方法 'Q_Admin_ebayMaster_Online_EndItem.EndItem(string)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 157, 158</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="EndItem.aspx.cs" Line="158">可以在方法 'Q_Admin_ebayMaster_Online_EndItem.EndItem(string)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 158</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_ebayMaster_Online_get_shipping_services" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetEbayXml(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="get_shipping_services.aspx.cs" Line="146">可以在方法 'Q_Admin_ebayMaster_Online_get_shipping_services.GetEbayXml(string)' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 146</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="get_shipping_services.aspx.cs" Line="151">可以在方法 'Q_Admin_ebayMaster_Online_get_shipping_services.GetEbayXml(string)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 151</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetStore()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="get_shipping_services.aspx.cs" Line="269">可以在方法 'Q_Admin_ebayMaster_Online_get_shipping_services.GetStore()' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 269</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="get_shipping_services.aspx.cs" Line="274">可以在方法 'Q_Admin_ebayMaster_Online_get_shipping_services.GetStore()' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 274</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetStoreCategories()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="get_shipping_services.aspx.cs" Line="210">可以在方法 'Q_Admin_ebayMaster_Online_get_shipping_services.SetStoreCategories()' 中多次释放对象 'str'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 210</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin\ebayMaster\Online" File="get_shipping_services.aspx.cs" Line="215">可以在方法 'Q_Admin_ebayMaster_Online_get_shipping_services.SetStoreCategories()' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 215</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_unp0dgpc.dll">
+   <Modules>
+    <Module Name="app_web_unp0dgpc.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_advertisement_page_top" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_save_page_top_flash_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="advertisement_page_top.aspx.cs" Line="50">可以在方法 'Q_Admin_advertisement_page_top.btn_save_page_top_flash_Click(object, EventArgs)' 中多次释放对象 'sw'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 50</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitialDatabase()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="advertisement_page_top.aspx.cs" Line="27">可以在方法 'Q_Admin_advertisement_page_top.InitialDatabase()' 中多次释放对象 'sr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 27</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_orders_download_up" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_upload_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_download_up.aspx.cs" Line="197">可以在方法 'Q_Admin_orders_download_up.btn_upload_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 197</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_orders_edit_detail" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BindSystemList(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_edit_detail.aspx.cs" Line="747">'Q_Admin_orders_edit_detail.BindSystemList(string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SaveToOrderHelper(System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.Int32,System.Decimal,System.Decimal)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_edit_detail.aspx.cs" Line="1688">'Q_Admin_orders_edit_detail.SaveToOrderHelper(int, int, decimal, decimal, decimal, decimal, decimal, int, int, decimal, decimal)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_sales_upload_part_import_price" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#UploadPartList(System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="sales_upload_part_import_price.aspx.cs" Line="97">可以在方法 'Q_Admin_sales_upload_part_import_price.UploadPartList(bool)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 97</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_v2h3nl1f.dll">
+   <Modules>
+    <Module Name="app_web_v2h3nl1f.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_UC_CategoryDropDownLoad" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#TextChange" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="Breaking">
+             <Issue Name="Second" Certainty="95" Level="Error">将 'Q_Admin_UC_CategoryDropDownLoad.userEvent' 的第二个参数声明为 EventArgs，或者声明为扩展 EventArgs 的类型的名为“e”的实例。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_UC_CategoryDropDownLoadAndGreenSplitMenu" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#TextChange" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="Breaking">
+             <Issue Name="Second" Certainty="95" Level="Error">将 'Q_Admin_UC_CategoryDropDownLoadAndGreenSplitMenu.userEvent' 的第二个参数声明为 EventArgs，或者声明为扩展 EventArgs 的类型的名为“e”的实例。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_UC_NewOrder" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#onCliekNewOrderCode" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">将 'OnClickSearchOrderCode' 的第一个参数声明为一个名为“sender”的对象。</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">将 'OnClickSearchOrderCode' 的第二个参数声明为 EventArgs，或者声明为扩展 EventArgs 的类型的名为“e”的实例。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#onCliekSearchOrderCode" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">将 'OnClickSearchOrderCode' 的第一个参数声明为一个名为“sender”的对象。</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">将 'OnClickSearchOrderCode' 的第二个参数声明为 EventArgs，或者声明为扩展 EventArgs 的类型的名为“e”的实例。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_wzugncwb.dll">
+   <Modules>
+    <Module Name="app_web_wzugncwb.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_advertisement_page_manage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#lv_file_list_ItemCommand(System.Object,System.Web.UI.WebControls.ListViewCommandEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="advertisement_page_manage.aspx.cs" Line="190">可以在方法 'Q_Admin_advertisement_page_manage.lv_file_list_ItemCommand(object, ListViewCommandEventArgs)' 中多次释放对象 'sr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 190</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_orders_add_customer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CustomerCmd(Command)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_add_customer.aspx.cs" Line="542">'Q_Admin_orders_add_customer.CustomerCmd(Command)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_product_helper_upload_part_image" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#MakeThumbnail(System.String,System.String,System.Int32,System.Int32,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="product_helper_upload_part_image.aspx.cs" Line="399">'Q_Admin_product_helper_upload_part_image.MakeThumbnail(string, string, int, int, string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Dell\AppData\Local\Temp\tmpEE9F.tmp.cadir\bin\App_Web_xthezgto.dll">
+   <Modules>
+    <Module Name="app_web_xthezgto.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Q_Admin_orders_list_timer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BindControl()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="为格式化方法提高正确的参数" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Name="MissingFormatItem" Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="orders_list_timer.aspx.cs" Line="25">方法 'Q_Admin_orders_list_timer.BindControl()' 调用 'string.Format(string, object)' 并且不为参数 "1" 提供格式项。提供的格式字符串为:“"\r\n            select count(*) from (select (select assigned_to_staff_id from t..."”</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Q_Admin_product_helper_part_import_export" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btn_save_new_part_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="product_helper_part_import_export.aspx.cs" Line="154">可以在方法 'Q_Admin_product_helper_part_import_export.btn_save_new_part_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 154</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btn_upload_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2017-02-08 13:23:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Workspaces\LUComputer\OldSite\Site\Q_Admin" File="product_helper_part_import_export.aspx.cs" Line="256">可以在方法 'Q_Admin_product_helper_part_import_export.btn_upload_Click(object, EventArgs)' 中多次释放对象 'conn'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 256</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>正确声明事件处理程序</Name>
+   <Description>按照约定，.NET 事件有两个参数，分别用于指定事件发送方和事件数据。事件处理程序签名应遵循以下形式: void MyEventHandler(object sender, EventArgs e)。“sender”参数的类型始终是 System.Object，即使该参数可能使用更具体的类型。“e”参数的类型始终是 System.EventArgs。不提供事件数据的事件应使用 System.EventHandler 委托类型。事件处理程序返回 void 以便将每个事件发送给多个目标方法。目标返回的任何值在第一次调用之后将会丢失。</Description>
+   <Resolution Name="First">将 {0} 的第一个参数声明为一个名为“sender”的对象。</Resolution>
+   <Resolution Name="Second">将 {0} 的第二个参数声明为 EventArgs，或者声明为扩展 EventArgs 的类型的名为“e”的实例。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065">
+   <Name>不要在意外的位置引发异常</Name>
+   <Description>不要从意外的位置显式引发异常。用户不希望某些方法(如 Equals 和 GetHashCode)引发异常。因此，对这些方法的调用通常不包装在 try catch 块中。</Description>
+   <Resolution Name="PropertyGetter">{0} 创建 {1} 类型的异常，该异常类型不应当在属性中引发。如果有可能会引发此异常实例，请使用其他异常类型，将该属性转换为方法，或者更改该属性的逻辑，使它不再引发异常。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386039.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error, Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>再次引发以保留堆栈详细信息</Name>
+   <Description>重复引发捕获的异常时，请使用 IL 再次引发指令保留原始堆栈详细信息。</Description>
+   <Resolution Name="Default">{0} 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>不要多次释放对象</Name>
+   <Description>可以多次调用正确实现的 Dispose 方法，而不会引发异常。但是，并不保证所有情况下都会如此。若要避免生成 System.ObjectDisposedException，您不应对一个对象多次调用 Dispose。</Description>
+   <Resolution Name="Default">可以在方法 {1} 中多次释放对象 {0}。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 174</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="为格式化方法提高正确的参数" Category="Microsoft.Usage" CheckId="CA2241">
+   <Name>为格式化方法提高正确的参数</Name>
+   <Description>为 String.Format 调用提供正确的参数数量。</Description>
+   <Resolution Name="MissingFormatItem">方法 {0} 调用 {1} 并且不为参数 {2} 提供格式项。提供的格式字符串为:“{3}”</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182361.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>检查 SQL 查询是否存在安全漏洞</Name>
+   <Description>通过用户输入生成的 SQL 命令字符串容易受到 SQL 注入式攻击。Microsoft SQL Server 和其他数据库服务器支持存储过程和参数化 SQL 查询，这将降低受到注入式攻击的风险。</Description>
+   <Resolution Name="WithNonLiterals">传递给 {1} 中的 {0} 的查询字符串可能包含以下变量 {2}。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

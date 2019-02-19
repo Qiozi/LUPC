@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageNotDocType.master.cs" Inherits="Q_Admin_MasterPageNotDocType" %>
+<%@ Register Src="UC/Menus.ascx" TagName="Menus" TagPrefix="uc2" %>
+<%@ Register Src="UC/main_menus.ascx" TagName="main_menus" TagPrefix="uc3" %>
+<%@ Register Src="UC/Top.ascx" TagName="Top" TagPrefix="uc1" %>
+<html>
+<head id="Head1" runat="server">
+    <title>LU Computers</title>
+    <script type="text/javascript" src="js/winOpen.js"></script>
+    <script type="text/javascript" src="/js_css/jquery_lab/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/js_css/jquery_lab/jquery.float.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div>
+            <uc1:Top ID="Top1" runat="server" />            
+        </div>
+        <div>
+            <uc3:main_menus ID="Main_menus1" runat="server" />
+       </div>
+       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+       </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

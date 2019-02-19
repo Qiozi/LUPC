@@ -1,0 +1,161 @@
+﻿// // // // // // // // // // // // // // // // 
+//
+// Author: Qiozi@msn.com 
+// Date:	2007-5-10 10:34:30
+//
+// // // // // // // // // // // // // // // //
+using Castle.ActiveRecord;
+using System;
+using System.Data;
+
+[ActiveRecord("tb_supercom_store")]
+[Serializable]
+public class SupercomStoreModel : ActiveRecordBase<SupercomStoreModel>
+{
+	public SupercomStoreModel()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+	}
+    int _id;
+    [PrimaryKey(PrimaryKeyType.Identity)]
+    public int id
+    {
+        get { return _id; }
+        set { _id = value; }
+    }
+    string _f0;
+    [Property]
+    public string f0
+    {
+        get { return _f0; }
+        set { _f0 = value; }
+    }
+    string _f1;
+    [Property]
+    public string f1
+    {
+        get { return _f1; }
+        set { _f1 = value; }
+    }
+    string _f2;
+    [Property]
+    public string f2
+    {
+        get { return _f2; }
+        set { _f2 = value; }
+    }
+    string _f3;
+    [Property]
+    public string f3
+    {
+        get { return _f3; }
+        set { _f3 = value; }
+    }
+    string _f4;
+    [Property]
+    public string f4
+    {
+        get { return _f4; }
+        set { _f4 = value; }
+    }
+    string _f5;
+    [Property]
+    public string f5
+    {
+        get { return _f5; }
+        set { _f5 = value; }
+    }
+    string _f6;
+    [Property]
+    public string f6
+    {
+        get { return _f6; }
+        set { _f6 = value; }
+    }
+    string _f7;
+    [Property]
+    public string f7
+    {
+        get { return _f7; }
+        set { _f7 = value; }
+    }
+    string _f8;
+    [Property]
+    public string f8
+    {
+        get { return _f8; }
+        set { _f8 = value; }
+    }
+    string _f9;
+    [Property]
+    public string f9
+    {
+        get { return _f9; }
+        set { _f9 = value; }
+    }
+    string _f10;
+    [Property]
+    public string f10
+    {
+        get { return _f10; }
+        set { _f10 = value; }
+    }
+    string _f11;
+    [Property]
+    public string f11
+    {
+        get { return _f11; }
+        set { _f11 = value; }
+    }
+    string _f12;
+    [Property]
+    public string f12
+    {
+        get { return _f12; }
+        set { _f12 = value; }
+    }
+    string _f13;
+    [Property]
+    public string f13
+    {
+        get { return _f13; }
+        set { _f13 = value; }
+    }
+    string _f14;
+    [Property]
+    public string f14
+    {
+        get { return _f14; }
+        set { _f14 = value; }
+    }
+    public static SupercomStoreModel GetSupercomStoreModel(int id)
+    {
+        SupercomStoreModel[] models = SupercomStoreModel.FindAllByProperty("id", id);
+        if (models.Length == 1)
+            return models[0];
+        else
+            return new SupercomStoreModel();
+    }
+
+    public void DeleteAll()
+    {
+        Config.ExecuteNonQuery("delete from tb_supercom_store");
+    }
+
+    public int FindNewPartCount()
+    {
+        return int.Parse(Config.ExecuteScalar("select count(*) c from tb_supercom_store where lu_sku is null ").ToString());
+    }
+
+    public string FindLastUploadDatetime()
+    {
+        return Config.ExecuteScalar("select ifnull(regdate,'') regdate from tb_supercom_store limit 0,1").ToString();
+    }
+
+    public DataTable FindAllNewPart()
+    {
+        return Config.ExecuteDataTable("select f0 manufacture_number,f1 short_name, f1 middle_name, concat(f3, f5, f6,'(',f0,')') long_name,f2 cost, f8 store_sum,'0' showit, f4 category_name from tb_supercom_store where lu_sku is null ");
+    }
+}

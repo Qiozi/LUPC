@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/T101HA-C4-GR/computer/T101HA-C4-GR/33551.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/33551.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus T101HA-C4-GR Tablet Intel Atom Z8350 4GB RAM 64GB EMMC Win10 10.1" IPS WXGA</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=253698321978"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$509.57</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=33551'>
+										<del>...</del>
+										<span class="price itemprice" sku='33551'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/SM-T830NZKAXAC/computer/SM-T830NZKAXAC/35582.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35582.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>SAMSUNG SM-T830NZKAXAC </h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35582'>
+										<del>...</del>
+										<span class="price itemprice" sku='35582'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/20KJ0019US/computer/20KJ0019US/35581.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35036.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo 20KJ0019US </h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35581'>
+										<del>...</del>
+										<span class="price itemprice" sku='35581'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/T103HA-D4-GR/computer/T103HA-D4-GR/35580.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35580.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus T103HA-D4-GR </h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35580'>
+										<del>...</del>
+										<span class="price itemprice" sku='35580'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

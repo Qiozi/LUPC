@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30104.jpg?imageView/3/w/150/h/150" alt="Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30104'>
+                                       Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $12.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30104.jpg?imageView/3/w/150/h/150" alt="Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30104'>
+                                       Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $12.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30104.jpg?imageView/3/w/150/h/150" alt="Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30104'>
+                                       Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $12.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30104.jpg?imageView/3/w/150/h/150" alt="Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30104'>
+                                       Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $12.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30104.jpg?imageView/3/w/150/h/150" alt="Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30104'>
+                                       Thermaltake Fan CL-F012-PL12BU-A Pure 12 LED Blue 1000RPM 40.997CFM 19.5dB-A Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $12.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

@@ -1,0 +1,59 @@
+<md-toolbar flex style="position: fixed;height:56px;max-height:56px; z-index: 100;">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings" hide-gt-md>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-meun"></use>
+            </svg>
+        </md-button>
+        <h2 flex md-truncate>{{title}}</h2>
+    </div>
+</md-toolbar>
+<div layout="column" flex>
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+            <md-content layout-padding>
+                <!--md-button class="md-primary" hide-gt-md>
+                    Close Sidenav Left
+                </md-button-->
+                <p hide show-gt-md>
+                    <div>
+                        <md-button class="md-fab md-primary" ng-repeat="x in cates" ui-sref="home({cid:x.Id})">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="{{x.IconName}}"></use>
+                            </svg>
+                        </md-button>
+                    </div>
+                </p>
+            </md-content>
+        </md-sidenav>
+        <md-content flex layout-padding style="padding: 0;" itemscope itemtype="http://schema.org/Product">
+            <div class="md-padding">
+                <h2>{{product.ProduName}}</h2>
+                <div layout="column">
+                    <div flex-gt-sm="33" flex="66" style="text-align: center;">
+                        <img ng-src="{{product.Avatar}}" itemprop="image">
+                    </div>
+                    <div flex-gt-sm="66" flex="33">
+                        <md-divider></md-divider>
+                        <md-subheader class="md-no-sticky"> Data source form Internet.</md-subheader>
+                        <md-list-item class="secondary-button-padding" ng-click="toLUWebsite()">
+                            <p>LUComputers.com Price:</p>
+                            <md-button class="md-secondary" itemscope itemtype="http://schema.org/Offer" style="color:red; font-size: 1.5rem;"> {{product.SoldText}}</md-button>
+                        </md-list-item>
+                        <md-list-item class="secondary-button-padding" ng-click="toeBayWebsite()">
+                            <p>eBay.Ca Price:</p>
+                            <md-button class="md-secondary" itemscope itemtype="http://schema.org/Offer" style="color:red; font-size: 1.5rem;"> {{product.eBayPriceText}}</md-button>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                    </div>
+                </div>
+                <p>
+                </p>
+                <h2 style="border-left:5px solid blue;padding:10px;margin-top:2rem;margin-bottom:1rem;">Specifications</h2>
+                <div layout="row">
+                    {{product.Specifications}}
+                </div>
+            </div>
+        </md-content>
+    </section>
+</div>

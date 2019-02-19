@@ -1,0 +1,1 @@
+[{"SKU":12275,"ShortName":"IBM ECC RAM 41Y2762","Name":"IBM 2GB (2X1GB) PC2-5300 CL5 ,ECC DDR2 667MHZ RDIMM","Price":239.7110920,"Discount":0.0000000,"Sold":239.7110920,"ImgSku":12275,"IsOnsale":0,"IsRebate":0,"priceUnit":"USD","Keyword":"","PageUrl":""}]

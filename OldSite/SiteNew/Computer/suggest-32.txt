@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT1/2976.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/2977.jpg?imageView/3/w/150/h/150" alt="Neon Light Package - 2 Neon Light (blue) (on sale)" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT1/2976.html'>
+                                       Neon Light Package - 2 Neon Light (blue) (on sale)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/LUlIGHT1/2976.html'><label class="price">Price: $10.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT21/1322.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/1322.jpg?imageView/3/w/150/h/150" alt="Sunbeam Bubble Light (red-blue-green)" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT21/1322.html'>
+                                       Sunbeam Bubble Light (red-blue-green)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/LUlIGHT21/1322.html'><label class="price">Price: $16.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT13/1314.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/1314.jpg?imageView/3/w/150/h/150" alt="Sunbeam Meteor Cold Cathod Neon Light (red) 5 Prog. Flash" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT13/1314.html'>
+                                       Sunbeam Meteor Cold Cathod Neon Light (red) 5 Prog. Flash
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/LUlIGHT13/1314.html'><label class="price">Price: $16.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer//1155.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/1155.jpg?imageView/3/w/150/h/150" alt="Sunbeam Cold Cathod Neon Light (Green)" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer//1155.html'>
+                                       Sunbeam Cold Cathod Neon Light (Green)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer//1155.html'><label class="price">Price: $10.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT7/1152.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/1152.jpg?imageView/3/w/150/h/150" alt="Sunbeam Cold Cathod Neon Light (yellow)" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/LUlIGHT7/1152.html'>
+                                       Sunbeam Cold Cathod Neon Light (yellow)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/LUlIGHT7/1152.html'><label class="price">Price: $14.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="audio, video, battery, dvd-r, dvd+r, dvd, PC, GeForce, Radeon, parallel, scsi, motherboard, core, duo, Pentium, drives, storage, monitors, SIMM, DIMM, site development, processor upgrades, cables, adapters, surge protectors, UPC, PC Cards, mobile computing, disks, cartridges, Pentium, Athlon, SDRAM, DDR, DDR2, DDR3, AM2, LGA775, computers, hardware, software, notebook, laptop, networking, flash, LCD, monitor, cpu, pda, memory, ram, digital, camera, modems, printers, scanners, cd, palmtop, purchase, ethernet, hubs, routers, cdrom drives, Internet, server, buy, order, inkjet, laser, pci, USB, PCI-E, PCI Express, secure, microSD, HDMI, HDCP, Widescreen, projector, DVI, Firewall, VISA, Mastercard, Amex, Paypal, secure, Canada, 3Com, AMD, Acer, Antec, AOpen, Asus, ATI, Adobe, Abit, BFG, BenQ, Canon, CoolerMaster, Corsair, Cisco, Coolit, Creative, Labs, Crucial, D-Tek, Danger Den, DFI, Dlink, D-link, Diamond, Drobo, ECS, Enlight, Epson, EVGA, Galaxy, Gigabyte, Hewlett Packard, HIS, Hitachi, HP, IBM, Intel, Kingston, Koolance, Kef, LG, Lian-Li, Lian, Li, Logitech, Linksys, LiteOn, Lite, On, Lexmark, Micron, Microsoft, MSI, Mitsumi, NGear, NEC, nVidia, OCZ, Optoma, Onkyo, Palit, Panasonic, Philips, Pioneer, Plextor, Promise, Razer, RedHat, Samsung, Seagate, Shuttle, Sapphire, Silverstone, Sony, Swiftech, Symantec, Supermicro, Tekram, Toshiba, Thermaltake, Thermalright, Vantec, Viewsonic, Western Digital, WD, XFX, Zalman" />
+    <meta name="description" content="LU Computer canada" />
+    <meta name="author" content="wu.th@qq.com" />
+    <title>@ViewBag.Title - LU Computers</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
+    <link href="~/Content/swiper-3.4.1.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/iconfont.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    @Html.Partial("~/Views/Shared/_Top.cshtml")
+    @Html.Partial("~/Views/Shared/_Carousel.cshtml")
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Html.Partial("~/Views/Shared/_Bottom.cshtml")
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/swiper-3.4.1.jquery.min.js"></script>
+    <script src="~/Scripts/dev/web.js"></script>
+</body>
+</html>

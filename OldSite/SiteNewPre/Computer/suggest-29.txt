@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/22238.jpg?imageView/3/w/150/h/150" alt="KINGSTON DDR3 8GB 1333 SODIMM CL9 Laptop KVR1333D3S9/8G" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=22238'>
+                                       KINGSTON DDR3 8GB 1333 SODIMM CL9 Laptop KVR1333D3S9/8G
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $45.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28043.jpg?imageView/3/w/150/h/150" alt="Kingston Memory 2GB Module DDR3 1600MHz KVR13S9S6/2 for Notebook" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28043'>
+                                       Kingston Memory 2GB Module DDR3 1600MHz KVR13S9S6/2 for Notebook
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $18.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29447.jpg?imageView/3/w/150/h/150" alt="Kingston Memory 4GB HyperX Fury Black DDR3, 1600MHz, CL10, 1.5V, HX316C10FB/4" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29447'>
+                                       Kingston Memory 4GB HyperX Fury Black DDR3, 1600MHz, CL10, 1.5V, HX316C10FB/4
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $28.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29449.jpg?imageView/3/w/150/h/150" alt="Kingston Memory 16GB (2x8GB) HyperX Fury Black DDR3, 1600MHz,  HX316C10FBK2/16" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29449'>
+                                       Kingston Memory 16GB (2x8GB) HyperX Fury Black DDR3, 1600MHz,  HX316C10FBK2/16
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $97.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26947.jpg?imageView/3/w/150/h/150" alt="Kingston 8GB 1333MHz DDR3 Non-ECC CL9 DIMM SR x8 (Kit of 2) KVR13N9S8K2/8" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26963'>
+                                       Kingston 8GB 1333MHz DDR3 Non-ECC CL9 DIMM SR x8 (Kit of 2) KVR13N9S8K2/8
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $50.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

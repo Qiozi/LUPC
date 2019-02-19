@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteBase.master" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<%@ Register Src="UC/Top2.ascx" TagName="Top" TagPrefix="uc1" %>
+<%@ Register Src="UC/bottom.ascx" TagName="bottom" TagPrefix="uc2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+    <form class="customPlane" runat="server" id="form100" clientidmode="Static">
+        <uc1:Top ID="Top1" runat="server" />        
+        <div class="view-ui-page-main1">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+    </form>
+    <uc2:bottom ID="bottom1" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="Server">
+    <asp:ContentPlaceHolder runat="server" ID="ScriptContent"></asp:ContentPlaceHolder>
+</asp:Content>
+

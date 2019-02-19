@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CW-9060031-WW/35601.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35601_list_1.jpg" alt="Corsair H150i PRO Cooling Device, Hydro Series, Advanced RGB Lighting" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CW-9060031-WW/35601.html'>
+                                       Corsair H150i PRO Cooling Device, Hydro Series, Advanced RGB Lighting
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CW-9060031-WW/35601.html'><label class="price">Price: $216.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CL-P039-AL12BL-A/34573.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34573_list_1.jpg" alt="Thermaltake CPU Cooler CL-P039-AL12BL-A CONTAC SILENT 12 INTEL AMD Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CL-P039-AL12BL-A/34573.html'>
+                                       Thermaltake CPU Cooler CL-P039-AL12BL-A CONTAC SILENT 12 INTEL AMD Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CL-P039-AL12BL-A/34573.html'><label class="price">Price: $35.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CW-9060024-WW/32363.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32363_list_1.jpg" alt="Corsair CPU Cooler CW-9060024-WW LGA 1151/1150/1155/2011/2011-3 AMD AM3/FM1/FM2" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CW-9060024-WW/32363.html'>
+                                       Corsair CPU Cooler CW-9060024-WW LGA 1151/1150/1155/2011/2011-3 AMD AM3/FM1/FM2
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CW-9060024-WW/32363.html'><label class="price">Price: $142.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CW-9060025-WW/32362.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32362_list_1.jpg" alt="Corsair HydroSeries H100i v2 Extreme Performance Liquid CPU Cooler CW-9060025-WW" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CW-9060025-WW/32362.html'>
+                                       Corsair HydroSeries H100i v2 Extreme Performance Liquid CPU Cooler CW-9060025-WW
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CW-9060025-WW/32362.html'><label class="price">Price: $167.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/RR-910-HTX3-G1/30165.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30165_list_1.jpg" alt="Hyper TX3  CPU Fan Intel LGA 775/1156 and AMD 754/939/940/AM2/AM3 RR-910-HTX3-G1" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/RR-910-HTX3-G1/30165.html'>
+                                       Hyper TX3  CPU Fan Intel LGA 775/1156 and AMD 754/939/940/AM2/AM3 RR-910-HTX3-G1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/RR-910-HTX3-G1/30165.html'><label class="price">Price: $25.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

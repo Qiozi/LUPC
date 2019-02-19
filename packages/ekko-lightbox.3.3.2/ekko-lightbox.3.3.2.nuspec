@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ekko-lightbox</id>
+    <version>3.3.2</version>
+    <title>Bootstrap 3 Lightbox</title>
+    <authors>ashleydw (hello@ashleyd.ws)</authors>
+    <owners>ashleydw (hello@ashleyd.ws)</owners>
+    <licenseUrl>https://github.com/ashleydw/lightbox/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/ashleydw/lightbox</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A lightbox gallery plugin for Bootstrap 3 based on the modal plugin
+NOTE: This package is maintained on behalf of the library owners</description>
+    <summary>Utilizes Bootstraps modal plugin to implement a lightbox gallery</summary>
+    <tags>lightbox gallery bootstrap jquery modal</tags>
+    <dependencies>
+      <dependency id="Bootstrap" version="3.0.0" />
+    </dependencies>
+  </metadata>
+</package>

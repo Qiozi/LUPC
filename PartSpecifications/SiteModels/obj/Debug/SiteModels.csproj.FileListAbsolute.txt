@@ -1,0 +1,10 @@
+E:\Projects\LUcomputer\Src\SiteModels\bin\Debug\SiteModels.dll
+E:\Projects\LUcomputer\Src\SiteModels\bin\Debug\SiteModels.pdb
+E:\Projects\LUcomputer\Src\SiteModels\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LUcomputer\Src\SiteModels\obj\Debug\SiteModels.dll
+E:\Projects\LUcomputer\Src\SiteModels\obj\Debug\SiteModels.pdb
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteModels\bin\Debug\SiteModels.dll
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteModels\bin\Debug\SiteModels.pdb
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteModels\obj\Debug\SiteModels.csprojResolveAssemblyReference.cache
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteModels\obj\Debug\SiteModels.dll
+C:\Users\user2\Desktop\Projects\LUcomputer\Src\SiteModels\obj\Debug\SiteModels.pdb

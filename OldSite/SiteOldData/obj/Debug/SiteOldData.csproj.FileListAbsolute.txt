@@ -1,0 +1,13 @@
+C:\Workspaces\LUComputer\OldSite\SiteOldData\bin\Debug\SiteOldData.dll.config
+C:\Workspaces\LUComputer\OldSite\SiteOldData\bin\Debug\SiteOldData.dll
+C:\Workspaces\LUComputer\OldSite\SiteOldData\bin\Debug\SiteOldData.pdb
+C:\Workspaces\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.csprojResolveAssemblyReference.cache
+C:\Workspaces\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.csproj.CoreCompileInputs.cache
+C:\Workspaces\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.dll
+C:\Workspaces\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.pdb
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteOldData\bin\Debug\SiteOldData.dll.config
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteOldData\bin\Debug\SiteOldData.dll
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteOldData\bin\Debug\SiteOldData.pdb
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.csproj.CoreCompileInputs.cache
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.dll
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteOldData\obj\Debug\SiteOldData.pdb

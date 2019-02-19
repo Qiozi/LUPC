@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GL504GS-DS74/35532.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35532_list_1.jpg" alt="Asus Strix SCAR II GL504GS-DS74 Gaming Notebook,i7-8750H,16GB, 256GB SSD,GTX1070" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GL504GS-DS74/35532.html'>
+                                       Asus Strix SCAR II GL504GS-DS74 Gaming Notebook,i7-8750H,16GB, 256GB SSD,GTX1070
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GL504GS-DS74/35532.html'><label class="price">Price: $2612.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GL504GM-XS74/35447.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35447_list_1.jpg" alt="Asus GL504GM-XS74 Notebook, i7-8750H,16GB RAM, 256GB PCIe SSD+1TB SSHD, GTX 1060" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GL504GM-XS74/35447.html'>
+                                       Asus GL504GM-XS74 Notebook, i7-8750H,16GB RAM, 256GB PCIe SSD+1TB SSHD, GTX 1060
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GL504GM-XS74/35447.html'><label class="price">Price: $2213.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/20L5000WUS/35275.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34895_list_1.jpg" alt="Lenovo ThinkPad T480 Notebook,Intel Core i5-8250U,4GB RAM,500GB HDD,14.0", Win10" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/20L5000WUS/35275.html'>
+                                       Lenovo ThinkPad T480 Notebook,Intel Core i5-8250U,4GB RAM,500GB HDD,14.0", Win10
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/20L5000WUS/35275.html'><label class="price">Price: $1118.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/81D20000US/35195.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35195_list_1.jpg" alt="Lenovo IdeaPad 330-15ARR Notebook RYZEN 7-2700U, 16GB RAM, 1TB HDD, RX Vega 10," style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/81D20000US/35195.html'>
+                                       Lenovo IdeaPad 330-15ARR Notebook RYZEN 7-2700U, 16GB RAM, 1TB HDD, RX Vega 10,
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/81D20000US/35195.html'><label class="price">Price: $1022.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/4NH72UT-ABA/35179.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/35179_list_1.jpg" alt="HP ZBook 15v G5 Mobile Workstation, Xeon E-2176M,16GB RAM, 256GB SSD,Quadro P600" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/4NH72UT-ABA/35179.html'>
+                                       HP ZBook 15v G5 Mobile Workstation, Xeon E-2176M,16GB RAM, 256GB SSD,Quadro P600
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/4NH72UT-ABA/35179.html'><label class="price">Price: $2639.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

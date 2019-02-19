@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-640S3R-BK/24749.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/24749.jpg?imageView/3/w/150/h/150" alt="VANTEC NEXSTAR HX4R 3.5"HD ENCL W/RAID" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-640S3R-BK/24749.html'>
+                                       VANTEC NEXSTAR HX4R 3.5"HD ENCL W/RAID
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/VT-640S3R-BK/24749.html'><label class="price">Price: $182.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-330U3F-SL/24745.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/24745.jpg?imageView/3/w/150/h/150" alt="VANTEC NEXSTAR HX 3.5"SATA-U3/FW800 SL" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-330U3F-SL/24745.html'>
+                                       VANTEC NEXSTAR HX 3.5"SATA-U3/FW800 SL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/VT-330U3F-SL/24745.html'><label class="price">Price: $92.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-200S3-BK/24740.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/24740.jpg?imageView/3/w/150/h/150" alt="VANTEC NEXSTAR CX 2.5"SATA-U3 (BLACK)" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-200S3-BK/24740.html'>
+                                       VANTEC NEXSTAR CX 2.5"SATA-U3 (BLACK)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/VT-200S3-BK/24740.html'><label class="price">Price: $27.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-310S3-BK/17721.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/17721.jpg?imageView/3/w/150/h/150" alt="VANTEC NEXSTAR CX 3.5" SATA-USB3.0(BLAC" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-310S3-BK/17721.html'>
+                                       VANTEC NEXSTAR CX 3.5" SATA-USB3.0(BLAC
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/VT-310S3-BK/17721.html'><label class="price">Price: $37.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-300SU-BK/17720.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/17720.jpg?imageView/3/w/150/h/150" alt="VANTEC NEXSTAR CX 3.5" SATA-eSATA/U2(BK" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/VT-300SU-BK/17720.html'>
+                                       VANTEC NEXSTAR CX 3.5" SATA-eSATA/U2(BK
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/VT-300SU-BK/17720.html'><label class="price">Price: $37.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

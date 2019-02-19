@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ASUS-GL502VT-DS71-Notebook-i7-6700HQ-16GB-DDR4-RAM-1TB-HDD-NV-GTX970M-Win10.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31697.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>ASUS GL502VT-DS71 Notebook i7-6700HQ 16GB DDR4 RAM 1TB HDD NV GTX970M Win10</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371668994297"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1890.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31697'>
+										<del>...</del>
+										<span class="price itemprice" sku='31697'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Lenovo-ThinkPad-X260-Notebook-i7-6600U-8GB-RAM-512GB-SSD-Win7-12-5-20F6005JUS.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31283.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo ThinkPad X260 Notebook i7-6600U 8GB RAM 512GB SSD Win7 12.5" 20F6005JUS</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=252470928332"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$2331.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31870'>
+										<del>...</del>
+										<span class="price itemprice" sku='31870'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Lenovo-ThinkPad-P50-Notebook-i7-6700HQ-8GB-RAM-256GB-SSD-Win7-15-6-20EN0012US.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/30797.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo ThinkPad P50 Notebook i7-6700HQ 8GB RAM 256GB SSD Win7 15.6" 20EN0012US</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=222194760122"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$2430.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31868'>
+										<del>...</del>
+										<span class="price itemprice" sku='31868'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Lenovo-ThinkPad-E560-Notebook-i7-6500U-8GB-RAM-192GB-SSD-R7-M370-Win7-20EV002KUS.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/30596.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo ThinkPad E560 Notebook i7-6500U 8GB RAM 192GB SSD R7 M370 Win7 20EV002KUS</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=252470931938"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1252.99</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31867'>
+										<del>...</del>
+										<span class="price itemprice" sku='31867'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

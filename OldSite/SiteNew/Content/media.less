@@ -1,0 +1,104 @@
+@media only screen and (min-width: 1029px) {
+    .formCustom {
+        .formButtonArea {
+          //  padding-left: 170px;
+        }
+    }
+    .appNoDisplay {
+        display: '';
+    }
+    .appDisplay {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    //在这里写小屏幕设备的样式
+    .nav {
+        .appNoDisplay {
+            display: none;
+        }
+        .tophome {
+            background-color: #ccc;
+        }
+    }
+    .appNoDisplay {
+        display: none;
+    }
+    .appDisplay {
+        display: '';
+    }
+    .affix {
+        left: -5px;
+        top: 90%;
+    }
+    .ellipsis {
+        width: 90%; // home system list
+    }
+    .pd-2rem {
+        padding-left: 3rem;
+    }
+    .lu-desc-page {
+        .breadcrumb {
+            margin-left: 0;
+        }
+        .page-main {
+            margin: -1em 0em 0em 0em;
+            padding: 10px;
+            .media-left {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .ellipsis {
+        white-space: normal;
+    }
+    .prodListArea {
+        padding: 0;
+    }
+    .prod-list {
+        .panel-body {
+            padding: 0;
+        }
+        .item-list {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        .grid {
+            width: 100%;
+            margin: 0;
+            box-shadow: unset;
+            -moz-box-shadow: unset;
+            -webkit-box-shadow: unset;
+            border-bottom: 1px solid #ccc;
+            float: unset;
+            .btn-link {
+                border: 1px solid green;
+                color: green;
+                width: 100%;
+            }
+            .prod-long-name {
+                min-height: auto;
+                height: auto;
+            }
+            .item-img {
+                width: 99%;
+            }
+        }
+    }
+    .btn-default {
+        width: 99%;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+    //这里写宽度大于321px小于1024px的样式(一般是平板电脑)
+    .appNoDisplay {
+        display: '';
+    }
+    .appDisplay {
+        display: '';
+    }
+}

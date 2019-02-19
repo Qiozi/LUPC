@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Q_Admin_Manager_MasterPage" %>
+
+<%@ Register Src="~/Q_Admin/Manager/TopMenu.ascx" TagPrefix="uc1" TagName="TopMenu" %>
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LU Computer Manager</title>
+
+    <link href="../../js_css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../js_css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">       
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+    </form>
+    <script src="../../../js_css/jquery-1.9.1.js"></script>
+    <script src="../../../js_css/bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="footScript" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

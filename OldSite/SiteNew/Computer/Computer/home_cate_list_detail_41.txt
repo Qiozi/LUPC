@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ROG-STRIX-RTX2080-A8G-Gaming/computer/ROG-STRIX-RTX2080-A8G-Gaming/35586.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35586.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus NVIDIA Geforce RTX 2080 8GB Video Card,GDDR6 8GB,2xHDMI, 2xDP, 1xUSB Type-C</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=254004190386"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1374.13</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35586'>
+										<del>...</del>
+										<span class="price itemprice" sku='35586'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ROG-STRIX-RTX2070-O8G-Gaming/computer/ROG-STRIX-RTX2070-O8G-Gaming/35583.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/35583.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus NVIDIA GeForce RTX 2070 Video Card,OpenGL4.5, 2xHDMI, 2xDP, 1xUSB Type-C</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=372518000045"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$1014.04</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=35583'>
+										<del>...</del>
+										<span class="price itemprice" sku='35583'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ROG-STRIX-RXVEGA56-O8G-Gaming/computer/ROG-STRIX-RXVEGA56-O8G-Gaming/34959.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/34959.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus AMD Strix Radeon RX Vega 56 Video Card, Interfaces: 2xDP, 2xHDMI, 1xDVI</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=223056571169"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$903.96</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=34959'>
+										<del>...</del>
+										<span class="price itemprice" sku='34959'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ROG-STRIX-RX580-O8G-Gaming/computer/ROG-STRIX-RX580-O8G-Gaming/34957.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/34957.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus Radeon RX 580 Graphic Card, OpenGL 4.5, GDDR5 8GB,1380MHz, 256bit</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=253747583320"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$619.63</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=34957'>
+										<del>...</del>
+										<span class="price itemprice" sku='34957'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

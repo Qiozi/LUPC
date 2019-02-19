@@ -1,0 +1,1 @@
+[{"SKU":16330,"ShortName":"1/3\" Sony SuperHAD CCD, 500TVL, 4~9mm Varifocal Lens, 35m IR Distance. Support DC 12V or AC 24V","Name":"1/3\" Sony SuperHAD CCD, 500TVL, 4~9mm Varifocal Lens, 35m IR Distance. Support DC 12V or AC 24V","Price":275.99,"Discount":0.00,"Sold":275.99,"ImgSku":999999,"IsOnsale":0,"IsRebate":0,"priceUnit":"CAD","Keyword":"[smart]"}]

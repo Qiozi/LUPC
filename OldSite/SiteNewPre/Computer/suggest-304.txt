@@ -1,0 +1,63 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29122.jpg?imageView/3/w/150/h/150" alt="BLUETOOTH SMART CWA BT310 AIRWAVE" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29122'>
+                                       BLUETOOTH SMART CWA BT310 AIRWAVE
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $109.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29121.jpg?imageView/3/w/150/h/150" alt="CWR200 WEATHER EMERGENCY RADIO, 3-LV ALERT LED INDICATOR, TORNADO MODE BUTTON, DESKTOP CHARGER & RECHARGEABLE BATTERIES" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29121'>
+                                       CWR200 WEATHER EMERGENCY RADIO, 3-LV ALERT LED INDICATOR, TORNADO MODE BUTTON, DESKTOP CHARGER & RECHARGEABLE BATTERIES
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $23.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29120.jpg?imageView/3/w/150/h/150" alt="GPSP-2 4.3 inch Flatscreen GPS Case Pro Int Dim 5.25INX3.5INX1.9 inch" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29120'>
+                                       GPSP-2 4.3 inch Flatscreen GPS Case Pro Int Dim 5.25INX3.5INX1.9 inch
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $14.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

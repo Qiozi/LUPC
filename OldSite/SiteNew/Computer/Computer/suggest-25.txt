@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/ST2000NM0008/34236.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34235_list_1.jpg" alt="Seagate Enterprise Capacity 3.5" 2TB Hard Drive 512n SATA, 7200RPM, Buffer:128MB" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/ST2000NM0008/34236.html'>
+                                       Seagate Enterprise Capacity 3.5" 2TB Hard Drive 512n SATA, 7200RPM, Buffer:128MB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/ST2000NM0008/34236.html'><label class="price">Price: $154.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD6002FFWX/34192.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34192_list_1.jpg" alt="Western Digital HDD WD6002FFWX 6TB SATA 7200RPM 128MB 3.5" RED PRO NAS Bulk Bare" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD6002FFWX/34192.html'>
+                                       Western Digital HDD WD6002FFWX 6TB SATA 7200RPM 128MB 3.5" RED PRO NAS Bulk Bare
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/WD6002FFWX/34192.html'><label class="price">Price: $325.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD10SPZX/34191.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34191_list_1.jpg" alt="Western Digital HDD WD10SPZX Blue 1TB SATA 6Gb/s 128MB cache 5400RPM 2.5 inch" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD10SPZX/34191.html'>
+                                       Western Digital HDD WD10SPZX Blue 1TB SATA 6Gb/s 128MB cache 5400RPM 2.5 inch
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/WD10SPZX/34191.html'><label class="price">Price: $72.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD10JPLX/34187.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34187_list_1.jpg" alt="Western Digital HDD WD10JPLX 1TB Mobile 7200RPM 32MB Cache 2.5inch SATA Black" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD10JPLX/34187.html'>
+                                       Western Digital HDD WD10JPLX 1TB Mobile 7200RPM 32MB Cache 2.5inch SATA Black
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/WD10JPLX/34187.html'><label class="price">Price: $96.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD10PURZ/34089.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34089_list_1.jpg" alt="Western Digital Purple 1TB Surveillance Hard Drive,3.5" 64MB Buffer 5400RPM SATA" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/WD10PURZ/34089.html'>
+                                       Western Digital Purple 1TB Surveillance Hard Drive,3.5" 64MB Buffer 5400RPM SATA
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/WD10PURZ/34089.html'><label class="price">Price: $74.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

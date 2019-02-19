@@ -1,0 +1,89 @@
+﻿@media only screen and (min-width: 1029px) {
+  .appNoDisplay {
+    display: '';
+  }
+  .appDisplay {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav .appNoDisplay {
+    display: none;
+  }
+  .nav .tophome {
+    background-color: #ccc;
+  }
+  .appNoDisplay {
+    display: none;
+  }
+  .appDisplay {
+    display: '';
+  }
+  .affix {
+    left: -5px;
+    top: 90%;
+  }
+  .ellipsis {
+    width: 90%;
+  }
+  .pd-2rem {
+    padding-left: 3rem;
+  }
+  .lu-desc-page .breadcrumb {
+    margin-left: 0;
+  }
+  .lu-desc-page .page-main {
+    margin: -1em 0em 0em 0em;
+    padding: 10px;
+  }
+  .lu-desc-page .page-main .media-left {
+    display: block;
+    text-align: center;
+  }
+  .ellipsis {
+    white-space: normal;
+  }
+  .prodListArea {
+    padding: 0;
+  }
+  .prod-list .panel-body {
+    padding: 0;
+  }
+  .prod-list .item-list {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  .prod-list .grid {
+    width: 100%;
+    margin: 0;
+    box-shadow: unset;
+    -moz-box-shadow: unset;
+    -webkit-box-shadow: unset;
+    border-bottom: 1px solid #ccc;
+    float: unset;
+  }
+  .prod-list .grid .btn-link {
+    border: 1px solid green;
+    color: green;
+    width: 100%;
+  }
+  .prod-list .grid .prod-long-name {
+    min-height: auto;
+    height: auto;
+  }
+  .prod-list .grid .item-img {
+    width: 99%;
+  }
+  .btn-default {
+    width: 99%;
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+  .appNoDisplay {
+    display: '';
+  }
+  .appDisplay {
+    display: '';
+  }
+}

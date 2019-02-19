@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data><row><facture_state_serial_no>1</facture_state_serial_no><facture_state_name>Missing parts</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>2</facture_state_serial_no><facture_state_name>parts ready</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>3</facture_state_serial_no><facture_state_name>working on</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>4</facture_state_serial_no><facture_state_name>accessories not ready</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>5</facture_state_serial_no><facture_state_name>order ready for shipping</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>6</facture_state_serial_no><facture_state_name>order cancelled</facture_state_name><showit>1</showit><priority>15</priority><back_color>white</back_color><AD>OC</AD></row>
+<row><facture_state_serial_no>7</facture_state_serial_no><facture_state_name>finished</facture_state_name><showit>0</showit><priority>23</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>10</facture_state_serial_no><facture_state_name>Awaiting Payment</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>12</facture_state_serial_no><facture_state_name>Submitted</facture_state_name><showit>1</showit><priority>1</priority><back_color>white</back_color><AD>SU</AD></row>
+<row><facture_state_serial_no>13</facture_state_serial_no><facture_state_name>None</facture_state_name><showit>0</showit><priority>0</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>14</facture_state_serial_no><facture_state_name>Reviewing</facture_state_name><showit>0</showit><priority>2</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>15</facture_state_serial_no><facture_state_name>Pay processing</facture_state_name><showit>0</showit><priority>3</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>16</facture_state_serial_no><facture_state_name>Pay issue</facture_state_name><showit>0</showit><priority>4</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>17</facture_state_serial_no><facture_state_name>Pay contacting</facture_state_name><showit>0</showit><priority>5</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>18</facture_state_serial_no><facture_state_name>Pay done</facture_state_name><showit>0</showit><priority>6</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>19</facture_state_serial_no><facture_state_name>Change Parts Called</facture_state_name><showit>1</showit><priority>7</priority><back_color>white</back_color><AD>CPC</AD></row>
+<row><facture_state_serial_no>20</facture_state_serial_no><facture_state_name>Back order</facture_state_name><showit>0</showit><priority>8</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>21</facture_state_serial_no><facture_state_name>Getting parts</facture_state_name><showit>0</showit><priority>10</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>22</facture_state_serial_no><facture_state_name>Assembling &amp; Testing</facture_state_name><showit>1</showit><priority>8</priority><back_color>white</back_color><AD>AT</AD></row>
+<row><facture_state_serial_no>23</facture_state_serial_no><facture_state_name>Tech issue</facture_state_name><showit>1</showit><priority>9</priority><back_color>white</back_color><AD>TI</AD></row>
+<row><facture_state_serial_no>24</facture_state_serial_no><facture_state_name>Delay notified</facture_state_name><showit>0</showit><priority>13</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>25</facture_state_serial_no><facture_state_name>Testing</facture_state_name><showit>0</showit><priority>14</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>26</facture_state_serial_no><facture_state_name>Assemb done</facture_state_name><showit>0</showit><priority>15</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>27</facture_state_serial_no><facture_state_name>Acc missing</facture_state_name><showit>0</showit><priority>16</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>28</facture_state_serial_no><facture_state_name>Package done</facture_state_name><showit>0</showit><priority>17</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>29</facture_state_serial_no><facture_state_name>Address error Called</facture_state_name><showit>1</showit><priority>12</priority><back_color>white</back_color><AD>AEC</AD></row>
+<row><facture_state_serial_no>30</facture_state_serial_no><facture_state_name>Contacting add</facture_state_name><showit>0</showit><priority>19</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>31</facture_state_serial_no><facture_state_name>Partial shipped</facture_state_name><showit>0</showit><priority>20</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>32</facture_state_serial_no><facture_state_name>Shipped</facture_state_name><showit>1</showit><priority>13</priority><back_color>white</back_color><AD>SH</AD></row>
+<row><facture_state_serial_no>33</facture_state_serial_no><facture_state_name>Delivery issue</facture_state_name><showit>0</showit><priority>22</priority><back_color>white</back_color><AD>(NULL)</AD></row>
+<row><facture_state_serial_no>35</facture_state_serial_no><facture_state_name>CC Not Verified</facture_state_name><showit>1</showit><priority>3</priority><back_color>white</back_color><AD>CCN</AD></row>
+<row><facture_state_serial_no>34</facture_state_serial_no><facture_state_name>Credit Card Declined</facture_state_name><showit>1</showit><priority>2</priority><back_color>white</back_color><AD>CCD</AD></row>
+<row><facture_state_serial_no>36</facture_state_serial_no><facture_state_name>Suspicious &amp; Hold</facture_state_name><showit>1</showit><priority>4</priority><back_color>white</back_color><AD>SUH</AD></row>
+<row><facture_state_serial_no>37</facture_state_serial_no><facture_state_name>Preparing Parts</facture_state_name><showit>1</showit><priority>5</priority><back_color>white</back_color><AD>PP</AD></row>
+<row><facture_state_serial_no>38</facture_state_serial_no><facture_state_name>Awaiting Supply</facture_state_name><showit>1</showit><priority>6</priority><back_color>white</back_color><AD>AS</AD></row>
+<row><facture_state_serial_no>39</facture_state_serial_no><facture_state_name>Ready for Shipping</facture_state_name><showit>1</showit><priority>10</priority><back_color>white</back_color><AD>RFS</AD></row>
+<row><facture_state_serial_no>40</facture_state_serial_no><facture_state_name>Awaiting Pick Up</facture_state_name><showit>1</showit><priority>11</priority><back_color>white</back_color><AD>APU</AD></row>
+<row><facture_state_serial_no>41</facture_state_serial_no><facture_state_name>Pick Up Done</facture_state_name><showit>1</showit><priority>14</priority><back_color>white</back_color><AD>PUD</AD></row>
+<row><facture_state_serial_no>42</facture_state_serial_no><facture_state_name>Reviewing</facture_state_name><showit>1</showit><priority>23</priority><back_color>white</back_color><AD>RE</AD></row>
+</data>

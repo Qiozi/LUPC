@@ -1,0 +1,323 @@
+﻿body {
+  background: url(../images/clover.png);
+  /**/
+  background-attachment: fixed;
+  background-position: center;
+  top: 50px;
+  position: relative;
+}
+div,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+td,
+th,
+li {
+  font-family: Tahoma;
+}
+#page-bottom a {
+  color: #ccc;
+}
+#page-bottom a:hover {
+  color: #fff;
+}
+#page-bottom li {
+  list-style: none;
+  *margin-left: -18px;
+}
+.price {
+  font-size: 14px;
+  color: #FF742E;
+}
+.priceDel {
+  color: Blue;
+}
+.priceBig {
+  font-size: 18px;
+  color: #FF742E;
+}
+.price-unit {
+  font-size: 12px;
+  color: blue;
+  font-size: small;
+}
+.note {
+  color: #996633;
+}
+.skuColor {
+  color: #996600;
+}
+.txtRight {
+  text-align: right;
+}
+.pd-t {
+  padding-top: 10px;
+}
+.pd-l {
+  padding-left: 10px;
+}
+.pd-r {
+  padding-right: 10px;
+}
+.pd-b {
+  padding-bottom: 10px;
+}
+.pd {
+  padding: 10px;
+}
+.mg {
+  margin: 10px;
+}
+.mg-t {
+  margin-top: 10px;
+}
+.mg-l {
+  margin-left: 10px;
+}
+.mg-r {
+  margin-right: 10px;
+}
+.mg-b {
+  margin-bottom: 10px;
+}
+.pd-t-0 {
+  padding-top: 0;
+}
+.pd-l-0 {
+  padding-left: 0;
+}
+.pd-r-0 {
+  padding-right: 0;
+}
+.pd-b-0 {
+  padding-bottom: 0;
+}
+.pd-0 {
+  padding: 0;
+}
+.mg-0 {
+  margin: 0;
+}
+.mg-t-0 {
+  margin-top: 0;
+}
+.mg-l-0 {
+  margin-left: 0;
+}
+.mg-r-0 {
+  margin-right: 0;
+}
+.mg-b-0 {
+  margin-bottom: 0;
+}
+.fontBold {
+  font-weight: bold;
+}
+/* 
+    page web home 
+
+*/
+#page-web-home .topButtonArea {
+  height: 4rem;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+#page-web-home .topButtonArea a {
+  color: #333;
+}
+#page-web-home .carousel-inner {
+  text-align: center;
+}
+#page-web-home .prodListArea {
+  border: 1px solid #ccc;
+}
+#page-web-home .prodListArea .cateArea {
+  height: 380px;
+}
+#page-web-home .prodListArea .cateArea:hover {
+  background: #ffffcc;
+}
+#page-web-home .prodListArea .cateArea > h5 {
+  padding: 3px;
+  border-bottom: 2px solid #3866B9;
+}
+#page-web-home .prodListArea .cateArea:hover > h5 {
+  border-bottom: 2px solid #946646;
+  color: Blue;
+}
+#page-web-home .prodListArea .cateArea a:hover {
+  color: #B96617;
+}
+#page-web-home .sys-list .syslogoArea img {
+  margin: 5px;
+}
+#page-web-home .sys-list .sysTitle {
+  border-left: 5px solid #946646;
+  font-weight: bold;
+  background-color: honeydew;
+}
+#page-web-home .sys-list .sysTitle p a {
+  color: #666;
+}
+#page-web-home .sys-list .list-group-item {
+  padding: 5px 6px;
+}
+#page-web-home .affix {
+  position: fixed;
+  top: 50px;
+}
+#page-web-home .affix-bottom {
+  position: absolute;
+}
+#page-web-home #leftCateList {
+  background: white;
+  /*
+        .active {
+            color: #000;
+            border-left: 5px solid green;
+        }
+            */
+}
+#page-web-home #leftCateList li {
+  border-left: 5px solid white;
+}
+#page-web-home #leftCateList li:hover {
+  border-left: 5px solid #8ecc4f;
+  color: #8ecc4f;
+}
+#page-web-home #leftCateList a {
+  padding: 5px;
+  color: #666;
+}
+#page-web-home #leftCateList a:hover {
+  color: Black;
+}
+#page-web-home #leftCateList a.active {
+  background: red;
+}
+#page-web-home #leftCateList ul {
+  z-index: 100;
+}
+#page-web-home #leftCateList .active {
+  border-left: 5px solid green;
+  background-color: #8ecc4f;
+}
+#page-web-home #leftCateList .active a {
+  color: #177e0d;
+}
+#page-web-home .cateTitle:hover small {
+  display: inline;
+}
+#page-web-home #sysList .list-group-item {
+  padding: 2px;
+}
+#page-web-home .part-list .cateTitle {
+  cursor: pointer;
+  color: #666;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #ddf6d0;
+}
+#page-web-home .part-list .cateTitle a {
+  color: #666;
+  vertical-align: middle;
+}
+#page-web-home .part-list .cateTitle a:hover {
+  color: white;
+  vertical-align: middle;
+}
+#page-web-home .part-list .cateTitle i {
+  font-size: 4rem;
+  color: goldenrod;
+  font-weight: normal;
+}
+#page-web-home .part-list .cateTitle:hover {
+  background: #8ecc4f;
+}
+#page-web-home .part-list .cateTitle:hover i {
+  color: white;
+}
+#page-web-home .part-list .cateTitle:hover a {
+  color: white;
+}
+#page-web-home .part-list .catelist {
+  padding: 0.5rem 0;
+}
+#page-web-home .part-list .catelist .thumbnail {
+  box-shadow: none;
+  padding: 0;
+  height: 271px;
+  margin: 0;
+}
+#page-web-home .part-list .catelist .thumbnail .partEbayArea {
+  background-color: #f2f2f2;
+  display: block;
+  width: 100%;
+}
+#page-web-home .part-list .catelist .thumbnail .priceArea {
+  font-weight: bold;
+  padding: 0;
+  width: 100%;
+}
+#page-web-home .part-list .catelist .thumbnail .price {
+  font-weight: bold;
+  color: green;
+}
+#page-web-home .part-list .catelist .thumbnail .caption {
+  padding: 0;
+  margin: 0;
+}
+#page-web-home .part-list .catelist .thumbnail .caption p {
+  margin: 0;
+}
+#page-web-home .part-list .catelist .thumbnail a {
+  color: #666;
+  display: block;
+  text-align: center;
+}
+#page-web-home .part-list .catelist .thumbnail a.btn:hover {
+  width: 100%;
+  background-color: #FF742E;
+  color: white;
+  text-decoration: none;
+}
+#page-web-home .part-list .catelist .thumbnail a.btn:hover .price {
+  color: white;
+}
+#page-web-home .part-list .catelist .thumbnail .priceDel {
+  text-align: center;
+  color: #666;
+}
+#page-web-home .part-list .catelist .thumbnail H5 {
+  color: #666;
+  height: 68px;
+  padding: 2px;
+}
+#page-web-home .part-list .catelist .thumbnail .partEbayArea:hover {
+  background: #b1f0a9;
+}
+#page-web-home .part-list .catelist .thumbnail:hover {
+  border: 1px solid red;
+  cursor: pointer;
+  color: #A274A2;
+}
+#page-web-home .part-list .catelist .thumbnail .partEbayArea {
+  color: Blue;
+  margin-top: -7px;
+  font-weight: normal;
+  font-size: 9pt;
+  border: 1px solid white;
+  vertical-align: bottom;
+  background-image: url("images/ebay_logo.jpg");
+  background-repeat: no-repeat;
+  background-position: 120px, -20px;
+}
+/*# sourceMappingURL=luNew.css.map */

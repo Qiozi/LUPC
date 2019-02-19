@@ -1,0 +1,16 @@
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteEnum\bin\Release\SiteEnum.dll
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteEnum\bin\Release\SiteEnum.pdb
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteEnum\obj\Release\SiteEnum.csprojResolveAssemblyReference.cache
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteEnum\obj\Release\SiteEnum.dll
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteEnum\obj\Release\SiteEnum.pdb
+C:\Workspaces\LUComputer\OldSite\SiteEnum\bin\Release\SiteEnum.dll
+C:\Workspaces\LUComputer\OldSite\SiteEnum\bin\Release\SiteEnum.pdb
+C:\Workspaces\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.dll
+C:\Workspaces\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.pdb
+C:\Workspaces\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.csprojResolveAssemblyReference.cache
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\bin\Release\SiteEnum.dll
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\bin\Release\SiteEnum.pdb
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.csproj.CoreCompileInputs.cache
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.dll
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.pdb
+C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.csprojAssemblyReference.cache

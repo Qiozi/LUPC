@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/A7E34UT-ABA/28556.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28556_list_1.jpg" alt="HP SB 230W DOCKING STATION" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/A7E34UT-ABA/28556.html'>
+                                       HP SB 230W DOCKING STATION
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/A7E34UT-ABA/28556.html'><label class="price">Price: $207.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/A7E32UT-ABA/28555.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28555_list_1.jpg" alt="HP SB 90W Docking Station A7E32UT#ABA" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/A7E32UT-ABA/28555.html'>
+                                       HP SB 90W Docking Station A7E32UT#ABA
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/A7E32UT-ABA/28555.html'><label class="price">Price: $184.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/4X10E52935/28367.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28367_list_1.jpg" alt="ThinkPad OneLink Pro Dock 4X10E52935" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/4X10E52935/28367.html'>
+                                       ThinkPad OneLink Pro Dock 4X10E52935
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/4X10E52935/28367.html'><label class="price">Price: $197.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/40A20170US/27860.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/27860_list_1.jpg" alt="Lenovo Ultra Dock Docking Station - for Notebook - 6 x USB Ports HDMI DVI VGA" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/40A20170US/27860.html'>
+                                       Lenovo Ultra Dock Docking Station - for Notebook - 6 x USB Ports HDMI DVI VGA
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/40A20170US/27860.html'><label class="price">Price: $310.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/40A00090US/27738.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/27738_list_1.jpg" alt="Lenovo ThinkPad Basic Dock 40A00090US" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/40A00090US/27738.html'>
+                                       Lenovo ThinkPad Basic Dock 40A00090US
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/40A00090US/27738.html'><label class="price">Price: $205.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

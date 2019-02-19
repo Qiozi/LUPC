@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/22926.jpg?imageView/3/w/150/h/150" alt="Asus Video Card NV GT610 2GB GDDR3, VGA DVI 64-Bit GT610-2GD3-CSM" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=22926'>
+                                       Asus Video Card NV GT610 2GB GDDR3, VGA DVI 64-Bit GT610-2GD3-CSM
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $60.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26909.jpg?imageView/3/w/150/h/150" alt="Gigabyte Video Card NV GT210 1GB GDDR3, VGA,DVI, HDMI,64-bit,GV-N210D3-1GI" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26909'>
+                                       Gigabyte Video Card NV GT210 1GB GDDR3, VGA,DVI, HDMI,64-bit,GV-N210D3-1GI
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $43.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29468.jpg?imageView/3/w/150/h/150" alt="MSI Video Card NV GTX960 2GB GDDR5, 2xDVI HDMI 128-Bit GTX 960 GAMING 2G" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29468'>
+                                       MSI Video Card NV GTX960 2GB GDDR5, 2xDVI HDMI 128-Bit GTX 960 GAMING 2G
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $258.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/29232.jpg?imageView/3/w/150/h/150" alt="Gigabyte Video Card NV GTX970 4GB GDDR5, 2xDVI HDMI 256-bit GV-N970IXOC-4GD" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=29232'>
+                                       Gigabyte Video Card NV GTX970 4GB GDDR5, 2xDVI HDMI 256-bit GV-N970IXOC-4GD
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $393.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27704.jpg?imageView/3/w/150/h/150" alt="Asus Video Card NV GTX750 Ti 2GB GDDR5, VGA DVI HDMl, GTX750TI-OC-2GD5" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27704'>
+                                       Asus Video Card NV GTX750 Ti 2GB GDDR5, VGA DVI HDMl, GTX750TI-OC-2GD5
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $178.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

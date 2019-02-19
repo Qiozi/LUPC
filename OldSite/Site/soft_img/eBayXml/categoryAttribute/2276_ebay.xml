@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><eBay><SelectedAttributes><AttributeSet id='2276'/></SelectedAttributes><Attributes>
+<AttributeSet id='2276' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<Attribute vivisible='true'  id='3993'  count='1'  source='3'  displaysequence='4' >
+<SellingDisplayLabel><![CDATA[Return shipping will be paid by]]></SellingDisplayLabel>
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+</Attribute>
+<Attribute vivisible='true'  id='3804'  count='1'  source='3'  displaysequence='2' >
+<SellingDisplayLabel><![CDATA[Item must be returned within]]></SellingDisplayLabel>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+</Attribute>
+<Attribute vivisible='true'  id='3805'  count='1'  source='3'  displaysequence='3' >
+<SellingDisplayLabel><![CDATA[Refund will be given as]]></SellingDisplayLabel>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</Attribute>
+</AttributeSet>
+</Attributes>
+<Characteristics>
+<CharacteristicsSet id='2276'  type='SiteWide'  order='1' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<PresentationInstruction pageLocation="ReturnPolicy">
+    <DomainName>Return Policy</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3803" quadrant="top">
+                    <Input align="left" bold="true" color="#000000" columns="1" face="Arial, Helvetica, Sans-Serif" size="2" type="checkbox"/>
+                </Attribute>
+                <MessageRight color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3804" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3805" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3993" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3806" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input cols="70" rows="6" type="collapsible_textarea"/>
+                </Attribute>
+                <MessageBottom color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute id='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Returns Accepted]]></Label>
+<Type><![CDATA[2]]></Type>
+<MessageRight><![CDATA[- Specify a return policy. <A HREF="http://pages.ebay.ca/help/sell/contextual/return-policy.html" onClick="if(window.openContextualHelpWindow){return openContextualHelpWindow(this.href)}" target="helpwin">Learn More</A>.]]></MessageRight>
+<EditType>3</EditType><ValueList count='1' >
+<Value id='32040' >
+<Name><![CDATA[Returns Accepted]]></Name>
+</Value>
+</ValueList>
+<Dependency count='2'  childAttrId='3993'  parentValueId='32040'  type='2' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+<IsDefault/>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  childAttrId='3804'  parentValueId='32040'  type='2' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+<IsDefault/>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</Dependency>
+<Dependency count='3'  childAttrId='3805'  parentValueId='32040'  type='2' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+<IsDefault/>
+</Value>
+</Dependency>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3804'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Item must be returned within]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValueList count='5' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3805'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Refund will be given as]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValueList count='3' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3806'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Return policy details]]></Label>
+<MessageBottom><![CDATA[Note: 500 character limit]]></MessageBottom>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3993'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Return shipping will be paid by]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValueList count='2' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other></Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+</Characteristics>
+<GlobalSettings>
+<MonthDescendingShort>Dec;Nov;Oct;Sep;Aug;Jul;Jun;May;Apr;Mar;Feb;Jan;</MonthDescendingShort><MonthDescendingLong>December;November;October;September;August;July;June;May;April;March;February;January;</MonthDescendingLong><MonthAscendingShort>Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec;</MonthAscendingShort><MonthAscendingLong>January;February;March;April;May;June;July;August;September;October;November;December;</MonthAscendingLong><BaseHTMLPath><![CDATA[http://pages.sandbox.ebay.ca/]]></BaseHTMLPath>
+</GlobalSettings>
+</eBay>

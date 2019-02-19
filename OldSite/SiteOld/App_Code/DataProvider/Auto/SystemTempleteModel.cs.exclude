@@ -1,0 +1,338 @@
+﻿// // // // // // // // // // // // // // // // 
+//
+// Author: Qiozi@msn.com 
+// Date:	2007-5-10 10:34:30
+//
+// // // // // // // // // // // // // // // //
+using Castle.ActiveRecord;
+using System;
+using System.Data;
+
+[ActiveRecord("tb_system_templete")]
+[Serializable]
+public class SystemTempleteModel : ActiveRecordBase<SystemTempleteModel>
+{
+    int _system_templete_serial_no;
+    string _system_templete_name;
+    decimal _system_templete_price;
+    int _system_templete_sale_sum;
+    DateTime _regdate;
+    DateTime _system_templete_begin_date;
+    DateTime _last_regdate;
+    bool _tag;
+    int _system_templete_category_serial_no;
+    bool _is_templete;
+
+
+    int _system_templete_order;
+    byte _system_category_serial_no;
+    string _system_templete_name_f;
+    byte _system_templete_new;
+    byte _system_templete_hot;
+    int _warranty;
+    int _system_templete_img_sum;
+    string _logo_image_filename;
+    string _logo_image_filename_VC;
+    string _logo_image_filename_sys;
+    string _keywords;
+
+    public SystemTempleteModel()
+    {
+
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [PrimaryKey(PrimaryKeyType.Identity)]
+    public int system_templete_serial_no
+    {
+        get { return _system_templete_serial_no; }
+        set { _system_templete_serial_no = value; }
+    }
+    public static SystemTempleteModel GetSystemTempleteModel(int _system_templete_serial_no)
+    {
+        SystemTempleteModel[] models = SystemTempleteModel.FindAllByProperty("system_templete_serial_no", _system_templete_serial_no);
+        if (models.Length == 1)
+            return models[0];
+        else
+            return new SystemTempleteModel();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public string system_templete_name
+    {
+        get { return _system_templete_name; }
+        set { _system_templete_name = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public decimal system_templete_price
+    {
+        get { return _system_templete_price; }
+        set { _system_templete_price = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int system_templete_sale_sum
+    {
+        get { return _system_templete_sale_sum; }
+        set { _system_templete_sale_sum = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public DateTime regdate
+    {
+        get { return _regdate; }
+        set { _regdate = value; }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public DateTime last_regdate
+    {
+        get { return _last_regdate; }
+        set { _last_regdate = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public bool tag
+    {
+        get { return _tag; }
+        set { _tag = value; }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int system_templete_category_serial_no
+    {
+        get { return _system_templete_category_serial_no; }
+        set { _system_templete_category_serial_no = value; }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public bool is_templete
+    {
+        get { return _is_templete; }
+        set { _is_templete = value; }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int system_templete_order
+    {
+        get { return _system_templete_order; }
+        set { _system_templete_order = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public byte system_category_serial_no
+    {
+        get { return _system_category_serial_no; }
+        set { _system_category_serial_no = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public string system_templete_name_f
+    {
+        get { return _system_templete_name_f; }
+        set { _system_templete_name_f = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public byte system_templete_new
+    {
+        get { return _system_templete_new; }
+        set { _system_templete_new = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public byte system_templete_hot
+    {
+        get { return _system_templete_hot; }
+        set { _system_templete_hot = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int warranty
+    {
+        get { return _warranty; }
+        set { _warranty = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>   
+    [Property]
+    public int system_templete_img_sum
+    {
+        get { return _system_templete_img_sum; }
+        set { _system_templete_img_sum = value; }
+    }
+    [Property]
+    public string logo_image_filename
+    {
+        get { return _logo_image_filename; }
+        set { _logo_image_filename = value; }
+    }
+
+    [Property]
+    public string logo_image_filename_VC
+    {
+        get { return _logo_image_filename_VC; }
+        set { _logo_image_filename_VC = value; }
+    }
+    
+    [Property]
+    public string logo_image_filename_sys
+    {
+        get { return _logo_image_filename_sys; }
+        set { _logo_image_filename_sys = value; }
+    }
+    [Property]
+    public string keywords
+    {
+        get { return _keywords; }
+        set { _keywords = value; }
+    }
+    
+    public static NHibernate.Expression.Order[] CurrentOrder(bool order)
+    {
+        NHibernate.Expression.Order o1 = new NHibernate.Expression.Order("system_templete_order", order);
+        NHibernate.Expression.Order o = new NHibernate.Expression.Order("system_templete_serial_no", order);
+        NHibernate.Expression.Order[] oo = new NHibernate.Expression.Order[] { o1, o };
+        return oo;
+    }
+
+    public static SystemTempleteModel[] GetSystemTempleteModelByMenuChildAndShowit(int sys_product_category_id, byte show_it, bool order)
+    {
+        NHibernate.Expression.EqExpression eq1 = new NHibernate.Expression.EqExpression("tag", show_it);
+        NHibernate.Expression.EqExpression eq2 = new NHibernate.Expression.EqExpression("system_templete_category_serial_no", sys_product_category_id);
+
+        NHibernate.Expression.AndExpression a = new NHibernate.Expression.AndExpression(eq1, eq2);
+
+        return SystemTempleteModel.FindAll(CurrentOrder(order), a);
+    }
+
+    public static SystemTempleteModel[] GetSystemTempleteModelByMenuChild(int sys_product_category_id, bool order)
+    {
+        NHibernate.Expression.EqExpression eq2 = new NHibernate.Expression.EqExpression("system_templete_category_serial_no", sys_product_category_id);
+
+        return SystemTempleteModel.FindAll(CurrentOrder(order), eq2);
+    }
+
+    public static SystemTempleteModel[] GetSystemTempleteModelByMenuChildAndShowit(int sys_product_category_id, Showit show_it, bool order)
+    {
+        if (show_it == Showit.all)
+            return GetSystemTempleteModelByMenuChild(sys_product_category_id, order);
+        else
+            return GetSystemTempleteModelByMenuChildAndShowit(sys_product_category_id, byte.Parse(show_it == Showit.show_true ? "1" : "0"), order);
+  
+    }
+
+    public static DataTable GetModelsBySearch(string keyword)
+    {
+        string sql = "Select * from tb_system_templete where tag=1 ";
+        if (keyword != "")
+            sql += " and ( system_templete_serial_no like '%" + keyword + "%' or system_templete_name like '%" + keyword + "%')";
+        sql += " order by system_templete_order asc";
+        return Config.ExecuteDataTable(sql);
+    }
+
+    public static DataTable GetModelsBySearch(string keyword, int sys_product_category_id)
+    {
+        string sql = "Select * from tb_system_templete where tag=1 ";
+        if (keyword != "")
+            sql += " and ( system_templete_serial_no like '%" + keyword + "%' or system_templete_name like '%" + keyword + "%')";
+        if (sys_product_category_id != -1)
+            sql += " and system_templete_category_serial_no=" + sys_product_category_id;
+        sql += " order by system_templete_order asc";
+        return Config.ExecuteDataTable(sql);
+    }
+
+    /// <summary>
+    /// 取得子产品已禁售的系统
+    /// </summary>
+    /// <returns></returns>
+    public static DataTable FindSystemByWarn()
+    {
+        return Config.ExecuteDataTable(@"select distinct st.system_templete_serial_no, st.ebay_system_name system_templete_name from tb_ebay_system_parts sp inner join tb_product p on p.product_serial_no=sp.luc_sku
+inner join tb_ebay_system st on st.id=sp.system_sku
+inner join tb_product_category pc on pc.menu_child_serial_no=p.menu_child_serial_no 
+where  st.showit=1 and (pc.tag=0 or  p.tag=0  or (p.product_store_sum<1 and p.ltd_stock < 1 and p.is_non=0 and p.split_line=0) ) and p.menu_child_serial_no <> 260");
+        // 260 是超频产品
+    }
+
+    /// <summary>
+    /// find system price filter by card rate
+    /// </summary>
+    /// <param name="system_templete_serial_no"></param>
+    /// <returns></returns>
+    public static decimal FindSystemPrice(int system_templete_serial_no, decimal card_rate)
+    {
+        decimal price = 0M;
+        EbaySystemPartsModel[] spms = EbaySystemPartsModel.FindAllByProperty("system_sku", system_templete_serial_no);
+        for (int i = 0; i < spms.Length; i++)
+        {
+            ProductModel pm = ProductModel.GetProductModel(spms[i].luc_sku);
+            if (pm.product_current_price != 0M)
+                price += ConvertPrice.ChangePrice(pm.product_current_price - ProductModel.FindOnSaleDiscountByPID(pm.product_serial_no), card_rate);
+        }
+        return price;
+    }
+
+
+
+    public static void FileSystemPriceAndSave(int system_templete_serial_no, ref decimal price, ref decimal save)
+    {
+        DataTable dt = Config.ExecuteDataTable(@" select sum(p.product_current_price) price, sum(p.product_current_discount) save from tb_product p inner join 
+ tb_ebay_system_parts sp on p.product_serial_no = sp.luc_sku inner join tb_product_category pc on pc.menu_child_serial_no=p.menu_child_serial_no
+where pc.tag=1 and p.tag=1 and sp.system_sku='" + system_templete_serial_no.ToString() + "'");
+        if (dt.Rows.Count == 1)
+        {
+            decimal.TryParse(dt.Rows[0]["price"].ToString(),out price);
+            decimal.TryParse(dt.Rows[0]["save"].ToString(),out save);
+        }
+    }
+
+}

@@ -1,0 +1,50 @@
+.txtColorWhite {
+  color: white;
+}
+.txtCenter {
+  text-align: center;
+}
+.txtRight {
+  text-align: right;
+}
+.txtLeft {
+  text-align: left;
+}
+.verticalAlign {
+  vertical-align: middle;
+}
+.mg-0 {
+  margin: 0;
+}
+.mg-t {
+  margin-top: 1rem;
+}
+.mg-l {
+  margin-left: 1rem;
+}
+.mg-r {
+  margin-right: 1rem;
+}
+.pd-t {
+  padding-top: 1rem;
+}
+.pd-0 {
+  margin: 0;
+}
+.pd {
+  padding: 1rem;
+}
+.pd-l {
+  padding-left: 1rem;
+}
+.pd-r {
+  padding-right: 1rem;
+}
+.pd-lr {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.pd-lr-3rem {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}

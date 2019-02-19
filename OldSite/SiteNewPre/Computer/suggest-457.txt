@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25000.jpg?imageView/3/w/150/h/150" alt="Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25000'>
+                                       Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $13.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/24886.jpg?imageView/3/w/150/h/150" alt="CORSAIR 2.0 16GB USB PADLOCK  CMFPLA16GB" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=24886'>
+                                       CORSAIR 2.0 16GB USB PADLOCK  CMFPLA16GB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $48.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25000.jpg?imageView/3/w/150/h/150" alt="Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25000'>
+                                       Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $13.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25000.jpg?imageView/3/w/150/h/150" alt="Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25000'>
+                                       Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $13.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25000.jpg?imageView/3/w/150/h/150" alt="Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=25000'>
+                                       Kingston DATA TRAVELER MICRO 16G USD2.0 BLACK DTMCK/16GB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $13.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

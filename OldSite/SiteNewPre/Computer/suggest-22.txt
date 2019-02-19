@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/27558.jpg?imageView/3/w/150/h/150" alt="AMD A10-7850K Quad-core (4 Core) 3.70 GHz Socket FM2+ AD785KXBJABOX" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=27558'>
+                                       AMD A10-7850K Quad-core (4 Core) 3.70 GHz Socket FM2+ AD785KXBJABOX
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $140.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25601.jpg?imageView/3/w/150/h/150" alt="Intel Core i7-4790K Haswell 4.0GHz CPU FCLGA1150 8MB 4 cores/8 threads 22NM 84W CPU BX80646I74790K" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28218'>
+                                       Intel Core i7-4790K Haswell 4.0GHz CPU FCLGA1150 8MB 4 cores/8 threads 22NM 84W CPU BX80646I74790K
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $468.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/25601.jpg?imageView/3/w/150/h/150" alt="Intel Core i7-4790K Haswell 4.0GHz CPU FCLGA1150 8MB 4 cores/8 threads 22NM 84W CPU BX80646I74790K" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28218'>
+                                       Intel Core i7-4790K Haswell 4.0GHz CPU FCLGA1150 8MB 4 cores/8 threads 22NM 84W CPU BX80646I74790K
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $468.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26457.jpg?imageView/3/w/150/h/150" alt="Intel Core i7-5930K Haswell-E 6-Core 3.5GHz LGA 2011-v3 140W CPU BX80648I75930K" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28752'>
+                                       Intel Core i7-5930K Haswell-E 6-Core 3.5GHz LGA 2011-v3 140W CPU BX80648I75930K
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $795.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30170.jpg?imageView/3/w/150/h/150" alt="Intel Core i5-6600K 3.5GHz CPU, FCLGA1151, 6MB, 4 Cores/ 4 , 95W, BX80662I56600K" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30173'>
+                                       Intel Core i5-6600K 3.5GHz CPU, FCLGA1151, 6MB, 4 Cores/ 4 , 95W, BX80662I56600K
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $318.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

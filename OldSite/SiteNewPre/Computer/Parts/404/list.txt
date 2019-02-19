@@ -1,0 +1,1 @@
+[{"SKU":16373,"ShortName":"85Mbps Powerline Network Adapters (2pcs)","Name":"85Mbps Powerline Network Adapters (2pcs)","Price":61.99,"Discount":0.00,"Sold":61.99,"ImgSku":16373,"IsOnsale":0,"IsRebate":0,"priceUnit":"CAD","Keyword":"[smart]"}]

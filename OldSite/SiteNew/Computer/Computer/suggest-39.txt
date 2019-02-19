@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/G-944/24911.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24911_list_1.jpg" alt="VIBE 2PC 2 X 1W (BLACK) USB Speaker S24911" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/G-944/24911.html'>
+                                       VIBE 2PC 2 X 1W (BLACK) USB Speaker S24911
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/G-944/24911.html'><label class="price">Price: $9.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/70SB139000002/24909.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24909_list_1.jpg" alt="Creative Labs AXX SBX 10 WIRELESS Speaker WITH MIC 70SB139000002" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/70SB139000002/24909.html'>
+                                       Creative Labs AXX SBX 10 WIRELESS Speaker WITH MIC 70SB139000002
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/70SB139000002/24909.html'><label class="price">Price: $129.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/51MF4115AA002/24908.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24908_list_1.jpg" alt="CRREATIVE INSPIRE T6300 5.1 BK S24908" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/51MF4115AA002/24908.html'>
+                                       CRREATIVE INSPIRE T6300 5.1 BK S24908
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/51MF4115AA002/24908.html'><label class="price">Price: $92.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/51MF0415AA002/24907.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24907_list_1.jpg" alt="CRREATIVE INSPIRE T3300 2.1 BK S24907" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/51MF0415AA002/24907.html'>
+                                       CRREATIVE INSPIRE T3300 2.1 BK S24907
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/51MF0415AA002/24907.html'><label class="price">Price: $68.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/51EF0540AA002/23777.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/23777_list_1.jpg" alt="CREATIVE HN-900 HEADPHONES NOISE CANCELING (BLACK)FOLDING DESIGN WITH POUCH " style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/51EF0540AA002/23777.html'>
+                                       CREATIVE HN-900 HEADPHONES NOISE CANCELING (BLACK)FOLDING DESIGN WITH POUCH 
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/51EF0540AA002/23777.html'><label class="price">Price: $79.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

@@ -1,0 +1,49 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/97281/30898.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/30898.jpg?imageView/3/w/150/h/150" alt="Verbatim DVD-R 4.7GB 16X VX SHINY SILVER 50PK" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/97281/30898.html'>
+                                       Verbatim DVD-R 4.7GB 16X VX SHINY SILVER 50PK
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/97281/30898.html'><label class="price">Price: $20.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/97341/30897.html'>
+                                        <img src="https://o9ozc36tl.qnssl.com/30897.jpg?imageView/3/w/150/h/150" alt="Verbatim BD-R 25GB 6X BRANDED 3PK JEWEL CASE  BOX" style='border:0;' onerror="this.src='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/97341/30897.html'>
+                                       Verbatim BD-R 25GB 6X BRANDED 3PK JEWEL CASE  BOX
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/97341/30897.html'><label class="price">Price: $8.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

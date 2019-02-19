@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/73VF077000000/24928.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24928_list_1.jpg" alt="CREATIVE LIVE CAM SYNC HD (VF0770)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/73VF077000000/24928.html'>
+                                       CREATIVE LIVE CAM SYNC HD (VF0770)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/73VF077000000/24928.html'><label class="price">Price: $30.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/960-000683/23069.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/23069_list_1.jpg" alt="Logitech HD PRO WEBCAM B910" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/960-000683/23069.html'>
+                                       Logitech HD PRO WEBCAM B910
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/960-000683/23069.html'><label class="price">Price: $95.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/960-000621/23067.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/23067_list_1.jpg" alt="Logitech HD WEBCAM C270 960-000621" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/960-000621/23067.html'>
+                                       Logitech HD WEBCAM C270 960-000621
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/960-000621/23067.html'><label class="price">Price: $47.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/73VF070000000/19910.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/19910_list_1.jpg" alt="CREATIVE LIVE! CAM CHAT HD (VF0700) 73VF070000000 S19910" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/73VF070000000/19910.html'>
+                                       CREATIVE LIVE! CAM CHAT HD (VF0700) 73VF070000000 S19910
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/73VF070000000/19910.html'><label class="price">Price: $44.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/73VF062400003/19907.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/19907_list_1.jpg" alt="Creative VADO HD 4GB BLACK 3RD GEN (VF0624)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/73VF062400003/19907.html'>
+                                       Creative VADO HD 4GB BLACK 3RD GEN (VF0624)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/73VF062400003/19907.html'><label class="price">Price: $105.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28438.jpg?imageView/3/w/150/h/150" alt="Asus Tablet PC M80TA-B1-CA 8inch Baytrail-T Z3740 2GB 32GB GMA HD Windows 8.1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28438'>
+                                       Asus Tablet PC M80TA-B1-CA 8inch Baytrail-T Z3740 2GB 32GB GMA HD Windows 8.1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $381.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26572.jpg?imageView/3/w/150/h/150" alt="ASUS MeMO Pad ME302C-A1-WH 10.1" Atom Z2560 2GB RAM 16G Flash android 4.2" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26572'>
+                                       ASUS MeMO Pad ME302C-A1-WH 10.1" Atom Z2560 2GB RAM 16G Flash android 4.2
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $366.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/26572.jpg?imageView/3/w/150/h/150" alt="ASUS MeMO Pad ME302C-A1-WH 10.1" Atom Z2560 2GB RAM 16G Flash android 4.2" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=26572'>
+                                       ASUS MeMO Pad ME302C-A1-WH 10.1" Atom Z2560 2GB RAM 16G Flash android 4.2
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $366.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28438.jpg?imageView/3/w/150/h/150" alt="Asus Tablet PC M80TA-B1-CA 8inch Baytrail-T Z3740 2GB 32GB GMA HD Windows 8.1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28438'>
+                                       Asus Tablet PC M80TA-B1-CA 8inch Baytrail-T Z3740 2GB 32GB GMA HD Windows 8.1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $381.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28439.jpg?imageView/3/w/150/h/150" alt="Asus Tablet PC M80TA-C1-CA 8inch Baytrail-T Z3740 2GB 64BG GMA HD Windows 8.1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=28439'>
+                                       Asus Tablet PC M80TA-C1-CA 8inch Baytrail-T Z3740 2GB 64BG GMA HD Windows 8.1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $430.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

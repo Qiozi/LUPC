@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30137.jpg?imageView/3/w/150/h/150" alt="Crucial SSD 500GB MX200 2.5inch 7mm Retail CT500MX200SSD1" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30141'>
+                                       Crucial SSD 500GB MX200 2.5inch 7mm Retail CT500MX200SSD1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $189.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30007.jpg?imageView/3/w/150/h/150" alt="SanDisk 120GB SSD SDSSDHII-120G-G25, SSD II, GLOBAL" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30007'>
+                                       SanDisk 120GB SSD SDSSDHII-120G-G25, SSD II, GLOBAL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $78.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30140.jpg?imageView/3/w/150/h/150" alt="Crucial SSD CT250BX100SSD1 250GB BX100 2.5inch 7mm Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30143'>
+                                       Crucial SSD CT250BX100SSD1 250GB BX100 2.5inch 7mm Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $122.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30140.jpg?imageView/3/w/150/h/150" alt="Crucial SSD CT250BX100SSD1 250GB BX100 2.5inch 7mm Retail" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30143'>
+                                       Crucial SSD CT250BX100SSD1 250GB BX100 2.5inch 7mm Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $122.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30146.jpg?imageView/3/w/150/h/150" alt="Intel 535 Series 120GB SSD 2.5inch SATA 6Gb/s MLC 16nm Bulk SSDSC2BW120H601" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30146'>
+                                       Intel 535 Series 120GB SSD 2.5inch SATA 6Gb/s MLC 16nm Bulk SSDSC2BW120H601
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $106.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

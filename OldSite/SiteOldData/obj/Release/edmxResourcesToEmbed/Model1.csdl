@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nicklu2Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="nicklu2Entities">
+    <EntitySet Name="tb_ebay_system_item_specifics" EntityType="nicklu2Model.tb_ebay_system_item_specifics" />
+    <EntitySet Name="tb_ebay_system" EntityType="nicklu2Model.tb_ebay_system" />
+    <EntitySet Name="tb_ebay_system_item_specifics_keyword" EntityType="nicklu2Model.tb_ebay_system_item_specifics_keyword" />
+    <EntitySet Name="tb_product" EntityType="nicklu2Model.tb_product" />
+    <EntitySet Name="tb_timer_href" EntityType="nicklu2Model.tb_timer_href" />
+    <EntitySet Name="tb_ebay_system_case_group" EntityType="nicklu2Model.tb_ebay_system_case_group" />
+    <EntitySet Name="tb_ebay_system_hdd_group" EntityType="nicklu2Model.tb_ebay_system_hdd_group" />
+    <EntitySet Name="tb_ebay_system_memory_group" EntityType="nicklu2Model.tb_ebay_system_memory_group" />
+    <EntitySet Name="tb_ebay_system_part_comment" EntityType="nicklu2Model.tb_ebay_system_part_comment" />
+    <EntitySet Name="tb_ebay_system_parts" EntityType="nicklu2Model.tb_ebay_system_parts" />
+    <EntitySet Name="tb_ebay_system_ssd_group" EntityType="nicklu2Model.tb_ebay_system_ssd_group" />
+    <EntitySet Name="tb_ebay_system_ssdm2_group" EntityType="nicklu2Model.tb_ebay_system_ssdm2_group" />
+    <EntitySet Name="tb_ebay_system_vc_group" EntityType="nicklu2Model.tb_ebay_system_vc_group" />
+    <EntitySet Name="tb_ebay_selling" EntityType="nicklu2Model.tb_ebay_selling" />
+  </EntityContainer>
+  <EntityType Name="tb_ebay_system_item_specifics">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="system_sku" Type="Int32" Nullable="false" />
+    <Property Name="ItemSpecificsName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemSpecificsValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="category_id" Type="Int32" />
+    <Property Name="ebay_system_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ebay_subtitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ebay_system_price" Type="Decimal" />
+    <Property Name="ebay_system_current_number" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="selected_ebay_sell" Type="Decimal" />
+    <Property Name="no_selected_ebay_sell" Type="Decimal" />
+    <Property Name="is_include_shipping" Type="Boolean" />
+    <Property Name="showit" Type="Boolean" />
+    <Property Name="view_count" Type="Int32" />
+    <Property Name="logo_filenames" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="keywords" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="system_title1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="system_title2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="system_title3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cutom_label" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="main_comment_ids" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="is_issue" Type="Boolean" />
+    <Property Name="large_pic_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="is_from_ebay" Type="Boolean" />
+    <Property Name="adjustment" Type="Decimal" />
+    <Property Name="source_code" Type="Int32" />
+    <Property Name="is_online" Type="Boolean" />
+    <Property Name="is_disable_flash_customize" Type="Boolean" />
+    <Property Name="is_shrink" Type="Boolean" />
+    <Property Name="parentID" Type="Int32" />
+    <Property Name="parent_ebay_itemid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="flashVersion" Type="Int32" />
+    <Property Name="is_barebone" Type="Boolean" />
+    <Property Name="templete_id" Type="Int32" />
+    <Property Name="sub_part_quantity" Type="Int32" />
+    <Property Name="cost" Type="Decimal" />
+    <Property Name="ebay_fee" Type="Decimal" />
+    <Property Name="shipping_fee" Type="Decimal" />
+    <Property Name="profit" Type="Decimal" />
+    <Property Name="tmp_sell" Type="Decimal" />
+    <Property Name="tmp_discount" Type="Decimal" />
+    <Property Name="eBayCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="regdate" Type="DateTime" />
+    <Property Name="batch" Type="Int32" Nullable="false" />
+    <Property Name="CaseType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_item_specifics_keyword">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Keyword" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SpecificsName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SpecificsValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Regdate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tb_product">
+    <Key>
+      <PropertyRef Name="product_serial_no" />
+    </Key>
+    <Property Name="product_serial_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="product_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="product_short_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="product_store_sum" Type="Int32" />
+    <Property Name="product_sale_sum" Type="Int32" />
+    <Property Name="menu_child_serial_no" Type="Int32" />
+    <Property Name="product_filename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tag" Type="SByte" />
+    <Property Name="product_current_real_cost" Type="Decimal" />
+    <Property Name="product_current_special_cash_price" Type="Decimal" />
+    <Property Name="product_current_price" Type="Decimal" />
+    <Property Name="product_current_cost" Type="Decimal" />
+    <Property Name="product_ship_price" Type="Decimal" />
+    <Property Name="producter_url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="product_order" Type="Int32" />
+    <Property Name="supplier_sku" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="manufacturer_part_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ltd_stock" Type="Int32" />
+    <Property Name="product_sale_sum_2" Type="Int32" />
+    <Property Name="product_current_cost_2" Type="Decimal" />
+    <Property Name="product_ship_price_2" Type="Int32" />
+    <Property Name="product_ebay_name_2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="product_ebay_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="product_short_name_f" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="hot" Type="SByte" />
+    <Property Name="new" Type="SByte" />
+    <Property Name="producter_serial_no_bak" Type="Int32" />
+    <Property Name="product_compatibility" Type="SByte" />
+    <Property Name="split_line" Type="SByte" />
+    <Property Name="product_name_long_en" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="shopbot_info" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="product_img_sum" Type="SByte" />
+    <Property Name="product_size_id" Type="Int32" />
+    <Property Name="is_non" Type="SByte" />
+    <Property Name="keywords" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="shortcomment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="comment" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="producter_serial_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="old_db_id" Type="Int32" />
+    <Property Name="agent_stock" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="regdate" Type="DateTime" />
+    <Property Name="other_product_sku" Type="Int32" />
+    <Property Name="category_idss" Type="Int32" />
+    <Property Name="export" Type="Boolean" />
+    <Property Name="product_current_discount" Type="Decimal" />
+    <Property Name="last_regdate" Type="DateTime" />
+    <Property Name="part_ebay_cost" Type="Decimal" />
+    <Property Name="part_ebay_price" Type="Decimal" />
+    <Property Name="real_cost_regdate" Type="DateTime" />
+    <Property Name="issue" Type="Boolean" />
+    <Property Name="view_count" Type="Int32" />
+    <Property Name="model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="split_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="adjustment" Type="Decimal" />
+    <Property Name="adjustment_regdate" Type="DateTime" />
+    <Property Name="adjustment_enddate" Type="DateTime" />
+    <Property Name="part_ebay_describe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="screen_size" Type="Decimal" />
+    <Property Name="price_sku" Type="Int32" />
+    <Property Name="price_sku_quantity" Type="Int32" />
+    <Property Name="curr_change_cost" Type="Decimal" />
+    <Property Name="curr_change_price" Type="Decimal" />
+    <Property Name="curr_change_ltd" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="curr_change_quantity" Type="Int32" />
+    <Property Name="curr_change_regdate" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ebay_system_short_name" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="is_modify" Type="Boolean" />
+    <Property Name="is_top" Type="Boolean" />
+    <Property Name="prodType" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="img_url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UPC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ETA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="weight" Type="Decimal" />
+    <Property Name="href_url" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="short_name_for_sys" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="is_fixed" Type="Boolean" />
+    <Property Name="for_sys" Type="Boolean" />
+    <Property Name="new_href_url" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SpecificsCount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_timer_href">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Regdate" Type="DateTime" Nullable="false" />
+    <Property Name="Token" Type="Guid" />
+    <Property Name="UrlToken" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_case_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="CaseSku" Type="Int32" Nullable="false" />
+    <Property Name="CaseType" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_hdd_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="luc_sku" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_memory_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="luc_sku" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_part_comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="comment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="category_ids" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="is_case" Type="Boolean" />
+    <Property Name="is_cpu" Type="Boolean" />
+    <Property Name="is_lcd" Type="Boolean" />
+    <Property Name="is_mb" Type="Boolean" />
+    <Property Name="is_video" Type="Boolean" />
+    <Property Name="is_audio" Type="Boolean" />
+    <Property Name="is_network" Type="Boolean" />
+    <Property Name="is_cpu_fan" Type="Boolean" />
+    <Property Name="max_quantity" Type="Int32" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="showit" Type="Boolean" />
+    <Property Name="append_charge" Type="Decimal" />
+    <Property Name="section" Type="Int32" />
+    <Property Name="e_field_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="eBayShowit" Type="Boolean" />
+    <Property Name="defaultPartGroupId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_parts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="system_sku" Type="Int32" />
+    <Property Name="luc_sku" Type="Int32" />
+    <Property Name="comment_id" Type="Int32" />
+    <Property Name="comment_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" />
+    <Property Name="cost" Type="Decimal" />
+    <Property Name="part_quantity" Type="Int32" />
+    <Property Name="max_quantity" Type="Int32" />
+    <Property Name="compatibility_parts" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="part_group_id" Type="Int32" />
+    <Property Name="is_online" Type="Boolean" />
+    <Property Name="is_label_of_flash" Type="Boolean" />
+    <Property Name="is_belong_price" Type="Boolean" />
+    <Property Name="eBayShowit" Type="Boolean" />
+    <Property Name="regdate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_ssd_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="luc_sku" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_ssdm2_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="luc_sku" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_system_vc_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="luc_sku" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ebay_selling">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="BuyItNowPrice" Type="Decimal" />
+    <Property Name="BuyItNowPrice_currencyID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ItemID" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ListingDetails_StartTime" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ListingDetails_ViewItemURL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ListingDetails_ViewItemURLForNaturalSearch" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ListingType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="SellingStatus_CurrentPrice" Type="Decimal" />
+    <Property Name="SellingStatus_CurrentPrice_currencyID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingDetails_ShippingServiceCost" Type="Decimal" />
+    <Property Name="TimeLeft" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="82" FixedLength="false" Unicode="false" />
+    <Property Name="WatchCount" Type="Int32" />
+    <Property Name="QuantityAvailable" Type="Int32" />
+    <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PictureDetails_GalleryURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ClassifiedAdPayPerLeadFee" Type="Decimal" />
+    <Property Name="regdate" Type="DateTime" />
+    <Property Name="luc_sku" Type="Int32" />
+    <Property Name="sys_sku" Type="Int32" />
+    <Property Name="BuyItNowPriceNew" Type="Decimal" />
+    <Property Name="is_deleted" Type="Boolean" />
+  </EntityType>
+</Schema>

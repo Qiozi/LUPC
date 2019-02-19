@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GetCategory2CSRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+  <RequesterCredentials>
+    <eBayAuthToken>{1}</eBayAuthToken>
+  </RequesterCredentials>
+  <CategoryID>{0}</CategoryID>
+  <DetailLevel>ReturnAll</DetailLevel>
+</GetCategory2CSRequest>

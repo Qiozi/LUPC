@@ -1,0 +1,587 @@
+﻿@charset "utf-8";
+/* body */
+body {font-family: "tahoma", serif;  margin:0; padding:0; background: #fff; font-size:8pt; color:#000;background:#ECF6FF;}
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border:0; color:#4c4c4c;font-family: "tahoma", serif; }
+h1,h2,h3,h4,h5,h6 {margin:0; padding:0; font-size:8pt; font-weight:normal;font-family: "tahoma", serif; }
+table,td,tr,th{font-size:8pt;font-family: "tahoma", serif; }
+input,button{cursor:pointer; font-size:8pt;font-family: "tahoma", serif; }
+select{font-size:8pt;font-family: "tahoma", serif; }
+img{vertical-align:top;}
+
+
+#preDivTop {width: 960px; height: 150px; margin: auto; border-left: 1px solid #8E9AA8; text-align:center;}
+
+
+.table_center{margin:0 auto;}
+
+area:hover{ background:red}
+
+
+.page_main{margin:0 auto;}
+.page_main div{ float: left; display:block; border:1px solid red;}
+.page_frame{ background:#CDE3F2; width: 960px; margin:auto;  border-left: 1px solid #8E9AA8;}
+
+
+.page_main_center{float: left; border:0px solid red;width:600px;border-bottom:1px solid #8E9AA8 ;padding: 0 2px 0 2px; word-wrap:break-word;overflow:hidden;}
+.page_main_left	{float: left; background:#CDE3F2;border:0px solid red;width:168px;border-bottom:1px solid #8E9AA8; padding: 0 2px 0 2px; word-wrap:break-word;overflow:hidden;}
+.page_main_left div{ width: 168px; }
+.page_main_right{float: left;border:0px solid red;width:170px;border-bottom:1px solid #8E9AA8; padding: 0 0px 0 0px; word-wrap:break-word;overflow:hidden;}
+
+
+/* */
+.indexSysList { background:#ffffff;background:url(../soft_img/app/1_2.jpg) no-repeat; height: 140px; }
+.indexSysList >ul >li{ float:left; padding: 2px 0px 5px 5px; width: 195px; display: block ; border: 0px solid red; }
+.indexSysList >ul >li div{ border:0px solid red; margin-left: 4px; position:relative; top: 2px;height:30px;}
+.indexSysList >ul >li div .price_big { display:block; width: 120px; float:left;}
+.indexSysList >ul >li div .btn2 { margin-top: 2px;}
+.indexSysList >ul >li >ul { height: 95px;}
+.indexSysList >ul >li >ul >li{ background: url(../soft_img/app/arrow_right_1.gif) no-repeat 3% 50%; padding-left:15px;word-wrap:break-word; overflow: hidden; }
+.indexSysList a{display:block;word-wrap:break-word; overflow: hidden;}
+/* a element  */
+a {color: #4C4C4C;  cursor:pointer;}
+a:link {color: #4C4C4C; text-decoration:none;}
+a:visited {color: #83006f;text-decoration:none;}
+a:hover {color: #bc2931; text-decoration:none;}
+a:active {color: #4C4C4C;}
+
+a.btn_img { color: #FFFFFF;}
+a.btn_img:visited {color: #FFFFFF;text-decoration:none;}
+a.btn_img:hover { color:#cccccc;text-decoration:none;}
+a.btn_img:active {color: #FFFFFF;}
+
+a.hui_red { cursor:pointer; color: #666666;}
+a.hui_red:visited { cursor:pointer; color: #666666;text-decoration:none;}
+a.hui_red:hover {  cursor:pointer; color:#ff6600;text-decoration:none;}
+a.hui_red:active { cursor:pointer; color: #666666;}
+
+
+A.daohang:link {FONT: 12px/16Px "tahoma"; COLOR: #205357; TEXT-DECORATION: none}
+A.daohang:visited {FONT: 12px/16Px "tahoma"; COLOR: #205357; TEXT-DECORATION: none}
+A.daohang:hover {FONT: 12px/16Px "tahoma"; COLOR: #ff0000; TEXT-DECORATION: none}
+
+.daohang-e {FONT: 14px/16Px "tahoma"; letter-spacing:0px; font-weight: bold; COLOR: #5D5D5D}
+A.daohang-e:link {FONT: 11px/16Px "tahoma"; COLOR: #304D85; font-weight: bold; TEXT-DECORATION: none}
+A.daohang-e:visited {FONT: 11px/16Px "tahoma"; COLOR: #304D85; font-weight: bold; TEXT-DECORATION: none}
+A.daohang-e:hover {FONT: 11px/16Px "tahoma"; COLOR: #DA251C; font-weight: bold;  TEXT-DECORATION: none}
+
+.bottom {FONT: 12px/16Px "tahoma"; letter-spacing:2px; line-height:25px; COLOR: #5D5D5D}
+
+A.black-blue:link {FONT: 12px/16Px "tahoma";  color: #555555; text-decoration: none}
+A.black-blue:visited {FONT: 12px/16Px "tahoma";  color: #555555; text-decoration: none}
+A.black-blue:hover {FONT: 12px/16Px "tahoma";  color: #0074CB; text-decoration: none}
+
+A.black-red:link {FONT: 12px/16Px "tahoma";  color: #000000; text-decoration: none}
+A.black-red:visited {FONT: 12px/16Px "tahoma";  color: #000000; text-decoration: none}
+A.black-red:hover {FONT: 12px/16Px "tahoma";  color: #ff0000; text-decoration: none}
+
+A.black-yellow:link {FONT: 12px/16Px "tahoma";  color: #000000; text-decoration: none}
+A.black-yellow:visited {FONT: 12px/16Px "tahoma";  color: #000000; text-decoration: none}
+A.black-yellow:hover {FONT: 12px/16Px "tahoma";  color: #FFE761; text-decoration: none}
+
+A.black-white:link {FONT: 12px/16Px "tahoma";  color: #272727; text-decoration: none}
+A.black-white:visited {FONT: 12px/16Px "tahoma";  color: #272727; text-decoration: none}
+A.black-white:hover {FONT: 12px/16Px "tahoma";  color: #eeeeee; text-decoration: none}
+
+A.blue-red2:link {FONT: 12px/16Px "tahoma";  color: #506F8D; letter-spacing:0px; text-decoration: none}
+A.blue-red2:visited {FONT: 12px/16Px "tahoma";  color: #506F8D; letter-spacing:0px; text-decoration: none}
+A.blue-red2:hover {FONT: 12px/16Px "tahoma";  color: #8D5750; letter-spacing:0px; text-decoration: none}
+
+A.blue_white_11:link {FONT: 11px/14Px "tahoma";  color: #006699; letter-spacing:0px; text-decoration: none}
+A.blue_white_11:visited {FONT: 11px/14Px "tahoma";  color: #006699; letter-spacing:0px; text-decoration: none}
+A.blue_white_11:hover {FONT: 11px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+
+A.blue_red_11:link {FONT: 11px/16Px "tahoma";  color: #506F8D; letter-spacing:0px; text-decoration: none}
+A.blue_red_11:visited {FONT: 11px/16Px "tahoma";  color: #506F8D; letter-spacing:0px; text-decoration: none}
+A.blue_red_11:hover {FONT: 11px/16Px "tahoma";  color: #8D5750; letter-spacing:0px; text-decoration: none}
+
+A.blue-red:link {FONT: 12px/16Px "tahoma";  color: #0072BC; text-decoration: none}
+A.blue-red:visited {FONT: 12px/16Px "tahoma";  color: #0072BC; text-decoration: none}
+A.blue-red:hover {FONT: 12px/16Px "tahoma";  color: #ff0000; text-decoration: none}
+
+A.blue_orange_11:link {FONT: 11px/16Px "tahoma"; letter-spacing:0px;  color: #095E81; text-decoration: none}
+A.blue_orange_11:visited {FONT: 11px/16Px "tahoma"; letter-spacing:0px;  color: #095E81; text-decoration: none}
+A.blue_orange_11:hover {FONT: 11px/16Px "tahoma"; letter-spacing:0px;  color: #E08000; text-decoration: none}
+
+
+
+A.green-red:link {FONT: 12px/16Px "tahoma";  color: #072F00; text-decoration: none}
+A.green-red:visited {FONT: 12px/16Px "tahoma";  color: #072F00; text-decoration: none}
+A.green-red:hover {FONT: 12px/16Px "tahoma";  color: #ff0000; text-decoration: none}
+
+A.hui-red:link {FONT: 12px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-red:visited {FONT: 12px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-red:hover {FONT: 12px/16Px "tahoma";  color: #ff6600; letter-spacing:0px; text-decoration: none}
+
+A.hui-orange-s:link {FONT: 11px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-orange-s:visited {FONT: 11px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-orange-s:hover {FONT: 11px/16Px "tahoma";  color: #ff6600; letter-spacing:0px; text-decoration: none}
+
+A.hui_orange_11:link {FONT: 11px/11px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui_orange_11:visited {FONT: 11px/11px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui_orange_11:hover {FONT: 11px/11px "tahoma";  color: #ff6600; letter-spacing:0px; text-decoration: none}
+
+A.hui-orange-12:link {FONT: 12px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-orange-12:visited {FONT: 12px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-orange-12:hover {FONT: 12px/16Px "tahoma";  color: #ff6600; letter-spacing:0px; text-decoration: none}
+
+A.hui-orange-10:link {FONT: 10px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-orange-10:visited {FONT: 10px/16Px "tahoma";  color: #4C4C4C; letter-spacing:0px; text-decoration: none}
+A.hui-orange-10:hover {FONT: 10px/16Px "tahoma";  color: #ff6600; letter-spacing:0px; text-decoration: none}
+
+A.hui-white:link {FONT: 12px/22Px "tahoma";  color: #BABABA; letter-spacing:0px; text-decoration: none}
+A.hui-white:visited {FONT: 12px/22Px "tahoma";  color: #BABABA; letter-spacing:0px; text-decoration: none}
+A.hui-white:hover {FONT: 12px/22Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+
+A.hui-red2_title:link {FONT: 12px/16Px "tahoma";  color: #444444; font-weight: bold; letter-spacing:2px; text-decoration: none}
+A.hui-red2_title:visited {FONT: 12px/16Px "tahoma";  color: #444444; font-weight: bold; letter-spacing:2px; text-decoration: none}
+A.hui-red2_title:hover {FONT: 12px/16Px "tahoma";  color: #DA251C; font-weight: bold; letter-spacing:2px; text-decoration: none}
+
+A.hui-green:link {FONT: 12px/16Px "tahoma";  color: #444444; text-decoration: none}
+A.hui-green:visited {FONT: 12px/16Px "tahoma";  color: #444444; text-decoration: none}
+A.hui-green:hover {FONT: 12px/16Px "tahoma";  color: #3E621C; text-decoration: none}
+
+A.hui-blue-title:link {FONT: 14px/16Px "tahoma";  color: #4C4C4C; text-decoration: none}
+A.hui-blue-title:visited {FONT: 14px/16Px "tahoma";  color: #333333; text-decoration: none}
+A.hui-blue-title:hover {FONT: 14px/16Px "tahoma";  color: #0074CB; text-decoration: none}
+
+A.red-black:link {FONT: 12px/16Px "tahoma";  color: #ff6600; text-decoration: none}
+A.red-black:visited {FONT: 12px/16Px "tahoma";  color: #ff6600; text-decoration: none}
+A.red-black:hover {FONT: 12px/16Px "tahoma";  color: #333333; text-decoration: none}
+
+A.red-red2:link {FONT: 12px/16Px "tahoma";  color: #620000; text-decoration: none}
+A.red-red2:visited {FONT: 12px/16Px "tahoma";  color: #620000; text-decoration: none}
+A.red-red2:hover {FONT: 12px/16Px "tahoma";  color: #ff0000; text-decoration: none}
+
+A.red-hui:link {FONT: 12px/16Px "tahoma";  color: #DB0024; text-decoration: none}
+A.red-hui:visited {FONT: 12px/16Px "tahoma";  color: #DB0024; text-decoration: none}
+A.red-hui:hover {FONT: 12px/16Px "tahoma";  color: #000000; text-decoration: none}
+
+A.red-red:link {FONT: 12px/16Px "tahoma";  color: #FF6917; text-decoration: none}
+A.red-red:visited {FONT: 12px/16Px "tahoma";  color: #FF6917; text-decoration: none}
+A.red-red:hover {FONT: 12px/16Px "tahoma";  color: #ff0000; text-decoration: none}
+
+A.white-red-11:link {FONT: 11px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-red-11:visited {FONT: 11px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-red-11:hover {FONT: 11px/14Px "tahoma";  color: #ff6600; letter-spacing:0px; text-decoration: none}
+
+A.white-hui-12:link {FONT: 12px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-hui-12:visited {FONT: 12px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-hui-12:hover {FONT: 12px/14Px "tahoma";  color: #dddddd; letter-spacing:0px; text-decoration: none}
+
+A.white-hui-11:link {FONT: 11px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-hui-11:visited {FONT: 11px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-hui-11:hover {FONT: 11px/14Px "tahoma";  color: #dddddd; letter-spacing:0px; text-decoration: none}
+
+A.white-hui-13:link {FONT: 13px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-hui-13:visited {FONT: 13px/14Px "tahoma";  color: #ffffff; letter-spacing:0px; text-decoration: none}
+A.white-hui-13:hover {FONT: 13px/14Px "tahoma";  color: #dddddd; letter-spacing:0px; text-decoration: none}
+
+A.white-yellow:link {FONT: 12px/16Px "tahoma";  color: #FFFFFF; text-decoration: none}
+A.white-yellow:visited {FONT: 12px/16Px "tahoma";  color: #FFFFFF; text-decoration: none}
+A.white-yellow:hover {FONT: 12px/16Px "tahoma";  color: #ff6600; text-decoration: none}
+
+
+A.orag-blue:link {FONT: 12px/16Px "tahoma";  color: #FF4400; text-decoration: none}
+A.orag-blue:visited {FONT: 12px/16Px "tahoma";  color: #FF4400; text-decoration: none}
+A.orag-blue:hover {FONT: 12px/16Px "tahoma";  color: #ff0000; text-decoration: none}
+
+A.orag-red:link {FONT: 12px/16Px "tahoma";  color: #B46600; text-decoration: none}
+A.orag-red:visited {FONT: 12px/16Px "tahoma";  color: #B46600; text-decoration: none}
+A.orag-red:hover {FONT: 12px/16Px "tahoma";  color: #ff6600; text-decoration: none}
+
+A.yellow-red:link {FONT: 12px/15Px "tahoma";  color: #FFE761; text-decoration: none}
+A.yellow-red:visited {FONT: 12px/15Px "tahoma";  color: #FFE761; text-decoration: none}
+A.yellow-red:hover {FONT: 12px/15Px "tahoma";  color: #FF0000; text-decoration: none}
+
+A.yellow-red2:link {FONT: 12px/15Px "tahoma";  color: #FFCC33; text-decoration: none}
+A.yellow-red2:visited {FONT: 12px/15Px "tahoma";  color: #FFCC33; text-decoration: none}
+A.yellow-red2:hover {FONT: 12px/15Px "tahoma";  color: #FF0000; text-decoration: none}
+
+
+.list_hover tr{ line-height:20px;}
+
+.btn_middle{  background: url(/soft_img/app/customer_bottom_03.gif); text-align:center }
+
+.btn_middle2{ background: url(/soft_img/app/save_title_02.gif); }
+/* top */
+.div_center { width: 960px; height: 150px; margin: auto; border-left: 1px solid #8E9AA8; text-align:center;}
+.page_top_main_item 
+	{
+			font-size: 8pt;
+			background-image:url('/soft_img/app/nav_bg.gif'); 
+			clear:both; 
+			height:20px; 
+			line-height:20px; 
+			border:0px solid red;
+			padding-bottom:2px; 
+			float:left;
+			font-weight:bold;
+			color: #006699;
+			marign:auto;
+	}
+*html .page_top_main_item{padding-bottom:0px;}
+.page_top_main_item a:link {FONT: 11px/14Px "tahoma"; font-weight:bold; color: #006699; letter-spacing:0px; text-decoration: none}
+.page_top_main_item a:visited {FONT: 11px/14Px "tahoma"; font-weight:bold; color: #006699; letter-spacing:0px; text-decoration: none}
+.page_top_main_item a:hover {FONT: 11px/14Px "tahoma"; font-weight:bold; color: #ffffff; letter-spacing:0px; text-decoration: none}
+
+
+
+
+/*	left menu	*/
+.page_left_menu_font { font-size: 11px; }
+.page_left_menu_parent { border: 1px solid #ffffff; background:#AC7522; background:url('/soft_img/app/title_bg_yellow.gif');
+cursor:pointer;height: 22px; line-height:22px; text-align:left; margin:auto;}
+.page_left_menu_parent_sub1 { display:block; font-weight: bold; color:#ffffff;font-size:11px; background:url('/soft_img/app/mainu_left_down.jpg') no-repeat 95% 55%; text-align:left; padding-left: 10px}
+.page_left_menu_parent_sub2 { display:block; font-weight: bold; color:#ffffff;font-size:11px; background:url('/soft_img/app/mainu_left_right.jpg') no-repeat 95% 55%; text-align:left; padding-left: 10px; text-align:left; border:0px solid red}
+.page_left_menu_sub_li{  font-size: 11px; text-align:left; background:url('/soft_img/app/arrow.gif') no-repeat 3px 5px;padding: 1px 0px 2px 15px; border:0px solid blue; }
+.left_menu_child_item{ font-size: 8pt; text-align:left; background:url('/soft_img/app/arrow.gif') no-repeat 3px 5px;padding: 1px 0px 2px 15px; border:0px solid blue;}
+.left_menu_child_item a{ cursor:pointer;}
+.left_menu_child_item a:hover{ cursor:pointer;text-decoration: none}
+.left_menu_child_category_area
+{
+	margin-top: 1px;
+	border: 1px solid #8FC2E2; 
+	background:#ffffff; 
+	padding:2px; 
+	display:none;
+}		
+
+
+.page_left_menu_end_btn1{padding-left:12px; background: url(/soft_img/app/jiant3.gif) no-repeat 2px 0;padding-top:2px; padding-bottom: 1px}
+.page_left_menu_end_btn2{padding-left:12px; background: url(/soft_img/app/jiant4.gif) no-repeat 2px 0;padding-top:2px; padding-bottom: 1px}
+
+
+div.page_right_area{border: 1px solid white;
+					text-align:center;
+                    height: 22px; 
+                    line-height: 22px;
+                    font-weight: bold; color:White;}
+
+
+input.b{border:1px solid #8A9B9C;font-size:8.5pt; color:Gray}
+
+
+/*		product list		*/
+.system_title1{COLOR: #006699; letter-spacing:0px; 
+               font-size: 11pt; vertical-align:middle; 
+               line-height:40px; border-bottom: 1px dotted #cccccc;
+               text-align:left;
+               padding: 8px 0px 5px 5px;
+               }
+.system_title1 img {margin: 2px;}
+.ebay_system_list td { background:#ffffff;}
+
+.system_title100{ COLOR: #006699; letter-spacing:0px; font-site:11pt;}
+
+
+.system_part {margin: 2px;
+               background: transparent url(/soft_img/app/arrow3.gif) no-repeat scroll 5px 55%; 
+               text-align: left; padding-left: 18px; -moz-background-clip: -moz-initial; 
+               -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; 
+               font-size: 8pt; color: rgb(51, 51, 51);
+}
+
+.img_t_list { float: left; margin:2px; padding:2px; width: 50px; height: 40px;
+              border: 1px solid #ccc;}
+.img_t_list:hover {float: left; margin:2px; padding:2px;
+              border: 1px solid #466B90;}
+
+.left_menu_parent_table a:hover {
+	color:#FF3300;
+	text-decoration: underline;
+}
+
+/*		product keyword */
+#part_list_query_keyword { width: 99%; border:0px solid red; }
+#part_list_query_keyword td { border-bottom: 1px dashed #4598d2;font-size: 8pt; }
+#part_list_query_keyword a { display: block; float: left; margin: 2px; padding: 0 2px; color: #4598d2; cursor: pointer}
+#part_list_query_keyword a:hover { display: block; float: left; margin: 2px; padding: 0 2px; background: #4598d2; color: #ffffff;}
+#part_list_query_keyword .selected{ display: block; float: left; margin: 2px; padding: 0 2px; background: #4598d2; color: #ffffff; }
+#part_list_query_keyword .unselected{ display: block; float: left; margin: 2px; padding: 0 2px; color: #4598d2; cursor: pointer }
+
+
+/*		price style				*/
+span.price { color: #EF5412; font-size: 9pt;font-weight: bold }
+span.price_unit { color: #999999; font-size: 7pt;margin-left: 4px}
+span.price1{ color: #EF5412;}
+span.price2{ color: Green;}
+
+.price_dis { text-decoration:line-through;color: blue;}
+.price_dis span{ color:#cccccc;}
+
+td.price{ text-align:right;}
+.table_td_width td{ background:#ffffff }
+.table_td_ccc td { background:#f2f2f2;}
+
+
+/*		system customize		*/
+.customize_part_comment  
+{
+    text-align:left;
+
+    font-size: 8pt;
+    
+    }
+.customize_part_comment ul { background:#ffffff;}
+.customize_part_name td
+{
+	background:#ffffff;
+	text-align:left;
+	padding: 2px;
+	font-size: 7.5pt;
+	font-family: "tahoma", serif;
+}
+.customize_part_logo{ border: 0px solid #cccccc; padding: 0px;}
+
+
+
+.prod_detail_title {padding:0px 10px;
+                    display:block;
+                    line-height: 20px;
+					height:20px;
+                    color:#278B54; 
+                    background:#E7E7E7;
+                    font-size:8pt;
+                    margin:0px;
+                    text-align:left;
+                    font-weight:bold;}
+                    
+p.comment {FONT: 11px/16Px "tahoma"; 
+           COLOR: #4C4C4C; 
+           letter-spacing:0px; 
+           padding:10px;
+           text-align:left;}
+		   
+.system_detail_list {background: url(/soft_img/app/arrow_3.gif) no-repeat 0px 55%;padding-left:15px; font-size:8pt;}
+hr.border1{ border:0px; border-bottom:1px solid #ccc;}
+hr.border_white{ border:0px;}
+
+
+
+/*	error area	*/
+.error_area_ul li{ line-height: 25px; 
+                   
+                   text-align:left;}
+.error_area_ul { margin:10px;}          
+
+
+
+		
+.At_Ebay { display:block; padding:1px; float:left; }
+a.at_ebay_in{ border: 1px solid #003366;
+			display:block; padding:1px; float:left; }
+			
+			
+
+.btn_arrow{ background:url(/soft_img/app/arrow.gif) no-repeat 0% 6px; padding-left: 12px;}
+			
+/*	view history 	*/
+.left_view_watch_history div{width:160px;border: 1px solid #8FC2E2;padding:2px; background:#ffffff}
+.left_view_watch_history .history_title{COLOR: #ff6600}
+.view_history_inSide { border: 1px solid #cccccc; background: white; text-align:left; }
+.view_history_inSide li { border-bottom:1px dotted #5D7D9E;padding: 5px;}
+.view_history_inSite .title{}
+.view_history_inSide li a { font-size: 8pt;}
+.view_history_inSide li a:hover { color: #ff9900;}
+
+
+/*	view hot		*/
+.view_hot_area{ width: 161px;}
+.view_hot_inSide {  margin-top: 2px;  text-align:center; border: 1px solid #8FC2E2;}
+.view_hot_inSide li { border-bottom:0px dotted #5D7D9E;padding: 5px;background: #ffffff;}
+.view_hot_inSide li div { border:1px solid #cccccc;width: 100px;padding: 5px;background: #ffffff; text-align:center;margin: auto;}
+.view_hot_inSide .title{}
+.view_hot_inSide li a { font-size: 8pt;}
+.view_hot_inSide li a:hover { color: #ff9900;}
+
+
+
+/*		product keyword 		
+#part_list_query_keyword { width: 100%;}
+#part_list_query_keyword td { border-bottom: 1px dashed #4598d2;font-size: 8pt;background:#ffffff }
+#part_list_query_keyword a { display: block; float: left; margin: 2px; padding: 0 2px; color: #4598d2; cursor: pointer}
+#part_list_query_keyword a:hover { display: block; float: left; margin: 2px; padding: 0 2px; background: #4598d2; color: #ffffff;}
+#part_list_query_keyword .selected{ display: block; float: left; margin: 2px; padding: 0 2px; background: #4598d2; color: #ffffff; }
+#part_list_query_keyword .unselected{ display: block; float: left; margin: 2px; padding: 0 2px; color: #4598d2; cursor: pointer }
+*/
+
+.sort_by_area .selected{  margin: 2px; padding: 0 2px; background: #4598d2; color: #ffffff; line-height:20px; }
+.sort_by_area .unselected{  margin: 2px; padding: 0 2px; color: #4598d2; cursor: pointer }
+
+
+.comment	{ font-weight: bold;}
+
+
+
+/* 		page loading.... */
+#page_loading { background:#FFCC66; padding:5px 30px; color:#996600; border: 1px solid #993300}
+
+
+
+/*		ebay float win 10 		*/
+
+
+
+
+
+
+/*		default.asp  system part name area 		*/
+.system_part_name_area {padding:4px; padding-bottom:4px; line-height:12px;height:90px;*height: 80px; text-align:left; vertical-align:top; }
+
+
+
+/*		arrow 	movebar		*/
+.movebar_left{background: transparent url(/soft_img/app/movebar.jpg) no-repeat scroll  0px -25px; text-decoration:underline;}
+.movebar_left:hover{background: transparent url(/soft_img/app/movebar.jpg) no-repeat scroll  0px -151px; text-decoration:underline;}
+.movebar_right{background: transparent url(/soft_img/app/movebar.jpg) no-repeat scroll  -15px -25px; text-decoration:underline;} 
+.movebar_right:hover{background: transparent url(/soft_img/app/movebar.jpg) no-repeat scroll  -15px -151px; text-decoration:underline;} 
+
+
+/*		system customize		*/
+.color2 { color: #ff9900;}
+plane table{float:left;}
+.title1 {border: 1px solid #ffffff;float:left; border-bottom: 0px solid red; background-image:url(/soft_img/app/customer_bottom_03.gif); height:100%; width: 150px;text-weight: blod; color:white;text-align:center;}
+.title2 {border: 1px solid #ffffff;float:left;border-bottom: 0px solid red; background:#FAE6D0; height:100%; width: 150px;text-weight: blod; text-align:center;}
+
+ #currentprice_1{font-size:8pt;}
+ #currentprice_2{font-size:8pt;}
+ #currentprice_4{font-size:8pt;}
+ 
+ 
+ 
+ /*			nav		*/
+
+ div.page_main_nav{	background: red;
+		 background:#327AB8; 
+		 border:0px solid #ffffff; 
+		 line-height:27px;
+		 height: 27px;
+		 overflow:hidden;
+		 
+		 }
+span.nav1{ 
+		 float:left; 
+		 display:block; 
+		 background:url(/soft_img/app/arrow_8.gif) no-repeat 2px 55%;
+		 padding-left: 18px; 
+		 font-weight:bold;
+		 color:#ffffff;
+		 line-height:27px;
+		 height:27px;
+		 margin-left: 5px}
+span.nav1 a { cursor:pointer; color:#ffffff;}
+span.nav1 a:visited { cursor:pointer; color:#ffffff;text-decoration:none;}
+span.nav1 a:hover {  cursor:pointer; color:#ff6600;text-decoration:none;}
+span.nav1 a:active { cursor:pointer; color:#ffffff;}
+ 
+ 
+ 
+/*		info nav		*/
+.info_nav { cursor:pointer; border-right:#CDE3F2 1px solid;background:#CDE3F2}
+.info_nav:hover{cursor:pointer; border-right:#CDE3F2 1px solid;background:#f2f2f2;font-weight:bold}
+.info_nav2 { cursor:pointer; border-right:#CDE3F2 1px solid;}
+.info_nav2:hover{cursor:pointer; border-right:#CDE3F2 1px solid;background:#f2f2f2;font-weight:bold}
+
+
+.btn_table:hover{ cursor:pointer;}
+.btn_table a{ font-weight:bold;}
+
+
+@media   Print           
+  {
+  .no_print   {   
+  DISPLAY:   none   
+  }  
+  }
+  
+ 
+ #page_top_flash_area{ overflow:hidden; width: 960px;}
+ .order_price_comment {
+		 padding-right:10px; 
+		 background: #ffffff; 
+		 text-align:right; 
+		 font-weight:bold
+ }
+ 
+ 
+ 
+.title {FONT: 14px/17px "tahoma";
+        COLOR: #006699;
+        FONT-WEIGHT: bold}
+
+.text_red2_12 {FONT: 12px/17px "tahoma";  COLOR: #C91515; letter-spacing:0px }		
+
+.text_red2_11 {FONT: 11px/17px "tahoma";  COLOR: #C91515; letter-spacing:0px }	
+		
+.contact_title {FONT: 12px/17px "tahoma"; COLOR: #006699; FONT-WEIGHT: bold}		
+		
+.text_blue_13 {FONT: 13px/18px "tahoma"; COLOR: #006699; letter-spacing:0px}		
+
+.text_blue2_12 {FONT: 12px/18px "tahoma"; COLOR: #006699; letter-spacing:0px}		
+
+.text_blue_12 {FONT: 13px/14px "tahoma"; COLOR: #4E6B88; letter-spacing:0px}	
+
+.text_blue_11 {FONT: 11px/16px "tahoma"; COLOR: #006699; letter-spacing:0px}	
+
+.text_red_12b {FONT: 12px/14px "tahoma"; COLOR: #EF5412; FONT-WEIGHT: bold; letter-spacing:0px}	
+
+.text_red_12 {FONT: 13px/14px "tahoma"; COLOR: #5E3936; letter-spacing:0px}	
+
+.text_black {FONT: 12px/16Px "tahoma","tahoma"; COLOR: #444444}
+
+.text_green_10 {FONT: 10px/14Px "tahoma"; COLOR: #278B54; letter-spacing:0px}
+
+.text_green_11 {FONT: 11px/14Px "tahoma"; COLOR: #278B54; letter-spacing:0px}
+
+.text_green_12 {FONT: 12px/14Px "tahoma"; COLOR: #278B54; letter-spacing:0px}
+
+.text_white_12 {FONT: 11px/16Px "tahoma","tahoma"; COLOR: #ffffff; letter-spacing:0px}
+
+.text_white_11 {FONT: 11px/16Px "tahoma","tahoma"; COLOR: #ffffff; letter-spacing:0px}
+
+.text_hui_10 {FONT: 10px/16Px "tahoma"; COLOR: #4C4C4C; letter-spacing:0px}
+
+.text_hui_11 {FONT: 11px/16Px "tahoma"; COLOR: #4C4C4C; letter-spacing:0px}
+
+.padding_left_5 {padding-left:5px;}
+
+.text_hui2_11 {FONT: 11px/16Px "tahoma"; COLOR: #888888; letter-spacing:0px}
+
+.text_hui_12 {FONT: 12px/16Px "tahoma"; COLOR: #4C4C4C; letter-spacing:0px}
+
+.text_hui2_12 {FONT: 12px/16Px "tahoma"; COLOR: #888888; letter-spacing:0px}
+
+.text_white_10 {FONT: 10px/16Px "tahoma","tahoma"; COLOR: #ffffff; letter-spacing:0px}
+
+.text_small {FONT: 11px/16Px; COLOR: #4C4C4C; letter-spacing:0px}
+
+.text_orange_13 {FONT: 13px/16Px "tahoma"; COLOR: #ff6600; letter-spacing:0px}
+
+.text_orange_11 {FONT: 11px/16Px "tahoma"; COLOR: #ff6600; letter-spacing:0px}
+
+.text_english {FONT: 13px/16Px "tahoma","tahoma"; letter-spacing:0px; COLOR: #88919F}
+
+.text_white_small {FONT: 11px/16Px "tahoma","tahoma"; COLOR: #ffffff}
+
+.white_shadow_13b {FONT: 13px/16Px "tahoma"; letter-spacing:0px;  COLOR: #ffffff;  filter: DropShadow(OffX=1, OffY=1, color:#B94A1C); font-weight: bold}
+
+.white_shadow_14b {FONT: 14px/16Px "tahoma"; letter-spacing:0px;  COLOR: #ffffff;  filter: DropShadow(OffX=1, OffY=1, color:#B94A1C); font-weight: bold}
+
+.white_shadow_11 {FONT: 11px/16Px "tahoma"; letter-spacing:0px;  COLOR: #ffffff;  filter: DropShadow(OffX=1, OffY=1, color:#B94A1C)}
+
+.shadow {FONT: 12px/16Px "tahoma","tahoma"; FILTER: DropShadow(OffX=1, OffY=1, color:#333333); COLOR: #ffffff}
+
+.daohang {FONT: 12px/16Px "tahoma"; letter-spacing:2px; COLOR: #5D5D5D}
+
+
+.noULStyle li {margin-left:2em; display:list-item; list-style-type:disc ; margin-bottom: 10px}
+.noULStyle ul{margin-left:1em; display:block}
+.noULStyle ul li {margin-left:2em; display:list-item; list-style-type:disc }
+.noULStyle ul li ul li {margin-left:2em; display:list-item; list-style-type:circle }
+
+.noULStyle ol{margin-left:1em; display:block}
+.noULStyle ol li {margin-left:2em; display:list-item; list-style-type:decimal }
+.noULStyle ol li ol li {margin-left:2em; display:list-item; list-style-type:circle }
+
+
+.part_detail_desc td { font-family:Verdana, Arial, Helvetica, sans-serif; font-size: 8.5pt;}

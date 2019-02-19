@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/UGT-CR900/11461.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/11461_list_1.jpg" alt="VANTEC All-In-1 USB 2.0 Internal Card Reader" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/UGT-CR900/11461.html'>
+                                       VANTEC All-In-1 USB 2.0 Internal Card Reader
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/UGT-CR900/11461.html'><label class="price">Price: $24.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer//8309.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/8309_list_1.jpg" alt="1.44MB Floppy Drive" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer//8309.html'>
+                                       1.44MB Floppy Drive
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer//8309.html'><label class="price">Price: $12.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer//8306.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/8306_list_1.jpg" alt="NULL" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer//8306.html'>
+                                       NULL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer//8306.html'><label class="price">Price: $-0.01</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/MM-REA-ZI-USB2111E/8081.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/8081_list_1.jpg" alt="14 in 1 Zio Card Reader Zio(External)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/MM-REA-ZI-USB2111E/8081.html'>
+                                       14 in 1 Zio Card Reader Zio(External)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/MM-REA-ZI-USB2111E/8081.html'><label class="price">Price: $20.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer//7308.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/7308_list_1.jpg" alt="7 in 1 Card Reader with Floppy Drive Combo" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer//7308.html'>
+                                       7 in 1 Card Reader with Floppy Drive Combo
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer//7308.html'><label class="price">Price: $37.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

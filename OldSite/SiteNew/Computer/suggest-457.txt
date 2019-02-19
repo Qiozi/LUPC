@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDCZ60-128G-B35S/34117.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34117_list_1.jpg" alt="SanDisk 128GB Cruzer Glide USB 2.0 Flash Drive SDCZ60-128G-B35S" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDCZ60-128G-B35S/34117.html'>
+                                       SanDisk 128GB Cruzer Glide USB 2.0 Flash Drive SDCZ60-128G-B35S
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SDCZ60-128G-B35S/34117.html'><label class="price">Price: $48.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/USBFD2-64GB-AX/34111.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34110_list_1.jpg" alt="AXIOM 64GB USB 2.0 FLASH DRIVE FOR USBFD2/64GB" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/USBFD2-64GB-AX/34111.html'>
+                                       AXIOM 64GB USB 2.0 FLASH DRIVE FOR USBFD2/64GB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/USBFD2-64GB-AX/34111.html'><label class="price">Price: $21.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDCZ48-016G-C46/33591.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33591_list_1.jpg" alt="SanDisk 16GB Ultra USB 3.0 Flash Drive SDCZ48-016G-C46" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SDCZ48-016G-C46/33591.html'>
+                                       SanDisk 16GB Ultra USB 3.0 Flash Drive SDCZ48-016G-C46
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SDCZ48-016G-C46/33591.html'><label class="price">Price: $17.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/HXS3-256GB/33485.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33485_list_1.jpg" alt="Kingston 256GB HX Savage USB 3.1/3.0 350MB/s Read, 250MB/s Write" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/HXS3-256GB/33485.html'>
+                                       Kingston 256GB HX Savage USB 3.1/3.0 350MB/s Read, 250MB/s Write
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/HXS3-256GB/33485.html'><label class="price">Price: $181.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/DTDUO3C-32GB/33484.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33484_list_1.jpg" alt="Kingston 32GB DT MICRODUO 3C, USB 3.0/3.1" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/DTDUO3C-32GB/33484.html'>
+                                       Kingston 32GB DT MICRODUO 3C, USB 3.0/3.1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/DTDUO3C-32GB/33484.html'><label class="price">Price: $18.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

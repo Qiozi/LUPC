@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /site/shopping_cart_pre.asp
+Disallow: /site/computer_system_to_cart_next.asp
+Disallow: /site/computer_system_to_cart.asp
+Disallow: /AccountCharge3.aspx
+Disallow: /site/system_view.asp
+Disallow: /site/inc_system_view.asp
+Disallow: /site/
+Disallow: /lucomputers.com/Login.aspx
+Disallow: /lucomputers.com/Register.aspx
+
+Allow: /computer/
+Allow: /computers/
+Allow: /brand/
+
+Sitemap: https://www.lucomputers.com/computer/sitemap.xml

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="[page-meta-desc]" />
+    <meta name="keywords" content="LU Computer & Part Specifications & Computer Specifications & [page-meta-keywords]" />
+    <meta name="rebots" content="all">
+    <title>[page-title]- LU Computer </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.9.1.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/luNew.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script src="/js/jquery.lazyload.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/js/jquery.validate.js" type="text/javascript"></script>
+    <style>
+        .list-group-item > .badge
+        {
+            background: white;
+            color: #333;
+        }
+        .list-group-item > .price
+        {
+            color: #FF5D13;
+        }
+        .priceArea li
+        {
+            padding: 3px 10px 3px 10px;
+        }
+        
+        .affix
+        {
+            position: fixed;
+            top: 50px;
+        }
+        
+        .dropdown-menu li
+        {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" id="form100">
+    <div class="aspNetHidden">
+    </div>
+    <script language="javascript">
+
+        function searchGo(key) {
+            window.location.href = '/Search.aspx?cate=' + $('#SearchCateCurrType').val() + '&key=' + key;
+
+            return false;
+        }
+
+        function searchCategoryBtnGroup(the) {
+            the.parent().find('.btn-danger').eq(0).removeClass("btn-danger").addClass("btn-default");
+            the.addClass("btn-danger");
+
+            $('#SearchCateCurrType').val(the.attr('v'));
+        }
+    </script>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">
+                        <span class='glyphicon glyphicon-search'></span>Search</h4>
+                </div>
+                <div class="modal-body">
+                    <div style='margin-bottom: 1em;'>
+                        <div class="input-group-btn">
+                            <input type="hidden" id="SearchCateCurrType" value="1" />
+                            <button type="button" class="btn btn-default" v="2" onclick="searchCategoryBtnGroup($(this));">
+                                Desktop Computers</button>
+                            <button type="button" class="btn btn-default" v="3" onclick="searchCategoryBtnGroup($(this));">
+                                Mobile Computers</button>
+                            <button type="button" class="btn btn-danger" v="1" onclick="searchCategoryBtnGroup($(this));">
+                                Part & Peripherals</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <!-- /btn-group -->
+                        <input type="text" class="form-control" maxlength="18" placeholder="MFP#/Keyword/LUSku/eBay itemid/Quote Number"
+                            onkeydown="if(event.keyCode==13){searchGo($(this).val());return false;}">
+                        <span class="input-group-btn"><a class="btn btn-default" id="searchBtn" onclick="searchGo($(this).parent().prev().val());return false;">
+                            Go!</a> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="navbar navbar-inverse bs-docs-nav navbar-fixed-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand" style=" margin-top: -15px;"><img src="/images/logo1.png"/></a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav" id="page-top-country">        
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a class="btn " data-toggle="modal" data-target=".bs-example-modal-sm"><span class='glyphicon glyphicon-search'></span> Search</a>
+        </li>
+        <li>
+            <a class="btn " href="/Login.aspx"><span class="glyphicon glyphicon-user"></span> Login</a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div>
+        <div class="container" style="background: white;">
+            <div id="topKeyArea" style="z-index: 100;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-bottom: 0px;">
+                        <ul class="list-inline">
+                            <li>
+                                <div>
+                                    <a href="/Default.aspx"><span class="glyphicon glyphicon-home"></span>Home <span
+                                        class="glyphicon glyphicon-menu-right"></span></a><a id="dLabel" data-target="#"
+                                            href="/default.aspx">[part-parent-category-name] <span class="glyphicon glyphicon-menu-right">
+                                            </span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a id="A1" data-target="#" href="/list_part.aspx?cid=356" data-toggle="dropdown"
+                                        aria-haspopup="true" role="button" aria-expanded="false">[part-category-curr] <span
+                                            class="caret"></span><span class="glyphicon glyphicon-menu-right"></span>
+                                    </a>SKU: [part-sku]
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        [part-category-list]
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="page-header">
+                <h3>
+                    ASUS MeMO Pad ME302C-A1-WH 10.1" Atom Z2560 2GB RAM 16G Flash android 4.2</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center" style="margin: 5px; border: 1px solid #ccc;">
+                        <img src="[part-img-logo]" width="420" border='1' />
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div style="margin: 5px; border: 1px solid #fff;">
+                        <ul class="list-group">
+                            <li class="list-group-item">Manufacturer Part#<span class="badge">[part-mfp#]</span></li>
+                            <li class="list-group-item">Manufacturer<span class="badge">[part-Manufacturer]</span></li>
+                            <li class="list-group-item">LUC SKU number <span class="badge">[part-sku]</span></li>
+                        </ul>
+                        <div class="priceArea">
+                            <ul class="list-group" id="ltPriceList">
+                                <img src="/images/loaderc.gif" />
+                            </ul>
+                            <p>
+                                This item is available within 24-48 hours. If you place an order before 12 AM we
+                                may ship your order the same day (Mon-Fri only).
+                            </p>
+                            <p>
+                                SPECIAL CASH PRICE is promotional offer, valid on pay methods of cash,Interact,bank
+                                transfer,money order, etc. Cash price does not waive sales taxes if applicable.
+                            </p>
+                            <a class="btn btn-default" data-toggle="modal" data-target="#myQuestionModal"><span
+                                class="glyphicon glyphicon-question-sign"></span>Ask a Question</a> <a class="btn btn-default btn-danger"
+                                    id="btnToCart" href="/ShoppingCartTo.aspx?sku=26572"><span class="glyphicon glyphicon-shopping-cart">
+                                    </span>Add to Shopping Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="well" style="margin: 1em auto; text-align: center;">
+                <div class="btn-group text-center" id="partCateAllQtyArea">
+                </div>
+            </div>
+            <iframe name="iframePartSpecification" id="iframePartSpecification" src="/detail_part_specification.aspx?sku=[part-sku]"
+                style="width: 0px; height: 0px;"></iframe>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        id="myQuestionModal" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="H1">
+                        <span class="glyphicon glyphicon-question-sign"></span>Question</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3">Your Email: (required)</span>
+                            <input type="text" id="questEmail" class="form-control" placeholder="@" aria-describedby="sizing-addon3">
+                        </div>
+                    </p>
+                    <p>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="Span1">Subject : (SKU:[part-sku])<input type="hidden"
+                                name="sku" value="[part-sku]" /></span>
+                            <input type="text" id="questSubject" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+                    </p>
+                    <p>
+                        <span class="input-group-addon text-left">Message Body - Remaining characters:</span>
+                        <textarea rows="4" cols="70" style="width: 100%" id="questBody"></textarea>
+                    </p>
+                    <p class="text-center">
+                        <input type="button" class="btn btn-default" value="Submit" onclick="saveQuestion();" />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script language="javascript">
+        $(document).ready(function () {
+
+            $('#topKeyArea').affix({
+                offset: {
+                    top: 50,
+                    bottom: function () {
+                        //alert((this.bottom = $('#page-bottom').outerHeight(true)));
+                        return (this.bottom = $('#page-bottom').outerHeight(true));
+                    }
+                }
+            });
+            $('#topKeyArea').find('table').eq(0)
+        .css({ width: $('.container').outerWidth() - 64 });
+
+            $.get("/cmds/prod.aspx", { cmd: 'getPartCateAllQty', cid: '[part-cid]', sku: '[part-sku]' }, function (data) {
+                $('#partCateAllQtyArea').html(data);
+            });
+
+            $.get("/cmds/prod.aspx", { cmd: 'getPartPriceArea', cid: '[part-cid]', sku: '[part-sku]' }, function (data) {
+                $('#ltPriceList').html(data);
+            });
+        });
+
+        function saveQuestion() {
+            $.ajax({
+                type: "post",
+                url: "/cmds/SaveQuestion.aspx",
+                data: { sku: '[part-sku]', username: $('#questEmail').val(), subject: $('#questSubject').val(), questBody: $('#questBody').val() },
+                error: function (r, s, t) { alert(r); },
+                success: function (msg, s) {
+                    if (s == "success") {
+                        alert(msg);
+                        $('#questEmail').val('');
+                        $('#questSubject').val('');
+                        $('#questBody').val('');
+                        $('#myQuestionModal').modal('hide')
+                    }
+                }
+            });
+
+        }
+    </script>
+    </form>
+    <div style="background: #333333; height: 200px" id="page-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xm-0 col-md-2">
+                </div>
+                <div class="col-xm-0 col-md-2" style="border-right: 1px dashed #999; height: 120px;">
+                    <ul>
+                        <li><a href="/bAboutUs.aspx">
+                            <h5>
+                                About US</h5>
+                        </a></li>
+                        <li><a href="/bContactUs.aspx">
+                            <h5>
+                                Contact Us</h5>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-xm-0 col-md-2" style="border-right: 1px dashed #999; height: 120px;">
+                    <ul>
+                        <li><a href="/bGeneralFaq.aspx">
+                            <h5>
+                                General FAQ</h5>
+                        </a></li>
+                        <li><a href="/bWarrantyFaq.aspx">
+                            <h5>
+                                Warranty FAQ</h5>
+                        </a></li>
+                        <li><a href="/bSupportCenter.aspx">
+                            <h5>
+                                Support Center</h5>
+                        </a></li>
+                        <li><a href="/bSupportFaq.aspx">
+                            <h5>
+                                Support FAQ</h5>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-xm-0 col-md-2" style="border-right: 1px dashed #999; height: 120px;">
+                    <ul>
+                        <li><a href="/bManufacturers.aspx">
+                            <h5>
+                                Manufacturers</h5>
+                        </a></li>
+                        <li><a href="/bSupportLinks.aspx">
+                            <h5>
+                                Support Links</h5>
+                        </a></li>
+                        <li><a href="/bContacts.aspx">
+                            <h5>
+                                Contacts</h5>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-xm-0 col-md-3">
+                    <ul>
+                        <li><a href="/bCompanyPolicy.aspx">
+                            <h5>
+                                Company Policy</h5>
+                        </a></li>
+                        <li><a href="/bPaymentMethods.aspx">
+                            <h5>
+                                Payment Methods</h5>
+                        </a></li>
+                        <li><a href="/bPrivacySecurity.aspx">
+                            <h5>
+                                Privacy Security</h5>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-xm-12 col-md-1">
+                </div>
+            </div>
+            <hr size="1" style="border-top: 1px solid #555;" />
+            <center style="color: #666;">
+                Copyrights © 2004-2015. Lu Computers. All rights reserved.</center>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#page-top-country').load("/cmds/TopCountry.aspx");
+        });
+    </script>
+</body>
+</html>

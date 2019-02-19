@@ -1,0 +1,101 @@
+﻿<div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/31601.jpg?imageView/3/w/150/h/150" alt="ASUS E200HA-US01-BL Notebook Atom x5-Z8300 2GB RAM 32GB SD Win10 11.6"" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=31601'>
+                                       ASUS E200HA-US01-BL Notebook Atom x5-Z8300 2GB RAM 32GB SD Win10 11.6"
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $294.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/28578.jpg?imageView/3/w/150/h/150" alt="HP Chromebook 11 G4, Celeron N2840, 4GB RAM, 11.6" Chrome OS P0B77UT#ABL" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30407'>
+                                       HP Chromebook 11 G4, Celeron N2840, 4GB RAM, 11.6" Chrome OS P0B77UT#ABL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $317.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/31016.jpg?imageView/3/w/150/h/150" alt="HP ProBook 470 G3 Notebook i5-6200U 8GB RAM 500GB HDD 17.3" Win7 T6D89UT#ABA" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=31016'>
+                                       HP ProBook 470 G3 Notebook i5-6200U 8GB RAM 500GB HDD 17.3" Win7 T6D89UT#ABA
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $946.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/30386.jpg?imageView/3/w/150/h/150" alt="Acer Aspire E5-473G-56XS Notebook i5-5200U 8GB RAM 1TB NV GT940 W10 NX.G0HAA.001" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=30386'>
+                                       Acer Aspire E5-473G-56XS Notebook i5-5200U 8GB RAM 1TB NV GT940 W10 NX.G0HAA.001
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $751.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="210">
+                            <tr>
+                                <td>
+                                    <img src="https://o9ozc36tl.qnssl.com/31016.jpg?imageView/3/w/150/h/150" alt="HP ProBook 470 G3 Notebook i5-6200U 8GB RAM 500GB HDD 17.3" Win7 T6D89UT#ABA" onerror='https://o9ozc36tl.qnssl.com/99999.jpg?imageView/3/w/150/h/150' /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/detail_part.aspx?sku=31016'>
+                                       HP ProBook 470 G3 Notebook i5-6200U 8GB RAM 500GB HDD 17.3" Win7 T6D89UT#ABA
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="price">Price: $946.99</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

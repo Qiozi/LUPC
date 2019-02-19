@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CC-9011105-WW/33955.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33955_list_1.jpg" alt="Corsair Carbide Series 270R Mid-Tower ATX Case" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CC-9011105-WW/33955.html'>
+                                       Corsair Carbide Series 270R Mid-Tower ATX Case
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CC-9011105-WW/33955.html'><label class="price">Price: $95.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/CC-9011081-WW/30950.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/30950_list_1.jpg" alt="Corsair Carbide Quiet 400C Inverse ATX Full Tower Case" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/CC-9011081-WW/30950.html'>
+                                       Corsair Carbide Quiet 400C Inverse ATX Full Tower Case
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/CC-9011081-WW/30950.html'><label class="price">Price: $143.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z1/29089.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/29089_list_1.jpg" alt="Zalman Case Z1 Mid Tower 7xExpansion Slots 2/4/(1) Fan USB 3.0 Black Retail" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z1/29089.html'>
+                                       Zalman Case Z1 Mid Tower 7xExpansion Slots 2/4/(1) Fan USB 3.0 Black Retail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/Z1/29089.html'><label class="price">Price: $49.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/NSE-200-KKN1/25348.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25348_list_1.jpg" alt="Cooler Master N200 Case M.ATX (MIDNIGHT BLACK) NSE-200-KKN1" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/NSE-200-KKN1/25348.html'>
+                                       Cooler Master N200 Case M.ATX (MIDNIGHT BLACK) NSE-200-KKN1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/NSE-200-KKN1/25348.html'><label class="price">Price: $67.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/RC-K280-KKN1/25344.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25344_list_1.jpg" alt="Cooler Master K280 MID TOWER Case (BLACK) RC-K280-KKN1" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/RC-K280-KKN1/25344.html'>
+                                       Cooler Master K280 MID TOWER Case (BLACK) RC-K280-KKN1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/RC-K280-KKN1/25344.html'><label class="price">Price: $59.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

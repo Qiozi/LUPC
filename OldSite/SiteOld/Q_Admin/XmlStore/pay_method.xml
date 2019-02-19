@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data><row><pay_method_serial_no>14</pay_method_serial_no><pay_method_name>Credit Card (Visa and Master Card only)</pay_method_name></row>
+<row><pay_method_serial_no>15</pay_method_serial_no><pay_method_name>Paypal</pay_method_name></row>
+<row><pay_method_serial_no>25</pay_method_serial_no><pay_method_name>Paypal(Credit Card Direct Payment)</pay_method_name></row>
+<row><pay_method_serial_no>16</pay_method_serial_no><pay_method_name>Email Transfer (Canada Only)</pay_method_name></row>
+<row><pay_method_serial_no>17</pay_method_serial_no><pay_method_name>Bank Transfer</pay_method_name></row>
+<row><pay_method_serial_no>18</pay_method_serial_no><pay_method_name>Cash Deposit (Canada Only)</pay_method_name></row>
+<row><pay_method_serial_no>19</pay_method_serial_no><pay_method_name>Money Order</pay_method_name></row>
+<row><pay_method_serial_no>20</pay_method_serial_no><pay_method_name>Personal Check / Company Check</pay_method_name></row>
+<row><pay_method_serial_no>21</pay_method_serial_no><pay_method_name>Local Pick Up</pay_method_name></row>
+<row><pay_method_serial_no>22</pay_method_serial_no><pay_method_name>Local Pick Up -- Cash</pay_method_name></row>
+<row><pay_method_serial_no>23</pay_method_serial_no><pay_method_name>Local Pick Up -- Debit Card</pay_method_name></row>
+<row><pay_method_serial_no>24</pay_method_serial_no><pay_method_name>Local Pick Up -- Credit Card</pay_method_name></row>
+</data>

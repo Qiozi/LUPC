@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nicklu2ModelStoreContainer" CdmEntityContainer="nicklu2Entities">
+    <EntitySetMapping Name="tb_product_category">
+      <EntityTypeMapping TypeName="nicklu2Model.tb_product_category">
+        <MappingFragment StoreEntitySet="tb_product_category">
+          <ScalarProperty Name="menu_child_serial_no" ColumnName="menu_child_serial_no" />
+          <ScalarProperty Name="menu_child_name" ColumnName="menu_child_name" />
+          <ScalarProperty Name="menu_child_href" ColumnName="menu_child_href" />
+          <ScalarProperty Name="menu_is_exist_sub" ColumnName="menu_is_exist_sub" />
+          <ScalarProperty Name="menu_parent_serial_no" ColumnName="menu_parent_serial_no" />
+          <ScalarProperty Name="menu_pre_serial_no" ColumnName="menu_pre_serial_no" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="menu_child_order" ColumnName="menu_child_order" />
+          <ScalarProperty Name="old_db_id" ColumnName="old_db_id" />
+          <ScalarProperty Name="menu_child_name_f" ColumnName="menu_child_name_f" />
+          <ScalarProperty Name="page_category" ColumnName="page_category" />
+          <ScalarProperty Name="is_noebook" ColumnName="is_noebook" />
+          <ScalarProperty Name="export" ColumnName="export" />
+          <ScalarProperty Name="is_display_stock" ColumnName="is_display_stock" />
+          <ScalarProperty Name="is_virtual" ColumnName="is_virtual" />
+          <ScalarProperty Name="view_count" ColumnName="view_count" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="keywords_cates" ColumnName="keywords_cates" />
+          <ScalarProperty Name="is_view_stock_filter" ColumnName="is_view_stock_filter" />
+          <ScalarProperty Name="is_view_menu" ColumnName="is_view_menu" />
+          <ScalarProperty Name="update_price_date" ColumnName="update_price_date" />
+          <ScalarProperty Name="valid" ColumnName="valid" />
+          <ScalarProperty Name="eBayCategoryID" ColumnName="eBayCategoryID" />
+          <ScalarProperty Name="ebayStoreCategoryID_1" ColumnName="ebayStoreCategoryID_1" />
+          <ScalarProperty Name="ebayStoreCategoryID_2" ColumnName="ebayStoreCategoryID_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

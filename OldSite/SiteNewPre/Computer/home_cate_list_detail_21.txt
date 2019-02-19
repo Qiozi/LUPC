@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Thermaltake-Case-CA-3B2-50M1NU-00-Versa-H21-Mid-Tower-3-0-3-USB-Audio-Retail.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31739.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Thermaltake Case CA-3B2-50M1NU-00 Versa H21 Mid Tower 3 0 (3) USB Audio Retail</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31739'>
+										<del>...</del>
+										<span class="price itemprice" sku='31739'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Thermaltake-Case-CA-1D4-00S1NN-00-M-ATX-Cube-Versa-H15-1-0-3-USB3-0-Audio-BK.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31738.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Thermaltake Case CA-1D4-00S1NN-00 M-ATX Cube Versa H15 1 0 (3) USB3.0 Audio BK</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31738'>
+										<del>...</del>
+										<span class="price itemprice" sku='31738'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Thermaltake-Case-CA-3B2-50M1WU-00-Versa-H21-Window-Mid-Tower-3-0-3-USB-500W.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31737.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Thermaltake Case CA-3B2-50M1WU-00 Versa H21 Window Mid Tower 3 0 (3) USB 500W</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31737'>
+										<del>...</del>
+										<span class="price itemprice" sku='31737'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Thermaltake-Case-CA-1E7-00M1WN-00-Mid-Tower-Core-P5-1x3-5-2-5inch-USB3-0-MITX-ATX-MATX-Retail.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31736.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Thermaltake Case CA-1E7-00M1WN-00 Mid-Tower Core P5 1x3.5/2.5inch USB3.0 MITX/ATX/MATX Retail</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31736'>
+										<del>...</del>
+										<span class="price itemprice" sku='31736'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

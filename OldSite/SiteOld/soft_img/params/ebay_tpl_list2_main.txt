@@ -1,0 +1,77 @@
+﻿<table id="__" width="775" align="center" border="0" cellpadding="0" cellspacing="0">
+         <tr>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_01.gif" width="6" height="6"></td>
+            <td background="http://www.lucomputers.com/ebay/images/in_box7_02.gif">
+			<img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_02.gif" width="1" height="6"></td>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_03.gif" width="6" height="6"></td>
+          </tr>
+          <tr>
+            <td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_04.gif">
+			<img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_04.gif" width="6" height="1"></td>
+            <td style="padding: 15px 5px;" valign="top" bgcolor="#ffffff"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+              <tbody>
+<tr>
+<td style="width: 120px; padding-left: 35px; font-weight: 700; font-size: 13px; color: rgb(0, 102, 153); line-height: 16px; font-family: Verdana; letter-spacing: 0px;" valign="top" bgcolor="#ffffff">
+<font color="#a53411">Notes</font></td>
+<td style="font-size: 12px; color: rgb(85, 85, 85); line-height: 16px; font-family: Verdana; letter-spacing: 0px;" bgcolor="#ffffff">
+</td><td bgcolor="#ffffff">
+<a href="#13964">
+</a></td></tr>
+{0}
+</table>
+
+<p align="center">
+  <font color="#a53411" face="Verdana" size="2">
+  <b><a href="#sList" style="text-decoration: none;"><font color="#006699">
+	Specifics&nbsp;&nbsp;
+	</font></a></b><a href="#sList" style="text-decoration: none;">
+	<font color="#006699">|</font></a></font><b><font color="#006699" face="Verdana" size="2">&nbsp;&nbsp; </font><font color="#a53411" face="Verdana" size="2">
+
+	<a href="#promo" style="text-decoration: none;"><font color="#006699">Bundled 
+	Items&nbsp;&nbsp;
+	</font></a></font></b><font color="#a53411" face="Verdana" size="2">
+	<a href="#promo" style="text-decoration: none;"><font color="#006699">|</font></a><b><font color="#006699" face="Verdana" size="2">&nbsp;&nbsp;
+	<a style="text-decoration: none;" target="_blank" href="http://stores.shop.ebay.ca/LU-Computers-Inc">
+	<font color="#006699">Store </font></a></font><font color="#006699">&nbsp;</font><a style="text-decoration: none;" href="http://stores.shop.ebay.ca/LU-Computers-Inc"><font color="#006699">
+	</font></a></b>
+	<a style="text-decoration: none;" href="http://stores.shop.ebay.ca/LU-Computers-Inc">
+
+	<font color="#006699">|</font></a><b><font color="#006699" face="Verdana" size="2">&nbsp;&nbsp; </font>
+	<a href="#Terms" style="text-decoration: none;"><font color="#006699">
+	Shipping&nbsp;&nbsp;
+	</font></a></b><font color="#006699">
+	<a href="#Terms" style="text-decoration: none;">|<b> <font color="#006699">&nbsp; 
+	Payment&nbsp;&nbsp;
+
+	</font></b><font color="#006699">|</font><b><font color="#006699">&nbsp;&nbsp; 
+	Tax&nbsp;
+	</font></b></a></font>
+  <b><font color="#006699" face="Verdana" size="2"> <br>
+	</font><a href="#Terms" style="text-decoration: none;"><font color="#006699">
+	Return Policy&nbsp;&nbsp;
+	</font></a></b><a href="#Terms" style="text-decoration: none;">
+
+	<font color="#006699">|<b>&nbsp;&nbsp; Warranty&nbsp;&nbsp; </b></font></a>
+	<a href="#me" style="text-decoration: none;"><font color="#006699">|<b>&nbsp;&nbsp; 
+	About Us&nbsp;&nbsp; </b>|</font></a><b><font color="#006699" face="Verdana" size="2">&nbsp;&nbsp; </font>
+	<a href="#contact" style="text-decoration: none;"><font color="#006699">
+	Contact Us&nbsp;
+
+	</font></a></b><a href="#contact" style="text-decoration: none;">
+	<font color="#006699">&nbsp;|</font></a><b><font color="#006699" face="Verdana" size="2">&nbsp;&nbsp; </font>
+	<a style="text-decoration: none;" target="_blank" href="http://feedback.ebay.ca/ws/eBayISAPI.dll?ViewFeedback2&amp;userid=dpowerseller&amp;&amp;sspagename=VIP:feedback&amp;ftab=FeedbackAsSeller">
+	<font color="#006699">Feedback</font></a></b></font></p>
+
+
+</td>
+            <td width="6" background="http://www.lucomputers.com/ebay/images/in_box7_06.gif">
+			<img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_06.gif" width="6" height="1"></td>
+          </tr>
+          <tr>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_07.gif" width="6" height="6"></td>
+            <td background="http://www.lucomputers.com/ebay/images/in_box7_08.gif">
+			<img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_08.gif" width="1" height="6"></td>
+            <td><img alt="" src="http://www.lucomputers.com/ebay/images/in_box7_09.gif" width="6" height="6"></td>
+          </tr>
+        </tbody></table>
+        

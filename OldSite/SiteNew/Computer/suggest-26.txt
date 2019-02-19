@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/3J2-00022/34185.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34185_list_1.jpg" alt="Microsoft Keyboard/Mouse Desktop 600 Combo 1 Pack Wired OEM Black Brown Box" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/3J2-00022/34185.html'>
+                                       Microsoft Keyboard/Mouse Desktop 600 Combo 1 Pack Wired OEM Black Brown Box
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/3J2-00022/34185.html'><label class="price">Price: $24.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/GKM681R/32316.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32316_list_1.jpg" alt="IOGEAR GKM681R Keyboard 2.4GHz Wireless Compact Keyboard with Optical Trackball" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/GKM681R/32316.html'>
+                                       IOGEAR GKM681R Keyboard 2.4GHz Wireless Compact Keyboard with Optical Trackball
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/GKM681R/32316.html'><label class="price">Price: $42.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/AKB-150EB/32307.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32307_list_1.jpg" alt="Adesso Tru-Form 150 - 3-Color Illuminated Ergonomic Keyboard AKB-150EB" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/AKB-150EB/32307.html'>
+                                       Adesso Tru-Form 150 - 3-Color Illuminated Ergonomic Keyboard AKB-150EB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/AKB-150EB/32307.html'><label class="price">Price: $69.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/AKB-132UB/32304.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32304_list_1.jpg" alt="ADESSO AKB-132UB Multimedia Desktop Keyboard (USB)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/AKB-132UB/32304.html'>
+                                       ADESSO AKB-132UB Multimedia Desktop Keyboard (USB)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/AKB-132UB/32304.html'><label class="price">Price: $17.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/920-007182/32286.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/32286_list_1.jpg" alt="Logitech Illuminated Living-Room Keyboard K830 920-007182" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/920-007182/32286.html'>
+                                       Logitech Illuminated Living-Room Keyboard K830 920-007182
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/920-007182/32286.html'><label class="price">Price: $90.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

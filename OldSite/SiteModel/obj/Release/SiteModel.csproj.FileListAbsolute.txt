@@ -1,0 +1,15 @@
+C:\Workspaces\LUComputer\Src\OldSite\SiteModel\bin\Release\SiteModel.dll
+C:\Workspaces\LUComputer\Src\OldSite\SiteModel\bin\Release\SiteModel.pdb
+C:\Workspaces\LUComputer\Src\OldSite\SiteModel\obj\Release\SiteModel.csprojResolveAssemblyReference.cache
+C:\Workspaces\LUComputer\Src\OldSite\SiteModel\obj\Release\SiteModel.dll
+C:\Workspaces\LUComputer\Src\OldSite\SiteModel\obj\Release\SiteModel.pdb
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteModel\bin\Release\SiteModel.dll
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteModel\bin\Release\SiteModel.pdb
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteModel\obj\Release\SiteModel.csprojResolveAssemblyReference.cache
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteModel\obj\Release\SiteModel.dll
+D:\Workspaces\LUComputer\LUComputer\Src\OldSite\SiteModel\obj\Release\SiteModel.pdb
+C:\Workspaces\LUComputer\OldSite\SiteModel\bin\Release\SiteModel.dll
+C:\Workspaces\LUComputer\OldSite\SiteModel\bin\Release\SiteModel.pdb
+C:\Workspaces\LUComputer\OldSite\SiteModel\obj\Release\SiteModel.csprojResolveAssemblyReference.cache
+C:\Workspaces\LUComputer\OldSite\SiteModel\obj\Release\SiteModel.dll
+C:\Workspaces\LUComputer\OldSite\SiteModel\obj\Release\SiteModel.pdb

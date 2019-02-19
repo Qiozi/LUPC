@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Philips-27-273V5LHSB-27-Monitor-27-LCD-LED-BACKLIGHT-1920X1080-VGA-HDMI.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28315.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Philips 27" 273V5LHSB/27 Monitor, 27 LCD LED BACKLIGHT 1920X1080 VGA HDMI</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=222196184368"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$297.97</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28315'>
+										<del>...</del>
+										<span class="price itemprice" sku='28315'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Philips-24-241B4LPYCB-27-Monitors-24-WIDE-LCD-LED-BACKLIGHT-SENSOR-1920X1080.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28313.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Philips 24" 241B4LPYCB/27 Monitors, 24 WIDE LCD LED BACKLIGHT SENSOR 1920X1080</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371691534813"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$298.21</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28313'>
+										<del>...</del>
+										<span class="price itemprice" sku='28313'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Philips-19-19S4LSB5-27-Monitor-LCD-MONITOR-19IN-LED-BACKLIT-SILVER.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28308.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Philips 19" 19S4LSB5/27 Monitor, LCD MONITOR 19IN LED BACKLIT SILVER</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371691534884"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$223.50</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28308'>
+										<del>...</del>
+										<span class="price itemprice" sku='28308'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/AOC-19-WIDE-18-5-IN-LCD-5MS-20M-1-1368x768-VGA-BLACK-EPEAT-SILVER.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/28303.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>AOC 19 WIDE (18.5 IN) LCD 5MS 20M:1 1368x768 VGA BLACK EPEAT SILVER</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=371240086771"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$128.23</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=28303'>
+										<del>...</del>
+										<span class="price itemprice" sku='28303'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

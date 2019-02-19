@@ -1,0 +1,186 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{CD39CDC8-661E-467F-A0AC-1AD6959CF1EA}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "AspNetSamples_Nvp"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "AspNetSamples_Nvp"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References/>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "APIError.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CallerService.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Constants.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Default.htm"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoCapture.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoCaptureReceipt.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoDirectPayment.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoDirectPaymentReceipt.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoExpressCheckoutPayment.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoReauthorization.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoReauthorizationReceipt.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoVoid.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DoVoidReceipt.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "GetExpressCheckoutDetails.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "GetTransactionDetails.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "global.asa"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MassPay.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MassPayReceipt.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "readme.ClassicAsp.rtf"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "README.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RefundReceipt.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RefundTransaction.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ReviewOrder.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "sdk.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SetExpressCheckout.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "TransactionDetails.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "TransactionResult.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "TransactionSearch.asp"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

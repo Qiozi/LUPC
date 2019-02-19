@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SMC1500/25061.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25061_list_1.jpg" alt="APC SMART-UPS C 1500VA 120V LCD S25061" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SMC1500/25061.html'>
+                                       APC SMART-UPS C 1500VA 120V LCD S25061
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SMC1500/25061.html'><label class="price">Price: $480.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SMC1000/25060.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25060_list_1.jpg" alt="APC SMART-UPS C 1000VA 120V LCD  S25060" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SMC1000/25060.html'>
+                                       APC SMART-UPS C 1000VA 120V LCD  S25060
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SMC1000/25060.html'><label class="price">Price: $392.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/RBC2/24676.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24676_list_1.jpg" alt="APC BATTERY FOR BK250/280/400 BP280/420/SUVS420/BK350/BK500 S24676" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/RBC2/24676.html'>
+                                       APC BATTERY FOR BK250/280/400 BP280/420/SUVS420/BK350/BK500 S24676
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/RBC2/24676.html'><label class="price">Price: $54.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/P8VT3/24674.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24674_list_1.jpg" alt="APC HOME/OFFICE 8 OUTLET SURGE ARREST BLACK W/TEL2 SPLITTER AND COAX 120V S24674" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/P8VT3/24674.html'>
+                                       APC HOME/OFFICE 8 OUTLET SURGE ARREST BLACK W/TEL2 SPLITTER AND COAX 120V S24674
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/P8VT3/24674.html'><label class="price">Price: $34.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/P11VNT3/24671.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/24671_list_1.jpg" alt="APC PERFORMANCE SURGEARREST 11 OUTLETS WITH TEL2/SPLITTER COAX AND ETHERNET " style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/P11VNT3/24671.html'>
+                                       APC PERFORMANCE SURGEARREST 11 OUTLETS WITH TEL2/SPLITTER COAX AND ETHERNET 
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/P11VNT3/24671.html'><label class="price">Price: $53.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

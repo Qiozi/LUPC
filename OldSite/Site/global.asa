@@ -1,0 +1,194 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+' ----------------------------------------------------------------------------------
+Sub Application_OnStart
+' ----------------------------------------------------------------------------------
+
+'Your MySQL database IP is 209.132.227.210 
+'Your MySQL database name is zeLuComputers   
+'Your MySQL database login id is zeStoreMaster 
+'Your MySQL database password is n3wv3rs10n 
+
+' ----------------------------------------------------------------------------------
+	Application("DBCONN")		= 	"Driver={MySQL ODBC 3.51 Driver};SERVER=localhost;DATABASE=nicklu2;UID=root;PWD=1234qwer;OPTION="& 1 + 2 + 8 + 32 + 2048 + 16384 & ";"
+	
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	application("window_product_skus") = "5226,5227,5228,5229,5230,5231,5232,5233,3148,244,3149,249,3150,3151,5398,7067,7068,7069,7070,7071"
+	
+
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+	application("white_image_name") = "999999"
+
+    Application("CURRENCY_CONVERTER") = CDBL(1.2)
+
+'	Application("GLOBAL_RATE_GST") = CDbl(0.05)
+'	Application("GLOBAL_RATE_PST") = CDbl(0.08)
+'	Application("GLOBAL_RATE_HST") = CDbl(0.13)
+
+
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	' take values as seen last in the database
+	Application("Ontario_ID")	=	8
+	Application("Canada_ID")	=	1
+
+'
+'	on error conn next
+		Dim conn, rsDisplay, strSQL
+'		Set conn = Server.CreateObject("ADODB.Connection") : conn.Open(Application("DBCONN"))
+'		Set rsDisplay = Server.CreateObject("ADODB.Recordset")
+'		strSQL = ""                 
+'		strSQL = strSQL & "	SELECT state.id as ontario_id, country.id as canada_id 		" & vbLf
+'		strSQL = strSQL & "	FROM state													" & vbLf
+'		strSQL = strSQL & "	LEFT JOIN country ON (state.country_id=country.id)			" & vbLf
+'		strSQL = strSQL & "	WHERE														" & vbLf
+'		strSQL = strSQL & "	state.name		LIKE '%ontario%' AND						" & vbLf
+'		strSQL = strSQL & "	country.name	LIKE '%canada%'								" & vbLf
+'		rsDisplay.ActiveConnection = conn : rsDisplay.Open strSQL
+'		if Not rsDisplay.EOF Then
+'			Application("Ontario_ID")	=	rsDisplay("ontario_id")
+'			Application("Canada_ID")	=	rsDisplay("canada_id")
+'		Else
+'		End if
+'		rsDisplay.close
+'		Set rsDisplay = Nothing : conn.close : Set conn = Nothing
+'	on error goto 0
+
+'Set objConn = Server.CreateObject("ADODB.Connection") : objConn.Open(Application("DBCONN"))
+'set rs = conn.execute("select menu_child_list from tb_system_configure_category")
+		application("Major_Components") = "22,91,31,29,456,25,240,41,19,259,21,36,201,216,260,261"
+		application("Accessories") = "32,26,39,28,217,218,33"
+		application("Additional_Parts") = "42,24,37,20"
+
+set objectConn = server.CreateObject("Adodb.Connection") : objectConn.open(Application("DBCONN"))
+
+    '
+    '  all memory category id
+    '
+    dim rs, memory_category_all_id 
+    memory_category_all_id = ""
+    set rs = objectConn.execute("select pc.menu_child_serial_no from tb_computers_memory cm inner join tb_product_category pc on pc.menu_pre_serial_no = cm.computers_memory_category")
+    if not rs.eof then
+        do while not rs.eof 
+            memory_category_all_id = memory_category_all_id & "[" & rs(0) & "]"
+        rs.movenext
+        loop    
+    end if
+    Application("memory_category_all_id") = memory_category_all_id
+    rs.close 
+    
+    '
+    ' all hard diver id
+    '
+    dim hard_diver_all_id
+    hard_diver_all_id = ""
+    set rs = objectConn.execute("select pc.menu_child_serial_no from tb_computers_hard_drive cm inner join tb_product_category pc on pc.menu_pre_serial_no = cm.computers_hard_drive_category")
+    if not rs.eof then
+        do while not rs.eof 
+            hard_diver_all_id = hard_diver_all_id & "[" & rs(0) & "]"
+        rs.movenext
+        loop
+    end if
+    rs.close : set rs = nothing
+    Application("hard_diver_all_id") = hard_diver_all_id
+    
+    
+objectConn.close()
+set objectConn = nothing
+
+
+'	Application("MENU") = arrMenu
+' ----------------------------------------------------------------------------------
+End Sub
+
+
+' ----------------------------------------------------------------------------------
+Sub Session_OnStart
+' ----------------------------------------------------------------------------------
+    '
+	' currency converter
+	'
+	'Session("CURRENCY_CONVERTER") = Cdbl(0.9)
+    Set conn = Server.CreateObject("ADODB.Connection") : conn.Open(Application("DBCONN"))
+	dim rs
+	set rs = conn.execute("select 	  currency_usd "&_
+							"	from "&_
+							"	tb_currency_convert where is_current=1  ")
+	if not rs.eof then
+		Session("CURRENCY_CONVERTER") = rs(0)
+	else
+		set crs = conn.execute("select 	id,  currency_usd "&_
+							"	from "&_
+							"	tb_currency_convert order by id desc limit 0,1 ")
+		if not crs.eof then
+			Session("CURRENCY_CONVERTER") = crs(1)
+			conn.execute("Update tb_currency_convert Set is_current=1,regdate=now() Where id='"& crs(0) &"'")
+		End if
+		crs.close : set crs = nothing
+	End if
+	rs.close : set rs = nothing
+	conn.close : set conn = nothing
+
+	Session("user_id")		= null
+	Session("user_logid")	= null
+	Session("user_name")	= null
+
+	
+	Session("CartValue") = 0
+	Session("syscounter") = 0	' to enumerate systems purchased only for viewing purposes
+	Session.Timeout = 30		' Change Session Timeout to # of minutes (if you need to)
+
+
+	Session("Start") = Now		' Set a Session Start Time. This is only important to assure we start a session
+
+	' Increase the active visitors count when we start the session
+	Application.Lock
+		Application("ActiveUsers") = Application("ActiveUsers") + 1
+	Application.UnLock
+End Sub
+
+
+
+' ----------------------------------------------------------------------------------
+Sub Session_OnEnd
+' ----------------------------------------------------------------------------------
+	' Decrease the active visitors count when the session ends.
+	Application.Lock
+		Application("ActiveUsers") = Application("ActiveUsers") - 1
+	Application.UnLock
+
+
+	' check of visitor was logged in as a customer
+	if  (not isNull(Session("user_id"))) and (not isEmpty(Session("user_id"))) and isNumeric(Session("user_id")) then
+		ON ERROR RESUME NEXT
+		''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+			dim conn : set conn = Server.CreateObject("ADODB.Connection")
+			conn.Open Application("DBCONN") 
+		' -----------------------------------------	' clean up if anything in temporary shopping cart tables
+			'dim strSQL
+'			strSQL = "DELETE from shopcart_product WHERE customer_id="& Cint(Session("user_id"))
+'			lRecsAffected = 0
+'			conn.Execute strSQL
+'			strSQL = "DELETE from shopcart_system WHERE customer_id="& Cint(Session("user_id"))
+'			lRecsAffected = 0
+'			conn.Execute strSQL
+'			strSQL = "DELETE from shopcart_unit WHERE customer_id="& Cint(Session("user_id"))
+'			lRecsAffected = 0
+'			conn.Execute strSQL
+		' -----------------------------------------	' update user's logout datetime
+			strSQL = ""
+			strSQL = strSQL & "		UPDATE tb_login_log																" & vbCrLf
+			strSQL = strSQL & "		SET																				" & vbCrLf
+			strSQL = strSQL & "		logout_datetime=NOW()																" & vbCrLf
+			strSQL = strSQL & "		WHERE logout_datetime is NULL and login_name="& CInt(Session("user_id")) &"		" & vbCrLf
+			conn.Execute strSQL
+			if isObject(conn) then
+				conn.Close
+			end if
+			Set conn = Nothing
+		''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+		ON ERROR GOTO 0
+	end if
+End Sub
+
+
+</SCRIPT>

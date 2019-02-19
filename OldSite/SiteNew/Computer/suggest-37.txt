@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/000-0743D-01G/26720.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/26720_list_1.jpg" alt="Avision Scanner 000-0743D-01G 1.8inch TFT LCD MicroSD 32GB 600 300dpi USB Purple" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/000-0743D-01G/26720.html'>
+                                       Avision Scanner 000-0743D-01G 1.8inch TFT LCD MicroSD 32GB 600 300dpi USB Purple
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/000-0743D-01G/26720.html'><label class="price">Price: $50.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/S045257/26045.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/26045_list_1.jpg" alt="EXHIBITION CANVAS MATTE 24 X 40 ROLL" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/S045257/26045.html'>
+                                       EXHIBITION CANVAS MATTE 24 X 40 ROLL
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/S045257/26045.html'><label class="price">Price: $127.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/S042077/26022.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/26025_list_1.jpg" alt="PREMIUM LUSTER PHOTO PAPER (260) 10X100 S042077" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/S042077/26022.html'>
+                                       PREMIUM LUSTER PHOTO PAPER (260) 10X100 S042077
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/S042077/26022.html'><label class="price">Price: $61.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/S041062/26021.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/26021_list_1.jpg" alt="Epson Photo paper - Letter A Size (8.5 in x 11 in) - 105 g/m2 S041062" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/S041062/26021.html'>
+                                       Epson Photo paper - Letter A Size (8.5 in x 11 in) - 105 g/m2 S041062
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/S041062/26021.html'><label class="price">Price: $16.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/PTH100/25925.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/25925_list_1.jpg" alt="PTH100 ELECTRONIC LABELLING System PTH100" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/PTH100/25925.html'>
+                                       PTH100 ELECTRONIC LABELLING System PTH100
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/PTH100/25925.html'><label class="price">Price: $46.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

@@ -1,0 +1,106 @@
+﻿[
+  {
+    "outputFile": "Content/normal.css",
+    "inputFile": "Content/normal.less"
+  },
+  {
+    "outputFile": "Scripts/web.es5.js",
+    "inputFile": "Scripts/web.js"
+  },
+  {
+    "outputFile": "Content/eBaySpec.css",
+    "inputFile": "Content/eBaySpec.less"
+  },
+  {
+    "outputFile": "Scripts/detailPart.es5.js",
+    "inputFile": "Scripts/detailPart.js"
+  },
+  {
+    "outputFile": "Content/wyy-pageheader.css",
+    "inputFile": "Content/wyy-pageheader.less"
+  },
+  {
+    "outputFile": "Content/luNew.css",
+    "inputFile": "Content/luNew.less"
+  },
+  {
+    "outputFile": "Content/p.css",
+    "inputFile": "Content/p.less"
+  },
+  {
+    "outputFile": "Scripts/wyy-pageheader.es5.js",
+    "inputFile": "Scripts/wyy-pageheader.js"
+  },
+  {
+    "outputFile": "Scripts/home.es5.js",
+    "inputFile": "Scripts/home.js"
+  },
+  {
+    "outputFile": "Content/listSys.css",
+    "inputFile": "Content/listSys.less"
+  },
+  {
+    "outputFile": "Scripts/listSys.es5.js",
+    "inputFile": "Scripts/listSys.js"
+  },
+  {
+    "outputFile": "Scripts/listPart.es5.js",
+    "inputFile": "Scripts/listPart.js"
+  },
+  {
+    "outputFile": "Scripts/util.es5.js",
+    "inputFile": "Scripts/util.js"
+  },
+  {
+    "outputFile": "Content/media.css",
+    "inputFile": "Content/media.less"
+  },
+  {
+    "outputFile": "Content/ie.css",
+    "inputFile": "Content/ie.less"
+  },
+  {
+    "outputFile": "Content/search.css",
+    "inputFile": "Content/search.less"
+  },
+  {
+    "outputFile": "Content/sweetalert.css",
+    "inputFile": "Content/sweetalert.less"
+  },
+  {
+    "outputFile": "Scripts/bootstrap-datetimepicker.es5.js",
+    "inputFile": "Scripts/bootstrap-datetimepicker.js"
+  },
+  {
+    "outputFile": "Scripts/cart.es5.js",
+    "inputFile": "Scripts/cart.js"
+  },
+  {
+    "outputFile": "Scripts/login.es5.js",
+    "inputFile": "Scripts/login.js"
+  },
+  {
+    "outputFile": "Scripts/register.es5.js",
+    "inputFile": "Scripts/register.js"
+  },
+  {
+    "outputFile": "Scripts/icheck.es5.js",
+    "inputFile": "Scripts/icheck.js"
+  },
+  {
+    "outputFile": "Scripts/jquery-1.8.3.es5.js",
+    "inputFile": "Scripts/jquery-1.8.3.js"
+  },
+  {
+    "outputFile": "Content/ebay/eBaySpec.css",
+    "inputFile": "Content/ebay/eBaySpec.less"
+  },
+  {
+    "outputFile": "Content/ebay/eBaySpecSystem.css",
+    "inputFile": "Content/ebay/eBaySpecSystem.less"
+  },
+  {
+    "outputFile": "Content/share.css",
+    "inputFile": "Content/share.scss"
+  }
+]

@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteBase.master.cs" Inherits="SiteBase" %>
+
+<%@ Register Src="UC/Top2.ascx" TagName="Top" TagPrefix="uc1" %>
+<%@ Register Src="UC/bottom.ascx" TagName="bottom" TagPrefix="uc2" %>
+<!--
+#   ^_^ ^_^ ^_^ ^_^ ^_^ 
+#   
+#   
+#   author: wu.th@qq.com
+#
+#
+#   ^_^ ^_^ ^_^ ^_^ ^_^
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Canada | United States Computer, audio, video, battery, dvd-r, dvd+r, dvd, PC, GeForce, Radeon, parallel, scsi, motherboard, core, duo, Pentium, drives, storage, monitors, SIMM, DIMM, site development, processor upgrades, cables, adapters, surge protectors, UPC, PC Cards, mobile computing, disks, cartridges, Pentium, Athlon, DDR3, DDR4, AM2+, LGA1151, LGA1151, LGA2011, computers, hardware, software, notebook, laptop, networking, flash, LCD, monitor, cpu, pda, memory, ram, digital, camera, modems, printers, scanners, cd, palmtop, purchase, ethernet, hubs, routers, cdrom drives, Internet, server, buy, order, inkjet, laser, pci, USB, PCI-E, PCI Express, secure, microSD, HDMI, HDCP, Widescreen, projector, DVI, Firewall, VISA, Mastercard, Amex, Paypal, secure, Canada, 3Com, AMD, Acer, Antec, AOpen, Asus, ATI, Adobe, Abit, BFG, BenQ, Canon, CoolerMaster, Corsair, Cisco, Coolit, Creative, Labs, Crucial, D-Tek, Danger Den, DFI, Dlink, D-link, Diamond, Drobo, ECS, Enlight, Epson, EVGA, Galaxy, Gigabyte, Hewlett Packard, HIS, Hitachi, HP, IBM, Intel, Kingston, Koolance, Kef, LG, Lian-Li, Lian, Li, Logitech, Linksys, LiteOn, Lite, On, Lexmark, Micron, Microsoft, MSI, Mitsumi, NGear, NEC, nVidia, OCZ, Optoma, Onkyo, Palit, Panasonic, Philips, Pioneer, Plextor, Promise, Razer, RedHat, Samsung, Seagate, Shuttle, Sapphire, Silverstone, Sony, Swiftech, Symantec, Supermicro, Tekram, Toshiba, Thermaltake, Thermalright, Vantec, Viewsonic, Western Digital, WD, XFX, Zalman">
+    <title>LU Computers - Canada </title>
+    <%= WebExtensions.CombresLink("siteCss") %>  
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+    <!--[if lt IE 9]>
+      <script src="/Scripts/html5shiv.min.js"></script>
+      <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+
+    <%= WebExtensions.CombresLink("siteJs") %>
+    <asp:ContentPlaceHolder runat="server" ID="ScriptContent"></asp:ContentPlaceHolder>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-4447256-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

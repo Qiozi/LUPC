@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Q_Admin_MasterPage" %>
+<%@ Register Src="UC/Menus.ascx" TagName="Menus" TagPrefix="uc2" %>
+<%@ Register Src="UC/main_menus.ascx" TagName="main_menus" TagPrefix="uc3" %>
+
+<%@ Register Src="UC/Top.ascx" TagName="Top" TagPrefix="uc1" %>
+<%@ Register src="UC/SearchStockStatus.ascx" tagname="SearchStockStatus" tagprefix="uc4" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+   <title>LU Computers</title>
+   <script type="text/javascript" src="/q_admin/JS/Loading.js"></script>
+   <script type="text/javascript" src="/q_admin/JS/calendar.js"></script> 
+   <script type="text/javascript" src="/q_admin/js/winOpen.js"></script>
+   <script type="text/javascript" src="/q_admin/js/helper.js"></script>
+   <script type="text/javascript" src="/q_admin/js/Alert.js"></script>
+   <script type="text/javascript" src="/q_admin/js_css/jquery-1.9.1.js"></script>
+   <script type="text/javascript" src="/q_admin/js_css/jquery_lab/jquery.float.js"></script>
+   <script type="text/javascript" src="/q_admin/js_css/jquery_lab/jquery.timer.js"></script>   
+   <script type="text/javascript" src="/q_admin/js_css/jquery_lab/popup.js"></script>
+   <script type="text/javascript" src="/q_admin/js_css/jquery_lab/popupclass.js"></script>
+   <script type="text/javascript" src="/q_admin/js_css/jquery-ui-1.10.2.custom.min.js"></script>
+    <link href="/q_admin/js_css/admin.css" rel="stylesheet" />
+   <link href="/q_admin/js_css/ui-lightness/jquery-ui-1.10.2.custom.min.css" rel="Stylesheet" type="text/css" /> 
+   <script type="text/javascript">
+    function classleft()
+   {
+        if(document.getElementById("win_left").style.display == "")
+            document.getElementById("win_left").style.display  = "none";
+        else
+            document.getElementById("win_left").style.display = "";
+   } 
+   </script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+     <div>
+            <uc1:Top ID="Top1" runat="server" />            
+        </div>
+        <div>
+            <uc3:main_menus ID="Main_menus1" runat="server" />
+            </div>
+          <uc2:Menus id="Menus1" runat="server"></uc2:Menus>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+              
+    </form>
+</body>
+</html>

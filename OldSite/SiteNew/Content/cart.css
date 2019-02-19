@@ -1,0 +1,33 @@
+﻿.delete {
+    display: none;
+}
+
+#prodListArea .row {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+    #prodListArea .row > div {
+        padding-top: 1em;
+    }
+
+    #prodListArea .row:hover {
+        background: #f2f2f2;
+    }
+
+        #prodListArea .row:hover .delete {
+            display: inline-block;
+        }
+
+.input-group {
+    border: 0px solid red;
+    padding-top: 0px;
+    vertical-align: top;
+}
+
+#price-area table {
+    width: 99%;
+}
+
+#price-area td {
+    padding: 5px;
+}

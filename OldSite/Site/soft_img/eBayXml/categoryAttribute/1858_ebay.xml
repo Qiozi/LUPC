@@ -1,0 +1,1298 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><eBay><SelectedAttributes><AttributeSet id='1858'/></SelectedAttributes><Attributes>
+<AttributeSet id='1858' >
+<DomainName><![CDATA[PC Laptops]]></DomainName>
+<Attribute id='10244'  vivisible='true'  count='1'  source='3'  displaysequence='11' >
+<SellingDisplayLabel><![CDATA[Condition]]></SellingDisplayLabel>
+<Value id='-10' ></Value>
+</Attribute>
+<Attribute id='26443'  vivisible='true'  count='1'  source='3'  displaysequence='4' >
+<SellingDisplayLabel><![CDATA[Processor Type]]></SellingDisplayLabel>
+<Value id='-10' ></Value>
+</Attribute>
+<Attribute id='12'  vivisible='true'  count='1'  source='3'  displaysequence='7' >
+<SellingDisplayLabel><![CDATA[Memory]]></SellingDisplayLabel>
+<Value id='-10' ></Value>
+</Attribute>
+<Attribute id='26445'  vivisible='true'  count='1'  source='3'  displaysequence='9' >
+<SellingDisplayLabel><![CDATA[Primary Drive]]></SellingDisplayLabel>
+<Value id='-10' ></Value>
+</Attribute>
+<Attribute id='13'  vivisible='true'  count='1'  source='3'  displaysequence='10' >
+<SellingDisplayLabel><![CDATA[Operating System]]></SellingDisplayLabel>
+<Value id='-10' ></Value>
+</Attribute>
+<Attribute id='14'  vivisible='true'  count='1'  source='3'  displaysequence='1' >
+<SellingDisplayLabel><![CDATA[Brand]]></SellingDisplayLabel>
+<Value id='-10' ></Value>
+</Attribute>
+</AttributeSet>
+<AttributeSet id='2276' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<Attribute id='3993'  vivisible='true'  count='1'  source='3'  displaysequence='4' >
+<SellingDisplayLabel><![CDATA[Return shipping will be paid by]]></SellingDisplayLabel>
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+</Attribute>
+<Attribute id='3804'  vivisible='true'  count='1'  source='3'  displaysequence='2' >
+<SellingDisplayLabel><![CDATA[Item must be returned within]]></SellingDisplayLabel>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+</Attribute>
+<Attribute id='3805'  vivisible='true'  count='1'  source='3'  displaysequence='3' >
+<SellingDisplayLabel><![CDATA[Refund will be given as]]></SellingDisplayLabel>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</Attribute>
+</AttributeSet>
+</Attributes>
+<Characteristics>
+<CharacteristicsSet id='1858'  order='1' >
+<DomainName><![CDATA[PC Laptops]]></DomainName>
+<PresentationInstruction>
+    <DomainName>PC Laptops</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="14" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="6" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="26446" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input columns="2" size="6" type="textfield"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="26443" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="42213" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="26444" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" helpId="82" id="12" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" helpId="83" id="25710" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input columns="2" size="6" type="textfield"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="26445" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="13" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" helpId="404" id="10244" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input columns="2" type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute labelVisible='true'  id='6' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Type]]></Label>
+<ValueList count='6' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='52506' >
+<Name><![CDATA[Laptop/Notebook]]></Name>
+</Value>
+<Value id='98163' >
+<Name><![CDATA[Mobile Thin Client]]></Name>
+</Value>
+<Value id='97918' >
+<Name><![CDATA[Netbook]]></Name>
+</Value>
+<Value id='53473' >
+<Name><![CDATA[Ultra Portable PC]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='12' >
+<EditType>0</EditType><Type><![CDATA[1]]></Type>
+<MessageBottom><![CDATA[If selecting "Other," please enter RAM in MB. Example: for 3.2 GB, enter 3200. Enter numbers only.]]></MessageBottom>
+<Label><![CDATA[Memory]]></Label>
+<DefaultUnitOfMeasureFormatString><![CDATA[{0} MB]]></DefaultUnitOfMeasureFormatString>
+<ValueList count='26' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='35698' >
+<Name><![CDATA[4]]></Name>
+<DisplayName><![CDATA[4 MB]]></DisplayName>
+</Value>
+<Value id='40947' >
+<Name><![CDATA[8]]></Name>
+<DisplayName><![CDATA[8 MB]]></DisplayName>
+</Value>
+<Value id='1177' >
+<Name><![CDATA[16]]></Name>
+<DisplayName><![CDATA[16 MB]]></DisplayName>
+</Value>
+<Value id='40963' >
+<Name><![CDATA[24]]></Name>
+<DisplayName><![CDATA[24 MB]]></DisplayName>
+</Value>
+<Value id='26515' >
+<Name><![CDATA[32]]></Name>
+<DisplayName><![CDATA[32 MB]]></DisplayName>
+</Value>
+<Value id='35729' >
+<Name><![CDATA[40]]></Name>
+<DisplayName><![CDATA[40 MB]]></DisplayName>
+</Value>
+<Value id='35737' >
+<Name><![CDATA[48]]></Name>
+<DisplayName><![CDATA[48 MB]]></DisplayName>
+</Value>
+<Value id='1776' >
+<Name><![CDATA[64]]></Name>
+<DisplayName><![CDATA[64 MB]]></DisplayName>
+</Value>
+<Value id='25801' >
+<Name><![CDATA[96]]></Name>
+<DisplayName><![CDATA[96 MB]]></DisplayName>
+</Value>
+<Value id='25802' >
+<Name><![CDATA[128]]></Name>
+<DisplayName><![CDATA[128 MB]]></DisplayName>
+</Value>
+<Value id='42216' >
+<Name><![CDATA[160]]></Name>
+<DisplayName><![CDATA[160 MB]]></DisplayName>
+</Value>
+<Value id='31234' >
+<Name><![CDATA[192]]></Name>
+<DisplayName><![CDATA[192 MB]]></DisplayName>
+</Value>
+<Value id='25712' >
+<Name><![CDATA[256]]></Name>
+<DisplayName><![CDATA[256 MB]]></DisplayName>
+</Value>
+<Value id='26532' >
+<Name><![CDATA[384]]></Name>
+<DisplayName><![CDATA[384 MB]]></DisplayName>
+</Value>
+<Value id='25803' >
+<Name><![CDATA[512]]></Name>
+<DisplayName><![CDATA[512 MB]]></DisplayName>
+</Value>
+<Value id='33607' >
+<Name><![CDATA[640]]></Name>
+<DisplayName><![CDATA[640 MB]]></DisplayName>
+</Value>
+<Value id='26533' >
+<Name><![CDATA[768]]></Name>
+<DisplayName><![CDATA[768 MB]]></DisplayName>
+</Value>
+<Value id='25804' >
+<Name><![CDATA[1000]]></Name>
+<DisplayName><![CDATA[1 GB]]></DisplayName>
+</Value>
+<Value id='26498' >
+<Name><![CDATA[1500]]></Name>
+<DisplayName><![CDATA[1.5 GB]]></DisplayName>
+</Value>
+<Value id='25809' >
+<Name><![CDATA[2000]]></Name>
+<DisplayName><![CDATA[2 GB]]></DisplayName>
+</Value>
+<Value id='26512' >
+<Name><![CDATA[3000]]></Name>
+<DisplayName><![CDATA[3 GB]]></DisplayName>
+</Value>
+<Value id='25810' >
+<Name><![CDATA[4000]]></Name>
+<DisplayName><![CDATA[4 GB]]></DisplayName>
+</Value>
+<Value id='97921' >
+<Name><![CDATA[6000]]></Name>
+<DisplayName><![CDATA[6 GB]]></DisplayName>
+</Value>
+<Value id='42221' >
+<Name><![CDATA[8000]]></Name>
+<DisplayName><![CDATA[8 GB]]></DisplayName>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules>
+<Rule>
+<Max>1000000</Max><Name>IntRangeValidationRule</Name><Min>1</Min></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='13' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Operating System]]></Label>
+<ValueList count='24' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='42172' >
+<Name><![CDATA[Not Included]]></Name>
+</Value>
+<Value id='42173' >
+<Name><![CDATA[DOS]]></Name>
+</Value>
+<Value id='1767' >
+<Name><![CDATA[Linux]]></Name>
+</Value>
+<Value id='42174' >
+<Name><![CDATA[Windows 95]]></Name>
+</Value>
+<Value id='42175' >
+<Name><![CDATA[Windows 98]]></Name>
+</Value>
+<Value id='42176' >
+<Name><![CDATA[Windows 2000]]></Name>
+</Value>
+<Value id='42177' >
+<Name><![CDATA[Windows 2003]]></Name>
+</Value>
+<Value id='42178' >
+<Name><![CDATA[Windows ME]]></Name>
+</Value>
+<Value id='42179' >
+<Name><![CDATA[Windows NT]]></Name>
+</Value>
+<Value id='42181' >
+<Name><![CDATA[Windows XP Home]]></Name>
+</Value>
+<Value id='42182' >
+<Name><![CDATA[Windows XP Professional]]></Name>
+</Value>
+<Value id='42183' >
+<Name><![CDATA[Windows XP Media Center]]></Name>
+</Value>
+<Value id='42184' >
+<Name><![CDATA[Windows Tablet PC]]></Name>
+</Value>
+<Value id='85462' >
+<Name><![CDATA[Windows Vista Starter]]></Name>
+</Value>
+<Value id='85463' >
+<Name><![CDATA[Windows Vista Home Basic]]></Name>
+</Value>
+<Value id='85464' >
+<Name><![CDATA[Windows Vista Home Premium]]></Name>
+</Value>
+<Value id='85465' >
+<Name><![CDATA[Windows Vista Business]]></Name>
+</Value>
+<Value id='85466' >
+<Name><![CDATA[Windows Vista Enterprise]]></Name>
+</Value>
+<Value id='85467' >
+<Name><![CDATA[Windows Vista Ultimate]]></Name>
+</Value>
+<Value id='97972' >
+<Name><![CDATA[Windows 7 Home Premium]]></Name>
+</Value>
+<Value id='98265' >
+<Name><![CDATA[Windows 7 Professional]]></Name>
+</Value>
+<Value id='98266' >
+<Name><![CDATA[Windows 7 Ultimate]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='14' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Brand]]></Label>
+<ValueList count='32' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='26448' >
+<Name><![CDATA[Acer]]></Name>
+</Value>
+<Value id='26449' >
+<Name><![CDATA[Alienware]]></Name>
+</Value>
+<Value id='26653' >
+<Name><![CDATA[AST]]></Name>
+</Value>
+<Value id='31494' >
+<Name><![CDATA[ASUS]]></Name>
+</Value>
+<Value id='42204' >
+<Name><![CDATA[Averatec]]></Name>
+</Value>
+<Value id='40454' >
+<Name><![CDATA[Clevo]]></Name>
+</Value>
+<Value id='1754' >
+<Name><![CDATA[Compaq]]></Name>
+</Value>
+<Value id='10254' >
+<Name><![CDATA[Dell]]></Name>
+</Value>
+<Value id='26451' >
+<Name><![CDATA[eMachines]]></Name>
+</Value>
+<Value id='85483' >
+<Name><![CDATA[Everex]]></Name>
+</Value>
+<Value id='3356' >
+<Name><![CDATA[Fujitsu]]></Name>
+</Value>
+<Value id='26452' >
+<Name><![CDATA[Gateway]]></Name>
+</Value>
+<Value id='1758' >
+<Name><![CDATA[HP]]></Name>
+</Value>
+<Value id='94923' >
+<Name><![CDATA[IBM]]></Name>
+</Value>
+<Value id='26453' >
+<Name><![CDATA[Lenovo]]></Name>
+</Value>
+<Value id='85783' >
+<Name><![CDATA[Itronix]]></Name>
+</Value>
+<Value id='31217' >
+<Name><![CDATA[Micron]]></Name>
+</Value>
+<Value id='85784' >
+<Name><![CDATA[Motion Computing]]></Name>
+</Value>
+<Value id='37353' >
+<Name><![CDATA[MSI]]></Name>
+</Value>
+<Value id='26520' >
+<Name><![CDATA[NEC]]></Name>
+</Value>
+<Value id='85785' >
+<Name><![CDATA[OQO]]></Name>
+</Value>
+<Value id='25487' >
+<Name><![CDATA[Panasonic]]></Name>
+</Value>
+<Value id='85786' >
+<Name><![CDATA[Sager]]></Name>
+</Value>
+<Value id='44112' >
+<Name><![CDATA[Samsung]]></Name>
+</Value>
+<Value id='1762' >
+<Name><![CDATA[Sharp]]></Name>
+</Value>
+<Value id='1764' >
+<Name><![CDATA[Sony]]></Name>
+</Value>
+<Value id='1765' >
+<Name><![CDATA[Toshiba]]></Name>
+</Value>
+<Value id='31784' >
+<Name><![CDATA[ViewSonic]]></Name>
+</Value>
+<Value id='85787' >
+<Name><![CDATA[Winbook]]></Name>
+</Value>
+<Value id='26450' >
+<Name><![CDATA[Custom, Whitebox]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='183' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Title]]></Label>
+<ValueList count='2' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='10244' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Condition]]></Label>
+<ValueList count='4' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='10425' >
+<Name><![CDATA[New, Sealed in Box]]></Name>
+</Value>
+<Value id='26588' >
+<Name><![CDATA[Refurbished]]></Name>
+</Value>
+<Value id='10426' >
+<Name><![CDATA[Used]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='25710' >
+<EditType>0</EditType><Type><![CDATA[1]]></Type>
+<MessageBottom><![CDATA[Please enter hard drive capacity in GB. Enter numbers only.]]></MessageBottom>
+<Label><![CDATA[Hard Drive Capacity]]></Label>
+<DefaultUnitOfMeasureFormatString><![CDATA[{0} GB]]></DefaultUnitOfMeasureFormatString>
+<ValidationRules>
+<Rule>
+<Name>PrecisionRule</Name><Precision>1</Precision></Rule>
+<Rule>
+<Max>1000000</Max><Name>DoubleRangeValidationRule</Name><Min>0</Min></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='26443' >
+<EditType>0</EditType><HelpText><![CDATA[http://pages.ebay.ca/help/attrhelp/siteid2_vcsid1858_attrid26443.html]]></HelpText>
+<Type><![CDATA[2]]></Type>
+<Label><![CDATA[Processor Type]]></Label>
+<HasGlossary/>
+<ValueList count='62' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='26454' >
+<Name><![CDATA[AMD Athlon]]></Name>
+</Value>
+<Value id='98271' >
+<Name><![CDATA[AMD Athlon ll]]></Name>
+</Value>
+<Value id='98272' >
+<Name><![CDATA[AMD Athlon ll Neo]]></Name>
+</Value>
+<Value id='85492' >
+<Name><![CDATA[AMD Athlon X2]]></Name>
+</Value>
+<Value id='98273' >
+<Name><![CDATA[AMD Athlon Neo]]></Name>
+</Value>
+<Value id='98274' >
+<Name><![CDATA[AMD Athlon Neo X2]]></Name>
+</Value>
+<Value id='33612' >
+<Name><![CDATA[AMD Athlon 64, 64 M]]></Name>
+</Value>
+<Value id='42381' >
+<Name><![CDATA[AMD Athlon 64 FX]]></Name>
+</Value>
+<Value id='49920' >
+<Name><![CDATA[AMD Athlon 64 X2]]></Name>
+</Value>
+<Value id='26455' >
+<Name><![CDATA[AMD Athlon XP, XP-M]]></Name>
+</Value>
+<Value id='26447' >
+<Name><![CDATA[AMD Duron]]></Name>
+</Value>
+<Value id='85493' >
+<Name><![CDATA[AMD Geode]]></Name>
+</Value>
+<Value id='42382' >
+<Name><![CDATA[AMD K6]]></Name>
+</Value>
+<Value id='49919' >
+<Name><![CDATA[AMD K7]]></Name>
+</Value>
+<Value id='49924' >
+<Name><![CDATA[AMD Opteron]]></Name>
+</Value>
+<Value id='85494' >
+<Name><![CDATA[AMD Phenom]]></Name>
+</Value>
+<Value id='98275' >
+<Name><![CDATA[AMD Phenom ll]]></Name>
+</Value>
+<Value id='83187' >
+<Name><![CDATA[AMD Phenom FX]]></Name>
+</Value>
+<Value id='42383' >
+<Name><![CDATA[AMD Sempron]]></Name>
+</Value>
+<Value id='40464' >
+<Name><![CDATA[AMD Turion 64]]></Name>
+</Value>
+<Value id='53493' >
+<Name><![CDATA[AMD Turion 64 X2]]></Name>
+</Value>
+<Value id='98276' >
+<Name><![CDATA[AMD Turion ll]]></Name>
+</Value>
+<Value id='98277' >
+<Name><![CDATA[AMD Turion Neo]]></Name>
+</Value>
+<Value id='98278' >
+<Name><![CDATA[AMD Turion Neo X2]]></Name>
+</Value>
+<Value id='98282' >
+<Name><![CDATA[AMD Turion X2]]></Name>
+</Value>
+<Value id='97021' >
+<Name><![CDATA[Intel Atom]]></Name>
+</Value>
+<Value id='26456' >
+<Name><![CDATA[Intel Celeron]]></Name>
+</Value>
+<Value id='42071' >
+<Name><![CDATA[Intel Celeron D]]></Name>
+</Value>
+<Value id='42205' >
+<Name><![CDATA[Intel Celeron M]]></Name>
+</Value>
+<Value id='98280' >
+<Name><![CDATA[Intel Core i3]]></Name>
+</Value>
+<Value id='98279' >
+<Name><![CDATA[Intel Core i5]]></Name>
+</Value>
+<Value id='97396' >
+<Name><![CDATA[Intel Core i7]]></Name>
+</Value>
+<Value id='52458' >
+<Name><![CDATA[Intel Core Solo]]></Name>
+</Value>
+<Value id='52456' >
+<Name><![CDATA[Intel Core Duo]]></Name>
+</Value>
+<Value id='85498' >
+<Name><![CDATA[Intel Core 2]]></Name>
+</Value>
+<Value id='52457' >
+<Name><![CDATA[Intel Core 2 Duo]]></Name>
+</Value>
+<Value id='76209' >
+<Name><![CDATA[Intel Core 2 Quad]]></Name>
+</Value>
+<Value id='53870' >
+<Name><![CDATA[Intel Core 2 Extreme]]></Name>
+</Value>
+<Value id='85496' >
+<Name><![CDATA[Intel Itanium]]></Name>
+</Value>
+<Value id='49916' >
+<Name><![CDATA[Intel Itanium 2]]></Name>
+</Value>
+<Value id='26457' >
+<Name><![CDATA[Intel Pentium]]></Name>
+</Value>
+<Value id='49910' >
+<Name><![CDATA[Intel Pentium D]]></Name>
+</Value>
+<Value id='26460' >
+<Name><![CDATA[Intel Pentium 4]]></Name>
+</Value>
+<Value id='26522' >
+<Name><![CDATA[Intel Pentium M, Centrino]]></Name>
+</Value>
+<Value id='42074' >
+<Name><![CDATA[Intel Pentium MMX]]></Name>
+</Value>
+<Value id='42206' >
+<Name><![CDATA[Intel Pentium Mobile]]></Name>
+</Value>
+<Value id='42075' >
+<Name><![CDATA[Intel Pentium Pro]]></Name>
+</Value>
+<Value id='26458' >
+<Name><![CDATA[Intel Pentium II]]></Name>
+</Value>
+<Value id='85788' >
+<Name><![CDATA[Intel Pentium II Mobile]]></Name>
+</Value>
+<Value id='42072' >
+<Name><![CDATA[Intel Pentium II Xeon]]></Name>
+</Value>
+<Value id='26459' >
+<Name><![CDATA[Intel Pentium III]]></Name>
+</Value>
+<Value id='81931' >
+<Name><![CDATA[Intel Pentium III E]]></Name>
+</Value>
+<Value id='42073' >
+<Name><![CDATA[Intel Pentium III Xeon]]></Name>
+</Value>
+<Value id='85789' >
+<Name><![CDATA[Intel Pentium III Mobile]]></Name>
+</Value>
+<Value id='85497' >
+<Name><![CDATA[Intel Pentium 4 Extreme Edition]]></Name>
+</Value>
+<Value id='33613' >
+<Name><![CDATA[Intel Pentium 4 HT]]></Name>
+</Value>
+<Value id='40467' >
+<Name><![CDATA[Intel Pentium 4 M]]></Name>
+</Value>
+<Value id='85434' >
+<Name><![CDATA[Intel Xeon]]></Name>
+</Value>
+<Value id='49918' >
+<Name><![CDATA[Intel Xeon MP]]></Name>
+</Value>
+<Value id='97920' >
+<Name><![CDATA[Transmeta Crusoe]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='26444' >
+<EditType>0</EditType><HelpText><![CDATA[http://pages.ebay.ca/help/attrhelp/siteid2_vcsid1858_attrid26444.html]]></HelpText>
+<Type><![CDATA[1]]></Type>
+<MessageBottom><![CDATA[If selecting "Other," please enter the processor speed in MHz. Example: for 4.2 GHz, enter 4200. Enter numbers only.]]></MessageBottom>
+<Label><![CDATA[Processor Speed]]></Label>
+<HasGlossary/>
+<DefaultUnitOfMeasureFormatString><![CDATA[{0} MHz]]></DefaultUnitOfMeasureFormatString>
+<ValueList count='74' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='42168' >
+<Name><![CDATA[Less than 100 MHz]]></Name>
+</Value>
+<Value id='46121' >
+<Name><![CDATA[100]]></Name>
+<DisplayName><![CDATA[100 MHz]]></DisplayName>
+</Value>
+<Value id='26461' >
+<Name><![CDATA[120]]></Name>
+<DisplayName><![CDATA[120 MHz]]></DisplayName>
+</Value>
+<Value id='26462' >
+<Name><![CDATA[133]]></Name>
+<DisplayName><![CDATA[133 MHz]]></DisplayName>
+</Value>
+<Value id='26463' >
+<Name><![CDATA[150]]></Name>
+<DisplayName><![CDATA[150 MHz]]></DisplayName>
+</Value>
+<Value id='26464' >
+<Name><![CDATA[166]]></Name>
+<DisplayName><![CDATA[166 MHz]]></DisplayName>
+</Value>
+<Value id='26465' >
+<Name><![CDATA[200]]></Name>
+<DisplayName><![CDATA[200 MHz]]></DisplayName>
+</Value>
+<Value id='26466' >
+<Name><![CDATA[233]]></Name>
+<DisplayName><![CDATA[233 MHz]]></DisplayName>
+</Value>
+<Value id='26467' >
+<Name><![CDATA[266]]></Name>
+<DisplayName><![CDATA[266 MHz]]></DisplayName>
+</Value>
+<Value id='26468' >
+<Name><![CDATA[300]]></Name>
+<DisplayName><![CDATA[300 MHz]]></DisplayName>
+</Value>
+<Value id='26469' >
+<Name><![CDATA[333]]></Name>
+<DisplayName><![CDATA[333 MHz]]></DisplayName>
+</Value>
+<Value id='26470' >
+<Name><![CDATA[350]]></Name>
+<DisplayName><![CDATA[350 MHz]]></DisplayName>
+</Value>
+<Value id='31218' >
+<Name><![CDATA[366]]></Name>
+<DisplayName><![CDATA[366 MHz]]></DisplayName>
+</Value>
+<Value id='26471' >
+<Name><![CDATA[400]]></Name>
+<DisplayName><![CDATA[400 MHz]]></DisplayName>
+</Value>
+<Value id='26472' >
+<Name><![CDATA[433]]></Name>
+<DisplayName><![CDATA[433 MHz]]></DisplayName>
+</Value>
+<Value id='26473' >
+<Name><![CDATA[450]]></Name>
+<DisplayName><![CDATA[450 MHz]]></DisplayName>
+</Value>
+<Value id='26474' >
+<Name><![CDATA[466]]></Name>
+<DisplayName><![CDATA[466 MHz]]></DisplayName>
+</Value>
+<Value id='23435' >
+<Name><![CDATA[500]]></Name>
+<DisplayName><![CDATA[500 MHz]]></DisplayName>
+</Value>
+<Value id='26475' >
+<Name><![CDATA[533]]></Name>
+<DisplayName><![CDATA[533 MHz]]></DisplayName>
+</Value>
+<Value id='26476' >
+<Name><![CDATA[550]]></Name>
+<DisplayName><![CDATA[550 MHz]]></DisplayName>
+</Value>
+<Value id='26477' >
+<Name><![CDATA[566]]></Name>
+<DisplayName><![CDATA[566 MHz]]></DisplayName>
+</Value>
+<Value id='23437' >
+<Name><![CDATA[600]]></Name>
+<DisplayName><![CDATA[600 MHz]]></DisplayName>
+</Value>
+<Value id='26478' >
+<Name><![CDATA[633]]></Name>
+<DisplayName><![CDATA[633 MHz]]></DisplayName>
+</Value>
+<Value id='26479' >
+<Name><![CDATA[650]]></Name>
+<DisplayName><![CDATA[650 MHz]]></DisplayName>
+</Value>
+<Value id='26480' >
+<Name><![CDATA[666]]></Name>
+<DisplayName><![CDATA[666 MHz]]></DisplayName>
+</Value>
+<Value id='23449' >
+<Name><![CDATA[700]]></Name>
+<DisplayName><![CDATA[700 MHz]]></DisplayName>
+</Value>
+<Value id='26481' >
+<Name><![CDATA[733]]></Name>
+<DisplayName><![CDATA[733 MHz]]></DisplayName>
+</Value>
+<Value id='23434' >
+<Name><![CDATA[750]]></Name>
+<DisplayName><![CDATA[750 MHz]]></DisplayName>
+</Value>
+<Value id='26482' >
+<Name><![CDATA[766]]></Name>
+<DisplayName><![CDATA[766 MHz]]></DisplayName>
+</Value>
+<Value id='26483' >
+<Name><![CDATA[800]]></Name>
+<DisplayName><![CDATA[800 MHz]]></DisplayName>
+</Value>
+<Value id='26484' >
+<Name><![CDATA[850]]></Name>
+<DisplayName><![CDATA[850 MHz]]></DisplayName>
+</Value>
+<Value id='26485' >
+<Name><![CDATA[866]]></Name>
+<DisplayName><![CDATA[866 MHz]]></DisplayName>
+</Value>
+<Value id='26486' >
+<Name><![CDATA[900]]></Name>
+<DisplayName><![CDATA[900 MHz]]></DisplayName>
+</Value>
+<Value id='26487' >
+<Name><![CDATA[933]]></Name>
+<DisplayName><![CDATA[933 MHz]]></DisplayName>
+</Value>
+<Value id='26488' >
+<Name><![CDATA[950]]></Name>
+<DisplayName><![CDATA[950 MHz]]></DisplayName>
+</Value>
+<Value id='25804' >
+<Name><![CDATA[1000]]></Name>
+<DisplayName><![CDATA[1 GHz]]></DisplayName>
+</Value>
+<Value id='26489' >
+<Name><![CDATA[1060]]></Name>
+<DisplayName><![CDATA[1.06 GHz]]></DisplayName>
+</Value>
+<Value id='26490' >
+<Name><![CDATA[1100]]></Name>
+<DisplayName><![CDATA[1.1 GHz]]></DisplayName>
+</Value>
+<Value id='26491' >
+<Name><![CDATA[1130]]></Name>
+<DisplayName><![CDATA[1.13 GHz]]></DisplayName>
+</Value>
+<Value id='26493' >
+<Name><![CDATA[1200]]></Name>
+<DisplayName><![CDATA[1.2 GHz]]></DisplayName>
+</Value>
+<Value id='26529' >
+<Name><![CDATA[1250]]></Name>
+<DisplayName><![CDATA[1.25 GHz]]></DisplayName>
+</Value>
+<Value id='26494' >
+<Name><![CDATA[1260]]></Name>
+<DisplayName><![CDATA[1.26 GHz]]></DisplayName>
+</Value>
+<Value id='42220' >
+<Name><![CDATA[1280]]></Name>
+<DisplayName><![CDATA[1.28 GHz]]></DisplayName>
+</Value>
+<Value id='26495' >
+<Name><![CDATA[1300]]></Name>
+<DisplayName><![CDATA[1.3 GHz]]></DisplayName>
+</Value>
+<Value id='26496' >
+<Name><![CDATA[1330]]></Name>
+<DisplayName><![CDATA[1.33 GHz]]></DisplayName>
+</Value>
+<Value id='26497' >
+<Name><![CDATA[1400]]></Name>
+<DisplayName><![CDATA[1.4 GHz]]></DisplayName>
+</Value>
+<Value id='26498' >
+<Name><![CDATA[1500]]></Name>
+<DisplayName><![CDATA[1.5 GHz]]></DisplayName>
+</Value>
+<Value id='26499' >
+<Name><![CDATA[1600]]></Name>
+<DisplayName><![CDATA[1.6 GHz]]></DisplayName>
+</Value>
+<Value id='26500' >
+<Name><![CDATA[1700]]></Name>
+<DisplayName><![CDATA[1.7 GHz]]></DisplayName>
+</Value>
+<Value id='26501' >
+<Name><![CDATA[1800]]></Name>
+<DisplayName><![CDATA[1.8 GHz]]></DisplayName>
+</Value>
+<Value id='25837' >
+<Name><![CDATA[1900]]></Name>
+<DisplayName><![CDATA[1.9 GHz]]></DisplayName>
+</Value>
+<Value id='25809' >
+<Name><![CDATA[2000]]></Name>
+<DisplayName><![CDATA[2 GHz]]></DisplayName>
+</Value>
+<Value id='26502' >
+<Name><![CDATA[2100]]></Name>
+<DisplayName><![CDATA[2.1 GHz]]></DisplayName>
+</Value>
+<Value id='26503' >
+<Name><![CDATA[2200]]></Name>
+<DisplayName><![CDATA[2.2 GHz]]></DisplayName>
+</Value>
+<Value id='26504' >
+<Name><![CDATA[2260]]></Name>
+<DisplayName><![CDATA[2.26 GHz]]></DisplayName>
+</Value>
+<Value id='26505' >
+<Name><![CDATA[2300]]></Name>
+<DisplayName><![CDATA[2.3 GHz]]></DisplayName>
+</Value>
+<Value id='26506' >
+<Name><![CDATA[2400]]></Name>
+<DisplayName><![CDATA[2.4 GHz]]></DisplayName>
+</Value>
+<Value id='26507' >
+<Name><![CDATA[2500]]></Name>
+<DisplayName><![CDATA[2.5 GHz]]></DisplayName>
+</Value>
+<Value id='26508' >
+<Name><![CDATA[2530]]></Name>
+<DisplayName><![CDATA[2.53 GHz]]></DisplayName>
+</Value>
+<Value id='26509' >
+<Name><![CDATA[2600]]></Name>
+<DisplayName><![CDATA[2.6 GHz]]></DisplayName>
+</Value>
+<Value id='26510' >
+<Name><![CDATA[2660]]></Name>
+<DisplayName><![CDATA[2.66 GHz]]></DisplayName>
+</Value>
+<Value id='26511' >
+<Name><![CDATA[2800]]></Name>
+<DisplayName><![CDATA[2.8 GHz]]></DisplayName>
+</Value>
+<Value id='26512' >
+<Name><![CDATA[3000]]></Name>
+<DisplayName><![CDATA[3 GHz]]></DisplayName>
+</Value>
+<Value id='26513' >
+<Name><![CDATA[3060]]></Name>
+<DisplayName><![CDATA[3.06 GHz]]></DisplayName>
+</Value>
+<Value id='26514' >
+<Name><![CDATA[3200]]></Name>
+<DisplayName><![CDATA[3.2 GHz]]></DisplayName>
+</Value>
+<Value id='33223' >
+<Name><![CDATA[3330]]></Name>
+<DisplayName><![CDATA[3.33 GHz]]></DisplayName>
+</Value>
+<Value id='40460' >
+<Name><![CDATA[3400]]></Name>
+<DisplayName><![CDATA[3.4 GHz]]></DisplayName>
+</Value>
+<Value id='40461' >
+<Name><![CDATA[3600]]></Name>
+<DisplayName><![CDATA[3.6 GHz]]></DisplayName>
+</Value>
+<Value id='40463' >
+<Name><![CDATA[3800]]></Name>
+<DisplayName><![CDATA[3.8 GHz]]></DisplayName>
+</Value>
+<Value id='25810' >
+<Name><![CDATA[4000]]></Name>
+<DisplayName><![CDATA[4 GHz]]></DisplayName>
+</Value>
+<Value id='53881' >
+<Name><![CDATA[4500]]></Name>
+<DisplayName><![CDATA[4.5 GHz]]></DisplayName>
+</Value>
+<Value id='31713' >
+<Name><![CDATA[4800]]></Name>
+<DisplayName><![CDATA[4.8 GHz]]></DisplayName>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules>
+<Rule>
+<Max>1000000</Max><Name>IntRangeValidationRule</Name><Min>1</Min></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='26445' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<MessageBottom><![CDATA[If your item has more than one drive, please specify the most powerful drive included.]]></MessageBottom>
+<Label><![CDATA[Primary Drive]]></Label>
+<ValueList count='11' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='33615' >
+<Name><![CDATA[3.5" Floppy Drive]]></Name>
+</Value>
+<Value id='83141' >
+<Name><![CDATA[Blu-ray]]></Name>
+</Value>
+<Value id='85729' >
+<Name><![CDATA[Blu-ray/HD-DVD Combo]]></Name>
+</Value>
+<Value id='26516' >
+<Name><![CDATA[CD-ROM]]></Name>
+</Value>
+<Value id='26517' >
+<Name><![CDATA[CD-RW]]></Name>
+</Value>
+<Value id='33616' >
+<Name><![CDATA[CD-RW/DVD Combo]]></Name>
+</Value>
+<Value id='26518' >
+<Name><![CDATA[DVD-ROM]]></Name>
+</Value>
+<Value id='26519' >
+<Name><![CDATA[DVD+/-RW]]></Name>
+</Value>
+<Value id='50605' >
+<Name><![CDATA[HD-DVD]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='26446' >
+<EditType>0</EditType><Type><![CDATA[1]]></Type>
+<MessageBottom><![CDATA[Please enter screen size in inches. Enter numbers only.]]></MessageBottom>
+<Label><![CDATA[Screen Size]]></Label>
+<DefaultUnitOfMeasureFormatString><![CDATA[{0} inches]]></DefaultUnitOfMeasureFormatString>
+<ValidationRules>
+<Rule>
+<Name>PrecisionRule</Name><Precision>1</Precision></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='42213' >
+<EditType>0</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Processor Configuration]]></Label>
+<ValueList count='7' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='26523' >
+<Name><![CDATA[Single Core]]></Name>
+</Value>
+<Value id='26524' >
+<Name><![CDATA[Dual Core]]></Name>
+</Value>
+<Value id='98263' >
+<Name><![CDATA[Triple Core]]></Name>
+</Value>
+<Value id='53866' >
+<Name><![CDATA[Quad Core]]></Name>
+</Value>
+<Value id='98264' >
+<Name><![CDATA[Six Core]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other>
+<Attribute id='42213' >
+<Label><![CDATA[Processor Configuration]]></Label>
+</Attribute>
+<Attribute id='6' >
+<Label><![CDATA[Type]]></Label>
+</Attribute>
+<Attribute id='183' >
+<Label><![CDATA[Title]]></Label>
+</Attribute>
+<Attribute id='26443' >
+<Label><![CDATA[Processor Type]]></Label>
+</Attribute>
+<Attribute id='26444' >
+<Label><![CDATA[Processor Speed]]></Label>
+<MessageBottom><![CDATA[If selecting "Other," please enter the processor speed in MHz. Example: for 4.2 GHz, enter 4200. Enter numbers only.]]></MessageBottom>
+</Attribute>
+<Attribute id='12' >
+<Label><![CDATA[Memory]]></Label>
+<MessageBottom><![CDATA[If selecting "Other," please enter RAM in MB. Example: for 3.2 GB, enter 3200. Enter numbers only.]]></MessageBottom>
+</Attribute>
+<Attribute id='26445' >
+<Label><![CDATA[Primary Drive]]></Label>
+<MessageBottom><![CDATA[If your item has more than one drive, please specify the most powerful drive included.]]></MessageBottom>
+</Attribute>
+<Attribute id='13' >
+<Label><![CDATA[Operating System]]></Label>
+</Attribute>
+<Attribute id='14' >
+<Label><![CDATA[Brand]]></Label>
+</Attribute>
+</Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+<CharacteristicsSet id='2276'  type='SiteWide'  order='2' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<PresentationInstruction pageLocation="ReturnPolicy">
+    <DomainName>Return Policy</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3803" quadrant="top">
+                    <Input align="left" bold="true" color="#000000" columns="1" face="Arial, Helvetica, Sans-Serif" size="2" type="checkbox"/>
+                </Attribute>
+                <MessageRight color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3804" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3805" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3993" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3806" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input cols="70" rows="6" type="collapsible_textarea"/>
+                </Attribute>
+                <MessageBottom color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute id='3803'  pageLocation="ReturnPolicy">
+<EditType>3</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Returns Accepted]]></Label>
+<MessageRight><![CDATA[- Specify a return policy. <A HREF="http://pages.ebay.ca/help/sell/contextual/return-policy.html" onClick="if(window.openContextualHelpWindow){return openContextualHelpWindow(this.href)}" target="helpwin">Learn More</A>.]]></MessageRight>
+<ValueList count='1' >
+<Value id='32040' >
+<Name><![CDATA[Returns Accepted]]></Name>
+</Value>
+</ValueList>
+<Dependency count='2'  parentValueId='32040'  type='2'  childAttrId='3993' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+<IsDefault/>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='32040'  type='2'  childAttrId='3804' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+<IsDefault/>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</Dependency>
+<Dependency count='3'  parentValueId='32040'  type='2'  childAttrId='3805' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+<IsDefault/>
+</Value>
+</Dependency>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3804'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<EditType>3</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Item must be returned within]]></Label>
+<ValueList count='5' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3805'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<EditType>3</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Refund will be given as]]></Label>
+<ValueList count='3' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3806'  pageLocation="ReturnPolicy">
+<EditType>3</EditType><Type><![CDATA[2]]></Type>
+<MessageBottom><![CDATA[Note: 500 character limit]]></MessageBottom>
+<Label><![CDATA[Return policy details]]></Label>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3993'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<EditType>3</EditType><Type><![CDATA[2]]></Type>
+<Label><![CDATA[Return shipping will be paid by]]></Label>
+<ValueList count='2' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other></Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+</Characteristics>
+<GlobalSettings>
+<MonthDescendingLong>December;November;October;September;August;July;June;May;April;March;February;January;</MonthDescendingLong><MonthAscendingShort>Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec;</MonthAscendingShort><MonthAscendingLong>January;February;March;April;May;June;July;August;September;October;November;December;</MonthAscendingLong><MonthDescendingShort>Dec;Nov;Oct;Sep;Aug;Jul;Jun;May;Apr;Mar;Feb;Jan;</MonthDescendingShort><BaseHTMLPath><![CDATA[http://pages.ebay.ca/]]></BaseHTMLPath>
+</GlobalSettings>
+</eBay>

@@ -1,0 +1,52 @@
+<script>
+Array.prototype.contains = function(obj){
+    var i=this.length;
+    while(i--){
+        if(this[i].val === obj )
+            return true;
+    }
+    return false;
+}
+
+Array.prototype.get = function(obj){
+    var i=this.length;
+    while(i--){
+        if(this[i].val === obj)
+            return this[i].key;
+    }
+    return '';
+}
+var longestPalindrome = function(s) {
+    if( s === undefined || s === null || s.length<1)
+        return '';
+    
+    var start = 0; 
+    var end = 0;
+    for(var i=0; i<s.length; i++){
+        var len1 = expandAroundCenter(s, i, i);
+        var len2 = expandAroundCenter(s, i, i+1);
+        var len = Math.max(len1, len2);
+console.log(len +","+start);
+        if(len>(end - start)){
+            start = i - parseInt((len-1) / 2);
+            end = i + parseInt( len / 2);
+        }
+    }
+    return s.substring(start, end+1);
+};
+
+var expandAroundCenter = function(s, left, right){
+    var ll = left;
+    var rr = right;
+    var ss = s;//.split('');
+//console.log(left);
+//console.log(right);
+    while(ll>=0 && rr <s.length && s[ll] === s[rr]){
+        ll--;
+        rr++;
+    }
+    return rr-ll-1;
+}
+
+console.log(longestPalindrome('cbb'))
+</script>

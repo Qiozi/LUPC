@@ -1,0 +1,405 @@
+﻿@bg-color: rgb(205, 227, 242);
+@title-bg-color: #f2f2f2;
+@title-border-color: #ff6a00;
+
+
+
+
+@media screen and (min-width: 768px) {
+    .lu-spec-content {
+        display: flex;
+        background-color: @bg-color;
+        padding: 1rem;
+
+        .fontSize1 {
+            //  font-size: 1rem;
+        }
+
+        .borderRadius10 {
+            border-radius: 10px;
+        }
+
+        .txtCenter {
+            text-align: center;
+        }
+
+        .floatRight {
+            float: right;
+        }
+
+        .shadaow10 {
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        .pd {
+            padding: 1rem;
+        }
+
+        .txtColor {
+            color: #333;
+        }
+
+        .box {
+            display: flex;
+            align-items: flex-start;
+            //flex-direction:column;
+            .item {
+                flex-grow: 1;
+            }
+        }
+
+        .small-area {
+            //display:flex;
+            //width:100%;
+            // max-width:600px;
+        }
+
+        .page-main {
+            max-width: 1100px;
+            margin: auto auto;
+            display: flex;
+
+            .lu-spec-page-left {
+                display: block;
+                margin-right: 1rem;
+
+                .lu-spec-cate-title {
+                    background-color: @title-border-color;
+                    padding: 10px;
+                    text-align: center;
+                    color: white;
+                }
+
+                .lu-spec-item-a {
+                    width: 200px;
+                    display: block;
+                    background-color: white;
+                    padding: 5px 10px;
+                    border-left: 5px solid #ccc;
+                    border-bottom: 1px solid #f2f2f2;
+                    font-size: 14px;
+                    color: #333;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+
+                    .lu-spec-cate-a-txt {
+                        display: block;
+                    }
+
+                    .lu-spec-item-img {
+                        width: 64px;
+                        height: 64px;
+                        margin-right: 5px;
+                        display: block;
+                    }
+                }
+
+                .lu-spec-item-a:hover {
+                    background-color: #a2a2a2;
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+
+            .lu-spec-brand-logo {
+                width: 120px;
+            }
+
+            .lu-spec-fixed {
+                /*height: 750px;
+            overflow: scroll;*/
+            }
+
+            .main-model {
+                margin-bottom: 1rem;
+                background-color: white;
+
+                .lu-spec-title {
+                    background-color: @title-bg-color;
+                    padding: 10px;
+                    border-left: 5px solid @title-border-color;
+                }
+
+                .lu-spec-title2 {
+                    background-color: @title-bg-color;
+                    padding: 10px;
+                    border-left: 5px solid @title-border-color;
+                    color: @title-border-color;
+                    font-weight: bold;
+                }
+
+                .lu-spec-warn-note {
+                    margin: 2rem 1rem;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    color: #ccc;
+                    text-align: center;
+                }
+
+                .spec-comment {
+                    padding: 4rem;
+                    color: #333;
+
+                    td, div, span, li, label, {
+                        //  font-size: .9rem;
+                    }
+                }
+
+                .spec-comment-box {
+                    padding: 2rem;
+                    color: #333;
+
+                    td, div, span, li, label, {
+                        //  font-size: .9rem;
+                    }
+                }
+
+                .lu-spec-brand-logo-box {
+                    text-align: center;
+
+                    img {
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        border-radius: 3px 3px 3px 3px;
+                        box-shadow: 3px 3px 3px #ccc;
+                    }
+                }
+
+                .spec-logo-image-list-area {
+                    //justify-content: center;
+                    //display: flex;
+                    //flex-flow: wrap;
+                    padding: 1rem;
+                    // border: 10px solid #ff6a00;
+                    // border-radius: 20px 0 ;
+                    .spec-logo-item {
+                        border: 0px solid #ccc;
+                        margin-bottom: 1rem;
+                        margin-right: 1rem;
+                        text-align: center;
+
+                        .spec-logo-item-img-sm {
+                            max-width: 730px;
+                            // border-radius: 50px;
+                        }
+
+                        .spec-logo-item-img-sm-one {
+                            max-width: 730px;
+                            // border-radius: 50px;
+                        }
+                    }
+
+                    .spec-logo-item:last-child {
+                        margin-right: 0;
+                    }
+
+                    .spec-logo-item:hover {
+                        border: 0px solid #fff;
+
+                        .spec-logo-item-img-sm {
+                            //box-shadow: 5px 5px 5px #888888;
+                            // animation-play-state: running;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .lu-spec-content {
+        display: flex;
+        background-color: @bg-color;
+        padding: 1rem;
+
+        .fontSize1 {
+            //  font-size: 1rem;
+        }
+
+        .borderRadius10 {
+            border-radius: 10px;
+        }
+
+        .txtCenter {
+            text-align: center;
+        }
+
+        .floatRight {
+            margin-top: 10px;
+            //float: right;
+        }
+
+        .shadaow10 {
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        .pd {
+            padding: 1rem;
+        }
+
+        .txtColor {
+            color: #333;
+        }
+
+        .box {
+            
+        
+        }
+
+        .small-area {
+            //display:flex;
+            //width:100%;
+            // max-width:600px;
+        }
+
+        .page-main {
+            max-width: 1100px;
+            margin: auto auto;
+            
+
+            .lu-spec-page-left {
+                display: block;
+                margin-right: 1rem;
+
+                .lu-spec-cate-title {
+                    background-color: @title-border-color;
+                    padding: 10px;
+                    text-align: center;
+                    color: white;
+                }
+
+                .lu-spec-item-a {
+                    width: 200px;
+                    display: block;
+                    background-color: white;
+                    padding: 5px 10px;
+                    border-left: 5px solid #ccc;
+                    border-bottom: 1px solid #f2f2f2;
+                    font-size: 14px;
+                    color: #333;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+
+                    .lu-spec-cate-a-txt {
+                        display: block;
+                    }
+
+                    .lu-spec-item-img {
+                        width: 64px;
+                        height: 64px;
+                        margin-right: 5px;
+                        display: block;
+                    }
+                }
+
+                .lu-spec-item-a:hover {
+                    background-color: #a2a2a2;
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+
+            .lu-spec-brand-logo {
+                width: 120px;
+            }
+
+            .lu-spec-fixed {
+                /*height: 750px;
+            overflow: scroll;*/
+            }
+
+            .main-model {
+                margin-bottom: 1rem;
+                background-color: white;
+                width: 100%;
+
+                .lu-spec-title {
+                    background-color: @title-bg-color;
+                    padding: 10px;
+                    border-left: 5px solid @title-border-color;
+                }
+
+                .lu-spec-title2 {
+                    background-color: @title-bg-color;
+                    padding: 10px;
+                    border-left: 5px solid @title-border-color;
+                    color: @title-border-color;
+                    font-weight: bold;
+                }
+
+                .lu-spec-warn-note {
+                    margin: 2rem 1rem;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    color: #ccc;
+                    text-align: center;
+                }
+
+                .spec-comment {
+                    padding: 1rem;
+                    color: #333;
+
+                    td, div, span, li, label, {
+                        //  font-size: .9rem;
+                    }
+                }
+
+                .spec-comment-box {
+                    padding: 1rem;
+                    color: #333;
+
+                    td, div, span, li, label, {
+                        //  font-size: .9rem;
+                    }
+                }
+
+                .lu-spec-brand-logo-box {
+                    text-align: center;
+
+                    img {
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        border-radius: 3px 3px 3px 3px;
+                        box-shadow: 3px 3px 3px #ccc;
+                    }
+                }
+
+                .spec-logo-image-list-area {
+                    //justify-content: center;
+                    //display: flex;
+                    //flex-flow: wrap;
+                    width: 100%;
+                    padding: 1rem;
+                    // border: 10px solid #ff6a00;
+                    // border-radius: 20px 0 ;
+                    .spec-logo-item {
+                        width: 100%;
+
+                        .spec-logo-item-img-sm {
+                            width: 100%;
+                            // border-radius: 50px;
+                        }
+                    }
+
+                    .spec-logo-item:last-child {
+                        margin-right: 0;
+                    }
+
+                    .spec-logo-item:hover {
+                        border: 0px solid #fff;
+
+                        .spec-logo-item-img-sm {
+                            //box-shadow: 5px 5px 5px #888888;
+                            // animation-play-state: running;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

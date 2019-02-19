@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/PS-SPD-0600NPCWUS-W/34241.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34241_list_1.jpg" alt="Thermaltake 600W Smart SP-600AH2NKW ATX12V & EPS12V Power Supply" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/PS-SPD-0600NPCWUS-W/34241.html'>
+                                       Thermaltake 600W Smart SP-600AH2NKW ATX12V & EPS12V Power Supply
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/PS-SPD-0600NPCWUS-W/34241.html'><label class="price">Price: $68.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/220-B3-0750-V1/34184.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34184_list_1.jpg" alt="eVGA 750W Power Supply 220-B3-0750-V1 BRONZE 750W +12V 150mm Fan 80 Plus ATX" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/220-B3-0750-V1/34184.html'>
+                                       eVGA 750W Power Supply 220-B3-0750-V1 BRONZE 750W +12V 150mm Fan 80 Plus ATX
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/220-B3-0750-V1/34184.html'><label class="price">Price: $118.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/210-GQ-0750-V1/31491.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31491_list_1.jpg" alt="eVGA 750W Power Supply 750 GQ Gold 100-240 VAC +12 Retail 210-GQ-0750-V1" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/210-GQ-0750-V1/31491.html'>
+                                       eVGA 750W Power Supply 750 GQ Gold 100-240 VAC +12 Retail 210-GQ-0750-V1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/210-GQ-0750-V1/31491.html'><label class="price">Price: $109.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/210-GQ-0650-V1/31487.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31487_list_1.jpg" alt="eVGA 650W Power Supply 650 GQ Gold 100-240 VAC +12 Retail 210-GQ-0650-V1" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/210-GQ-0650-V1/31487.html'>
+                                       eVGA 650W Power Supply 650 GQ Gold 100-240 VAC +12 Retail 210-GQ-0650-V1
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/210-GQ-0650-V1/31487.html'><label class="price">Price: $119.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/220-G2-0750-XR/31226.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/31226_list_1.jpg" alt="eVGA 750W Power Supply SuperNOVA NEX750G2 80PLUS Gold 12V Retail 220-G2-0750-XR" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/220-G2-0750-XR/31226.html'>
+                                       eVGA 750W Power Supply SuperNOVA NEX750G2 80PLUS Gold 12V Retail 220-G2-0750-XR
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/220-G2-0750-XR/31226.html'><label class="price">Price: $143.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

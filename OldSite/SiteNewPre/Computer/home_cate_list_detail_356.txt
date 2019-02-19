@@ -1,0 +1,61 @@
+﻿
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ASUS-T100HA-DH11T-CA-Tablet-Quad-Core-X5-Z8500-10-1-IPS-Touch-2G-RAM-32GB-EMMC.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31604.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>ASUS T100HA-DH11T-CA Tablet Quad Core X5-Z8500 10.1" IPS Touch 2G RAM 32GB EMMC</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=222177011473"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$428.25</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31604'>
+										<del>...</del>
+										<span class="price itemprice" sku='31604'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/ASUS-T100HA-SH11T-CB-Tablet-10-1-IPS-Quad-Core-x5-Z8500-2GB-32GB-EMMC-Win10.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/31600.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>ASUS T100HA-SH11T-CB Tablet 10.1 IPS Quad-Core x5-Z8500 2GB 32GB EMMC Win10</h5>
+                                <a class='partEbayArea' target="_blank" href="http://www.ebay.ca/itm/ws/eBayISAPI.dll?ViewItem&Item=222177012279"><span title='eBay Price'><strong><span style='color:red'>e</span><span style='color:blue'>B</span><span style='color:#FF742E;'>a</span><span style='color:green;'>y</span>.ca:</strong> <span class='price'>$404.43</span></span></a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=31600'>
+										<del>...</del>
+										<span class="price itemprice" sku='31600'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Lenovo-Tablet-PC-59393611-IdeaTab-Miix-8inch-Bay-Trail-2GB-64GB-Win8-1-Silver.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/29062.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Lenovo Tablet PC 59393611 IdeaTab Miix 8inch Bay Trail 2GB 64GB Win8.1 Silver</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=29062'>
+										<del>...</del>
+										<span class="price itemprice" sku='29062'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3"><a href="/computer/parts_detail/Asus-T100TA-XB12T-CA-Tablet-PC-Intel-Z3775-2GB-RAM-64G-Flash-Memory-10-1-Win8.html">                            
+                            <div class="thumbnail" >
+                              <img class="lazy" src='https://lucomputers.com/pro_img/ebay_gallery/9/999999_ebay_list_t_1.jpg' data-original="https://o9ozc36tl.qnssl.com/29058.jpg?imageView/3/w/135/h/135" width="135" alt="...">
+                              <div class="caption" style="">
+                                <h5>Asus T100TA-XB12T-CA Tablet PC Intel Z3775 2GB RAM 64G Flash Memory 10.1" Win8</h5>
+                                <a class='partEbayArea'>&nbsp;</a>
+								<a class='btn text-center priceAre' href='ShoppingCartTo.aspx?sku=29061'>
+										<del>...</del>
+										<span class="price itemprice" sku='29061'>...</span>
+										<span class='glyphicon glyphicon-shopping-cart'></span> Buy
+								</a>
+                              </div>
+                            </div>
+                            </a>
+                          </div>

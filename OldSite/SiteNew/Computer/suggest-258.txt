@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/LSATA18RA1/29099.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/29099_list_1.jpg" alt="STARTECH 18in Latching SATA to Right Angle SATA Serial ATA Cable" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/LSATA18RA1/29099.html'>
+                                       STARTECH 18in Latching SATA to Right Angle SATA Serial ATA Cable
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/LSATA18RA1/29099.html'><label class="price">Price: $2.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/SATA18/28606.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28606_list_1.jpg" alt="STARTECH This high quality SATA cable is designed for connecting SATA drives even in tight spaces. - 18in sata cable - 18in serial ata cable - 18 sata cable" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/SATA18/28606.html'>
+                                       STARTECH This high quality SATA cable is designed for connecting SATA drives even in tight spaces. - 18in sata cable - 18in serial ata cable - 18 sata cable
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/SATA18/28606.html'><label class="price">Price: $2.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/DUB-1341/28480.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28480_list_1.jpg" alt="D-Link DUB-1341 4-PORT USB 3.0 HUB" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/DUB-1341/28480.html'>
+                                       D-Link DUB-1341 4-PORT USB 3.0 HUB
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/DUB-1341/28480.html'><label class="price">Price: $28.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/DUB-H7BL/28470.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28470_list_1.jpg" alt="D-Link DUB-H7BL 7-Port USB Hub" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/DUB-H7BL/28470.html'>
+                                       D-Link DUB-H7BL 7-Port USB Hub
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/DUB-H7BL/28470.html'><label class="price">Price: $29.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/DUB-1340/28469.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/28469_list_1.jpg" alt="D-Link DUB-1340 4-Port USB 3.0 Hub" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/DUB-1340/28469.html'>
+                                       D-Link DUB-1340 4-Port USB 3.0 Hub
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/DUB-1340/28469.html'><label class="price">Price: $42.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>

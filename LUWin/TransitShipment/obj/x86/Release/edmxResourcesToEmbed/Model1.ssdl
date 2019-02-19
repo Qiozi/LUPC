@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nicklu2Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="nicklu2ModelStoreContainer">
+    <EntitySet Name="tb_timer" EntityType="nicklu2Model.Store.tb_timer" store:Type="Tables" Schema="nicklu2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="tb_timer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CmdContent" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Cmd" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="regdate" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

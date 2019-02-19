@@ -1,0 +1,154 @@
+﻿// // // // // // // // // // // // // // // // 
+//
+// Author: Qiozi@msn.com 
+// Date:	2007-5-11 9:43:42
+//
+// // // // // // // // // // // // // // // //
+using Castle.ActiveRecord;
+using System;
+using System.Data;
+
+[ActiveRecord("tb_system_product")]
+[Serializable]
+public class SystemProductModel : ActiveRecordBase<SystemProductModel>
+{
+    int _system_product_serial_no;
+    int _product_serial_no;
+    int _system_templete_serial_no;
+    int _product_order;
+    int _showit;
+    int _part_group_id;
+    int _part_quantity;
+    int _part_max_quantity;
+
+    public SystemProductModel()
+    {
+
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [PrimaryKey(PrimaryKeyType.Identity)]
+    public int system_product_serial_no
+    {
+        get { return _system_product_serial_no; }
+        set { _system_product_serial_no = value; }
+    }
+    public static SystemProductModel GetSystemProductModel(int _system_product_serial_no)
+    {
+        SystemProductModel[] models = SystemProductModel.FindAllByProperty("system_product_serial_no", _system_product_serial_no);
+        if (models.Length == 1)
+            return models[0];
+        else
+            return new SystemProductModel();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int product_serial_no
+    {
+        get { return _product_serial_no; }
+        set { _product_serial_no = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int system_templete_serial_no
+    {
+        get { return _system_templete_serial_no; }
+        set { _system_templete_serial_no = value; }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int product_order
+    {
+        get { return _product_order; }
+        set { _product_order = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary
+    [Property]
+    public int showit
+    {
+        get { return _showit; }
+        set { _showit = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int part_group_id
+    {
+        get { return _part_group_id; }
+        set { _part_group_id = value; }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int part_quantity
+    {
+        get { return _part_quantity; }
+        set { _part_quantity = value; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Property]
+    public int part_max_quantity
+    {
+        get { return _part_max_quantity; }
+        set { _part_max_quantity = value; }
+    }  
+
+    public static NHibernate.Expression.Order[] CurrentOrder(bool order)
+    {
+        NHibernate.Expression.Order o1 = new NHibernate.Expression.Order("product_order", order);
+        NHibernate.Expression.Order o = new NHibernate.Expression.Order("system_product_serial_no", order);
+        NHibernate.Expression.Order[] oo = new NHibernate.Expression.Order[] { o1, o };
+        return oo;
+    }
+
+    public static SystemProductModel[] GetSystemProductModelsBySystemTemplete(int system_templete_serial_no, Showit showit, bool order)
+    {
+        NHibernate.Expression.EqExpression e = new NHibernate.Expression.EqExpression("system_templete_serial_no", system_templete_serial_no);
+
+        if (showit == Showit.all)
+            return SystemProductModel.FindAll(CurrentOrder(order), e);
+        else
+        {
+            NHibernate.Expression.EqExpression e2 = new NHibernate.Expression.EqExpression("showit" , showit == Showit.show_true ? 1:0);
+            NHibernate.Expression.AndExpression a = new NHibernate.Expression.AndExpression(e, e2);
+            return SystemProductModel.FindAll(CurrentOrder(order), a);
+        }
+    }
+
+    public static SystemProductModel[] GetModelsByPartGroupID(int part_group_id)
+    {
+        return SystemProductModel.FindAllByProperty("part_group_id", part_group_id);
+    }
+
+    public static DataTable FindSystemDetail(int product_id)
+    {
+        if (product_id.ToString().Length != 8)
+            return Config.ExecuteDataTable("select sp.*, (sp.product_current_sold * sp.part_quantity ) sold, p.product_name,p.manufacturer_part_number from tb_system_product  sp inner join tb_product p on p.product_serial_no = sp.product_serial_no where system_templete_serial_no='" + product_id + "' and p.tag=1 and p.is_non=0 order by sp.product_order asc ");
+        else
+            return Config.ExecuteDataTable("select std.*,(std.product_current_sold * std.part_quantity) sold, p.product_name,p.manufacturer_part_number from tb_sp_tmp_detail std inner join tb_product p on p.product_serial_no=std.product_serial_no where sys_tmp_code='" + product_id + "' and p.is_non=0 order by product_order asc ");
+    }
+
+    
+
+}

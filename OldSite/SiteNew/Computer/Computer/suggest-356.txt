@@ -1,0 +1,115 @@
+﻿
+                <div>
+                    <h4>May We Also Suggest</h4>
+                    <div class="suggestList"> 
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/81CG019JUS/34594.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34594_list_1.jpg" alt="Lenovo IdeaPad Miix 520-12IKB 81CG019JUS 2in1 Notebook i5-8250U 8G RAM 256GB SSD" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/81CG019JUS/34594.html'>
+                                       Lenovo IdeaPad Miix 520-12IKB 81CG019JUS 2in1 Notebook i5-8250U 8G RAM 256GB SSD
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/81CG019JUS/34594.html'><label class="price">Price: $1206.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z300M-A2-GR/34137.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/34137_list_1.jpg" alt="Asus Tablet PC 10.1inch 2GB DDR3L 16GB EMMC Mali-T720MP2 Touch Android 6.0" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z300M-A2-GR/34137.html'>
+                                       Asus Tablet PC 10.1inch 2GB DDR3L 16GB EMMC Mali-T720MP2 Touch Android 6.0
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/Z300M-A2-GR/34137.html'><label class="price">Price: $264.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z500M-C1-SL/33553.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33553_list_1.jpg" alt="Asus ZenPad 3S 10 Tablet Mediatek 8176 4GB RAM 64GB EMMC 9.7" Android 6.0" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z500M-C1-SL/33553.html'>
+                                       Asus ZenPad 3S 10 Tablet Mediatek 8176 4GB RAM 64GB EMMC 9.7" Android 6.0
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/Z500M-C1-SL/33553.html'><label class="price">Price: $490.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z380M-A2-GR/33552.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33552_list_1.jpg" alt="Asus Z380M-A2-GR Tablet MTK 8163 2GB RAM 16GB eMMC Android 6.0 8"(1280x800)" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/Z380M-A2-GR/33552.html'>
+                                       Asus Z380M-A2-GR Tablet MTK 8163 2GB RAM 16GB eMMC Android 6.0 8"(1280x800)
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/Z380M-A2-GR/33552.html'><label class="price">Price: $212.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                     
+                        <table width="222">
+                            <tr>
+                                <td>
+                                    <a href='/computer/T4N15UT-ABL/33221.html'>
+                                        <img width="150" src="https://www.lucomputers.com/pro_img/components/33221_list_1.jpg" alt="HP ElitePad 1000 G2 Tablet Intel ATOM Z3795 4GB RAM 64GB eMMC 10.1" Touch Win10" style='border:0;' onerror="this.src='https://www.lucomputers.com/pro_img/source_components/99999.jpg';" />
+                                    </a>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='/computer/T4N15UT-ABL/33221.html'>
+                                       HP ElitePad 1000 G2 Tablet Intel ATOM Z3795 4GB RAM 64GB eMMC 10.1" Touch Win10
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <a href='/computer/T4N15UT-ABL/33221.html'><label class="price">Price: $1071.99</label></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
