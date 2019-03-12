@@ -190,7 +190,7 @@
                             <br />
                             <h3>
                                 <label>
-                                    <input type="checkbox" name="issueToEbay" />Issue to eBay</label>
+                                    <input type="checkbox" name="issueToEbay" style="display:none;" />Issue to eBay</label>
                                 <table cellspacing="10">
                                     <tr>
                                         <td colspan="2">eBay Category
@@ -254,7 +254,7 @@
                             <br />
                             <%= IssueComment %>
                             <br />
-                            <input type="button" name="issueSubmit" value="Issue" <% if not canIssue then  response.write "disabled=""disabled""" %>
+                            <input type="button" name="issueSubmit" value="Post to eBay" <% if not canIssue then  response.write "disabled=""disabled""" %>
                                 onclick="issueToEbay();" /><span id='partToEbayLoading'></span>
                             <br />
                             <%= SettingComment %>

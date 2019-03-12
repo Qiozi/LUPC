@@ -23,6 +23,7 @@ namespace LUComputers.Helper
                 mm.To.Add(new MailAddress("terryeah@gmail.com"));
                 if (to_email != "terryeah@gmail.com")
                     mm.To.Add(new MailAddress(to_email));
+                mm.To.Add(new MailAddress("benson@lucomputers.com"));
                 mm.Priority = MailPriority.Normal;
                 mm.Sender = new MailAddress("sales@lucomputers.com");// ("xiaowu021@126.com");
                 mm.Subject = title;

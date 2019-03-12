@@ -24,6 +24,7 @@ namespace DownloadEBayOrder
                 mm.From = new MailAddress("sales@lucomputers.com", "LU Computers");
                 mm.IsBodyHtml = true;
                 mm.To.Add(new MailAddress(to_email));
+                mm.To.Add(new MailAddress("benson@lucomputers.com"));
                 mm.Priority = MailPriority.Normal;
                 mm.ReplyTo = new MailAddress("sales@lucomputers.com");
                 mm.Sender = new MailAddress("sales@lucomputers.com");

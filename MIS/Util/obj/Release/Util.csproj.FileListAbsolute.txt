@@ -11,3 +11,17 @@ C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Release\Util.csproj.CoreCompile
 C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Release\Util.csproj.CopyComplete
 C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Release\Util.dll
 C:\Workspaces\MyProjects\LUComputer\MIS\Util\obj\Release\Util.pdb
+C:\Workspaces\LUPC\MIS\Util\bin\Release\Util.dll.config
+C:\Workspaces\LUPC\MIS\Util\bin\Release\Util.dll
+C:\Workspaces\LUPC\MIS\Util\bin\Release\Util.pdb
+C:\Workspaces\LUPC\MIS\Util\bin\Release\EntityFramework.dll
+C:\Workspaces\LUPC\MIS\Util\bin\Release\EntityFramework.SqlServer.dll
+C:\Workspaces\LUPC\MIS\Util\bin\Release\NPOI.dll
+C:\Workspaces\LUPC\MIS\Util\bin\Release\EntityFramework.xml
+C:\Workspaces\LUPC\MIS\Util\bin\Release\EntityFramework.SqlServer.xml
+C:\Workspaces\LUPC\MIS\Util\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Workspaces\LUPC\MIS\Util\obj\Release\Util.csproj.CoreCompileInputs.cache
+C:\Workspaces\LUPC\MIS\Util\obj\Release\Util.csproj.CopyComplete
+C:\Workspaces\LUPC\MIS\Util\obj\Release\Util.dll
+C:\Workspaces\LUPC\MIS\Util\obj\Release\Util.pdb
+C:\Workspaces\LUPC\MIS\Util\obj\Release\Util.csprojAssemblyReference.cache

@@ -178,7 +178,7 @@ where isOk=0 and lu_sku not in (select luc_sku from tb_dont_update) and prodType
                 try
                 {
                     n += 1;
-                    string luc_sku = s.SKU;
+                    var luc_sku = int.Parse(s.SKU);
                     SetStatus(null, string.Format("{0}:: {1} of {2}::page={3}",
                         luc_sku
                         , n
@@ -210,14 +210,14 @@ where isOk=0 and lu_sku not in (select luc_sku from tb_dont_update) and prodType
                                     , subDT[0].other_inc_price.ToString()
                                     , subDT[0].regdate.ToString()
                                     , subDT[0].other_inc_store_sum.ToString()
-                                    , luc_sku);
+                                    , luc_sku.ToString());
                             }
                             else
                             {
 
 
                                 // foreach (DataRow sdr in subDT.Rows)
-                                foreach (var sdr in subDTList)
+                                foreach (var sdr in subDT)
                                 {
                                     ltd_id = sdr.other_inc_id.ToString();
                                     regdate = sdr.regdate.ToString();
@@ -237,7 +237,7 @@ where isOk=0 and lu_sku not in (select luc_sku from tb_dont_update) and prodType
                                     }
                                 }
 
-                                UpdateLtdCost(ltd_id, cost.ToString(), regdate, quantity.ToString(), luc_sku);
+                                UpdateLtdCost(ltd_id, cost.ToString(), regdate, quantity.ToString(), luc_sku.ToString());
                             }
                         }
                     }

@@ -14,3 +14,9 @@ C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.csproj
 C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.dll
 C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.pdb
 C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Release\SiteEnum.csprojAssemblyReference.cache
+C:\Workspaces\LUPC\OldSite\SiteEnum\bin\Release\SiteEnum.dll
+C:\Workspaces\LUPC\OldSite\SiteEnum\bin\Release\SiteEnum.pdb
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Release\SiteEnum.csprojAssemblyReference.cache
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Release\SiteEnum.csproj.CoreCompileInputs.cache
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Release\SiteEnum.dll
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Release\SiteEnum.pdb

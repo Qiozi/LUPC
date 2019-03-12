@@ -5,3 +5,10 @@ C:\Workspaces\MyProjects\LUComputer\OldSite\LU.Model\LU.Model\obj\Release\LU.Mod
 C:\Workspaces\MyProjects\LUComputer\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.csproj.CoreCompileInputs.cache
 C:\Workspaces\MyProjects\LUComputer\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.dll
 C:\Workspaces\MyProjects\LUComputer\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.pdb
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\bin\Release\LU.Model.dll.config
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\bin\Release\LU.Model.dll
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\bin\Release\LU.Model.pdb
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.csprojAssemblyReference.cache
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.csproj.CoreCompileInputs.cache
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.dll
+C:\Workspaces\LUPC\OldSite\LU.Model\LU.Model\obj\Release\LU.Model.pdb

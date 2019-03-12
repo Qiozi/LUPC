@@ -43,11 +43,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="NPOI" version="1.2.5.0" publicKeyToken="0DF73EC7942B34E1" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DBProvider.dll" size="25600">
       <assemblyIdentity name="DBProvider" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -55,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>PpSQB4IRxkJ9yb5/d9R/VxTCNBs=</dsig:DigestValue>
+        <dsig:DigestValue>U7AYiKcRI6CyQFvUBspgjIOpA9I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XIEZz5M1TBUV6RXl2/XrK6VhbGk=</dsig:DigestValue>
+        <dsig:DigestValue>bX0Nz8HlFLSzmvyG228ZeQt0JRk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -163,7 +158,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>n4IlAlQPvgAUzHpiL5aOOEiDVM4=</dsig:DigestValue>
+        <dsig:DigestValue>/u+QaBLd43VZjeLZEnibYAKQbe0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
