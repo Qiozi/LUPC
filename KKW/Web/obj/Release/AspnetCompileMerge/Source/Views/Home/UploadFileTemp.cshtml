@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "UploadFileTemp";
+}
+
+<h2>UploadFileTemp</h2>
+
+@using (Html.BeginForm("UploadFileTemp", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <text>选择上传文件：</text><input name="fileData" type="file" id="fileData" />
+    <br />
+    <br />
+    <input type="hidden" name="gid" value="@ViewBag.Gid"/>
+    <input type="submit" name="Upload" value="上传文件" />
+}

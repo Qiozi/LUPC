@@ -1,0 +1,60 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 121.41.75.68    Database: qstore
+-- ------------------------------------------------------
+-- Server version	5.5.40
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tb_user2`
+--
+
+DROP TABLE IF EXISTS `tb_user2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tb_user2` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(20) DEFAULT NULL,
+  `user_pwd` varchar(50) DEFAULT NULL,
+  `showit` tinyint(1) DEFAULT '1',
+  `user_code` varchar(20) DEFAULT NULL,
+  `is_admin` tinyint(1) DEFAULT '0',
+  `phone` varchar(50) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `comment` varchar(100) DEFAULT NULL,
+  `section` varchar(20) DEFAULT NULL,
+  `regdate` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_user2`
+--
+
+LOCK TABLES `tb_user2` WRITE;
+/*!40000 ALTER TABLE `tb_user2` DISABLE KEYS */;
+INSERT INTO `tb_user2` VALUES (2,'吕家燕','A2-29-BB-BF-1A-33-A2-A7-D4-98-4D-A4-98-8F-8D-6A',1,'',1,'A2-29-BB-BF-1A-33-A2-A7-D4-98-4D-A4-98-8F-8D-6A',NULL,'','','2010-11-21 15:59:51'),(3,'谢志祥','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2010-12-02 10:42:56'),(4,'陈艳艳','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2010-12-09 13:22:23'),(5,'孙佳秀','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2011-01-17 17:04:05'),(6,'张予立','48-1F-BF-A5-9D-A2-58-10-98-E8-41-B7-AF-C1-22-F1',1,'',0,'',NULL,'','','2011-05-30 11:14:36'),(7,'郑英豪','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2011-06-27 09:59:32'),(8,'代子仁','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2011-08-22 16:09:11'),(9,'徐俊','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2012-04-18 11:12:10'),(10,'舍得','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2012-05-19 12:25:31'),(11,'汪亚萍','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',0,'',0,'',NULL,'','','2012-08-29 10:53:59'),(12,'杨小英','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',1,'',0,'',NULL,'','','2012-10-28 13:50:30'),(13,'傅建','A2-29-BB-BF-1A-33-A2-A7-D4-98-4D-A4-98-8F-8D-6A',1,'',1,'',NULL,'','','2013-03-16 09:58:39'),(14,'殷文琪','81-DC-9B-DB-52-D0-4D-C2-00-36-DB-D8-31-3E-D0-55',1,NULL,0,NULL,NULL,NULL,NULL,'2013-06-08 15:00:00');
+/*!40000 ALTER TABLE `tb_user2` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-09-09 23:41:17

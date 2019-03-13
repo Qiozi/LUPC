@@ -1,0 +1,1902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="qstoreModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_balance_cash_record">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="CreatorName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PayDate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="PayCash" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="PayNote" Type="varchar" MaxLength="255" />
+          <Property Name="PreBalance" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="CreatorId" Type="int" Nullable="false" />
+          <Property Name="IncomeCash" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="AfterBalance" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="IsExclude" Type="bool" Nullable="false" />
+          <Property Name="PayType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_bargain_money">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Cash" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Staff" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Showit" Type="bool" Nullable="false" />
+          <Property Name="Regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_check_store">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="check_regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="comment" Type="varchar" MaxLength="100" />
+          <Property Name="staff" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="valid_quantity" Type="int" Nullable="false" />
+          <Property Name="err_quantity" Type="int" Nullable="false" />
+          <Property Name="CheckStatus" Type="int" Nullable="false" />
+          <Property Name="AutoRunStatus" Type="int" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_check_store_detail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="SerialNo" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="p_id" Type="int" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="p_name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="p_cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="SnType" Type="int" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_expend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CateName" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar" MaxLength="100" />
+          <Property Name="OutTotal" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="OutBeginDate" Type="date" />
+          <Property Name="OutEndDate" Type="date" />
+          <Property Name="Average" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="CreateName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Regdate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_expend_average">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExpendDate" Type="date" />
+          <Property Name="Everyday" Type="decimal" Precision="10" Scale="0" />
+        </EntityType>
+        <EntityType Name="tb_group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_group_model">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="ModelId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_in_invoice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="input_regdate" Type="datetime" Precision="0" />
+          <Property Name="invoice_code" Type="varchar" MaxLength="50" />
+          <Property Name="Supplier" Type="varchar" MaxLength="100" />
+          <Property Name="staff" Type="varchar" MaxLength="30" />
+          <Property Name="summary" Type="varchar" MaxLength="1000" />
+          <Property Name="note" Type="varchar" MaxLength="1000" />
+          <Property Name="pay_method" Type="varchar" MaxLength="30" />
+          <Property Name="pay_total" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="curr_warehouse_id" Type="int" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_in_invoice_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="in_invoice_id" Type="int" />
+          <Property Name="in_invoice_code" Type="varchar" MaxLength="30" />
+          <Property Name="p_id" Type="int" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="regdate" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="Staff" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Flag" Type="int" Nullable="false" />
+          <Property Name="TraceNo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BrandNo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="PayTime" Type="datetime" Precision="0" />
+          <Property Name="ModifyTime" Type="datetime" Precision="0" />
+          <Property Name="Source" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="OrderType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProdName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="InOut" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="OrderStatus" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ServiceFee" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="ReturnFee" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="Note" Type="varchar" MaxLength="200" />
+          <Property Name="MoneyStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_out_invoice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="input_regdate" Type="datetime" Precision="0" />
+          <Property Name="invoice_code" Type="varchar" MaxLength="50" />
+          <Property Name="staff" Type="varchar" MaxLength="30" />
+          <Property Name="summary" Type="varchar" MaxLength="1000" />
+          <Property Name="note" Type="varchar" MaxLength="1000" />
+          <Property Name="pay_method" Type="varchar" MaxLength="30" />
+          <Property Name="pay_total" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="SN_Quantity" Type="int" />
+          <Property Name="NumIid" Type="varchar" MaxLength="50" />
+          <Property Name="Tid" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar" MaxLength="200" />
+          <Property Name="Price" Type="varchar" MaxLength="10" />
+          <Property Name="ReceivedPayment" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiverAddress" Type="varchar" MaxLength="200" />
+          <Property Name="ReceiverCity" Type="varchar" MaxLength="40" />
+          <Property Name="ReceiverDistrict" Type="varchar" MaxLength="30" />
+          <Property Name="ReceiverMobile" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiverName" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiverPhone" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiverState" Type="varchar" MaxLength="30" />
+          <Property Name="ReceiverZip" Type="varchar" MaxLength="10" />
+          <Property Name="is_Taobao" Type="bool" />
+          <Property Name="store_name" Type="varchar" MaxLength="50" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_out_invoice_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="out_invoice_id" Type="int" />
+          <Property Name="out_invoice_code" Type="varchar" MaxLength="50" />
+          <Property Name="p_id" Type="int" Nullable="false" />
+          <Property Name="SerialNO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="is_return" Type="bool" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="IsFree" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_out_invoice_product_shipping">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="out_invoice_id" Type="int" />
+          <Property Name="out_invoice_code" Type="varchar" MaxLength="50" />
+          <Property Name="ShippingCode" Type="varchar" MaxLength="20" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_pay_method">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pay_method" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tb_prod_cost_modify_record">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="p_id" Type="int" Nullable="false" />
+          <Property Name="p_name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="old_cost" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="new_cost" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="staff_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="num_iid" Type="varchar" MaxLength="50" />
+          <Property Name="p_name" Type="varchar" MaxLength="200" />
+          <Property Name="p_cate_id" Type="int" />
+          <Property Name="p_price" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="p_cost" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="p_quantity" Type="int" />
+          <Property Name="p_taobao_url" Type="varchar" MaxLength="200" />
+          <Property Name="showit" Type="bool" />
+          <Property Name="WholesalerCode" Type="varchar" MaxLength="50" />
+          <Property Name="WholesalerUrl" Type="varchar" MaxLength="100" />
+          <Property Name="brand" Type="varchar" MaxLength="50" />
+          <Property Name="WarnQty" Type="int" />
+          <Property Name="regdate" Type="datetime" Precision="0" />
+          <Property Name="yun_code" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tb_product_cate">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cate_name" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tb_product_quantity_change_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="old_quantity" Type="int" />
+          <Property Name="new_quantity" Type="int" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_proxy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaleDate" Type="date" />
+          <Property Name="SaleQuantity" Type="int" />
+          <Property Name="SaleTotal" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Regdate" Type="datetime" Precision="0" />
+          <Property Name="Note" Type="varchar" MaxLength="245" />
+        </EntityType>
+        <EntityType Name="tb_return_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNo" Type="varchar" MaxLength="15" />
+          <Property Name="out_invoice_id" Type="varchar" MaxLength="6" />
+          <Property Name="out_invoice_code" Type="varchar" MaxLength="50" />
+          <Property Name="p_id" Type="int" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="return_regdate" Type="datetime" Precision="0" />
+          <Property Name="comment" Type="varchar" MaxLength="100" />
+          <Property Name="staff" Type="varchar" MaxLength="50" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_return_wholesaler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReturnCode" Type="varchar" MaxLength="20" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="Regdate" Type="datetime" Precision="0" />
+          <Property Name="IsSure" Type="bool" />
+          <Property Name="SureDate" Type="datetime" Precision="0" />
+          <Property Name="Note" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tb_return_wholesaler_detail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReturnCode" Type="varchar" MaxLength="20" />
+          <Property Name="SN" Type="varchar" MaxLength="20" />
+          <Property Name="p_name" Type="varchar" MaxLength="200" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="in_invoice_code" Type="varchar" MaxLength="20" />
+          <Property Name="InStoreDate" Type="datetime" Precision="0" />
+          <Property Name="IsReturnWholesaler" Type="bool" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
+          <Property Name="ReturnRegdate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_sales_total">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreName" Type="varchar" MaxLength="50" />
+          <Property Name="SaleDate" Type="date" />
+          <Property Name="SaleQuantity" Type="int" />
+          <Property Name="SaleTotal" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Regdate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_serial_no">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNo" Type="varchar" MaxLength="12" />
+          <Property Name="is_print" Type="bool" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_and_p_code">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNO" Type="varchar" MaxLength="15" />
+          <Property Name="p_id" Type="int" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="in_cost" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="in_regdate" Type="datetime" Precision="0" />
+          <Property Name="out_regdate" Type="datetime" Precision="0" />
+          <Property Name="is_order_code" Type="bool" />
+          <Property Name="is_return" Type="bool" />
+          <Property Name="return_regdate" Type="datetime" Precision="0" />
+          <Property Name="Comment" Type="varchar" MaxLength="30" />
+          <Property Name="IsReturnWholesaler" Type="bool" />
+          <Property Name="IsReturnWholesaler_regdate" Type="datetime" Precision="0" />
+          <Property Name="in_invoice_code" Type="varchar" MaxLength="30" />
+          <Property Name="curr_warehouse_id" Type="int" />
+          <Property Name="curr_warehouse_date" Type="datetime" Precision="0" />
+          <Property Name="IsFree" Type="bool" />
+          <Property Name="regdate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_change_storage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="serialNo_id" Type="int" />
+          <Property Name="p_id" Type="int" />
+          <Property Name="p_code" Type="varchar" MaxLength="50" />
+          <Property Name="old_warehouse_ID" Type="int" />
+          <Property Name="old_warehouse_code" Type="varchar" MaxLength="12" />
+          <Property Name="new_warehouse_ID" Type="int" />
+          <Property Name="new_warehouse_code" Type="varchar" MaxLength="12" />
+          <Property Name="CreateName" Type="varchar" MaxLength="30" />
+          <Property Name="regdate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_delete_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="30" />
+          <Property Name="SerialNo" Type="varchar" MaxLength="20" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_no_instore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_sn_change_record">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNo" Type="varchar" MaxLength="20" />
+          <Property Name="OldProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="NewProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="Staff" Type="varchar" MaxLength="50" />
+          <Property Name="Regdate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tb_temp_ids">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_trade">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="seller_nick" Type="varchar" MaxLength="50" />
+          <Property Name="byuer_nick" Type="varchar" MaxLength="50" />
+          <Property Name="title" Type="varchar" MaxLength="100" />
+          <Property Name="type" Type="varchar" MaxLength="10" />
+          <Property Name="created" Type="datetime" Precision="0" />
+          <Property Name="iid" Type="varchar" MaxLength="50" />
+          <Property Name="price" Type="varchar" MaxLength="10" />
+          <Property Name="pic_path" Type="varchar" MaxLength="200" />
+          <Property Name="num" Type="varchar" MaxLength="6" />
+          <Property Name="tid" Type="varchar" MaxLength="20" />
+          <Property Name="buyer_message" Type="varchar" MaxLength="200" />
+          <Property Name="shipping_type" Type="varchar" MaxLength="20" />
+          <Property Name="alipay_no" Type="varchar" MaxLength="30" />
+          <Property Name="payment" Type="varchar" MaxLength="10" />
+          <Property Name="discount_fee" Type="varchar" MaxLength="10" />
+          <Property Name="adjust_fee" Type="varchar" MaxLength="10" />
+          <Property Name="receiver_name" Type="varchar" MaxLength="30" />
+          <Property Name="receiver_state" Type="varchar" MaxLength="30" />
+          <Property Name="receiver_city" Type="varchar" MaxLength="50" />
+          <Property Name="receiver_district" Type="varchar" MaxLength="30" />
+          <Property Name="receiver_address" Type="varchar" MaxLength="100" />
+          <Property Name="receiver_zip" Type="varchar" MaxLength="10" />
+          <Property Name="receiver_mobile" Type="varchar" MaxLength="30" />
+          <Property Name="receiver_phone" Type="varchar" MaxLength="30" />
+          <Property Name="num_iid" Type="varchar" MaxLength="30" />
+          <Property Name="regdate" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="20" />
+          <Property Name="user_pwd" Type="varchar" MaxLength="50" />
+          <Property Name="showit" Type="bool" />
+          <Property Name="user_code" Type="varchar" MaxLength="20" />
+          <Property Name="is_admin" Type="bool" />
+          <Property Name="phone" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="200" />
+          <Property Name="comment" Type="varchar" MaxLength="100" />
+          <Property Name="section" Type="varchar" MaxLength="20" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user_group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user_model">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ModelId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="20" />
+          <Property Name="user_pwd" Type="varchar" MaxLength="50" />
+          <Property Name="showit" Type="bool" />
+          <Property Name="user_code" Type="varchar" MaxLength="20" />
+          <Property Name="is_admin" Type="bool" />
+          <Property Name="phone" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="200" />
+          <Property Name="comment" Type="varchar" MaxLength="100" />
+          <Property Name="section" Type="varchar" MaxLength="20" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_warehouse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WarehouseName" Type="varchar" MaxLength="30" />
+          <Property Name="showit" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_warehouse_all_info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="WarehouseName" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_async">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="StaffId" Type="int" Nullable="false" />
+          <Property Name="StaffName" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="yun_code" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="yun_qty" Type="int" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="p_qty" Type="int" Nullable="false" />
+          <Property Name="p_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_async_code">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="staff_id" Type="int" Nullable="false" />
+          <Property Name="staff_name" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="yun_stock_async_id" Type="int" Nullable="false" />
+          <Property Name="p_id" Type="int" Nullable="false" />
+          <Property Name="p_code" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="serial_no" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="cmd" Type="varchar" MaxLength="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_child">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentId" Type="int" Nullable="false" />
+          <Property Name="ProdCode" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="ProdName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ProdSN" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="ProdStandard" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ProdQtyTotal" Type="int" Nullable="false" />
+          <Property Name="ProdQtyUsedOrder" Type="int" Nullable="false" />
+          <Property Name="ProdQtyAvailability" Type="int" Nullable="false" />
+          <Property Name="ProdQtyWarn" Type="int" Nullable="false" />
+          <Property Name="Regdate" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_main">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="StaffName" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="StaffId" Type="int" Nullable="false" />
+          <Property Name="FileName" Type="varchar" MaxLength="64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_price">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="yun_code" Type="varchar" MaxLength="65" Nullable="false" />
+          <Property Name="yun_name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="yun_price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="yun_cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="staff_id" Type="int" Nullable="false" />
+          <Property Name="staff_name" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbtoken">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="guid" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Showit" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="qstoreModelStoreContainer">
+          <EntitySet Name="tb_balance_cash_record" EntityType="Self.tb_balance_cash_record" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_bargain_money" EntityType="Self.tb_bargain_money" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_check_store" EntityType="Self.tb_check_store" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_check_store_detail" EntityType="Self.tb_check_store_detail" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_expend" EntityType="Self.tb_expend" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_expend_average" EntityType="Self.tb_expend_average" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_group" EntityType="Self.tb_group" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_group_model" EntityType="Self.tb_group_model" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_in_invoice" EntityType="Self.tb_in_invoice" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_in_invoice_product" EntityType="Self.tb_in_invoice_product" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_order" EntityType="Self.tb_order" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_out_invoice" EntityType="Self.tb_out_invoice" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_out_invoice_product" EntityType="Self.tb_out_invoice_product" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_out_invoice_product_shipping" EntityType="Self.tb_out_invoice_product_shipping" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_pay_method" EntityType="Self.tb_pay_method" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_prod_cost_modify_record" EntityType="Self.tb_prod_cost_modify_record" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_product" EntityType="Self.tb_product" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_product_cate" EntityType="Self.tb_product_cate" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_product_quantity_change_history" EntityType="Self.tb_product_quantity_change_history" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_proxy" EntityType="Self.tb_proxy" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_return_history" EntityType="Self.tb_return_history" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_return_wholesaler" EntityType="Self.tb_return_wholesaler" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_return_wholesaler_detail" EntityType="Self.tb_return_wholesaler_detail" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_sales_total" EntityType="Self.tb_sales_total" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_serial_no" EntityType="Self.tb_serial_no" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_serial_no_and_p_code" EntityType="Self.tb_serial_no_and_p_code" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_serial_no_change_storage" EntityType="Self.tb_serial_no_change_storage" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_serial_no_delete_history" EntityType="Self.tb_serial_no_delete_history" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_serial_no_no_instore" EntityType="Self.tb_serial_no_no_instore" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_sn_change_record" EntityType="Self.tb_sn_change_record" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_temp_ids" EntityType="Self.tb_temp_ids" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_trade" EntityType="Self.tb_trade" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_user" EntityType="Self.tb_user" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_user_group" EntityType="Self.tb_user_group" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_user_model" EntityType="Self.tb_user_model" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_user2" EntityType="Self.tb_user2" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_warehouse" EntityType="Self.tb_warehouse" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_warehouse_all_info" EntityType="Self.tb_warehouse_all_info" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_stock_async" EntityType="Self.tb_yun_stock_async" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_stock_async_code" EntityType="Self.tb_yun_stock_async_code" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_stock_child" EntityType="Self.tb_yun_stock_child" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_stock_main" EntityType="Self.tb_yun_stock_main" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_stock_price" EntityType="Self.tb_yun_stock_price" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tbtoken" EntityType="Self.tbtoken" Schema="qstore" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="qstoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_balance_cash_record">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="CreatorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PayDate" Type="DateTime" Nullable="false" />
+          <Property Name="PayCash" Type="Decimal" Nullable="false" />
+          <Property Name="PayNote" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PreBalance" Type="Decimal" Nullable="false" />
+          <Property Name="CreatorId" Type="Int32" Nullable="false" />
+          <Property Name="IncomeCash" Type="Decimal" Nullable="false" />
+          <Property Name="AfterBalance" Type="Decimal" Nullable="false" />
+          <Property Name="IsExclude" Type="Boolean" Nullable="false" />
+          <Property Name="PayType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_bargain_money">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cash" Type="Decimal" Nullable="false" />
+          <Property Name="Staff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Showit" Type="Boolean" Nullable="false" />
+          <Property Name="Regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_check_store">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="check_regdate" Type="DateTime" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="staff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valid_quantity" Type="Int32" Nullable="false" />
+          <Property Name="err_quantity" Type="Int32" Nullable="false" />
+          <Property Name="CheckStatus" Type="Int32" Nullable="false" />
+          <Property Name="AutoRunStatus" Type="Int32" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_check_store_detail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="SerialNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_id" Type="Int32" Nullable="false" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_cost" Type="Decimal" Nullable="false" />
+          <Property Name="SnType" Type="Int32" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_expend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OutTotal" Type="Decimal" />
+          <Property Name="OutBeginDate" Type="DateTime" />
+          <Property Name="OutEndDate" Type="DateTime" />
+          <Property Name="Average" Type="Decimal" />
+          <Property Name="CreateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Regdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_expend_average">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExpendDate" Type="DateTime" />
+          <Property Name="Everyday" Type="Decimal" />
+        </EntityType>
+        <EntityType Name="tb_group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_group_model">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_in_invoice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="input_regdate" Type="DateTime" />
+          <Property Name="invoice_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Supplier" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="staff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="summary" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="pay_method" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="pay_total" Type="Decimal" />
+          <Property Name="curr_warehouse_id" Type="Int32" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_in_invoice_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="in_invoice_id" Type="Int32" />
+          <Property Name="in_invoice_code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="p_id" Type="Int32" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="cost" Type="Decimal" />
+          <Property Name="regdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Regdate" Type="DateTime" Nullable="false" />
+          <Property Name="Staff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Flag" Type="Int32" Nullable="false" />
+          <Property Name="TraceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BrandNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="PayTime" Type="DateTime" />
+          <Property Name="ModifyTime" Type="DateTime" />
+          <Property Name="Source" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OrderType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Nullable="false" />
+          <Property Name="InOut" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OrderStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ServiceFee" Type="Decimal" />
+          <Property Name="ReturnFee" Type="Decimal" />
+          <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MoneyStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_out_invoice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="input_regdate" Type="DateTime" />
+          <Property Name="invoice_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="staff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="summary" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="pay_method" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="pay_total" Type="Decimal" />
+          <Property Name="SN_Quantity" Type="Int32" />
+          <Property Name="NumIid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ReceivedPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverCity" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverDistrict" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverState" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiverZip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="is_Taobao" Type="Boolean" />
+          <Property Name="store_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_out_invoice_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="out_invoice_id" Type="Int32" />
+          <Property Name="out_invoice_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="p_id" Type="Int32" Nullable="false" />
+          <Property Name="SerialNO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="is_return" Type="Boolean" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+          <Property Name="IsFree" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_out_invoice_product_shipping">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="out_invoice_id" Type="Int32" />
+          <Property Name="out_invoice_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ShippingCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_pay_method">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pay_method" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_prod_cost_modify_record">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_id" Type="Int32" Nullable="false" />
+          <Property Name="p_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="old_cost" Type="Decimal" Nullable="false" />
+          <Property Name="new_cost" Type="Decimal" Nullable="false" />
+          <Property Name="staff_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="num_iid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="p_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="p_cate_id" Type="Int32" />
+          <Property Name="p_price" Type="Decimal" />
+          <Property Name="p_cost" Type="Decimal" />
+          <Property Name="p_quantity" Type="Int32" />
+          <Property Name="p_taobao_url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="showit" Type="Boolean" />
+          <Property Name="WholesalerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WholesalerUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WarnQty" Type="Int32" />
+          <Property Name="regdate" Type="DateTime" />
+          <Property Name="yun_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_product_cate">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cate_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_product_quantity_change_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="old_quantity" Type="Int32" />
+          <Property Name="new_quantity" Type="Int32" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_proxy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaleDate" Type="DateTime" />
+          <Property Name="SaleQuantity" Type="Int32" />
+          <Property Name="SaleTotal" Type="Decimal" />
+          <Property Name="Regdate" Type="DateTime" />
+          <Property Name="Note" Type="String" MaxLength="245" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_return_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="out_invoice_id" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="out_invoice_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="p_id" Type="Int32" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="return_regdate" Type="DateTime" />
+          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="staff" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_return_wholesaler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReturnCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="Regdate" Type="DateTime" />
+          <Property Name="IsSure" Type="Boolean" />
+          <Property Name="SureDate" Type="DateTime" />
+          <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_return_wholesaler_detail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReturnCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="p_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="in_invoice_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="InStoreDate" Type="DateTime" />
+          <Property Name="IsReturnWholesaler" Type="Boolean" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReturnRegdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_sales_total">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SaleDate" Type="DateTime" />
+          <Property Name="SaleQuantity" Type="Int32" />
+          <Property Name="SaleTotal" Type="Decimal" />
+          <Property Name="Regdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_serial_no">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="is_print" Type="Boolean" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_and_p_code">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="p_id" Type="Int32" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="in_cost" Type="Decimal" />
+          <Property Name="in_regdate" Type="DateTime" />
+          <Property Name="out_regdate" Type="DateTime" />
+          <Property Name="is_order_code" Type="Boolean" />
+          <Property Name="is_return" Type="Boolean" />
+          <Property Name="return_regdate" Type="DateTime" />
+          <Property Name="Comment" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IsReturnWholesaler" Type="Boolean" />
+          <Property Name="IsReturnWholesaler_regdate" Type="DateTime" />
+          <Property Name="in_invoice_code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="curr_warehouse_id" Type="Int32" />
+          <Property Name="curr_warehouse_date" Type="DateTime" />
+          <Property Name="IsFree" Type="Boolean" />
+          <Property Name="regdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_change_storage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="serialNo_id" Type="Int32" />
+          <Property Name="p_id" Type="Int32" />
+          <Property Name="p_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="old_warehouse_ID" Type="Int32" />
+          <Property Name="old_warehouse_code" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="new_warehouse_ID" Type="Int32" />
+          <Property Name="new_warehouse_code" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CreateName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_delete_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SerialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_serial_no_no_instore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_sn_change_record">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OldProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NewProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Regdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tb_temp_ids">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_trade">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="seller_nick" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="byuer_nick" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="created" Type="DateTime" />
+          <Property Name="iid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="pic_path" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="num" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="tid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="buyer_message" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="shipping_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="alipay_no" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="payment" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="discount_fee" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="adjust_fee" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_state" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_district" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_mobile" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="receiver_phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="num_iid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="user_pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="showit" Type="Boolean" />
+          <Property Name="user_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="is_admin" Type="Boolean" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="section" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user_group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user_model">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="user_pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="showit" Type="Boolean" />
+          <Property Name="user_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="is_admin" Type="Boolean" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="section" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_warehouse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WarehouseName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="showit" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_warehouse_all_info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="WarehouseName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_async">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Regdate" Type="DateTime" Nullable="false" />
+          <Property Name="StaffId" Type="Int32" Nullable="false" />
+          <Property Name="StaffName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="yun_code" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="yun_qty" Type="Int32" Nullable="false" />
+          <Property Name="p_code" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_qty" Type="Int32" Nullable="false" />
+          <Property Name="p_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_async_code">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+          <Property Name="staff_id" Type="Int32" Nullable="false" />
+          <Property Name="staff_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="yun_stock_async_id" Type="Int32" Nullable="false" />
+          <Property Name="p_id" Type="Int32" Nullable="false" />
+          <Property Name="p_code" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="serial_no" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cmd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_child">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int32" Nullable="false" />
+          <Property Name="ProdCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdSN" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdQtyTotal" Type="Int32" Nullable="false" />
+          <Property Name="ProdQtyUsedOrder" Type="Int32" Nullable="false" />
+          <Property Name="ProdQtyAvailability" Type="Int32" Nullable="false" />
+          <Property Name="ProdQtyWarn" Type="Int32" Nullable="false" />
+          <Property Name="Regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_main">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+          <Property Name="StaffName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StaffId" Type="Int32" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_stock_price">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="yun_code" Type="String" MaxLength="65" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="yun_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="yun_price" Type="Decimal" Nullable="false" />
+          <Property Name="yun_cost" Type="Decimal" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+          <Property Name="staff_id" Type="Int32" Nullable="false" />
+          <Property Name="staff_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="qstoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_balance_cash_record" EntityType="Self.tb_balance_cash_record" />
+          <EntitySet Name="tb_bargain_money" EntityType="Self.tb_bargain_money" />
+          <EntitySet Name="tb_check_store" EntityType="Self.tb_check_store" />
+          <EntitySet Name="tb_check_store_detail" EntityType="Self.tb_check_store_detail" />
+          <EntitySet Name="tb_expend" EntityType="Self.tb_expend" />
+          <EntitySet Name="tb_expend_average" EntityType="Self.tb_expend_average" />
+          <EntitySet Name="tb_group" EntityType="Self.tb_group" />
+          <EntitySet Name="tb_group_model" EntityType="Self.tb_group_model" />
+          <EntitySet Name="tb_in_invoice" EntityType="Self.tb_in_invoice" />
+          <EntitySet Name="tb_in_invoice_product" EntityType="Self.tb_in_invoice_product" />
+          <EntitySet Name="tb_order" EntityType="Self.tb_order" />
+          <EntitySet Name="tb_out_invoice" EntityType="Self.tb_out_invoice" />
+          <EntitySet Name="tb_out_invoice_product" EntityType="Self.tb_out_invoice_product" />
+          <EntitySet Name="tb_out_invoice_product_shipping" EntityType="Self.tb_out_invoice_product_shipping" />
+          <EntitySet Name="tb_pay_method" EntityType="Self.tb_pay_method" />
+          <EntitySet Name="tb_prod_cost_modify_record" EntityType="Self.tb_prod_cost_modify_record" />
+          <EntitySet Name="tb_product" EntityType="Self.tb_product" />
+          <EntitySet Name="tb_product_cate" EntityType="Self.tb_product_cate" />
+          <EntitySet Name="tb_product_quantity_change_history" EntityType="Self.tb_product_quantity_change_history" />
+          <EntitySet Name="tb_proxy" EntityType="Self.tb_proxy" />
+          <EntitySet Name="tb_return_history" EntityType="Self.tb_return_history" />
+          <EntitySet Name="tb_return_wholesaler" EntityType="Self.tb_return_wholesaler" />
+          <EntitySet Name="tb_return_wholesaler_detail" EntityType="Self.tb_return_wholesaler_detail" />
+          <EntitySet Name="tb_sales_total" EntityType="Self.tb_sales_total" />
+          <EntitySet Name="tb_serial_no" EntityType="Self.tb_serial_no" />
+          <EntitySet Name="tb_serial_no_and_p_code" EntityType="Self.tb_serial_no_and_p_code" />
+          <EntitySet Name="tb_serial_no_change_storage" EntityType="Self.tb_serial_no_change_storage" />
+          <EntitySet Name="tb_serial_no_delete_history" EntityType="Self.tb_serial_no_delete_history" />
+          <EntitySet Name="tb_serial_no_no_instore" EntityType="Self.tb_serial_no_no_instore" />
+          <EntitySet Name="tb_sn_change_record" EntityType="Self.tb_sn_change_record" />
+          <EntitySet Name="tb_temp_ids" EntityType="Self.tb_temp_ids" />
+          <EntitySet Name="tb_trade" EntityType="Self.tb_trade" />
+          <EntitySet Name="tb_user" EntityType="Self.tb_user" />
+          <EntitySet Name="tb_user_group" EntityType="Self.tb_user_group" />
+          <EntitySet Name="tb_user_model" EntityType="Self.tb_user_model" />
+          <EntitySet Name="tb_user2" EntityType="Self.tb_user2" />
+          <EntitySet Name="tb_warehouse" EntityType="Self.tb_warehouse" />
+          <EntitySet Name="tb_warehouse_all_info" EntityType="Self.tb_warehouse_all_info" />
+          <EntitySet Name="tb_yun_stock_async" EntityType="Self.tb_yun_stock_async" />
+          <EntitySet Name="tb_yun_stock_async_code" EntityType="Self.tb_yun_stock_async_code" />
+          <EntitySet Name="tb_yun_stock_child" EntityType="Self.tb_yun_stock_child" />
+          <EntitySet Name="tb_yun_stock_main" EntityType="Self.tb_yun_stock_main" />
+          <EntitySet Name="tb_yun_stock_price" EntityType="Self.tb_yun_stock_price" />
+          <EntitySet Name="tbtokens" EntityType="qstoreModel.tbtoken" />
+        </EntityContainer>
+        <EntityType Name="tbtoken">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="Guid" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Showit" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="qstoreModelStoreContainer" CdmEntityContainer="qstoreEntities">
+          <EntitySetMapping Name="tb_balance_cash_record">
+            <EntityTypeMapping TypeName="qstoreModel.tb_balance_cash_record">
+              <MappingFragment StoreEntitySet="tb_balance_cash_record">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+                <ScalarProperty Name="PayCash" ColumnName="PayCash" />
+                <ScalarProperty Name="PayNote" ColumnName="PayNote" />
+                <ScalarProperty Name="PreBalance" ColumnName="PreBalance" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="IncomeCash" ColumnName="IncomeCash" />
+                <ScalarProperty Name="AfterBalance" ColumnName="AfterBalance" />
+                <ScalarProperty Name="IsExclude" ColumnName="IsExclude" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_bargain_money">
+            <EntityTypeMapping TypeName="qstoreModel.tb_bargain_money">
+              <MappingFragment StoreEntitySet="tb_bargain_money">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Cash" ColumnName="Cash" />
+                <ScalarProperty Name="Staff" ColumnName="Staff" />
+                <ScalarProperty Name="Showit" ColumnName="Showit" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_check_store">
+            <EntityTypeMapping TypeName="qstoreModel.tb_check_store">
+              <MappingFragment StoreEntitySet="tb_check_store">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="check_regdate" ColumnName="check_regdate" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+                <ScalarProperty Name="valid_quantity" ColumnName="valid_quantity" />
+                <ScalarProperty Name="err_quantity" ColumnName="err_quantity" />
+                <ScalarProperty Name="CheckStatus" ColumnName="CheckStatus" />
+                <ScalarProperty Name="AutoRunStatus" ColumnName="AutoRunStatus" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_check_store_detail">
+            <EntityTypeMapping TypeName="qstoreModel.tb_check_store_detail">
+              <MappingFragment StoreEntitySet="tb_check_store_detail">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="p_cost" ColumnName="p_cost" />
+                <ScalarProperty Name="SnType" ColumnName="SnType" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_expend">
+            <EntityTypeMapping TypeName="qstoreModel.tb_expend">
+              <MappingFragment StoreEntitySet="tb_expend">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CateName" ColumnName="CateName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="OutTotal" ColumnName="OutTotal" />
+                <ScalarProperty Name="OutBeginDate" ColumnName="OutBeginDate" />
+                <ScalarProperty Name="OutEndDate" ColumnName="OutEndDate" />
+                <ScalarProperty Name="Average" ColumnName="Average" />
+                <ScalarProperty Name="CreateName" ColumnName="CreateName" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_expend_average">
+            <EntityTypeMapping TypeName="qstoreModel.tb_expend_average">
+              <MappingFragment StoreEntitySet="tb_expend_average">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ExpendDate" ColumnName="ExpendDate" />
+                <ScalarProperty Name="Everyday" ColumnName="Everyday" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_group">
+            <EntityTypeMapping TypeName="qstoreModel.tb_group">
+              <MappingFragment StoreEntitySet="tb_group">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_group_model">
+            <EntityTypeMapping TypeName="qstoreModel.tb_group_model">
+              <MappingFragment StoreEntitySet="tb_group_model">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_in_invoice">
+            <EntityTypeMapping TypeName="qstoreModel.tb_in_invoice">
+              <MappingFragment StoreEntitySet="tb_in_invoice">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="input_regdate" ColumnName="input_regdate" />
+                <ScalarProperty Name="invoice_code" ColumnName="invoice_code" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+                <ScalarProperty Name="summary" ColumnName="summary" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="pay_method" ColumnName="pay_method" />
+                <ScalarProperty Name="pay_total" ColumnName="pay_total" />
+                <ScalarProperty Name="curr_warehouse_id" ColumnName="curr_warehouse_id" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_in_invoice_product">
+            <EntityTypeMapping TypeName="qstoreModel.tb_in_invoice_product">
+              <MappingFragment StoreEntitySet="tb_in_invoice_product">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="in_invoice_id" ColumnName="in_invoice_id" />
+                <ScalarProperty Name="in_invoice_code" ColumnName="in_invoice_code" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_order">
+            <EntityTypeMapping TypeName="qstoreModel.tb_order">
+              <MappingFragment StoreEntitySet="tb_order">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Staff" ColumnName="Staff" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="TraceNo" ColumnName="TraceNo" />
+                <ScalarProperty Name="BrandNo" ColumnName="BrandNo" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="InOut" ColumnName="InOut" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="ServiceFee" ColumnName="ServiceFee" />
+                <ScalarProperty Name="ReturnFee" ColumnName="ReturnFee" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="MoneyStatus" ColumnName="MoneyStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_out_invoice">
+            <EntityTypeMapping TypeName="qstoreModel.tb_out_invoice">
+              <MappingFragment StoreEntitySet="tb_out_invoice">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="input_regdate" ColumnName="input_regdate" />
+                <ScalarProperty Name="invoice_code" ColumnName="invoice_code" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+                <ScalarProperty Name="summary" ColumnName="summary" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="pay_method" ColumnName="pay_method" />
+                <ScalarProperty Name="pay_total" ColumnName="pay_total" />
+                <ScalarProperty Name="SN_Quantity" ColumnName="SN_Quantity" />
+                <ScalarProperty Name="NumIid" ColumnName="NumIid" />
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ReceivedPayment" ColumnName="ReceivedPayment" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="ReceiverCity" ColumnName="ReceiverCity" />
+                <ScalarProperty Name="ReceiverDistrict" ColumnName="ReceiverDistrict" />
+                <ScalarProperty Name="ReceiverMobile" ColumnName="ReceiverMobile" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="ReceiverPhone" ColumnName="ReceiverPhone" />
+                <ScalarProperty Name="ReceiverState" ColumnName="ReceiverState" />
+                <ScalarProperty Name="ReceiverZip" ColumnName="ReceiverZip" />
+                <ScalarProperty Name="is_Taobao" ColumnName="is_Taobao" />
+                <ScalarProperty Name="store_name" ColumnName="store_name" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_out_invoice_product">
+            <EntityTypeMapping TypeName="qstoreModel.tb_out_invoice_product">
+              <MappingFragment StoreEntitySet="tb_out_invoice_product">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="out_invoice_id" ColumnName="out_invoice_id" />
+                <ScalarProperty Name="out_invoice_code" ColumnName="out_invoice_code" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="SerialNO" ColumnName="SerialNO" />
+                <ScalarProperty Name="is_return" ColumnName="is_return" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="IsFree" ColumnName="IsFree" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_out_invoice_product_shipping">
+            <EntityTypeMapping TypeName="qstoreModel.tb_out_invoice_product_shipping">
+              <MappingFragment StoreEntitySet="tb_out_invoice_product_shipping">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="out_invoice_id" ColumnName="out_invoice_id" />
+                <ScalarProperty Name="out_invoice_code" ColumnName="out_invoice_code" />
+                <ScalarProperty Name="ShippingCode" ColumnName="ShippingCode" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_pay_method">
+            <EntityTypeMapping TypeName="qstoreModel.tb_pay_method">
+              <MappingFragment StoreEntitySet="tb_pay_method">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pay_method" ColumnName="pay_method" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_prod_cost_modify_record">
+            <EntityTypeMapping TypeName="qstoreModel.tb_prod_cost_modify_record">
+              <MappingFragment StoreEntitySet="tb_prod_cost_modify_record">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="old_cost" ColumnName="old_cost" />
+                <ScalarProperty Name="new_cost" ColumnName="new_cost" />
+                <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_product">
+            <EntityTypeMapping TypeName="qstoreModel.tb_product">
+              <MappingFragment StoreEntitySet="tb_product">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="num_iid" ColumnName="num_iid" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="p_cate_id" ColumnName="p_cate_id" />
+                <ScalarProperty Name="p_price" ColumnName="p_price" />
+                <ScalarProperty Name="p_cost" ColumnName="p_cost" />
+                <ScalarProperty Name="p_quantity" ColumnName="p_quantity" />
+                <ScalarProperty Name="p_taobao_url" ColumnName="p_taobao_url" />
+                <ScalarProperty Name="showit" ColumnName="showit" />
+                <ScalarProperty Name="WholesalerCode" ColumnName="WholesalerCode" />
+                <ScalarProperty Name="WholesalerUrl" ColumnName="WholesalerUrl" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="WarnQty" ColumnName="WarnQty" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="yun_code" ColumnName="yun_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_product_cate">
+            <EntityTypeMapping TypeName="qstoreModel.tb_product_cate">
+              <MappingFragment StoreEntitySet="tb_product_cate">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cate_name" ColumnName="cate_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_product_quantity_change_history">
+            <EntityTypeMapping TypeName="qstoreModel.tb_product_quantity_change_history">
+              <MappingFragment StoreEntitySet="tb_product_quantity_change_history">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="old_quantity" ColumnName="old_quantity" />
+                <ScalarProperty Name="new_quantity" ColumnName="new_quantity" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_proxy">
+            <EntityTypeMapping TypeName="qstoreModel.tb_proxy">
+              <MappingFragment StoreEntitySet="tb_proxy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="SaleQuantity" ColumnName="SaleQuantity" />
+                <ScalarProperty Name="SaleTotal" ColumnName="SaleTotal" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_return_history">
+            <EntityTypeMapping TypeName="qstoreModel.tb_return_history">
+              <MappingFragment StoreEntitySet="tb_return_history">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="out_invoice_id" ColumnName="out_invoice_id" />
+                <ScalarProperty Name="out_invoice_code" ColumnName="out_invoice_code" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="return_regdate" ColumnName="return_regdate" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_return_wholesaler">
+            <EntityTypeMapping TypeName="qstoreModel.tb_return_wholesaler">
+              <MappingFragment StoreEntitySet="tb_return_wholesaler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ReturnCode" ColumnName="ReturnCode" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="IsSure" ColumnName="IsSure" />
+                <ScalarProperty Name="SureDate" ColumnName="SureDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_return_wholesaler_detail">
+            <EntityTypeMapping TypeName="qstoreModel.tb_return_wholesaler_detail">
+              <MappingFragment StoreEntitySet="tb_return_wholesaler_detail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ReturnCode" ColumnName="ReturnCode" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="in_invoice_code" ColumnName="in_invoice_code" />
+                <ScalarProperty Name="InStoreDate" ColumnName="InStoreDate" />
+                <ScalarProperty Name="IsReturnWholesaler" ColumnName="IsReturnWholesaler" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="ReturnRegdate" ColumnName="ReturnRegdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_sales_total">
+            <EntityTypeMapping TypeName="qstoreModel.tb_sales_total">
+              <MappingFragment StoreEntitySet="tb_sales_total">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="SaleQuantity" ColumnName="SaleQuantity" />
+                <ScalarProperty Name="SaleTotal" ColumnName="SaleTotal" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_serial_no">
+            <EntityTypeMapping TypeName="qstoreModel.tb_serial_no">
+              <MappingFragment StoreEntitySet="tb_serial_no">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="is_print" ColumnName="is_print" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_serial_no_and_p_code">
+            <EntityTypeMapping TypeName="qstoreModel.tb_serial_no_and_p_code">
+              <MappingFragment StoreEntitySet="tb_serial_no_and_p_code">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="SerialNO" ColumnName="SerialNO" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="in_cost" ColumnName="in_cost" />
+                <ScalarProperty Name="in_regdate" ColumnName="in_regdate" />
+                <ScalarProperty Name="out_regdate" ColumnName="out_regdate" />
+                <ScalarProperty Name="is_order_code" ColumnName="is_order_code" />
+                <ScalarProperty Name="is_return" ColumnName="is_return" />
+                <ScalarProperty Name="return_regdate" ColumnName="return_regdate" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="IsReturnWholesaler" ColumnName="IsReturnWholesaler" />
+                <ScalarProperty Name="IsReturnWholesaler_regdate" ColumnName="IsReturnWholesaler_regdate" />
+                <ScalarProperty Name="in_invoice_code" ColumnName="in_invoice_code" />
+                <ScalarProperty Name="curr_warehouse_id" ColumnName="curr_warehouse_id" />
+                <ScalarProperty Name="curr_warehouse_date" ColumnName="curr_warehouse_date" />
+                <ScalarProperty Name="IsFree" ColumnName="IsFree" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_serial_no_change_storage">
+            <EntityTypeMapping TypeName="qstoreModel.tb_serial_no_change_storage">
+              <MappingFragment StoreEntitySet="tb_serial_no_change_storage">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="serialNo_id" ColumnName="serialNo_id" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="old_warehouse_ID" ColumnName="old_warehouse_ID" />
+                <ScalarProperty Name="old_warehouse_code" ColumnName="old_warehouse_code" />
+                <ScalarProperty Name="new_warehouse_ID" ColumnName="new_warehouse_ID" />
+                <ScalarProperty Name="new_warehouse_code" ColumnName="new_warehouse_code" />
+                <ScalarProperty Name="CreateName" ColumnName="CreateName" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_serial_no_delete_history">
+            <EntityTypeMapping TypeName="qstoreModel.tb_serial_no_delete_history">
+              <MappingFragment StoreEntitySet="tb_serial_no_delete_history">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_serial_no_no_instore">
+            <EntityTypeMapping TypeName="qstoreModel.tb_serial_no_no_instore">
+              <MappingFragment StoreEntitySet="tb_serial_no_no_instore">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_sn_change_record">
+            <EntityTypeMapping TypeName="qstoreModel.tb_sn_change_record">
+              <MappingFragment StoreEntitySet="tb_sn_change_record">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="OldProductCode" ColumnName="OldProductCode" />
+                <ScalarProperty Name="NewProductCode" ColumnName="NewProductCode" />
+                <ScalarProperty Name="Staff" ColumnName="Staff" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_temp_ids">
+            <EntityTypeMapping TypeName="qstoreModel.tb_temp_ids">
+              <MappingFragment StoreEntitySet="tb_temp_ids">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_trade">
+            <EntityTypeMapping TypeName="qstoreModel.tb_trade">
+              <MappingFragment StoreEntitySet="tb_trade">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="seller_nick" ColumnName="seller_nick" />
+                <ScalarProperty Name="byuer_nick" ColumnName="byuer_nick" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="created" ColumnName="created" />
+                <ScalarProperty Name="iid" ColumnName="iid" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="pic_path" ColumnName="pic_path" />
+                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="buyer_message" ColumnName="buyer_message" />
+                <ScalarProperty Name="shipping_type" ColumnName="shipping_type" />
+                <ScalarProperty Name="alipay_no" ColumnName="alipay_no" />
+                <ScalarProperty Name="payment" ColumnName="payment" />
+                <ScalarProperty Name="discount_fee" ColumnName="discount_fee" />
+                <ScalarProperty Name="adjust_fee" ColumnName="adjust_fee" />
+                <ScalarProperty Name="receiver_name" ColumnName="receiver_name" />
+                <ScalarProperty Name="receiver_state" ColumnName="receiver_state" />
+                <ScalarProperty Name="receiver_city" ColumnName="receiver_city" />
+                <ScalarProperty Name="receiver_district" ColumnName="receiver_district" />
+                <ScalarProperty Name="receiver_address" ColumnName="receiver_address" />
+                <ScalarProperty Name="receiver_zip" ColumnName="receiver_zip" />
+                <ScalarProperty Name="receiver_mobile" ColumnName="receiver_mobile" />
+                <ScalarProperty Name="receiver_phone" ColumnName="receiver_phone" />
+                <ScalarProperty Name="num_iid" ColumnName="num_iid" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user">
+            <EntityTypeMapping TypeName="qstoreModel.tb_user">
+              <MappingFragment StoreEntitySet="tb_user">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="user_pwd" ColumnName="user_pwd" />
+                <ScalarProperty Name="showit" ColumnName="showit" />
+                <ScalarProperty Name="user_code" ColumnName="user_code" />
+                <ScalarProperty Name="is_admin" ColumnName="is_admin" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="section" ColumnName="section" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user_group">
+            <EntityTypeMapping TypeName="qstoreModel.tb_user_group">
+              <MappingFragment StoreEntitySet="tb_user_group">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user_model">
+            <EntityTypeMapping TypeName="qstoreModel.tb_user_model">
+              <MappingFragment StoreEntitySet="tb_user_model">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user2">
+            <EntityTypeMapping TypeName="qstoreModel.tb_user2">
+              <MappingFragment StoreEntitySet="tb_user2">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="user_pwd" ColumnName="user_pwd" />
+                <ScalarProperty Name="showit" ColumnName="showit" />
+                <ScalarProperty Name="user_code" ColumnName="user_code" />
+                <ScalarProperty Name="is_admin" ColumnName="is_admin" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="section" ColumnName="section" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_warehouse">
+            <EntityTypeMapping TypeName="qstoreModel.tb_warehouse">
+              <MappingFragment StoreEntitySet="tb_warehouse">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="showit" ColumnName="showit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_warehouse_all_info">
+            <EntityTypeMapping TypeName="qstoreModel.tb_warehouse_all_info">
+              <MappingFragment StoreEntitySet="tb_warehouse_all_info">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_stock_async">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_stock_async">
+              <MappingFragment StoreEntitySet="tb_yun_stock_async">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="yun_code" ColumnName="yun_code" />
+                <ScalarProperty Name="yun_qty" ColumnName="yun_qty" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="p_qty" ColumnName="p_qty" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_stock_async_code">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_stock_async_code">
+              <MappingFragment StoreEntitySet="tb_yun_stock_async_code">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+                <ScalarProperty Name="yun_stock_async_id" ColumnName="yun_stock_async_id" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="serial_no" ColumnName="serial_no" />
+                <ScalarProperty Name="cmd" ColumnName="cmd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_stock_child">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_stock_child">
+              <MappingFragment StoreEntitySet="tb_yun_stock_child">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdSN" ColumnName="ProdSN" />
+                <ScalarProperty Name="ProdStandard" ColumnName="ProdStandard" />
+                <ScalarProperty Name="ProdQtyTotal" ColumnName="ProdQtyTotal" />
+                <ScalarProperty Name="ProdQtyUsedOrder" ColumnName="ProdQtyUsedOrder" />
+                <ScalarProperty Name="ProdQtyAvailability" ColumnName="ProdQtyAvailability" />
+                <ScalarProperty Name="ProdQtyWarn" ColumnName="ProdQtyWarn" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_stock_main">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_stock_main">
+              <MappingFragment StoreEntitySet="tb_yun_stock_main">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_stock_price">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_stock_price">
+              <MappingFragment StoreEntitySet="tb_yun_stock_price">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="yun_code" ColumnName="yun_code" />
+                <ScalarProperty Name="yun_name" ColumnName="yun_name" />
+                <ScalarProperty Name="yun_price" ColumnName="yun_price" />
+                <ScalarProperty Name="yun_cost" ColumnName="yun_cost" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbtokens">
+            <EntityTypeMapping TypeName="qstoreModel.tbtoken">
+              <MappingFragment StoreEntitySet="tbtoken">
+                <ScalarProperty Name="Showit" ColumnName="Showit" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Gid" ColumnName="Gid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
