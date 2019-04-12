@@ -291,10 +291,10 @@ closeconn()
     <hr size="1" />
     <div style="display: flex">
         <div style="flex-grow: 1">
-            <iframe id="iframeSpecific" name="iframeSpecific" src="/q_admin/manager/product/editSpecifics.aspx" style="width: 98%; height: 400px; border: 1px solid #ccc;"></iframe>
+            <iframe id="iframeSpecific" name="iframeSpecific" src="/q_admin/manager/product/editSpecifics.aspx" style="width: 98%; height: 90%; border: 1px solid #ccc;"></iframe>
         </div>
         <div style="flex-grow: 1">
-            <iframe id="iframeSpecific2" name="iframeSpecific2" src="/q_admin/manager/product/Specifics.aspx?sku=<%=sku %>" style="width: 98%; height: 400px; border: 1px solid #ccc;"></iframe>
+            <iframe id="iframeSpecific2" name="iframeSpecific2" src="/q_admin/manager/product/Specifics.aspx?sku=<%=sku %>" style="width: 98%; height: 90%; border: 1px solid #ccc;"></iframe>
         </div>
     </div>
 
