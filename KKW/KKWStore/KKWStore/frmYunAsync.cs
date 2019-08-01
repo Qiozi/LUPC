@@ -534,5 +534,10 @@ namespace KKWStore
         {
             MatchFile();
         }
+
+        private void TextBoxFile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
