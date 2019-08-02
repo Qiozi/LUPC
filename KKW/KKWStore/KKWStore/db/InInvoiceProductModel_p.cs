@@ -111,7 +111,7 @@ namespace KKWStore.db
             var oldCost = prod.p_cost.Value;
 
             db.SqlExec.ExecuteNonQuery("Update tb_in_invoice_product set cost='" + newCost.ToString() + "' where in_invoice_code='" + invoicdCode + "'");
-            db.SqlExec.ExecuteNonQuery("Update tb_serial_no_and_p_code set in_cost ='" + newCost.ToString() + "' where p_id='" + p_id + "' and out_regdate like '0000%' ");
+            db.SqlExec.ExecuteNonQuery("Update tb_serial_no_and_p_code set in_cost ='" + newCost.ToString() + "' where p_id='" + p_id + "' and out_regdate like '00%' ");
 
             if (isModifyToList && !string.IsNullOrEmpty(p_id))
             {
