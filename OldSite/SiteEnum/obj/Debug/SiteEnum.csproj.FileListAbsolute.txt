@@ -27,3 +27,9 @@ C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Debug\SiteEnum.csprojAs
 C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Debug\SiteEnum.csproj.CoreCompileInputs.cache
 C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Debug\SiteEnum.dll
 C:\Workspaces\MyProjects\LUComputer\OldSite\SiteEnum\obj\Debug\SiteEnum.pdb
+C:\Workspaces\LUPC\OldSite\SiteEnum\bin\Debug\SiteEnum.dll
+C:\Workspaces\LUPC\OldSite\SiteEnum\bin\Debug\SiteEnum.pdb
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Debug\SiteEnum.csprojAssemblyReference.cache
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Debug\SiteEnum.csproj.CoreCompileInputs.cache
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Debug\SiteEnum.dll
+C:\Workspaces\LUPC\OldSite\SiteEnum\obj\Debug\SiteEnum.pdb

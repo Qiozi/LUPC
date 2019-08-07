@@ -54,6 +54,7 @@ namespace DownloadEBayOrder.BLL
             catch (Exception ex)
             {
                 log.WriteErrorLog(ex);
+                log.WriteLog(ex.StackTrace);
                 EmailHelper.Send("terryeah@gmail.com", "ebay download falid", "LU Computer eBay Order Download falid.");
                 return false;
             }
