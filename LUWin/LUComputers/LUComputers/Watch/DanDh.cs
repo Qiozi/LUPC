@@ -132,9 +132,14 @@ namespace LUComputers.Watch
                         {
                          //   long_description = "";
                         }
-                        
-                        //long_description = "";
 
+                        //long_description = "";
+                        decimal costDecimal = 0M;
+                        decimal.TryParse(cost, out costDecimal);
+                        if (costDecimal > 100000M)
+                        {
+                            continue;
+                        }
                         sbSQL.Append(string.Format(@",('{0}','{1}','{2}','{3}','{4}')"
                             , item_number
                             , cost

@@ -90,3 +90,13 @@ C:\Workspaces\MyProjects\KKW\MIS\Util\obj\Debug\Util.csproj.CopyComplete
 C:\Workspaces\MyProjects\KKW\MIS\Util\obj\Debug\Util.dll
 C:\Workspaces\MyProjects\KKW\MIS\Util\obj\Debug\Util.pdb
 C:\Workspaces\MyProjects\KKW\MIS\Util\obj\Debug\Util.csprojAssemblyReference.cache
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\bin\Debug\Util.dll.config
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\bin\Debug\Util.dll
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\bin\Debug\Util.pdb
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\bin\Debug\Newtonsoft.Json.dll
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\bin\Debug\Newtonsoft.Json.xml
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\obj\Debug\Util.csprojAssemblyReference.cache
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\obj\Debug\Util.csproj.CopyComplete
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\obj\Debug\Util.dll
+E:\Workspaces\MyProjects\LUPC\KKW\MIS\Util\obj\Debug\Util.pdb

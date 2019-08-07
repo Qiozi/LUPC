@@ -80,6 +80,8 @@ namespace Web.Controllers
             return db.tb_serial_no_and_p_code.Count(me => me.p_code.Equals(code) &&
                                                           me.curr_warehouse_id.HasValue &&
                                                           me.curr_warehouse_id.Value.Equals(Config.YunWarehouseId) &&
+                                                          me.IsReturnWholesaler.HasValue &&
+                                                          !me.IsReturnWholesaler.Value &&
                                                           (!me.out_regdate.HasValue || me.out_regdate.Value.Year < 2000));
         }
         Item FindCode(qstoreEntities context, string yunCode)

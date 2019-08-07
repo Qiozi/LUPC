@@ -33,9 +33,10 @@ namespace KKWStore
             var pm = context.tb_product.Single(p => p.id.Equals(_pid));// ProductModel.GetProductModel(_pid);
             txt_Code.Text = pm.p_code;
             txt_Name.Text = pm.p_name;
-
+    
             BindList();
         }
+
 
         void BindList()
         {
@@ -50,7 +51,6 @@ namespace KKWStore
                     , dt.Rows[i]["cost"].ToString()
                     ));
             }
-
         }
 
         private void buttonModify_Click(object sender, EventArgs e)

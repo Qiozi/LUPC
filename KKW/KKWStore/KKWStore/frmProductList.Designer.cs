@@ -120,7 +120,7 @@
             this.toolStripButton_warn.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_warn.Image")));
             this.toolStripButton_warn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_warn.Name = "toolStripButton_warn";
-            this.toolStripButton_warn.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton_warn.Size = new System.Drawing.Size(36, 22);
             this.toolStripButton_warn.Text = "警告";
             this.toolStripButton_warn.Click += new System.EventHandler(this.toolStripButton_warn_Click);
             // 
@@ -132,7 +132,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(33, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel1.Text = "过滤";
             // 
             // toolStripTextBox_keyword
@@ -148,7 +148,6 @@
             this.toolStripComboBox_brand.Name = "toolStripComboBox_brand";
             this.toolStripComboBox_brand.Size = new System.Drawing.Size(121, 25);
             this.toolStripComboBox_brand.Text = "全部";
-            this.toolStripComboBox_brand.Visible = false;
             this.toolStripComboBox_brand.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox_brand_SelectedIndexChanged);
             // 
             // toolStripSeparator1
@@ -162,7 +161,7 @@
             this.toolStripButton_new.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_new.Image")));
             this.toolStripButton_new.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_new.Name = "toolStripButton_new";
-            this.toolStripButton_new.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton_new.Size = new System.Drawing.Size(36, 22);
             this.toolStripButton_new.Text = "新建";
             this.toolStripButton_new.Click += new System.EventHandler(this.toolStripButton_new_Click);
             // 
@@ -172,7 +171,7 @@
             this.toolStripButton_modify.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_modify.Image")));
             this.toolStripButton_modify.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_modify.Name = "toolStripButton_modify";
-            this.toolStripButton_modify.Size = new System.Drawing.Size(128, 22);
+            this.toolStripButton_modify.Size = new System.Drawing.Size(120, 22);
             this.toolStripButton_modify.Text = "修改产品名称，编号";
             this.toolStripButton_modify.Click += new System.EventHandler(this.toolStripButton_modify_Click);
             // 
@@ -187,7 +186,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(36, 22);
             this.toolStripButton3.Text = "盘点";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -197,7 +196,7 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton4.Size = new System.Drawing.Size(36, 22);
             this.toolStripButton4.Text = "退货";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -212,7 +211,7 @@
             this.toolStripButton_product_check_store.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_product_check_store.Image")));
             this.toolStripButton_product_check_store.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_product_check_store.Name = "toolStripButton_product_check_store";
-            this.toolStripButton_product_check_store.Size = new System.Drawing.Size(89, 22);
+            this.toolStripButton_product_check_store.Size = new System.Drawing.Size(84, 22);
             this.toolStripButton_product_check_store.Text = "盘点选中产品";
             this.toolStripButton_product_check_store.Click += new System.EventHandler(this.toolStripButton_product_check_store_Click);
             // 
@@ -227,7 +226,7 @@
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(89, 22);
+            this.toolStripButton6.Size = new System.Drawing.Size(84, 22);
             this.toolStripButton6.Text = "导出产品数量";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton_export_Click);
             // 
@@ -253,7 +252,7 @@
             this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(89, 22);
+            this.toolStripButton7.Size = new System.Drawing.Size(84, 22);
             this.toolStripButton7.Text = "导出列表纪录";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
@@ -275,7 +274,7 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel_quantity,
             this.toolStripStatusLabel_total});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 662);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 609);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1360, 22);
             this.statusStrip1.TabIndex = 1;
@@ -325,7 +324,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(0, 25);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1360, 637);
+            this.listView1.Size = new System.Drawing.Size(1360, 584);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -420,63 +419,63 @@
             this.toolStripSeparator10,
             this.各仓库条码明细ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(218, 132);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(209, 132);
             // 
             // 删除此产品ToolStripMenuItem
             // 
             this.删除此产品ToolStripMenuItem.Name = "删除此产品ToolStripMenuItem";
-            this.删除此产品ToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.删除此产品ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.删除此产品ToolStripMenuItem.Text = "删除此产品";
             this.删除此产品ToolStripMenuItem.Click += new System.EventHandler(this.删除此产品ToolStripMenuItem_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(205, 6);
             // 
             // 淘宝URLToolStripMenuItem
             // 
             this.淘宝URLToolStripMenuItem.Name = "淘宝URLToolStripMenuItem";
-            this.淘宝URLToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.淘宝URLToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.淘宝URLToolStripMenuItem.Text = "淘宝URL";
             this.淘宝URLToolStripMenuItem.Click += new System.EventHandler(this.淘宝URLToolStripMenuItem_Click);
             // 
             // 批发商URLToolStripMenuItem
             // 
             this.批发商URLToolStripMenuItem.Name = "批发商URLToolStripMenuItem";
-            this.批发商URLToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.批发商URLToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.批发商URLToolStripMenuItem.Text = "批发商URL";
             this.批发商URLToolStripMenuItem.Click += new System.EventHandler(this.批发商URLToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(205, 6);
             // 
             // 修改整批进价ToolStripMenuItem
             // 
             this.修改整批进价ToolStripMenuItem.Name = "修改整批进价ToolStripMenuItem";
-            this.修改整批进价ToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.修改整批进价ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.修改整批进价ToolStripMenuItem.Text = "修改整批进价";
             this.修改整批进价ToolStripMenuItem.Click += new System.EventHandler(this.修改整批进价ToolStripMenuItem_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(205, 6);
             // 
             // 各仓库条码明细ToolStripMenuItem
             // 
             this.各仓库条码明细ToolStripMenuItem.Name = "各仓库条码明细ToolStripMenuItem";
-            this.各仓库条码明细ToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.各仓库条码明细ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.各仓库条码明细ToolStripMenuItem.Text = "各仓库条码明细（转库）";
             this.各仓库条码明细ToolStripMenuItem.Click += new System.EventHandler(this.各仓库条码明细ToolStripMenuItem_Click);
             // 
             // frmProductList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 684);
+            this.ClientSize = new System.Drawing.Size(1360, 631);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);

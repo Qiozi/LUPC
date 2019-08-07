@@ -68,10 +68,9 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(22, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(12, 20);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 42);
+            this.button1.Size = new System.Drawing.Size(84, 21);
             this.button1.TabIndex = 1;
             this.button1.Text = "Excel 文件名";
             this.button1.UseVisualStyleBackColor = true;
@@ -79,19 +78,18 @@
             // textBoxFile
             // 
             this.textBoxFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxFile.Location = new System.Drawing.Point(187, 41);
-            this.textBoxFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxFile.Location = new System.Drawing.Point(102, 20);
             this.textBoxFile.Name = "textBoxFile";
-            this.textBoxFile.Size = new System.Drawing.Size(488, 34);
+            this.textBoxFile.Size = new System.Drawing.Size(268, 23);
             this.textBoxFile.TabIndex = 2;
             this.textBoxFile.Click += new System.EventHandler(this.textBoxFile_Click);
+            this.textBoxFile.TextChanged += new System.EventHandler(this.TextBoxFile_TextChanged);
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(886, 39);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonUpdate.Location = new System.Drawing.Point(483, 20);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(154, 42);
+            this.buttonUpdate.Size = new System.Drawing.Size(84, 21);
             this.buttonUpdate.TabIndex = 3;
             this.buttonUpdate.Text = "上传";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -100,11 +98,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 131);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(12, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Size = new System.Drawing.Size(1401, 452);
+            this.groupBox1.Size = new System.Drawing.Size(764, 226);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "匹配结果";
@@ -120,10 +116,9 @@
             this.columnHeader6});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(11, 35);
-            this.listView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listView1.Location = new System.Drawing.Point(6, 18);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1375, 403);
+            this.listView1.Size = new System.Drawing.Size(752, 204);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -159,11 +154,9 @@
             // 
             this.groupBox2.Controls.Add(this.listViewHistory3);
             this.groupBox2.Controls.Add(this.listViewHistory1);
-            this.groupBox2.Location = new System.Drawing.Point(22, 594);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Location = new System.Drawing.Point(12, 297);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox2.Size = new System.Drawing.Size(1401, 430);
+            this.groupBox2.Size = new System.Drawing.Size(764, 215);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "历史纪录";
@@ -180,10 +173,9 @@
             this.listViewHistory3.ContextMenuStrip = this.contextMenuStrip2;
             this.listViewHistory3.FullRowSelect = true;
             this.listViewHistory3.GridLines = true;
-            this.listViewHistory3.Location = new System.Drawing.Point(737, 35);
-            this.listViewHistory3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listViewHistory3.Location = new System.Drawing.Point(402, 18);
             this.listViewHistory3.Name = "listViewHistory3";
-            this.listViewHistory3.Size = new System.Drawing.Size(649, 381);
+            this.listViewHistory3.Size = new System.Drawing.Size(356, 192);
             this.listViewHistory3.TabIndex = 1;
             this.listViewHistory3.UseCompatibleStateImageBehavior = false;
             this.listViewHistory3.View = System.Windows.Forms.View.Details;
@@ -221,12 +213,12 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.查看明细ToolStripMenuItem1});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(175, 38);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(125, 26);
             // 
             // 查看明细ToolStripMenuItem1
             // 
             this.查看明细ToolStripMenuItem1.Name = "查看明细ToolStripMenuItem1";
-            this.查看明细ToolStripMenuItem1.Size = new System.Drawing.Size(174, 34);
+            this.查看明细ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.查看明细ToolStripMenuItem1.Text = "查看明细";
             this.查看明细ToolStripMenuItem1.Click += new System.EventHandler(this.查看明细ToolStripMenuItem1_Click);
             // 
@@ -239,10 +231,9 @@
             this.listViewHistory1.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewHistory1.FullRowSelect = true;
             this.listViewHistory1.GridLines = true;
-            this.listViewHistory1.Location = new System.Drawing.Point(11, 35);
-            this.listViewHistory1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listViewHistory1.Location = new System.Drawing.Point(6, 18);
             this.listViewHistory1.Name = "listViewHistory1";
-            this.listViewHistory1.Size = new System.Drawing.Size(712, 381);
+            this.listViewHistory1.Size = new System.Drawing.Size(390, 192);
             this.listViewHistory1.TabIndex = 1;
             this.listViewHistory1.UseCompatibleStateImageBehavior = false;
             this.listViewHistory1.View = System.Windows.Forms.View.Details;
@@ -268,12 +259,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.查看明细ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(175, 38);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 26);
             // 
             // 查看明细ToolStripMenuItem
             // 
             this.查看明细ToolStripMenuItem.Name = "查看明细ToolStripMenuItem";
-            this.查看明细ToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.查看明细ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.查看明细ToolStripMenuItem.Text = "查看明细";
             this.查看明细ToolStripMenuItem.Click += new System.EventHandler(this.查看明细ToolStripMenuItem_Click);
             // 
@@ -283,10 +274,9 @@
             // 
             // buttonGenerateNew
             // 
-            this.buttonGenerateNew.Location = new System.Drawing.Point(1052, 39);
-            this.buttonGenerateNew.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonGenerateNew.Location = new System.Drawing.Point(574, 20);
             this.buttonGenerateNew.Name = "buttonGenerateNew";
-            this.buttonGenerateNew.Size = new System.Drawing.Size(356, 42);
+            this.buttonGenerateNew.Size = new System.Drawing.Size(194, 21);
             this.buttonGenerateNew.TabIndex = 6;
             this.buttonGenerateNew.Text = "未匹配的产品生成为新产品";
             this.buttonGenerateNew.UseVisualStyleBackColor = true;
@@ -294,10 +284,9 @@
             // 
             // buttonReadFile
             // 
-            this.buttonReadFile.Location = new System.Drawing.Point(687, 39);
-            this.buttonReadFile.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonReadFile.Location = new System.Drawing.Point(375, 20);
             this.buttonReadFile.Name = "buttonReadFile";
-            this.buttonReadFile.Size = new System.Drawing.Size(154, 42);
+            this.buttonReadFile.Size = new System.Drawing.Size(84, 21);
             this.buttonReadFile.TabIndex = 7;
             this.buttonReadFile.Text = "读excel";
             this.buttonReadFile.UseVisualStyleBackColor = true;
@@ -305,9 +294,9 @@
             // 
             // frmYunAsync
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1445, 1047);
+            this.ClientSize = new System.Drawing.Size(788, 524);
             this.Controls.Add(this.buttonReadFile);
             this.Controls.Add(this.buttonGenerateNew);
             this.Controls.Add(this.groupBox2);
@@ -315,7 +304,6 @@
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.textBoxFile);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmYunAsync";
