@@ -18,8 +18,7 @@ namespace DownloadEBayOrder.BLL
             {
                 if (orderid == 0)
                 {
-                    Thread.Sleep(30000);
-
+                    Thread.Sleep(30 * 1000);
                 }
                 else
                 {
@@ -141,6 +140,14 @@ namespace DownloadEBayOrder.BLL
             {
                 ebayOrdersString = LoadEbayOrder(DateTime.Now.AddDays(-Config.DownDays), DateTime.Now, transactionID);
             }
+
+            // 测试
+            //if (true)
+            //{
+            //    string filefullname = BLL.Variable.storePath + "\\_eBayOrders.xml";
+            //    ebayOrdersString = File.ReadAllText(filefullname);
+            //}
+
             SaveToDB(context, ebayOrdersString, orderid);
             string paypalTransaction = LoadEBayOrderPaypalTransaction();
             SavePaypalTransaction(context, paypalTransaction);
@@ -832,8 +839,11 @@ namespace DownloadEBayOrder.BLL
                 decimal.TryParse(xe["ShippingServiceSelected"]["ShippingServiceCost"] != null ? xe["ShippingServiceSelected"]["ShippingServiceCost"].InnerText : "0", out shippingCharge);
                 oh.shipping_charge = shippingCharge;
 
-                decimal orderTaxPercent;
-                decimal.TryParse(xe["ShippingDetails"]["SalesTax"]["SalesTaxPercent"].InnerText, out orderTaxPercent);
+                decimal orderTaxPercent = 0M;
+                if (xe["ShippingDetails"]["SalesTax"]["SalesTaxPercent"] != null)
+                {
+                    decimal.TryParse(xe["ShippingDetails"]["SalesTax"]["SalesTaxPercent"].InnerText, out orderTaxPercent);
+                }
                 //if (xe["ShippingDetails"]["SalesTax"]["ShippingIncludedInTax"].InnerText == "true")
                 if (orderTaxPercent > 0)
                 {
@@ -845,8 +855,14 @@ namespace DownloadEBayOrder.BLL
                         context.SaveChanges();
                     }
 
-                    oh.tax_charge = decimal.Parse(xe["ShippingDetails"]["SalesTax"]["SalesTaxAmount"].InnerText);
-
+                    if (xe["ShippingDetails"]["SalesTax"]["SalesTaxAmount"] != null)
+                    {
+                        oh.tax_charge = decimal.Parse(xe["ShippingDetails"]["SalesTax"]["SalesTaxAmount"].InnerText);
+                    }
+                    else
+                    {
+                        oh.tax_charge = 0M;
+                    }
                     oh.pst = oh.tax_charge - oh.tax_charge / (state.gst + state.pst) * state.gst;
                     oh.pst_rate = state.pst;
                     oh.gst = oh.tax_charge - oh.pst;

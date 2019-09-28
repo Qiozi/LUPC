@@ -1,7 +1,0 @@
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\bin\Debug\WebSite404.exe.config
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\bin\Debug\WebSite404.exe
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\bin\Debug\WebSite404.pdb
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Debug\WebSite404.csprojAssemblyReference.cache
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Debug\WebSite404.csproj.CoreCompileInputs.cache
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Debug\WebSite404.exe
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Debug\WebSite404.pdb

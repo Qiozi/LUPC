@@ -1,7 +1,0 @@
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\bin\Release\WebSite404.exe.config
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\bin\Release\WebSite404.exe
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\bin\Release\WebSite404.pdb
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Release\WebSite404.csproj.CoreCompileInputs.cache
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Release\WebSite404.exe
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Release\WebSite404.pdb
-C:\Workspaces\MyProjects\LUComputer\Consoles\WebSite404\obj\Release\WebSite404.csprojAssemblyReference.cache
