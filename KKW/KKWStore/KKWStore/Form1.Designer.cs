@@ -67,6 +67,7 @@
             this.buttonYunAsync = new System.Windows.Forms.Button();
             this.buttontUpdateYunPrice = new System.Windows.Forms.Button();
             this.buttonUpdateOut = new System.Windows.Forms.Button();
+            this.buttonChangeStore = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_inStore
@@ -212,9 +213,9 @@
             // 
             // buttonChangeSN
             // 
-            this.buttonChangeSN.Location = new System.Drawing.Point(244, 118);
+            this.buttonChangeSN.Location = new System.Drawing.Point(178, 117);
             this.buttonChangeSN.Name = "buttonChangeSN";
-            this.buttonChangeSN.Size = new System.Drawing.Size(186, 70);
+            this.buttonChangeSN.Size = new System.Drawing.Size(109, 70);
             this.buttonChangeSN.TabIndex = 14;
             this.buttonChangeSN.Text = "修正条码所属";
             this.buttonChangeSN.UseVisualStyleBackColor = true;
@@ -269,7 +270,7 @@
             this.buttonChange.Enabled = false;
             this.buttonChange.Location = new System.Drawing.Point(52, 118);
             this.buttonChange.Name = "buttonChange";
-            this.buttonChange.Size = new System.Drawing.Size(186, 70);
+            this.buttonChange.Size = new System.Drawing.Size(120, 70);
             this.buttonChange.TabIndex = 21;
             this.buttonChange.Text = "转库【条码扫描】";
             this.buttonChange.UseVisualStyleBackColor = true;
@@ -484,11 +485,23 @@
             this.buttonUpdateOut.Visible = false;
             this.buttonUpdateOut.Click += new System.EventHandler(this.buttonUpdateOut_Click);
             // 
+            // buttonChangeStore
+            // 
+            this.buttonChangeStore.Location = new System.Drawing.Point(292, 117);
+            this.buttonChangeStore.Name = "buttonChangeStore";
+            this.buttonChangeStore.Size = new System.Drawing.Size(137, 70);
+            this.buttonChangeStore.TabIndex = 41;
+            this.buttonChangeStore.Text = "转库";
+            this.buttonChangeStore.UseVisualStyleBackColor = true;
+            this.buttonChangeStore.Visible = false;
+            this.buttonChangeStore.Click += new System.EventHandler(this.buttonChangeStore_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 624);
+            this.Controls.Add(this.buttonChangeStore);
             this.Controls.Add(this.buttonUpdateOut);
             this.Controls.Add(this.buttontUpdateYunPrice);
             this.Controls.Add(this.buttonYunAsync);
@@ -578,6 +591,7 @@
         private System.Windows.Forms.Button buttonYunAsync;
         private System.Windows.Forms.Button buttontUpdateYunPrice;
         private System.Windows.Forms.Button buttonUpdateOut;
+        private System.Windows.Forms.Button buttonChangeStore;
     }
 }
 

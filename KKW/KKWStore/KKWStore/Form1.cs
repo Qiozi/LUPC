@@ -102,7 +102,7 @@ namespace KKWStore
                 button_inStore.Visible = false;
                 button_return.Visible = false;
                 buttonReturn.Visible = false;
-              
+
                 buttonPay.Visible = false;
                 buttonStat.Visible = false;
                 button_udpate_saleTotal.Visible = false;
@@ -165,7 +165,7 @@ namespace KKWStore
                 button_inStore.Visible = true;
                 button_inStoreYun.Visible = true;
                 buttonBargainMoney.Visible = true;
-
+                buttonChangeStore.Visible = true;
 
                 buttonUpdateOut.Visible = true; // 上传云仓库存
             }
@@ -583,6 +583,13 @@ namespace KKWStore
         private void buttonUpdateOut_Click(object sender, EventArgs e)
         {
             frmUploadYunOut frm = new frmUploadYunOut();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.Show();
+        }
+
+        private void buttonChangeStore_Click(object sender, EventArgs e)
+        {
+            frmChangeWholesale frm = new frmChangeWholesale();
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }
