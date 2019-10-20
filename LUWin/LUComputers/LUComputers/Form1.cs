@@ -72,7 +72,7 @@ insert tb_timer
 
 ");
             // 更新所有产品描述
-            if(DateTime.Now.DayOfWeek == DayOfWeek.Monday ||
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday ||
                 DateTime.Now.DayOfWeek == DayOfWeek.Wednesday ||
                 DateTime.Now.DayOfWeek == DayOfWeek.Friday)
             {
@@ -728,6 +728,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                 if (File.Exists(filepath))
                 {
                     List<D2aModel> list = ToDT(filepath);
+                    File.WriteAllText("C:\\Workspaces\\PriceStore\\test.json", Newtonsoft.Json.JsonConvert.SerializeObject(list), Encoding.UTF8);
 
                     ReadD2a(list);
 
@@ -759,10 +760,10 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             HSSFWorkbook workbook = new HSSFWorkbook(sr);
 
             //获取excel的第一个sheet
-            ISheet sheet = workbook.GetSheetAt(0);
+            ISheet sheet = workbook.GetSheet("PriceList");
 
             //获取sheet的首行
-            IRow headerRow = sheet.GetRow(15);
+            IRow headerRow = sheet.GetRow(17);
 
             //一行最后一个方格的编号 即总的列数
             int cellCount = headerRow.LastCellNum;
@@ -775,30 +776,30 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             //最后一列的标号  即总的行数
             int rowCount = sheet.LastRowNum;
 
-            for (int i = 14; i < sheet.LastRowNum; i++)
+            for (int i = 16; i < sheet.LastRowNum; i++)
             {
                 IRow row = sheet.GetRow(i);
                 // sheet.GetRow(0).GetCell(0).is
                 if (row == null) continue;
-                if (row.GetCell(0) != null)
+                if (row.GetCell(1) != null)
                 {
                     D2aModel m1 = new D2aModel();
-                    m1.mfp = row.GetCell(0).ToString();
+                    m1.mfp = row.GetCell(1).ToString();
                     decimal cost1;
-                    decimal.TryParse(row.GetCell(5).ToString(), out cost1);
+                    decimal.TryParse(row.GetCell(3).ToString().Replace("$",""), out cost1);
                     m1.cost = cost1;
                     m1.stock = 5;
                     if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
                         list.Add(m1);
                 }
-                if (row.GetCell(7) != null)
+                if (row.GetCell(5) != null)
                 {
                     D2aModel m1 = new D2aModel();
-                    m1.mfp = row.GetCell(7).ToString();
+                    m1.mfp = row.GetCell(5).ToString();
                     decimal cost1 = 0M;
                     try
                     {
-                        decimal.TryParse(row.GetCell(13).ToString(), out cost1);
+                        decimal.TryParse(row.GetCell(7).ToString().Replace("$", ""), out cost1);
                     }
                     catch { }
                     m1.cost = cost1;
@@ -806,22 +807,15 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                     if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
                         list.Add(m1);
                 }
-            }
-            ISheet sheet2 = workbook.GetSheetAt(1);
 
-            for (int i = 11; i < sheet2.LastRowNum; i++)
-            {
-                IRow row = sheet2.GetRow(i);
-                // sheet.GetRow(0).GetCell(0).is
-                if (row == null) continue;
-                if (row.GetCell(2) != null)
+                if (row.GetCell(9) != null)
                 {
                     D2aModel m1 = new D2aModel();
-                    m1.mfp = row.GetCell(2).ToString();
-                    decimal cost1 = 0;
+                    m1.mfp = row.GetCell(9).ToString();
+                    decimal cost1 = 0M;
                     try
                     {
-                        decimal.TryParse(row.GetCell(3).ToString(), out cost1);
+                        decimal.TryParse(row.GetCell(11).ToString().Replace("$", ""), out cost1);
                     }
                     catch { }
                     m1.cost = cost1;
@@ -830,11 +824,95 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                         list.Add(m1);
                 }
 
+                if (row.GetCell(17) != null)
+                {
+                    D2aModel m1 = new D2aModel();
+                    m1.mfp = row.GetCell(17).ToString();
+                    decimal cost1 = 0M;
+                    try
+                    {
+                        decimal.TryParse(row.GetCell(19).ToString().Replace("$", ""), out cost1);
+                    }
+                    catch { }
+                    m1.cost = cost1;
+                    m1.stock = 5;
+                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+                        list.Add(m1);
+                }
+                if (row.GetCell(21) != null)
+                {
+                    D2aModel m1 = new D2aModel();
+                    m1.mfp = row.GetCell(21).ToString();
+                    decimal cost1 = 0M;
+                    try
+                    {
+                        decimal.TryParse(row.GetCell(23).ToString().Replace("$", ""), out cost1);
+                    }
+                    catch { }
+                    m1.cost = cost1;
+                    m1.stock = 5;
+                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+                        list.Add(m1);
+                }
+                if (row.GetCell(25) != null)
+                {
+                    D2aModel m1 = new D2aModel();
+                    m1.mfp = row.GetCell(25).ToString();
+                    decimal cost1 = 0M;
+                    try
+                    {
+                        decimal.TryParse(row.GetCell(27).ToString().Replace("$", ""), out cost1);
+                    }
+                    catch { }
+                    m1.cost = cost1;
+                    m1.stock = 5;
+                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+                        list.Add(m1);
+                }
+                if (row.GetCell(29) != null)
+                {
+                    D2aModel m1 = new D2aModel();
+                    m1.mfp = row.GetCell(29).ToString();
+                    decimal cost1 = 0M;
+                    try
+                    {
+                        decimal.TryParse(row.GetCell(31).ToString().Replace("$", ""), out cost1);
+                    }
+                    catch { }
+                    m1.cost = cost1;
+                    m1.stock = 5;
+                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+                        list.Add(m1);
+                }
             }
+            //ISheet sheet2 = workbook.GetSheetAt(1);
+
+            //for (int i = 11; i < sheet2.LastRowNum; i++)
+            //{
+            //    IRow row = sheet2.GetRow(i);
+            //    // sheet.GetRow(0).GetCell(0).is
+            //    if (row == null) continue;
+            //    if (row.GetCell(2) != null)
+            //    {
+            //        D2aModel m1 = new D2aModel();
+            //        m1.mfp = row.GetCell(2).ToString();
+            //        decimal cost1 = 0;
+            //        try
+            //        {
+            //            decimal.TryParse(row.GetCell(3).ToString(), out cost1);
+            //        }
+            //        catch { }
+            //        m1.cost = cost1;
+            //        m1.stock = 5;
+            //        if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+            //            list.Add(m1);
+            //    }
+
+            //}
 
             workbook = null;
             sheet = null;
-            sheet2 = null;
+            //sheet2 = null;
             sr.Close();
             sr.Dispose();
             return list;
@@ -850,7 +928,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             int ltd_id = lh.LtdHelperValue(Ltd.wholesaler_d2a);
 
             DataTable luSkuDT = Config.ExecuteDateTable(string.Format("select lu_sku,manufacturer_part_number from tb_other_inc_valid_lu_sku where prodType='{0}' ", "NEW"));
-            
+
             string table_name = new Watch.Eprom().CreateTable(Ltd.wholesaler_d2a);
             {
                 for (int i = 0; i < list.Count; i++)
