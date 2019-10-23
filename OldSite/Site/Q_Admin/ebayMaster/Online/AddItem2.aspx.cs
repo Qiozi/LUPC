@@ -144,7 +144,7 @@ public partial class Q_Admin_ebayMaster_Online_AddItem2 : System.Web.UI.Page
         else
             ei.Pictures_url1 = "https://www.lucomputers.com/ebay/" + pc.logo_filenames + ".jpg";
 
-        string shippingString = eBayShipping.GetPartShippingFeeString(context, new tb_product() { menu_child_serial_no = 350 });// 先用自提免费
+        string shippingString = eBayShipping.GetPartShippingFeeString(context, new tb_product() { menu_child_serial_no = 350 }, this.Server);// 先用自提免费
 
         EbayItemGenerate eig = new EbayItemGenerate();
 

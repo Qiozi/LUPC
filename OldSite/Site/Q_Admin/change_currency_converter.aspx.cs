@@ -9,7 +9,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using jmail;
+
 using System.Net.Mail;
 
 public partial class Q_Admin_change_currency_converter : PageBase

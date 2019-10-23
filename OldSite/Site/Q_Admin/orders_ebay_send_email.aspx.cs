@@ -9,7 +9,8 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using jmail;  
+using System.Net.Mail;
+using System.Net;
 
 public partial class Q_Admin_orders_ebay_send_email : PageBase
 {
@@ -84,10 +85,10 @@ public partial class Q_Admin_orders_ebay_send_email : PageBase
 
         }
     }
-    
+
 
     public bool SendEmail(string order_code, string buyer_email_address, string ship_date, string item_title,
-        string item_number,string buye_user_id,  string seller_user_id, string total, string your_account_name, string your_password)
+        string item_number, string buye_user_id, string seller_user_id, string total, string your_account_name, string your_password)
     {
         string sbody = string.Format(@"
 <html>
@@ -119,22 +120,45 @@ Thank you again for your business!
 </body>
 </html>", ship_date, item_title, item_number, buye_user_id, buyer_email_address, seller_user_id, total, your_account_name, your_password);
 
-        MessageClass mc = new MessageClass();
-        if (true)
-        {
-            mc.ContentType = "text/html";
-            mc.Body = sbody;// ;
-            mc.Logging = true;
-            mc.Silent = true;
-            mc.ReplyTo = "sales@lucomputers.com";
-            mc.MailServerUserName = Config.mailUserName;
-            mc.MailServerPassWord = Config.mailPassword;
-            mc.From = "sales@lucomputers.com";
-            mc.FromName = "LU COMPUTERS";
-            mc.Subject = "LU COMPUTERS ORDER(#" + order_code + ") HAVE SHIPPED CONFIRMATION, THANK YOU FOR YOUR BUSINESS!";
-            mc.AddRecipient(buyer_email_address, buyer_email_address, null);
-            mc.AddRecipient("terryeah@gmail.com", "terryeah@gmail.com", null);
-        }
+        MailMessage mc = new MailMessage();
+
+        // mc.ContentType = "text/html";
+        //mc.Body = sbody;// ;
+        //                //mc.Logging = true;
+        //                // mc.Silent = true;
+        //mc.ReplyTo = new MailAddress("sales@lucomputers.com");
+        ////mc.h = Config.mailUserName;
+        ////mc.MailServerPassWord = Config.mailPassword;
+        //mc.From = "sales@lucomputers.com";
+        //NetworkCredential credential = new NetworkCredential(Config.mailUserName, Config.mailPassword);
+        //mc.Credentials = credential;
+        //mc.FromName = "LU COMPUTERS";
+        //mc.Subject = "LU COMPUTERS ORDER(#" + order_code + ") HAVE SHIPPED CONFIRMATION, THANK YOU FOR YOUR BUSINESS!";
+        //mc.AddRecipient(buyer_email_address, buyer_email_address, null);
+        //mc.AddRecipient("terryeah@gmail.com", "terryeah@gmail.com", null);
+
+        MailMessage message = new MailMessage();
+        message.IsBodyHtml = false;
+        message.Subject = "LU COMPUTERS ORDER(#" + order_code + ") HAVE SHIPPED CONFIRMATION, THANK YOU FOR YOUR BUSINESS!";
+        message.Body = sbody;
+        message.IsBodyHtml = true;
+        message.From = new MailAddress("sales@lucomputers.com");
+
+        message.To.Add("sales@lucomputers.com");
+        message.To.Add(buyer_email_address);
+
+        SmtpClient client = new SmtpClient();
+        client.EnableSsl = false;
+        client.UseDefaultCredentials = false;
+        NetworkCredential credential = new NetworkCredential(Config.mailUserName, Config.mailPassword);
+        client.Credentials = credential;
+        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+        client.Host = Config.mailServer;
+        client.Port = 25;
+        client.Send(message);
+        return true;
+
+
         //else
         //{
         //    mc.ContentType = "text/html";
@@ -148,9 +172,9 @@ Thank you again for your business!
         //    mc.Subject = "LU COMPUTERS ORDER(#" + order_code + ") HAVE SHIPPED CONFIRMATION, THANK YOU FOR YOUR BUSINESS!";
         //    mc.AddRecipient(buyer_email_address, buyer_email_address, null);
         //}
-        bool b = mc.Send("smtp.126.com", false);
-        mc.Clear();
-        return b;
+        //bool b = mc.Send("smtp.126.com", false);
+        //mc.Clear();
+        //return b;
 
     }
 }

@@ -640,37 +640,37 @@ public class eBayShipping
      , new eBayPriceHelper().eachAddItemShipping(international_service_3_cost)
      , ""
      , is_notebook && international_service_3 == "CA_UPSWorldWideExpedited" ? GetNotebookShipTOCountryLess() : "<ShipToLocation>US</ShipToLocation>"
-     , is_notebook && international_service_3 == "CA_UPSWorldWideExpedited" ? GetNotebookShipToCountry(context, scanSize, weight, n , "CA_UPSWorldWideExpedited", sku) : ""));
+     , is_notebook && international_service_3 == "CA_UPSWorldWideExpedited" ? GetNotebookShipToCountry(context, scanSize, weight, n, "CA_UPSWorldWideExpedited", sku) : ""));
                 n += 2;
             }
             #endregion
         }
-//        if (!IsSystem)
-//        {
-//            #region international_service_4_cost
-//            if (international_service_4_cost > 0M)
-//            {
-//                sb.Append(string.Format(@"
-//              <InternationalShippingServiceOption>{4}
-//                <ShippingService>{0}</ShippingService>
-//                <ShippingServicePriority>{1}</ShippingServicePriority>
-//                <ShippingServiceCost>{2}</ShippingServiceCost>
-//                <ShippingServiceAdditionalCost>{3}</ShippingServiceAdditionalCost>
-//                {5}
-//              </InternationalShippingServiceOption>
-//              {6}
-//        "
-//         , international_service_4
-//         , n
-//         , international_service_4_cost
-//         , new eBayPriceHelper().eachAddItemShipping(international_service_4_cost)
-//         , ""
-//         , is_notebook && international_service_4 == "CA_UPSWorldWideExpress" ? GetNotebookShipTOCountryLess() : "<ShipToLocation>US</ShipToLocation>"
-//         , is_notebook && international_service_4 == "CA_UPSWorldWideExpress" ? GetNotebookShipToCountry(scanSize, weight, n + 1, "CA_UPSWorldWideExpress", sku) : ""));
-//                n += 2;
-//            }
-//            #endregion
-//        }
+        //        if (!IsSystem)
+        //        {
+        //            #region international_service_4_cost
+        //            if (international_service_4_cost > 0M)
+        //            {
+        //                sb.Append(string.Format(@"
+        //              <InternationalShippingServiceOption>{4}
+        //                <ShippingService>{0}</ShippingService>
+        //                <ShippingServicePriority>{1}</ShippingServicePriority>
+        //                <ShippingServiceCost>{2}</ShippingServiceCost>
+        //                <ShippingServiceAdditionalCost>{3}</ShippingServiceAdditionalCost>
+        //                {5}
+        //              </InternationalShippingServiceOption>
+        //              {6}
+        //        "
+        //         , international_service_4
+        //         , n
+        //         , international_service_4_cost
+        //         , new eBayPriceHelper().eachAddItemShipping(international_service_4_cost)
+        //         , ""
+        //         , is_notebook && international_service_4 == "CA_UPSWorldWideExpress" ? GetNotebookShipTOCountryLess() : "<ShipToLocation>US</ShipToLocation>"
+        //         , is_notebook && international_service_4 == "CA_UPSWorldWideExpress" ? GetNotebookShipToCountry(scanSize, weight, n + 1, "CA_UPSWorldWideExpress", sku) : ""));
+        //                n += 2;
+        //            }
+        //            #endregion
+        //        }
 
         #region domestic_service_1_cost
         if (domestic_service_1_cost > 0)
@@ -710,7 +710,7 @@ public class eBayShipping
         countrys += "<ShipToLocation>CA</ShipToLocation>";
         countrys += "<ShipToLocation>US</ShipToLocation>";
         // countrys += "<ShipToLocation>Europe</ShipToLocation>";
-       
+
         countrys += "<ShipToLocation>US</ShipToLocation>";
         countrys += "<ShipToLocation>UK</ShipToLocation>";
         countrys += "<ShipToLocation>ES</ShipToLocation>";
@@ -787,28 +787,149 @@ public class eBayShipping
     /// </summary>
     /// <param name="pm"></param>
     /// <returns></returns>
-    public static string GetPartShippingFeeString(nicklu2Entities context, tb_product pm)
+    public static string GetPartShippingFeeString(nicklu2Entities context, tb_product pm
+        , System.Web.HttpServerUtility server)
     {
         if (pm.menu_child_serial_no == 350 || pm.menu_child_serial_no == 358)
         {
             //
             // 笔记本先用自提，，然后创建后再用其他的地方修改运费
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.Append(string.Format(@"
-                              <ShippingServiceOptions>
-                                <FreeShipping>true</FreeShipping>
-                                <ShippingService>{0}</ShippingService>
-                                <ShippingServicePriority>{1}</ShippingServicePriority>
-                                <ShippingServiceCost>{2}</ShippingServiceCost>
-                                <ShippingServiceAdditionalCost>{3}</ShippingServiceAdditionalCost>
-                              </ShippingServiceOptions>
-                        "
-                                 , "CA_Pickup"
-                                 , 0
-                                 , 0
-                                 , 0
-                                 ));
-            return sb.ToString();
+            //System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            //sb.Append(string.Format(@"
+            //                  <ShippingServiceOptions>
+            //                    <FreeShipping>true</FreeShipping>
+            //                    <ShippingService>{0}</ShippingService>
+            //                    <ShippingServicePriority>{1}</ShippingServicePriority>
+            //                    <ShippingServiceCost>{2}</ShippingServiceCost>
+            //                    <ShippingServiceAdditionalCost>{3}</ShippingServiceAdditionalCost>
+            //                  </ShippingServiceOptions>
+            //            "
+            //                     , "CA_Pickup"
+            //                     , 0
+            //                     , 0
+            //                     , 0
+            //                     ));
+            //return sb.ToString();
+
+            decimal adjustment = pm.adjustment.Value;
+            decimal cost = pm.product_current_cost.Value + adjustment;
+            decimal screen = pm.screen_size.Value;
+
+            decimal _profit = 0M;
+            decimal _ebay_fee = 0M;
+            decimal _shiping_fee = 0M;
+            decimal _bank_fee = 0M;
+
+            eBayPriceHelper eH = new eBayPriceHelper();
+            var buyItNowPrice = eH.eBayNetbookPartPrice(cost
+                , screen
+                , adjustment
+                , ref _shiping_fee
+                , ref _profit
+                , ref _ebay_fee
+                , ref _bank_fee);
+
+            decimal newShippingFee = 0M;
+
+            //System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            //if (ddl_domestic_services_2.SelectedValue == "CA_UPSStandardCanada")
+            //{
+            newShippingFee = eBayShipping.BasicShippingFee(pm.screen_size.HasValue ? pm.screen_size.Value : 17.3M);
+            if (_shiping_fee <= newShippingFee)
+                newShippingFee -= _shiping_fee;
+
+            var txt_domestic_service_2_cost = newShippingFee;
+            var ddl_domestic_services_2 = "CA_UPSStandardCanada";
+
+
+            var ddl_domestic_services_3 = "CA_UPSExpeditedCanada";
+
+            newShippingFee = eBayShipping.UPS_WorldExpedited_ShippingFee(screen);
+            if (_shiping_fee <= newShippingFee)
+                newShippingFee -= _shiping_fee;
+
+            var txt_domestic_service_3_cost = newShippingFee;
+
+            var ddl_International_services_1 = "CA_UPSStandardUnitedStates";
+
+            newShippingFee = eBayShipping.BasicShippingFee(screen);
+            if (_shiping_fee <= newShippingFee)
+                newShippingFee -= _shiping_fee;
+
+            var txt_international_service_1_cost = newShippingFee;
+
+
+            var ddl_International_services_2 = "CA_UPS3DaySelectUnitedStates";
+
+            newShippingFee = eBayShipping.UPS3Days_ShippingFee(screen);
+            if (_shiping_fee <= newShippingFee)
+                newShippingFee -= _shiping_fee;
+
+            var txt_international_service_2_cost = (newShippingFee);
+
+
+
+            var ddl_International_services_3 = "CA_UPSWorldWideExpedited";
+
+            newShippingFee = eBayShipping.UPS_WorldExpedited_ShippingFee(screen);
+            if (_shiping_fee <= newShippingFee)
+                newShippingFee -= _shiping_fee;
+
+            var txt_international_service_3_cost = newShippingFee;
+
+            var ddl_International_services_4 = "CA_UPSWorldWideExpress";
+            newShippingFee = eBayShipping.UPS_Express_ShippingFee(screen);
+            if (_shiping_fee <= newShippingFee)
+                newShippingFee -= _shiping_fee;
+
+            var txt_international_service_4_cost = newShippingFee;
+
+            //decimal domestic_service_1_cost;
+
+
+            //decimal domestic_service_3_cost;
+            //decimal.TryParse(this.txt_domestic_service_3_cost.Text, out domestic_service_3_cost);
+
+            //decimal international_service_1_cost;
+            //decimal.TryParse(this.txt_international_service_1_cost.Text, out international_service_1_cost);
+
+            //decimal international_service_2_cost;
+            //decimal.TryParse(this.txt_international_service_2_cost.Text, out international_service_2_cost);
+
+            //decimal international_service_3_cost = 0M;
+            //decimal.TryParse(this.txt_international_service_3_cost.Text, out international_service_3_cost);
+
+            //decimal international_service_4_cost;
+            //decimal.TryParse(this.txt_international_service_4_cost.Text, out international_service_4_cost);
+            var ddl_domestic_services_1 = "CA_Pickup";
+
+            var isNoteBook = true;
+            var isSystem = false;
+            return eBayShipping.GetShippingDetail2(context,
+                isNoteBook
+                , pm.product_serial_no
+                , isSystem
+                , false
+                , ddl_domestic_services_1
+                , 0M
+                , true
+                , ddl_domestic_services_2
+                , txt_domestic_service_2_cost
+                , ddl_domestic_services_3
+                , txt_domestic_service_3_cost
+                , "-1"
+                , 0M
+                , ddl_International_services_1
+                , txt_international_service_1_cost
+                , ddl_International_services_2
+                , txt_international_service_2_cost
+                , ddl_International_services_3
+                , txt_international_service_3_cost
+                , ddl_International_services_4
+                , txt_international_service_4_cost
+                , pm != null ? pm.screen_size.Value : 0M
+                , pm != null ? pm.weight.Value : 0M
+                , server);
         }
         else
         {
@@ -833,7 +954,7 @@ public class eBayShipping
                 shipCate = shipDt.Rows[0][0].ToString();
             }
 
-            var list = context.tb_ebay_shipping_settings.Where(me=>me.CategoryID.Equals(shipCate)).ToList();// EbayShippingSettingsModel.FindAllByProperty("CategoryID", shipCate);
+            var list = context.tb_ebay_shipping_settings.Where(me => me.CategoryID.Equals(shipCate)).ToList();// EbayShippingSettingsModel.FindAllByProperty("CategoryID", shipCate);
 
             IsExistEconomy = list.Count(p => p.shippingCompany.Equals("CA_EconomyShipping") ||
                 p.shippingCompany.Equals("CA_StandardShipping")) > 0;

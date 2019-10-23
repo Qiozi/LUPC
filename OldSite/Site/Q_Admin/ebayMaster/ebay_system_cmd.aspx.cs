@@ -15,7 +15,7 @@ using LU.Data;
 
 public partial class Q_Admin_ebayMaster_ebay_system_cmd : PageBaseNoInit
 {
-  
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -75,9 +75,9 @@ public partial class Q_Admin_ebayMaster_ebay_system_cmd : PageBaseNoInit
                     GenerateSysWarnInfoByDesc(ReqSKU);
                     break;
 
-                //case "duplicateSys":
-                //    DuplicateSystem();
-                //    break;
+                    //case "duplicateSys":
+                    //    DuplicateSystem();
+                    //    break;
             }
 
             Response.End();
@@ -180,7 +180,7 @@ public partial class Q_Admin_ebayMaster_ebay_system_cmd : PageBaseNoInit
         //EbayEtcItemsModel[] list = EbayEtcItemsModel.FindAll(le);
 
         var list = DBContext.tb_ebay_etc_items.Where(me => me.ItemTitle.Contains(keyword)).ToList();
-        Response.Write(JsonFx.Json.JsonWriter.Serialize(list));
+        Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(list));
     }
 
     public void SysFindPart()

@@ -159,7 +159,7 @@ public partial class Q_Admin_ebayMaster_Online_ModifyOnlineShippingFee : PageBas
             }
             else
             {
-                string shippingString = eBayShipping.GetPartShippingFeeString(DBContext, PM);
+                string shippingString = eBayShipping.GetPartShippingFeeString(DBContext, PM, this.Server);
                 // throw new Exception(shippingString);
                 eBayCmdReviseItem.Revise(DBContext, ReqItemID, IsSystem, null, 0M, ReqSKU, shippingString, null);
                 Response.Write("<script>this.close();</script>");

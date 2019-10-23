@@ -63,7 +63,7 @@ public partial class Q_Admin_ebayMaster_Online_ebay_part_to_ebay : PageBase
 
         ei.Pictures_url1 = "http://www.lucomputers.com/pro_img/COMPONENTS/" + (pm.other_product_sku > 0 ? pm.other_product_sku.ToString() : pm.product_serial_no.ToString()) + "_g_1.jpg";
 
-        string shippingString = eBayShipping.GetPartShippingFeeString(DBContext, pm);
+        string shippingString = eBayShipping.GetPartShippingFeeString(DBContext, pm, this.Server);
 
         EbayItemGenerate eig = new EbayItemGenerate();
         ei.Upc = pm.UPC;

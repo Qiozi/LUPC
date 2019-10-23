@@ -5,7 +5,6 @@ using System.IO;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using jmail;
 
 public partial class Q_Admin_NetCmd_SendEmailToBenson : System.Web.UI.Page
 {
@@ -147,19 +146,20 @@ where date_format(date_sub(current_date, interval 1 day), '%W %b %d %Y')");
 
     public bool SendToCustomer(string to_email, string sendBody)
     {
-        MessageClass mc = new MessageClass();
-        mc.ContentType = "text/html";
-        mc.Body = sendBody;
-        mc.Logging = true;
-        mc.Silent = true;
-        mc.MailServerUserName = Config.mailUserName;
-        mc.MailServerPassWord = Config.mailPassword;
-        mc.From = "sales@lucomputers.com";
-        mc.FromName = "LU Web";
-        //mc.Subject = "LU COMPUTERS: INVOICE (#" + InvoiceCode + ") THANK YOU FOR YOUR BUSINESS!";
-        mc.Subject = "web status";
-        mc.AddRecipient(to_email, to_email, null);
-        mc.AddRecipient("qiozi@msn.com", "qiozi@msn.com", null);
-        return mc.Send(Config.mailServer, false);
+        return false;
+        //MessageClass mc = new MessageClass();
+        //mc.ContentType = "text/html";
+        //mc.Body = sendBody;
+        //mc.Logging = true;
+        //mc.Silent = true;
+        //mc.MailServerUserName = Config.mailUserName;
+        //mc.MailServerPassWord = Config.mailPassword;
+        //mc.From = "sales@lucomputers.com";
+        //mc.FromName = "LU Web";
+        ////mc.Subject = "LU COMPUTERS: INVOICE (#" + InvoiceCode + ") THANK YOU FOR YOUR BUSINESS!";
+        //mc.Subject = "web status";
+        //mc.AddRecipient(to_email, to_email, null);
+        //mc.AddRecipient("qiozi@msn.com", "qiozi@msn.com", null);
+        //return mc.Send(Config.mailServer, false);
     }
 }

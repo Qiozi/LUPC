@@ -1,5 +1,4 @@
 ﻿using System;
-using jmail;  
 
 public partial class Q_Admin_replay_question : PageBase
 {
@@ -76,36 +75,36 @@ public partial class Q_Admin_replay_question : PageBase
     }
     protected void btn_replay_Click(object sender, EventArgs e)
     {
-        string email = this.lbl_to_email.Text;
-        if (email != "")
-        {
-            MessageClass mc = new MessageClass();
-            //mc.ContentType = "text/html";
-            mc.Body = this.txt_replay_body.Text ;
-            mc.Logging = true;
-            mc.Silent = true;
-            mc.MailServerUserName = Config.mailUserName;
-            mc.MailServerPassWord = Config.mailPassword;
-            mc.From = Config.mailUserName;
-            mc.FromName = "LUComputer";
-            mc.Subject = this.txt_subject.Text.Trim(); ;
+        //string email = this.lbl_to_email.Text;
+        //if (email != "")
+        //{
+        //    MessageClass mc = new MessageClass();
+        //    //mc.ContentType = "text/html";
+        //    mc.Body = this.txt_replay_body.Text ;
+        //    mc.Logging = true;
+        //    mc.Silent = true;
+        //    mc.MailServerUserName = Config.mailUserName;
+        //    mc.MailServerPassWord = Config.mailPassword;
+        //    mc.From = Config.mailUserName;
+        //    mc.FromName = "LUComputer";
+        //    mc.Subject = this.txt_subject.Text.Trim(); ;
 
-            mc.AddRecipient(email, email, null);
-            if (mc.Send(Config.mailServer, false))
-            {
-                var am = AskQuestionModel.GetAskQuestionModel(DBContext, SerialNO);
-                am.aq_send = sbyte.Parse("1");
-                am.send_regdate = DateTime.Now;
-                am.aq_reply_body = this.txt_replay_body.Text;
-                DBContext.SaveChanges();
-                AnthemHelper.Alert("OK");
-                BindQuestionListDG(true);
-            }
-            else
-            {
-                AnthemHelper.Alert("falid");
-            }
-        }
+        //    mc.AddRecipient(email, email, null);
+        //    if (mc.Send(Config.mailServer, false))
+        //    {
+        //        var am = AskQuestionModel.GetAskQuestionModel(DBContext, SerialNO);
+        //        am.aq_send = sbyte.Parse("1");
+        //        am.send_regdate = DateTime.Now;
+        //        am.aq_reply_body = this.txt_replay_body.Text;
+        //        DBContext.SaveChanges();
+        //        AnthemHelper.Alert("OK");
+        //        BindQuestionListDG(true);
+        //    }
+        //    else
+        //    {
+        //        AnthemHelper.Alert("falid");
+        //    }
+        //}
     }
     #endregion
     protected void dg_question_list_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
