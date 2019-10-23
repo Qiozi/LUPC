@@ -787,30 +787,57 @@ public class eBayShipping
     /// </summary>
     /// <param name="pm"></param>
     /// <returns></returns>
-    public static string GetPartShippingFeeString(nicklu2Entities context, tb_product pm
-        , System.Web.HttpServerUtility server)
+    public static string GetPartShippingFeeString(nicklu2Entities context,
+        tb_product pm, System.Web.HttpServerUtility server,
+        bool isSystemProd = false,
+        decimal systemProdPrice = 10000M)
     {
-        if (pm.menu_child_serial_no == 350 || pm.menu_child_serial_no == 358)
+        if (isSystemProd)
         {
-            //
-            // 笔记本先用自提，，然后创建后再用其他的地方修改运费
-            //System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            //sb.Append(string.Format(@"
-            //                  <ShippingServiceOptions>
-            //                    <FreeShipping>true</FreeShipping>
-            //                    <ShippingService>{0}</ShippingService>
-            //                    <ShippingServicePriority>{1}</ShippingServicePriority>
-            //                    <ShippingServiceCost>{2}</ShippingServiceCost>
-            //                    <ShippingServiceAdditionalCost>{3}</ShippingServiceAdditionalCost>
-            //                  </ShippingServiceOptions>
-            //            "
-            //                     , "CA_Pickup"
-            //                     , 0
-            //                     , 0
-            //                     , 0
-            //                     ));
-            //return sb.ToString();
+            decimal standardPrice = eBayShipping.SysShippingCa(systemProdPrice);
+            var ddl_domestic_services_2 = "CA_UPSStandardCanada";
+            var txt_domestic_service_2_cost = 0M;// (ESM.is_shrink || ESM.is_barebone) ? "0" : standardPrice.ToString();
+            var ddl_domestic_services_3 = "CA_UPSExpeditedCanada";
+            var txt_domestic_service_3_cost = (eBayShipping.SysShippingScLvlCA(systemProdPrice) - 0M);// (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingScLvlCA(price) - standardPrice).ToString() : eBayShipping.SysShippingScLvlCA(price).ToString();
 
+
+            var ddl_International_services_1 = "CA_UPSStandardUnitedStates";
+            var txt_international_service_1_cost = 0M;// (eBayShipping.SysShippingUS(price) - 0M).ToString();// (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingUS(price) - standardPrice).ToString() : eBayShipping.SysShippingUS(price).ToString();
+            var ddl_International_services_2 = "CA_UPS3DaySelectUnitedStates";
+            var txt_international_service_2_cost = (eBayShipping.SysShippingScLvlUS(systemProdPrice) - 0M);// (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingScLvlUS(price) - standardPrice).ToString() : eBayShipping.SysShippingScLvlUS(price).ToString();
+
+            var ddl_domestic_services_1 = "CA_Pickup";
+
+            var isNoteBook = false;
+            var isSystem = true;
+            return eBayShipping.GetShippingDetail2(context,
+                isNoteBook
+                , pm.product_serial_no
+                , isSystem
+                , false
+                , ddl_domestic_services_1
+                , 0M
+                , true
+                , ddl_domestic_services_2
+                , txt_domestic_service_2_cost
+                , ddl_domestic_services_3
+                , txt_domestic_service_3_cost
+                , "-1"
+                , 0M
+                , ddl_International_services_1
+                , txt_international_service_1_cost
+                , ddl_International_services_2
+                , txt_international_service_2_cost
+                , ""
+                , 0M
+                , ""
+                , 0M
+                , 0M
+                , 0M
+                , server);
+        }
+        else if (pm.menu_child_serial_no == 350 || pm.menu_child_serial_no == 358)
+        {
             decimal adjustment = pm.adjustment.Value;
             decimal cost = pm.product_current_cost.Value + adjustment;
             decimal screen = pm.screen_size.Value;

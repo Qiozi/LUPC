@@ -66,13 +66,7 @@ public partial class Q_Admin_ebayMaster_Online_ModifyOnlineShippingFee : PageBas
             if (this.ddl_International_services_2.SelectedValue == "CA_UPS3DaySelectUnitedStates")
             {
                 this.txt_international_service_2_cost.Text = (eBayShipping.SysShippingScLvlUS(price) - 0M).ToString();// (ESM.is_shrink || ESM.is_barebone) ? (eBayShipping.SysShippingScLvlUS(price) - standardPrice).ToString() : eBayShipping.SysShippingScLvlUS(price).ToString();
-                // shipping + 40%
-                //decimal use3DayUSFee;
-                //decimal.TryParse(this.txt_international_service_2_cost.Text, out use3DayUSFee);
-                ////this.txt_international_service_2_cost.Text = (use3DayUSFee + use3DayUSFee * 0.4M).ToString("000.00");
-                //this.txt_international_service_2_cost.Text = (use3DayUSFee ).ToString("00.00");
             }
-
 
         }
         else
