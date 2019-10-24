@@ -289,7 +289,7 @@ closeconn()
     </table>
 
     <hr size="1" />
-    <div style="display: flex">
+    <div style="display: flex;height:800px;">
         <div style="flex-grow: 1">
             <iframe id="iframeSpecific" name="iframeSpecific" src="/q_admin/manager/product/editSpecifics.aspx" style="width: 98%; height: 90%; border: 1px solid #ccc;"></iframe>
         </div>
