@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Edit Part Comment</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <script type="text/javascript" src="../JS/lib/jquery-1.3.2.min.js"></script>
     <script type="text/javascript" src="/js_css/jquery_lab/popup.js"></script>
     <script type="text/javascript" src="/js_css/jquery_lab/popupclass.js"></script>

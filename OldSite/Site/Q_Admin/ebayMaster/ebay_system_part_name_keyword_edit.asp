@@ -55,7 +55,7 @@
     
     function dekPartNameKeyword(id)
     {
-        if(confirm('are you sure?'))
+        if(true)
         {
             $('#keyword_list_area').load('ebay_system_part_name_keyword_exec.asp'
             ,{ "cmd":"del"
