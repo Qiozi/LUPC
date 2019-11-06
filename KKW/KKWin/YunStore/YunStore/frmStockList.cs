@@ -21,6 +21,12 @@ namespace YunStore
         public frmStockList()
         {
             InitializeComponent();
+            this.Shown += FrmStockList_Shown;
+        }
+
+        private void FrmStockList_Shown(object sender, EventArgs e)
+        {
+            this.label1.Text = "";
         }
 
         private void buttonSelectFile_Click(object sender, EventArgs e)
@@ -137,8 +143,9 @@ namespace YunStore
 
         private void buttonImport_Click(object sender, EventArgs e)
         {
+            DB.kkwEntities _context = new DB.kkwEntities();
             var count = _context.tb_yun_fileinfo_stock_main.Count(me => me.FileName.Equals(_dbMain.FileName));
-            if (count > 0)
+            if (string.IsNullOrEmpty(_dbMain.FileName) || count > 0)
             {
                 MessageBox.Show("此文件已导入过。");
                 return;
