@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using YunStore.Toolkits;
 
@@ -17,6 +14,7 @@ namespace YunStore
         DB.kkwEntities _context = new DB.kkwEntities();
         DB.tb_yun_fileinfo_sale_main _dbMain = new DB.tb_yun_fileinfo_sale_main();
         List<DB.tb_yun_fileinfo_sale_child> _dbList = new List<DB.tb_yun_fileinfo_sale_child>();
+        List<string> _monthList = new List<string>();
 
         public frmUpSaleInfo()
         {
@@ -26,7 +24,34 @@ namespace YunStore
 
         private void FrmUpSaleInfo_Shown(object sender, EventArgs e)
         {
+            BindMonthList();
+
             this.label1.Text = "";
+        }
+
+        void BindMonthList()
+        {
+            _monthList = new List<string>();
+            for (var i = DateTime.Now.Year; i >= 2019; i--)
+            {
+                if (i < DateTime.Now.Year)
+                {
+                    for (var j = 12; j >= 1; j--)
+                    {
+                        _monthList.Add(string.Format("{0}-{1}", i.ToString(), j.ToString("00")));
+                    }
+                }
+                else
+                {
+                    for (var j = DateTime.Now.Month; j >= 1; j--)
+                    {
+                        _monthList.Add(string.Format("{0}-{1}", i.ToString(), j.ToString("00")));
+                    }
+                }
+            }
+            foreach (var item in _monthList)
+                this.comboBox1.Items.Add(item);
+            this.comboBox1.SelectedItem = DateTime.Now.ToString("yyyy-MM");
         }
 
         private void buttonSelectFile_Click(object sender, EventArgs e)
@@ -57,7 +82,8 @@ namespace YunStore
                                 StaffName = BLL.Config.StaffName ?? "",
                                 AllProdQty = 0,
                                 AllProdSaleCost = 0M,
-                                AllProdSaleQty = 0
+                                AllProdSaleQty = 0,
+                                SaleMonth = this.comboBox1.SelectedItem.ToString()
                             };
                         }
 
@@ -111,27 +137,35 @@ namespace YunStore
                         li.SubItems.Add(item.WarehouseName.ToString());
                         li.SubItems.Add(item.StoreName.ToString());
                         li.SubItems.Add(item.Qty.ToString());
-
+                        if (item.Cost <= 0M)
+                        {
+                            li.BackColor = Color.LightPink;
+                        }
                         this.listView1.Items.Add(li);
                     }
 
-                    _dbMain.AllProdSaleCost = _dbList.Sum(me => (decimal?)me.Cost).GetValueOrDefault();
+                    _dbMain.AllProdSaleCost = _dbList.Sum(me => (decimal?)me.Cost * me.Qty).GetValueOrDefault();
                     _dbMain.AllProdSaleQty = _dbList.Sum(me => (int?)me.Qty).GetValueOrDefault();
                     _dbMain.AllProdQty = _dbList.Count;
 
-                    this.label1.Text = string.Format(@"商品数量：{0}   出库总数量：{1}   出库总成本：{2}",
+                    this.label1.Text = string.Format(@"商品数量：{0}   出库总数量：{1}   出库总成本：{2}； 警告0成本商品数量：{3}",
                         _dbMain.AllProdQty,
                         _dbMain.AllProdSaleQty,
-                        _dbMain.AllProdSaleCost);
+                        Util.FormatPrice(_dbMain.AllProdSaleCost),
+                        _dbList.Count(me => me.Cost <= 0.1M).ToString());
                 }
                 this.Cursor = Cursors.Default;
             }
         }
 
-        public string Md5File()
+        public string Md5File(string filename = "")
         {
-            return string.Empty;
+            if (string.IsNullOrEmpty(filename))
+                return string.Empty;
+
+            return MD5Checker.GetMD5ByMD5CryptoService(filename);
         }
+
 
         private void buttonImport_Click(object sender, EventArgs e)
         {
@@ -143,12 +177,21 @@ namespace YunStore
                 return;
             }
 
-
             this.Cursor = Cursors.WaitCursor;
             using (var tran = _context.Database.BeginTransaction())
             {
                 try
                 {
+                    if (File.Exists(this.textBox1.Text))
+                    {
+                        string newFilename = Path.Combine(Path.GetDirectoryName(BLL.Config.DBFullname), _dbMain.Gid + ".xlsbak");
+                        File.Copy(this.textBox1.Text, newFilename, true);
+                        _dbMain.FileMD5 = Md5File(newFilename);
+                    }
+                    else
+                    {
+                        throw new Exception("文件不存在。");
+                    }
                     _context.tb_yun_fileinfo_sale_main.Add(_dbMain);
                     _context.tb_yun_fileinfo_sale_child.AddRange(_dbList);
                     _context.SaveChanges();

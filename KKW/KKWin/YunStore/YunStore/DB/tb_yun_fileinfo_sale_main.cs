@@ -23,5 +23,6 @@ namespace YunStore.DB
         public int AllProdQty { get; set; }
         public int AllProdSaleQty { get; set; }
         public decimal AllProdSaleCost { get; set; }
+        public string SaleMonth { get; set; }
     }
 }

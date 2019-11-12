@@ -104,5 +104,19 @@ namespace YunStore
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmStockHistory frm = new frmStockHistory();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmUpSaleInfoHistory frm = new frmUpSaleInfoHistory();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
     }
 }

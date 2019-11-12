@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonProdList = new System.Windows.Forms.Button();
+            this.buttonProfirt = new System.Windows.Forms.Button();
             this.buttonUpStock = new System.Windows.Forms.Button();
             this.buttonUpSaleInfo = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,23 +42,21 @@
             this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonProdList
+            // buttonProfirt
             // 
-            this.buttonProdList.Location = new System.Drawing.Point(50, 50);
-            this.buttonProdList.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonProdList.Name = "buttonProdList";
-            this.buttonProdList.Size = new System.Drawing.Size(109, 78);
-            this.buttonProdList.TabIndex = 0;
-            this.buttonProdList.Text = "产品列表";
-            this.buttonProdList.UseVisualStyleBackColor = true;
-            this.buttonProdList.Click += new System.EventHandler(this.buttonProdList_Click);
+            this.buttonProfirt.Location = new System.Drawing.Point(31, 49);
+            this.buttonProfirt.Name = "buttonProfirt";
+            this.buttonProfirt.Size = new System.Drawing.Size(164, 83);
+            this.buttonProfirt.TabIndex = 0;
+            this.buttonProfirt.Text = "利润表";
+            this.buttonProfirt.UseVisualStyleBackColor = true;
+            this.buttonProfirt.Click += new System.EventHandler(this.buttonProdList_Click);
             // 
             // buttonUpStock
             // 
-            this.buttonUpStock.Location = new System.Drawing.Point(180, 50);
-            this.buttonUpStock.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonUpStock.Location = new System.Drawing.Point(219, 49);
             this.buttonUpStock.Name = "buttonUpStock";
-            this.buttonUpStock.Size = new System.Drawing.Size(109, 38);
+            this.buttonUpStock.Size = new System.Drawing.Size(164, 40);
             this.buttonUpStock.TabIndex = 1;
             this.buttonUpStock.Text = "上传当前云仓库存";
             this.buttonUpStock.UseVisualStyleBackColor = true;
@@ -66,10 +64,9 @@
             // 
             // buttonUpSaleInfo
             // 
-            this.buttonUpSaleInfo.Location = new System.Drawing.Point(292, 50);
-            this.buttonUpSaleInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonUpSaleInfo.Location = new System.Drawing.Point(389, 49);
             this.buttonUpSaleInfo.Name = "buttonUpSaleInfo";
-            this.buttonUpSaleInfo.Size = new System.Drawing.Size(109, 38);
+            this.buttonUpSaleInfo.Size = new System.Drawing.Size(164, 40);
             this.buttonUpSaleInfo.TabIndex = 2;
             this.buttonUpSaleInfo.Text = "上传云仓销售数量";
             this.buttonUpSaleInfo.UseVisualStyleBackColor = true;
@@ -77,23 +74,23 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(180, 91);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(219, 95);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 38);
+            this.button3.Size = new System.Drawing.Size(164, 37);
             this.button3.TabIndex = 3;
             this.button3.Text = "上传云仓库存历史";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(292, 91);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(389, 95);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 38);
+            this.button4.Size = new System.Drawing.Size(164, 37);
             this.button4.TabIndex = 4;
-            this.button4.Text = "上传云仓库存历史";
+            this.button4.Text = "上传云仓销售历史";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // listView1
             // 
@@ -105,10 +102,9 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(50, 164);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
+            this.listView1.Location = new System.Drawing.Point(29, 159);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(464, 162);
+            this.listView1.Size = new System.Drawing.Size(694, 267);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -135,29 +131,26 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(404, 50);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(559, 49);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 38);
+            this.button5.Size = new System.Drawing.Size(164, 40);
             this.button5.TabIndex = 6;
             this.button5.Text = "导入软件数据";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(404, 91);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Location = new System.Drawing.Point(559, 95);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 38);
+            this.button6.Size = new System.Drawing.Size(164, 37);
             this.button6.TabIndex = 7;
             this.button6.Text = "导出软件数据";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 370);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(761, 475);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.listView1);
@@ -165,8 +158,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonUpSaleInfo);
             this.Controls.Add(this.buttonUpStock);
-            this.Controls.Add(this.buttonProdList);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.buttonProfirt);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -178,7 +170,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonProdList;
+        private System.Windows.Forms.Button buttonProfirt;
         private System.Windows.Forms.Button buttonUpStock;
         private System.Windows.Forms.Button buttonUpSaleInfo;
         private System.Windows.Forms.Button button3;

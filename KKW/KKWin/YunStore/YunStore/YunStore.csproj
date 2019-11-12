@@ -142,6 +142,24 @@
     <Compile Include="frmProductList.Designer.cs">
       <DependentUpon>frmProductList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfirtManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfirtManager.Designer.cs">
+      <DependentUpon>frmProfirtManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockDetail.Designer.cs">
+      <DependentUpon>frmStockDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockHistory.Designer.cs">
+      <DependentUpon>frmStockHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStockList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +172,18 @@
     <Compile Include="frmUpSaleInfo.Designer.cs">
       <DependentUpon>frmUpSaleInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpSaleInfoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpSaleInfoDetail.Designer.cs">
+      <DependentUpon>frmUpSaleInfoDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpSaleInfoHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpSaleInfoHistory.Designer.cs">
+      <DependentUpon>frmUpSaleInfoHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CommomItem.cs" />
     <Compile Include="Model\DropDownModels.cs" />
     <Compile Include="Model\Enum\StockFileType.cs" />
@@ -165,17 +195,39 @@
     <Compile Include="Toolkits\ConvertHelper.cs" />
     <Compile Include="Toolkits\DescriptionHelper.cs" />
     <Compile Include="Toolkits\ExcelHelper.cs" />
+    <Compile Include="Toolkits\MD5Checker.cs" />
     <Compile Include="Toolkits\NPOIHelper.cs" />
     <Compile Include="Toolkits\RegexHelper.cs" />
     <Compile Include="Toolkits\Util.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductList.resx">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfirtManager.resx">
+      <DependentUpon>frmProfirtManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockDetail.resx">
+      <DependentUpon>frmStockDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockHistory.resx">
+      <DependentUpon>frmStockHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpSaleInfo.resx">
       <DependentUpon>frmUpSaleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpSaleInfoDetail.resx">
+      <DependentUpon>frmUpSaleInfoDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpSaleInfoHistory.resx">
+      <DependentUpon>frmUpSaleInfoHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

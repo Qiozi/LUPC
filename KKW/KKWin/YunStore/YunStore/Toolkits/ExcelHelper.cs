@@ -676,5 +676,43 @@ namespace YunStore.Toolkits
             return connectionString;
         }
 
+        /// <summary>
+        /// 输excel
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="SheetName"></param>
+        /// <param name="filename"></param>
+        public static void ToExcel(DataTable dt, string SheetName, string filename)
+        {
+            //FileStream sr = new FileStream(filename, FileMode.Open, FileAccess.Write);
+            HSSFWorkbook workbook = new HSSFWorkbook();
+
+            var sheet = workbook.CreateSheet(SheetName);
+
+            IRow row = sheet.CreateRow(0);
+            foreach (DataColumn column in dt.Columns)
+            {
+                row.CreateCell(column.Ordinal).SetCellValue(column.ColumnName);
+            }
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                row = sheet.CreateRow(i + 1);
+                for (int j = 0; j < dt.Columns.Count; j++)
+                {
+                    row.CreateCell(j).SetCellValue(dt.Rows[i][j].ToString());
+                }
+            }
+
+            //保存   
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (FileStream fs = new FileStream(filename, FileMode.Create, FileAccess.Write))
+                {
+                    workbook.Write(fs);
+                }
+            }
+        }
+
     }
 }

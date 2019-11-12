@@ -115,6 +115,7 @@
           <Property Name="AllProdQty" Type="int" Nullable="false" />
           <Property Name="AllProdSaleQty" Type="int" Nullable="false" />
           <Property Name="AllProdSaleCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="SaleMonth" Type="char" MaxLength="7" />
         </EntityType>
         <EntityType Name="tb_yun_fileInfo_stock_child">
           <Key>
@@ -169,10 +170,10 @@
           <EntitySet Name="tb_product_serial" EntityType="kkwModel.tb_product_serial" />
           <EntitySet Name="tb_profit" EntityType="kkwModel.tb_profit" />
           <EntitySet Name="tb_user" EntityType="kkwModel.tb_user" />
+          <EntitySet Name="tb_yun_fileinfo_sale_child" EntityType="kkwModel.tb_yun_fileinfo_sale_child" />
           <EntitySet Name="tb_yun_fileinfo_sale_main" EntityType="kkwModel.tb_yun_fileinfo_sale_main" />
           <EntitySet Name="tb_yun_fileInfo_stock_child" EntityType="kkwModel.tb_yun_fileInfo_stock_child" />
           <EntitySet Name="tb_yun_fileinfo_stock_main" EntityType="kkwModel.tb_yun_fileinfo_stock_main" />
-          <EntitySet Name="tb_yun_fileinfo_sale_child" EntityType="kkwModel.tb_yun_fileinfo_sale_child" />
         </EntityContainer>
         <EntityType Name="tb_product">
           <Key>
@@ -254,6 +255,23 @@
           <Property Name="user_pwd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="regdate" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="tb_yun_fileinfo_sale_child">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="String" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="ProdCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ProdShortName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProdSpec" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="StoreName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WarehouseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Int32" Nullable="false" />
+          <Property Name="ParentId" Type="String" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+        </EntityType>
         <EntityType Name="tb_yun_fileinfo_sale_main">
           <Key>
             <PropertyRef Name="Gid" />
@@ -267,6 +285,7 @@
           <Property Name="AllProdQty" Type="Int32" Nullable="false" />
           <Property Name="AllProdSaleQty" Type="Int32" Nullable="false" />
           <Property Name="AllProdSaleCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="SaleMonth" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_yun_fileInfo_stock_child">
           <Key>
@@ -301,23 +320,6 @@
           <Property Name="AllProdQty" Type="Int32" Nullable="false" />
           <Property Name="AllProdStock" Type="Int32" Nullable="false" />
           <Property Name="AllProdTotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="tb_yun_fileinfo_sale_child">
-          <Key>
-            <PropertyRef Name="Gid" />
-          </Key>
-          <Property Name="Gid" Type="String" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
-          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
-          <Property Name="ProdCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="ProdShortName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ProdSpec" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="StoreName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="WarehouseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Qty" Type="Int32" Nullable="false" />
-          <Property Name="ParentId" Type="String" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -409,9 +411,28 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_fileinfo_sale_child">
+            <EntityTypeMapping TypeName="kkwModel.tb_yun_fileinfo_sale_child">
+              <MappingFragment StoreEntitySet="tb_yun_fileinfo_sale_child">
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProdSpec" ColumnName="ProdSpec" />
+                <ScalarProperty Name="ProdShortName" ColumnName="ProdShortName" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Gid" ColumnName="Gid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_yun_fileinfo_sale_main">
             <EntityTypeMapping TypeName="kkwModel.tb_yun_fileinfo_sale_main">
               <MappingFragment StoreEntitySet="tb_yun_fileinfo_sale_main">
+                <ScalarProperty Name="SaleMonth" ColumnName="SaleMonth" />
                 <ScalarProperty Name="AllProdSaleCost" ColumnName="AllProdSaleCost" />
                 <ScalarProperty Name="AllProdSaleQty" ColumnName="AllProdSaleQty" />
                 <ScalarProperty Name="AllProdQty" ColumnName="AllProdQty" />
@@ -455,24 +476,6 @@
                 <ScalarProperty Name="FileName" ColumnName="FileName" />
                 <ScalarProperty Name="StaffId" ColumnName="StaffId" />
                 <ScalarProperty Name="StaffName" ColumnName="StaffName" />
-                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
-                <ScalarProperty Name="Gid" ColumnName="Gid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_yun_fileinfo_sale_child">
-            <EntityTypeMapping TypeName="kkwModel.tb_yun_fileinfo_sale_child">
-              <MappingFragment StoreEntitySet="tb_yun_fileinfo_sale_child">
-                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-                <ScalarProperty Name="Qty" ColumnName="Qty" />
-                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
-                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
-                <ScalarProperty Name="Cost" ColumnName="Cost" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="ProdSpec" ColumnName="ProdSpec" />
-                <ScalarProperty Name="ProdShortName" ColumnName="ProdShortName" />
-                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
-                <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
                 <ScalarProperty Name="Regdate" ColumnName="Regdate" />
                 <ScalarProperty Name="Gid" ColumnName="Gid" />
               </MappingFragment>

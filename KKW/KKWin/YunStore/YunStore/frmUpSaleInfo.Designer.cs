@@ -44,15 +44,15 @@
             this.buttonSelectFile = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 108);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(13, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "label1";
             // 
@@ -110,10 +110,9 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(22, 144);
-            this.listView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listView1.Location = new System.Drawing.Point(12, 72);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1757, 1352);
+            this.listView1.Size = new System.Drawing.Size(960, 678);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -126,10 +125,9 @@
             // buttonImport
             // 
             this.buttonImport.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonImport.Location = new System.Drawing.Point(964, 22);
-            this.buttonImport.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonImport.Location = new System.Drawing.Point(624, 11);
             this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(138, 50);
+            this.buttonImport.Size = new System.Drawing.Size(75, 25);
             this.buttonImport.TabIndex = 9;
             this.buttonImport.Text = "确认导入";
             this.buttonImport.UseVisualStyleBackColor = true;
@@ -138,10 +136,9 @@
             // buttonSelectFile
             // 
             this.buttonSelectFile.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonSelectFile.Location = new System.Drawing.Point(816, 24);
-            this.buttonSelectFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonSelectFile.Location = new System.Drawing.Point(543, 11);
             this.buttonSelectFile.Name = "buttonSelectFile";
-            this.buttonSelectFile.Size = new System.Drawing.Size(138, 48);
+            this.buttonSelectFile.Size = new System.Drawing.Size(75, 25);
             this.buttonSelectFile.TabIndex = 8;
             this.buttonSelectFile.Text = "选择文件";
             this.buttonSelectFile.UseVisualStyleBackColor = true;
@@ -150,37 +147,44 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("SimSun", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(158, 26);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Location = new System.Drawing.Point(213, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(644, 34);
+            this.textBox1.Size = new System.Drawing.Size(324, 23);
             this.textBox1.TabIndex = 7;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(22, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(12, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 46);
+            this.button1.Size = new System.Drawing.Size(68, 23);
             this.button1.TabIndex = 6;
             this.button1.TabStop = false;
             this.button1.Text = "文件：";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(86, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 12;
+            // 
             // frmUpSaleInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1804, 1522);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.buttonImport);
             this.Controls.Add(this.buttonSelectFile);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUpSaleInfo";
@@ -208,5 +212,6 @@
         private System.Windows.Forms.Button buttonSelectFile;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

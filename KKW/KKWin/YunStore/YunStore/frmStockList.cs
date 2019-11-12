@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using YunStore.Toolkits;
 
@@ -120,6 +117,10 @@ namespace YunStore
                         li.SubItems.Add(item.Qty30DaySale.ToString());
                         li.SubItems.Add(item.QtyWarn.ToString());
 
+                        if (item.QtyStock <= 0)
+                        {
+                            li.BackColor = Color.LightPink;
+                        }
                         this.listView1.Items.Add(li);
                     }
 
@@ -136,9 +137,12 @@ namespace YunStore
             }
         }
 
-        public string Md5File()
+        public string Md5File(string filename = "")
         {
-            return string.Empty;
+            if (string.IsNullOrEmpty(filename))
+                return string.Empty;
+
+            return MD5Checker.GetMD5ByMD5CryptoService(filename);
         }
 
         private void buttonImport_Click(object sender, EventArgs e)
@@ -151,12 +155,22 @@ namespace YunStore
                 return;
             }
 
-
             this.Cursor = Cursors.WaitCursor;
             using (var tran = _context.Database.BeginTransaction())
             {
                 try
                 {
+                    if (File.Exists(this.textBox1.Text))
+                    {
+                        string newFilename = Path.Combine(Path.GetDirectoryName(BLL.Config.DBFullname), "YunFiles\\" + DateTime.Now.ToString("yyyyMMdd_") + _dbMain.Gid + ".xlsbak");
+                        File.Copy(this.textBox1.Text, newFilename);
+                        _dbMain.FileMD5 = Md5File(newFilename);
+                    }
+                    else
+                    {
+                        throw new Exception("文件不存在。");
+                    }
+
                     _context.tb_yun_fileinfo_stock_main.Add(_dbMain);
                     _context.tb_yun_fileInfo_stock_child.AddRange(_dbList);
                     _context.SaveChanges();
@@ -176,6 +190,11 @@ namespace YunStore
 
             }
             this.Cursor = Cursors.Default;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
