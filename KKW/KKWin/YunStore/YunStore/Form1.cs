@@ -85,11 +85,6 @@ namespace YunStore
             }
         }
 
-        private void buttonProdList_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonUpStock_Click(object sender, EventArgs e)
         {
             frmStockList frm = new frmStockList();
@@ -115,6 +110,20 @@ namespace YunStore
         private void button4_Click(object sender, EventArgs e)
         {
             frmUpSaleInfoHistory frm = new frmUpSaleInfoHistory();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void buttonProfirt_Click(object sender, EventArgs e)
+        {
+            frmProfirtManager frm = new frmProfirtManager();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void buttonReadProfit_Click(object sender, EventArgs e)
+        {
+            frmProfitDetail frm = new frmProfitDetail();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

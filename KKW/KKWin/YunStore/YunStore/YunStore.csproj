@@ -148,6 +148,12 @@
     <Compile Include="frmProfirtManager.Designer.cs">
       <DependentUpon>frmProfirtManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfitDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfitDetail.Designer.cs">
+      <DependentUpon>frmProfitDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStockDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProfirtManager.resx">
       <DependentUpon>frmProfirtManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfitDetail.resx">
+      <DependentUpon>frmProfitDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStockDetail.resx">
       <DependentUpon>frmStockDetail.cs</DependentUpon>

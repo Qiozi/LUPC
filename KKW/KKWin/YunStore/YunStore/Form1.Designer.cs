@@ -38,23 +38,23 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonCompWarehouse = new System.Windows.Forms.Button();
+            this.buttonReadProfit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonProfirt
             // 
             this.buttonProfirt.Location = new System.Drawing.Point(31, 49);
             this.buttonProfirt.Name = "buttonProfirt";
-            this.buttonProfirt.Size = new System.Drawing.Size(164, 83);
+            this.buttonProfirt.Size = new System.Drawing.Size(164, 40);
             this.buttonProfirt.TabIndex = 0;
-            this.buttonProfirt.Text = "利润表";
+            this.buttonProfirt.Text = "利润表输入";
             this.buttonProfirt.UseVisualStyleBackColor = true;
-            this.buttonProfirt.Click += new System.EventHandler(this.buttonProdList_Click);
+            this.buttonProfirt.Click += new System.EventHandler(this.buttonProfirt_Click);
             // 
             // buttonUpStock
             // 
-            this.buttonUpStock.Location = new System.Drawing.Point(219, 49);
+            this.buttonUpStock.Location = new System.Drawing.Point(201, 49);
             this.buttonUpStock.Name = "buttonUpStock";
             this.buttonUpStock.Size = new System.Drawing.Size(164, 40);
             this.buttonUpStock.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // buttonUpSaleInfo
             // 
-            this.buttonUpSaleInfo.Location = new System.Drawing.Point(389, 49);
+            this.buttonUpSaleInfo.Location = new System.Drawing.Point(371, 49);
             this.buttonUpSaleInfo.Name = "buttonUpSaleInfo";
             this.buttonUpSaleInfo.Size = new System.Drawing.Size(164, 40);
             this.buttonUpSaleInfo.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(219, 95);
+            this.button3.Location = new System.Drawing.Point(201, 94);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 37);
             this.button3.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(389, 95);
+            this.button4.Location = new System.Drawing.Point(371, 94);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 37);
             this.button4.TabIndex = 4;
@@ -129,30 +129,31 @@
             this.columnHeader4.Text = "总金额（计算方式1）";
             this.columnHeader4.Width = 150;
             // 
-            // button5
+            // buttonCompWarehouse
             // 
-            this.button5.Location = new System.Drawing.Point(559, 49);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(164, 40);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "导入软件数据";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonCompWarehouse.Location = new System.Drawing.Point(559, 49);
+            this.buttonCompWarehouse.Name = "buttonCompWarehouse";
+            this.buttonCompWarehouse.Size = new System.Drawing.Size(164, 40);
+            this.buttonCompWarehouse.TabIndex = 6;
+            this.buttonCompWarehouse.Text = "公司仓库";
+            this.buttonCompWarehouse.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonReadProfit
             // 
-            this.button6.Location = new System.Drawing.Point(559, 95);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(164, 37);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "导出软件数据";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonReadProfit.Location = new System.Drawing.Point(31, 92);
+            this.buttonReadProfit.Name = "buttonReadProfit";
+            this.buttonReadProfit.Size = new System.Drawing.Size(164, 40);
+            this.buttonReadProfit.TabIndex = 8;
+            this.buttonReadProfit.Text = "查看利润表";
+            this.buttonReadProfit.UseVisualStyleBackColor = true;
+            this.buttonReadProfit.Click += new System.EventHandler(this.buttonReadProfit_Click);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(761, 475);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonReadProfit);
+            this.Controls.Add(this.buttonCompWarehouse);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -176,12 +177,12 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonCompWarehouse;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button buttonReadProfit;
     }
 }
 
