@@ -34,6 +34,7 @@
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxProfitDate = new System.Windows.Forms.ComboBox();
@@ -104,10 +105,9 @@
             this.button30 = new System.Windows.Forms.Button();
             this.numericUpDownCangChuFeiYuFaHuoFeiYong = new System.Windows.Forms.NumericUpDown();
             this.button31 = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYunCangChengBen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRenLiChengBen1)).BeginInit();
@@ -179,6 +179,12 @@
             // 
             this.columnHeader3.Text = "上传日期";
             this.columnHeader3.Width = 120;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "bg20.jpg");
             // 
             // button1
             // 
@@ -1089,15 +1095,15 @@
             this.button31.Text = "仓储费与发货费用";
             this.button31.UseVisualStyleBackColor = true;
             // 
-            // buttonSave
+            // buttonCreate
             // 
-            this.buttonSave.Location = new System.Drawing.Point(849, 744);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(123, 33);
-            this.buttonSave.TabIndex = 22;
-            this.buttonSave.Text = "保存";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.buttonCreate.Location = new System.Drawing.Point(849, 744);
+            this.buttonCreate.Name = "buttonCreate";
+            this.buttonCreate.Size = new System.Drawing.Size(123, 33);
+            this.buttonCreate.TabIndex = 22;
+            this.buttonCreate.Text = "添加";
+            this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonNew
             // 
@@ -1119,19 +1125,13 @@
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "bg20.jpg");
-            // 
             // frmProfirtManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(984, 804);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonNew);
-            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -1255,7 +1255,7 @@
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.NumericUpDown numericUpDownCangChuFeiYuFaHuoFeiYong;
         private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.ColumnHeader ColumnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

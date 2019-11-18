@@ -11,7 +11,7 @@ namespace YunStore
 {
     public partial class frmUpSaleInfo : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
+        DB.qstoreEntities _context = new DB.qstoreEntities();
         DB.tb_yun_fileinfo_sale_main _dbMain = new DB.tb_yun_fileinfo_sale_main();
         List<DB.tb_yun_fileinfo_sale_child> _dbList = new List<DB.tb_yun_fileinfo_sale_child>();
         List<string> _monthList = new List<string>();
@@ -76,9 +76,9 @@ namespace YunStore
                             {
                                 FileMD5 = Md5File(),
                                 FileName = Path.GetFileName(this.textBox1.Text),
-                                Gid = Guid.NewGuid().ToString(),
+                                Gid = Guid.NewGuid(),
                                 Regdate = new Util().GetCurrDateTime,
-                                StaffId = BLL.Config.StaffGid ?? "",
+                                StaffId = BLL.Config.StaffGid,
                                 StaffName = BLL.Config.StaffName ?? "",
                                 AllProdQty = 0,
                                 AllProdSaleCost = 0M,
@@ -103,7 +103,7 @@ namespace YunStore
                             var datetime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fffff");
                             var newModel = new DB.tb_yun_fileinfo_sale_child
                             {
-                                Gid = Guid.NewGuid().ToString(),
+                                Gid = Guid.NewGuid(),
                                 ParentId = _dbMain.Gid,
                                 ProdCode = prodCode,
                                 ProdName = prodName,
@@ -169,7 +169,7 @@ namespace YunStore
 
         private void buttonImport_Click(object sender, EventArgs e)
         {
-            DB.kkwEntities _context = new DB.kkwEntities();
+            DB.qstoreEntities _context = new DB.qstoreEntities();
             var count = _context.tb_yun_fileinfo_sale_main.Count(me => me.FileName.Equals(_dbMain.FileName));
             if (string.IsNullOrEmpty(_dbMain.FileName) || count > 0)
             {
@@ -184,6 +184,7 @@ namespace YunStore
                 {
                     if (File.Exists(this.textBox1.Text))
                     {
+                        
                         string newFilename = Path.Combine(Path.GetDirectoryName(BLL.Config.DBFullname), _dbMain.Gid + ".xlsbak");
                         File.Copy(this.textBox1.Text, newFilename, true);
                         _dbMain.FileMD5 = Md5File(newFilename);
@@ -194,6 +195,23 @@ namespace YunStore
                     }
                     _context.tb_yun_fileinfo_sale_main.Add(_dbMain);
                     _context.tb_yun_fileinfo_sale_child.AddRange(_dbList);
+
+                    // 公司价格
+                    var query = _context.tb_yun_fileinfo_company_stock
+                        .Where(me => me.Cost.Equals(0M))
+                        .ToList();
+                    for (var i = 0; i < query.Count; i++)
+                    {
+                        var code = query[i].ProdCode;
+                        var queryPrice = _dbList
+                            .FirstOrDefault(me => me.ProdCode.Equals(code));
+                        if (queryPrice != null)
+                        {
+                            query[i].Cost = queryPrice.Cost;
+                            query[i].Price = queryPrice.Price;
+                        }
+                    }
+
                     _context.SaveChanges();
                     tran.Commit();
                     _dbMain = new DB.tb_yun_fileinfo_sale_main();

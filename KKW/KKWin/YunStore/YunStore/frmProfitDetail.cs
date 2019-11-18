@@ -11,7 +11,7 @@ namespace YunStore
 {
     public partial class frmProfitDetail : Form
     {
-        kkwEntities _context = new DB.kkwEntities();
+        qstoreEntities _context = new DB.qstoreEntities();
         string _currMonth = string.Empty;
         List<tb_profit> _dbList = new List<tb_profit>();
         List<tb_profit> _leftList = new List<tb_profit>();

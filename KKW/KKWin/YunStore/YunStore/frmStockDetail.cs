@@ -13,10 +13,10 @@ namespace YunStore
 {
     public partial class frmStockDetail : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
-        string _gid = string.Empty;
+        DB.qstoreEntities _context = new DB.qstoreEntities();
+        Guid _gid = Guid.Empty;
 
-        public frmStockDetail(string gid)
+        public frmStockDetail(Guid gid)
         {
             _gid = gid;
 
@@ -39,17 +39,19 @@ namespace YunStore
                 Toolkits.Util.FormatDateTime(queryMain.Regdate));
 
             var query = _context
-                .tb_yun_fileInfo_stock_child
+                .tb_yun_fileinfo_stock_child
                 .Where(me =>
                     me.ParentId.Equals(_gid) && (
                     me.ProdName.Contains(keyword) ||
                     me.ProdCode.Contains(keyword)))
+                    .OrderBy(me => me.ProdCode)
                     .ToList();
 
             this.listView1.Items.Clear();
             foreach (var item in query)
             {
                 var li = new ListViewItem(item.ProdCode);
+                li.Tag = item.Gid;
                 li.SubItems.Add(item.SpecCode);
                 li.SubItems.Add(item.ProdName);
                 li.SubItems.Add(item.ProdSpec);
@@ -128,6 +130,19 @@ namespace YunStore
                 MessageBox.Show("没有需要导出的数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+        }
+
+        private void 添加此商品到公司库存ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems != null && listView1.SelectedItems.Count > 0)
+            {
+                var gid = Guid.Parse(this.listView1.SelectedItems[0].Tag.ToString());
+
+                frmStockCopyToCompany frm = new frmStockCopyToCompany(gid);
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.ShowDialog();               
+            }
+
         }
     }
 }

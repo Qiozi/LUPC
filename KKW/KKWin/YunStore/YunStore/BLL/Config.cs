@@ -11,7 +11,7 @@ namespace YunStore.BLL
     {
         public static string StaffName { get; set; }
 
-        public static string StaffGid { get; set; }
+        public static Guid StaffGid { get; set; }
 
         /// <summary>
         /// 完全路径。
@@ -20,6 +20,12 @@ namespace YunStore.BLL
         {
             get
             {
+                var dbPath = AppDomain.CurrentDomain.BaseDirectory.TrimEnd('\\') + "\\db";
+                if (!Directory.Exists(dbPath))
+                {
+                    Directory.CreateDirectory(dbPath);
+                }                
+
                 return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db\\kkw.db");
             }
         }

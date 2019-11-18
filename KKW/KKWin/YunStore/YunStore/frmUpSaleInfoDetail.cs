@@ -13,10 +13,10 @@ namespace YunStore
 {
     public partial class frmUpSaleInfoDetail : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
-        string _gid = string.Empty;
+        DB.qstoreEntities _context = new DB.qstoreEntities();
+        Guid _gid = Guid.Empty;
 
-        public frmUpSaleInfoDetail(string gid)
+        public frmUpSaleInfoDetail(Guid gid)
         {
             _gid = gid;
 
@@ -47,6 +47,7 @@ namespace YunStore
                     me.ParentId.Equals(_gid) && (
                     me.ProdName.Contains(keyword) ||
                     me.ProdCode.Contains(keyword)))
+                    .OrderBy(me=>me.ProdCode)
                     .ToList();
 
             this.listView2.Items.Clear();

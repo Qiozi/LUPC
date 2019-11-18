@@ -7,7 +7,7 @@ namespace YunStore
 {
     public partial class frmUpSaleInfoHistory : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
+        DB.qstoreEntities _context = new DB.qstoreEntities();
 
         public frmUpSaleInfoHistory()
         {
@@ -57,7 +57,7 @@ namespace YunStore
                         var gid = this.listView1.SelectedItems[0].Tag.ToString();
                         if (!string.IsNullOrEmpty(gid))
                         {
-                            var frm = new frmUpSaleInfoDetail(gid);
+                            var frm = new frmUpSaleInfoDetail(Guid.Parse(gid));
                             frm.StartPosition = FormStartPosition.CenterScreen;
                             frm.Show();
                         }

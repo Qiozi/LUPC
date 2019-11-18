@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b1a41f7316d040aa98f41eca49724e52" Name="Diagram1">
-        <EntityTypeShape EntityType="kkwModel.tb_product" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_product_serial" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_profit" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_user" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_yun_fileinfo_sale_child" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_yun_fileinfo_sale_main" Width="1.5" PointX="6.75" PointY="4.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_yun_fileInfo_stock_child" Width="1.5" PointX="0.75" PointY="7.75" />
-        <EntityTypeShape EntityType="kkwModel.tb_yun_fileinfo_stock_main" Width="1.5" PointX="8.75" PointY="0.75" />
+      <Diagram DiagramId="5214ff150db74593a2ed2db143388bf6" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="qstoreModel.tb_profit" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_yun_fileinfo_sale_child" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_yun_fileinfo_sale_main" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_yun_fileinfo_stock_child" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_yun_fileinfo_stock_main" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_yun_fileinfo_company_stock" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_yun_fileinfo_company_stock_record" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="qstoreModel.tb_user" Width="1.5" PointX="5.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

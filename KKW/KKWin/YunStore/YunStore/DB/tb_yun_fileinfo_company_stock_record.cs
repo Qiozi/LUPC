@@ -12,22 +12,18 @@ namespace YunStore.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_yun_fileinfo_stock_child
+    public partial class tb_yun_fileinfo_company_stock_record
     {
         public System.Guid Gid { get; set; }
-        public string Regdate { get; set; }
-        public System.Guid ParentId { get; set; }
         public string ProdCode { get; set; }
-        public string SpecCode { get; set; }
         public string ProdName { get; set; }
-        public string ProdSpec { get; set; }
-        public string ProdSN { get; set; }
-        public int QtyAll { get; set; }
-        public int QtyStock { get; set; }
-        public int QtyOn { get; set; }
-        public int QtyUsed { get; set; }
-        public decimal Total { get; set; }
-        public int Qty30DaySale { get; set; }
-        public int QtyWarn { get; set; }
+        public decimal Price { get; set; }
+        public decimal Cost { get; set; }
+        public string Regdate { get; set; }
+        public System.Guid StaffGid { get; set; }
+        public string StaffName { get; set; }
+        public int Qty { get; set; }
+        public string Remark { get; set; }
+        public string InOut { get; set; }
     }
 }

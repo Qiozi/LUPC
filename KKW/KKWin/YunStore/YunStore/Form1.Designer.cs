@@ -121,12 +121,12 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "总金额（计算方式1）";
+            this.columnHeader3.Text = "总库存";
             this.columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "总金额（计算方式1）";
+            this.columnHeader4.Text = "总成本";
             this.columnHeader4.Width = 150;
             // 
             // buttonCompWarehouse
@@ -137,6 +137,7 @@
             this.buttonCompWarehouse.TabIndex = 6;
             this.buttonCompWarehouse.Text = "公司仓库";
             this.buttonCompWarehouse.UseVisualStyleBackColor = true;
+            this.buttonCompWarehouse.Click += new System.EventHandler(this.buttonCompWarehouse_Click);
             // 
             // buttonReadProfit
             // 

@@ -13,12 +13,33 @@ namespace YunStore
 {
     public partial class Form1 : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
+        DB.qstoreEntities _context = new DB.qstoreEntities();
+        bool _isClose = true;
 
         public Form1()
         {
+            Init();
+
             InitializeComponent();
-            this.Shown += Form1_Shown;
+            if (!_isClose)
+            {
+                this.Shown += Form1_Shown;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        void Init()
+        {
+            if (Guid.Empty == BLL.Config.StaffGid ||
+                null == BLL.Config.StaffGid)
+            {
+                frmLogin fip = new frmLogin();
+                fip.StartPosition = FormStartPosition.CenterParent;
+                _isClose = fip.ShowDialog() != DialogResult.Yes;
+            }
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -30,48 +51,33 @@ namespace YunStore
         {
             List<Model.Stat.HomeStat> homeInfo = new List<Model.Stat.HomeStat>();
 
+
+            var query1 = _context.tb_yun_fileinfo_company_stock.ToList();
+
+            homeInfo.Add(new Model.Stat.HomeStat
             {
-                var qty = _context
-                         .tb_product_serial
-                         .Count(me =>
-                             me.StockType.Equals((int)StockType.On) &&
-                             me.WarehouseId.Equals((int)WareHouseType.Comp));
+                WarehouseName = "公司",
+                Qty = query1 == null ? 0 : query1.Count,
+                Total1 = query1 == null ? 0 : query1.Sum(me => (decimal?)me.Qty).GetValueOrDefault(),
+                Total2 = query1 == null ? 0 : query1.Sum(me => (decimal?)me.Qty * me.Cost).GetValueOrDefault()
+            });
 
-                var total1 = _context
-                        .tb_product_serial
-                        .Where(me =>
-                            me.StockType.Equals((int)StockType.On) &&
-                            me.WarehouseId.Equals((int)WareHouseType.Comp))
-                        .Sum(me => (decimal?)me.Cost).GetValueOrDefault();
 
-                var total2 = (from c1 in _context.tb_product_serial
-                              join c2 in _context.tb_product on c1.ProdCode equals c2.ProdCode
-                              select new
-                              {
-                                  price = c2.Cost
-                              }).Sum(me => (decimal?)me.price).GetValueOrDefault();
-
-                homeInfo.Add(new Model.Stat.HomeStat
-                {
-                    WarehouseName = "公司",
-                    Qty = qty,
-                    Total1 = total1,
-                    Total2 = total2
-                });
-            }
+            var query2 = _context.tb_yun_fileinfo_stock_main.OrderByDescending(me => me.Regdate).FirstOrDefault();
             homeInfo.Add(new Model.Stat.HomeStat
             {
                 WarehouseName = "云仓",
-                Qty = 0,
-                Total1 = 0,
-                Total2 = 0
+                Qty = query2 == null ? 0 : (query2.AllProdQty),
+                Total1 = query2 == null ? 0 : query2.AllProdStock,
+                Total2 = query2 == null ? 0 : query2.AllProdTotal
             });
+
             homeInfo.Add(new Model.Stat.HomeStat
             {
                 WarehouseName = "所有",
-                Qty = 0,
-                Total1 = 0,
-                Total2 = 0
+                Qty = homeInfo[0].Qty + homeInfo[1].Qty,
+                Total1 = homeInfo[0].Total1 + homeInfo[1].Total1,
+                Total2 = homeInfo[0].Total2 + homeInfo[1].Total2
             });
 
             this.listView1.Items.Clear();
@@ -79,7 +85,7 @@ namespace YunStore
             {
                 ListViewItem li = new ListViewItem(item.WarehouseName);
                 li.SubItems.Add(item.Qty.ToString());
-                li.SubItems.Add(item.Total1.ToString("##,###,###,##0.00"));
+                li.SubItems.Add(item.Total1.ToString());
                 li.SubItems.Add(item.Total2.ToString("##,###,###,##0.00"));
                 this.listView1.Items.Add(li);
             }
@@ -124,6 +130,13 @@ namespace YunStore
         private void buttonReadProfit_Click(object sender, EventArgs e)
         {
             frmProfitDetail frm = new frmProfitDetail();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void buttonCompWarehouse_Click(object sender, EventArgs e)
+        {
+            frmCompManager frm = new frmCompManager();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

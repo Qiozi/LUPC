@@ -49,6 +49,9 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.添加此商品到公司库存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -114,6 +117,7 @@
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -184,6 +188,20 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "bg25.jpg");
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.添加此商品到公司库存ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 26);
+            // 
+            // 添加此商品到公司库存ToolStripMenuItem
+            // 
+            this.添加此商品到公司库存ToolStripMenuItem.Name = "添加此商品到公司库存ToolStripMenuItem";
+            this.添加此商品到公司库存ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.添加此商品到公司库存ToolStripMenuItem.Text = "添加此商品到公司库存";
+            this.添加此商品到公司库存ToolStripMenuItem.Click += new System.EventHandler(this.添加此商品到公司库存ToolStripMenuItem_Click);
+            // 
             // frmStockDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -198,6 +216,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "frmStockDetail";
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +242,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 添加此商品到公司库存ToolStripMenuItem;
     }
 }

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using YunStore.BLL;
 using YunStore.Toolkits;
@@ -14,8 +10,8 @@ namespace YunStore
 {
     public partial class frmProfirtManager : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
-        string _currGid = string.Empty;
+        DB.qstoreEntities _context = new DB.qstoreEntities();
+        Guid _currGid = Guid.Empty;
         List<string> _monthList = new List<string>();
 
         public frmProfirtManager()
@@ -83,30 +79,32 @@ namespace YunStore
 
         void ModifyStatus()
         {
-            this.buttonSave.Enabled = false;
+            this.buttonCreate.Text = "修改";
+            this.buttonCreate.Enabled = true;
             this.buttonDel.Enabled = true;
             this.buttonNew.Enabled = true;
         }
 
         void AddStatus()
         {
-            this.buttonSave.Enabled = true;
+            this.buttonCreate.Enabled = true;
             this.buttonDel.Enabled = false;
             this.buttonNew.Enabled = false;
         }
 
         void NewStatus()
         {
-            _currGid = string.Empty;
+            _currGid = Guid.Empty;
+            this.buttonCreate.Text = "添加";
             ClearControl();
             this.buttonDel.Enabled = false;
-            this.buttonSave.Enabled = true;
+            this.buttonCreate.Enabled = true;
             this.buttonNew.Enabled = false;
         }
 
         void Del()
         {
-            if (string.IsNullOrEmpty(_currGid))
+            if (_currGid == Guid.Empty)
             {
                 MessageBox.Show("Error: gid is null.");
                 return;
@@ -118,7 +116,7 @@ namespace YunStore
             _context.tb_profit.Remove(query);
 
             _context.SaveChanges();
-
+            _currGid = Guid.Empty;
             MessageBox.Show("删除成功");
 
             BindList();
@@ -145,9 +143,9 @@ namespace YunStore
             }
         }
 
-        void BindInfo(string gid)
+        void BindInfo(Guid gid)
         {
-            if (string.IsNullOrEmpty(gid))
+            if (Guid.Empty == gid)
             {
                 ClearControl();
             }
@@ -195,17 +193,17 @@ namespace YunStore
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(_currGid))
+            if (Guid.Empty != _currGid)
             {
                 if (MessageBox.Show("您确认删除当前记录？", "询问", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     var query = _context.tb_profit.Single(me => me.Gid.Equals(_currGid));
                     _context.tb_profit.Remove(query);
-                    _currGid = string.Empty;
+                    _currGid = Guid.Empty;
                     _context.SaveChanges();
                     _context.Dispose();
-                    _context = new DB.kkwEntities();
-
+                    _context = new DB.qstoreEntities();
+                    MessageBox.Show("数据已删除");
                     NewStatus();
                     ClearControl();
                     BindList();
@@ -220,68 +218,69 @@ namespace YunStore
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("您确认保存？ 数据保存后不能修改，只能删除。", "询问", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                var currDate = this.comboBoxProfitDate.SelectedItem.ToString();
-                var count = _context.tb_profit.Count(me => me.ProfitDate.Equals(currDate));
-                if (count > 0)
+            if (MessageBox.Show("您确认保存？", "询问", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {              
+                DB.tb_profit newModel;
+                if (Guid.Empty != _currGid)
                 {
-                    MessageBox.
-                        Show(currDate + " 月的利润已保存.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    newModel = _context.tb_profit.Single(me => me.Gid.Equals(_currGid));
+                }
+                else
+                {
+                    var currDate = this.comboBoxProfitDate.SelectedItem.ToString();
+                    var count = _context.tb_profit.Count(me => me.ProfitDate.Equals(currDate));
+                    if (count > 0)
+                    {
+                        MessageBox.
+                            Show(currDate + " 月的利润已保存.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    newModel = new DB.tb_profit();
+                    newModel.Gid = Guid.NewGuid();
+                    newModel.Regdate = new Util().GetCurrDateTime;
+                    newModel.StaffGid = Config.StaffGid;
+                    newModel.StaffName = Config.StaffName ?? "";
                 }
 
-                if (string.IsNullOrEmpty(textBoxProfit.Text) ||
-                    decimal.Parse(textBoxProfit.Text) == 0M)
-                {
-                    MessageBox.
-                      Show(currDate + " 月的利润没有值 ，或不能为0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                newModel.BanGongYongPin = this.numericUpDownBanGongYongPin.Value;
+                newModel.CaiWuJiZhangFei = this.numericUpDownCaiWuJiZhangFei.Value;
+                newModel.Sale = this.numericUpDownSale.Value;
+                newModel.CangChuFeiYuFaHuoFeiYong = this.numericUpDownCangChuFeiYuFaHuoFeiYong.Value;
+                newModel.CDianZhiTongChe = numericUpDownCDianZhiTongChe.Value;
+                newModel.ChanPinChengBen1 = numericUpDownChanPinChengBen1.Value;
+                newModel.DaiFuFeiYong = numericUpDownDaiFuFeiYong.Value;
+                newModel.DaiYunYingFeiYong = numericUpDownDaiYunYingFeiYong.Value;
+                newModel.DingZhiXiangFeiYong = numericUpDownDingZhiXiangFeiYong.Value;
+                newModel.EKOFaHuoShangPinChengBen = numericUpDownEKOFaHuoShangPinChengBen.Value;
+                newModel.FangWuZuJin = numericUpDownFangWuZuJin.Value;
+                newModel.FeiDiLaChengBen = numericUpDownFeiDiLaChengBen.Value;
 
-                var newModel = new DB.tb_profit
-                {
-                    Regdate = new Util().GetCurrDateTime,
-                    StaffGid = Config.StaffGid ?? "",
-                    StaffName = Config.StaffName ?? "",
-                    BanGongYongPin = this.numericUpDownBanGongYongPin.Value,
-                    CaiWuJiZhangFei = this.numericUpDownCaiWuJiZhangFei.Value,
-                    Sale = this.numericUpDownSale.Value,
-                    CangChuFeiYuFaHuoFeiYong = this.numericUpDownCangChuFeiYuFaHuoFeiYong.Value,
-                    CDianZhiTongChe = numericUpDownCDianZhiTongChe.Value,
-                    ChanPinChengBen1 = numericUpDownChanPinChengBen1.Value,
-                    DaiFuFeiYong = numericUpDownDaiFuFeiYong.Value,
-                    DaiYunYingFeiYong = numericUpDownDaiYunYingFeiYong.Value,
-                    DingZhiXiangFeiYong = numericUpDownDingZhiXiangFeiYong.Value,
-                    EKOFaHuoShangPinChengBen = numericUpDownEKOFaHuoShangPinChengBen.Value,
-                    FangWuZuJin = numericUpDownFangWuZuJin.Value,
-                    FeiDiLaChengBen = numericUpDownFeiDiLaChengBen.Value,
-                    Gid = Guid.NewGuid().ToString(),
-                    GongZi = numericUpDownGongZi.Value,
-                    GuDingChengBen1 = numericUpDownGuDingChengBen1.Value,
-                    HaoCaiFei = numericUpDownHaoCaiFei.Value,
-                    HongWeiWuLiuChengBen = numericUpDownHongWeiWuLiuChengBen.Value,
-                    JinHuoChengBen = numericUpDownJinHuoChengBen.Value,
-                    NutFangDiuQi = numericUpDownNutFangDiuQi.Value,
-                    Profit = decimal.Parse(textBoxProfit.Text),
-                    ProfitDate = this.comboBoxProfitDate.SelectedItem.ToString(),
-                    QiTaFeiYong = numericUpDownQiTaFeiYong.Value,
-                    QiTaZaFei = numericUpDownQiTaZaFei.Value,
-                    RenLiChengBen1 = numericUpDownRenLiChengBen1.Value,
-                    ShangNiChengBen = numericUpDownShangNiChengBen.Value,
-                    ShuiDianFeiYong = numericUpDownShuiDianFeiYong.Value,
-                    ShuiWuFeiYong = numericUpDownShuiWuFeiYong.Value,
-                    SiJiFeiYong = numericUpDownSiJiFeiYong.Value,
-                    XinRuiChengBen = numericUpDownXinRuiChengBen.Value,
-                    YingXiaoChengBen1 = numericUpDownYingXiaoChengBen1.Value,
-                    YunCangChengBen1 = numericUpDownYunCangChengBen1.Value,
-                    ZhiTongChe = numericUpDownZhiTongChe.Value,
-                    ZuanZhanFei = numericUpDownZuanZhanFei.Value
-                };
+                newModel.GongZi = numericUpDownGongZi.Value;
+                newModel.GuDingChengBen1 = numericUpDownGuDingChengBen1.Value;
+                newModel.HaoCaiFei = numericUpDownHaoCaiFei.Value;
+                newModel.HongWeiWuLiuChengBen = numericUpDownHongWeiWuLiuChengBen.Value;
+                newModel.JinHuoChengBen = numericUpDownJinHuoChengBen.Value;
+                newModel.NutFangDiuQi = numericUpDownNutFangDiuQi.Value;
+                newModel.Profit = decimal.Parse(textBoxProfit.Text);
+                newModel.ProfitDate = this.comboBoxProfitDate.SelectedItem.ToString();
+                newModel.QiTaFeiYong = numericUpDownQiTaFeiYong.Value;
+                newModel.QiTaZaFei = numericUpDownQiTaZaFei.Value;
+                newModel.RenLiChengBen1 = numericUpDownRenLiChengBen1.Value;
+                newModel.ShangNiChengBen = numericUpDownShangNiChengBen.Value;
+                newModel.ShuiDianFeiYong = numericUpDownShuiDianFeiYong.Value;
+                newModel.ShuiWuFeiYong = numericUpDownShuiWuFeiYong.Value;
+                newModel.SiJiFeiYong = numericUpDownSiJiFeiYong.Value;
+                newModel.XinRuiChengBen = numericUpDownXinRuiChengBen.Value;
+                newModel.YingXiaoChengBen1 = numericUpDownYingXiaoChengBen1.Value;
+                newModel.YunCangChengBen1 = numericUpDownYunCangChengBen1.Value;
+                newModel.ZhiTongChe = numericUpDownZhiTongChe.Value;
+                newModel.ZuanZhanFei = numericUpDownZuanZhanFei.Value;
 
-                _context.tb_profit.Add(newModel);
+                if (Guid.Empty == _currGid)
+                    _context.tb_profit.Add(newModel);
+
                 _context.SaveChanges();
-                _context = new DB.kkwEntities();
+                _context = new DB.qstoreEntities();
 
                 MessageBox.Show("数据已保存");
                 NewStatus();
@@ -508,7 +507,7 @@ namespace YunStore
             {
                 if (this.listView1.SelectedItems.Count == 1)
                 {
-                    _currGid = this.listView1.SelectedItems[0].Tag.ToString();
+                    _currGid = Guid.Parse(this.listView1.SelectedItems[0].Tag.ToString());
 
                     BindInfo(_currGid);
 

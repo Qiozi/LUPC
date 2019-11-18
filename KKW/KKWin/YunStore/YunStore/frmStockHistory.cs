@@ -8,7 +8,7 @@ namespace YunStore
 {
     public partial class frmStockHistory : Form
     {
-        DB.kkwEntities _context = new DB.kkwEntities();
+        DB.qstoreEntities _context = new DB.qstoreEntities();
         public frmStockHistory()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace YunStore
                         var gid = this.listView1.SelectedItems[0].Tag.ToString();
                         if (!string.IsNullOrEmpty(gid))
                         {
-                            var frm = new frmStockDetail(gid);
+                            var frm = new frmStockDetail(Guid.Parse(gid));
                             frm.StartPosition = FormStartPosition.CenterScreen;
                             frm.Show();
                         }
