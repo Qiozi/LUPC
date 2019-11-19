@@ -62,9 +62,10 @@ namespace YunStore
                             Price = existProd.Price,
                             Qty = (int)this.numericUpDown1.Value,
                             Regdate = new Util().GetCurrDateTime,
-                            Remark = "",
+                            Remark = this.textBoxRemark.Text.Trim(),
                             StaffGid = BLL.Config.StaffGid,
-                            StaffName = BLL.Config.StaffName
+                            StaffName = BLL.Config.StaffName,
+                             
                         };
                         _context.tb_yun_fileinfo_company_stock_record.Add(newModel);
 
