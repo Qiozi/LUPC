@@ -58,5 +58,10 @@ namespace YunStore
                 return;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
