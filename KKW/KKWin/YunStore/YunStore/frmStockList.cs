@@ -162,7 +162,8 @@ namespace YunStore
                 {
                     if (File.Exists(this.textBox1.Text))
                     {
-                        string newFilename = Path.Combine(Path.GetDirectoryName(BLL.Config.DBFullname), "\\" + DateTime.Now.ToString("yyyyMMdd_") + _dbMain.Gid + ".xlsbak");
+                        string path = Path.GetDirectoryName(BLL.Config.DBFullname);
+                        string newFilename = Path.Combine(path, DateTime.Now.ToString("yyyyMMdd_") + _dbMain.Gid + ".xlsbak");
                         File.Copy(this.textBox1.Text, newFilename);
                         _dbMain.FileMD5 = Md5File(newFilename);
                     }
@@ -170,7 +171,7 @@ namespace YunStore
                     {
                         throw new Exception("文件不存在。");
                     }
-
+                    //throw new Exception("dd");
                     _context.tb_yun_fileinfo_stock_main.Add(_dbMain);
                     _context.tb_yun_fileinfo_stock_child.AddRange(_dbList);
                     _context.SaveChanges();

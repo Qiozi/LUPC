@@ -1067,7 +1067,7 @@
             this.button30.Size = new System.Drawing.Size(83, 24);
             this.button30.TabIndex = 6;
             this.button30.TabStop = false;
-            this.button30.Text = "代营运费";
+            this.button30.Text = "定纸箱费用";
             this.button30.UseVisualStyleBackColor = true;
             // 
             // numericUpDownCangChuFeiYuFaHuoFeiYong

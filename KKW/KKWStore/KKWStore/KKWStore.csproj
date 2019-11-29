@@ -945,12 +945,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MIS\Util\Util.csproj">
-      <Project>{e0af7733-ee6c-48f9-b32e-f2f2840135c4}</Project>
-      <Name>Util</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PublishFile Include="MySql.Data">
       <Visible>False</Visible>
       <Group>
@@ -977,6 +971,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MIS\Util\Util.csproj">
+      <Project>{e0af7733-ee6c-48f9-b32e-f2f2840135c4}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

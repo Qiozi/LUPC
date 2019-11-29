@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,14 @@ namespace YunStore
                 fip.StartPosition = FormStartPosition.CenterParent;
                 _isClose = fip.ShowDialog() != DialogResult.Yes;
             }
+
+            var dbPath = AppDomain.CurrentDomain.BaseDirectory.TrimEnd('\\') + "\\db";
+            if (!Directory.Exists(dbPath))
+            {
+                Directory.CreateDirectory(dbPath);
+            }
+
+            BLL.Config.DBFullname = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db\\kkw.db");
         }
 
         private void Form1_Shown(object sender, EventArgs e)
