@@ -48,9 +48,10 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加此商品到公司库存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +115,7 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
+            this.columnHeader13,
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
@@ -182,12 +184,6 @@
             // 
             this.columnHeader12.Text = "警戒量";
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "bg25.jpg");
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -201,6 +197,16 @@
             this.添加此商品到公司库存ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.添加此商品到公司库存ToolStripMenuItem.Text = "添加此商品到公司库存";
             this.添加此商品到公司库存ToolStripMenuItem.Click += new System.EventHandler(this.添加此商品到公司库存ToolStripMenuItem_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "bg25.jpg");
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "成本价";
             // 
             // frmStockDetail
             // 
@@ -244,5 +250,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 添加此商品到公司库存ToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
     }
 }

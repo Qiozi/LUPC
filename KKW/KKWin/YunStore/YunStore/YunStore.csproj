@@ -28,7 +28,7 @@
     <InstallUrl>http://kkw.518n.cc/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -215,6 +215,12 @@
     <Compile Include="frmProfitDetail.Designer.cs">
       <DependentUpon>frmProfitDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfitStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfitStat.Designer.cs">
+      <DependentUpon>frmProfitStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStockCopyToCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,12 @@
     <Compile Include="frmUpSaleInfoHistory.Designer.cs">
       <DependentUpon>frmUpSaleInfoHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpSaleStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpSaleStat.Designer.cs">
+      <DependentUpon>frmUpSaleStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CommomItem.cs" />
     <Compile Include="Model\DropDownModels.cs" />
     <Compile Include="Model\Enum\StockFileType.cs" />
@@ -295,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProfitDetail.resx">
       <DependentUpon>frmProfitDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfitStat.resx">
+      <DependentUpon>frmProfitStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStockCopyToCompany.resx">
       <DependentUpon>frmStockCopyToCompany.cs</DependentUpon>
@@ -353,7 +368,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

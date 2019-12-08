@@ -142,6 +142,10 @@ namespace YunStore
                 li13.SubItems.Add(Util.FormatPrice(items.Sum(me => me.CDianZhiTongChe)));
                 listView2.Items.Add(li13);
 
+                var li13_2 = new ListViewItem("超级推荐");
+                li13_2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ChaoJiTuiJian)));
+                listView2.Items.Add(li13_2);
+
                 var li14 = new ListViewItem("产品总成本");
                 li14.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ChanPinChengBen1)));
                 li14.BackColor = Color.WhiteSmoke;
@@ -256,6 +260,10 @@ namespace YunStore
                 li13.SubItems.Add("c店直通车");
                 li13.SubItems.Add(Util.FormatPrice(item.CDianZhiTongChe));
                 listView2.Items.Add(li13);
+
+                var li13_2 = new ListViewItem("超级推荐");
+                li13_2.SubItems.Add(Util.FormatPrice(item.ChaoJiTuiJian));
+                listView2.Items.Add(li13_2);
 
                 var li14 = new ListViewItem("产品总成本");
                 li14.SubItems.Add(Util.FormatPrice(item.ChanPinChengBen1));

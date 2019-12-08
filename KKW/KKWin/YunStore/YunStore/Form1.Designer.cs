@@ -40,6 +40,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonCompWarehouse = new System.Windows.Forms.Button();
             this.buttonReadProfit = new System.Windows.Forms.Button();
+            this.buttonProfitStat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonProfirt
@@ -102,7 +103,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(29, 159);
+            this.listView1.Location = new System.Drawing.Point(29, 184);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(694, 267);
             this.listView1.TabIndex = 5;
@@ -149,10 +150,21 @@
             this.buttonReadProfit.UseVisualStyleBackColor = true;
             this.buttonReadProfit.Click += new System.EventHandler(this.buttonReadProfit_Click);
             // 
+            // buttonProfitStat
+            // 
+            this.buttonProfitStat.Location = new System.Drawing.Point(31, 138);
+            this.buttonProfitStat.Name = "buttonProfitStat";
+            this.buttonProfitStat.Size = new System.Drawing.Size(164, 40);
+            this.buttonProfitStat.TabIndex = 9;
+            this.buttonProfitStat.Text = "利润表统计";
+            this.buttonProfitStat.UseVisualStyleBackColor = true;
+            this.buttonProfitStat.Click += new System.EventHandler(this.buttonProfitStat_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(761, 475);
+            this.Controls.Add(this.buttonProfitStat);
             this.Controls.Add(this.buttonReadProfit);
             this.Controls.Add(this.buttonCompWarehouse);
             this.Controls.Add(this.listView1);
@@ -184,6 +196,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button buttonReadProfit;
+        private System.Windows.Forms.Button buttonProfitStat;
     }
 }
 

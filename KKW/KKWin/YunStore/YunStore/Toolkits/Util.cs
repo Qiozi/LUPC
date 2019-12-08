@@ -26,5 +26,26 @@ namespace YunStore.Toolkits
         {
             return price.ToString("##,###,###,###,##0.00");
         }
+
+        /// <summary>
+        /// a/b
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static string Divide(decimal a, decimal b)
+        {
+            try
+            {
+                return (b == 0 || a == 0)
+                    ? "0.00"
+                    : FormatPrice(a / b);
+            }
+            catch
+            {
+
+            }
+            return "0.00";
+        }
     }
 }

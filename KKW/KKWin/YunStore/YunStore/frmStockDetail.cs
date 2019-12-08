@@ -60,6 +60,7 @@ namespace YunStore
                 li.SubItems.Add(item.QtyStock.ToString());
                 li.SubItems.Add(item.QtyOn.ToString());
                 li.SubItems.Add(item.QtyUsed.ToString());
+                li.SubItems.Add(Toolkits.Util.Divide(item.Total, item.QtyAll));
                 li.SubItems.Add(item.Total.ToString());
                 li.SubItems.Add(item.Qty30DaySale.ToString());
                 li.SubItems.Add(item.QtyWarn.ToString());
@@ -74,11 +75,13 @@ namespace YunStore
             var allProdSaleQty = query.Sum(me => (int?)me.QtyStock).GetValueOrDefault();
             var allProdQty = query.Count;
 
-            this.label1.Text = string.Format(@"商品数量：{0}   总库存数量：{1}   总库存货值：{2}",
+            this.label1.Text = string.Format(@"商品数量：{0}   总库存数量：{1}   总库存货值：{2};     成本价= 总价/实际；",
                 allProdQty,
                 allProdSaleQty,
                 allProdSaleCost);
         }
+
+        
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {

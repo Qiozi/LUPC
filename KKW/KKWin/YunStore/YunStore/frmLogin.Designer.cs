@@ -40,16 +40,16 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 35);
+            this.comboBox1.Location = new System.Drawing.Point(114, 38);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 20);
+            this.comboBox1.Size = new System.Drawing.Size(176, 21);
             this.comboBox1.TabIndex = 13;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(110, 99);
+            this.button5.Location = new System.Drawing.Point(114, 107);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 21);
+            this.button5.Size = new System.Drawing.Size(85, 23);
             this.button5.TabIndex = 12;
             this.button5.Text = "登入";
             this.button5.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(29, 61);
+            this.button4.Location = new System.Drawing.Point(33, 66);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 21);
+            this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
             this.button4.TabStop = false;
             this.button4.Text = "密码：";
@@ -68,17 +68,17 @@
             // 
             // textBoxPwd
             // 
-            this.textBoxPwd.Location = new System.Drawing.Point(110, 61);
+            this.textBoxPwd.Location = new System.Drawing.Point(114, 66);
             this.textBoxPwd.Name = "textBoxPwd";
-            this.textBoxPwd.Size = new System.Drawing.Size(176, 21);
+            this.textBoxPwd.Size = new System.Drawing.Size(176, 20);
             this.textBoxPwd.TabIndex = 10;
             this.textBoxPwd.UseSystemPasswordChar = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(202, 99);
+            this.button3.Location = new System.Drawing.Point(206, 107);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 21);
+            this.button3.Size = new System.Drawing.Size(84, 23);
             this.button3.TabIndex = 9;
             this.button3.Text = "取消（&C）";
             this.button3.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(29, 35);
+            this.button1.Location = new System.Drawing.Point(33, 38);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 21);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
             this.button1.TabStop = false;
             this.button1.Text = "用户名：";
@@ -97,9 +97,9 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 149);
+            this.ClientSize = new System.Drawing.Size(325, 161);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

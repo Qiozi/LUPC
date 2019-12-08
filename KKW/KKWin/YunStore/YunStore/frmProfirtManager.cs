@@ -188,6 +188,7 @@ namespace YunStore
                 this.numericUpDownYunCangChengBen1.Value = query.YunCangChengBen1;
                 this.numericUpDownZhiTongChe.Value = query.ZhiTongChe;
                 this.numericUpDownZuanZhanFei.Value = query.ZuanZhanFei;
+                this.numericUpDownChaoJiTuiJian.Value = query.ChaoJiTuiJian;
             }
         }
 
@@ -219,7 +220,7 @@ namespace YunStore
         private void buttonSave_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("您确认保存？", "询问", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {              
+            {
                 DB.tb_profit newModel;
                 if (Guid.Empty != _currGid)
                 {
@@ -275,6 +276,7 @@ namespace YunStore
                 newModel.YunCangChengBen1 = numericUpDownYunCangChengBen1.Value;
                 newModel.ZhiTongChe = numericUpDownZhiTongChe.Value;
                 newModel.ZuanZhanFei = numericUpDownZuanZhanFei.Value;
+                newModel.ChaoJiTuiJian = numericUpDownChaoJiTuiJian.Value;
 
                 if (Guid.Empty == _currGid)
                     _context.tb_profit.Add(newModel);
@@ -377,7 +379,8 @@ namespace YunStore
                 numericUpDownZhiTongChe.Value +
                 numericUpDownZuanZhanFei.Value +
                 numericUpDownQiTaFeiYong.Value +
-                numericUpDownCDianZhiTongChe.Value;
+                numericUpDownCDianZhiTongChe.Value +
+                numericUpDownChaoJiTuiJian.Value;
 
             StatProfit();
         }
@@ -402,6 +405,10 @@ namespace YunStore
             YingXiaoChengBen1Change();
         }
 
+        private void numericUpDownChaoJiTuiJian_ValueChanged(object sender, EventArgs e)
+        {
+            YingXiaoChengBen1Change();
+        }
         /// <summary>
         /// 产品成本
         /// </summary>
@@ -516,5 +523,6 @@ namespace YunStore
                 }
             }
         }
+
     }
 }
