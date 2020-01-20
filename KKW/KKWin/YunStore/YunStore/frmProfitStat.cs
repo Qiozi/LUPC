@@ -78,7 +78,8 @@ namespace YunStore
                         YingXiaoChengBen1 = query.Sum(me => me.YingXiaoChengBen1),
                         YunCangChengBen1 = query.Sum(me => me.YunCangChengBen1),
                         ZhiTongChe = query.Sum(me => me.ZhiTongChe),
-                        ZuanZhanFei = query.Sum(me => me.ZuanZhanFei)
+                        ZuanZhanFei = query.Sum(me => me.ZuanZhanFei),
+                        MaoLi = query.Sum(me => me.MaoLi)
                     });
                 }
                 for (var i = 0; i < query.Count; i++)
@@ -86,7 +87,8 @@ namespace YunStore
                     var item = query[i];
                     var li = new ListViewItem(item.ProfitDate);
                     li.Tag = item.Gid.ToString();
-                    li.SubItems.Add(Toolkits.Util.FormatPrice(item.Profit));
+                    li.SubItems.Add(Util.FormatPrice(item.Profit));
+                    li.SubItems.Add(Util.FormatPrice(item.MaoLi));
                     li.SubItems.Add(Util.FormatPrice(item.Sale));
                     li.SubItems.Add(Util.FormatPrice(item.RenLiChengBen1));
                     li.SubItems.Add(Util.FormatPrice(item.GuDingChengBen1));
@@ -122,7 +124,7 @@ namespace YunStore
                     {
                         li.ForeColor = Color.Green;
                     }
-                    this.listView1.Items.Add(li);                                    
+                    this.listView1.Items.Add(li);
                 }
             }
 

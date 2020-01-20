@@ -78,6 +78,11 @@ namespace YunStore
                 li1.SubItems.Add(Util.FormatPrice(items.Sum(me=>me.Profit)));
                 this.listView2.Items.Add(li1);
 
+                var li1_1 = new ListViewItem("毛 利");
+                li1_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.MaoLi)));
+                this.listView2.Items.Add(li1_1);
+
+
                 var li2 = new ListViewItem("营业额");
                 li2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale)));
                 li2.BackColor = Color.WhiteSmoke;
@@ -173,7 +178,7 @@ namespace YunStore
                 li18.SubItems.Add(Util.FormatPrice(items.Sum(me => me.NutFangDiuQi)));
                 listView2.Items.Add(li18);
 
-                var li19 = new ListViewItem("云仓（总费用）");
+                var li19 = new ListViewItem("秒仓（总费用）");
                 li19.SubItems.Add(Util.FormatPrice(items.Sum(me => me.YunCangChengBen1)));
                 li19.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li19);
@@ -195,7 +200,11 @@ namespace YunStore
                 li1.SubItems.Add(item.ProfitDate);
                 li1.SubItems.Add("纯利润");
                 li1.SubItems.Add(Util.FormatPrice(item.Profit));                
-                this.listView2.Items.Add(li1);             
+                this.listView2.Items.Add(li1);
+
+                var li1_1 = new ListViewItem("毛 利");
+                li1_1.SubItems.Add(Util.FormatPrice(item.MaoLi));
+                this.listView2.Items.Add(li1_1);
 
                 var li2 = new ListViewItem("营业额");
                 li2.SubItems.Add(Util.FormatPrice(item.Sale));
@@ -292,7 +301,7 @@ namespace YunStore
                 li18.SubItems.Add(Util.FormatPrice(item.NutFangDiuQi));
                 listView2.Items.Add(li18);
 
-                var li19 = new ListViewItem("云仓（总费用）");
+                var li19 = new ListViewItem("秒仓（总费用）");
                 li19.SubItems.Add(Util.FormatPrice(item.YunCangChengBen1));
                 li19.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li19);

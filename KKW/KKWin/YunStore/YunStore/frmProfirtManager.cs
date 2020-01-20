@@ -189,6 +189,8 @@ namespace YunStore
                 this.numericUpDownZhiTongChe.Value = query.ZhiTongChe;
                 this.numericUpDownZuanZhanFei.Value = query.ZuanZhanFei;
                 this.numericUpDownChaoJiTuiJian.Value = query.ChaoJiTuiJian;
+
+                this.numericUpDownMaoLi.Value = query.MaoLi;
             }
         }
 
@@ -277,6 +279,7 @@ namespace YunStore
                 newModel.ZhiTongChe = numericUpDownZhiTongChe.Value;
                 newModel.ZuanZhanFei = numericUpDownZuanZhanFei.Value;
                 newModel.ChaoJiTuiJian = numericUpDownChaoJiTuiJian.Value;
+                newModel.MaoLi = numericUpDownMaoLi.Value;
 
                 if (Guid.Empty == _currGid)
                     _context.tb_profit.Add(newModel);
@@ -462,7 +465,7 @@ namespace YunStore
         }
 
         /// <summary>
-        /// 云仓成本
+        /// 秒仓成本
         /// </summary>
         void numericUpDownYunCangChengBen1Change()
         {

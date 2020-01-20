@@ -59,7 +59,7 @@
             this.buttonUpStock.Name = "buttonUpStock";
             this.buttonUpStock.Size = new System.Drawing.Size(164, 40);
             this.buttonUpStock.TabIndex = 1;
-            this.buttonUpStock.Text = "上传当前云仓库存";
+            this.buttonUpStock.Text = "上传当前秒仓库存";
             this.buttonUpStock.UseVisualStyleBackColor = true;
             this.buttonUpStock.Click += new System.EventHandler(this.buttonUpStock_Click);
             // 
@@ -69,7 +69,7 @@
             this.buttonUpSaleInfo.Name = "buttonUpSaleInfo";
             this.buttonUpSaleInfo.Size = new System.Drawing.Size(164, 40);
             this.buttonUpSaleInfo.TabIndex = 2;
-            this.buttonUpSaleInfo.Text = "上传云仓销售数量";
+            this.buttonUpSaleInfo.Text = "上传秒仓销售数量";
             this.buttonUpSaleInfo.UseVisualStyleBackColor = true;
             this.buttonUpSaleInfo.Click += new System.EventHandler(this.buttonUpSaleInfo_Click);
             // 
@@ -79,7 +79,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 37);
             this.button3.TabIndex = 3;
-            this.button3.Text = "上传云仓库存历史";
+            this.button3.Text = "上传秒仓库存历史";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -89,7 +89,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 37);
             this.button4.TabIndex = 4;
-            this.button4.Text = "上传云仓销售历史";
+            this.button4.Text = "上传秒仓销售历史";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -177,7 +177,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "云仓数据备份";
+            this.Text = "秒仓数据备份";
             this.ResumeLayout(false);
 
         }

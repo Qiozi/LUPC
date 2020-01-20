@@ -198,7 +198,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUpSaleInfo";
-            this.Text = "云仓发货统计导入管理";
+            this.Text = "秒仓发货统计导入管理";
             this.ResumeLayout(false);
             this.PerformLayout();
 

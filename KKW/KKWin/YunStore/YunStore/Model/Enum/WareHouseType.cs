@@ -21,9 +21,9 @@ namespace YunStore.Model.Enum
         [Description("公司")]
         Comp,
         /// <summary>
-        /// 云仓
+        /// 秒仓
         /// </summary>
-        [Description("云仓")]
+        [Description("秒仓")]
         Yun
     }
 }
