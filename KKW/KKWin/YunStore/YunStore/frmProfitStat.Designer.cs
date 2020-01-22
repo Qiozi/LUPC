@@ -36,6 +36,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,7 +69,7 @@
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -152,7 +153,8 @@
             this.columnHeader30,
             this.columnHeader31,
             this.columnHeader32,
-            this.columnHeader33});
+            this.columnHeader33,
+            this.columnHeader35});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -175,219 +177,193 @@
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader2.Width = 80;
             // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "毛利";
+            this.columnHeader34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // columnHeader3
             // 
-            this.columnHeader3.DisplayIndex = 3;
             this.columnHeader3.Text = "营业额";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader3.Width = 80;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.DisplayIndex = 4;
             this.columnHeader4.Text = "人力成本";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader4.Width = 80;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.DisplayIndex = 5;
             this.columnHeader5.Text = "固定成本";
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader5.Width = 80;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.DisplayIndex = 6;
             this.columnHeader6.Text = "营销成本";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader6.Width = 80;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.DisplayIndex = 7;
             this.columnHeader7.Text = "产品成本";
             this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader7.Width = 80;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.DisplayIndex = 8;
             this.columnHeader8.Text = "秒仓成本";
             this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader8.Width = 80;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.DisplayIndex = 9;
             this.columnHeader9.Text = "工资";
             this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader9.Width = 80;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.DisplayIndex = 10;
             this.columnHeader10.Text = "司机费用";
             this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader10.Width = 80;
             // 
             // columnHeader11
             // 
-            this.columnHeader11.DisplayIndex = 11;
             this.columnHeader11.Text = "代营运费";
             this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader11.Width = 80;
             // 
             // columnHeader12
             // 
-            this.columnHeader12.DisplayIndex = 12;
             this.columnHeader12.Text = "办公用品";
             this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader12.Width = 80;
             // 
             // columnHeader13
             // 
-            this.columnHeader13.DisplayIndex = 13;
             this.columnHeader13.Text = "水电费用";
             this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader13.Width = 80;
             // 
             // columnHeader14
             // 
-            this.columnHeader14.DisplayIndex = 14;
             this.columnHeader14.Text = "房屋租金";
             this.columnHeader14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader14.Width = 80;
             // 
             // columnHeader15
             // 
-            this.columnHeader15.DisplayIndex = 15;
             this.columnHeader15.Text = "税务费用";
             this.columnHeader15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader15.Width = 80;
             // 
             // columnHeader16
             // 
-            this.columnHeader16.DisplayIndex = 16;
             this.columnHeader16.Text = "其他杂费";
             this.columnHeader16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader16.Width = 80;
             // 
             // columnHeader17
             // 
-            this.columnHeader17.DisplayIndex = 17;
             this.columnHeader17.Text = "代付费用";
             this.columnHeader17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader17.Width = 80;
             // 
             // columnHeader18
             // 
-            this.columnHeader18.DisplayIndex = 18;
             this.columnHeader18.Text = "财务记帐费";
             this.columnHeader18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader18.Width = 80;
             // 
             // columnHeader19
             // 
-            this.columnHeader19.DisplayIndex = 19;
             this.columnHeader19.Text = "直通车";
             this.columnHeader19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader19.Width = 80;
             // 
             // columnHeader20
             // 
-            this.columnHeader20.DisplayIndex = 20;
             this.columnHeader20.Text = "钻展费";
             this.columnHeader20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader20.Width = 80;
             // 
             // columnHeader21
             // 
-            this.columnHeader21.DisplayIndex = 21;
             this.columnHeader21.Text = "其他费用";
             this.columnHeader21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader21.Width = 80;
             // 
             // columnHeader22
             // 
-            this.columnHeader22.DisplayIndex = 22;
             this.columnHeader22.Text = "C店直通车";
             this.columnHeader22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader22.Width = 80;
             // 
             // columnHeader23
             // 
-            this.columnHeader23.DisplayIndex = 23;
             this.columnHeader23.Text = "超级推荐";
             this.columnHeader23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader23.Width = 80;
             // 
             // columnHeader24
             // 
-            this.columnHeader24.DisplayIndex = 24;
             this.columnHeader24.Text = "进货成本";
             this.columnHeader24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader24.Width = 80;
             // 
             // columnHeader25
             // 
-            this.columnHeader25.DisplayIndex = 25;
             this.columnHeader25.Text = "尚尼成本";
             this.columnHeader25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader25.Width = 80;
             // 
             // columnHeader26
             // 
-            this.columnHeader26.DisplayIndex = 26;
             this.columnHeader26.Text = "菲迪拉成本";
             this.columnHeader26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader26.Width = 80;
             // 
             // columnHeader27
             // 
-            this.columnHeader27.DisplayIndex = 27;
             this.columnHeader27.Text = "新锐成本";
             this.columnHeader27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader27.Width = 80;
             // 
             // columnHeader28
             // 
-            this.columnHeader28.DisplayIndex = 28;
             this.columnHeader28.Text = "宏伟物流";
             this.columnHeader28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader28.Width = 80;
             // 
             // columnHeader29
             // 
-            this.columnHeader29.DisplayIndex = 29;
             this.columnHeader29.Text = "EKO发货";
             this.columnHeader29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader29.Width = 80;
             // 
             // columnHeader30
             // 
-            this.columnHeader30.DisplayIndex = 30;
             this.columnHeader30.Text = "nut防丢器";
             this.columnHeader30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader30.Width = 80;
             // 
             // columnHeader31
             // 
-            this.columnHeader31.DisplayIndex = 31;
             this.columnHeader31.Text = "仓储与发货费";
             this.columnHeader31.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader31.Width = 80;
             // 
             // columnHeader32
             // 
-            this.columnHeader32.DisplayIndex = 32;
             this.columnHeader32.Text = "耗材费用";
             this.columnHeader32.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader32.Width = 80;
             // 
             // columnHeader33
             // 
-            this.columnHeader33.DisplayIndex = 33;
             this.columnHeader33.Text = "定纸箱费用";
             this.columnHeader33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader33.Width = 80;
@@ -398,11 +374,11 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "bg20.jpg");
             // 
-            // columnHeader34
+            // columnHeader35
             // 
-            this.columnHeader34.DisplayIndex = 2;
-            this.columnHeader34.Text = "毛利";
-            this.columnHeader34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader35.Text = "社保，公积金";
+            this.columnHeader35.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader35.Width = 100;
             // 
             // frmProfitStat
             // 
@@ -462,5 +438,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader33;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ColumnHeader columnHeader34;
+        private System.Windows.Forms.ColumnHeader columnHeader35;
     }
 }

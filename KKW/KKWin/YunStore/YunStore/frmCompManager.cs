@@ -45,8 +45,8 @@ namespace YunStore
                 li.SubItems.Add(item.StaffName);
                 li.SubItems.Add(Util.FormatDateTime(item.Regdate));
                 li.SubItems.Add(item.Qty.ToString());
+                li.SubItems.Add(Util.FormatPrice(item.Cost));
                 li.SubItems.Add(item.Remark);
-
                 listView1.Items.Add(li);
             }
 
@@ -94,6 +94,7 @@ namespace YunStore
                 li.SubItems.Add(item.InOut == "IN" ? "入库" : "出库");
                 li.SubItems.Add(Util.FormatDateTime(item.Regdate));
                 li.SubItems.Add(item.Qty.ToString());
+                li.SubItems.Add(Util.FormatPrice(item.Cost));
                 li.SubItems.Add(item.Remark);
 
                 listView2.Items.Add(li);

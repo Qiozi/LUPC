@@ -47,6 +47,7 @@
           <Property Name="DingZhiXiangFeiYong" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="ChaoJiTuiJian" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="MaoLi" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="SheBaoGongJiJin" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_user">
           <Key>
@@ -342,6 +343,7 @@
           <Property Name="DingZhiXiangFeiYong" Type="Decimal" Nullable="false" />
           <Property Name="ChaoJiTuiJian" Type="Decimal" Nullable="false" />
           <Property Name="MaoLi" Type="Decimal" Nullable="false" />
+          <Property Name="SheBaoGongJiJin" Type="Decimal" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -473,6 +475,7 @@
           <EntitySetMapping Name="tb_profit">
             <EntityTypeMapping TypeName="qstoreModel.tb_profit">
               <MappingFragment StoreEntitySet="tb_profit">
+                <ScalarProperty Name="SheBaoGongJiJin" ColumnName="SheBaoGongJiJin" />
                 <ScalarProperty Name="MaoLi" ColumnName="MaoLi" />
                 <ScalarProperty Name="ChaoJiTuiJian" ColumnName="ChaoJiTuiJian" />
                 <ScalarProperty Name="DingZhiXiangFeiYong" ColumnName="DingZhiXiangFeiYong" />

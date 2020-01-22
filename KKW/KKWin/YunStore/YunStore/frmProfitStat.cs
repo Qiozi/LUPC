@@ -79,7 +79,8 @@ namespace YunStore
                         YunCangChengBen1 = query.Sum(me => me.YunCangChengBen1),
                         ZhiTongChe = query.Sum(me => me.ZhiTongChe),
                         ZuanZhanFei = query.Sum(me => me.ZuanZhanFei),
-                        MaoLi = query.Sum(me => me.MaoLi)
+                        MaoLi = query.Sum(me => me.MaoLi),
+                        SheBaoGongJiJin = query.Sum(me => me.SheBaoGongJiJin)
                     });
                 }
                 for (var i = 0; i < query.Count; i++)
@@ -120,6 +121,7 @@ namespace YunStore
                     li.SubItems.Add(Util.FormatPrice(item.CangChuFeiYuFaHuoFeiYong));
                     li.SubItems.Add(Util.FormatPrice(item.HaoCaiFei));
                     li.SubItems.Add(Util.FormatPrice(item.DingZhiXiangFeiYong));
+                    li.SubItems.Add(Util.FormatPrice(item.SheBaoGongJiJin));
                     if (item.ProfitDate.IndexOf("合计") > -1)
                     {
                         li.ForeColor = Color.Green;

@@ -75,7 +75,7 @@ namespace YunStore
                 var li1 = new ListViewItem("年份");
                 li1.SubItems.Add(currDate);
                 li1.SubItems.Add("纯利润");
-                li1.SubItems.Add(Util.FormatPrice(items.Sum(me=>me.Profit)));
+                li1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Profit)));
                 this.listView2.Items.Add(li1);
 
                 var li1_1 = new ListViewItem("毛 利");
@@ -101,6 +101,8 @@ namespace YunStore
 
                 var li5 = new ListViewItem("代运营费用");
                 li5.SubItems.Add(Util.FormatPrice(items.Sum(me => me.DaiYunYingFeiYong)));
+                li5.SubItems.Add("社保，公积金");
+                li5.SubItems.Add(Util.FormatPrice(items.Sum(me => me.SheBaoGongJiJin)));
                 listView2.Items.Add(li5);
 
                 var li6 = new ListViewItem("固定成本");
@@ -199,7 +201,7 @@ namespace YunStore
                 var li1 = new ListViewItem("月份");
                 li1.SubItems.Add(item.ProfitDate);
                 li1.SubItems.Add("纯利润");
-                li1.SubItems.Add(Util.FormatPrice(item.Profit));                
+                li1.SubItems.Add(Util.FormatPrice(item.Profit));
                 this.listView2.Items.Add(li1);
 
                 var li1_1 = new ListViewItem("毛 利");
@@ -224,6 +226,8 @@ namespace YunStore
 
                 var li5 = new ListViewItem("代运营费用");
                 li5.SubItems.Add(Util.FormatPrice(item.DaiYunYingFeiYong));
+                li5.SubItems.Add("社保，公积金");
+                li5.SubItems.Add(Util.FormatPrice(item.SheBaoGongJiJin));
                 listView2.Items.Add(li5);
 
                 var li6 = new ListViewItem("固定成本");
@@ -257,7 +261,7 @@ namespace YunStore
                 li11.SubItems.Add(Util.FormatPrice(item.YingXiaoChengBen1));
                 li11.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li11);
-                
+
                 var li12 = new ListViewItem("直通车");
                 li12.SubItems.Add(Util.FormatPrice(item.ZhiTongChe));
                 li12.SubItems.Add("钻展费");
