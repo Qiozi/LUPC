@@ -56,7 +56,7 @@ namespace AutoDownPrice
             #region ftp info
             _ftpInfo.ASI = new Helper.FInfo()
             {
-                Ip = "67.104.19.215",//"67.91.114.176",
+                Ip = "4.79.60.130",//"67.91.114.176",
                 Port = 21,
                 Pwd = "Wu70972Sn",
                 Uid = "70972",

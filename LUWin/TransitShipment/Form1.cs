@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.IO;
-using System.Windows.Forms;
-using System.Threading;
 using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace TransitShipment
 {
@@ -56,7 +52,7 @@ namespace TransitShipment
             #region ftp info
             _ftpInfo.ASI = new Helper.FInfo()
             {
-                Ip = "67.104.19.215",//"67.91.114.176",
+                Ip = "4.79.60.130",//"67.91.114.176",
                 Port = 21,
                 Pwd = "Wu70972Sn",
                 Uid = "70972",
@@ -314,15 +310,7 @@ namespace TransitShipment
             File.Delete(fullname);
         }
 
-        private void button_asi_Click(object sender, EventArgs e)
-        {
-            ASI.Run(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
-        }
-
-        private void button_dandh_Click(object sender, EventArgs e)
-        {
-            Dandh.DanDhWatch(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename, false);
-        }
+  
 
         private void button_synnex_Click(object sender, EventArgs e)
         {
