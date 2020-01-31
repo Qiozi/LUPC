@@ -51,5 +51,7 @@ namespace YunStore.DB
         public decimal HaoCaiFei { get; set; }
         public decimal DingZhiXiangFeiYong { get; set; }
         public decimal ChaoJiTuiJian { get; set; }
+        public decimal MaoLi { get; set; }
+        public decimal SheBaoGongJiJin { get; set; }
     }
 }

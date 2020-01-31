@@ -212,7 +212,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmStockList";
-            this.Text = "云仓库存上传管理";
+            this.Text = "秒仓库存上传管理";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -78,7 +78,9 @@ namespace YunStore
                         YingXiaoChengBen1 = query.Sum(me => me.YingXiaoChengBen1),
                         YunCangChengBen1 = query.Sum(me => me.YunCangChengBen1),
                         ZhiTongChe = query.Sum(me => me.ZhiTongChe),
-                        ZuanZhanFei = query.Sum(me => me.ZuanZhanFei)
+                        ZuanZhanFei = query.Sum(me => me.ZuanZhanFei),
+                        MaoLi = query.Sum(me => me.MaoLi),
+                        SheBaoGongJiJin = query.Sum(me => me.SheBaoGongJiJin)
                     });
                 }
                 for (var i = 0; i < query.Count; i++)
@@ -86,7 +88,8 @@ namespace YunStore
                     var item = query[i];
                     var li = new ListViewItem(item.ProfitDate);
                     li.Tag = item.Gid.ToString();
-                    li.SubItems.Add(Toolkits.Util.FormatPrice(item.Profit));
+                    li.SubItems.Add(Util.FormatPrice(item.Profit));
+                    li.SubItems.Add(Util.FormatPrice(item.MaoLi));
                     li.SubItems.Add(Util.FormatPrice(item.Sale));
                     li.SubItems.Add(Util.FormatPrice(item.RenLiChengBen1));
                     li.SubItems.Add(Util.FormatPrice(item.GuDingChengBen1));
@@ -118,11 +121,12 @@ namespace YunStore
                     li.SubItems.Add(Util.FormatPrice(item.CangChuFeiYuFaHuoFeiYong));
                     li.SubItems.Add(Util.FormatPrice(item.HaoCaiFei));
                     li.SubItems.Add(Util.FormatPrice(item.DingZhiXiangFeiYong));
+                    li.SubItems.Add(Util.FormatPrice(item.SheBaoGongJiJin));
                     if (item.ProfitDate.IndexOf("合计") > -1)
                     {
                         li.ForeColor = Color.Green;
                     }
-                    this.listView1.Items.Add(li);                                    
+                    this.listView1.Items.Add(li);
                 }
             }
 

@@ -75,7 +75,7 @@ namespace YunStore
             var query2 = _context.tb_yun_fileinfo_stock_main.OrderByDescending(me => me.Regdate).FirstOrDefault();
             homeInfo.Add(new Model.Stat.HomeStat
             {
-                WarehouseName = "云仓",
+                WarehouseName = "秒仓",
                 Qty = query2 == null ? 0 : (query2.AllProdQty),
                 Total1 = query2 == null ? 0 : query2.AllProdStock,
                 Total2 = query2 == null ? 0 : query2.AllProdTotal

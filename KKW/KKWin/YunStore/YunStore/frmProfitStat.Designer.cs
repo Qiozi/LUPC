@@ -36,6 +36,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,6 +69,7 @@
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -120,6 +122,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
+            this.columnHeader34,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
@@ -150,7 +153,8 @@
             this.columnHeader30,
             this.columnHeader31,
             this.columnHeader32,
-            this.columnHeader33});
+            this.columnHeader33,
+            this.columnHeader35});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -172,6 +176,11 @@
             this.columnHeader2.Text = "利润";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader2.Width = 80;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "毛利";
+            this.columnHeader34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // columnHeader3
             // 
@@ -205,7 +214,7 @@
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "云仓成本";
+            this.columnHeader8.Text = "秒仓成本";
             this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader8.Width = 80;
             // 
@@ -365,6 +374,12 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "bg20.jpg");
             // 
+            // columnHeader35
+            // 
+            this.columnHeader35.Text = "社保，公积金";
+            this.columnHeader35.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader35.Width = 100;
+            // 
             // frmProfitStat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -422,5 +437,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader32;
         private System.Windows.Forms.ColumnHeader columnHeader33;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
+        private System.Windows.Forms.ColumnHeader columnHeader35;
     }
 }

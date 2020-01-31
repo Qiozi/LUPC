@@ -37,6 +37,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.出库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.textBox1Keyword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSearch1 = new System.Windows.Forms.Button();
@@ -44,6 +47,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,13 +56,11 @@
             this.textBox2Keyword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.radioButtonAll = new System.Windows.Forms.RadioButton();
             this.radioButtonIN = new System.Windows.Forms.RadioButton();
             this.radioButtonOut = new System.Windows.Forms.RadioButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.出库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,15 +72,16 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
+            this.columnHeader14,
             this.columnHeader7});
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 60);
-            this.listView1.Margin = new System.Windows.Forms.Padding(6);
+            this.listView1.Location = new System.Drawing.Point(15, 65);
+            this.listView1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(954, 327);
+            this.listView1.Size = new System.Drawing.Size(954, 354);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -113,28 +116,48 @@
             this.columnHeader7.Text = "备注";
             this.columnHeader7.Width = 240;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.出库ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            // 
+            // 出库ToolStripMenuItem
+            // 
+            this.出库ToolStripMenuItem.Name = "出库ToolStripMenuItem";
+            this.出库ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.出库ToolStripMenuItem.Text = "出库";
+            this.出库ToolStripMenuItem.Click += new System.EventHandler(this.出库ToolStripMenuItem_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "bg20.jpg");
+            // 
             // textBox1Keyword
             // 
-            this.textBox1Keyword.Location = new System.Drawing.Point(15, 15);
+            this.textBox1Keyword.Location = new System.Drawing.Point(15, 16);
             this.textBox1Keyword.Name = "textBox1Keyword";
-            this.textBox1Keyword.Size = new System.Drawing.Size(279, 21);
+            this.textBox1Keyword.Size = new System.Drawing.Size(279, 20);
             this.textBox1Keyword.TabIndex = 6;
             this.textBox1Keyword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1Keyword_KeyUp);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 42);
+            this.label1.Location = new System.Drawing.Point(13, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "label1";
             // 
             // buttonSearch1
             // 
-            this.buttonSearch1.Location = new System.Drawing.Point(300, 13);
+            this.buttonSearch1.Location = new System.Drawing.Point(300, 14);
             this.buttonSearch1.Name = "buttonSearch1";
-            this.buttonSearch1.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch1.Size = new System.Drawing.Size(75, 25);
             this.buttonSearch1.TabIndex = 8;
             this.buttonSearch1.Text = "查询";
             this.buttonSearch1.UseVisualStyleBackColor = true;
@@ -149,14 +172,15 @@
             this.columnHeader13,
             this.columnHeader10,
             this.columnHeader11,
+            this.columnHeader15,
             this.columnHeader12});
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(15, 439);
-            this.listView2.Margin = new System.Windows.Forms.Padding(6);
+            this.listView2.Location = new System.Drawing.Point(15, 476);
+            this.listView2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(954, 307);
+            this.listView2.Size = new System.Drawing.Size(954, 332);
             this.listView2.SmallImageList = this.imageList1;
             this.listView2.TabIndex = 9;
             this.listView2.UseCompatibleStateImageBehavior = false;
@@ -176,6 +200,11 @@
             // 
             this.columnHeader9.Text = "操作员";
             // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "操作";
+            this.columnHeader13.Width = 50;
+            // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "时间";
@@ -192,9 +221,9 @@
             // 
             // buttonSearch2
             // 
-            this.buttonSearch2.Location = new System.Drawing.Point(300, 394);
+            this.buttonSearch2.Location = new System.Drawing.Point(300, 427);
             this.buttonSearch2.Name = "buttonSearch2";
-            this.buttonSearch2.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch2.Size = new System.Drawing.Size(75, 25);
             this.buttonSearch2.TabIndex = 12;
             this.buttonSearch2.Text = "查询";
             this.buttonSearch2.UseVisualStyleBackColor = true;
@@ -203,17 +232,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 421);
+            this.label2.Location = new System.Drawing.Point(13, 456);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "label2";
             // 
             // textBox2Keyword
             // 
-            this.textBox2Keyword.Location = new System.Drawing.Point(15, 396);
+            this.textBox2Keyword.Location = new System.Drawing.Point(15, 429);
             this.textBox2Keyword.Name = "textBox2Keyword";
-            this.textBox2Keyword.Size = new System.Drawing.Size(279, 21);
+            this.textBox2Keyword.Size = new System.Drawing.Size(279, 20);
             this.textBox2Keyword.TabIndex = 10;
             this.textBox2Keyword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox2Keyword_KeyUp);
             // 
@@ -221,9 +250,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(916, 42);
+            this.label3.Location = new System.Drawing.Point(916, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "库存列表";
             // 
@@ -231,24 +260,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(904, 421);
+            this.label4.Location = new System.Drawing.Point(904, 456);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "进出库记录";
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "操作";
-            this.columnHeader13.Width = 50;
             // 
             // radioButtonAll
             // 
             this.radioButtonAll.AutoSize = true;
             this.radioButtonAll.Checked = true;
-            this.radioButtonAll.Location = new System.Drawing.Point(451, 400);
+            this.radioButtonAll.Location = new System.Drawing.Point(451, 433);
             this.radioButtonAll.Name = "radioButtonAll";
-            this.radioButtonAll.Size = new System.Drawing.Size(47, 16);
+            this.radioButtonAll.Size = new System.Drawing.Size(49, 17);
             this.radioButtonAll.TabIndex = 15;
             this.radioButtonAll.TabStop = true;
             this.radioButtonAll.Text = "所有";
@@ -259,9 +283,9 @@
             // radioButtonIN
             // 
             this.radioButtonIN.AutoSize = true;
-            this.radioButtonIN.Location = new System.Drawing.Point(504, 400);
+            this.radioButtonIN.Location = new System.Drawing.Point(504, 433);
             this.radioButtonIN.Name = "radioButtonIN";
-            this.radioButtonIN.Size = new System.Drawing.Size(47, 16);
+            this.radioButtonIN.Size = new System.Drawing.Size(49, 17);
             this.radioButtonIN.TabIndex = 16;
             this.radioButtonIN.Text = "入库";
             this.radioButtonIN.UseVisualStyleBackColor = true;
@@ -271,40 +295,29 @@
             // radioButtonOut
             // 
             this.radioButtonOut.AutoSize = true;
-            this.radioButtonOut.Location = new System.Drawing.Point(557, 400);
+            this.radioButtonOut.Location = new System.Drawing.Point(557, 433);
             this.radioButtonOut.Name = "radioButtonOut";
-            this.radioButtonOut.Size = new System.Drawing.Size(47, 16);
+            this.radioButtonOut.Size = new System.Drawing.Size(49, 17);
             this.radioButtonOut.TabIndex = 17;
             this.radioButtonOut.Text = "出库";
             this.radioButtonOut.UseVisualStyleBackColor = true;
             this.radioButtonOut.CheckedChanged += new System.EventHandler(this.radioButtonOut_CheckedChanged);
             this.radioButtonOut.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButtonOut_MouseClick);
             // 
-            // imageList1
+            // columnHeader14
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "bg20.jpg");
+            this.columnHeader14.Text = "成本单价";
+            this.columnHeader14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // contextMenuStrip1
+            // columnHeader15
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.出库ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
-            // 
-            // 出库ToolStripMenuItem
-            // 
-            this.出库ToolStripMenuItem.Name = "出库ToolStripMenuItem";
-            this.出库ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.出库ToolStripMenuItem.Text = "出库";
-            this.出库ToolStripMenuItem.Click += new System.EventHandler(this.出库ToolStripMenuItem_Click);
+            this.columnHeader15.Text = "成本单价";
             // 
             // frmCompManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(984, 824);
             this.Controls.Add(this.radioButtonOut);
             this.Controls.Add(this.radioButtonIN);
             this.Controls.Add(this.radioButtonAll);
@@ -359,5 +372,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 出库ToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
     }
 }
