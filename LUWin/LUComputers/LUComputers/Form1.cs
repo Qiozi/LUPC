@@ -719,6 +719,8 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
 
                     eprom.ViewCompare(Ltd.wholesaler_d2a);
                     UpdateLtdInfoToRemote(Ltd.wholesaler_d2a);
+                    Config.RemoteExecuteNonQuery(@"delete from tb_other_inc_part_info where other_inc_id=17 and luc_sku not in 
+(Select Product_Serial_no from tb_product where menu_child_serial_no in (22,29,118, 119,120))");
                     eprom.SetStatus(null, null, Ltd.wholesaler_d2a, "End.");
                 }
                 else
