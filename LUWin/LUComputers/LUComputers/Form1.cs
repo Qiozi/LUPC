@@ -101,7 +101,6 @@ insert tb_timer
         static bool EndAsi = false;
         static bool EndDandh = false;
         static bool EndSynnex = false;
-        static bool EndEprom = false;
 
         static ArrayList al = new ArrayList();
 
@@ -235,7 +234,7 @@ insert tb_timer
             {
                 if (RunASIDandhSynnex)
                 {
-                    if (EndAsi && EndDandh && EndSynnex && EndEprom)
+                    if (EndAsi && EndDandh && EndSynnex )
                     {
                         EndAsi = false;
                         EndDandh = false;
@@ -281,13 +280,7 @@ insert tb_timer
 
         #endregion
 
-        #region RunInc
-        private void RunIncFace(Ltd ltd)
-        {
-
-        }
-        #endregion
-
+  
         private void cCloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
