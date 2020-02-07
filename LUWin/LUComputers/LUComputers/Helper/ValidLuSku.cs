@@ -121,7 +121,6 @@ union all
 
             string ltds = new LtdHelper().GetLtdIds(new Ltd[]{Ltd.wholesaler_asi
                 , Ltd.wholesaler_dandh
-                , Ltd.wholesaler_EPROM
                 , Ltd.wholesaler_Synnex
                 , Ltd.wholesaler_d2a
             });

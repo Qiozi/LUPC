@@ -702,15 +702,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             //epromToolStripMenuItemCompare_Click(null, null);
         }
 
-        private void epromToolStripMenuItemUpdate_Click(object sender, EventArgs e)
-        {
-            UpdateLtdInfoToRemote(Ltd.wholesaler_EPROM);
-        }
-
-        private void epromToolStripMenuItemCompare_Click(object sender, EventArgs e)
-        {
-            Helper.Compare.ViewCompare(Ltd.wholesaler_EPROM);
-        }
+   
 
         private void d2aToolStripMenuItemWatch_Click(object sender, EventArgs e)
         {
@@ -1192,7 +1184,6 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
             ViewCompareResult(new Ltd[] { Ltd.lu
             , Ltd.wholesaler_asi
             , Ltd.wholesaler_dandh
-            , Ltd.wholesaler_EPROM
             ,Ltd.wholesaler_Synnex
             ,Ltd.wholesaler_d2a
             });
@@ -1352,39 +1343,6 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
 
         }
 
-        #region Eprom
-        /// <summary>
-        /// eprom
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void aLLToolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            Thread t = new Thread(WatchEprom);
-            t.Start();
-        }
-
-        void WatchEprom()
-        {
-            try
-            {
-                string filepath = cost_file_path + "\\eprom_price_list.csv";
-                if (eprom.Run(Ltd.wholesaler_EPROM, filepath))
-                {
-                    eprom.ViewCompare(Ltd.wholesaler_EPROM);
-                    UpdateLtdInfoToRemote(Ltd.wholesaler_EPROM);
-                    eprom.SetStatus(null, null, Ltd.wholesaler_EPROM, "Eprom is End.");
-                }
-                else
-                    throw new Exception("Eprom file isn't exist.");
-            }
-            catch (Exception ex) { Helper.Logs.WriteErrorLog(ex); }
-            EndEprom = true;
-            RunTimer.WatcherInfos.Eprom.begin = false;
-            RunTimer.WatcherInfos.Eprom.running = false;
-        }
-        #endregion
-
         /// <summary>
         /// 执行 synnex 所有
         /// </summary>
@@ -1400,7 +1358,7 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         {
             try
             {
-                eprom.SetStatus(null, null, Ltd.wholesaler_EPROM, "Synnex is begin. " + DateTime.Now.ToString());
+                eprom.SetStatus(null, null, Ltd.wholesaler_Synnex, "Synnex is begin. " + DateTime.Now.ToString());
                 string filepath = cost_file_path + "\\c1151315.ap";
                 if (synnex.WatchRun(filepath, checkBoxSaveAll.Checked))
                 {
@@ -1668,7 +1626,6 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
             ViewCompareResult(new Ltd[] {
               Ltd.wholesaler_asi
             , Ltd.wholesaler_dandh
-            , Ltd.wholesaler_EPROM
             , Ltd.wholesaler_Synnex
             , Ltd.wholesaler_d2a});
             var str = "_s.html is not exist.";
@@ -1736,7 +1693,6 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
             WatchASI();
             WatchDandh();
             SynnexWatchR();
-            WatchEprom();
         }
 
         /// <summary>
@@ -1972,13 +1928,6 @@ where table_schema='ltd_info' and table_name like '{0}%' order by table_name des
             matchPriceToolStripMenuItem_Click(null, null);
         }
 
-        private void oneUpdateToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='1' ");
-            string table_name = LH.GetLastStoreTableNameGroup(Ltd.wholesaler_EPROM);
-            Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='0' where lu_sku in (select luc_sku from " + table_name + " where luc_sku >0)");
-            matchPriceToolStripMenuItem_Click(null, null);
-        }
 
         private void oneUpdateToolStripMenuItem4_Click(object sender, EventArgs e)
         {

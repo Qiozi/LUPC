@@ -270,9 +270,7 @@ select 'Price decreased items:', t1.luc_sku, t1.manufacturer_part_number, '' par
                     cost_fields_name = "cost";
                     quantity_fields_name = "ltd_stock";
                     break;
-
-                               
-                case Ltd.wholesaler_EPROM:                
+             
                 case Ltd.wholesaler_OCZ:
                 case Ltd.wholesaler_DAIWA:
                 case Ltd.wholesaler_BellMicroproducts:

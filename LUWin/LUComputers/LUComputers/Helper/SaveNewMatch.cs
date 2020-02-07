@@ -55,8 +55,6 @@ namespace LUComputers.Helper
             string part_sql = "";
             switch (ltd)
             {
-
-                case Ltd.wholesaler_EPROM:
                 case Ltd.wholesaler_d2a:
                     part_sql = "part_sku other_inc_sku, part_cost other_inc_price, store_quantity other_inc_store_sum, '1' tag, regdate, regdate last_regdate, luc_sku, mfp manufacture_part_number";
                     break;
@@ -276,17 +274,7 @@ where t2.lu_sku is null or t1.other_inc_sku <> t2.other_inc_sku", table_name, lt
                         SetStatus(null, ltd.ToString() + " part Match SKU update end.");
                     }
                     break;
-                case Ltd.wholesaler_EPROM:
-                    //
-                    // update part info 
-                    //
-                    if (UpdatePartInfo(ltd, table_name, page_size))
-                    {
-                        //_form1.SetListBox(_listBox, ltd.ToString() + " part update end.");
-                        SetStatus(null, ltd.ToString() + " part update end.");
-                    }
-
-                    break;
+               
                 case Ltd.wholesaler_d2a:
                 case Ltd.wholesaler_MMAX:
                 case Ltd.wholesaler_SAMTACH:

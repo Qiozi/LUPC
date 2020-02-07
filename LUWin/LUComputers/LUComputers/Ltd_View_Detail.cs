@@ -288,27 +288,7 @@ where t2.{3}<t1.{3} and t2.luc_sku >0", today_table, yestoday_table, index_field
                                             }
                                         }
                                     }
-                                    //
-                                    // Eprom
-                                    if (ltd == Ltd.wholesaler_EPROM)
-                                    {
-                                        string table_name = LH.GetLastStoreTableName(Ltd.wholesaler_supercom);
-                                        if (Config.ExecuteScalarInt("select count(*) from " + table_name + " where luc_sku='" + lu_sku.ToString() + "'") == 0)
-                                        {
-                                            table_name = LH.GetLastStoreTableName(Ltd.wholesaler_asi);
-                                            if (Config.ExecuteScalarInt("select count(*) from " + table_name + " where luc_sku='" + lu_sku.ToString() + "'") == 0)
-                                            {
-                                                decimal special = EditPriceToRemote.GetNewSpecial(new_cost, lu_sku, 0);
-                                                decimal new_price = EditPriceToRemote.GetNewPrice(special);
-
-                                                EditPriceToRemote.ExecRemote(new_price, new_cost, special, lu_sku);
-
-                                                this.toolStripStatusLabel1.Text = lu_sku.ToString();
-                                                this.toolStripStatusLabel2.Text = new_price.ToString() + "|" + new_cost.ToString();
-                                            }
-                                        }
-                                    }
-
+                                  
                                     //
                                     // Smart
                                     if (ltd == Ltd.wholesaler_Smartvision_Direct)

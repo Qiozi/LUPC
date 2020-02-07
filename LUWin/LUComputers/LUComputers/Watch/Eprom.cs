@@ -149,73 +149,7 @@ namespace LUComputers.Watch
             string table_name = CreateTable(ltd);
             DataTable luSkuDT = Config.ExecuteDateTable(string.Format("select lu_sku,manufacturer_part_number from tb_other_inc_valid_lu_sku where prodType='{0}' ", "NEW"));
 
-            if (ltd == Ltd.wholesaler_EPROM)
-            {
-                string ltd_sku = "";
-                string part_name = "";
-                string cost = "";
-                string stock = "";
-
-                string[] lines = File.ReadAllLines(filename);
-                foreach (var s in lines)
-                {
-                    try
-                    {
-                        string[] ls = s.Split(new char[] { ',' });
-                        if (ls.Length < 4) continue;
-                        ltd_sku = ls[0];
-                        if (ls[1].ToLower().IndexOf("$") > -1)
-                            part_name = ls[1].Replace("$", "");
-                        else
-                            part_name = ls[1];
-                        stock = ls[2];
-                        cost = ls[3] == "Call" ? "0" : ls[3];
-                        if (cost == "0")
-                            stock = "0";
-
-                        SetStatus(null, part_name, Ltd.wholesaler_EPROM);
-                        int luc_sku = LU.GetSKUByltdSku(ltd_sku, ltd_id);
-
-                        if (luc_sku == 0)
-                        {
-                            luc_sku = LU.GetSKUByMfp(ltd_sku, luSkuDT);
-
-                            if (luc_sku != 0)
-                            {
-                                Config.ExecuteDateTable(string.Format(@"insert into tb_other_inc_match_lu_sku (lu_sku , other_inc_sku, other_inc_type) values 
-                                        ('{0}', '{1}', '{2}')", luc_sku, ltd_sku, ltd_id));
-                            }
-
-                        }
-
-                        string stock_str = stock.Trim();
-                        if ("YesCallNo".IndexOf(stock_str) == -1) continue;
-                        if (stock_str != "")
-                        {
-                            stock = "0";
-                            if (stock_str == "Yes")
-                                stock = "3";
-                            if (stock_str == "Call")
-                                stock = "1";
-                            if (stock_str == "No")
-                                stock = "0";
-
-                            Config.ExecuteNonQuery(string.Format(@"insert into {0} (part_sku, part_cost, store_quantity, mfp, part_name, luc_sku) values 
-                    ( '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", table_name
-                                                                 , ltd_sku
-                                                                 , cost
-                                                                 , stock
-                                                                 , ltd_sku
-                                                                 , part_name.Replace("'", "\\'").Trim()
-                                                                 , luc_sku));
-
-
-                        }
-                    }
-                    catch (Exception ex) { Helper.Logs.WriteErrorLog(ex); }
-                }
-            }
-            else
+           
             {
                 // using (OleDbConnection conn = new OleDbConnection(Config.ExcelConnstring(filename)))
                 {
