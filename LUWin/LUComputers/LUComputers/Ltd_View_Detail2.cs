@@ -89,10 +89,6 @@ order by cat,sub_category, description asc "
                                 );
 
                             break;
-                        case Ltd.wholesaler_EPROM:
-                            sql = string.Format(@"
-select luc_sku, part_sku, mfp, part_name, '' mfp_name, part_cost, store_quantity quantity, '' weight, '' upc from {0} order by part_sku asc   ", table_name);
-                            break;
                         default:
                             sql = string.Format(" Select * from {0} ", table_name);
                             break;

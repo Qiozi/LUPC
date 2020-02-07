@@ -165,10 +165,6 @@ from tb_other_inc_run_date where other_inc_id='{0}' order by id desc limit 0,1",
                 {
                     Names[i] = DBProvider.Find.LastTableName(DBProvider.TableName.GetPriceTableNamePart(new LtdHelper().FilterText(Ltd.wholesaler_asi.ToString())));
                 }
-                else if (ltds[i] == Ltd.wholesaler_dandh)
-                {
-                    Names[i] = DBProvider.Find.LastTableName(DBProvider.TableName.GetPriceTableNamePart(new LtdHelper().FilterText(Ltd.wholesaler_dandh.ToString())));
-                }
                 else if (ltds[i] == Ltd.wholesaler_Synnex)
                 {
                     Names[i] = DBProvider.Find.LastTableName(DBProvider.TableName.GetPriceTableNamePart(new LtdHelper().FilterText(Ltd.wholesaler_Synnex.ToString())));
@@ -207,7 +203,7 @@ from tb_other_inc_run_date where other_inc_id='{0}' order by id desc limit 0,1",
         lu = 1,
         wholesaler_supercom = 2,
         wholesaler_asi = 3,
-        wholesaler_EPROM = 4,
+        //wholesaler_EPROM = 4,
         wholesaler_DAIWA = 5,
         wholesaler_MUTUAL = 6,
         wholesaler_OCZ = 7,
@@ -219,7 +215,7 @@ from tb_other_inc_run_date where other_inc_id='{0}' order by id desc limit 0,1",
         wholesaler_MMAX = 13,
 
         wholesaler_CanadaComputers = 15,
-        wholesaler_dandh = 16,
+       // wholesaler_dandh = 16,
         wholesaler_d2a =17,
         wholesaler_BellMicroproducts = 18,
         wholesaler_Smartvision_Direct = 19,
