@@ -410,30 +410,35 @@
             this.danDhToolStripMenuItemWatch.Name = "danDhToolStripMenuItemWatch";
             this.danDhToolStripMenuItemWatch.Size = new System.Drawing.Size(187, 22);
             this.danDhToolStripMenuItemWatch.Text = "Watch(T)";
+            this.danDhToolStripMenuItemWatch.Click += new System.EventHandler(this.danDhToolStripMenuItemWatch_Click);
             // 
             // danDhToolStripMenuItemUpdate
             // 
             this.danDhToolStripMenuItemUpdate.Name = "danDhToolStripMenuItemUpdate";
             this.danDhToolStripMenuItemUpdate.Size = new System.Drawing.Size(187, 22);
             this.danDhToolStripMenuItemUpdate.Text = "Update";
+            this.danDhToolStripMenuItemUpdate.Click += new System.EventHandler(this.danDhToolStripMenuItemUpdate_Click);
             // 
             // danDhToolStripMenuItemCompare
             // 
             this.danDhToolStripMenuItemCompare.Name = "danDhToolStripMenuItemCompare";
             this.danDhToolStripMenuItemCompare.Size = new System.Drawing.Size(187, 22);
             this.danDhToolStripMenuItemCompare.Text = "Compare";
+            this.danDhToolStripMenuItemCompare.Click += new System.EventHandler(this.danDhToolStripMenuItemCompare_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // updataHPNotebookToolStripMenuItem
             // 
             this.updataHPNotebookToolStripMenuItem.Name = "updataHPNotebookToolStripMenuItem";
             this.updataHPNotebookToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.updataHPNotebookToolStripMenuItem.Text = "Updata HP Notebook";
+            this.updataHPNotebookToolStripMenuItem.Click += new System.EventHandler(this.updataHPNotebookToolStripMenuItem_Click);
             // 
             // toolStripSeparator31
             // 
@@ -445,6 +450,7 @@
             this.oneUpdateToolStripMenuItem4.Name = "oneUpdateToolStripMenuItem4";
             this.oneUpdateToolStripMenuItem4.Size = new System.Drawing.Size(187, 22);
             this.oneUpdateToolStripMenuItem4.Text = "one update";
+            this.oneUpdateToolStripMenuItem4.Click += new System.EventHandler(this.oneUpdateToolStripMenuItem4_Click);
             // 
             // epromToolStripMenuItem1
             // 
@@ -465,18 +471,21 @@
             this.epromToolStripMenuItemWatch.Name = "epromToolStripMenuItemWatch";
             this.epromToolStripMenuItemWatch.Size = new System.Drawing.Size(134, 22);
             this.epromToolStripMenuItemWatch.Text = "Watch";
+            this.epromToolStripMenuItemWatch.Click += new System.EventHandler(this.epromToolStripMenuItemWatch_Click);
             // 
             // epromToolStripMenuItemUpdate
             // 
             this.epromToolStripMenuItemUpdate.Name = "epromToolStripMenuItemUpdate";
             this.epromToolStripMenuItemUpdate.Size = new System.Drawing.Size(134, 22);
             this.epromToolStripMenuItemUpdate.Text = "Update";
+            this.epromToolStripMenuItemUpdate.Click += new System.EventHandler(this.epromToolStripMenuItemUpdate_Click);
             // 
             // epromToolStripMenuItemCompare
             // 
             this.epromToolStripMenuItemCompare.Name = "epromToolStripMenuItemCompare";
             this.epromToolStripMenuItemCompare.Size = new System.Drawing.Size(134, 22);
             this.epromToolStripMenuItemCompare.Text = "Compare";
+            this.epromToolStripMenuItemCompare.Click += new System.EventHandler(this.epromToolStripMenuItemCompare_Click);
             // 
             // toolStripSeparator28
             // 
@@ -488,6 +497,7 @@
             this.aLLToolStripMenuItem6.Name = "aLLToolStripMenuItem6";
             this.aLLToolStripMenuItem6.Size = new System.Drawing.Size(134, 22);
             this.aLLToolStripMenuItem6.Text = "ALL(T)";
+            this.aLLToolStripMenuItem6.Click += new System.EventHandler(this.aLLToolStripMenuItem6_Click);
             // 
             // toolStripSeparator50
             // 
@@ -499,6 +509,7 @@
             this.oneUpdateToolStripMenuItem3.Name = "oneUpdateToolStripMenuItem3";
             this.oneUpdateToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
             this.oneUpdateToolStripMenuItem3.Text = "one update";
+            this.oneUpdateToolStripMenuItem3.Click += new System.EventHandler(this.oneUpdateToolStripMenuItem3_Click);
             // 
             // d2AToolStripMenuItem1
             // 

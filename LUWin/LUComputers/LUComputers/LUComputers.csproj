@@ -168,6 +168,12 @@
     <Compile Include="ltd_ASI_View.Designer.cs">
       <DependentUpon>ltd_ASI_View.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ltd_DanDh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_DanDh.Designer.cs">
+      <DependentUpon>Ltd_DanDh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ltd_View_Detail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ltd_ASI_View.resx">
       <DependentUpon>ltd_ASI_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_DanDh.resx">
+      <DependentUpon>Ltd_DanDh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ltd_DanDh_view.resx">
+      <DependentUpon>Ltd_DanDh_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Ltd_View_Detail.resx">
       <DependentUpon>Ltd_View_Detail.cs</DependentUpon>
@@ -322,6 +336,7 @@
     <Compile Include="Watch\ASI.cs" />
     <Compile Include="Watch\ComparePrice.cs" />
     <Compile Include="Watch\D2A.cs" />
+    <Compile Include="Watch\DanDh.cs" />
     <Compile Include="Watch\LU.cs" />
     <Compile Include="Watch\MatchStore.cs" />
     <Compile Include="Watch\OtherIncInfo.cs" />
@@ -377,6 +392,12 @@
     <Compile Include="Helper\eBayPriceHelper.cs" />
     <Compile Include="Helper\FFHelper.cs" />
     <Compile Include="Helper\Logs.cs" />
+    <Compile Include="Ltd_DanDh_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ltd_DanDh_view.Designer.cs">
+      <DependentUpon>Ltd_DanDh_view.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -49,7 +49,9 @@ namespace LUComputers.Watch
         {
             LtdHelper LH = new LtdHelper();
 
-            string[] ltds = LH.GetLtdStoreDBTableNames(new Ltd[]{Ltd.wholesaler_asi  
+            string[] ltds = LH.GetLtdStoreDBTableNames(new Ltd[]{Ltd.wholesaler_asi                
+                , Ltd.wholesaler_dandh
+                , Ltd.wholesaler_EPROM
                 , Ltd.wholesaler_Synnex
                 //, Ltd.wholesaler_Smartvision_Direct
                 , Ltd.wholesaler_d2a

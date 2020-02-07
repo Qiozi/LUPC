@@ -120,6 +120,8 @@ union all
             ltd_infoEntities1 context = new ltd_infoEntities1();
 
             string ltds = new LtdHelper().GetLtdIds(new Ltd[]{Ltd.wholesaler_asi
+                , Ltd.wholesaler_dandh
+                , Ltd.wholesaler_EPROM
                 , Ltd.wholesaler_Synnex
                 , Ltd.wholesaler_d2a
             });

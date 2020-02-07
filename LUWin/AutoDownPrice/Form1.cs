@@ -48,7 +48,7 @@ namespace AutoDownPrice
         Helper.FtpInfo _ftpInfo = new Helper.FtpInfo();
         List<string> fileList = new List<string>();
         bool _EndASI = false;
-        bool _EndDanah = true;
+        bool _EndDanah = false;
         bool _EndSynnex = false;
 
         public Form1()
@@ -85,7 +85,7 @@ namespace AutoDownPrice
             };
 
             fileList.Add(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
-            //fileList.Add(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+            fileList.Add(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
             fileList.Add(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
 
             #endregion
@@ -106,54 +106,54 @@ namespace AutoDownPrice
 
             Util.FTPClient ftp;
 
-            //#region Dandh
-            //{
-            //    Util.Logs.WriteLog("DanDh Begin" + DateTime.Now.ToString());
+            #region Dandh
+            {
+                Util.Logs.WriteLog("DanDh Begin" + DateTime.Now.ToString());
 
-            //    try
-            //    {
-            //        if (File.Exists(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename))
-            //        {
-            //            FileInfo dhFi2 = new FileInfo(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-            //            if (dhFi2.Length > 50L)
-            //            {
+                try
+                {
+                    if (File.Exists(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename))
+                    {
+                        FileInfo dhFi2 = new FileInfo(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                        if (dhFi2.Length > 50L)
+                        {
 
-            //                if (File.Exists(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename))
-            //                {
-            //                    File.Delete(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
-            //                }
-            //                // 备分正式文件
-            //                File.Move(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename,
-            //                    _ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
-            //            }
-            //        }
+                            if (File.Exists(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename))
+                            {
+                                File.Delete(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
+                            }
+                            // 备分正式文件
+                            File.Move(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename,
+                                _ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
+                        }
+                    }
 
-            //        if (File.Exists(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename))
-            //        {
-            //            File.Delete(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-            //        }
-            //        ftp = new Util.FTPClient(_ftpInfo.Dandh.Ip
-            //               , _ftpInfo.Dandh.Uid
-            //               , _ftpInfo.Dandh.Pwd);
-            //        ftp.Download(_ftpInfo.Dandh.SavePath, _ftpInfo.Dandh.SaveFilename);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        Util.Logs.WriteErrorLog(ex);
-            //        _EndDanah = false;
-            //    }
+                    if (File.Exists(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename))
+                    {
+                        File.Delete(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                    }
+                    ftp = new Util.FTPClient(_ftpInfo.Dandh.Ip
+                           , _ftpInfo.Dandh.Uid
+                           , _ftpInfo.Dandh.Pwd);
+                    ftp.Download(_ftpInfo.Dandh.SavePath, _ftpInfo.Dandh.SaveFilename);
+                }
+                catch (Exception ex)
+                {
+                    Util.Logs.WriteErrorLog(ex);
+                    _EndDanah = false;
+                }
 
-            //    FileInfo dhFi = new FileInfo(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-            //    if (dhFi.Length < 50L)
-            //    {
-            //        // 删除正式文件
-            //        File.Delete(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-            //        // 更新正式文件
-            //        File.Move(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename,
-            //            _ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-            //    }
-            //}
-            //#endregion
+                FileInfo dhFi = new FileInfo(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                if (dhFi.Length < 50L)
+                {
+                    // 删除正式文件
+                    File.Delete(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                    // 更新正式文件
+                    File.Move(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename,
+                        _ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                }
+            }
+            #endregion
 
             #region ASI
             {

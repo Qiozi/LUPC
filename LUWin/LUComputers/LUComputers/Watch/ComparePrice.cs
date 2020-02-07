@@ -270,9 +270,25 @@ select 'Price decreased items:', t1.luc_sku, t1.manufacturer_part_number, '' par
                     cost_fields_name = "cost";
                     quantity_fields_name = "ltd_stock";
                     break;
-                                                                 
 
+                               
+                case Ltd.wholesaler_EPROM:                
+                case Ltd.wholesaler_OCZ:
+                case Ltd.wholesaler_DAIWA:
+                case Ltd.wholesaler_BellMicroproducts:
+                case Ltd.wholesaler_ALC:
+                case Ltd.wholesaler_Smartvision_Direct:
+              
+                    index_fields_name = "part_sku";
+                    cost_fields_name = "part_cost";
+                    quantity_fields_name = "store_quantity ";
+                    break;
                 case Ltd.wholesaler_CanadaComputers:
+                case Ltd.Rival_DirectDial:
+                case Ltd.Rival_Ncix:
+                case Ltd.Rival_TigerDirect:
+                case Ltd.Rival_NewEgg:
+                case Ltd.wholesaler_dandh:
                 case Ltd.wholesaler_asi:
                 case Ltd.wholesaler_Synnex:
                     index_fields_name = "sku";
@@ -280,6 +296,21 @@ select 'Price decreased items:', t1.luc_sku, t1.manufacturer_part_number, '' par
                     quantity_fields_name = "quantity ";
                     break;
                 case Ltd.wholesaler_d2a:
+                    index_fields_name = "part_sku";
+                    cost_fields_name = "part_cost";
+                    quantity_fields_name = "store_quantity ";
+                    break;
+                case Ltd.wholesaler_MMAX:
+                    index_fields_name = "part_sku";
+                    cost_fields_name = "part_cost";
+                    quantity_fields_name = "store_quantity ";
+                    break;
+                case Ltd.wholesaler_COMTRONIX:
+                    index_fields_name = "part_sku";
+                    cost_fields_name = "part_cost";
+                    quantity_fields_name = "store_quantity ";
+                    break;
+                case Ltd.wholesaler_MINIMICRO:
                     index_fields_name = "part_sku";
                     cost_fields_name = "part_cost";
                     quantity_fields_name = "store_quantity ";
@@ -302,8 +333,6 @@ select 'Price decreased items:', t1.luc_sku, t1.manufacturer_part_number, '' par
             {
                 throw new Exception("Ltd is not exist.");
             }
-
-         
 
             string tableNameNoDate = DBProvider.TableName.GetPriceTableNamePart(new LtdHelper().FilterText(ltd.ToString()));
 

@@ -136,7 +136,7 @@ insert tb_timer
 
 
         // Watch.Supercom Supercom = new LUComputers.Watch.Supercom();
-       
+        Watch.DanDh dandh = new LUComputers.Watch.DanDh();
         Watch.ASI ASI = new LUComputers.Watch.ASI();
         Helper.SaveNewMatch SNM = new LUComputers.Helper.SaveNewMatch();
         Watch.Synnex synnex = new LUComputers.Watch.Synnex();
@@ -175,6 +175,7 @@ insert tb_timer
 
             fileSystemWatcherLtdFile.Path = watchFolderName;
 
+            dandh.WatchE += new LUComputers.Events.UrlEventHandler(etc_WatchE);
             ASI.WatchE += new LUComputers.Events.UrlEventHandler(etc_WatchE);
             synnex.WatchE += new LUComputers.Events.UrlEventHandler(etc_WatchE);
             eprom.WatchE += new LUComputers.Events.UrlEventHandler(etc_WatchE);
@@ -614,6 +615,103 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             catch { }
         }
 
+        #region supercom
+
+        private void aLLToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            //supercomToolStripMenuItemWatch_Click(null, null);
+            //supercomToolStripMenuItemCompare_Click(null, null);
+            //supercomToolStripMenuItemUpdate_Click(null, null);
+            //Thread thread = new Thread(new ThreadStart(SupercomAll));
+            //thread.IsBackground = true;
+            //thread.Start();
+        }
+
+        #endregion
+
+        #region Dandh
+        /// <summary>
+        /// 执行 dandh 所有
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void danDhToolStripMenuItemWatch_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(WatchDandh));
+            thread.IsBackground = true;
+            thread.Start();
+        }
+
+        void WatchDandh()
+        {
+            //if (RunTimer.WatcherInfos.DanDh.begin)
+            {
+                try
+                {
+                    string filepath = cost_file_path + "\\ITEMLIST";
+
+                    if (dandh.DanDhWatch(filepath, checkBoxSaveAll.Checked))
+                    {
+                        dandh.ViewCompare();
+
+
+
+                        string tableNameNoDate = DBProvider.TableName.GetPriceTableNamePart(new LtdHelper().FilterText(Ltd.wholesaler_dandh.ToString()));
+                        // string table_name = new LtdHelper().GetLastStoreTableNameGroup(Ltd.wholesaler_Synnex);
+                        //string table_name = DBProvider.Find.LastTableName(tableNameNoDate);
+
+                        //SNM.UpdateToRemote(Ltd.wholesaler_Synnex, table_name);
+                        //synnex.SetStatus(null, null, "end");
+
+
+                        string table_name = DBProvider.Find.LastTableName(tableNameNoDate); // new LtdHelper().GetLastStoreTableNameGroup(Ltd.wholesaler_dandh);
+
+                        SNM.UpdateToRemote(Ltd.wholesaler_dandh, table_name);
+                        dandh.SetStatus("End" + DateTime.Now.ToString());
+                        RunTimer.WatcherInfos.DanDh.end = true;
+                        Config.ExecuteNonQuery("Update tb_other_inc set run_end=1 where id=16");// dandh
+
+                        EndDandh = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    dandh.SetStatus(ex.Message);
+                    Helper.Logs.WriteErrorLog(ex);
+                }
+                RunTimer.WatcherInfos.DanDh.begin = false;
+                RunTimer.WatcherInfos.DanDh.running = false;
+            }
+        }
+
+        private void danDhToolStripMenuItemUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateLtdInfoToRemote(Ltd.wholesaler_dandh);
+        }
+
+        private void danDhToolStripMenuItemCompare_Click(object sender, EventArgs e)
+        {
+            Helper.Compare.ViewCompare(Ltd.wholesaler_dandh);
+        }
+        #endregion
+
+        private void epromToolStripMenuItemWatch_Click(object sender, EventArgs e)
+        {
+            //Ltd_Eprom le = new Ltd_Eprom(Ltd.wholesaler_EPROM);
+            //le.ShowDialog();
+            //epromToolStripMenuItemCompare_Click(null, null);
+        }
+
+        private void epromToolStripMenuItemUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateLtdInfoToRemote(Ltd.wholesaler_EPROM);
+        }
+
+        private void epromToolStripMenuItemCompare_Click(object sender, EventArgs e)
+        {
+            Helper.Compare.ViewCompare(Ltd.wholesaler_EPROM);
+        }
+
         private void d2aToolStripMenuItemWatch_Click(object sender, EventArgs e)
         {
             Thread t = new Thread(WatchD2A);
@@ -636,11 +734,6 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
 
                     eprom.ViewCompare(Ltd.wholesaler_d2a);
                     UpdateLtdInfoToRemote(Ltd.wholesaler_d2a);
-
-                    // 只保留 CPU ，内存与win, office.
-                    Config.RemoteExecuteNonQuery(@"select *from tb_other_inc_part_info where other_inc_id=17 and luc_sku not in 
-(Select Product_Serial_no from tb_product where menu_child_serial_no in (22,29,118, 119,120));");
-                    
                     eprom.SetStatus(null, null, Ltd.wholesaler_d2a, "End.");
                 }
                 else
@@ -693,7 +786,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                     D2aModel m1 = new D2aModel();
                     m1.mfp = row.GetCell(1).ToString();
                     decimal cost1;
-                    decimal.TryParse(row.GetCell(3).ToString().Replace("$", ""), out cost1);
+                    decimal.TryParse(row.GetCell(3).ToString().Replace("$",""), out cost1);
                     m1.cost = cost1;
                     m1.stock = 5;
                     if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
@@ -1098,6 +1191,8 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         {
             ViewCompareResult(new Ltd[] { Ltd.lu
             , Ltd.wholesaler_asi
+            , Ltd.wholesaler_dandh
+            , Ltd.wholesaler_EPROM
             ,Ltd.wholesaler_Synnex
             ,Ltd.wholesaler_d2a
             });
@@ -1198,10 +1293,22 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         private void aLLNetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             aLLToolStripMenuItem_Click(null, null);
+            aLLToolStripMenuItem3_Click(null, null);
             aLLToolStripMenuItem1_Click(null, null);
             aLLToolStripMenuItem2_Click(null, null);
         }
-          
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ltd_DanDh_view ldv = new Ltd_DanDh_view();
+            ldv.Show();
+        }
+
+        private void updataHPNotebookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Watch.DanDh().UpdataRemote();
+            SetListBox(this.listBox1, "DanDh Notebook Updata End.");
+        }
 
         private void changeNotebookPriceToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1245,6 +1352,39 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
 
         }
 
+        #region Eprom
+        /// <summary>
+        /// eprom
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void aLLToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(WatchEprom);
+            t.Start();
+        }
+
+        void WatchEprom()
+        {
+            try
+            {
+                string filepath = cost_file_path + "\\eprom_price_list.csv";
+                if (eprom.Run(Ltd.wholesaler_EPROM, filepath))
+                {
+                    eprom.ViewCompare(Ltd.wholesaler_EPROM);
+                    UpdateLtdInfoToRemote(Ltd.wholesaler_EPROM);
+                    eprom.SetStatus(null, null, Ltd.wholesaler_EPROM, "Eprom is End.");
+                }
+                else
+                    throw new Exception("Eprom file isn't exist.");
+            }
+            catch (Exception ex) { Helper.Logs.WriteErrorLog(ex); }
+            EndEprom = true;
+            RunTimer.WatcherInfos.Eprom.begin = false;
+            RunTimer.WatcherInfos.Eprom.running = false;
+        }
+        #endregion
+
         /// <summary>
         /// 执行 synnex 所有
         /// </summary>
@@ -1260,7 +1400,7 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         {
             try
             {
-                eprom.SetStatus(null, null, Ltd.wholesaler_Synnex, "Synnex is begin. " + DateTime.Now.ToString());
+                eprom.SetStatus(null, null, Ltd.wholesaler_EPROM, "Synnex is begin. " + DateTime.Now.ToString());
                 string filepath = cost_file_path + "\\c1151315.ap";
                 if (synnex.WatchRun(filepath, checkBoxSaveAll.Checked))
                 {
@@ -1527,6 +1667,8 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         {
             ViewCompareResult(new Ltd[] {
               Ltd.wholesaler_asi
+            , Ltd.wholesaler_dandh
+            , Ltd.wholesaler_EPROM
             , Ltd.wholesaler_Synnex
             , Ltd.wholesaler_d2a});
             var str = "_s.html is not exist.";
@@ -1557,6 +1699,7 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         private void supercomASIDandhSynnexToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RunASIDandhSynnex = true;
+            aLLToolStripMenuItem3_Click(null, null);
         }
 
         /// <summary>
@@ -1591,7 +1734,9 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
         {
             WatchD2A();
             WatchASI();
+            WatchDandh();
             SynnexWatchR();
+            WatchEprom();
         }
 
         /// <summary>
@@ -1642,7 +1787,7 @@ delete from tb_other_inc_part_info where  luc_sku='' or luc_sku is null;");
         /// </summary>
         public void sendEmailAsiDandhSynnex()
         {
-            new Helper.EmailHelper().SendToEmail("terryeah@gmail.com", "read title", string.Format("Synnex ({0}), ASI ({1})", GetQtyLtd(Ltd.wholesaler_Synnex), GetQtyLtd(Ltd.wholesaler_asi)));
+            new Helper.EmailHelper().SendToEmail("terryeah@gmail.com", "read title", string.Format("Synnex ({0}), Dandh ({1}), ASI ({2})", GetQtyLtd(Ltd.wholesaler_Synnex), GetQtyLtd(Ltd.wholesaler_dandh), GetQtyLtd(Ltd.wholesaler_asi)));
         }
 
         /// <summary>
@@ -1823,6 +1968,22 @@ where table_schema='ltd_info' and table_name like '{0}%' order by table_name des
         {
             Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='1' ");
             string table_name = LH.GetLastStoreTableNameGroup(Ltd.wholesaler_Synnex);
+            Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='0' where lu_sku in (select luc_sku from " + table_name + " where luc_sku >0)");
+            matchPriceToolStripMenuItem_Click(null, null);
+        }
+
+        private void oneUpdateToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='1' ");
+            string table_name = LH.GetLastStoreTableNameGroup(Ltd.wholesaler_EPROM);
+            Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='0' where lu_sku in (select luc_sku from " + table_name + " where luc_sku >0)");
+            matchPriceToolStripMenuItem_Click(null, null);
+        }
+
+        private void oneUpdateToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='1' ");
+            string table_name = LH.GetLastStoreTableNameGroup(Ltd.wholesaler_dandh);
             Config.ExecuteNonQuery("Update tb_other_inc_valid_lu_sku set isOk='0' where lu_sku in (select luc_sku from " + table_name + " where luc_sku >0)");
             matchPriceToolStripMenuItem_Click(null, null);
         }
