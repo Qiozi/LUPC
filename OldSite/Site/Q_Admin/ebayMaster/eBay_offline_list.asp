@@ -216,7 +216,7 @@
         <span id="getItemAreaInfo"></span>
     </p>
     <%
-
+'排除不需要发布的产品类
 set rs = conn.execute("select product_ebay_name, p.product_serial_no, ecap.eBayCateID_1,p.ltd_stock,pc.is_noebook, ecap.eBayCateText_1,ecap.eBayMyCateID_1,ecap.eBayMyCateText_1 "&_
                         " ,spt.c haveSpecifices"&_
                         " from tb_product p inner join ("&_
@@ -225,7 +225,7 @@ set rs = conn.execute("select product_ebay_name, p.product_serial_no, ecap.eBayC
                         " left join tb_ebay_category_and_product ecap on ecap.sku=p.product_serial_no  "&_
                         " left join (select distinct system_sku sku, count(system_sku) c from tb_ebay_system_item_specifics group by system_sku) spt on spt.sku = p.product_serial_no "&_
                         " inner join tb_product_category pc on pc.menu_child_serial_no=p.menu_child_serial_no " &_
-                        " where p.tag=1 and t2.sku is null and p.ltd_stock>3 order by pc.menu_child_serial_no asc,product_ebay_name asc ")
+                        " where p.tag=1 and t2.sku is null and p.ltd_stock>3 and pc.menu_child_serial_no not in (29,457,40,240,19,259,21,39,28,42) order by pc.menu_child_serial_no asc,product_ebay_name asc ")
                         if not rs.eof then
                             response.Write("<table>")
                             do while not rs.eof 
