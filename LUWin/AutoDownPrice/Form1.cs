@@ -156,6 +156,7 @@ namespace AutoDownPrice
             #endregion
 
             #region ASI
+            if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday && DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
             {
                 Util.Logs.WriteLog("asi Begin" + DateTime.Now.ToString());
 
