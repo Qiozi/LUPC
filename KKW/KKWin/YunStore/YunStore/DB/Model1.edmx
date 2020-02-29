@@ -48,6 +48,7 @@
           <Property Name="ChaoJiTuiJian" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="MaoLi" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="SheBaoGongJiJin" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Remark" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="tb_user">
           <Key>
@@ -66,7 +67,7 @@
           <Property Name="regdate" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="Gid" Type="guid" Nullable="false" />
         </EntityType>
-        <EntityType Name="tb_yun_fileinfo_company_stock">
+        <EntityType Name="tb_yun_fileinfo_company_stock_child">
           <Key>
             <PropertyRef Name="Gid" />
           </Key>
@@ -80,6 +81,21 @@
           <Property Name="StaffName" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="Qty" Type="int" Nullable="false" />
           <Property Name="Remark" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ParentId" Type="guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_fileinfo_company_stock_main">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="guid" Nullable="false" />
+          <Property Name="Regdate" Type="varchar" MaxLength="26" Nullable="false" />
+          <Property Name="StaffName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="StaffId" Type="guid" Nullable="false" />
+          <Property Name="FileName" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="FileMD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AllProdQty" Type="int" Nullable="false" />
+          <Property Name="AllProdSaleQty" Type="int" Nullable="false" />
+          <Property Name="AllProdSaleCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_yun_fileinfo_company_stock_record">
           <Key>
@@ -166,7 +182,8 @@
         <EntityContainer Name="qstoreModelStoreContainer">
           <EntitySet Name="tb_profit" EntityType="Self.tb_profit" Schema="qstore" store:Type="Tables" />
           <EntitySet Name="tb_user" EntityType="Self.tb_user" Schema="qstore" store:Type="Tables" />
-          <EntitySet Name="tb_yun_fileinfo_company_stock" EntityType="Self.tb_yun_fileinfo_company_stock" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_fileinfo_company_stock_child" EntityType="Self.tb_yun_fileinfo_company_stock_child" Schema="qstore" store:Type="Tables" />
+          <EntitySet Name="tb_yun_fileinfo_company_stock_main" EntityType="Self.tb_yun_fileinfo_company_stock_main" Schema="qstore" store:Type="Tables" />
           <EntitySet Name="tb_yun_fileinfo_company_stock_record" EntityType="Self.tb_yun_fileinfo_company_stock_record" Schema="qstore" store:Type="Tables" />
           <EntitySet Name="tb_yun_fileinfo_sale_child" EntityType="Self.tb_yun_fileinfo_sale_child" Schema="qstore" store:Type="Tables" />
           <EntitySet Name="tb_yun_fileinfo_sale_main" EntityType="Self.tb_yun_fileinfo_sale_main" Schema="qstore" store:Type="Tables" />
@@ -178,15 +195,108 @@
     <edmx:ConceptualModels>
       <Schema Namespace="qstoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="qstoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_user" EntityType="qstoreModel.tb_user" />
+          <EntitySet Name="tb_profit" EntityType="qstoreModel.tb_profit" />
+          <EntitySet Name="tb_yun_fileinfo_company_stock_main" EntityType="qstoreModel.tb_yun_fileinfo_company_stock_main" />
+          <EntitySet Name="tb_yun_fileinfo_company_stock_record" EntityType="qstoreModel.tb_yun_fileinfo_company_stock_record" />
           <EntitySet Name="tb_yun_fileinfo_sale_child" EntityType="qstoreModel.tb_yun_fileinfo_sale_child" />
           <EntitySet Name="tb_yun_fileinfo_sale_main" EntityType="qstoreModel.tb_yun_fileinfo_sale_main" />
           <EntitySet Name="tb_yun_fileinfo_stock_child" EntityType="qstoreModel.tb_yun_fileinfo_stock_child" />
           <EntitySet Name="tb_yun_fileinfo_stock_main" EntityType="qstoreModel.tb_yun_fileinfo_stock_main" />
-          <EntitySet Name="tb_yun_fileinfo_company_stock" EntityType="qstoreModel.tb_yun_fileinfo_company_stock" />
-          <EntitySet Name="tb_yun_fileinfo_company_stock_record" EntityType="qstoreModel.tb_yun_fileinfo_company_stock_record" />
-          <EntitySet Name="tb_user" EntityType="qstoreModel.tb_user" />
-          <EntitySet Name="tb_profit" EntityType="qstoreModel.tb_profit" />
+          <EntitySet Name="tb_yun_fileinfo_company_stock_child" EntityType="qstoreModel.tb_yun_fileinfo_company_stock_child" />
         </EntityContainer>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="user_pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="showit" Type="Boolean" />
+          <Property Name="user_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="is_admin" Type="Boolean" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="section" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" />
+          <Property Name="Gid" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_profit">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="Guid" Nullable="false" />
+          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="StaffName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StaffGid" Type="Guid" Nullable="false" />
+          <Property Name="ProfitDate" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Profit" Type="Decimal" Nullable="false" />
+          <Property Name="Sale" Type="Decimal" Nullable="false" />
+          <Property Name="RenLiChengBen1" Type="Decimal" Nullable="false" />
+          <Property Name="GuDingChengBen1" Type="Decimal" Nullable="false" />
+          <Property Name="YingXiaoChengBen1" Type="Decimal" Nullable="false" />
+          <Property Name="ChanPinChengBen1" Type="Decimal" Nullable="false" />
+          <Property Name="YunCangChengBen1" Type="Decimal" Nullable="false" />
+          <Property Name="GongZi" Type="Decimal" Nullable="false" />
+          <Property Name="SiJiFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="DaiYunYingFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="BanGongYongPin" Type="Decimal" Nullable="false" />
+          <Property Name="ShuiDianFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="FangWuZuJin" Type="Decimal" Nullable="false" />
+          <Property Name="ShuiWuFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="QiTaZaFei" Type="Decimal" Nullable="false" />
+          <Property Name="DaiFuFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="CaiWuJiZhangFei" Type="Decimal" Nullable="false" />
+          <Property Name="ZhiTongChe" Type="Decimal" Nullable="false" />
+          <Property Name="ZuanZhanFei" Type="Decimal" Nullable="false" />
+          <Property Name="QiTaFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="CDianZhiTongChe" Type="Decimal" Nullable="false" />
+          <Property Name="JinHuoChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="ShangNiChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="FeiDiLaChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="XinRuiChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="HongWeiWuLiuChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="EKOFaHuoShangPinChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="NutFangDiuQi" Type="Decimal" Nullable="false" />
+          <Property Name="CangChuFeiYuFaHuoFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="HaoCaiFei" Type="Decimal" Nullable="false" />
+          <Property Name="DingZhiXiangFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="ChaoJiTuiJian" Type="Decimal" Nullable="false" />
+          <Property Name="MaoLi" Type="Decimal" Nullable="false" />
+          <Property Name="SheBaoGongJiJin" Type="Decimal" Nullable="false" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_fileinfo_company_stock_main">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="Guid" Nullable="false" />
+          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="StaffName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StaffId" Type="Guid" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="FileMD5" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AllProdQty" Type="Int32" Nullable="false" />
+          <Property Name="AllProdSaleQty" Type="Int32" Nullable="false" />
+          <Property Name="AllProdSaleCost" Type="Decimal" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_yun_fileinfo_company_stock_record">
+          <Key>
+            <PropertyRef Name="Gid" />
+          </Key>
+          <Property Name="Gid" Type="Guid" Nullable="false" />
+          <Property Name="ProdCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" />
+          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="StaffGid" Type="Guid" Nullable="false" />
+          <Property Name="StaffName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Qty" Type="Int32" Nullable="false" />
+          <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="InOut" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="tb_yun_fileinfo_sale_child">
           <Key>
             <PropertyRef Name="Gid" />
@@ -253,7 +363,7 @@
           <Property Name="AllProdStock" Type="Int32" Nullable="false" />
           <Property Name="AllProdTotal" Type="Decimal" Nullable="false" />
         </EntityType>
-        <EntityType Name="tb_yun_fileinfo_company_stock">
+        <EntityType Name="tb_yun_fileinfo_company_stock_child">
           <Key>
             <PropertyRef Name="Gid" />
           </Key>
@@ -267,83 +377,7 @@
           <Property Name="StaffName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="Qty" Type="Int32" Nullable="false" />
           <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="tb_yun_fileinfo_company_stock_record">
-          <Key>
-            <PropertyRef Name="Gid" />
-          </Key>
-          <Property Name="Gid" Type="Guid" Nullable="false" />
-          <Property Name="ProdCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="Price" Type="Decimal" Nullable="false" />
-          <Property Name="Cost" Type="Decimal" Nullable="false" />
-          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
-          <Property Name="StaffGid" Type="Guid" Nullable="false" />
-          <Property Name="StaffName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="Qty" Type="Int32" Nullable="false" />
-          <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="InOut" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="tb_user">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="user_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="user_pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="showit" Type="Boolean" />
-          <Property Name="user_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="is_admin" Type="Boolean" />
-          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="section" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="regdate" Type="DateTime" Nullable="false" />
-          <Property Name="Gid" Type="Guid" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tb_profit">
-          <Key>
-            <PropertyRef Name="Gid" />
-          </Key>
-          <Property Name="Gid" Type="Guid" Nullable="false" />
-          <Property Name="Regdate" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="false" />
-          <Property Name="StaffName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="StaffGid" Type="Guid" Nullable="false" />
-          <Property Name="ProfitDate" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="Profit" Type="Decimal" Nullable="false" />
-          <Property Name="Sale" Type="Decimal" Nullable="false" />
-          <Property Name="RenLiChengBen1" Type="Decimal" Nullable="false" />
-          <Property Name="GuDingChengBen1" Type="Decimal" Nullable="false" />
-          <Property Name="YingXiaoChengBen1" Type="Decimal" Nullable="false" />
-          <Property Name="ChanPinChengBen1" Type="Decimal" Nullable="false" />
-          <Property Name="YunCangChengBen1" Type="Decimal" Nullable="false" />
-          <Property Name="GongZi" Type="Decimal" Nullable="false" />
-          <Property Name="SiJiFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="DaiYunYingFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="BanGongYongPin" Type="Decimal" Nullable="false" />
-          <Property Name="ShuiDianFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="FangWuZuJin" Type="Decimal" Nullable="false" />
-          <Property Name="ShuiWuFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="QiTaZaFei" Type="Decimal" Nullable="false" />
-          <Property Name="DaiFuFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="CaiWuJiZhangFei" Type="Decimal" Nullable="false" />
-          <Property Name="ZhiTongChe" Type="Decimal" Nullable="false" />
-          <Property Name="ZuanZhanFei" Type="Decimal" Nullable="false" />
-          <Property Name="QiTaFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="CDianZhiTongChe" Type="Decimal" Nullable="false" />
-          <Property Name="JinHuoChengBen" Type="Decimal" Nullable="false" />
-          <Property Name="ShangNiChengBen" Type="Decimal" Nullable="false" />
-          <Property Name="FeiDiLaChengBen" Type="Decimal" Nullable="false" />
-          <Property Name="XinRuiChengBen" Type="Decimal" Nullable="false" />
-          <Property Name="HongWeiWuLiuChengBen" Type="Decimal" Nullable="false" />
-          <Property Name="EKOFaHuoShangPinChengBen" Type="Decimal" Nullable="false" />
-          <Property Name="NutFangDiuQi" Type="Decimal" Nullable="false" />
-          <Property Name="CangChuFeiYuFaHuoFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="HaoCaiFei" Type="Decimal" Nullable="false" />
-          <Property Name="DingZhiXiangFeiYong" Type="Decimal" Nullable="false" />
-          <Property Name="ChaoJiTuiJian" Type="Decimal" Nullable="false" />
-          <Property Name="MaoLi" Type="Decimal" Nullable="false" />
-          <Property Name="SheBaoGongJiJin" Type="Decimal" Nullable="false" />
+          <Property Name="ParentId" Type="Guid" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -351,6 +385,102 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="qstoreModelStoreContainer" CdmEntityContainer="qstoreEntities">
+          <EntitySetMapping Name="tb_user">
+            <EntityTypeMapping TypeName="qstoreModel.tb_user">
+              <MappingFragment StoreEntitySet="tb_user">
+                <ScalarProperty Name="Gid" ColumnName="Gid" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="section" ColumnName="section" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="is_admin" ColumnName="is_admin" />
+                <ScalarProperty Name="user_code" ColumnName="user_code" />
+                <ScalarProperty Name="showit" ColumnName="showit" />
+                <ScalarProperty Name="user_pwd" ColumnName="user_pwd" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_profit">
+            <EntityTypeMapping TypeName="qstoreModel.tb_profit">
+              <MappingFragment StoreEntitySet="tb_profit">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="SheBaoGongJiJin" ColumnName="SheBaoGongJiJin" />
+                <ScalarProperty Name="MaoLi" ColumnName="MaoLi" />
+                <ScalarProperty Name="ChaoJiTuiJian" ColumnName="ChaoJiTuiJian" />
+                <ScalarProperty Name="DingZhiXiangFeiYong" ColumnName="DingZhiXiangFeiYong" />
+                <ScalarProperty Name="HaoCaiFei" ColumnName="HaoCaiFei" />
+                <ScalarProperty Name="CangChuFeiYuFaHuoFeiYong" ColumnName="CangChuFeiYuFaHuoFeiYong" />
+                <ScalarProperty Name="NutFangDiuQi" ColumnName="NutFangDiuQi" />
+                <ScalarProperty Name="EKOFaHuoShangPinChengBen" ColumnName="EKOFaHuoShangPinChengBen" />
+                <ScalarProperty Name="HongWeiWuLiuChengBen" ColumnName="HongWeiWuLiuChengBen" />
+                <ScalarProperty Name="XinRuiChengBen" ColumnName="XinRuiChengBen" />
+                <ScalarProperty Name="FeiDiLaChengBen" ColumnName="FeiDiLaChengBen" />
+                <ScalarProperty Name="ShangNiChengBen" ColumnName="ShangNiChengBen" />
+                <ScalarProperty Name="JinHuoChengBen" ColumnName="JinHuoChengBen" />
+                <ScalarProperty Name="CDianZhiTongChe" ColumnName="CDianZhiTongChe" />
+                <ScalarProperty Name="QiTaFeiYong" ColumnName="QiTaFeiYong" />
+                <ScalarProperty Name="ZuanZhanFei" ColumnName="ZuanZhanFei" />
+                <ScalarProperty Name="ZhiTongChe" ColumnName="ZhiTongChe" />
+                <ScalarProperty Name="CaiWuJiZhangFei" ColumnName="CaiWuJiZhangFei" />
+                <ScalarProperty Name="DaiFuFeiYong" ColumnName="DaiFuFeiYong" />
+                <ScalarProperty Name="QiTaZaFei" ColumnName="QiTaZaFei" />
+                <ScalarProperty Name="ShuiWuFeiYong" ColumnName="ShuiWuFeiYong" />
+                <ScalarProperty Name="FangWuZuJin" ColumnName="FangWuZuJin" />
+                <ScalarProperty Name="ShuiDianFeiYong" ColumnName="ShuiDianFeiYong" />
+                <ScalarProperty Name="BanGongYongPin" ColumnName="BanGongYongPin" />
+                <ScalarProperty Name="DaiYunYingFeiYong" ColumnName="DaiYunYingFeiYong" />
+                <ScalarProperty Name="SiJiFeiYong" ColumnName="SiJiFeiYong" />
+                <ScalarProperty Name="GongZi" ColumnName="GongZi" />
+                <ScalarProperty Name="YunCangChengBen1" ColumnName="YunCangChengBen1" />
+                <ScalarProperty Name="ChanPinChengBen1" ColumnName="ChanPinChengBen1" />
+                <ScalarProperty Name="YingXiaoChengBen1" ColumnName="YingXiaoChengBen1" />
+                <ScalarProperty Name="GuDingChengBen1" ColumnName="GuDingChengBen1" />
+                <ScalarProperty Name="RenLiChengBen1" ColumnName="RenLiChengBen1" />
+                <ScalarProperty Name="Sale" ColumnName="Sale" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+                <ScalarProperty Name="ProfitDate" ColumnName="ProfitDate" />
+                <ScalarProperty Name="StaffGid" ColumnName="StaffGid" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Gid" ColumnName="Gid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_fileinfo_company_stock_main">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_fileinfo_company_stock_main">
+              <MappingFragment StoreEntitySet="tb_yun_fileinfo_company_stock_main">
+                <ScalarProperty Name="AllProdSaleCost" ColumnName="AllProdSaleCost" />
+                <ScalarProperty Name="AllProdSaleQty" ColumnName="AllProdSaleQty" />
+                <ScalarProperty Name="AllProdQty" ColumnName="AllProdQty" />
+                <ScalarProperty Name="FileMD5" ColumnName="FileMD5" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Gid" ColumnName="Gid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yun_fileinfo_company_stock_record">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_fileinfo_company_stock_record">
+              <MappingFragment StoreEntitySet="tb_yun_fileinfo_company_stock_record">
+                <ScalarProperty Name="InOut" ColumnName="InOut" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="StaffGid" ColumnName="StaffGid" />
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
+                <ScalarProperty Name="Gid" ColumnName="Gid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_yun_fileinfo_sale_child">
             <EntityTypeMapping TypeName="qstoreModel.tb_yun_fileinfo_sale_child">
               <MappingFragment StoreEntitySet="tb_yun_fileinfo_sale_child">
@@ -421,9 +551,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tb_yun_fileinfo_company_stock">
-            <EntityTypeMapping TypeName="qstoreModel.tb_yun_fileinfo_company_stock">
-              <MappingFragment StoreEntitySet="tb_yun_fileinfo_company_stock">
+          <EntitySetMapping Name="tb_yun_fileinfo_company_stock_child">
+            <EntityTypeMapping TypeName="qstoreModel.tb_yun_fileinfo_company_stock_child">
+              <MappingFragment StoreEntitySet="tb_yun_fileinfo_company_stock_child">
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
                 <ScalarProperty Name="Qty" ColumnName="Qty" />
                 <ScalarProperty Name="StaffName" ColumnName="StaffName" />
@@ -433,86 +564,6 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ProdName" ColumnName="ProdName" />
                 <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
-                <ScalarProperty Name="Gid" ColumnName="Gid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_yun_fileinfo_company_stock_record">
-            <EntityTypeMapping TypeName="qstoreModel.tb_yun_fileinfo_company_stock_record">
-              <MappingFragment StoreEntitySet="tb_yun_fileinfo_company_stock_record">
-                <ScalarProperty Name="InOut" ColumnName="InOut" />
-                <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="Qty" ColumnName="Qty" />
-                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
-                <ScalarProperty Name="StaffGid" ColumnName="StaffGid" />
-                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
-                <ScalarProperty Name="Cost" ColumnName="Cost" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
-                <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
-                <ScalarProperty Name="Gid" ColumnName="Gid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_user">
-            <EntityTypeMapping TypeName="qstoreModel.tb_user">
-              <MappingFragment StoreEntitySet="tb_user">
-                <ScalarProperty Name="Gid" ColumnName="Gid" />
-                <ScalarProperty Name="regdate" ColumnName="regdate" />
-                <ScalarProperty Name="section" ColumnName="section" />
-                <ScalarProperty Name="comment" ColumnName="comment" />
-                <ScalarProperty Name="address" ColumnName="address" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="is_admin" ColumnName="is_admin" />
-                <ScalarProperty Name="user_code" ColumnName="user_code" />
-                <ScalarProperty Name="showit" ColumnName="showit" />
-                <ScalarProperty Name="user_pwd" ColumnName="user_pwd" />
-                <ScalarProperty Name="user_name" ColumnName="user_name" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_profit">
-            <EntityTypeMapping TypeName="qstoreModel.tb_profit">
-              <MappingFragment StoreEntitySet="tb_profit">
-                <ScalarProperty Name="SheBaoGongJiJin" ColumnName="SheBaoGongJiJin" />
-                <ScalarProperty Name="MaoLi" ColumnName="MaoLi" />
-                <ScalarProperty Name="ChaoJiTuiJian" ColumnName="ChaoJiTuiJian" />
-                <ScalarProperty Name="DingZhiXiangFeiYong" ColumnName="DingZhiXiangFeiYong" />
-                <ScalarProperty Name="HaoCaiFei" ColumnName="HaoCaiFei" />
-                <ScalarProperty Name="CangChuFeiYuFaHuoFeiYong" ColumnName="CangChuFeiYuFaHuoFeiYong" />
-                <ScalarProperty Name="NutFangDiuQi" ColumnName="NutFangDiuQi" />
-                <ScalarProperty Name="EKOFaHuoShangPinChengBen" ColumnName="EKOFaHuoShangPinChengBen" />
-                <ScalarProperty Name="HongWeiWuLiuChengBen" ColumnName="HongWeiWuLiuChengBen" />
-                <ScalarProperty Name="XinRuiChengBen" ColumnName="XinRuiChengBen" />
-                <ScalarProperty Name="FeiDiLaChengBen" ColumnName="FeiDiLaChengBen" />
-                <ScalarProperty Name="ShangNiChengBen" ColumnName="ShangNiChengBen" />
-                <ScalarProperty Name="JinHuoChengBen" ColumnName="JinHuoChengBen" />
-                <ScalarProperty Name="CDianZhiTongChe" ColumnName="CDianZhiTongChe" />
-                <ScalarProperty Name="QiTaFeiYong" ColumnName="QiTaFeiYong" />
-                <ScalarProperty Name="ZuanZhanFei" ColumnName="ZuanZhanFei" />
-                <ScalarProperty Name="ZhiTongChe" ColumnName="ZhiTongChe" />
-                <ScalarProperty Name="CaiWuJiZhangFei" ColumnName="CaiWuJiZhangFei" />
-                <ScalarProperty Name="DaiFuFeiYong" ColumnName="DaiFuFeiYong" />
-                <ScalarProperty Name="QiTaZaFei" ColumnName="QiTaZaFei" />
-                <ScalarProperty Name="ShuiWuFeiYong" ColumnName="ShuiWuFeiYong" />
-                <ScalarProperty Name="FangWuZuJin" ColumnName="FangWuZuJin" />
-                <ScalarProperty Name="ShuiDianFeiYong" ColumnName="ShuiDianFeiYong" />
-                <ScalarProperty Name="BanGongYongPin" ColumnName="BanGongYongPin" />
-                <ScalarProperty Name="DaiYunYingFeiYong" ColumnName="DaiYunYingFeiYong" />
-                <ScalarProperty Name="SiJiFeiYong" ColumnName="SiJiFeiYong" />
-                <ScalarProperty Name="GongZi" ColumnName="GongZi" />
-                <ScalarProperty Name="YunCangChengBen1" ColumnName="YunCangChengBen1" />
-                <ScalarProperty Name="ChanPinChengBen1" ColumnName="ChanPinChengBen1" />
-                <ScalarProperty Name="YingXiaoChengBen1" ColumnName="YingXiaoChengBen1" />
-                <ScalarProperty Name="GuDingChengBen1" ColumnName="GuDingChengBen1" />
-                <ScalarProperty Name="RenLiChengBen1" ColumnName="RenLiChengBen1" />
-                <ScalarProperty Name="Sale" ColumnName="Sale" />
-                <ScalarProperty Name="Profit" ColumnName="Profit" />
-                <ScalarProperty Name="ProfitDate" ColumnName="ProfitDate" />
-                <ScalarProperty Name="StaffGid" ColumnName="StaffGid" />
-                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
-                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
                 <ScalarProperty Name="Gid" ColumnName="Gid" />
               </MappingFragment>
             </EntityTypeMapping>

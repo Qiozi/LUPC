@@ -72,6 +72,14 @@ namespace YunStore
             if (currDate.Length == 4) // 年
             {
                 var items = _dbList.Where(me => me.ProfitDate.StartsWith(currDate));
+
+                var remark = string.Empty;
+                foreach (var item in items)
+                {
+                    remark += "(" + item.ProfitDate + ")\r\n" + item.Remark + "\r\n\r\n";
+                }
+                this.textBoxRemark.Text = remark;
+
                 var li1 = new ListViewItem("年份");
                 li1.SubItems.Add(currDate);
                 li1.SubItems.Add("纯利润");
@@ -198,6 +206,9 @@ namespace YunStore
             else// 月
             {
                 var item = _dbList.FirstOrDefault(me => me.ProfitDate.Equals(currDate));
+
+                this.textBoxRemark.Text = item.Remark;
+
                 var li1 = new ListViewItem("月份");
                 li1.SubItems.Add(item.ProfitDate);
                 li1.SubItems.Add("纯利润");
@@ -320,6 +331,7 @@ namespace YunStore
                 li21.SubItems.Add(Util.FormatPrice(item.DingZhiXiangFeiYong));
                 listView2.Items.Add(li21);
             }
+
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)

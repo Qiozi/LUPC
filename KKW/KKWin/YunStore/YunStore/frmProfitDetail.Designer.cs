@@ -40,6 +40,8 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxRemark = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -96,7 +98,7 @@
             this.listView2.Location = new System.Drawing.Point(316, 12);
             this.listView2.MultiSelect = false;
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(656, 737);
+            this.listView2.Size = new System.Drawing.Size(656, 593);
             this.listView2.SmallImageList = this.imageList1;
             this.listView2.TabIndex = 2;
             this.listView2.UseCompatibleStateImageBehavior = false;
@@ -122,15 +124,36 @@
             this.columnHeader7.Text = "";
             this.columnHeader7.Width = 180;
             // 
+            // textBoxRemark
+            // 
+            this.textBoxRemark.Location = new System.Drawing.Point(318, 623);
+            this.textBoxRemark.MaxLength = 500;
+            this.textBoxRemark.Multiline = true;
+            this.textBoxRemark.Name = "textBoxRemark";
+            this.textBoxRemark.Size = new System.Drawing.Size(654, 126);
+            this.textBoxRemark.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(316, 608);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "备注";
+            // 
             // frmProfitDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxRemark);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Name = "frmProfitDetail";
             this.Text = "查看利润";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,5 +169,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.TextBox textBoxRemark;
+        private System.Windows.Forms.Label label1;
     }
 }

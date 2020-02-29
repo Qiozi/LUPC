@@ -137,14 +137,14 @@ namespace YunStore
 
         private void 添加此商品到公司库存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems != null && listView1.SelectedItems.Count > 0)
-            {
-                var gid = Guid.Parse(this.listView1.SelectedItems[0].Tag.ToString());
+            //if (listView1.SelectedItems != null && listView1.SelectedItems.Count > 0)
+            //{
+            //    var gid = Guid.Parse(this.listView1.SelectedItems[0].Tag.ToString());
 
-                frmStockCopyToCompany frm = new frmStockCopyToCompany(gid);
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.ShowDialog();               
-            }
+            //    frmStockCopyToCompany frm = new frmStockCopyToCompany(gid);
+            //    frm.StartPosition = FormStartPosition.CenterScreen;
+            //    frm.ShowDialog();               
+            //}
 
         }
     }

@@ -191,6 +191,8 @@ namespace YunStore
                 this.numericUpDownChaoJiTuiJian.Value = query.ChaoJiTuiJian;
                 this.numericUpDownSheBaoGongJiJin.Value = query.SheBaoGongJiJin;
                 this.numericUpDownMaoLi.Value = query.MaoLi;
+
+                this.textBoxRemark.Text = query.Remark;
             }
         }
 
@@ -281,6 +283,7 @@ namespace YunStore
                 newModel.ChaoJiTuiJian = numericUpDownChaoJiTuiJian.Value;
                 newModel.MaoLi = numericUpDownMaoLi.Value;
                 newModel.SheBaoGongJiJin = numericUpDownSheBaoGongJiJin.Value;
+                newModel.Remark = this.textBoxRemark.Text.Trim();
 
                 if (Guid.Empty == _currGid)
                     _context.tb_profit.Add(newModel);

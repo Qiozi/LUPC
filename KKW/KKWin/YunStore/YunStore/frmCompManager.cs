@@ -14,6 +14,7 @@ namespace YunStore
     public partial class frmCompManager : Form
     {
         DB.qstoreEntities _context = new DB.qstoreEntities();
+        Guid _parentGid = Guid.Empty;
 
         public frmCompManager()
         {
@@ -23,16 +24,27 @@ namespace YunStore
 
         private void FrmCompManager_Shown(object sender, EventArgs e)
         {
-            BindList1("");
-            BindList2("");
+            var queryMain = _context
+                .tb_yun_fileinfo_company_stock_main
+                .OrderByDescending(me => me.Regdate)
+                .FirstOrDefault();
+
+            if (queryMain != null)
+            {
+                _parentGid = queryMain.Gid;
+
+                BindList1("");
+                BindList2("");
+            }
         }
 
         void BindList1(string keyword = "")
         {
-            var query = _context.tb_yun_fileinfo_company_stock
+            var query = _context.tb_yun_fileinfo_company_stock_child
                 .Where(me =>
+                    me.ParentId.Equals(_parentGid) && (
                     me.ProdCode.Contains(keyword) ||
-                    me.ProdName.Contains(keyword))
+                    me.ProdName.Contains(keyword)))
                     .OrderBy(me => me.ProdCode)
                     .ToList();
 
@@ -67,12 +79,12 @@ namespace YunStore
                 ? _context
                     .tb_yun_fileinfo_company_stock_record
                         .Where(me => true)
-                        .OrderBy(me => me.ProdCode)
+                        .OrderByDescending(me => me.Regdate)
                         .ToList()
                 : _context
                     .tb_yun_fileinfo_company_stock_record
                         .Where(me => me.ProdCode.Equals(keyword))
-                        .OrderBy(me => me.ProdCode)
+                        .OrderByDescending(me => me.Regdate)
                         .ToList();
 
             if (inStock)
@@ -166,21 +178,21 @@ namespace YunStore
 
         private void 出库ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.listView1.SelectedItems != null &&
-              this.listView1.SelectedItems.Count > 0)
-            {
-                Guid gid = Guid.Parse(this.listView1.SelectedItems[0].Tag.ToString());
-                frmCompManagerOut frm = new frmCompManagerOut(gid);
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.ShowDialog();
+            //if (this.listView1.SelectedItems != null &&
+            //  this.listView1.SelectedItems.Count > 0)
+            //{
+            //    Guid gid = Guid.Parse(this.listView1.SelectedItems[0].Tag.ToString());
+            //    frmCompManagerOut frm = new frmCompManagerOut(gid);
+            //    frm.StartPosition = FormStartPosition.CenterScreen;
+            //    frm.ShowDialog();
 
 
-                BindList2(this.textBox2Keyword.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("请选择需要出库的商品.");
-            }
+            //    BindList2(this.textBox2Keyword.Text.Trim());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("请选择需要出库的商品.");
+            //}
         }
 
         private void buttonSearch1_Click(object sender, EventArgs e)

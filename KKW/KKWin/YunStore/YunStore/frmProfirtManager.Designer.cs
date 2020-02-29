@@ -55,6 +55,8 @@
             this.numericUpDownSale = new System.Windows.Forms.NumericUpDown();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownSheBaoGongJiJin = new System.Windows.Forms.NumericUpDown();
+            this.button35 = new System.Windows.Forms.Button();
             this.numericUpDownDaiYunYingFeiYong = new System.Windows.Forms.NumericUpDown();
             this.button11 = new System.Windows.Forms.Button();
             this.numericUpDownSiJiFeiYong = new System.Windows.Forms.NumericUpDown();
@@ -112,8 +114,8 @@
             this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.numericUpDownSheBaoGongJiJin = new System.Windows.Forms.NumericUpDown();
+            this.textBoxRemark = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaoLi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYunCangChengBen1)).BeginInit();
@@ -123,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGuDingChengBen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSheBaoGongJiJin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDaiYunYingFeiYong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSiJiFeiYong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGongZi)).BeginInit();
@@ -152,7 +155,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDingZhiXiangFeiYong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHaoCaiFei)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCangChuFeiYuFaHuoFeiYong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSheBaoGongJiJin)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -167,7 +169,7 @@
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(298, 780);
+            this.listView1.Size = new System.Drawing.Size(298, 495);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -226,7 +228,7 @@
             this.groupBox1.Controls.Add(this.numericUpDownSale);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(316, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(656, 126);
@@ -454,6 +456,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "人力成本";
             // 
+            // numericUpDownSheBaoGongJiJin
+            // 
+            this.numericUpDownSheBaoGongJiJin.DecimalPlaces = 2;
+            this.numericUpDownSheBaoGongJiJin.Location = new System.Drawing.Point(115, 65);
+            this.numericUpDownSheBaoGongJiJin.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownSheBaoGongJiJin.Name = "numericUpDownSheBaoGongJiJin";
+            this.numericUpDownSheBaoGongJiJin.Size = new System.Drawing.Size(102, 21);
+            this.numericUpDownSheBaoGongJiJin.TabIndex = 13;
+            // 
+            // button35
+            // 
+            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button35.Location = new System.Drawing.Point(16, 61);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(93, 24);
+            this.button35.TabIndex = 12;
+            this.button35.TabStop = false;
+            this.button35.Text = "社保，公积金";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
             // numericUpDownDaiYunYingFeiYong
             // 
             this.numericUpDownDaiYunYingFeiYong.DecimalPlaces = 2;
@@ -464,7 +490,7 @@
             0,
             0});
             this.numericUpDownDaiYunYingFeiYong.Name = "numericUpDownDaiYunYingFeiYong";
-            this.numericUpDownDaiYunYingFeiYong.Size = new System.Drawing.Size(101, 20);
+            this.numericUpDownDaiYunYingFeiYong.Size = new System.Drawing.Size(101, 21);
             this.numericUpDownDaiYunYingFeiYong.TabIndex = 11;
             this.numericUpDownDaiYunYingFeiYong.Visible = false;
             this.numericUpDownDaiYunYingFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownDaiYunYingFeiYong_ValueChanged);
@@ -490,7 +516,7 @@
             0,
             0});
             this.numericUpDownSiJiFeiYong.Name = "numericUpDownSiJiFeiYong";
-            this.numericUpDownSiJiFeiYong.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownSiJiFeiYong.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownSiJiFeiYong.TabIndex = 7;
             this.numericUpDownSiJiFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownSiJiFeiYong_ValueChanged);
             // 
@@ -516,7 +542,7 @@
             0,
             0});
             this.numericUpDownGongZi.Name = "numericUpDownGongZi";
-            this.numericUpDownGongZi.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownGongZi.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownGongZi.TabIndex = 5;
             this.numericUpDownGongZi.ValueChanged += new System.EventHandler(this.numericUpDownGongZi_ValueChanged);
             // 
@@ -564,7 +590,7 @@
             0,
             0});
             this.numericUpDownCaiWuJiZhangFei.Name = "numericUpDownCaiWuJiZhangFei";
-            this.numericUpDownCaiWuJiZhangFei.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownCaiWuJiZhangFei.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownCaiWuJiZhangFei.TabIndex = 19;
             this.numericUpDownCaiWuJiZhangFei.ValueChanged += new System.EventHandler(this.numericUpDownCaiWuJiZhangFei_ValueChanged);
             // 
@@ -589,7 +615,7 @@
             0,
             0});
             this.numericUpDownDaiFuFeiYong.Name = "numericUpDownDaiFuFeiYong";
-            this.numericUpDownDaiFuFeiYong.Size = new System.Drawing.Size(101, 20);
+            this.numericUpDownDaiFuFeiYong.Size = new System.Drawing.Size(101, 21);
             this.numericUpDownDaiFuFeiYong.TabIndex = 17;
             this.numericUpDownDaiFuFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownDaiFuFeiYong_ValueChanged);
             // 
@@ -614,7 +640,7 @@
             0,
             0});
             this.numericUpDownQiTaZaFei.Name = "numericUpDownQiTaZaFei";
-            this.numericUpDownQiTaZaFei.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownQiTaZaFei.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownQiTaZaFei.TabIndex = 15;
             this.numericUpDownQiTaZaFei.ValueChanged += new System.EventHandler(this.numericUpDownQiTaZaFei_ValueChanged);
             // 
@@ -639,7 +665,7 @@
             0,
             0});
             this.numericUpDownShuiWuFeiYong.Name = "numericUpDownShuiWuFeiYong";
-            this.numericUpDownShuiWuFeiYong.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownShuiWuFeiYong.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownShuiWuFeiYong.TabIndex = 13;
             this.numericUpDownShuiWuFeiYong.Visible = false;
             this.numericUpDownShuiWuFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownShuiWuFeiYong_ValueChanged);
@@ -666,7 +692,7 @@
             0,
             0});
             this.numericUpDownFangWuZuJin.Name = "numericUpDownFangWuZuJin";
-            this.numericUpDownFangWuZuJin.Size = new System.Drawing.Size(101, 20);
+            this.numericUpDownFangWuZuJin.Size = new System.Drawing.Size(101, 21);
             this.numericUpDownFangWuZuJin.TabIndex = 11;
             this.numericUpDownFangWuZuJin.ValueChanged += new System.EventHandler(this.numericUpDownFangWuZuJin_ValueChanged);
             // 
@@ -691,7 +717,7 @@
             0,
             0});
             this.numericUpDownShuiDianFeiYong.Name = "numericUpDownShuiDianFeiYong";
-            this.numericUpDownShuiDianFeiYong.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownShuiDianFeiYong.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownShuiDianFeiYong.TabIndex = 7;
             this.numericUpDownShuiDianFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownShuiDianFeiYong_ValueChanged);
             // 
@@ -716,7 +742,7 @@
             0,
             0});
             this.numericUpDownBanGongYongPin.Name = "numericUpDownBanGongYongPin";
-            this.numericUpDownBanGongYongPin.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownBanGongYongPin.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownBanGongYongPin.TabIndex = 5;
             this.numericUpDownBanGongYongPin.ValueChanged += new System.EventHandler(this.numericUpDownBanGongYongPin_ValueChanged);
             // 
@@ -760,7 +786,7 @@
             0,
             0});
             this.numericUpDownChaoJiTuiJian.Name = "numericUpDownChaoJiTuiJian";
-            this.numericUpDownChaoJiTuiJian.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownChaoJiTuiJian.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownChaoJiTuiJian.TabIndex = 15;
             this.numericUpDownChaoJiTuiJian.ValueChanged += new System.EventHandler(this.numericUpDownChaoJiTuiJian_ValueChanged);
             // 
@@ -785,7 +811,7 @@
             0,
             0});
             this.numericUpDownCDianZhiTongChe.Name = "numericUpDownCDianZhiTongChe";
-            this.numericUpDownCDianZhiTongChe.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownCDianZhiTongChe.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownCDianZhiTongChe.TabIndex = 13;
             this.numericUpDownCDianZhiTongChe.ValueChanged += new System.EventHandler(this.numericUpDownCDianZhiTongChe_ValueChanged);
             // 
@@ -810,7 +836,7 @@
             0,
             0});
             this.numericUpDownQiTaFeiYong.Name = "numericUpDownQiTaFeiYong";
-            this.numericUpDownQiTaFeiYong.Size = new System.Drawing.Size(101, 20);
+            this.numericUpDownQiTaFeiYong.Size = new System.Drawing.Size(101, 21);
             this.numericUpDownQiTaFeiYong.TabIndex = 11;
             this.numericUpDownQiTaFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownQiTaFeiYong_ValueChanged);
             // 
@@ -835,7 +861,7 @@
             0,
             0});
             this.numericUpDownZuanZhanFei.Name = "numericUpDownZuanZhanFei";
-            this.numericUpDownZuanZhanFei.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownZuanZhanFei.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownZuanZhanFei.TabIndex = 7;
             this.numericUpDownZuanZhanFei.ValueChanged += new System.EventHandler(this.numericUpDownZuanZhanFei_ValueChanged);
             // 
@@ -860,7 +886,7 @@
             0,
             0});
             this.numericUpDownZhiTongChe.Name = "numericUpDownZhiTongChe";
-            this.numericUpDownZhiTongChe.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownZhiTongChe.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownZhiTongChe.TabIndex = 5;
             this.numericUpDownZhiTongChe.ValueChanged += new System.EventHandler(this.numericUpDownZhiTongChe_ValueChanged);
             // 
@@ -908,7 +934,7 @@
             0,
             0});
             this.numericUpDownNutFangDiuQi.Name = "numericUpDownNutFangDiuQi";
-            this.numericUpDownNutFangDiuQi.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownNutFangDiuQi.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownNutFangDiuQi.TabIndex = 19;
             this.numericUpDownNutFangDiuQi.ValueChanged += new System.EventHandler(this.numericUpDownNutFangDiuQi_ValueChanged);
             // 
@@ -933,7 +959,7 @@
             0,
             0});
             this.numericUpDownEKOFaHuoShangPinChengBen.Name = "numericUpDownEKOFaHuoShangPinChengBen";
-            this.numericUpDownEKOFaHuoShangPinChengBen.Size = new System.Drawing.Size(101, 20);
+            this.numericUpDownEKOFaHuoShangPinChengBen.Size = new System.Drawing.Size(101, 21);
             this.numericUpDownEKOFaHuoShangPinChengBen.TabIndex = 17;
             this.numericUpDownEKOFaHuoShangPinChengBen.ValueChanged += new System.EventHandler(this.numericUpDownEKOFaHuoShangPinChengBen_ValueChanged);
             // 
@@ -958,7 +984,7 @@
             0,
             0});
             this.numericUpDownHongWeiWuLiuChengBen.Name = "numericUpDownHongWeiWuLiuChengBen";
-            this.numericUpDownHongWeiWuLiuChengBen.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownHongWeiWuLiuChengBen.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownHongWeiWuLiuChengBen.TabIndex = 15;
             this.numericUpDownHongWeiWuLiuChengBen.ValueChanged += new System.EventHandler(this.numericUpDownHongWeiWuLiuChengBen_ValueChanged);
             // 
@@ -983,7 +1009,7 @@
             0,
             0});
             this.numericUpDownXinRuiChengBen.Name = "numericUpDownXinRuiChengBen";
-            this.numericUpDownXinRuiChengBen.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownXinRuiChengBen.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownXinRuiChengBen.TabIndex = 13;
             this.numericUpDownXinRuiChengBen.ValueChanged += new System.EventHandler(this.numericUpDownXinRuiChengBen_ValueChanged);
             // 
@@ -1008,7 +1034,7 @@
             0,
             0});
             this.numericUpDownFeiDiLaChengBen.Name = "numericUpDownFeiDiLaChengBen";
-            this.numericUpDownFeiDiLaChengBen.Size = new System.Drawing.Size(101, 20);
+            this.numericUpDownFeiDiLaChengBen.Size = new System.Drawing.Size(101, 21);
             this.numericUpDownFeiDiLaChengBen.TabIndex = 11;
             this.numericUpDownFeiDiLaChengBen.ValueChanged += new System.EventHandler(this.numericUpDownFeiDiLaChengBen_ValueChanged);
             // 
@@ -1033,7 +1059,7 @@
             0,
             0});
             this.numericUpDownShangNiChengBen.Name = "numericUpDownShangNiChengBen";
-            this.numericUpDownShangNiChengBen.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownShangNiChengBen.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownShangNiChengBen.TabIndex = 7;
             this.numericUpDownShangNiChengBen.ValueChanged += new System.EventHandler(this.numericUpDownShangNiChengBen_ValueChanged);
             // 
@@ -1058,7 +1084,7 @@
             0,
             0});
             this.numericUpDownJinHuoChengBen.Name = "numericUpDownJinHuoChengBen";
-            this.numericUpDownJinHuoChengBen.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownJinHuoChengBen.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownJinHuoChengBen.TabIndex = 5;
             this.numericUpDownJinHuoChengBen.ValueChanged += new System.EventHandler(this.numericUpDownJinHuoChengBen_ValueChanged);
             // 
@@ -1098,7 +1124,7 @@
             0,
             0});
             this.numericUpDownDingZhiXiangFeiYong.Name = "numericUpDownDingZhiXiangFeiYong";
-            this.numericUpDownDingZhiXiangFeiYong.Size = new System.Drawing.Size(84, 20);
+            this.numericUpDownDingZhiXiangFeiYong.Size = new System.Drawing.Size(84, 21);
             this.numericUpDownDingZhiXiangFeiYong.TabIndex = 11;
             this.numericUpDownDingZhiXiangFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownDingZhiXiangFeiYong_ValueChanged);
             // 
@@ -1123,7 +1149,7 @@
             0,
             0});
             this.numericUpDownHaoCaiFei.Name = "numericUpDownHaoCaiFei";
-            this.numericUpDownHaoCaiFei.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownHaoCaiFei.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownHaoCaiFei.TabIndex = 7;
             this.numericUpDownHaoCaiFei.ValueChanged += new System.EventHandler(this.numericUpDownHaoCaiFei_ValueChanged);
             // 
@@ -1148,7 +1174,7 @@
             0,
             0});
             this.numericUpDownCangChuFeiYuFaHuoFeiYong.Name = "numericUpDownCangChuFeiYuFaHuoFeiYong";
-            this.numericUpDownCangChuFeiYuFaHuoFeiYong.Size = new System.Drawing.Size(112, 20);
+            this.numericUpDownCangChuFeiYuFaHuoFeiYong.Size = new System.Drawing.Size(112, 21);
             this.numericUpDownCangChuFeiYuFaHuoFeiYong.TabIndex = 5;
             this.numericUpDownCangChuFeiYuFaHuoFeiYong.ValueChanged += new System.EventHandler(this.numericUpDownCangChuFeiYuFaHuoFeiYong_ValueChanged);
             // 
@@ -1193,34 +1219,30 @@
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // button35
+            // textBoxRemark
             // 
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button35.Location = new System.Drawing.Point(16, 61);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(93, 24);
-            this.button35.TabIndex = 12;
-            this.button35.TabStop = false;
-            this.button35.Text = "社保，公积金";
-            this.button35.UseVisualStyleBackColor = true;
+            this.textBoxRemark.Location = new System.Drawing.Point(12, 543);
+            this.textBoxRemark.MaxLength = 500;
+            this.textBoxRemark.Multiline = true;
+            this.textBoxRemark.Name = "textBoxRemark";
+            this.textBoxRemark.Size = new System.Drawing.Size(298, 182);
+            this.textBoxRemark.TabIndex = 25;
             // 
-            // numericUpDownSheBaoGongJiJin
+            // label1
             // 
-            this.numericUpDownSheBaoGongJiJin.DecimalPlaces = 2;
-            this.numericUpDownSheBaoGongJiJin.Location = new System.Drawing.Point(115, 65);
-            this.numericUpDownSheBaoGongJiJin.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numericUpDownSheBaoGongJiJin.Name = "numericUpDownSheBaoGongJiJin";
-            this.numericUpDownSheBaoGongJiJin.Size = new System.Drawing.Size(102, 20);
-            this.numericUpDownSheBaoGongJiJin.TabIndex = 13;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 526);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "备注";
             // 
             // frmProfirtManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(984, 804);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxRemark);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.buttonCreate);
@@ -1245,6 +1267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGuDingChengBen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSheBaoGongJiJin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDaiYunYingFeiYong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSiJiFeiYong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGongZi)).EndInit();
@@ -1274,8 +1297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDingZhiXiangFeiYong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHaoCaiFei)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCangChuFeiYuFaHuoFeiYong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSheBaoGongJiJin)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1365,5 +1388,7 @@
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.NumericUpDown numericUpDownSheBaoGongJiJin;
+        private System.Windows.Forms.TextBox textBoxRemark;
+        private System.Windows.Forms.Label label1;
     }
 }

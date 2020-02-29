@@ -38,74 +38,74 @@ namespace YunStore
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("您确认添加？", "询问", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                using (var tran = _context.Database.BeginTransaction())
-                {
-                    try
-                    {
-                        var prod = _context
-                          .tb_yun_fileinfo_stock_child
-                          .Single(me => me.Gid.Equals(_currProdGid));
+            //if (MessageBox.Show("您确认添加？", "询问", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    using (var tran = _context.Database.BeginTransaction())
+            //    {
+            //        try
+            //        {
+            //            var prod = _context
+            //              .tb_yun_fileinfo_stock_child
+            //              .Single(me => me.Gid.Equals(_currProdGid));
 
-                        var prodStockMain = _context
-                            .tb_yun_fileinfo_stock_main
-                            .Single(me => me.Gid.Equals(prod.ParentId));
+            //            var prodStockMain = _context
+            //                .tb_yun_fileinfo_stock_main
+            //                .Single(me => me.Gid.Equals(prod.ParentId));
 
-                        var newModel = new DB.tb_yun_fileinfo_company_stock_record
-                        {
-                            Cost = 0M,
-                            ProdName = prod.ProdName,
-                            Gid = Guid.NewGuid(),
-                            InOut = "IN",
-                            ProdCode = prod.ProdCode,
-                            Price = 0M,
-                            Qty = (int)this.numericUpDown1.Value,
-                            Regdate = new Util().GetCurrDateTime,
-                            Remark = "从 " + prodStockMain.FileName + "(" + Util.FormatDateTime(prodStockMain.Regdate) + ") 库存记录添加",
-                            StaffGid = BLL.Config.StaffGid,
-                            StaffName = BLL.Config.StaffName
-                        };
-                        _context.tb_yun_fileinfo_company_stock_record.Add(newModel);
+            //            var newModel = new DB.tb_yun_fileinfo_company_stock_record
+            //            {
+            //                Cost = 0M,
+            //                ProdName = prod.ProdName,
+            //                Gid = Guid.NewGuid(),
+            //                InOut = "IN",
+            //                ProdCode = prod.ProdCode,
+            //                Price = 0M,
+            //                Qty = (int)this.numericUpDown1.Value,
+            //                Regdate = new Util().GetCurrDateTime,
+            //                Remark = "从 " + prodStockMain.FileName + "(" + Util.FormatDateTime(prodStockMain.Regdate) + ") 库存记录添加",
+            //                StaffGid = BLL.Config.StaffGid,
+            //                StaffName = BLL.Config.StaffName
+            //            };
+            //            _context.tb_yun_fileinfo_company_stock_record.Add(newModel);
 
-                        var existProd = _context
-                            .tb_yun_fileinfo_company_stock
-                            .SingleOrDefault(me => me.ProdCode.Equals(prod.ProdCode));
-                        if (existProd == null)
-                        {
-                            existProd = new DB.tb_yun_fileinfo_company_stock
-                            {
-                                Gid = Guid.NewGuid(),
-                                Cost = 0M,
-                                Price = 0M,
-                                ProdCode = prod.ProdCode,
-                                ProdName = prod.ProdName,
-                                Qty = (int)this.numericUpDown1.Value,
-                                Regdate = new Util().GetCurrDateTime,
-                                Remark = "从 " + prodStockMain.FileName + "(" + Util.FormatDateTime(prodStockMain.Regdate) + ") 库存记录添加",
-                                StaffGid = BLL.Config.StaffGid,
-                                StaffName = BLL.Config.StaffName
-                            };
-                            _context.tb_yun_fileinfo_company_stock.Add(existProd);
-                        }
-                        else
-                        {
-                            existProd.Qty += (int)this.numericUpDown1.Value;
-                        }
-                        _context.SaveChanges();
-                        tran.Commit();
-                        MessageBox.Show("库存已添加.");
+            //            var existProd = _context
+            //                .tb_yun_fileinfo_company_stock
+            //                .SingleOrDefault(me => me.ProdCode.Equals(prod.ProdCode));
+            //            if (existProd == null)
+            //            {
+            //                existProd = new DB.tb_yun_fileinfo_company_stock
+            //                {
+            //                    Gid = Guid.NewGuid(),
+            //                    Cost = 0M,
+            //                    Price = 0M,
+            //                    ProdCode = prod.ProdCode,
+            //                    ProdName = prod.ProdName,
+            //                    Qty = (int)this.numericUpDown1.Value,
+            //                    Regdate = new Util().GetCurrDateTime,
+            //                    Remark = "从 " + prodStockMain.FileName + "(" + Util.FormatDateTime(prodStockMain.Regdate) + ") 库存记录添加",
+            //                    StaffGid = BLL.Config.StaffGid,
+            //                    StaffName = BLL.Config.StaffName
+            //                };
+            //                _context.tb_yun_fileinfo_company_stock.Add(existProd);
+            //            }
+            //            else
+            //            {
+            //                existProd.Qty += (int)this.numericUpDown1.Value;
+            //            }
+            //            _context.SaveChanges();
+            //            tran.Commit();
+            //            MessageBox.Show("库存已添加.");
 
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        tran.Rollback();
-                        MessageBox.
-                            Show(ex.Message);
-                    }
-                }
-            }
+            //            this.Close();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            tran.Rollback();
+            //            MessageBox.
+            //                Show(ex.Message);
+            //        }
+            //    }
+            //}
         }
     }
 }

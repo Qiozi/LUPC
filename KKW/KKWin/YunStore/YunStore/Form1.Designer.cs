@@ -41,6 +41,7 @@
             this.buttonCompWarehouse = new System.Windows.Forms.Button();
             this.buttonReadProfit = new System.Windows.Forms.Button();
             this.buttonProfitStat = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonProfirt
@@ -79,7 +80,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 37);
             this.button3.TabIndex = 3;
-            this.button3.Text = "上传秒仓库存历史";
+            this.button3.Text = "秒仓库存历史";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -89,7 +90,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 37);
             this.button4.TabIndex = 4;
-            this.button4.Text = "上传秒仓销售历史";
+            this.button4.Text = "秒仓销售历史";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -132,7 +133,7 @@
             // 
             // buttonCompWarehouse
             // 
-            this.buttonCompWarehouse.Location = new System.Drawing.Point(559, 49);
+            this.buttonCompWarehouse.Location = new System.Drawing.Point(559, 92);
             this.buttonCompWarehouse.Name = "buttonCompWarehouse";
             this.buttonCompWarehouse.Size = new System.Drawing.Size(164, 40);
             this.buttonCompWarehouse.TabIndex = 6;
@@ -160,10 +161,21 @@
             this.buttonProfitStat.UseVisualStyleBackColor = true;
             this.buttonProfitStat.Click += new System.EventHandler(this.buttonProfitStat_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(559, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 40);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "上传公司仓库";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(761, 475);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonProfitStat);
             this.Controls.Add(this.buttonReadProfit);
             this.Controls.Add(this.buttonCompWarehouse);
@@ -197,6 +209,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button buttonReadProfit;
         private System.Windows.Forms.Button buttonProfitStat;
+        private System.Windows.Forms.Button button1;
     }
 }
 

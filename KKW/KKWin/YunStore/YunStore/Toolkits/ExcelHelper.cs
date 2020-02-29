@@ -447,7 +447,7 @@ namespace YunStore.Toolkits
                             dt.Columns.Add(new DataColumn(obj.ToString()));
                     }
                     //数据  
-                    for (int i = sheet.FirstRowNum + 1; i < sheet.LastRowNum; i++)
+                    for (int i = sheet.FirstRowNum + 1; i <= sheet.LastRowNum; i++)
                     {
                         DataRow dr = dt.NewRow();
                         bool hasValue = false;

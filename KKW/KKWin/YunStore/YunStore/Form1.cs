@@ -59,9 +59,16 @@ namespace YunStore
         void BindInfo()
         {
             List<Model.Stat.HomeStat> homeInfo = new List<Model.Stat.HomeStat>();
+            var queryMain = _context.tb_yun_fileinfo_company_stock_main
+                .OrderByDescending(me => me.Regdate)
+                .FirstOrDefault();
+            if (queryMain == null)
+            {
+                MessageBox.Show("无数据.");
+                return;
+            }
 
-
-            var query1 = _context.tb_yun_fileinfo_company_stock.ToList();
+            var query1 = _context.tb_yun_fileinfo_company_stock_child.Where(me => me.ParentId.Equals(queryMain.Gid)).ToList();
 
             homeInfo.Add(new Model.Stat.HomeStat
             {
@@ -102,59 +109,141 @@ namespace YunStore
 
         private void buttonUpStock_Click(object sender, EventArgs e)
         {
-            frmStockList frm = new frmStockList();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmStockList"];
+            if (f == null)
+            {
+                frmStockList frm = new frmStockList();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
 
+            }
+            else
+            {
+                f.Focus();
+            }
         }
+
 
         private void buttonUpSaleInfo_Click(object sender, EventArgs e)
         {
-            frmUpSaleInfo frm = new frmUpSaleInfo();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmUpSaleInfo"];
+            if (f == null)
+            {
+                frmUpSaleInfo frm = new frmUpSaleInfo();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmStockHistory frm = new frmStockHistory();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmStockHistory"];
+            if (f == null)
+            {
+                frmStockHistory frm = new frmStockHistory();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmUpSaleInfoHistory frm = new frmUpSaleInfoHistory();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmUpSaleInfoHistory"];
+            if (f == null)
+            {
+                frmUpSaleInfoHistory frm = new frmUpSaleInfoHistory();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
 
         private void buttonProfirt_Click(object sender, EventArgs e)
         {
-            frmProfirtManager frm = new frmProfirtManager();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmProfirtManager"];
+            if (f == null)
+            {
+                frmProfirtManager frm = new frmProfirtManager();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
 
         private void buttonReadProfit_Click(object sender, EventArgs e)
         {
-            frmProfitDetail frm = new frmProfitDetail();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmProfitDetail"];
+            if (f == null)
+            {
+                frmProfitDetail frm = new frmProfitDetail();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
 
         private void buttonCompWarehouse_Click(object sender, EventArgs e)
         {
-            frmCompManager frm = new frmCompManager();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            var f = Application.OpenForms["frmCompManager"];
+            if (f == null)
+            {
+                frmCompManager frm = new frmCompManager();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
 
         private void buttonProfitStat_Click(object sender, EventArgs e)
         {
-            frmProfitStat frm = new frmProfitStat();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();            
+            var f = Application.OpenForms["frmProfitStat"];
+            if (f == null)
+            {
+                frmProfitStat frm = new frmProfitStat();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms["frmUpCompInfo"];
+            if (f == null)
+            {
+                frmUpCompInfo frm = new frmUpCompInfo();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                f.Focus();
+            }
         }
     }
 }

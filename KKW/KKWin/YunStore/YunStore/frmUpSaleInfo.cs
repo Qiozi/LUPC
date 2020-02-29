@@ -197,20 +197,20 @@ namespace YunStore
                     _context.tb_yun_fileinfo_sale_child.AddRange(_dbList);
 
                     // 公司价格
-                    var query = _context.tb_yun_fileinfo_company_stock
-                        .Where(me => me.Cost.Equals(0M))
-                        .ToList();
-                    for (var i = 0; i < query.Count; i++)
-                    {
-                        var code = query[i].ProdCode;
-                        var queryPrice = _dbList
-                            .FirstOrDefault(me => me.ProdCode.Equals(code));
-                        if (queryPrice != null)
-                        {
-                            query[i].Cost = queryPrice.Cost;
-                            query[i].Price = queryPrice.Price;
-                        }
-                    }
+                    //var query = _context.tb_yun_fileinfo_company_stock
+                    //    .Where(me => me.Cost.Equals(0M))
+                    //    .ToList();
+                    //for (var i = 0; i < query.Count; i++)
+                    //{
+                    //    var code = query[i].ProdCode;
+                    //    var queryPrice = _dbList
+                    //        .FirstOrDefault(me => me.ProdCode.Equals(code));
+                    //    if (queryPrice != null)
+                    //    {
+                    //        query[i].Cost = queryPrice.Cost;
+                    //        query[i].Price = queryPrice.Price;
+                    //    }
+                    //}
 
                     _context.SaveChanges();
                     tran.Commit();
