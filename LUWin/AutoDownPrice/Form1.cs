@@ -202,6 +202,14 @@ namespace AutoDownPrice
                         _ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
                 }
             }
+            else
+            {
+                // 删除正式文件
+                File.Delete(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
+                // 更新正式文件
+                File.Copy(_ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename,
+                    _ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
+            }
             #endregion
 
             #region Synnex
