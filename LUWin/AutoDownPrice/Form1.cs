@@ -100,6 +100,17 @@ namespace AutoDownPrice
             Application.Exit();
         }
 
+        void CopyTOBak(string filename, string oldFilename)
+        {
+            var path = Path.Combine(SettingsInfo.tmpSavePath, "bak");
+            if (!System.IO.Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            var newFilename = path.TrimEnd('\\') + "\\" + DateTime.Now.ToString("yyyyMMddHH") + "_" + filename;
+            File.Copy(oldFilename, newFilename);
+        }
 
         void Download()
         {
@@ -123,6 +134,7 @@ namespace AutoDownPrice
                                 File.Delete(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
                             }
                             // 备分正式文件
+                            CopyTOBak(_ftpInfo.Dandh.SaveFilename, _ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
                             File.Move(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename,
                                 _ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
                         }
@@ -173,6 +185,7 @@ namespace AutoDownPrice
                                 File.Delete(_ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename);
                             }
                             // 备分正式文件
+                            CopyTOBak(_ftpInfo.ASI.SaveFilename, _ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
                             File.Move(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename,
                                 _ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename);
                         }
@@ -227,6 +240,7 @@ namespace AutoDownPrice
                                 File.Delete(_ftpInfo.Synnex.SavePath + "\\Bak" + _ftpInfo.Synnex.SaveFilename);
                             }
                             // 备分正式文件
+                            CopyTOBak(_ftpInfo.Synnex.SaveFilename, _ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
                             File.Move(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename,
                                 _ftpInfo.Synnex.SavePath + "\\Bak" + _ftpInfo.Synnex.SaveFilename);
                         }

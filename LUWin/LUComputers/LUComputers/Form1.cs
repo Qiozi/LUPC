@@ -12,7 +12,7 @@ using System.Linq;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using LUComputers.DBProvider;
-
+using NPOI.XSSF.UserModel;
 
 namespace LUComputers
 {
@@ -709,7 +709,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
         {
             try
             {
-                string filepath = cost_file_path + "\\D2A.xls";
+                string filepath = cost_file_path + "\\D2A.xlsx";
                 if (File.Exists(filepath))
                 {
                     List<D2aModel> list = ToDT(filepath);
@@ -744,8 +744,14 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             List<D2aModel> list = new List<D2aModel>();
             FileStream sr = new FileStream(filename, FileMode.Open, FileAccess.Read);
             //根据路径通过已存在的excel来创建HSSFWorkbook，即整个excel文档
-            HSSFWorkbook workbook = new HSSFWorkbook(sr);
+            IWorkbook workbook;// 
 
+            if (filename.IndexOf(".xlsx") > 0) // 2007版本
+                workbook = new XSSFWorkbook(sr);
+            else if (filename.IndexOf(".xls") > 0) // 2003版本
+                workbook = new HSSFWorkbook(sr);
+            else
+                workbook = new HSSFWorkbook(sr);
             //获取excel的第一个sheet
             ISheet sheet = workbook.GetSheet("PriceList");
 
@@ -1559,7 +1565,7 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
                     }
                     break;
 
-                case "D2A.xls":
+                case "D2A.xlsx":
                     fi = new FileInfo(e.FullPath);
                     if (fi.Length == 0) return;
                     Thread.Sleep(3000);
@@ -1885,7 +1891,7 @@ where table_schema='ltd_info' and table_name like '{0}%' order by table_name des
         {
             string filename = "";
             if (RunASIDandhSynnex)
-                filename = cost_file_path + "\\d2a.xls";
+                filename = cost_file_path + "\\d2a.xlsx";
             ltdD2aReadFile f = new ltdD2aReadFile(filename);
             f.StartPosition = FormStartPosition.CenterParent;
             if (f.ShowDialog() == System.Windows.Forms.DialogResult.Yes)

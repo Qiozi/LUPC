@@ -1,0 +1,19 @@
+update tb_product set producter_serial_no = replace(producter_serial_no, 'GIGA-BYTE', 'GIGABYTE') ,
+ keywords = replace(keywords, 'GIGA-BYTE', 'GIGABYTE');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'A-DATA Technology', 'A-DATA') ,
+ keywords = replace(keywords, 'A-DATA Technology', 'A-DATA');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'MSI (Micro Star)', 'MSI') ,
+ keywords = replace(keywords, 'MSI (Micro Star)', 'MSI');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'Microstar(MSI)', 'MSI') ,
+ keywords = replace(keywords, 'Microstar(MSI)', 'MSI');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'Lenovo Americas', 'Lenovo') ,
+ keywords = replace(keywords, 'Lenovo Americas', 'Lenovo');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'LENOVO GLOBAL TECHNOLOGY', 'Lenovo') ,
+ keywords = replace(keywords, 'LENOVO GLOBAL TECHNOLOGY', 'Lenovo');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'HP INC.', 'HP') ,
+ keywords = replace(keywords, 'HP INC.', 'HP');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'LENOVO COMMERCIAL', 'Lenovo') ,
+ keywords = replace(keywords, 'LENOVO COMMERCIAL', 'Lenovo');
+update tb_product set producter_serial_no = replace(producter_serial_no, 'LENOVO CONSUMER', 'Lenovo') ,
+ keywords = replace(keywords, 'LENOVO CONSUMER', 'Lenovo');
+
