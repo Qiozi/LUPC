@@ -769,7 +769,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             //最后一列的标号  即总的行数
             int rowCount = sheet.LastRowNum;
 
-            for (int i = 16; i < sheet.LastRowNum; i++)
+            for (int i = 13; i < sheet.LastRowNum; i++)
             {
                 IRow row = sheet.GetRow(i);
                 // sheet.GetRow(0).GetCell(0).is
