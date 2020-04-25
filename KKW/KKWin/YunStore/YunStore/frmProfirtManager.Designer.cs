@@ -245,7 +245,13 @@
             0,
             0,
             0});
+            this.numericUpDownMaoLi.Minimum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            -2147483648});
             this.numericUpDownMaoLi.Name = "numericUpDownMaoLi";
+            this.numericUpDownMaoLi.ReadOnly = true;
             this.numericUpDownMaoLi.Size = new System.Drawing.Size(100, 21);
             this.numericUpDownMaoLi.TabIndex = 12;
             // 

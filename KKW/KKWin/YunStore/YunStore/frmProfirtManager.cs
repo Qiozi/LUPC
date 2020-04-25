@@ -281,9 +281,14 @@ namespace YunStore
                 newModel.ZhiTongChe = numericUpDownZhiTongChe.Value;
                 newModel.ZuanZhanFei = numericUpDownZuanZhanFei.Value;
                 newModel.ChaoJiTuiJian = numericUpDownChaoJiTuiJian.Value;
-                newModel.MaoLi = numericUpDownMaoLi.Value;
+
                 newModel.SheBaoGongJiJin = numericUpDownSheBaoGongJiJin.Value;
                 newModel.Remark = this.textBoxRemark.Text.Trim();
+
+                // 营业额—成本=毛利，这个公式你创建下，
+                newModel.MaoLi = newModel.Sale - newModel.ChanPinChengBen1;
+
+                numericUpDownMaoLi.Value = newModel.MaoLi;
 
                 if (Guid.Empty == _currGid)
                     _context.tb_profit.Add(newModel);
