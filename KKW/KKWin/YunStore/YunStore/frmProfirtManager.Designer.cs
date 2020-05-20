@@ -474,6 +474,7 @@
             this.numericUpDownSheBaoGongJiJin.Name = "numericUpDownSheBaoGongJiJin";
             this.numericUpDownSheBaoGongJiJin.Size = new System.Drawing.Size(102, 21);
             this.numericUpDownSheBaoGongJiJin.TabIndex = 13;
+            this.numericUpDownSheBaoGongJiJin.ValueChanged += new System.EventHandler(this.numericUpDownSheBaoGongJiJin_ValueChanged);
             // 
             // button35
             // 

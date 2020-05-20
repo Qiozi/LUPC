@@ -537,5 +537,9 @@ namespace YunStore
             }
         }
 
+        private void numericUpDownSheBaoGongJiJin_ValueChanged(object sender, EventArgs e)
+        {
+            RenLiChengBen1Change();
+        }
     }
 }

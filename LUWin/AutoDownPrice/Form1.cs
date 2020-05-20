@@ -135,8 +135,8 @@ namespace AutoDownPrice
                             }
                             // 备分正式文件
                             CopyTOBak(_ftpInfo.Dandh.SaveFilename, _ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-                            File.Move(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename,
-                                _ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
+                            //File.Move(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename,
+                            //    _ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename);
                         }
                     }
 
@@ -155,15 +155,15 @@ namespace AutoDownPrice
                     _EndDanah = false;
                 }
 
-                FileInfo dhFi = new FileInfo(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-                if (dhFi.Length < 50L)
-                {
-                    // 删除正式文件
-                    File.Delete(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-                    // 更新正式文件
-                    File.Move(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename,
-                        _ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
-                }
+                //FileInfo dhFi = new FileInfo(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                //if (dhFi.Length < 50L)
+                //{
+                //    // 删除正式文件
+                //    File.Delete(_ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                //    // 更新正式文件
+                //    File.Move(_ftpInfo.Dandh.SavePath + "\\Bak" + _ftpInfo.Dandh.SaveFilename,
+                //        _ftpInfo.Dandh.SavePath + "\\" + _ftpInfo.Dandh.SaveFilename);
+                //}
             }
             #endregion
 
@@ -186,8 +186,8 @@ namespace AutoDownPrice
                             }
                             // 备分正式文件
                             CopyTOBak(_ftpInfo.ASI.SaveFilename, _ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
-                            File.Move(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename,
-                                _ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename);
+                            //File.Move(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename,
+                            //    _ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename);
                         }
                     }
                     if (File.Exists(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename))
@@ -205,15 +205,15 @@ namespace AutoDownPrice
                     _EndASI = false;
                 }
 
-                FileInfo asiFi = new FileInfo(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
-                if (asiFi.Length < 50L)
-                {
-                    // 删除正式文件
-                    File.Delete(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
-                    // 更新正式文件
-                    File.Move(_ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename,
-                        _ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
-                }
+                //FileInfo asiFi = new FileInfo(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
+                //if (asiFi.Length < 50L)
+                //{
+                //    // 删除正式文件
+                //    File.Delete(_ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
+                //    // 更新正式文件
+                //    File.Move(_ftpInfo.ASI.SavePath + "\\Bak" + _ftpInfo.ASI.SaveFilename,
+                //        _ftpInfo.ASI.SavePath + "\\" + _ftpInfo.ASI.SaveFilename);
+                //}
             }
             //else
             //{
@@ -241,8 +241,8 @@ namespace AutoDownPrice
                             }
                             // 备分正式文件
                             CopyTOBak(_ftpInfo.Synnex.SaveFilename, _ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
-                            File.Move(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename,
-                                _ftpInfo.Synnex.SavePath + "\\Bak" + _ftpInfo.Synnex.SaveFilename);
+                            //File.Move(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename,
+                            //    _ftpInfo.Synnex.SavePath + "\\Bak" + _ftpInfo.Synnex.SaveFilename);
                         }
                     }
                     if (File.Exists(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename))
@@ -260,15 +260,15 @@ namespace AutoDownPrice
                     Util.Logs.WriteErrorLog(ex);
                     _EndSynnex = false;
                 }
-                FileInfo syFi = new FileInfo(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
-                if (syFi.Length < 50L)
-                {
-                    // 删除正式文件
-                    File.Delete(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
-                    // 更新正式文件
-                    File.Move(_ftpInfo.Synnex.SavePath + "\\Bak" + _ftpInfo.Synnex.SaveFilename,
-                        _ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
-                }
+                //FileInfo syFi = new FileInfo(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
+                //if (syFi.Length < 50L)
+                //{
+                //    // 删除正式文件
+                //    File.Delete(_ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
+                //    // 更新正式文件
+                //    File.Move(_ftpInfo.Synnex.SavePath + "\\Bak" + _ftpInfo.Synnex.SaveFilename,
+                //        _ftpInfo.Synnex.SavePath + "\\" + _ftpInfo.Synnex.SaveFilename);
+                //}
             }
             #endregion
 
