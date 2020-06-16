@@ -111,6 +111,10 @@ namespace LUComputers.Watch
                     {
                         bool IsPromotionCostEnd = false;
                         mfp = fs[0];
+                        if (mfp.Length > 30)
+                        {
+                            mfp = mfp.Substring(0, 30);
+                        }
                         part_sku = fs[2];
                         status_code = fs[37];
                         mfp_name = fs[5];
@@ -249,7 +253,7 @@ values {1}"
             #region only price
             sql_part = "";
             count = 0;
-            
+
             foreach (string s in lines)
             {
 
@@ -258,7 +262,11 @@ values {1}"
                 {
                     bool IsPromotionCostEnd = false;
 
-                    mfp = fs[0];
+                    mfp = fs[0]; 
+                    if (mfp.Length > 30)
+                    {
+                        mfp = mfp.Substring(0, 30);
+                    }
                     part_sku = fs[2];
                     status_code = fs[37];
 
