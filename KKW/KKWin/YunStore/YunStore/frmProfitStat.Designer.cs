@@ -68,8 +68,11 @@
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -113,7 +116,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(1399, 450);
             this.splitContainer1.SplitterDistance = 56;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -124,6 +127,9 @@
             this.columnHeader2,
             this.columnHeader34,
             this.columnHeader3,
+            this.columnHeader36,
+            this.columnHeader37,
+            this.columnHeader38,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
@@ -161,7 +167,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(800, 390);
+            this.listView1.Size = new System.Drawing.Size(1399, 390);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -184,7 +190,7 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "营业额";
+            this.columnHeader3.Text = "营业额-天猫";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader3.Width = 80;
             // 
@@ -368,22 +374,37 @@
             this.columnHeader33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader33.Width = 80;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "bg20.jpg");
-            // 
             // columnHeader35
             // 
             this.columnHeader35.Text = "社保，公积金";
             this.columnHeader35.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader35.Width = 100;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "bg20.jpg");
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "天猫-含刷单";
+            this.columnHeader36.Width = 80;
+            // 
+            // columnHeader37
+            // 
+            this.columnHeader37.Text = "营业额-淘宝";
+            this.columnHeader37.Width = 80;
+            // 
+            // columnHeader38
+            // 
+            this.columnHeader38.Text = "淘宝-含刷单";
+            this.columnHeader38.Width = 80;
+            // 
             // frmProfitStat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1399, 450);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmProfitStat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -439,5 +460,8 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ColumnHeader columnHeader34;
         private System.Windows.Forms.ColumnHeader columnHeader35;
+        private System.Windows.Forms.ColumnHeader columnHeader36;
+        private System.Windows.Forms.ColumnHeader columnHeader37;
+        private System.Windows.Forms.ColumnHeader columnHeader38;
     }
 }

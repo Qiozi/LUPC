@@ -52,7 +52,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.numericUpDownGuDingChengBen1 = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
-            this.numericUpDownSale = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSale_TianMao = new System.Windows.Forms.NumericUpDown();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.numericUpDownSheBaoGongJiJin = new System.Windows.Forms.NumericUpDown();
@@ -79,6 +79,8 @@
             this.numericUpDownBanGongYongPin = new System.Windows.Forms.NumericUpDown();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownShuaDian = new System.Windows.Forms.NumericUpDown();
+            this.button36 = new System.Windows.Forms.Button();
             this.numericUpDownChaoJiTuiJian = new System.Windows.Forms.NumericUpDown();
             this.button33 = new System.Windows.Forms.Button();
             this.numericUpDownCDianZhiTongChe = new System.Windows.Forms.NumericUpDown();
@@ -116,6 +118,13 @@
             this.buttonDel = new System.Windows.Forms.Button();
             this.textBoxRemark = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button37 = new System.Windows.Forms.Button();
+            this.numericUpDownSale_TaoBao = new System.Windows.Forms.NumericUpDown();
+            this.button38 = new System.Windows.Forms.Button();
+            this.numericUpDownSale_TianMao_ShuaDian = new System.Windows.Forms.NumericUpDown();
+            this.button39 = new System.Windows.Forms.Button();
+            this.numericUpDownSale_TaoBao_ShuaDian = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaoLi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYunCangChengBen1)).BeginInit();
@@ -123,7 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChanPinChengBen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYingXiaoChengBen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGuDingChengBen1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TianMao)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSheBaoGongJiJin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDaiYunYingFeiYong)).BeginInit();
@@ -138,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShuiDianFeiYong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBanGongYongPin)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShuaDian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChaoJiTuiJian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCDianZhiTongChe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQiTaFeiYong)).BeginInit();
@@ -155,6 +165,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDingZhiXiangFeiYong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHaoCaiFei)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCangChuFeiYuFaHuoFeiYong)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TaoBao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TianMao_ShuaDian)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TaoBao_ShuaDian)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -210,28 +224,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDownSale_TaoBao_ShuaDian);
+            this.groupBox1.Controls.Add(this.button39);
+            this.groupBox1.Controls.Add(this.numericUpDownSale_TianMao_ShuaDian);
+            this.groupBox1.Controls.Add(this.button38);
+            this.groupBox1.Controls.Add(this.numericUpDownSale_TaoBao);
+            this.groupBox1.Controls.Add(this.button37);
             this.groupBox1.Controls.Add(this.numericUpDownMaoLi);
             this.groupBox1.Controls.Add(this.button34);
             this.groupBox1.Controls.Add(this.comboBoxProfitDate);
             this.groupBox1.Controls.Add(this.button32);
             this.groupBox1.Controls.Add(this.textBoxProfit);
-            this.groupBox1.Controls.Add(this.numericUpDownYunCangChengBen1);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.numericUpDownRenLiChengBen1);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.numericUpDownChanPinChengBen1);
-            this.groupBox1.Controls.Add(this.numericUpDownYingXiaoChengBen1);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.numericUpDownGuDingChengBen1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.numericUpDownSale);
+            this.groupBox1.Controls.Add(this.numericUpDownSale_TianMao);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(316, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(656, 126);
+            this.groupBox1.Size = new System.Drawing.Size(639, 126);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "利润";
@@ -298,7 +308,7 @@
             // numericUpDownYunCangChengBen1
             // 
             this.numericUpDownYunCangChengBen1.DecimalPlaces = 2;
-            this.numericUpDownYunCangChengBen1.Location = new System.Drawing.Point(515, 82);
+            this.numericUpDownYunCangChengBen1.Location = new System.Drawing.Point(89, 144);
             this.numericUpDownYunCangChengBen1.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -306,15 +316,15 @@
             0});
             this.numericUpDownYunCangChengBen1.Name = "numericUpDownYunCangChengBen1";
             this.numericUpDownYunCangChengBen1.ReadOnly = true;
-            this.numericUpDownYunCangChengBen1.Size = new System.Drawing.Size(101, 21);
+            this.numericUpDownYunCangChengBen1.Size = new System.Drawing.Size(116, 21);
             this.numericUpDownYunCangChengBen1.TabIndex = 13;
             // 
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(219, 84);
+            this.button8.Location = new System.Drawing.Point(6, 53);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(83, 24);
+            this.button8.Size = new System.Drawing.Size(77, 24);
             this.button8.TabIndex = 12;
             this.button8.TabStop = false;
             this.button8.Text = "产品成本";
@@ -323,7 +333,7 @@
             // numericUpDownRenLiChengBen1
             // 
             this.numericUpDownRenLiChengBen1.DecimalPlaces = 2;
-            this.numericUpDownRenLiChengBen1.Location = new System.Drawing.Point(515, 22);
+            this.numericUpDownRenLiChengBen1.Location = new System.Drawing.Point(89, 84);
             this.numericUpDownRenLiChengBen1.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -331,15 +341,15 @@
             0});
             this.numericUpDownRenLiChengBen1.Name = "numericUpDownRenLiChengBen1";
             this.numericUpDownRenLiChengBen1.ReadOnly = true;
-            this.numericUpDownRenLiChengBen1.Size = new System.Drawing.Size(101, 21);
+            this.numericUpDownRenLiChengBen1.Size = new System.Drawing.Size(116, 21);
             this.numericUpDownRenLiChengBen1.TabIndex = 11;
             // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(426, 82);
+            this.button6.Location = new System.Drawing.Point(6, 144);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 24);
+            this.button6.Size = new System.Drawing.Size(77, 24);
             this.button6.TabIndex = 10;
             this.button6.TabStop = false;
             this.button6.Text = "秒仓成本";
@@ -348,7 +358,7 @@
             // numericUpDownChanPinChengBen1
             // 
             this.numericUpDownChanPinChengBen1.DecimalPlaces = 2;
-            this.numericUpDownChanPinChengBen1.Location = new System.Drawing.Point(308, 84);
+            this.numericUpDownChanPinChengBen1.Location = new System.Drawing.Point(89, 53);
             this.numericUpDownChanPinChengBen1.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -356,13 +366,13 @@
             0});
             this.numericUpDownChanPinChengBen1.Name = "numericUpDownChanPinChengBen1";
             this.numericUpDownChanPinChengBen1.ReadOnly = true;
-            this.numericUpDownChanPinChengBen1.Size = new System.Drawing.Size(112, 21);
+            this.numericUpDownChanPinChengBen1.Size = new System.Drawing.Size(116, 21);
             this.numericUpDownChanPinChengBen1.TabIndex = 9;
             // 
             // numericUpDownYingXiaoChengBen1
             // 
             this.numericUpDownYingXiaoChengBen1.DecimalPlaces = 2;
-            this.numericUpDownYingXiaoChengBen1.Location = new System.Drawing.Point(515, 52);
+            this.numericUpDownYingXiaoChengBen1.Location = new System.Drawing.Point(89, 114);
             this.numericUpDownYingXiaoChengBen1.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -370,15 +380,15 @@
             0});
             this.numericUpDownYingXiaoChengBen1.Name = "numericUpDownYingXiaoChengBen1";
             this.numericUpDownYingXiaoChengBen1.ReadOnly = true;
-            this.numericUpDownYingXiaoChengBen1.Size = new System.Drawing.Size(101, 21);
+            this.numericUpDownYingXiaoChengBen1.Size = new System.Drawing.Size(116, 21);
             this.numericUpDownYingXiaoChengBen1.TabIndex = 9;
             // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(426, 52);
+            this.button5.Location = new System.Drawing.Point(6, 114);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 24);
+            this.button5.Size = new System.Drawing.Size(77, 24);
             this.button5.TabIndex = 8;
             this.button5.TabStop = false;
             this.button5.Text = "营销成本";
@@ -387,9 +397,9 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(219, 54);
+            this.button4.Location = new System.Drawing.Point(6, 21);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 24);
+            this.button4.Size = new System.Drawing.Size(77, 24);
             this.button4.TabIndex = 8;
             this.button4.TabStop = false;
             this.button4.Text = "固定成本";
@@ -398,7 +408,7 @@
             // numericUpDownGuDingChengBen1
             // 
             this.numericUpDownGuDingChengBen1.DecimalPlaces = 2;
-            this.numericUpDownGuDingChengBen1.Location = new System.Drawing.Point(308, 54);
+            this.numericUpDownGuDingChengBen1.Location = new System.Drawing.Point(89, 20);
             this.numericUpDownGuDingChengBen1.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -406,33 +416,33 @@
             0});
             this.numericUpDownGuDingChengBen1.Name = "numericUpDownGuDingChengBen1";
             this.numericUpDownGuDingChengBen1.ReadOnly = true;
-            this.numericUpDownGuDingChengBen1.Size = new System.Drawing.Size(112, 21);
+            this.numericUpDownGuDingChengBen1.Size = new System.Drawing.Size(116, 21);
             this.numericUpDownGuDingChengBen1.TabIndex = 7;
             // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(426, 22);
+            this.button3.Location = new System.Drawing.Point(6, 84);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 24);
+            this.button3.Size = new System.Drawing.Size(77, 24);
             this.button3.TabIndex = 6;
             this.button3.TabStop = false;
             this.button3.Text = "人力成本";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // numericUpDownSale
+            // numericUpDownSale_TianMao
             // 
-            this.numericUpDownSale.DecimalPlaces = 2;
-            this.numericUpDownSale.Location = new System.Drawing.Point(308, 25);
-            this.numericUpDownSale.Maximum = new decimal(new int[] {
+            this.numericUpDownSale_TianMao.DecimalPlaces = 2;
+            this.numericUpDownSale_TianMao.Location = new System.Drawing.Point(308, 25);
+            this.numericUpDownSale_TianMao.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
-            this.numericUpDownSale.Name = "numericUpDownSale";
-            this.numericUpDownSale.Size = new System.Drawing.Size(112, 21);
-            this.numericUpDownSale.TabIndex = 5;
-            this.numericUpDownSale.ValueChanged += new System.EventHandler(this.numericUpDownSale_ValueChanged);
+            this.numericUpDownSale_TianMao.Name = "numericUpDownSale_TianMao";
+            this.numericUpDownSale_TianMao.Size = new System.Drawing.Size(112, 21);
+            this.numericUpDownSale_TianMao.TabIndex = 5;
+            this.numericUpDownSale_TianMao.ValueChanged += new System.EventHandler(this.numericUpDownSale_ValueChanged);
             // 
             // button2
             // 
@@ -442,7 +452,7 @@
             this.button2.Size = new System.Drawing.Size(83, 24);
             this.button2.TabIndex = 4;
             this.button2.TabStop = false;
-            this.button2.Text = "营业额";
+            this.button2.Text = "营业额-天猫";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -457,7 +467,7 @@
             this.groupBox2.Controls.Add(this.button13);
             this.groupBox2.Location = new System.Drawing.Point(316, 144);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(656, 107);
+            this.groupBox2.Size = new System.Drawing.Size(639, 107);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "人力成本";
@@ -582,7 +592,7 @@
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Location = new System.Drawing.Point(316, 270);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(656, 103);
+            this.groupBox3.Size = new System.Drawing.Size(639, 103);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "固定成本";
@@ -766,6 +776,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.numericUpDownShuaDian);
+            this.groupBox4.Controls.Add(this.button36);
             this.groupBox4.Controls.Add(this.numericUpDownChaoJiTuiJian);
             this.groupBox4.Controls.Add(this.button33);
             this.groupBox4.Controls.Add(this.numericUpDownCDianZhiTongChe);
@@ -778,10 +790,34 @@
             this.groupBox4.Controls.Add(this.button24);
             this.groupBox4.Location = new System.Drawing.Point(316, 379);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(656, 111);
+            this.groupBox4.Size = new System.Drawing.Size(639, 111);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "营销成本";
+            // 
+            // numericUpDownShuaDian
+            // 
+            this.numericUpDownShuaDian.DecimalPlaces = 2;
+            this.numericUpDownShuaDian.Location = new System.Drawing.Point(523, 61);
+            this.numericUpDownShuaDian.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownShuaDian.Name = "numericUpDownShuaDian";
+            this.numericUpDownShuaDian.Size = new System.Drawing.Size(101, 21);
+            this.numericUpDownShuaDian.TabIndex = 17;
+            // 
+            // button36
+            // 
+            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button36.Location = new System.Drawing.Point(434, 61);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(83, 24);
+            this.button36.TabIndex = 16;
+            this.button36.TabStop = false;
+            this.button36.Text = "刷单费用";
+            this.button36.UseVisualStyleBackColor = true;
             // 
             // numericUpDownChaoJiTuiJian
             // 
@@ -926,7 +962,7 @@
             this.groupBox5.Controls.Add(this.button28);
             this.groupBox5.Location = new System.Drawing.Point(316, 496);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(656, 144);
+            this.groupBox5.Size = new System.Drawing.Size(639, 144);
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "产品总成本";
@@ -1116,7 +1152,7 @@
             this.groupBox6.Controls.Add(this.button31);
             this.groupBox6.Location = new System.Drawing.Point(316, 646);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(656, 79);
+            this.groupBox6.Size = new System.Drawing.Size(856, 79);
             this.groupBox6.TabIndex = 16;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "秒仓成本";
@@ -1198,7 +1234,7 @@
             // 
             // buttonCreate
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(849, 744);
+            this.buttonCreate.Location = new System.Drawing.Point(1043, 744);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(123, 33);
             this.buttonCreate.TabIndex = 22;
@@ -1208,7 +1244,7 @@
             // 
             // buttonNew
             // 
-            this.buttonNew.Location = new System.Drawing.Point(720, 744);
+            this.buttonNew.Location = new System.Drawing.Point(914, 744);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(123, 33);
             this.buttonNew.TabIndex = 23;
@@ -1218,7 +1254,7 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(591, 744);
+            this.buttonDel.Location = new System.Drawing.Point(785, 744);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(123, 33);
             this.buttonDel.TabIndex = 24;
@@ -1244,10 +1280,102 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "备注";
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button8);
+            this.groupBox7.Controls.Add(this.numericUpDownGuDingChengBen1);
+            this.groupBox7.Controls.Add(this.button4);
+            this.groupBox7.Controls.Add(this.numericUpDownChanPinChengBen1);
+            this.groupBox7.Controls.Add(this.numericUpDownYingXiaoChengBen1);
+            this.groupBox7.Controls.Add(this.numericUpDownYunCangChengBen1);
+            this.groupBox7.Controls.Add(this.button3);
+            this.groupBox7.Controls.Add(this.numericUpDownRenLiChengBen1);
+            this.groupBox7.Controls.Add(this.button5);
+            this.groupBox7.Controls.Add(this.button6);
+            this.groupBox7.Location = new System.Drawing.Point(961, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(211, 628);
+            this.groupBox7.TabIndex = 27;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "成本";
+            // 
+            // button37
+            // 
+            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button37.Location = new System.Drawing.Point(219, 66);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(83, 26);
+            this.button37.TabIndex = 18;
+            this.button37.TabStop = false;
+            this.button37.Text = "营业额-淘宝";
+            this.button37.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownSale_TaoBao
+            // 
+            this.numericUpDownSale_TaoBao.DecimalPlaces = 2;
+            this.numericUpDownSale_TaoBao.Location = new System.Drawing.Point(308, 66);
+            this.numericUpDownSale_TaoBao.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownSale_TaoBao.Name = "numericUpDownSale_TaoBao";
+            this.numericUpDownSale_TaoBao.Size = new System.Drawing.Size(112, 21);
+            this.numericUpDownSale_TaoBao.TabIndex = 19;
+            // 
+            // button38
+            // 
+            this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button38.Location = new System.Drawing.Point(426, 24);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(83, 24);
+            this.button38.TabIndex = 20;
+            this.button38.TabStop = false;
+            this.button38.Text = "天猫-刷单后";
+            this.button38.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownSale_TianMao_ShuaDian
+            // 
+            this.numericUpDownSale_TianMao_ShuaDian.DecimalPlaces = 2;
+            this.numericUpDownSale_TianMao_ShuaDian.Location = new System.Drawing.Point(515, 24);
+            this.numericUpDownSale_TianMao_ShuaDian.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownSale_TianMao_ShuaDian.Name = "numericUpDownSale_TianMao_ShuaDian";
+            this.numericUpDownSale_TianMao_ShuaDian.Size = new System.Drawing.Size(105, 21);
+            this.numericUpDownSale_TianMao_ShuaDian.TabIndex = 21;
+            // 
+            // button39
+            // 
+            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button39.Location = new System.Drawing.Point(426, 66);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(83, 24);
+            this.button39.TabIndex = 22;
+            this.button39.TabStop = false;
+            this.button39.Text = "淘宝-刷单后";
+            this.button39.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownSale_TaoBao_ShuaDian
+            // 
+            this.numericUpDownSale_TaoBao_ShuaDian.DecimalPlaces = 2;
+            this.numericUpDownSale_TaoBao_ShuaDian.Location = new System.Drawing.Point(515, 66);
+            this.numericUpDownSale_TaoBao_ShuaDian.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownSale_TaoBao_ShuaDian.Name = "numericUpDownSale_TaoBao_ShuaDian";
+            this.numericUpDownSale_TaoBao_ShuaDian.Size = new System.Drawing.Size(105, 21);
+            this.numericUpDownSale_TaoBao_ShuaDian.TabIndex = 23;
+            // 
             // frmProfirtManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(984, 804);
+            this.ClientSize = new System.Drawing.Size(1184, 804);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxRemark);
             this.Controls.Add(this.buttonDel);
@@ -1272,7 +1400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChanPinChengBen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYingXiaoChengBen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGuDingChengBen1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TianMao)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSheBaoGongJiJin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDaiYunYingFeiYong)).EndInit();
@@ -1287,6 +1415,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShuiDianFeiYong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBanGongYongPin)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShuaDian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChaoJiTuiJian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCDianZhiTongChe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQiTaFeiYong)).EndInit();
@@ -1304,6 +1433,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDingZhiXiangFeiYong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHaoCaiFei)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCangChuFeiYuFaHuoFeiYong)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TaoBao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TianMao_ShuaDian)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSale_TaoBao_ShuaDian)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1325,7 +1458,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NumericUpDown numericUpDownGuDingChengBen1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.NumericUpDown numericUpDownSale;
+        private System.Windows.Forms.NumericUpDown numericUpDownSale_TianMao;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.NumericUpDown numericUpDownDaiYunYingFeiYong;
@@ -1397,5 +1530,14 @@
         private System.Windows.Forms.NumericUpDown numericUpDownSheBaoGongJiJin;
         private System.Windows.Forms.TextBox textBoxRemark;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDownShuaDian;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.NumericUpDown numericUpDownSale_TaoBao_ShuaDian;
+        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.NumericUpDown numericUpDownSale_TianMao_ShuaDian;
+        private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.NumericUpDown numericUpDownSale_TaoBao;
+        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }

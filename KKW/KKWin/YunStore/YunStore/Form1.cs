@@ -75,7 +75,9 @@ namespace YunStore
                 WarehouseName = "公司",
                 Qty = query1 == null ? 0 : query1.Count,
                 Total1 = query1 == null ? 0 : query1.Sum(me => (decimal?)me.Qty).GetValueOrDefault(),
-                Total2 = query1 == null ? 0 : query1.Sum(me => (decimal?)me.Qty * me.Cost).GetValueOrDefault()
+                Total2 = query1 == null ? 0 : query1.Sum(me => (decimal?)me.Qty * me.Cost).GetValueOrDefault(),
+                LastUpdateTime = query1.Max(me => me.Regdate).ToString(),
+
             });
 
 
@@ -85,7 +87,8 @@ namespace YunStore
                 WarehouseName = "秒仓",
                 Qty = query2 == null ? 0 : (query2.AllProdQty),
                 Total1 = query2 == null ? 0 : query2.AllProdStock,
-                Total2 = query2 == null ? 0 : query2.AllProdTotal
+                Total2 = query2 == null ? 0 : query2.AllProdTotal,
+                LastUpdateTime = query2.Regdate,
             });
 
             homeInfo.Add(new Model.Stat.HomeStat
@@ -93,7 +96,8 @@ namespace YunStore
                 WarehouseName = "所有",
                 Qty = homeInfo[0].Qty + homeInfo[1].Qty,
                 Total1 = homeInfo[0].Total1 + homeInfo[1].Total1,
-                Total2 = homeInfo[0].Total2 + homeInfo[1].Total2
+                Total2 = homeInfo[0].Total2 + homeInfo[1].Total2,
+                LastUpdateTime = ""
             });
 
             this.listView1.Items.Clear();
@@ -103,6 +107,7 @@ namespace YunStore
                 li.SubItems.Add(item.Qty.ToString());
                 li.SubItems.Add(item.Total1.ToString());
                 li.SubItems.Add(item.Total2.ToString("##,###,###,##0.00"));
+                li.SubItems.Add(item.LastUpdateTime);
                 this.listView1.Items.Add(li);
             }
         }

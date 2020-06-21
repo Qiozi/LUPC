@@ -69,7 +69,10 @@ namespace YunStore
                         QiTaFeiYong = query.Sum(me => me.QiTaFeiYong),
                         QiTaZaFei = query.Sum(me => me.QiTaZaFei),
                         RenLiChengBen1 = query.Sum(me => me.RenLiChengBen1),
-                        Sale = query.Sum(me => me.Sale),
+                        Sale_TianMao = query.Sum(me => me.Sale_TianMao),
+                        Sale_TianMao_ShuaDian = query.Sum(me => me.Sale_TianMao_ShuaDian),
+                        Sale_Taobao = query.Sum(me => me.Sale_Taobao),
+                        Sale_TaoBao_ShuaDian = query.Sum(me => me.Sale_TaoBao_ShuaDian),
                         ShangNiChengBen = query.Sum(me => me.ShangNiChengBen),
                         ShuiDianFeiYong = query.Sum(me => me.ShuiDianFeiYong),
                         ShuiWuFeiYong = query.Sum(me => me.ShuiWuFeiYong),
@@ -90,7 +93,10 @@ namespace YunStore
                     li.Tag = item.Gid.ToString();
                     li.SubItems.Add(Util.FormatPrice(item.Profit));
                     li.SubItems.Add(Util.FormatPrice(item.MaoLi));
-                    li.SubItems.Add(Util.FormatPrice(item.Sale));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_TianMao));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_ShuaDian));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_Taobao));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_ShuaDian));
                     li.SubItems.Add(Util.FormatPrice(item.RenLiChengBen1));
                     li.SubItems.Add(Util.FormatPrice(item.GuDingChengBen1));
                     li.SubItems.Add(Util.FormatPrice(item.YingXiaoChengBen1));

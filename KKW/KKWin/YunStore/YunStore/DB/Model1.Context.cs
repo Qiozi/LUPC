@@ -26,7 +26,6 @@ namespace YunStore.DB
         }
     
         public virtual DbSet<tb_user> tb_user { get; set; }
-        public virtual DbSet<tb_profit> tb_profit { get; set; }
         public virtual DbSet<tb_yun_fileinfo_company_stock_main> tb_yun_fileinfo_company_stock_main { get; set; }
         public virtual DbSet<tb_yun_fileinfo_company_stock_record> tb_yun_fileinfo_company_stock_record { get; set; }
         public virtual DbSet<tb_yun_fileinfo_sale_child> tb_yun_fileinfo_sale_child { get; set; }
@@ -34,5 +33,6 @@ namespace YunStore.DB
         public virtual DbSet<tb_yun_fileinfo_stock_child> tb_yun_fileinfo_stock_child { get; set; }
         public virtual DbSet<tb_yun_fileinfo_stock_main> tb_yun_fileinfo_stock_main { get; set; }
         public virtual DbSet<tb_yun_fileinfo_company_stock_child> tb_yun_fileinfo_company_stock_child { get; set; }
+        public virtual DbSet<tb_profit> tb_profit { get; set; }
     }
 }

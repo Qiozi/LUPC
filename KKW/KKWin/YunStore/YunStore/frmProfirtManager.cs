@@ -178,7 +178,10 @@ namespace YunStore
                 this.numericUpDownQiTaFeiYong.Value = query.QiTaFeiYong;
                 this.numericUpDownQiTaZaFei.Value = query.QiTaZaFei;
                 this.numericUpDownRenLiChengBen1.Value = query.RenLiChengBen1;
-                this.numericUpDownSale.Value = query.Sale;
+                this.numericUpDownSale_TianMao.Value = query.Sale_TianMao;
+                this.numericUpDownSale_TianMao_ShuaDian.Value = query.Sale_TianMao_ShuaDian;
+                this.numericUpDownSale_TaoBao.Value = query.Sale_Taobao;
+                this.numericUpDownSale_TaoBao_ShuaDian.Value = query.Sale_TaoBao_ShuaDian;
                 this.numericUpDownShangNiChengBen.Value = query.ShangNiChengBen;
                 this.numericUpDownShuiDianFeiYong.Value = query.ShuiDianFeiYong;
                 this.numericUpDownShuiWuFeiYong.Value = query.ShuiWuFeiYong;
@@ -249,7 +252,11 @@ namespace YunStore
 
                 newModel.BanGongYongPin = this.numericUpDownBanGongYongPin.Value;
                 newModel.CaiWuJiZhangFei = this.numericUpDownCaiWuJiZhangFei.Value;
-                newModel.Sale = this.numericUpDownSale.Value;
+                newModel.Sale_TianMao = this.numericUpDownSale_TianMao.Value;
+                newModel.Sale_TianMao_ShuaDian = this.numericUpDownSale_TianMao_ShuaDian.Value;
+                newModel.Sale_Taobao = this.numericUpDownSale_TaoBao.Value;
+                newModel.Sale_TaoBao_ShuaDian = this.numericUpDownSale_TaoBao_ShuaDian.Value;
+
                 newModel.CangChuFeiYuFaHuoFeiYong = this.numericUpDownCangChuFeiYuFaHuoFeiYong.Value;
                 newModel.CDianZhiTongChe = numericUpDownCDianZhiTongChe.Value;
                 newModel.ChanPinChengBen1 = numericUpDownChanPinChengBen1.Value;
@@ -286,7 +293,7 @@ namespace YunStore
                 newModel.Remark = this.textBoxRemark.Text.Trim();
 
                 // 营业额—成本=毛利，这个公式你创建下，
-                newModel.MaoLi = newModel.Sale - newModel.ChanPinChengBen1;
+                newModel.MaoLi = (newModel.Sale_TianMao + newModel.Sale_Taobao) - newModel.ChanPinChengBen1;
 
                 numericUpDownMaoLi.Value = newModel.MaoLi;
 
@@ -506,7 +513,7 @@ namespace YunStore
         /// </summary>
         void StatProfit()
         {
-            var profit = this.numericUpDownSale.Value -
+            var profit = this.numericUpDownSale_TianMao.Value -
                      numericUpDownRenLiChengBen1.Value -
                      numericUpDownGuDingChengBen1.Value -
                      numericUpDownYingXiaoChengBen1.Value -

@@ -91,10 +91,19 @@ namespace YunStore
                 this.listView2.Items.Add(li1_1);
 
 
-                var li2 = new ListViewItem("营业额");
-                li2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale)));
+                var li2 = new ListViewItem("营业额-天猫");
+                li2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TianMao)));
                 li2.BackColor = Color.WhiteSmoke;
+                li2.SubItems.Add("天猫-包含刷单费用");
+                li2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TianMao_ShuaDian)));
                 listView2.Items.Add(li2);
+
+                var li2_1 = new ListViewItem("营业额-淘宝");
+                li2_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_Taobao)));
+                li2_1.BackColor = Color.WhiteSmoke;
+                li2_1.SubItems.Add("淘宝-包含刷单费用");
+                li2_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TaoBao_ShuaDian)));
+                listView2.Items.Add(li2_1);
 
                 var li3 = new ListViewItem("人力成本");
                 li3.SubItems.Add(Util.FormatPrice(items.Sum(me => me.RenLiChengBen1)));
@@ -219,10 +228,21 @@ namespace YunStore
                 li1_1.SubItems.Add(Util.FormatPrice(item.MaoLi));
                 this.listView2.Items.Add(li1_1);
 
-                var li2 = new ListViewItem("营业额");
-                li2.SubItems.Add(Util.FormatPrice(item.Sale));
+                var li2 = new ListViewItem("营业额-天猫");
+                li2.SubItems.Add(Util.FormatPrice(item.Sale_TianMao));
                 li2.BackColor = Color.WhiteSmoke;
+                li2.SubItems.Add("天猫-包含刷单费用");
+                li2.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_ShuaDian));
                 listView2.Items.Add(li2);
+
+
+                var li2_1 = new ListViewItem("营业额-淘宝");
+                li2_1.SubItems.Add(Util.FormatPrice(item.Sale_Taobao));
+                li2_1.BackColor = Color.WhiteSmoke;
+                li2_1.SubItems.Add("淘宝-包含刷单费用");
+                li2_1.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_ShuaDian));
+                listView2.Items.Add(li2_1);
+
 
                 var li3 = new ListViewItem("人力成本");
                 li3.SubItems.Add(Util.FormatPrice(item.RenLiChengBen1));

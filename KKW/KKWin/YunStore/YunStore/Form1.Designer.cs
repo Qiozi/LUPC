@@ -42,6 +42,7 @@
             this.buttonReadProfit = new System.Windows.Forms.Button();
             this.buttonProfitStat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonProfirt
@@ -100,7 +101,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -171,6 +173,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "最后更新时间";
+            this.columnHeader5.Width = 180;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -210,6 +217,7 @@
         private System.Windows.Forms.Button buttonReadProfit;
         private System.Windows.Forms.Button buttonProfitStat;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 

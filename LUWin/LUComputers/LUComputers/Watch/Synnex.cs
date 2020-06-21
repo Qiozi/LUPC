@@ -110,7 +110,7 @@ namespace LUComputers.Watch
                     if (fs.Length > 19)
                     {
                         bool IsPromotionCostEnd = false;
-                        mfp = fs[0];
+                        mfp = fs[0].Trim();
                         if (mfp.Length > 30)
                         {
                             mfp = mfp.Substring(0, 30);
@@ -262,7 +262,7 @@ values {1}"
                 {
                     bool IsPromotionCostEnd = false;
 
-                    mfp = fs[0]; 
+                    mfp = fs[0].Trim(); 
                     if (mfp.Length > 30)
                     {
                         mfp = mfp.Substring(0, 30);

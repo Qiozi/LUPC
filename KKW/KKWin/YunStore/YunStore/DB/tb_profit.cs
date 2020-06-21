@@ -20,7 +20,8 @@ namespace YunStore.DB
         public System.Guid StaffGid { get; set; }
         public string ProfitDate { get; set; }
         public decimal Profit { get; set; }
-        public decimal Sale { get; set; }
+        public decimal Sale_TianMao { get; set; }
+        public decimal Sale_Taobao { get; set; }
         public decimal RenLiChengBen1 { get; set; }
         public decimal GuDingChengBen1 { get; set; }
         public decimal YingXiaoChengBen1 { get; set; }
@@ -54,5 +55,8 @@ namespace YunStore.DB
         public decimal MaoLi { get; set; }
         public decimal SheBaoGongJiJin { get; set; }
         public string Remark { get; set; }
+        public decimal ShuaDianFeiYou { get; set; }
+        public decimal Sale_TaoBao_ShuaDian { get; set; }
+        public decimal Sale_TianMao_ShuaDian { get; set; }
     }
 }

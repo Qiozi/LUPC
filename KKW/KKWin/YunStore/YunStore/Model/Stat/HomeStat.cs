@@ -16,5 +16,7 @@ namespace YunStore.Model.Stat
 
         public decimal Total2 { get; set; }
 
+        public string LastUpdateTime { get; set; }
+
     }
 }
