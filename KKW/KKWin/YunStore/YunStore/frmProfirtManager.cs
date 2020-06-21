@@ -168,6 +168,7 @@ namespace YunStore
                 this.numericUpDownDingZhiXiangFeiYong.Value = query.DingZhiXiangFeiYong;
                 this.numericUpDownEKOFaHuoShangPinChengBen.Value = query.EKOFaHuoShangPinChengBen;
                 this.numericUpDownFangWuZuJin.Value = query.FangWuZuJin;
+                this.numericUpDownShuaDian.Value = query.ShuaDianFeiYou;
                 this.numericUpDownFeiDiLaChengBen.Value = query.FeiDiLaChengBen;
                 this.numericUpDownGongZi.Value = query.GongZi;
                 this.numericUpDownGuDingChengBen1.Value = query.GuDingChengBen1;
@@ -180,6 +181,9 @@ namespace YunStore
                 this.numericUpDownRenLiChengBen1.Value = query.RenLiChengBen1;
                 this.numericUpDownSale_TianMao.Value = query.Sale_TianMao;
                 this.numericUpDownSale_TianMao_ShuaDian.Value = query.Sale_TianMao_ShuaDian;
+                this.numericUpDownSale_TianMao_Alipay.Value = query.Sale_TianMao_Alipay;
+                this.numericUpDownSale_Taobao_Alipay.Value = query.Sale_TaoBao_Alipay;
+
                 this.numericUpDownSale_TaoBao.Value = query.Sale_Taobao;
                 this.numericUpDownSale_TaoBao_ShuaDian.Value = query.Sale_TaoBao_ShuaDian;
                 this.numericUpDownShangNiChengBen.Value = query.ShangNiChengBen;
@@ -256,6 +260,8 @@ namespace YunStore
                 newModel.Sale_TianMao_ShuaDian = this.numericUpDownSale_TianMao_ShuaDian.Value;
                 newModel.Sale_Taobao = this.numericUpDownSale_TaoBao.Value;
                 newModel.Sale_TaoBao_ShuaDian = this.numericUpDownSale_TaoBao_ShuaDian.Value;
+                newModel.Sale_TaoBao_Alipay = this.numericUpDownSale_Taobao_Alipay.Value;
+                newModel.Sale_TianMao_Alipay = this.numericUpDownSale_TianMao_Alipay.Value;
 
                 newModel.CangChuFeiYuFaHuoFeiYong = this.numericUpDownCangChuFeiYuFaHuoFeiYong.Value;
                 newModel.CDianZhiTongChe = numericUpDownCDianZhiTongChe.Value;
@@ -265,6 +271,7 @@ namespace YunStore
                 newModel.DingZhiXiangFeiYong = numericUpDownDingZhiXiangFeiYong.Value;
                 newModel.EKOFaHuoShangPinChengBen = numericUpDownEKOFaHuoShangPinChengBen.Value;
                 newModel.FangWuZuJin = numericUpDownFangWuZuJin.Value;
+                newModel.ShuaDianFeiYou = numericUpDownShuaDian.Value;
                 newModel.FeiDiLaChengBen = numericUpDownFeiDiLaChengBen.Value;
 
                 newModel.GongZi = numericUpDownGongZi.Value;
@@ -370,6 +377,7 @@ namespace YunStore
             GuDingChengBen1Change();
         }
 
+       
         private void numericUpDownShuiWuFeiYong_ValueChanged(object sender, EventArgs e)
         {
             GuDingChengBen1Change();
@@ -400,11 +408,16 @@ namespace YunStore
                 numericUpDownZuanZhanFei.Value +
                 numericUpDownQiTaFeiYong.Value +
                 numericUpDownCDianZhiTongChe.Value +
+                numericUpDownShuaDian.Value +
                 numericUpDownChaoJiTuiJian.Value;
 
             StatProfit();
         }
+        private void numericUpDownShuaDian_ValueChanged(object sender, EventArgs e)
+        {
+            YingXiaoChengBen1Change();
 
+        }
         private void numericUpDownZhiTongChe_ValueChanged(object sender, EventArgs e)
         {
             YingXiaoChengBen1Change();
@@ -513,7 +526,11 @@ namespace YunStore
         /// </summary>
         void StatProfit()
         {
-            var profit = this.numericUpDownSale_TianMao.Value -
+
+            this.numericUpDownSale_TaoBao.Value = this.numericUpDownSale_Taobao_Alipay.Value - this.numericUpDownSale_TaoBao_ShuaDian.Value;
+            this.numericUpDownSale_TianMao.Value = this.numericUpDownSale_TianMao_Alipay.Value - this.numericUpDownSale_TianMao_ShuaDian.Value;
+
+            var profit = (this.numericUpDownSale_TianMao.Value + this.numericUpDownSale_TaoBao.Value) -
                      numericUpDownRenLiChengBen1.Value -
                      numericUpDownGuDingChengBen1.Value -
                      numericUpDownYingXiaoChengBen1.Value -
@@ -548,5 +565,6 @@ namespace YunStore
         {
             RenLiChengBen1Change();
         }
+
     }
 }

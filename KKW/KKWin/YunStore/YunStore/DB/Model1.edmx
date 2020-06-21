@@ -53,6 +53,8 @@
           <Property Name="ShuaDianFeiYou" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Sale_TaoBao_ShuaDian" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Sale_TianMao_ShuaDian" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Sale_TianMao_Alipay" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Sale_TaoBao_Alipay" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_user">
           <Key>
@@ -386,6 +388,8 @@
           <Property Name="ShuaDianFeiYou" Type="Decimal" Nullable="false" />
           <Property Name="Sale_TaoBao_ShuaDian" Type="Decimal" Nullable="false" />
           <Property Name="Sale_TianMao_ShuaDian" Type="Decimal" Nullable="false" />
+          <Property Name="Sale_TianMao_Alipay" Type="Decimal" Nullable="false" />
+          <Property Name="Sale_TaoBao_Alipay" Type="Decimal" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -533,6 +537,8 @@
           <EntitySetMapping Name="tb_profit">
             <EntityTypeMapping TypeName="qstoreModel.tb_profit">
               <MappingFragment StoreEntitySet="tb_profit">
+                <ScalarProperty Name="Sale_TaoBao_Alipay" ColumnName="Sale_TaoBao_Alipay" />
+                <ScalarProperty Name="Sale_TianMao_Alipay" ColumnName="Sale_TianMao_Alipay" />
                 <ScalarProperty Name="Sale_TianMao_ShuaDian" ColumnName="Sale_TianMao_ShuaDian" />
                 <ScalarProperty Name="Sale_TaoBao_ShuaDian" ColumnName="Sale_TaoBao_ShuaDian" />
                 <ScalarProperty Name="ShuaDianFeiYou" ColumnName="ShuaDianFeiYou" />

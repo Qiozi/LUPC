@@ -117,12 +117,12 @@
             // columnHeader6
             // 
             this.columnHeader6.Text = "";
-            this.columnHeader6.Width = 100;
+            this.columnHeader6.Width = 150;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "";
-            this.columnHeader7.Width = 180;
+            this.columnHeader7.Width = 150;
             // 
             // textBoxRemark
             // 

@@ -38,6 +38,9 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -70,9 +73,9 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -126,10 +129,12 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader34,
-            this.columnHeader3,
+            this.columnHeader40,
             this.columnHeader36,
-            this.columnHeader37,
+            this.columnHeader3,
+            this.columnHeader41,
             this.columnHeader38,
+            this.columnHeader37,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
@@ -148,6 +153,7 @@
             this.columnHeader19,
             this.columnHeader20,
             this.columnHeader21,
+            this.columnHeader39,
             this.columnHeader22,
             this.columnHeader23,
             this.columnHeader24,
@@ -181,18 +187,37 @@
             // 
             this.columnHeader2.Text = "利润";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader2.Width = 80;
+            this.columnHeader2.Width = 100;
             // 
             // columnHeader34
             // 
             this.columnHeader34.Text = "毛利";
             this.columnHeader34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader34.Width = 100;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "营业额-天猫";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader3.Width = 80;
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "天猫-刷单";
+            this.columnHeader36.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader36.Width = 80;
+            // 
+            // columnHeader37
+            // 
+            this.columnHeader37.Text = "营业额-淘宝";
+            this.columnHeader37.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader37.Width = 100;
+            // 
+            // columnHeader38
+            // 
+            this.columnHeader38.Text = "淘宝-刷单";
+            this.columnHeader38.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader38.Width = 80;
             // 
             // columnHeader4
             // 
@@ -386,20 +411,22 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "bg20.jpg");
             // 
-            // columnHeader36
+            // columnHeader39
             // 
-            this.columnHeader36.Text = "天猫-含刷单";
-            this.columnHeader36.Width = 80;
+            this.columnHeader39.Text = "刷单费用";
+            this.columnHeader39.Width = 70;
             // 
-            // columnHeader37
+            // columnHeader40
             // 
-            this.columnHeader37.Text = "营业额-淘宝";
-            this.columnHeader37.Width = 80;
+            this.columnHeader40.Text = "支付宝到帐-天猫";
+            this.columnHeader40.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader40.Width = 160;
             // 
-            // columnHeader38
+            // columnHeader41
             // 
-            this.columnHeader38.Text = "淘宝-含刷单";
-            this.columnHeader38.Width = 80;
+            this.columnHeader41.Text = "支付宝到帐-淘宝";
+            this.columnHeader41.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader41.Width = 160;
             // 
             // frmProfitStat
             // 
@@ -463,5 +490,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader36;
         private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ColumnHeader columnHeader38;
+        private System.Windows.Forms.ColumnHeader columnHeader39;
+        private System.Windows.Forms.ColumnHeader columnHeader40;
+        private System.Windows.Forms.ColumnHeader columnHeader41;
     }
 }

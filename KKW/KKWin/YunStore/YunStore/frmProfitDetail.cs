@@ -94,16 +94,28 @@ namespace YunStore
                 var li2 = new ListViewItem("营业额-天猫");
                 li2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TianMao)));
                 li2.BackColor = Color.WhiteSmoke;
-                li2.SubItems.Add("天猫-包含刷单费用");
-                li2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TianMao_ShuaDian)));
                 listView2.Items.Add(li2);
+
+                var li2_12 = new ListViewItem("支付宝到帐-天猫");
+                li2_12.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TianMao_Alipay)));
+                li2_12.BackColor = Color.WhiteSmoke;
+                li2_12.SubItems.Add("刷单-天猫");
+                li2_12.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TianMao_ShuaDian)));
+                listView2.Items.Add(li2_12);
+
+
 
                 var li2_1 = new ListViewItem("营业额-淘宝");
                 li2_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_Taobao)));
                 li2_1.BackColor = Color.WhiteSmoke;
-                li2_1.SubItems.Add("淘宝-包含刷单费用");
-                li2_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TaoBao_ShuaDian)));
                 listView2.Items.Add(li2_1);
+
+                var li2_1_1 = new ListViewItem("支付宝到帐-淘宝");
+                li2_1_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TaoBao_Alipay)));
+                li2_1_1.BackColor = Color.WhiteSmoke;
+                li2_1_1.SubItems.Add("刷单-淘宝");
+                li2_1_1.SubItems.Add(Util.FormatPrice(items.Sum(me => me.Sale_TaoBao_ShuaDian)));
+                listView2.Items.Add(li2_1_1);
 
                 var li3 = new ListViewItem("人力成本");
                 li3.SubItems.Add(Util.FormatPrice(items.Sum(me => me.RenLiChengBen1)));
@@ -168,6 +180,8 @@ namespace YunStore
 
                 var li13_2 = new ListViewItem("超级推荐");
                 li13_2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ChaoJiTuiJian)));
+                li13_2.SubItems.Add("刷单费用");
+                li13_2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ShuaDianFeiYou)));
                 listView2.Items.Add(li13_2);
 
                 var li14 = new ListViewItem("产品总成本");
@@ -231,17 +245,25 @@ namespace YunStore
                 var li2 = new ListViewItem("营业额-天猫");
                 li2.SubItems.Add(Util.FormatPrice(item.Sale_TianMao));
                 li2.BackColor = Color.WhiteSmoke;
-                li2.SubItems.Add("天猫-包含刷单费用");
-                li2.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_ShuaDian));
                 listView2.Items.Add(li2);
+
+                var li2_1_2 = new ListViewItem("支付宝到帐-天猫");
+                li2_1_2.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_Alipay));
+                li2_1_2.SubItems.Add("刷单-天猫");
+                li2_1_2.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_ShuaDian));
+                listView2.Items.Add(li2_1_2);
 
 
                 var li2_1 = new ListViewItem("营业额-淘宝");
                 li2_1.SubItems.Add(Util.FormatPrice(item.Sale_Taobao));
                 li2_1.BackColor = Color.WhiteSmoke;
-                li2_1.SubItems.Add("淘宝-包含刷单费用");
-                li2_1.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_ShuaDian));
                 listView2.Items.Add(li2_1);
+
+                var li2_1_1 = new ListViewItem("支付宝到帐-淘宝");
+                li2_1_1.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_Alipay));
+                li2_1_1.SubItems.Add("刷单-淘宝");
+                li2_1_1.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_ShuaDian));
+                listView2.Items.Add(li2_1_1);
 
 
                 var li3 = new ListViewItem("人力成本");
@@ -307,6 +329,8 @@ namespace YunStore
 
                 var li13_2 = new ListViewItem("超级推荐");
                 li13_2.SubItems.Add(Util.FormatPrice(item.ChaoJiTuiJian));
+                li13_2.SubItems.Add("刷单费用");
+                li13_2.SubItems.Add(Util.FormatPrice(item.ShuaDianFeiYou));
                 listView2.Items.Add(li13_2);
 
                 var li14 = new ListViewItem("产品总成本");

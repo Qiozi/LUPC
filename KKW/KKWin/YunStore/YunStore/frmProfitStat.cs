@@ -93,10 +93,12 @@ namespace YunStore
                     li.Tag = item.Gid.ToString();
                     li.SubItems.Add(Util.FormatPrice(item.Profit));
                     li.SubItems.Add(Util.FormatPrice(item.MaoLi));
-                    li.SubItems.Add(Util.FormatPrice(item.Sale_TianMao));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_Alipay));
                     li.SubItems.Add(Util.FormatPrice(item.Sale_TianMao_ShuaDian));
-                    li.SubItems.Add(Util.FormatPrice(item.Sale_Taobao));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_TianMao));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_Alipay));
                     li.SubItems.Add(Util.FormatPrice(item.Sale_TaoBao_ShuaDian));
+                    li.SubItems.Add(Util.FormatPrice(item.Sale_Taobao));
                     li.SubItems.Add(Util.FormatPrice(item.RenLiChengBen1));
                     li.SubItems.Add(Util.FormatPrice(item.GuDingChengBen1));
                     li.SubItems.Add(Util.FormatPrice(item.YingXiaoChengBen1));
@@ -114,7 +116,8 @@ namespace YunStore
                     li.SubItems.Add(Util.FormatPrice(item.CaiWuJiZhangFei));
                     li.SubItems.Add(Util.FormatPrice(item.ZhiTongChe));
                     li.SubItems.Add(Util.FormatPrice(item.ZuanZhanFei));
-                    li.SubItems.Add(Util.FormatPrice(item.QiTaZaFei));
+                    li.SubItems.Add(Util.FormatPrice(item.QiTaFeiYong));
+                    li.SubItems.Add(Util.FormatPrice(item.ShuaDianFeiYou));
                     li.SubItems.Add(Util.FormatPrice(item.CDianZhiTongChe));
                     li.SubItems.Add(Util.FormatPrice(item.ChaoJiTuiJian));
                     li.SubItems.Add(Util.FormatPrice(item.JinHuoChengBen));
