@@ -234,7 +234,7 @@ insert tb_timer
             {
                 if (RunASIDandhSynnex)
                 {
-                    if (EndAsi && EndDandh && EndSynnex )
+                    if (EndAsi && EndDandh && EndSynnex)
                     {
                         EndAsi = false;
                         EndDandh = false;
@@ -280,7 +280,7 @@ insert tb_timer
 
         #endregion
 
-  
+
         private void cCloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -695,7 +695,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             //epromToolStripMenuItemCompare_Click(null, null);
         }
 
-   
+
 
         private void d2aToolStripMenuItemWatch_Click(object sender, EventArgs e)
         {
@@ -769,7 +769,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             //最后一列的标号  即总的行数
             int rowCount = sheet.LastRowNum;
 
-            for (int i = 13; i < sheet.LastRowNum; i++)
+            for (int i = 12; i < sheet.LastRowNum; i++)
             {
                 IRow row = sheet.GetRow(i);
                 // sheet.GetRow(0).GetCell(0).is
@@ -779,7 +779,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                     D2aModel m1 = new D2aModel();
                     m1.mfp = row.GetCell(1).ToString();
                     decimal cost1;
-                    decimal.TryParse(row.GetCell(3).ToString().Replace("$",""), out cost1);
+                    decimal.TryParse(row.GetCell(3).ToString().Replace("$", ""), out cost1);
                     m1.cost = cost1;
                     m1.stock = 5;
                     if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
@@ -935,7 +935,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                         if (luc_sku != 0)
                         {
                             Config.ExecuteDateTable(string.Format(@"insert into tb_other_inc_match_lu_sku (lu_sku , other_inc_sku, other_inc_type) values 
-                                        ('{0}', '{1}', '{2}')", luc_sku, list[i].mfp, ltd_id));
+                                        ('{0}', '{1}', '{2}')", luc_sku, list[i].mfp.Trim(), ltd_id));
                         }
                     }
 
@@ -945,11 +945,11 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
 
                         Config.ExecuteNonQuery(string.Format(@"insert into {0} (part_sku, part_cost, store_quantity, mfp, part_name, luc_sku) values 
                     ( '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", table_name
-                                                             , list[i].mfp
+                                                             , list[i].mfp.Trim()
                                                              , list[i].cost
                                                              , list[i].stock
-                                                             , list[i].mfp
-                                                             , list[i].mfp
+                                                             , list[i].mfp.Trim()
+                                                             , list[i].mfp.Trim()
                                                              , luc_sku));
 
 

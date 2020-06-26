@@ -55,7 +55,8 @@ namespace LUComputers.Watch
 
 
         //ftp://8018640000:comben@ftp.dandh.com/itemlist
-        public bool DanDhWatch(string filename, bool IsSaveAll) {
+        public bool DanDhWatch(string filename, bool IsSaveAll)
+        {
 
             if (!System.IO.File.Exists(filename))
             {
@@ -71,17 +72,17 @@ namespace LUComputers.Watch
             SetStatus(null, "Dandh Watch Begin...");
             string table_name = CreateTable();
             string tableNameAll = DBProvider.TableName.DandhAll;
-            if(IsSaveAll)
+            if (IsSaveAll)
                 DBProvider.CreateTable.Table_Dandh(DBProvider.TableName.DandhAll);
 
-//            Config.ExecuteNonQuery(string.Format(@"
-//LOAD DATA INFILE '{0}' REPLACE INTO TABLE `{1}` 
-//FIELDS TERMINATED BY '|' 
-//OPTIONALLY ENCLOSED BY '' 
-//ESCAPED BY '\\' 
-//LINES TERMINATED BY '\r\n'
-//(stock_status,quantity_on_hand,rebate_flag,rebate_end_date,item_number,mfr_item_number,upc_code,subcategory_code,vendor_name,cost,rebate_amount,held_for_future_use,freight,ship_via,weight,short_description,long_description);
-//", filename.Replace("\\","\\\\"), table_name));
+            //            Config.ExecuteNonQuery(string.Format(@"
+            //LOAD DATA INFILE '{0}' REPLACE INTO TABLE `{1}` 
+            //FIELDS TERMINATED BY '|' 
+            //OPTIONALLY ENCLOSED BY '' 
+            //ESCAPED BY '\\' 
+            //LINES TERMINATED BY '\r\n'
+            //(stock_status,quantity_on_hand,rebate_flag,rebate_end_date,item_number,mfr_item_number,upc_code,subcategory_code,vendor_name,cost,rebate_amount,held_for_future_use,freight,ship_via,weight,short_description,long_description);
+            //", filename.Replace("\\","\\\\"), table_name));
             string stock_status = "";
             string quantity_on_hand = "";
             string rebate_flag = "";
@@ -109,28 +110,28 @@ namespace LUComputers.Watch
                     string[] fs = s.Split(new char[] { '|' });
                     if (fs.Length == 17)
                     {
-                        stock_status = fs[0];
-                        quantity_on_hand = fs[1];
-                        rebate_flag = fs[2];
-                        rebate_end_date = fs[3];
-                        item_number = fs[4];
-                        mfr_item_number = fs[5].Replace("\\", "\\\\").Replace("'", "\\'");
-                        upc_code = fs[6];
-                        subcategory_code = fs[7];
-                        vendor_name = fs[8];
-                        cost = fs[9];
-                        rebate_amount = fs[10];
-                        held_for_future_use = fs[11];
-                        freight = fs[12];
-                        ship_via = fs[13];
-                        weight = fs[14];
-                        short_description = fs[15].Replace("'", "\\'");
-                        long_description = fs[16].Replace("\\", "\\\\").Replace("'", "\\'");
+                        stock_status = fs[0].Trim();
+                        quantity_on_hand = fs[1].Trim();
+                        rebate_flag = fs[2].Trim();
+                        rebate_end_date = fs[3].Trim();
+                        item_number = fs[4].Trim();
+                        mfr_item_number = fs[5].Replace("\\", "\\\\").Replace("'", "\\'").Trim();
+                        upc_code = fs[6].Trim();
+                        subcategory_code = fs[7].Trim();
+                        vendor_name = fs[8].Trim();
+                        cost = fs[9].Trim();
+                        rebate_amount = fs[10].Trim();
+                        held_for_future_use = fs[11].Trim();
+                        freight = fs[12].Trim();
+                        ship_via = fs[13].Trim();
+                        weight = fs[14].Trim();
+                        short_description = fs[15].Replace("'", "\\'").Trim();
+                        long_description = fs[16].Replace("\\", "\\\\").Replace("'", "\\'").Trim();
                         if (long_description.Length > 330)
                             long_description = "";
                         //if (long_description.IndexOf("\xEF\xBF") > -1)
                         {
-                         //   long_description = "";
+                            //   long_description = "";
                         }
 
                         //long_description = "";
@@ -146,7 +147,7 @@ namespace LUComputers.Watch
                             , mfr_item_number
                             , upc_code
                             , quantity_on_hand));
-                            
+
 
                         if (IsSaveAll)
                         {
@@ -187,18 +188,18 @@ values {1}"
                           , table_name
                           , sbSQL.ToString().Substring(1) + ";"));
             SetStatus(null, "Dandh Watch End.");
-//            Config.ExecuteNonQuery(string.Format(@"delete from  tb_other_inc_part_info where other_inc_id='{0}';
-//
-//insert into tb_other_inc_part_info 
-//	( other_inc_sku, other_inc_id, other_inc_store_sum, 
-//	manufacture_part_number, 
-//	other_inc_price, 
-//	regdate, 
-//	last_regdate, 
-//	tag
-//	)
-// select item_number,  '{0}', quantity_on_hand,mfr_item_number, cost,now(),now(),1
-// from tb_other_inc_dandh oi inner join tb_other_inc_valid_lu_sku p on p.manufacturer_part_number=oi.mfr_item_number and p.manufacturer_part_number<> '' ", ltd_id));
+            //            Config.ExecuteNonQuery(string.Format(@"delete from  tb_other_inc_part_info where other_inc_id='{0}';
+            //
+            //insert into tb_other_inc_part_info 
+            //	( other_inc_sku, other_inc_id, other_inc_store_sum, 
+            //	manufacture_part_number, 
+            //	other_inc_price, 
+            //	regdate, 
+            //	last_regdate, 
+            //	tag
+            //	)
+            // select item_number,  '{0}', quantity_on_hand,mfr_item_number, cost,now(),now(),1
+            // from tb_other_inc_dandh oi inner join tb_other_inc_valid_lu_sku p on p.manufacturer_part_number=oi.mfr_item_number and p.manufacturer_part_number<> '' ", ltd_id));
 
             //Helper.SaveNewMatch hsn = new Helper.SaveNewMatch();
             //hsn.FilterSave(Ltd.wholesalerl_dandh);
@@ -227,24 +228,24 @@ set a.luc_sku = b.lu_sku where b.manufacturer_part_number=a.mfr_item_number and 
             //// 把HP notebook 加入到notebook DB里
             //// 
             //Config.ExecuteNonQuery("Delete from tb_supercom_notebook where brand like 'HP%'");
-            
-            
-//             HP
-//            Config.ExecuteNonQuery(string.Format(@"
-//insert into tb_supercom_notebook (mfp, cost, dandh_cost, quantity, ETA, name, brand, category, supercom_SKU, luc_sku, ltd)
-//select mfr_item_number, cost,cost, quantity_on_hand, '01/01/9999' f13,case when length(long_description)>300 then concat(left(long_description, 297),'...') else long_description end as long_description, vendor_name, 'Laptops' f9, item_number,luc_sku, 'DanDh' from 
-//{0} where subcategory_code in ('315') and vendor_name like 'HP%'"
-//                , table_name));
+
+
+            //             HP
+            //            Config.ExecuteNonQuery(string.Format(@"
+            //insert into tb_supercom_notebook (mfp, cost, dandh_cost, quantity, ETA, name, brand, category, supercom_SKU, luc_sku, ltd)
+            //select mfr_item_number, cost,cost, quantity_on_hand, '01/01/9999' f13,case when length(long_description)>300 then concat(left(long_description, 297),'...') else long_description end as long_description, vendor_name, 'Laptops' f9, item_number,luc_sku, 'DanDh' from 
+            //{0} where subcategory_code in ('315') and vendor_name like 'HP%'"
+            //                , table_name));
             //
             // ALL
-//            Config.ExecuteNonQuery(string.Format(@"
-//update tb_supercom_notebook n, {0} s 
-//set n.dandh_cost= s.cost
-//where n.mfp=s.mfr_item_number and s.mfr_item_number<>'' and length(s.mfr_item_number)>1", table_name));
+            //            Config.ExecuteNonQuery(string.Format(@"
+            //update tb_supercom_notebook n, {0} s 
+            //set n.dandh_cost= s.cost
+            //where n.mfp=s.mfr_item_number and s.mfr_item_number<>'' and length(s.mfr_item_number)>1", table_name));
 
-//            SetStatus(null, "Dandh Notebook..End..");
+            //            SetStatus(null, "Dandh Notebook..End..");
             Config.ExecuteNonQuery("delete from tb_other_inc_part_info where other_inc_id='" + ltd_id.ToString() + "'");
-            
+
             SetStatus(null, "Update Dandh::tb_other_inc_part_info;");
             Config.ExecuteNonQuery(string.Format(@"insert into tb_other_inc_part_info 
 	(luc_sku, other_inc_id, other_inc_sku, manufacture_part_number, 
@@ -269,39 +270,39 @@ select luc_sku, {1}, sku, mfp, price, quantity, 1, now() from {0}", table_name, 
             LtdHelper LH = new LtdHelper();
             int ltd_id = LH.LtdHelperValue(Ltd.wholesaler_dandh);
             string date_short_name = DateTime.Now.ToString("yyyyMMdd");
-           
+
             string talbe_name = DBProvider.TableName.GetPriceTableNamePart(new LtdHelper().FilterText(Ltd.wholesaler_dandh.ToString())) + date_short_name;// "store_danDh_part_" + date_short_name;
             DBProvider.CreateTable.PriceTable(talbe_name);
-               
-//            //
-//            // create table
-//            //
-//            Config.ExecuteNonQuery(@"
-// drop table  IF EXISTS `" + talbe_name + @"`;
-//
-// CREATE TABLE `" + talbe_name + @"` (              
-//                      `stock_status` varchar(5) default NULL,        
-//                      `quantity_on_hand` int(3) default NULL,        
-//                      `rebate_flag` varchar(5) default NULL,         
-//                      `rebate_end_date` varchar(12) default NULL,    
-//                      `item_number` varchar(30) default NULL,        
-//                      `mfr_item_number` varchar(30) default NULL,    
-//                      `upc_code` varchar(30) default NULL,           
-//                      `subcategory_code` int(6) default NULL,        
-//                      `vendor_name` varchar(50) default NULL,        
-//                      `cost` decimal(8,2) default NULL,              
-//                      `rebate_amount` decimal(8,2) default NULL,     
-//                      `held_for_future_use` int(6) default NULL,     
-//                      `freight` decimal(5,2) default NULL,           
-//                      `ship_via` varchar(5) default NULL,            
-//                      `weight` decimal(8,2) default NULL,            
-//                      `short_description` varchar(150) default NULL,  
-//                      `long_description` varchar(350) default NULL,
-//                      `luc_sku` int(6) default NULL,
-//                      `regdate` timestamp NULL default CURRENT_TIMESTAMP           
-//                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
-//
-//");
+
+            //            //
+            //            // create table
+            //            //
+            //            Config.ExecuteNonQuery(@"
+            // drop table  IF EXISTS `" + talbe_name + @"`;
+            //
+            // CREATE TABLE `" + talbe_name + @"` (              
+            //                      `stock_status` varchar(5) default NULL,        
+            //                      `quantity_on_hand` int(3) default NULL,        
+            //                      `rebate_flag` varchar(5) default NULL,         
+            //                      `rebate_end_date` varchar(12) default NULL,    
+            //                      `item_number` varchar(30) default NULL,        
+            //                      `mfr_item_number` varchar(30) default NULL,    
+            //                      `upc_code` varchar(30) default NULL,           
+            //                      `subcategory_code` int(6) default NULL,        
+            //                      `vendor_name` varchar(50) default NULL,        
+            //                      `cost` decimal(8,2) default NULL,              
+            //                      `rebate_amount` decimal(8,2) default NULL,     
+            //                      `held_for_future_use` int(6) default NULL,     
+            //                      `freight` decimal(5,2) default NULL,           
+            //                      `ship_via` varchar(5) default NULL,            
+            //                      `weight` decimal(8,2) default NULL,            
+            //                      `short_description` varchar(150) default NULL,  
+            //                      `long_description` varchar(350) default NULL,
+            //                      `luc_sku` int(6) default NULL,
+            //                      `regdate` timestamp NULL default CURRENT_TIMESTAMP           
+            //                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
+            //
+            //");
             return talbe_name;
         }
 
@@ -309,7 +310,7 @@ select luc_sku, {1}, sku, mfp, price, quantity, 1, now() from {0}", table_name, 
         /// DanDH Notebook
         /// </summary>
         public void UpdataRemote()
-        { 
+        {
             //
             // 附加DanDh
             string DanDh_table_name = new LtdHelper().GetLastStoreTableName(Ltd.wholesaler_dandh);
