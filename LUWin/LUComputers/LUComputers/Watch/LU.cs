@@ -59,7 +59,7 @@ insert into tb_other_inc_run_date
                              `adjustment` decimal(8,2) default '0',
                              `prodType` varchar(20) default 'NEW',
                              PRIMARY KEY  (`id`)      
-                  ) ENGINE=InnoDB DEFAULT CHARSET=latin1  ; 
+                  ) ENGINE=MyISAM DEFAULT CHARSET=latin1  ; 
 ");
             return talbe_name;
         }
@@ -348,7 +348,7 @@ delete from tb_other_inc_shopbot_mfp_no_exist where mfp='{0}' and prodType='{1}'
                              `adjustment` decimal(8,2) default '0',
                              save_price decimal(8,2) default '0',
                              PRIMARY KEY  (`id`)      
-                  ) ENGINE=InnoDB DEFAULT CHARSET=latin1  ; 
+                  ) ENGINE=MyISAM DEFAULT CHARSET=latin1  ; 
 ");
 
             return talbe_name;

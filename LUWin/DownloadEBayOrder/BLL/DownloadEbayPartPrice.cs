@@ -45,16 +45,17 @@ namespace DownloadEBayOrder
             ////Get XML Document from Embedded  Resources
             //xmlDoc.Load((Server.MapPath("/q_admin/ebayMaster/Online/Xml/GeteBayOfficialTimeRequest.xml")));
 
-            ////Set the various node values   attr1858_26443
-            //xmlDoc["GeteBayOfficialTimeRequest"]["RequesterCredentials"]["eBayAuthToken"].InnerText = userToken;
+  ////Set the various node values   attr1858_26443
+  //xmlDoc["GeteBayOfficialTimeRequest"]["RequesterCredentials"]["eBayAuthToken"].InnerText = userToken;
 
+  //< Version > 1157 </ Version >
             string sendXml = string.Format(@"<?xml version=""1.0"" encoding=""utf-8""?>
 <GetMyeBaySellingRequest xmlns=""urn:ebay:apis:eBLBaseComponents"">
   <RequesterCredentials>
     <eBayAuthToken>{0}</eBayAuthToken>
   </RequesterCredentials>
-  <Version>677</Version>
   <ActiveList>
+    <Include>true</Include>
     <Sort>TimeLeft</Sort>
     <Pagination>
       <EntriesPerPage>100</EntriesPerPage>
@@ -93,7 +94,7 @@ namespace DownloadEBayOrder
 
             //Add Compatability Level to HTTP Headers
             //Regulates versioning of the XML interface for the API
-            request.Headers.Add("X-EBAY-API-COMPATIBILITY-LEVEL: 677");
+            request.Headers.Add("X-EBAY-API-COMPATIBILITY-LEVEL: 1157");
 
             //Add function name, SiteID and Detail Level to HTTP Headers
             request.Headers.Add("X-EBAY-API-CALL-NAME:GetMyeBaySelling");

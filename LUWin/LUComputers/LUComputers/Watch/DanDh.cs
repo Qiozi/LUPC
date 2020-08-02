@@ -300,7 +300,7 @@ select luc_sku, {1}, sku, mfp, price, quantity, 1, now() from {0}", table_name, 
             //                      `long_description` varchar(350) default NULL,
             //                      `luc_sku` int(6) default NULL,
             //                      `regdate` timestamp NULL default CURRENT_TIMESTAMP           
-            //                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
+            //                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1           
             //
             //");
             return talbe_name;

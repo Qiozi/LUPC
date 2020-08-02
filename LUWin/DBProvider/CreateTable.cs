@@ -39,7 +39,7 @@ namespace LUComputers.DBProvider
                     `quantity` int(6) not null default 0, 
                     `regdate` timestamp NULL default CURRENT_TIMESTAMP,              
                     PRIMARY KEY  (`id`)         
-                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ");
+                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ");
 
             Config.ExecuteNonQuery(@"ALTER TABLE `ltd_info`.`" + tableName + @"` 
 ADD INDEX `mfp` (`mfp` ASC);
@@ -95,7 +95,7 @@ ADD INDEX `mfp` (`mfp` ASC);
                     `long_name` varchar(200) default Null,
                     `regdate` timestamp NULL default CURRENT_TIMESTAMP,              
                     PRIMARY KEY  (`serial_no`)         
-                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
+                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1           
 
 ");
         }
@@ -131,7 +131,7 @@ ADD INDEX `mfp` (`mfp` ASC);
                       `luc_sku` int(6) default 0,
                       `regdate` timestamp not NULL default CURRENT_TIMESTAMP,
                        PRIMARY KEY (`id`)          
-                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
+                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1           
 
 ");
         }
@@ -161,7 +161,7 @@ ADD INDEX `mfp` (`mfp` ASC);
                     `upc` varchar(50) default null,
                     `regdate` timestamp NULL default CURRENT_TIMESTAMP,
                     PRIMARY KEY  (`id`)                 
-                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
+                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1           
 
 ");
         }

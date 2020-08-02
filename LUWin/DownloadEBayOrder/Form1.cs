@@ -764,12 +764,12 @@ order by sys_tmp_detail desc ");
         {
             try
             {
-                System.IO.StreamWriter sw22 = new System.IO.StreamWriter("C:\\Workspaces\\WebAdmin\\soft_img\\match_ebay_price.txt", false);
-                System.IO.StreamWriter sw2 = new System.IO.StreamWriter("C:\\Workspaces\\Web\\soft_img\\match_ebay_price.txt", false);
-                sw2.WriteLine(DateTime.Now.ToString() + " Runing");
-                sw2.Close();
-                sw22.WriteLine(DateTime.Now.ToString() + " Runing");
-                sw22.Close();
+                //System.IO.StreamWriter sw22 = new System.IO.StreamWriter("C:\\Workspaces\\WebAdmin\\soft_img\\match_ebay_price.txt", false);
+                //System.IO.StreamWriter sw2 = new System.IO.StreamWriter("C:\\Workspaces\\Web\\soft_img\\match_ebay_price.txt", false);
+                //sw2.WriteLine(DateTime.Now.ToString() + " Runing");
+                //sw2.Close();
+                //sw22.WriteLine(DateTime.Now.ToString() + " Runing");
+                //sw22.Close();
 
                 DownloadEbayPartPrice.RunStatus = true;
                 string storePath = BLL.Variable.ebayPartPricePath;

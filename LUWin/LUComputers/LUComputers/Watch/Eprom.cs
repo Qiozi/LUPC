@@ -282,7 +282,7 @@ insert into tb_other_inc_run_date
 		            `part_name` varchar(120) default Null,
                     `regdate` timestamp NULL default CURRENT_TIMESTAMP,              
                     PRIMARY KEY  (`serial_no`)         
-                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1           
+                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1           
 
 ");
             return talbe_name;
