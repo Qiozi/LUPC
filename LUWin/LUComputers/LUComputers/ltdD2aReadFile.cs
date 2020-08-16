@@ -80,61 +80,74 @@ namespace LUComputers
             //最后一列的标号  即总的行数
             int rowCount = sheet.LastRowNum;
 
-            for (int i = 14; i < sheet.LastRowNum; i++)
+            for (int i = 11; i < sheet.LastRowNum; i++)
             {
                 IRow row = sheet.GetRow(i);
                 // sheet.GetRow(0).GetCell(0).is
                 if (row == null) continue;
-                if (row.GetCell(0) != null)
-                {
-                    D2aModel m1 = new D2aModel();
-                    m1.mfp = row.GetCell(0).ToString();
-                    decimal cost1;
-                    decimal.TryParse(row.GetCell(6).ToString(), out cost1);
-                    m1.cost = cost1;
-                    m1.stock = 5;
-                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
-                        list.Add(m1);
-                }
-                if (row.GetCell(8) != null)
-                {
-                    D2aModel m1 = new D2aModel();
-                    m1.mfp = row.GetCell(8).ToString();
-                    decimal cost1;
-                    decimal.TryParse(row.GetCell(15).ToString(), out cost1);
-                    m1.cost = cost1;
-                    m1.stock = 5;
-                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
-                        list.Add(m1);
-                }
+                //if (row.GetCell(1) != null)
+                //{
+                //    D2aModel m1 = new D2aModel();
+                //    m1.mfp = row.GetCell(1).ToString();
+                //    decimal cost1;
+                //    decimal.TryParse(row.GetCell(3).ToString(), out cost1);
+                //    m1.cost = cost1;
+                //    m1.stock = 5;
+                //    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+                //        list.Add(m1);
+                //}
+                list.Add(GetD2aData(row, 1, 3));
+                list.Add(GetD2aData(row, 5, 7));
+                list.Add(GetD2aData(row, 9, 11));
+                list.Add(GetD2aData(row, 13, 15));
+                list.Add(GetD2aData(row, 17, 19));
+                list.Add(GetD2aData(row, 21, 23));
+                list.Add(GetD2aData(row, 25, 27));
+                list.Add(GetD2aData(row, 29, 31));
+                list.Add(GetD2aData(row, 33, 35));
             }
-            ISheet sheet2 = workbook.GetSheetAt(1);
+            //ISheet sheet2 = workbook.GetSheetAt(1);
 
-            for (int i = 11; i < sheet2.LastRowNum; i++)
-            {
-                IRow row = sheet2.GetRow(i);
-                // sheet.GetRow(0).GetCell(0).is
-                if (row == null) continue;
-                if (row.GetCell(2) != null)
-                {
-                    D2aModel m1 = new D2aModel();
-                    m1.mfp = row.GetCell(2).ToString();
-                    decimal cost1;
-                    decimal.TryParse(row.GetCell(3).ToString(), out cost1);
-                    m1.cost = cost1;
-                    m1.stock = 5;
-                    if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
-                        list.Add(m1);
-                }
+            //for (int i = 11; i < sheet2.LastRowNum; i++)
+            //{
+            //    IRow row = sheet2.GetRow(i);
+            //    // sheet.GetRow(0).GetCell(0).is
+            //    if (row == null) continue;
+            //    if (row.GetCell(2) != null)
+            //    {
+            //        D2aModel m1 = new D2aModel();
+            //        m1.mfp = row.GetCell(2).ToString();
+            //        decimal cost1;
+            //        decimal.TryParse(row.GetCell(3).ToString(), out cost1);
+            //        m1.cost = cost1;
+            //        m1.stock = 5;
+            //        if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+            //            list.Add(m1);
+            //    }
 
-            }
+            //}
 
             workbook = null;
             sheet = null;
-            sheet2 = null;
             sr.Close();
             sr.Dispose();
-            return list;
+            return list.Where(me => me.cost > 0M).ToList();
+        }
+
+        private D2aModel GetD2aData(IRow row, int index1, int index2)
+        {
+            if (row.GetCell(index1) != null)
+            {
+                D2aModel m1 = new D2aModel();
+                m1.mfp = row.GetCell(index1).ToString();
+                decimal cost1;
+                decimal.TryParse(row.GetCell(index2).ToString(), out cost1);
+                m1.cost = cost1;
+                m1.stock = 5;
+                if (!string.IsNullOrEmpty(m1.mfp) && cost1 != 0)
+                    return m1;
+            }
+            return new D2aModel { cost = 0M };
         }
 
         private void button2_Click(object sender, EventArgs e)

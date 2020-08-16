@@ -25,6 +25,13 @@ namespace LUComputers
 
         CallBackDelegate cbd = MainCloseWin;
 
+        // d2a 可以更新的类id
+        List<int> d2aCateIdList = new List<int>
+        {
+            21,91,31,
+            22,29,118, 119,120
+        };
+
         private static void MainCloseWin(string message)
         {
             // synnex onsale 
@@ -720,7 +727,7 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                     eprom.ViewCompare(Ltd.wholesaler_d2a);
                     UpdateLtdInfoToRemote(Ltd.wholesaler_d2a);
                     Config.RemoteExecuteNonQuery(@"delete from tb_other_inc_part_info where other_inc_id=17 and luc_sku not in 
-(Select Product_Serial_no from tb_product where menu_child_serial_no in (22,29,118, 119,120))");
+(Select Product_Serial_no from tb_product where menu_child_serial_no in (" + string.Join(",", d2aCateIdList) + "))");
                     eprom.SetStatus(null, null, Ltd.wholesaler_d2a, "End.");
                 }
                 else
@@ -911,6 +918,8 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
             return list;
         }
 
+
+
         /// <summary>
         /// d2a 
         /// </summary>
@@ -931,6 +940,16 @@ select lu_sku product_serial_no, manufacturer_part_number, price, cost, discount
                     if (luc_sku == 0)
                     {
                         luc_sku = Watch.LU.GetSKUByMfp(list[i].mfp, luSkuDT);
+
+                        if (luc_sku == 0 && !string.IsNullOrEmpty(list[i].mfp.Trim()))
+                        {
+                            DataTable resDt = Config.RemoteExecuteDateTable(string.Format("select product_serial_no as lu_sku, manufacturer_part_number from tb_product where manufacturer_part_number='{0}' and menu_child_serial_no in (" + string.Join(",", d2aCateIdList) + ")", luSkuDT));
+                            if (resDt.Rows.Count > 0)
+                            {
+                                luc_sku = int.Parse(resDt.Rows[0][0].ToString());
+                                Config.RemoteExecuteNonQuery("insert into tb_other_inc_match_lu_sku (lu_sku, other_inc_sku, other_inc_type, is_have_info, prodType) values('" + luc_sku + "','" + list[i].mfp.Trim() + "','" + ltd_id + "','0','NEW')");
+                            }
+                        }
 
                         if (luc_sku != 0)
                         {
@@ -996,32 +1015,10 @@ select luc_sku, {1}, part_sku, mfp, part_cost, store_quantity, 1, now() from {0}
 
         private void mmaxToolStripMenuItemWatch_Click(object sender, EventArgs e)
         {
-            //RunTimer.WatcherInfos.MMAX.begin = true;
-            Thread t = new Thread(WatchMMAX);
-            t.Start();
+
         }
 
-        void WatchMMAX()
-        {
-            //if (RunTimer.WatcherInfos.MMAX.begin)
-            {
-                try
-                {
-                    string filepath = cost_file_path + "\\MMAX.xls";
-                    if (eprom.Run(Ltd.wholesaler_MMAX, filepath))
-                    {
-                        eprom.ViewCompare(Ltd.wholesaler_MMAX);
-                        UpdateLtdInfoToRemote(Ltd.wholesaler_MMAX);
-                        eprom.SetStatus(null, null, Ltd.wholesaler_MMAX, "End.");
-                    }
-                    else
-                        throw new Exception("MMAX file isn't exist.");
-                }
-                catch (Exception ex) { Helper.Logs.WriteErrorLog(ex); }
-                RunTimer.WatcherInfos.MMAX.begin = false;
-                RunTimer.WatcherInfos.MMAX.running = false;
-            }
-        }
+
 
         private void mmaxToolStripMenuItemUpdate_Click(object sender, EventArgs e)
         {
@@ -1894,7 +1891,7 @@ where table_schema='ltd_info' and table_name like '{0}%' order by table_name des
                 filename = cost_file_path + "\\d2a.xlsx";
             ltdD2aReadFile f = new ltdD2aReadFile(filename);
             f.StartPosition = FormStartPosition.CenterParent;
-            if (f.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
+            if (f.ShowDialog() == DialogResult.Yes)
             {
                 d2aToolStripMenuItemCompare_Click(null, null);
                 d2aToolStripMenuItemUpdate_Click(null, null);
