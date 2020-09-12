@@ -199,6 +199,8 @@ else  ebay_system_name end as cutom_label from tb_ebay_system where id='{0}'", s
     /// <summary>
     /// 取得return policy  字符串
     /// xml格式
+    /// 
+    /// 除去  <RefundOption>MoneyBack</RefundOption> 因为只有美国有效。 （2020.09.12）
     /// </summary>
     /// <param name="luc_sku"></param>
     /// <returns></returns>
@@ -210,8 +212,7 @@ else  ebay_system_name end as cutom_label from tb_ebay_system where id='{0}'", s
             if (dt.Rows[0][0].ToString() == "1")
             {
                 return @"<ReturnPolicy>
-            <ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>
-          <RefundOption>MoneyBack</RefundOption>
+            <ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>     
           <ReturnsWithinOption>Days_30</ReturnsWithinOption>
           <Description>Box not open, seal not broken, 15% restocking charge, shipping fees not refundable.</Description>
           <ShippingCostPaidByOption>Buyer</ShippingCostPaidByOption>
@@ -220,8 +221,7 @@ else  ebay_system_name end as cutom_label from tb_ebay_system where id='{0}'", s
            
         }
          return @"<ReturnPolicy>
-            <ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>
-          <RefundOption>MoneyBack</RefundOption>
+            <ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>      
           <ReturnsWithinOption>Days_30</ReturnsWithinOption>
           <Description> 15% restocking charge will be applied, shipping fees not refundable.</Description>
           <ShippingCostPaidByOption>Buyer</ShippingCostPaidByOption>

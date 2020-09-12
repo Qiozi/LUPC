@@ -333,17 +333,12 @@ namespace DownloadEBayOrder
         {
             while (true)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(3000);
 
                 if (DateTime.Now.ToString("HH:mm") == "03:20")
                 {
                     _run = true; // Run
                 }
-                //else if (DateTime.Now.ToString("HH:mm") == "23:59")
-                //{
-                //    _run = false; // Stop
-                //}
-
 
                 if (!_run)
                 {

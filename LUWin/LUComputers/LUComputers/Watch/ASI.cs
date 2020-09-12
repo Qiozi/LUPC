@@ -95,7 +95,7 @@ namespace LUComputers.Watch
             int countAll = lines.Length;
             var sqlAllPart = string.Empty;
 
-            DataTable luSkuDT = Config.ExecuteDateTable(string.Format("select lu_sku,manufacturer_part_number from tb_other_inc_valid_lu_sku where prodType='{0}' ",  "NEW"));
+            DataTable luSkuDT = Config.ExecuteDateTable(string.Format("select lu_sku,manufacturer_part_number from tb_other_inc_valid_lu_sku where prodType='{0}' ", "NEW"));
 
             foreach (var s in lines)
             {
@@ -174,21 +174,22 @@ insert into {0}(asi_sku, itmeid, description, vendor, cat, quantity, price,weigh
                 }
                 catch (Exception ex)
                 {
-                    Helper.Logs.WriteErrorLog(ex);
+                    if (ex.Message.IndexOf("\\") == -1)
+                        Helper.Logs.WriteErrorLog(ex);
                 }
             }
 
             // 一次性插入所有。
             try
             {
-//                if (!string.IsNullOrEmpty(sqlAllPart))
-//                {
-//                    Config.ExecuteNonQuery(string.Format(@"
-//insert into {0}(asi_sku, itmeid, description, vendor, cat, quantity, price,weight, size, unit, sub_category, status, luc_sku, upc) values 
-//{1}"
-//                                                                                , tableNameAll
-//                                                                                , sqlAllPart.Substring(0, sqlAllPart.Length - 1) + ";"));
-//                }
+                //                if (!string.IsNullOrEmpty(sqlAllPart))
+                //                {
+                //                    Config.ExecuteNonQuery(string.Format(@"
+                //insert into {0}(asi_sku, itmeid, description, vendor, cat, quantity, price,weight, size, unit, sub_category, status, luc_sku, upc) values 
+                //{1}"
+                //                                                                                , tableNameAll
+                //                                                                                , sqlAllPart.Substring(0, sqlAllPart.Length - 1) + ";"));
+                //                }
             }
             catch (Exception ex)
             {

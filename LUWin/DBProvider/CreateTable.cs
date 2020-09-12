@@ -19,7 +19,7 @@ namespace LUComputers.DBProvider
 
             string shortName = tableName.Replace(DateTime.Now.ToString("yyyyMMdd"), "");
             DataTable dt = Config.ExecuteDateTable("show tables like '%"+ shortName +"%'");
-            for (int i = 0; i < dt.Rows.Count - 360; i++)
+            for (int i = 0; i < dt.Rows.Count - 60; i++)
             {
                 Config.ExecuteNonQuery("drop table " + dt.Rows[i][0].ToString() + ";");
             }
@@ -39,7 +39,7 @@ namespace LUComputers.DBProvider
                     `quantity` int(6) not null default 0, 
                     `regdate` timestamp NULL default CURRENT_TIMESTAMP,              
                     PRIMARY KEY  (`id`)         
-                    ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ");
+                    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ");
 
             Config.ExecuteNonQuery(@"ALTER TABLE `ltd_info`.`" + tableName + @"` 
 ADD INDEX `mfp` (`mfp` ASC);

@@ -26,10 +26,11 @@ public class GetItemSpecifics
         var context = new nicklu2Entities();
         List<KeyValuePair<string, string>> result = new List<KeyValuePair<string, string>>();
 
-        result.Add(new KeyValuePair<string, string>("Brand", "Custom, Whitebox"));
+        result.Add(new KeyValuePair<string, string>("Brand", "Unbranded/Generic"));
         result.Add(new KeyValuePair<string, string>("MPN", "LUComputers " + sysSku.ToString()));
-        result.Add(new KeyValuePair<string, string>("UPC", "Does not apply"));
-        result.Add(new KeyValuePair<string, string>("Warranty", "Standard (1) year parts warranty"));
+        result.Add(new KeyValuePair<string, string>("Type", "Desktop"));
+        // sresult.Add(new KeyValuePair<string, string>("UPC", "Does not apply"));
+        //result.Add(new KeyValuePair<string, string>("Warranty", "Standard (1) year parts warranty"));
 
         // DataTable dt = Config.ExecuteDataTable("Select ItemSpecificsName, ItemSpecificsValue from tb_ebay_system_item_specifics where system_sku='" + sysSku + "'");
 
@@ -44,7 +45,7 @@ public class GetItemSpecifics
         //        }
         //    }
         //}
-        if (result.Count == 4)
+        if (result.Count == 3)
         {
             DataTable commDt = Config.ExecuteDataTable(string.Format(@"select p.short_name_for_sys, comm.comment, p.product_serial_no,p.producter_serial_no from tb_ebay_system_parts s 
 	inner join tb_product p on p.product_serial_no = s.luc_sku 
@@ -60,7 +61,7 @@ public class GetItemSpecifics
                 var partSku = int.Parse(dr["product_serial_no"].ToString());
                 if (comment == "Memory")
                 {
-                    result.Add(new KeyValuePair<string, string>("Memory", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
+                    result.Add(new KeyValuePair<string, string>("RAM Size", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
                 }
 
                 if (comment == "Windows OS")
@@ -68,10 +69,10 @@ public class GetItemSpecifics
                     result.Add(new KeyValuePair<string, string>("Operating System", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
                 }
 
-                if (comment == "Case")
-                {
-                    result.Add(new KeyValuePair<string, string>("Case", string.IsNullOrEmpty(dr["producter_serial_no"].ToString()) ? "Not Included" : dr["producter_serial_no"].ToString()));
-                }
+                //if (comment == "Case")
+                //{
+                //    result.Add(new KeyValuePair<string, string>("Case", string.IsNullOrEmpty(dr["producter_serial_no"].ToString()) ? "Not Included" : dr["producter_serial_no"].ToString()));
+                //}
 
                 if (comment == "CPU")
                 {
@@ -85,17 +86,17 @@ public class GetItemSpecifics
 
                 if (comment == "Video")
                 {
-                    result.Add(new KeyValuePair<string, string>("Graphics Processing Type", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
+                    result.Add(new KeyValuePair<string, string>("GPU", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
                 }
 
-                if (comment == "Power Supply")
-                {
-                    result.Add(new KeyValuePair<string, string>("Power Supply", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
-                }
+                //if (comment == "Power Supply")
+                //{
+                //    result.Add(new KeyValuePair<string, string>("Power Supply", string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()) ? "Not Included" : dr["short_name_for_sys"].ToString()));
+                //}
 
                 if (comment.IndexOf("SSD") > -1)
                 {
-                    if (string.IsNullOrEmpty(storageType)&& !string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()))
+                    if (string.IsNullOrEmpty(storageType) && !string.IsNullOrEmpty(dr["short_name_for_sys"].ToString()))
                     {
                         storageType = "SSD (Solid State Drive)";
                     }
@@ -129,17 +130,17 @@ public class GetItemSpecifics
                 //    hdd += dr["short_name_for_sys"].ToString() + ", ";
                 //}
                 //Hardware Connectivity
-                if (comment.IndexOf("Motherboard") > -1)
-                {
-                    var specificial = context.tb_ebay_system_item_specifics.FirstOrDefault(p => p.system_sku.Equals(partSku) && p.ItemSpecificsName.Equals("Input/Output Ports"));
-                    if (specificial != null)
-                    {
-                        if (!string.IsNullOrEmpty(specificial.ItemSpecificsValue))
-                        {
-                            result.Add(new KeyValuePair<string, string>("Hardware Connectivity", specificial.ItemSpecificsValue));
-                        }
-                    }
-                }
+                //if (comment.IndexOf("Motherboard") > -1)
+                //{
+                //    var specificial = context.tb_ebay_system_item_specifics.FirstOrDefault(p => p.system_sku.Equals(partSku) && p.ItemSpecificsName.Equals("Input/Output Ports"));
+                //    if (specificial != null)
+                //    {
+                //        if (!string.IsNullOrEmpty(specificial.ItemSpecificsValue))
+                //        {
+                //            result.Add(new KeyValuePair<string, string>("Hardware Connectivity", specificial.ItemSpecificsValue));
+                //        }
+                //    }
+                //}
             }
             if (hdd != "" && hdd.Replace(",", "").Replace(" ", "") != "")
             {
