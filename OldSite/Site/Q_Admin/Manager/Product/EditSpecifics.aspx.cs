@@ -54,6 +54,7 @@ public partial class Q_Admin_Manager_Product_EditSpecifics : PageBase
             if (node.Name == "NameRecommendation")
             {
                 var valueRecommend = new List<string>();
+                var required = false;
 
                 foreach (XmlNode childnode in node.ChildNodes)
                 {
@@ -61,7 +62,7 @@ public partial class Q_Admin_Manager_Product_EditSpecifics : PageBase
                     {
                         foreach (XmlNode subnode in childnode.ChildNodes)
                         {
-                           if (!string.IsNullOrEmpty(subnode.InnerText))
+                            if (!string.IsNullOrEmpty(subnode.InnerText))
                             {
                                 valueRecommend.Add(
                                      subnode.InnerText
@@ -73,14 +74,20 @@ public partial class Q_Admin_Manager_Product_EditSpecifics : PageBase
                     else if (childnode.Name == "ValidationRules")
                     {
                         // TODO
+                        if (childnode["UsageConstraint"].Name != null)
+                        {
+                            required = childnode["UsageConstraint"].InnerText.ToLower() == "Required".ToLower();
+                        }
                     }
+                  
                 }
 
                 list.Add(new ProductSpecifices
                 {
                     Name = node.FirstChild.InnerText,
                     ValueRecommendation = valueRecommend,
-                    Text = string.Empty
+                    Text = string.Empty,
+                    Required = required
                 });
             }
         }
@@ -267,4 +274,6 @@ public class ProductSpecifices
     public string Text { get; set; }
 
     public List<string> ValueRecommendation { get; set; }
+
+    public bool Required { get; set; }
 }

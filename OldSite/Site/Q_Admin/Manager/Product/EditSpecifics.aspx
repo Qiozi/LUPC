@@ -22,6 +22,8 @@
                 <asp:Repeater runat="server" ID="rptList" OnItemDataBound="rptList_ItemDataBound" OnItemCommand="rptList_ItemCommand">
                     <ItemTemplate>
                         <tr>
+                            <td><%# DataBinder.Eval(Container.DataItem, "Required").ToString()%>
+                                <asp:Label runat="server" CssClass="" ID="_lblRequired" Text='<%# DataBinder.Eval(Container.DataItem, "Required").ToString().ToLower() =="true"?"*":"" %>' ForeColor="Red"></asp:Label></td>
                             <td>
                                 <asp:TextBox runat="server" CssClass="form-control mg-0" ID="_txtName" Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>'></asp:TextBox>
                             </td>

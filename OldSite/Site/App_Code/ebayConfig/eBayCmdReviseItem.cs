@@ -452,10 +452,13 @@ public class eBayCmdReviseItem
         esrhm.Content = sssss;
         esrhm.is_sys = isSys;
         esrhm.SKU = sku;
+        esrhm.is_ok = true;
         esrhm.is_modify = true;
         // esrhm.Create();
         context.tb_ebay_send_xml_result_history.Add(esrhm);
         context.SaveChanges();
+
+        var esrhmId = esrhm.id;
 
         //get the root node, for ease of use
         XmlNode root = xmlDoc["ReviseItemResponse"];
@@ -463,6 +466,9 @@ public class eBayCmdReviseItem
         //There have been Errors
         if (root["Errors"] != null)
         {
+            esrhm.is_ok = false;
+            context.SaveChanges();
+
             //Response.Write(root["Ack"].InnerText);
             string errorCode = root["Errors"]["ErrorCode"].InnerText;
             string errorShort = root["Errors"]["ShortMessage"].InnerText;

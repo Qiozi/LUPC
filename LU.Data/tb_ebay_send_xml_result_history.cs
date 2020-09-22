@@ -21,5 +21,7 @@ namespace LU.Data
         public Nullable<bool> is_modify { get; set; }
         public string comm { get; set; }
         public System.DateTime regdate { get; set; }
+
+        public Nullable<bool> is_ok { get; set; }
     }
 }
