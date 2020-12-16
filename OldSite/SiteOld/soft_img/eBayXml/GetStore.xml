@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<GetStoreRequest xmlns="urn:ebay:apis:eBLBaseComponents">
-  <RequesterCredentials>
-    <eBayAuthToken>{0}</eBayAuthToken>
-  </RequesterCredentials>
-  <LevelLimit>1</LevelLimit>
-  <CategoryStructureOnly>true</CategoryStructureOnly>
-</GetStoreRequest>
