@@ -148,7 +148,7 @@ select menu_child_serial_no  from tb_product_category where menu_parent_serial_n
         for (int i = 0; i < part_dt.Rows.Count; i++)
         {
             DataRow dr = part_dt.Rows[i];
-            sb.Append(string.Format(@"<li>{0}", dr["menu_child_name"].ToString()));
+            sb.Append(string.Format(@"<li><label>{0}</label>", dr["menu_child_name"].ToString()));
             DataTable childDT = Config.ExecuteDataTable(string.Format(@"select menu_child_serial_no, menu_child_name, menu_is_exist_sub, is_virtual from tb_product_category 
 where tag=1 and menu_parent_serial_no=1 and menu_pre_serial_no ={0} {1} order by menu_child_order asc"
                 , dr["menu_child_serial_no"].ToString()
@@ -224,15 +224,16 @@ where tag=1 and menu_parent_serial_no=1 and menu_pre_serial_no ={0}  order by me
         // save to file.
         // 
         System.IO.StreamWriter sw = new System.IO.StreamWriter(System.Web.HttpContext.Current.Server.MapPath(string.Format("~/q_admin/asp/{0}", filename)));
-        sw.Write(string.Format(@"<html>
+        sw.Write(string.Format(@"<!DOCTYPE html>
+<html>
 <head>
     <title>Category Select</title>
 <style>
 .validTitle{{color: #8B8BD1;}}
 body {{ font-size: 8.5pt;}}
-ul, li {{ margin-top: 0px; margin-bottom: 10px;}}
+ul, li {{ margin-top: 2px; margin-bottom: 2px; padding:0px; padding-left:5px; list-style:none;}}
 a {{ display: block; padding: 2px;}}
-a:hover {{ display:block;padding: 2px; background: blue; color: white;}}
+a:hover {{ display:block;padding: 2px; background: blue; cursor:pointer; color: white;}}
 </style>
 </head>
 
@@ -253,8 +254,7 @@ a:hover {{ display:block;padding: 2px; background: blue; color: white;}}
     /// <returns></returns>
     public string GetCategoryTitleHref(string title, string id)
     {
-
-        return string.Format(@"<a href='' onclick=""parent.document.getElementById('{0}').value = '{2}';parent.document.getElementById('{1}').value = '{3}';parent.document.getElementById('{4}').style.display='None';return false;"">{3}</a>
+        return string.Format(@"<a onclick=""parent.document.getElementById('{0}').value = '{2}';parent.document.getElementById('{1}').value = '{3}';parent.document.getElementById('{4}').style.display='None';return false;"">{3}</a>
 "
             , "<%= Request.QueryString(\"id\") %>"
             , "<%= Request.QueryString(\"textid\") %>"

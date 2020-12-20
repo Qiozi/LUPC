@@ -4,7 +4,7 @@
 <%@ Register Src="UC/OnSaleInfo.ascx" TagName="OnSaleInfo" TagPrefix="uc2" %>
 <%@ Register Src="UC/CustomerMsgList.ascx" TagName="CustomerMsgList" TagPrefix="uc3" %>
 <%@ Register Src="UC/IncStat.ascx" TagName="IncStat" TagPrefix="uc4" %>
-<%@ Register Assembly="OpenFlashChart" Namespace="OpenFlashChart" TagPrefix="cc1" %>
+<%--<%@ Register Assembly="OpenFlashChart" Namespace="OpenFlashChart" TagPrefix="cc1" %>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="padding-top: 5em; background: white;">
 
@@ -95,11 +95,11 @@
             <div>
                 <asp:Label runat="server" ID="lbl_30day_total" Font-Bold="True"
                     Font-Size="12pt"></asp:Label>
-                <cc1:OpenFlashChartControl ID="OpenFlashChartControl1" runat="server"
+              <%--  <cc1:OpenFlashChartControl ID="OpenFlashChartControl1" runat="server"
                     EnableCache="false" LoadingMsg="test loading..." Height="350px"
                     DataFile="/q_admin/OpenFlashChartData.aspx?cmd=GetStat30Days"
                     Width="1240px">
-                </cc1:OpenFlashChartControl>
+                </cc1:OpenFlashChartControl>--%>
             </div>
         </div>
 
@@ -107,10 +107,10 @@
             <div>
                 <asp:Label runat="server" ID="lbl_current_month_total" Font-Bold="True"
                     Font-Size="12pt"></asp:Label>
-                <cc1:OpenFlashChartControl ID="OpenFlashChartControl2" LoadingMsg=" loading..."
+             <%--   <cc1:OpenFlashChartControl ID="OpenFlashChartControl2" LoadingMsg=" loading..."
                     runat="server" DataFile="/q_admin/OpenFlashChartData.aspx?cmd=GetStat360Days"
                     Width="1240px">
-                </cc1:OpenFlashChartControl>
+                </cc1:OpenFlashChartControl>--%>
             </div>
         </div>
 
