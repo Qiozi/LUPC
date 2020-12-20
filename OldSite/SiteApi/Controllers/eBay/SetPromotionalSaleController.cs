@@ -171,7 +171,7 @@ namespace SiteApi.Controllers
                         {
                             continue;
                         }
-                        var item = new SiteDB.tb_ebay_promotional_items
+                        var item = new LU.Data.tb_ebay_promotional_items
                         {
                             IsSys = false,
                             ItemId = ebaySellingModel.ItemID,//TODO
@@ -189,7 +189,7 @@ namespace SiteApi.Controllers
             return resultSku;
         }
 
-        string SeteBayOnSale(SiteDB.nicklu2Entities context, decimal discount, DateTime begin, DateTime end, string title, bool isAuto)
+        string SeteBayOnSale(LU.Data.nicklu2Entities context, decimal discount, DateTime begin, DateTime end, string title, bool isAuto)
         {
             #region settings
 
@@ -241,7 +241,7 @@ namespace SiteApi.Controllers
                       , title);
 
             //throw new Exception(sendXml);
-            SiteDB.eBay.eBayOperationHistory.SaveSendXml(context, sendXml, false, -1);
+            LU.Data.eBay.eBayOperationHistory.SaveSendXml(context, sendXml, false, -1);
 
             //throw new Exception(ItemAttribates);
 
@@ -317,7 +317,7 @@ namespace SiteApi.Controllers
             sr.Close();
             str.Close();
 
-            SiteDB.eBay.eBayOperationHistory.SaveSendXmlResult(context, resultString, false, -1);
+            LU.Data.eBay.eBayOperationHistory.SaveSendXmlResult(context, resultString, false, -1);
 
             //get the root node, for ease of use
             XmlNode root = xmlDoc["SetPromotionalSaleResponse"];
@@ -336,7 +336,7 @@ namespace SiteApi.Controllers
             {
                 var promotionalSaleId = root["PromotionalSaleID"].InnerText;
 
-                var saleIdModel = new SiteDB.tb_ebay_promotional_sale_id
+                var saleIdModel = new LU.Data.tb_ebay_promotional_sale_id
                 {
                     price = discount,
                     beginDate = begin,

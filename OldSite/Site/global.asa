@@ -9,7 +9,7 @@ Sub Application_OnStart
 'Your MySQL database password is n3wv3rs10n 
 
 ' ----------------------------------------------------------------------------------
-	Application("DBCONN")		= 	"Driver={MySQL ODBC 3.51 Driver};SERVER=luMySql;DATABASE=nicklu2;UID=root;PWD=123456;OPTION="& 1 + 2 + 8 + 32 + 2048 + 16384 & ";"
+	Application("DBCONN")		= 	"Driver={MySQL ODBC 3.51 Driver};SERVER=LuMySql;DATABASE=nicklu2;UID=root;PWD=1234qwer;OPTION="& 1 + 2 + 8 + 32 + 2048 + 16384 & ";"
 	
 	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	application("window_product_skus") = "5226,5227,5228,5229,5230,5231,5232,5233,3148,244,3149,249,3150,3151,5398,7067,7068,7069,7070,7071"

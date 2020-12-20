@@ -11,11 +11,11 @@ namespace SiteApi.Controllers
     {
         public bool LoginCmd { get; set; }
 
-        public SiteDB.nicklu2Entities DBContext { get; set; }
+        public LU.Data.nicklu2Entities DBContext { get; set; }
 
         public BaseApiController()
         {
-            this.DBContext = new SiteDB.nicklu2Entities();
+            this.DBContext = new LU.Data.nicklu2Entities();
         }
 
         ~BaseApiController()

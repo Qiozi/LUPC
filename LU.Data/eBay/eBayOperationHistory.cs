@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SiteDB.eBay
+namespace LU.Data.eBay
 {
     public class eBayOperationHistory
     {

@@ -28,7 +28,7 @@ namespace SiteApi.Controllers
         bool Add(int sku, decimal price, string itemId)
         {
             var priceItem = GetPriceItem(price);
-            var item = new SiteDB.tb_ebay_promotional_items
+            var item = new LU.Data.tb_ebay_promotional_items
             {
                 IsSys = false,
                 ItemId = itemId,//TODO
