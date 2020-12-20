@@ -764,6 +764,7 @@
           <Property Name="is_modify" Type="bool" />
           <Property Name="comm" Type="varchar" MaxLength="50" />
           <Property Name="regdate" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="is_ok" Type="bool" />
         </EntityType>
         <EntityType Name="tb_ebay_shipping_settings">
           <Key>
@@ -1268,8 +1269,8 @@
           <Property Name="Source" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Regdate" Type="datetime" Precision="0" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.nicklu2.tb_execute_day' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“def.nicklu2.tb_execute_day”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="tb_execute_day">
           <Key>
             <PropertyRef Name="current_datetime" />
@@ -1899,8 +1900,8 @@ warning 6002: The table/view 'def.nicklu2.tb_execute_day' does not have a primar
           <Property Name="equal_than_lu" Type="int" />
           <Property Name="last_run_date" Type="datetime" Precision="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.nicklu2.tb_other_inc_amount_date' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“def.nicklu2.tb_other_inc_amount_date”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="tb_other_inc_amount_date">
           <Key>
             <PropertyRef Name="run_regdate" />
@@ -1960,7 +1961,7 @@ warning 6002: The table/view 'def.nicklu2.tb_other_inc_amount_date' does not hav
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="lu_sku" Type="int" />
-          <Property Name="other_inc_sku" Type="varchar" MaxLength="30" />
+          <Property Name="other_inc_sku" Type="varchar" MaxLength="50" />
           <Property Name="other_inc_type" Type="int" />
           <Property Name="tmp" Type="varchar" MaxLength="30" />
           <Property Name="is_have_info" Type="bool" />
@@ -1973,8 +1974,8 @@ warning 6002: The table/view 'def.nicklu2.tb_other_inc_amount_date' does not hav
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="luc_sku" Type="int" />
           <Property Name="other_inc_id" Type="int" />
-          <Property Name="other_inc_sku" Type="varchar" MaxLength="30" />
-          <Property Name="manufacture_part_number" Type="varchar" MaxLength="30" />
+          <Property Name="other_inc_sku" Type="varchar" MaxLength="50" />
+          <Property Name="manufacture_part_number" Type="varchar" MaxLength="50" />
           <Property Name="other_inc_price" Type="decimal" Precision="8" Scale="2" />
           <Property Name="other_inc_store_sum" Type="int" />
           <Property Name="tag" Type="bool" />
@@ -4492,6 +4493,7 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
           <Property Name="is_modify" Type="Boolean" />
           <Property Name="comm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="regdate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="is_ok" Type="Boolean" />
         </EntityType>
         <EntityType Name="tb_ebay_shipping_settings">
           <Key>
@@ -8242,6 +8244,7 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
           <EntitySetMapping Name="tb_ebay_send_xml_result_history">
             <EntityTypeMapping TypeName="nicklu2Model.tb_ebay_send_xml_result_history">
               <MappingFragment StoreEntitySet="tb_ebay_send_xml_result_history">
+                <ScalarProperty Name="is_ok" ColumnName="is_ok" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="SKU" ColumnName="SKU" />
                 <ScalarProperty Name="is_sys" ColumnName="is_sys" />

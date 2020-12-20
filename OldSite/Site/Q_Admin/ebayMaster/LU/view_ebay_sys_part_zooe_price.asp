@@ -27,7 +27,7 @@
                                         " from tb_part_group_detail pg inner join tb_product p "&_
 	                                    "  on p.product_serial_no = pg.product_serial_no"&_
 	                                    "  left join tb_ebay_system_part_zero_price zp on zp.luc_sku=p.product_serial_no"&_
-	                                    " where p.product_serial_no<>16684 and p.product_serial_no <>1049 and zp.luc_sku is null and pg.part_group_ID='"&rs("part_group_id")&"' and P.product_current_price=0 and p.tag=1 and p.split_line=0")
+	                                    " where p.product_serial_no<>16684 and p.product_serial_no <>1049 and zp.luc_sku is null and pg.part_group_ID='"&rs("part_group_id")&"' and p.product_current_price=0 and p.tag=1 and p.split_line=0")
                         if not srs.eof then
                                 
                                     Response.write "<b>"& rs("part_group_name") &"</b><div><i>" &rs("part_group_comment")& "<a href=""/q_admin/eBayMaster/lu/ebay_system_edit_part_of_group.asp?part_group_id="&rs("part_group_id")&""" onclick=""return parent.js_callpage_cus(this.href, 'view_ebay_part_edit', 1000, 800);"">Edit</a> </i></div>"
