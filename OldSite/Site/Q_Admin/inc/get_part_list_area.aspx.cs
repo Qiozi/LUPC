@@ -244,11 +244,11 @@ left join (select luc_sku, endDate from tb_part_not_change_price) pncp on pncp.l
 left join (Select distinct luc_sku is_ebay_online,
 max(cast(replace(replace(left(timeleft,instr(TimeLeft, ""D"")), ""P"",""""),""D"","""") as signed)  -
 (cast(date_format(now(), ""%j"") as signed) -
- cast(date_format(regdate, ""%j"") as signed))) st,   WatchCount
-,QuantityAvailable
-,Quantity
-,ItemID
- from tb_ebay_selling where luc_sku>0 group by luc_sku order by regdate desc ) e_online 
+ cast(date_format(regdate, ""%j"") as signed))) st, max(WatchCount) as WatchCount
+,max(QuantityAvailable) as QuantityAvailable
+,max(Quantity) as Quantity
+,max(ItemID) as ItemId
+ from tb_ebay_selling where luc_sku>0 group by luc_sku,regdate order by regdate desc ) e_online 
         on e_online.is_ebay_online=p.product_serial_no
 
 left join (select count(id) ebayOldCount, max(sku) Sku from tb_ebay_code_and_luc_sku where is_sys=0 group by sku) ebaySysCount on ebaySysCount.Sku = p.product_serial_no";
@@ -543,7 +543,7 @@ on e.luc_sku=t.luc_sku and NewBuyItNowPrice<>e.BuyItNowPrice) t group by luc_sku
                 sb.Append("         </span>");
                 sb.Append("         </div>");
                 sb.Append("     </td>");
-                sb.Append("     <td valign='top' style='width:140px;' class='part_edit_price_area'>");
+                sb.Append("     <td valign='top' style='width:200px;' class='part_edit_price_area'>");
                 sb.Append("         进&nbsp;&nbsp;&nbsp;价:<input name='import_price' size='10' value='" + dr["product_current_cost"].ToString() + "' class='input_right_line' />");
                 sb.Append("         <span class='save_btn' style='display:none;'><img src='images/save_1.gif' style='height:12px;border:1px solid white; cursor:pointer;' onclick=\"part_save_cost_price($(this), '" + sku.ToString() + "');\"></span>");
                 sb.Append("                         <br />");
