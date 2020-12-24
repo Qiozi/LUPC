@@ -57,7 +57,7 @@ public class ReplaceHref
         var result = new List<string>();
         result.Add("http");
         result.Add("script");
-        result.Add("button");
+        //result.Add("button");
         result.Add("onload");
         result.Add("onunload");
         result.Add("onchange");

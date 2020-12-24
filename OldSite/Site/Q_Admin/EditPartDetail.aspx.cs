@@ -566,7 +566,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
 
                 if (ReplaceHref.HaveWarnKeyword(comment))
                 {
-                    lblWarn.Text = "有非法字符 http, script, button, onload, onunload, onchange, onsubmit, onreset, onselect,onblur,onfocus,onabort, onkeydown,onkeypress,onkeyup,onclick,ondblclick,onmousedown,onmousemove,onmouseout,onmouseover,onmouseup 等等。";
+                    lblWarn.Text = "有非法字符 http, script, onload, onunload, onchange, onsubmit, onreset, onselect,onblur,onfocus,onabort, onkeydown,onkeypress,onkeyup,onclick,ondblclick,onmousedown,onmousemove,onmouseout,onmouseover,onmouseup 等等。";
                     lblWarn.ForeColor = System.Drawing.Color.Red;
                 }
                 else
