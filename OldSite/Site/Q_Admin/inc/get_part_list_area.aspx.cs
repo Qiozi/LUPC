@@ -543,7 +543,8 @@ on e.luc_sku=t.luc_sku and NewBuyItNowPrice<>e.BuyItNowPrice) t group by luc_sku
                 sb.Append("         </span>");
                 sb.Append("         </div>");
                 sb.Append("     </td>");
-                sb.Append("     <td valign='top' style='width:140px;' class='part_edit_price_area'>");
+                sb.Append("     <td title='shopbot_area' tag='" + sku.ToString() + "' style='width:400px;'></td>");
+                sb.Append("     <td valign='top' style='width:200px;text-align:left;padding-left:1rem;' class='part_edit_price_area'>");
                 sb.Append("         进&nbsp;&nbsp;&nbsp;价:<input name='import_price' size='10' value='" + dr["product_current_cost"].ToString() + "' class='input_right_line' />");
                 sb.Append("         <span class='save_btn' style='display:none;'><img src='images/save_1.gif' style='height:12px;border:1px solid white; cursor:pointer;' onclick=\"part_save_cost_price($(this), '" + sku.ToString() + "');\"></span>");
                 sb.Append("                         <br />");
@@ -564,7 +565,7 @@ on e.luc_sku=t.luc_sku and NewBuyItNowPrice<>e.BuyItNowPrice) t group by luc_sku
 
 
                 sb.Append("     </td>");
-                sb.Append("     <td style='text-align:right;width: 100px;' valign='top'>");
+                sb.Append("     <td style='text-align:right;width: 150px;padding-right:1rem;' valign='top'>");
                 sb.Append("          <a href=\"/q_admin/editPartDetail.aspx?id=" + sku.ToString() + "\" onclick=\"js_callpage_cus(this.href, 'modify_detail', 1080, 800);return false;\" title=\"Modify Detail\">Edit</a>|<a href=\"/q_admin/editPartDetail.aspx?cmd=1&id=" + sku.ToString() + "\" onclick=\"js_callpage_cus(this.href, 'modify_detail', 1080, 800);return false;\" title=\"Modify Detail Comment\">Edit Comm</a><br /> ");
                 sb.Append("          <a href=\"/q_admin/ebayMaster/ebay_part_comment_edit.asp?sku=" + sku.ToString() + "\" onclick=\"js_callpage_cus(this.href, 'ebay_part_comment_edit', 1080, 700);return false;\" title='Edit Ebay'>Edit</a>|<a href=\"/q_admin/ebayMaster/ebay_part_temp_page_view.aspx?sku=" + sku.ToString() + "\" target=\"_blank\" title=\"view ebay\">view ebay</a>");
                 sb.Append("          <br /><a href=\"/q_admin/product_part_cmd.aspx?showit=" + dr["tag"].ToString() + "&cmd=close&sku=" + sku.ToString() + "\"  onclick=\"js_callpage_cus(this.href, 'part_cmd', 320, 300);return false;\" title=\"Close\">" + (dr["tag"].ToString() == "0" ? "Show" : "Hide") + "</a>");
@@ -576,18 +577,18 @@ on e.luc_sku=t.luc_sku and NewBuyItNowPrice<>e.BuyItNowPrice) t group by luc_sku
                 sb.Append("     </td>");
                 sb.Append("</tr>");
                 sb.Append("<tr>");
-                sb.Append("     <td colspan='3'>");
-                sb.Append("         <table width='100%'><tr><td width=180 style='border:1px dotted #ccc;' valign='top'>");
+                sb.Append("     <td colspan='4' style='border-top:1px dotted #ccc;'>");
+                sb.Append("         <table width='100%' align='left'><tr><td width='170' style='border:1px dotted #ccc;' valign='top'>");
                 sb.Append("     <div>Weight: " + dr["weight"].ToString() + "</div>");
                 sb.Append("     <div>eBay Itemid: <a href=\"https://cgi.ebay.ca/ws/eBayISAPI.dll?ViewItem&amp;Item=" + dr["ItemID"].ToString() + "\" target=\"_blank\">" + dr["ItemID"].ToString() + "</a></div>");
                 sb.Append("    <div>eBay Stock: " + dr["QuantityAvailable"].ToString() + "</div>");
                 sb.Append("     <div>eBay Sold Qty: " + dr["eBaySoldQuantity"].ToString() + "</div>");
                 sb.Append("     <div><input type='button' value='add to ebay on sale' onclick=\"AddPartToEbaySale('" + sku.ToString() + "');\"></div>");
                 sb.Append("     <div>eBay on sale: <span class='ebayOnSalePrice' data-sku='" + sku.ToString() + "'></span></div>");
-                sb.Append("             </td><td width=\"150\" style='border:1px dotted #ccc;' valign='top' name='ebayPriceInfo' sku='" + sku.ToString() + "'>...</td><td title='shopbot_area' tag='" + sku.ToString() + "'  valign='top'></td></tr></table>");
+                sb.Append("             </td><td width=\"510\" style='border:1px dotted #ccc;' valign='top' name='ebayPriceInfo' sku='" + sku.ToString() + "'>...</td><td ></td></tr></table>");
                 sb.Append("     </td>");
                 sb.Append("</tr>");
-                sb.Append("<tr><td colspan='4' title='line'>&nbsp;</td></tr>");
+                sb.Append("<tr><td colspan='5' title='line'>&nbsp;</td></tr>");
             }
             sb.Append("</table>");
 

@@ -59,7 +59,7 @@ public partial class Q_Admin_inc_get_category_keyword_area : PageBase
             sb.Append("<tr>");
             sb.Append(string.Format("<td><b>&nbsp;</b></td>"));
 
-            dt = new LtdHelper().LtdHelperToDataTableNoLU(); // Config.ExecuteDataTable(string.Format(@"select * from tb_product_category_keyword_sub where parent_id='{0}'", dr["id"].ToString()));
+            dt = new LtdHelper().LtdHelperToDataTableNoLUInvalid(); // Config.ExecuteDataTable(string.Format(@"select * from tb_product_category_keyword_sub where parent_id='{0}'", dr["id"].ToString()));
             sb.Append("<td style='background:#ffffff;'>");
             sb.Append(string.Format("<input type='hidden' name='keyword_other_inc' value='' />"));
             sb.Append(string.Format("<a name='keyword_0' value='' class='selected'>ALL</a>"));
