@@ -973,14 +973,11 @@
 
 
         </table>
-        <div id="key_area">
-        </div>
-        <div id='query_keyword_list'>
-        </div>
+        <div id="key_area"></div>
+        <div id='query_keyword_list'></div>
         <span id="page_area"></span>
     </div>
-    <div id='query_result'>
-    </div>
+    <div id='query_result'></div>
     <div id='hidden_form_area' style="display: none"></div>
     <iframe src="/site/blank.html" name="iframe1" id="iframe1" style="width: 0px; height: 0px;" frameborder="0"></iframe>
 

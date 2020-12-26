@@ -244,11 +244,11 @@ left join (select luc_sku, endDate from tb_part_not_change_price) pncp on pncp.l
 left join (Select distinct luc_sku is_ebay_online,
 max(cast(replace(replace(left(timeleft,instr(TimeLeft, ""D"")), ""P"",""""),""D"","""") as signed)  -
 (cast(date_format(now(), ""%j"") as signed) -
- cast(date_format(regdate, ""%j"") as signed))) st,   WatchCount
-,QuantityAvailable
-,Quantity
-,ItemID
- from tb_ebay_selling where luc_sku>0 group by luc_sku order by regdate desc ) e_online 
+ cast(date_format(regdate, ""%j"") as signed))) st, max(WatchCount) as WatchCount
+,max(QuantityAvailable) as QuantityAvailable
+,max(Quantity) as Quantity
+,max(ItemID) as ItemId
+ from tb_ebay_selling where luc_sku>0 group by luc_sku,regdate order by regdate desc ) e_online 
         on e_online.is_ebay_online=p.product_serial_no
 
 left join (select count(id) ebayOldCount, max(sku) Sku from tb_ebay_code_and_luc_sku where is_sys=0 group by sku) ebaySysCount on ebaySysCount.Sku = p.product_serial_no";

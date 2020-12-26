@@ -5126,22 +5126,6 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
           <Property Name="regdate" Type="DateTime" />
           <Property Name="tag" Type="SByte" />
         </EntityType>
-        <EntityType Name="tb_on_sale">
-          <Key>
-            <PropertyRef Name="serial_no" />
-          </Key>
-          <Property Name="serial_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="product_serial_no" Type="Int32" />
-          <Property Name="begin_datetime" Type="DateTime" />
-          <Property Name="end_datetime" Type="DateTime" />
-          <Property Name="save_price_bak" Type="Decimal" />
-          <Property Name="save_price" Type="Decimal" />
-          <Property Name="price" Type="Decimal" />
-          <Property Name="cost" Type="Decimal" />
-          <Property Name="sale_price" Type="Decimal" />
-          <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="modify_datetime" Type="DateTime" />
-        </EntityType>
         <EntityType Name="tb_on_sale_history">
           <Key>
             <PropertyRef Name="serial_no" />
@@ -7294,7 +7278,6 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
           <EntitySet Name="tb_modify_price_history" EntityType="Self.tb_modify_price_history" />
           <EntitySet Name="tb_news" EntityType="Self.tb_news" />
           <EntitySet Name="tb_news_letter" EntityType="Self.tb_news_letter" />
-          <EntitySet Name="tb_on_sale" EntityType="Self.tb_on_sale" />
           <EntitySet Name="tb_on_sale_history" EntityType="Self.tb_on_sale_history" />
           <EntitySet Name="tb_order" EntityType="Self.tb_order" />
           <EntitySet Name="tb_order_assigned_to" EntityType="Self.tb_order_assigned_to" />
@@ -7434,6 +7417,7 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
           <EntitySet Name="tb_execute_day" EntityType="Self.tb_execute_day" />
           <EntitySet Name="tb_other_inc_amount_date" EntityType="Self.tb_other_inc_amount_date" />
           <EntitySet Name="tb_ebay_system_modify_backup" EntityType="nicklu2Model.tb_ebay_system_modify_backup" />
+          <EntitySet Name="tb_on_sale" EntityType="nicklu2Model.tb_on_sale" />
         </EntityContainer>
         <EntityType Name="tb_ebay_system_modify_backup">
           <Key>
@@ -7446,6 +7430,22 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
           <Property Name="Cost" Type="Decimal" Nullable="false" />
           <Property Name="SystemPrice" Type="Decimal" Nullable="false" />
           <Property Name="Regdate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_on_sale">
+          <Key>
+            <PropertyRef Name="serial_no" />
+          </Key>
+          <Property Name="serial_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_serial_no" Type="Int32" />
+          <Property Name="begin_datetime" Type="DateTime" />
+          <Property Name="end_datetime" Type="DateTime" />
+          <Property Name="save_price_bak" Type="Decimal" />
+          <Property Name="save_price" Type="Decimal" />
+          <Property Name="price" Type="Decimal" />
+          <Property Name="cost" Type="Decimal" />
+          <Property Name="sale_price" Type="Decimal" />
+          <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="modify_datetime" Type="DateTime" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -8931,23 +8931,6 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="regdate" ColumnName="regdate" />
                 <ScalarProperty Name="tag" ColumnName="tag" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_on_sale">
-            <EntityTypeMapping TypeName="nicklu2Model.tb_on_sale">
-              <MappingFragment StoreEntitySet="tb_on_sale">
-                <ScalarProperty Name="serial_no" ColumnName="serial_no" />
-                <ScalarProperty Name="product_serial_no" ColumnName="product_serial_no" />
-                <ScalarProperty Name="begin_datetime" ColumnName="begin_datetime" />
-                <ScalarProperty Name="end_datetime" ColumnName="end_datetime" />
-                <ScalarProperty Name="save_price_bak" ColumnName="save_price_bak" />
-                <ScalarProperty Name="save_price" ColumnName="save_price" />
-                <ScalarProperty Name="price" ColumnName="price" />
-                <ScalarProperty Name="cost" ColumnName="cost" />
-                <ScalarProperty Name="sale_price" ColumnName="sale_price" />
-                <ScalarProperty Name="comment" ColumnName="comment" />
-                <ScalarProperty Name="modify_datetime" ColumnName="modify_datetime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -11160,6 +11143,23 @@ FROM `tb_other_inc_amount_date` AS `tb_other_inc_amount_date`</DefiningQuery>
                 <ScalarProperty Name="PartSku" ColumnName="PartSku" />
                 <ScalarProperty Name="SystemSku" ColumnName="SystemSku" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_on_sale">
+            <EntityTypeMapping TypeName="nicklu2Model.tb_on_sale">
+              <MappingFragment StoreEntitySet="tb_on_sale">
+                <ScalarProperty Name="modify_datetime" ColumnName="modify_datetime" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="sale_price" ColumnName="sale_price" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="save_price" ColumnName="save_price" />
+                <ScalarProperty Name="save_price_bak" ColumnName="save_price_bak" />
+                <ScalarProperty Name="end_datetime" ColumnName="end_datetime" />
+                <ScalarProperty Name="begin_datetime" ColumnName="begin_datetime" />
+                <ScalarProperty Name="product_serial_no" ColumnName="product_serial_no" />
+                <ScalarProperty Name="serial_no" ColumnName="serial_no" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
