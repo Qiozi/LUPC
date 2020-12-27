@@ -56,7 +56,7 @@ public class LtdHelper
     }
 
     /// <summary>
-    /// 
+    ///  改为只有4家公司（2020.12.06)
     /// </summary>
     /// <returns></returns>
     public DataTable LtdHelperToDataTableNoLU()
@@ -66,7 +66,10 @@ public class LtdHelper
         dt.Columns.Add("text");
         foreach (int i in Enum.GetValues(typeof(Ltd)))
         {
-            if (i != 1)
+            if ( i == (int)Ltd.wholesaler_asi ||
+                 i == (int)Ltd.wholesaler_dandh ||
+                 i == (int)Ltd.wholesaler_d2a ||
+                 i == (int)Ltd.wholesaler_Synnex)
             {
                 DataRow dr = dt.NewRow();
                 dr["id"] = i;

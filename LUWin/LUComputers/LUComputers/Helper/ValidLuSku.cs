@@ -117,7 +117,7 @@ union all
         /// <returns></returns>
         public bool MatchBasePrice(int page)
         {
-            ltd_infoEntities1 context = new ltd_infoEntities1();
+            ltd_infoEntities2 context = new ltd_infoEntities2();
 
             string ltds = new LtdHelper().GetLtdIds(new Ltd[]{Ltd.wholesaler_asi
                 , Ltd.wholesaler_dandh
