@@ -25,19 +25,19 @@ public partial class Q_Admin_inc_get_part_shopbot_price : PageBase
 from tb_product where product_serial_no='" + SKU.ToString() + "'");
         if (dt.Rows.Count > 0)
         {
-            if (OnlyWholesaler)
+            //if (OnlyWholesaler)
             {
                 Response.Write(GenerateRivalString2(SKU, dt.Rows[0]["manufacturer_part_number"].ToString()
                     , dt.Rows[0]["product_current_cost"].ToString()
                     , dt.Rows[0]["sell"].ToString()));
 
             }
-            else
-            {
-                Response.Write(GenerateRivalString(SKU, dt.Rows[0]["manufacturer_part_number"].ToString()
-                    , dt.Rows[0]["product_current_cost"].ToString()
-                    , dt.Rows[0]["sell"].ToString()));
-            }
+            //else
+            //{
+            //    Response.Write(GenerateRivalString(SKU, dt.Rows[0]["manufacturer_part_number"].ToString()
+            //        , dt.Rows[0]["product_current_cost"].ToString()
+            //        , dt.Rows[0]["sell"].ToString()));
+            //}
         }
     }
     /// <summary>
@@ -54,7 +54,7 @@ from tb_product where product_serial_no='" + SKU.ToString() + "'");
 
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
         sb.Append(@" <!-- vendor begin -->
-                       <table cellpadding=""0"" cellspacing=""0""  style=""width:100%"">");
+                       <table cellpadding=""0"" cellspacing=""0""  style=""width:100%"" style=""padding:1em;"">");
         ProductStoreSumModel pssm = new ProductStoreSumModel();
         DataTable dt = Config.ExecuteDataTable(string.Format(@"select distinct  oi.luc_sku, oi.last_regdate, other_inc_store_sum,other_inc_price, other_inc_id, tag, oi.other_inc_sku from tb_other_inc_part_info oi
  where oi.luc_sku='{0}'", lu_sku));
@@ -97,7 +97,7 @@ from tb_product where product_serial_no='" + SKU.ToString() + "'");
                 if (ltd_id.ToString() == LtdDT.Rows[j]["id"].ToString())
                 {
                     sb.Append(string.Format(@"<tr>
-                                            <td style='text-align:right'>
+                                            <td style='text-align:left; width:100px;'>
                                                 <span style='color:#993300'>{0}</span>
                                             </td>
                                             <td style=""width:50px ; text-align:center"">

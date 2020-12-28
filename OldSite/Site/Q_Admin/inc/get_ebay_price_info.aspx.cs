@@ -176,7 +176,7 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
 
                         }
 
-                        Response.Write("<table border='0'>");
+                        Response.Write("<table border='0' width='100%'>");
                         if (!string.IsNullOrEmpty(itemid) && ReqShowEBayCode)
                         {
                             Response.Write("    <tr>");
@@ -185,6 +185,12 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
                             Response.Write("        </td>");
                             Response.Write("        <td style='text-align:right;'>");
                             Response.Write("<a href='https://cgi.ebay.ca/ws/eBayISAPI.dll?ViewItem&Item=" + itemid + "' target='_blank'> " + itemid + "</a>");
+                            Response.Write("        </td>");
+                            Response.Write("        <td>");
+                            Response.Write("        </td>");
+                            Response.Write("        <td>");
+                            Response.Write("        </td>");
+                            Response.Write("        <td>");
                             Response.Write("        </td>");
                             Response.Write("    </tr>");
                         }
@@ -195,8 +201,7 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
                         Response.Write("        <td style='text-align:right;'>");
                         Response.Write(ConvertPrice.RoundPrice(buyItNowPrice));
                         Response.Write("        </td>");
-                        Response.Write("    </tr>");
-                        Response.Write("    <tr>");
+                        Response.Write("<td width='40'></td>");
                         Response.Write("        <td>");
                         Response.Write("                eBay Price ");
                         Response.Write("        </td>");
@@ -218,8 +223,7 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
                         Response.Write("        <td style='text-align:right;'>");
                         Response.Write(ConvertPrice.RoundPrice(pm.product_current_cost.Value));
                         Response.Write("        </td>");
-                        Response.Write("    </tr>");
-                        Response.Write("    <tr>");
+                        Response.Write("<td width='40'></td>");
                         Response.Write("        <td>");
                         Response.Write("                Bank Fee ");
                         Response.Write("        </td>");
@@ -234,8 +238,7 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
                         Response.Write("        <td style='text-align:right;'>");
                         Response.Write(ConvertPrice.RoundPrice(pm.adjustment.Value));
                         Response.Write("        </td>");
-                        Response.Write("    </tr>");
-                        Response.Write("    <tr>");
+                        Response.Write("<td width='40'></td>");
                         Response.Write("        <td>");
                         Response.Write("                shipping fee ");
                         Response.Write("        </td>");
@@ -250,8 +253,7 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
                         Response.Write("        <td style='text-align:right;'>");
                         Response.Write(ConvertPrice.RoundPrice(profit));
                         Response.Write("        </td>");
-                        Response.Write("    </tr>");
-                        Response.Write("    <tr>");
+                        Response.Write("<td width='40'></td>");
                         Response.Write("        <td>");
                         Response.Write("                eBay Fee");
                         Response.Write("        </td>");
@@ -495,7 +497,7 @@ public partial class Q_Admin_inc_get_ebay_price_info : PageBase
             }
         }
     }
-    
+
 
     long ReqSku
     {
