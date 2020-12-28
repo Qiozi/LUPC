@@ -482,6 +482,7 @@
                                 <label>
                                     <input type="checkbox" value="<%= rs("luc_sku") %>" class="memoryItem" />
                                     [<%= rs("luc_sku") %>](<%= rs("ltd_stock") %>) <%= rs("short_name_for_sys") %>
+                                    <input type="button" value="del" />
                                 </label>
                                 <%
                                             rs.movenext

@@ -182,6 +182,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\eBay\GeteBayTimeController.cs" />
     <Compile Include="Controllers\eBay\SeteBayItemQtyController.cs" />
@@ -196,14 +197,18 @@
     <Compile Include="Controllers\ProdListController.cs" />
     <Compile Include="Controllers\eBay\SetPromotionalSaleController.cs" />
     <Compile Include="Controllers\eBay\SetPromotionalSaleListingsController.cs" />
+    <Compile Include="Controllers\SysProdManagerController.cs" />
     <Compile Include="Filters\CmdFilter.cs" />
+    <Compile Include="Filters\LogonFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseResult.cs" />
+    <Compile Include="Models\BaseViewModel.cs" />
     <Compile Include="Models\eBayOnSale\eBayOnSalePriceArea.cs" />
     <Compile Include="Models\PostResult.cs" />
     <Compile Include="Models\Shared\eBaySettings.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +256,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Base\" />
+    <Folder Include="Views\SysProdManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -264,6 +271,10 @@
     <ProjectReference Include="..\..\LU.Data\LU.Data.csproj">
       <Project>{35960664-68c8-4a88-99f1-d3ffcbe2d4ed}</Project>
       <Name>LU.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LU.Toolkit\LU.Toolkit.csproj">
+      <Project>{7C2A4D2E-E129-4587-83AD-D8974CB212C2}</Project>
+      <Name>LU.Toolkit</Name>
     </ProjectReference>
     <ProjectReference Include="..\SiteModel\SiteModel.csproj">
       <Project>{5bc213e3-bb30-421d-9f61-9fe020d76795}</Project>
