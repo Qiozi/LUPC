@@ -11,7 +11,7 @@ namespace SiteApi.Controllers
         // GET: SysProdManager
         public ActionResult DeleteEbaySystemSettingPart(int sku)
         {
-            return View();
+            return Json(new { T = "Hello" }, JsonRequestBehavior.AllowGet);
         }
     }
 }

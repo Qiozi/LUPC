@@ -86,7 +86,7 @@ namespace SiteApi.Filters
                     HttpCookie cookie = request.Cookies["Token"];
 
 
-                    if (cookie.HasKeys == false || string.IsNullOrEmpty(cookie.Value))
+                    if (cookie == null || string.IsNullOrEmpty(cookie.Value))
                     {
                         filterContext.Result = new RedirectToRouteResult("Default", new RouteValueDictionary(new { controller = "Msg", action = "NoLogin" }));
                     }
