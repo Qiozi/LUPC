@@ -1483,7 +1483,10 @@ namespace DownloadEBayOrder.BLL
             if (xmlDoc["GetSellerTransactionsResponse"]["Ack"].InnerText != "Success"
                 && xmlDoc["GetSellerTransactionsResponse"]["Ack"].InnerText != "Warning")
                 return;
-
+            if(xmlDoc["GetSellerTransactionsResponse"]["TransactionArray"] == null)
+            {
+                return;
+            }
             foreach (XmlElement xe in xmlDoc["GetSellerTransactionsResponse"]["TransactionArray"].ChildNodes)
             {
                 int orderCode;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,6 +71,8 @@ namespace DownloadEBayOrder
                     ErrorString += "Source          = " + exp.Source + "\r\n";
                     ErrorString += "StackTrace    =" + exp.StackTrace + "\r\n";
                     ErrorString += "============================================\r\n";
+
+                    ErrorString += JsonConvert.SerializeObject(exp);
 
                     System.IO.File.AppendAllText(ErrorFileFullName, ErrorString + "\r\n", Encoding.Unicode);
                 }
