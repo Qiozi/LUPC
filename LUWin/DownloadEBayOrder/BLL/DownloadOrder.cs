@@ -182,8 +182,9 @@ namespace DownloadEBayOrder.BLL
                 int.TryParse(xe["ShippingDetails"]["SellingManagerSalesRecordNumber"].InnerText, out orderCode);
 
                 SetStatus("download " + orderCode);
-                int paymeth = xe["PaymentMethods"].InnerText == "PayPal" ? 15 : 0;
-
+                int paymeth = 0;
+                if (xe["PaymentMethods"] != null)
+                    paymeth = xe["PaymentMethods"].InnerText == "PayPal" ? 15 : 0;
                 // LoadEBayOrderItemDescription(orderCode);
 
 
