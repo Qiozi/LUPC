@@ -1090,7 +1090,7 @@ update tb_ebay_system set showit=1 where id in (select sys_sku from tb_ebay_sell
             {
                 nicklu2Entities context = new nicklu2Entities();
                 //MessageBox.Show(openFileDialog1.FileName);
-                this._order.DownloadTest(context, 22450, log, openFileDialog1.FileName);
+                this._order.DownloadTest(context, 23227, log, openFileDialog1.FileName);
             }
         }
 
