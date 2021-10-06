@@ -9,12 +9,14 @@ using System.Web;
 [Serializable]
 public class OrderPriceViewInfo
 {
-	public OrderPriceViewInfo()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public OrderPriceViewInfo()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+
+    public decimal PartDiscount { get; set; }
 
     decimal _subTotal = 0M;
 

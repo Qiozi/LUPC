@@ -57,14 +57,13 @@ public class OrderMailContent
         // pay method 
         string pay_method_name = "";
         string special_cash_discount = "";
-        if (Config.pay_method_use_card_rate.IndexOf("[" + ohm[0].pay_method.ToString() + "]") == -1
-            || ohm[0].input_order_discount > 0)
+        if (ohm[0].input_order_discount > 0)
         {
 
             special_cash_discount = @"<div class=""EC_MsoNormal"">
                         <font color=""navy"" face=""Courier New"" size=""2""><span style=""font-size: 10pt; color: navy;
                             font-family: 'Courier New'""><table><tr><td width='40'>&nbsp;</td><td width='150'><span style=""font-size: 10pt; color: navy;
-                            font-family: 'Courier New'"">-" + Config.ConvertPrice((ohm[0].input_order_discount.HasValue && ohm[0].input_order_discount.Value > 0) ? ohm[0].input_order_discount.Value : ohm[0].sur_charge.Value) + @"</span></td><td style=""font-size: 10pt; color: navy;
+                            font-family: 'Courier New'"">-" + Config.ConvertPrice((ohm[0].input_order_discount.HasValue && ohm[0].input_order_discount.Value > 0) ? ohm[0].input_order_discount.Value : ohm[0].input_order_discount.Value) + @"</span></td><td style=""font-size: 10pt; color: navy;
                             font-family: 'Courier New'"">SPECIAL CASH DISCOUNT</td></tr></table></span></font></div>";
         }
         //

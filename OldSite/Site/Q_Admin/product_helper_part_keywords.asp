@@ -20,6 +20,7 @@
 	<% 
 		Dim cid				:	cid			=	SQLescape(Request("cid"))
 		Dim id				:	id			=	SQLescape(Request("id"))
+        Dim run             : run = SQLescape(request("run"))
 
 		Dim mfp
 		Dim product_long_name
@@ -80,7 +81,7 @@
 		end if
 		rs.close : set rs = nothing				
 	%>
-    <form action="product_helper_part_keywords_exec.asp" method="post" target="iframe1">
+    <form name="form1" id="form1" action="product_helper_part_keywords_exec.asp" method="post" target="iframe1">
     <table width="100%">
         <tr>
             <td width="250">	
@@ -112,7 +113,7 @@
 
 	
     <div style="height:40px;clear:both; line-height:40px;color:#006699; font-weight:bold; text-align:center; background:#f2f2f2; border:1px solid #ccc;">
-                    	<a href="/q_admin/product_helper_part_keywords.asp?id=<%= pre_postion %>&CID=<%= Cid %>" class="movebar_left">&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
+                    	<a href="/q_admin/product_helper_part_keywords.asp?id=<%= pre_postion %>&CID=<%= Cid %>&run=<%= run %>" class="movebar_left">&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
                         <span style="color:#ff6600"><%= current_postion %></span> <span > of <%= group_count %></span>
                         &nbsp;&nbsp;&nbsp;<a href="/q_admin/product_helper_part_keywords.asp?id=<%= next_postion %>&CID=<%= Cid %>" class="movebar_right">&nbsp;&nbsp;&nbsp;</a>
 	</div>
@@ -202,6 +203,17 @@ CloseConn()
         $('div >input').click(function () {
             SetKeywordValue(this);
         });
+
+        setTimeout(function () {
+            if ('<%= run %>' == "1" && $('#keyword').val().length <15) {
+                analyse();
+
+                setTimeout(function () {
+                    $('#form1').submit();
+                }, 1000)
+            }
+
+        }, 2000);
     });
 
 function SetKeywordValue(the)

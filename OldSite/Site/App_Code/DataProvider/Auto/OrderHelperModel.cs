@@ -38,6 +38,20 @@ public class OrderHelperModel
     {
         //return OrderHelperModel.FindAllByProperty("order_code", order_code);
         var query = context.tb_order_helper.Where(me => me.order_code.Value.Equals(order_code)).ToList().ToArray();
+
+        //for (var i = 0; i < query.Length; i++)
+        //{
+        //    if ((!query[i].input_order_discount.HasValue ||
+        //        query[i].input_order_discount == 0M) &&
+        //        (query[i].discount.HasValue &&
+        //        query[i].discount > 0M))
+        //    {
+        //        if(query[i].taxable_total < query[i].sub_total + query[i].shipping_charge)
+        //        {
+        //            query[i].input_order_discount = query[i].discount;
+        //        }
+        //    }
+        //}
         return query;
     }
 
