@@ -1,50 +1,29 @@
-﻿using System;
+﻿using SiteApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
 using System.Web.Mvc;
+using static SiteApi.Filters.LogonFilter;
 
 namespace SiteApi.Controllers
 {
-    public class BaseApiController : ApiController
+    [Logon(true)]
+    public class BaseController : Controller
     {
-        public bool LoginCmd { get; set; }
+        public UserInfo UserInfo { get; set; }
 
-        public SiteDB.nicklu2Entities DBContext { get; set; }
+        public LU.Data.nicklu2Entities DBContext { get; set; }
 
-        public BaseApiController()
+        public BaseController()
         {
-            this.DBContext = new SiteDB.nicklu2Entities();
+            this.DBContext = new LU.Data.nicklu2Entities();
         }
 
-        ~BaseApiController()
+        ~BaseController()
         {
-            this.DBContext.Dispose();
+            if (this.DBContext != null)
+                this.DBContext.Dispose();
         }
-
-        public Models.PostResult Validate(string t)
-        {
-            var query = DBContext.tb_exchange.ToList();
-            foreach (var item in query)
-            {
-                if (DateTime.Now.Subtract(item.Regdate).TotalHours >= 3)
-                {
-                    DBContext.tb_exchange.Remove(item);
-                }
-            }
-            DBContext.SaveChanges();
-
-            var exchange = DBContext.tb_exchange.SingleOrDefault(p => p.Pwd.Equals(t));
-            return exchange == null ? new Models.PostResult
-            {
-                Success = false,
-                ErrMsg = "No token"
-            } : new Models.PostResult
-            {
-                Success = true
-            };
-        }
-
     }
 }

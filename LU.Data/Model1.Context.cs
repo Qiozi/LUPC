@@ -114,7 +114,6 @@ namespace LU.Data
         public virtual DbSet<tb_modify_price_history> tb_modify_price_history { get; set; }
         public virtual DbSet<tb_news> tb_news { get; set; }
         public virtual DbSet<tb_news_letter> tb_news_letter { get; set; }
-        public virtual DbSet<tb_on_sale> tb_on_sale { get; set; }
         public virtual DbSet<tb_on_sale_history> tb_on_sale_history { get; set; }
         public virtual DbSet<tb_order> tb_order { get; set; }
         public virtual DbSet<tb_order_assigned_to> tb_order_assigned_to { get; set; }
@@ -254,5 +253,6 @@ namespace LU.Data
         public virtual DbSet<tb_execute_day> tb_execute_day { get; set; }
         public virtual DbSet<tb_other_inc_amount_date> tb_other_inc_amount_date { get; set; }
         public virtual DbSet<tb_ebay_system_modify_backup> tb_ebay_system_modify_backup { get; set; }
+        public virtual DbSet<tb_on_sale> tb_on_sale { get; set; }
     }
 }

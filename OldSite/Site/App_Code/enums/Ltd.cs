@@ -29,6 +29,36 @@ public class LtdHelper
         }
         return dt;
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public DataTable LtdHelperToDataTableNoLUInvalid()
+    {
+        DataTable dt = new DataTable();
+        dt.Columns.Add("id");
+        dt.Columns.Add("text");
+        foreach (int i in Enum.GetValues(typeof(Ltd)))
+        {
+            if (i == (int)Ltd.wholesaler_asi ||
+                i == (int)Ltd.wholesaler_dandh ||
+                i == (int)Ltd.wholesaler_d2a ||
+                i == (int)Ltd.wholesaler_Synnex)
+            {
+                DataRow dr = dt.NewRow();
+                dr["id"] = i;
+                dr["text"] = FilterText(Enum.GetName(typeof(Ltd), i));
+                dt.Rows.Add(dr);
+            }
+        }
+        return dt;
+    }
+
+    /// <summary>
+    ///  改为只有4家公司（2020.12.06)
+    /// </summary>
+    /// <returns></returns>
     public DataTable LtdHelperToDataTableNoLU()
     {
         DataTable dt = new DataTable();
@@ -36,7 +66,10 @@ public class LtdHelper
         dt.Columns.Add("text");
         foreach (int i in Enum.GetValues(typeof(Ltd)))
         {
-            if (i != 1)
+            if ( i == (int)Ltd.wholesaler_asi ||
+                 i == (int)Ltd.wholesaler_dandh ||
+                 i == (int)Ltd.wholesaler_d2a ||
+                 i == (int)Ltd.wholesaler_Synnex)
             {
                 DataRow dr = dt.NewRow();
                 dr["id"] = i;
@@ -135,8 +168,8 @@ public enum Ltd
 
     wholesaler_CanadaComputer = 15,
     wholesaler_dandh = 16,
-    wholesaler_d2a  =   17,
-    wholesaler_BellMicroproducts=18,
+    wholesaler_d2a = 17,
+    wholesaler_BellMicroproducts = 18,
     wholesaler_Smartvision_Direct = 19,
     wholesaler_Synnex = 20,
 

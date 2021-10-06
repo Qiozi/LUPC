@@ -30,7 +30,7 @@ namespace SiteApi.Controllers
             };
         }
 
-        bool GetPromotionalSaleDetailListings(SiteDB.nicklu2Entities context)
+        bool GetPromotionalSaleDetailListings(LU.Data.nicklu2Entities context)
         {
             #region settings
 
@@ -72,7 +72,7 @@ namespace SiteApi.Controllers
   <PromotionalSaleStatus>Processing</PromotionalSaleStatus>
 </GetPromotionalSaleDetailsRequest>", userToken);
 
-            SiteDB.eBay.eBayOperationHistory.SaveSendXml(context, sendXml, false, -1);
+            LU.Data.eBay.eBayOperationHistory.SaveSendXml(context, sendXml, false, -1);
 
             //throw new Exception(ItemAttribates);
 
@@ -146,7 +146,7 @@ namespace SiteApi.Controllers
             sr.Close();
             str.Close();
 
-            SiteDB.eBay.eBayOperationHistory.SaveSendXmlResult(context, resultString, false, -1);
+            LU.Data.eBay.eBayOperationHistory.SaveSendXmlResult(context, resultString, false, -1);
 
             //get the root node, for ease of use
             XmlNode root = xmlDoc["GetPromotionalSaleDetailsResponse"];
@@ -157,7 +157,7 @@ namespace SiteApi.Controllers
             #endregion
         }
 
-        bool ReadXml(SiteDB.nicklu2Entities context, XmlNode root)
+        bool ReadXml(LU.Data.nicklu2Entities context, XmlNode root)
         {
             DeleteAll(context);
 
@@ -177,7 +177,7 @@ namespace SiteApi.Controllers
                 {
                     var id = idItem.InnerText;
 
-                    var detailModel = new SiteDB.tb_ebay_promotional_sale_details
+                    var detailModel = new LU.Data.tb_ebay_promotional_sale_details
                     {
                         DiscountType = discountType,
                         DiscountValue = decimal.Parse(discountValue),
@@ -198,7 +198,7 @@ namespace SiteApi.Controllers
         }
 
 
-        bool DeleteAll(SiteDB.nicklu2Entities context)
+        bool DeleteAll(LU.Data.nicklu2Entities context)
         {
             var query = context.tb_ebay_promotional_sale_details.ToList();
             foreach (var item in query)
@@ -238,7 +238,7 @@ namespace SiteApi.Controllers
                 {
                     DBContext.tb_ebay_part_comment.Remove(comm);
                 }
-                var newItem = new SiteDB.tb_ebay_part_comment
+                var newItem = new LU.Data.tb_ebay_part_comment
                 {
                     part_sku = item.luc_sku,
                     ebay_note = "ebay on sale",

@@ -25,7 +25,7 @@ namespace SiteApi.Controllers
             } : Exec(prod);
         }
 
-        Models.PostResult Exec(SiteDB.tb_product prod)
+        Models.PostResult Exec(LU.Data.tb_product prod)
         {
             if (prod.curr_change_quantity < 3)
             {
@@ -48,7 +48,7 @@ namespace SiteApi.Controllers
                 s.luc_sku.Value.Equals(prod.product_serial_no));
             if (ebaySellItem != null)
             {
-                ExecEbayApi(DBContext, prod.product_serial_no, ebaySellItem.ItemID, 6, SiteDB.eBay.GetItemSpecifics.GetPartSpecifics(DBContext, prod));
+                ExecEbayApi(DBContext, prod.product_serial_no, ebaySellItem.ItemID, 6, LU.Data.eBay.GetItemSpecifics.GetPartSpecifics(DBContext, prod));
                 return new Models.PostResult
                 {
                     Success = true
@@ -62,7 +62,7 @@ namespace SiteApi.Controllers
             };
         }
 
-        bool ExecEbayApi(SiteDB.nicklu2Entities context, int sku, string itemid, int quantity, string itemSpecifics)
+        bool ExecEbayApi(LU.Data.nicklu2Entities context, int sku, string itemid, int quantity, string itemSpecifics)
         {
             #region settings
             string devID = Models.Shared.eBaySettings.devId;
@@ -101,7 +101,7 @@ namespace SiteApi.Controllers
          , quantity
          , itemSpecifics);
 
-            var sendXmlModel = new SiteDB.tb_ebay_send_xml_history
+            var sendXmlModel = new LU.Data.tb_ebay_send_xml_history
             {
                 Content = sendXml,
                 is_sys = false,
@@ -183,7 +183,7 @@ namespace SiteApi.Controllers
             sr.Close();
             str.Close();
 
-            var esrhm = new SiteDB.tb_ebay_send_xml_result_history
+            var esrhm = new LU.Data.tb_ebay_send_xml_result_history
             {
                 Content = sssss,
                 is_sys = false,

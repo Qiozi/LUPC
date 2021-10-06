@@ -19,7 +19,8 @@
     <script type="text/javascript" src="/js_css/jquery_lab/popupclass.js"></script>
     <link rel="stylesheet" type="text/css" href="/js_css/jquery.css?a" />
     <link rel="stylesheet" type="text/css" href="/js_css/b_lu.css" />
-
+    <link href="../../../Layui/css/layui.css" rel="stylesheet" />
+    <script src="../../../Layui/layui.all.js"></script>
     <style type="text/css">
         input {
             font-size: 7.5pt;
@@ -482,6 +483,7 @@
                                 <label>
                                     <input type="checkbox" value="<%= rs("luc_sku") %>" class="memoryItem" />
                                     [<%= rs("luc_sku") %>](<%= rs("ltd_stock") %>) <%= rs("short_name_for_sys") %>
+                                    <input type="button" value="del" />
                                 </label>
                                 <%
                                             rs.movenext
@@ -617,7 +619,7 @@
                         </div>
                     </div>
                     <br />
-
+                    <input type="button" data-method="offset" data-type="auto" class="layui-btn layui-btn-normal" value="居中弹出">
                     <form action="/q_admin/ebayMaster/ebay_system_edit_update.asp" method="post" target="iframe1">
                         <input type='hidden' name='IsParent' value='<%= request("IsParent")%>' />
                         <input type="hidden" name="ebay_system_sku" value="<%= ebay_system_sku %>" />
@@ -1093,9 +1095,24 @@ end if
             $('.createPartGroupTempList').on('click', function () {
                 createPartGroupTempList();
             })
+
+          
         });
 
+        ; !function () {
+              //触发事件
 
+            var layer = layui.layer
+                , form = layui.form;
+            console.log(layer);
+            $('.layui-btn').on('click', function () {
+                layer.open({
+                    type: 1,
+                    content: '传入任意的文本或html' //这里content是一个普通的String
+                });
+            });
+            alert('d')
+        }()
         function viewLogo() {
             //   var v = $('input[name=logo]').val();
             //   var vh = "";
@@ -1316,6 +1333,9 @@ end if
         }
 
         parent.setSelectedCase("", "");
+
+
+
     </script>
     <%
     if(request("viewLeft") = "true")then

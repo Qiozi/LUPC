@@ -21,57 +21,7 @@ Function GetEbayCategoryLeftMenu()
 '------------------------------------------------------------------------------------
     Dim Rs, s, cRs, sRs
     
-    'set Rs = Conn.execute("select menu_child_serial_no category_id, menu_child_name category_name from tb_product_category where page_category=0 and tag=1 and menu_pre_serial_no=52")
-    's   = " <ul id=""browser"" class=""filetree"">"  &vblf
-    'If Not Rs.eof Then            
-        '    Do While Not Rs.eof 
-        '                s   = s & "<li><span class=""folder"" id=""treeview_category_id_"& rs("category_id") &""">"& rs("category_name")& "<ul>" &vblf
-        '                set cRs = conn.execute ( "select menu_child_serial_no category_id, menu_child_name category_name from tb_product_category where menu_pre_serial_no='"& rs("category_id") &"' and tag=1 order by menu_child_order asc ")
-        '                if not cRs.eof then
-        '                        Do While not cRs.eof
-        '                                s   =      s & "<li><span class=""folder"" id=""treeview_category_id_"& cRs("category_id") &""" style='font-weight:600;'>"& crs("category_name") &"</span>" & vblf
-        '                                s   =       s & "       <ul style='display:none'>"
-    '
-   '                                           set sRs = conn.execute("select es.id, es.ebay_system_current_number, es.cutom_label, ifnull(online.itemid, 0) validItemid  from tb_ebay_system es inner join tb_ebay_system_and_category ec on ec.systemSku = es.id"&_
-          '                                                              " left join tb_ebay_selling online on online.sys_sku=es.id where ec.eBaySysCategoryID='"& cRs("category_id") &"' and es.showit=1 order by es.id desc ")
-     '                                           if not sRs.eof then
-     '                                                   do while not srs.eof 
-     '                                                           s =     s &     "<li><span class=""file"" id=""treeview_system_sku_"& sRs("id") &"""> <a onclick=""parent.$('#ifr_main_frame1').attr('src','/q_admin/ebayMaster/lu/ebay_system_edit_2.asp?ebay_system_sku="& sRs("id") &"&category_id="& cRs("category_id") &"&cmd=modify&'+rand(100));"")>"& sRs("id")&" & "& sRs("cutom_label") &"</a>"&vblf
-     '                                                           if srs("validItemid") = 0 then s = s & " <span style='color:blue;'>??</span>"
-      '                                                          s =     s &     "</span></li>" &vblf
-     '                                                   srs.movenext
-     '                                                   loop
-     '                                           end if
-     '                                           srs.close : set sRs = nothing
-    '                                    s   =       s & "       </ul> "&vblf &_
-    '                                                        "   </li>"
-    '                            cRs.movenext
-     '                           loop 
-      '                  end if
-     '                   cRs.close : set cRs = nothing
-      '                  s   =       s &"</ul></li>"
-      '      Rs.movenext
-       '     Loop
-           
-   ' End If
-    's   = s & "<li><span class=""folder"" id=""treeview_category_id_00000"">No Category<ul>" &vblf
-     '   set crs = conn.execute("select es.id, es.cutom_label, es.ebay_system_current_number from tb_ebay_system es left join tb_ebay_system_and_category ec on ec.systemSKU = es.id "&_
-     '                               " inner join tb_ebay_code_and_luc_sku els on els.sku = es.id and els.is_sys=1 and els.is_online=1 "&_
-      '                              " where SystemSKU is null and showit=1")
-      '  if not crs.eof then
-     ' 
-     '       do while not crs.eof 
-     '           s =     s &     "<li><span class=""file"" id=""treeview_system_sku_"& crs("id") &"""> <a onclick=""parent.$('#ifr_main_frame1').attr('src','/q_admin/ebayMaster/lu/ebay_system_edit_2.asp?ebay_system_sku="& crs("id") &"&category_id=00000&cmd=modify&'+rand(100));"")>"& crs("id") &""& crs("ebay_system_current_number")&" & "& crs("cutom_label") &"</a></span></li>" &vblf
-    '
-     '       crs.movenext
-     '       loop
-     '   end if
-    '    crs.close : set crs = nothing
-   '      s   =       s & "       </ul> "&vblf &_
-    '                                "   </li>"
-  '  s   =    s &                      "</ul>"
-  '  rs.close : set rs = nothing
-    set rs = conn.execute("select es.id, es.cutom_label, es.ebay_system_current_number from tb_ebay_system es inner join tb_ebay_code_and_luc_sku els on els.sku = es.id  order by es.id desc limit 200")
+    set rs = conn.execute("select es.id, es.cutom_label, es.ebay_system_current_number from tb_ebay_system es inner join tb_ebay_code_and_luc_sku els on els.sku = es.id  where es.is_online = 1 order by es.id desc limit 200")
     if not rs.eof then
         s = s & "<ul>"
         do while not rs.eof

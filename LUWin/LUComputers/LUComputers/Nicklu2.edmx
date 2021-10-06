@@ -1,18 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="nicklu2Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="nicklu2ModelStoreContainer">
-          <EntitySet Name="tb_product" EntityType="nicklu2Model.Store.tb_product" store:Type="Tables" Schema="nicklu2" />
-        </EntityContainer>
+      <Schema Namespace="nicklu2Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_product">
           <Key>
             <PropertyRef Name="product_serial_no" />
           </Key>
-          <Property Name="product_serial_no" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="product_serial_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="product_name" Type="varchar" MaxLength="254" />
           <Property Name="product_short_name" Type="varchar" MaxLength="254" />
           <Property Name="product_store_sum" Type="int" />
@@ -52,22 +49,22 @@
           <Property Name="producter_serial_no" Type="varchar" MaxLength="50" />
           <Property Name="old_db_id" Type="int" />
           <Property Name="agent_stock" Type="varchar" MaxLength="10" />
-          <Property Name="regdate" Type="datetime" />
+          <Property Name="regdate" Type="datetime" Precision="0" />
           <Property Name="other_product_sku" Type="int" />
           <Property Name="category_idss" Type="int" />
           <Property Name="export" Type="bool" />
           <Property Name="product_current_discount" Type="decimal" Precision="8" Scale="2" />
-          <Property Name="last_regdate" Type="datetime" />
+          <Property Name="last_regdate" Type="datetime" Precision="0" />
           <Property Name="part_ebay_cost" Type="decimal" Precision="8" Scale="2" />
           <Property Name="part_ebay_price" Type="decimal" Precision="9" Scale="2" />
-          <Property Name="real_cost_regdate" Type="datetime" />
+          <Property Name="real_cost_regdate" Type="datetime" Precision="0" />
           <Property Name="issue" Type="bool" />
           <Property Name="view_count" Type="int" />
           <Property Name="model" Type="varchar" MaxLength="30" />
           <Property Name="split_name" Type="varchar" MaxLength="100" />
           <Property Name="adjustment" Type="decimal" Precision="8" Scale="2" />
-          <Property Name="adjustment_regdate" Type="datetime" />
-          <Property Name="adjustment_enddate" Type="datetime" />
+          <Property Name="adjustment_regdate" Type="datetime" Precision="0" />
+          <Property Name="adjustment_enddate" Type="datetime" Precision="0" />
           <Property Name="part_ebay_describe" Type="varchar" MaxLength="250" />
           <Property Name="screen_size" Type="decimal" Precision="4" Scale="2" />
           <Property Name="price_sku" Type="int" />
@@ -90,58 +87,60 @@
           <Property Name="is_fixed" Type="bool" />
           <Property Name="for_sys" Type="bool" />
           <Property Name="new_href_url" Type="varchar" MaxLength="150" />
+          <Property Name="SpecificsCount" Type="int" />
         </EntityType>
-      </Schema></edmx:StorageModels>
+        <EntityContainer Name="nicklu2ModelStoreContainer">
+          <EntitySet Name="tb_product" EntityType="Self.tb_product" Schema="nicklu2" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="nicklu2Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="nicklu2Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tb_product" EntityType="nicklu2Model.tb_product" />
-        </EntityContainer>
+      <Schema Namespace="nicklu2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tb_product">
           <Key>
             <PropertyRef Name="product_serial_no" />
           </Key>
           <Property Name="product_serial_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="product_name" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
-          <Property Name="product_short_name" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="product_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="product_short_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
           <Property Name="product_store_sum" Type="Int32" />
           <Property Name="product_sale_sum" Type="Int32" />
           <Property Name="menu_child_serial_no" Type="Int32" />
-          <Property Name="product_filename" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="product_filename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="tag" Type="SByte" />
           <Property Name="product_current_real_cost" Type="Decimal" />
           <Property Name="product_current_special_cash_price" Type="Decimal" />
           <Property Name="product_current_price" Type="Decimal" />
           <Property Name="product_current_cost" Type="Decimal" />
           <Property Name="product_ship_price" Type="Decimal" />
-          <Property Name="producter_url" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="producter_url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="product_order" Type="Int32" />
-          <Property Name="supplier_sku" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="manufacturer_part_number" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="supplier_sku" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="manufacturer_part_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ltd_stock" Type="Int32" />
           <Property Name="product_sale_sum_2" Type="Int32" />
           <Property Name="product_current_cost_2" Type="Decimal" />
           <Property Name="product_ship_price_2" Type="Int32" />
-          <Property Name="product_ebay_name_2" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
-          <Property Name="product_ebay_name" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
-          <Property Name="product_short_name_f" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="product_ebay_name_2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="product_ebay_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="product_short_name_f" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
           <Property Name="hot" Type="SByte" />
           <Property Name="new" Type="SByte" />
           <Property Name="producter_serial_no_bak" Type="Int32" />
           <Property Name="product_compatibility" Type="SByte" />
           <Property Name="split_line" Type="SByte" />
-          <Property Name="product_name_long_en" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
-          <Property Name="shopbot_info" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="product_name_long_en" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="shopbot_info" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="product_img_sum" Type="SByte" />
           <Property Name="product_size_id" Type="Int32" />
           <Property Name="is_non" Type="SByte" />
-          <Property Name="keywords" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-          <Property Name="shortcomment" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="comment" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-          <Property Name="producter_serial_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="keywords" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="shortcomment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="comment" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="producter_serial_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="old_db_id" Type="Int32" />
-          <Property Name="agent_stock" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="agent_stock" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="regdate" Type="DateTime" />
           <Property Name="other_product_sku" Type="Int32" />
           <Property Name="category_idss" Type="Int32" />
@@ -153,126 +152,135 @@
           <Property Name="real_cost_regdate" Type="DateTime" />
           <Property Name="issue" Type="Boolean" />
           <Property Name="view_count" Type="Int32" />
-          <Property Name="model" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
-          <Property Name="split_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="split_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="adjustment" Type="Decimal" />
           <Property Name="adjustment_regdate" Type="DateTime" />
           <Property Name="adjustment_enddate" Type="DateTime" />
-          <Property Name="part_ebay_describe" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="part_ebay_describe" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="screen_size" Type="Decimal" />
           <Property Name="price_sku" Type="Int32" />
           <Property Name="price_sku_quantity" Type="Int32" />
           <Property Name="curr_change_cost" Type="Decimal" />
           <Property Name="curr_change_price" Type="Decimal" />
-          <Property Name="curr_change_ltd" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="curr_change_ltd" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="curr_change_quantity" Type="Int32" />
-          <Property Name="curr_change_regdate" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
-          <Property Name="ebay_system_short_name" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="curr_change_regdate" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ebay_system_short_name" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
           <Property Name="is_modify" Type="Boolean" />
           <Property Name="is_top" Type="Boolean" />
-          <Property Name="prodType" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
-          <Property Name="img_url" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-          <Property Name="UPC" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
-          <Property Name="ETA" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="prodType" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="img_url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="UPC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ETA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="weight" Type="Decimal" />
-          <Property Name="href_url" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
-          <Property Name="short_name_for_sys" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="href_url" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="short_name_for_sys" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="is_fixed" Type="Boolean" />
           <Property Name="for_sys" Type="Boolean" />
-          <Property Name="new_href_url" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="new_href_url" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="SpecificsCount" Type="Int32" />
         </EntityType>
+        <EntityContainer Name="nicklu2Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_product" EntityType="Self.tb_product" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="nicklu2ModelStoreContainer" CdmEntityContainer="nicklu2Entities">
-          <EntitySetMapping Name="tb_product"><EntityTypeMapping TypeName="nicklu2Model.tb_product"><MappingFragment StoreEntitySet="tb_product">
-            <ScalarProperty Name="product_serial_no" ColumnName="product_serial_no" />
-            <ScalarProperty Name="product_name" ColumnName="product_name" />
-            <ScalarProperty Name="product_short_name" ColumnName="product_short_name" />
-            <ScalarProperty Name="product_store_sum" ColumnName="product_store_sum" />
-            <ScalarProperty Name="product_sale_sum" ColumnName="product_sale_sum" />
-            <ScalarProperty Name="menu_child_serial_no" ColumnName="menu_child_serial_no" />
-            <ScalarProperty Name="product_filename" ColumnName="product_filename" />
-            <ScalarProperty Name="tag" ColumnName="tag" />
-            <ScalarProperty Name="product_current_real_cost" ColumnName="product_current_real_cost" />
-            <ScalarProperty Name="product_current_special_cash_price" ColumnName="product_current_special_cash_price" />
-            <ScalarProperty Name="product_current_price" ColumnName="product_current_price" />
-            <ScalarProperty Name="product_current_cost" ColumnName="product_current_cost" />
-            <ScalarProperty Name="product_ship_price" ColumnName="product_ship_price" />
-            <ScalarProperty Name="producter_url" ColumnName="producter_url" />
-            <ScalarProperty Name="product_order" ColumnName="product_order" />
-            <ScalarProperty Name="supplier_sku" ColumnName="supplier_sku" />
-            <ScalarProperty Name="manufacturer_part_number" ColumnName="manufacturer_part_number" />
-            <ScalarProperty Name="ltd_stock" ColumnName="ltd_stock" />
-            <ScalarProperty Name="product_sale_sum_2" ColumnName="product_sale_sum_2" />
-            <ScalarProperty Name="product_current_cost_2" ColumnName="product_current_cost_2" />
-            <ScalarProperty Name="product_ship_price_2" ColumnName="product_ship_price_2" />
-            <ScalarProperty Name="product_ebay_name_2" ColumnName="product_ebay_name_2" />
-            <ScalarProperty Name="product_ebay_name" ColumnName="product_ebay_name" />
-            <ScalarProperty Name="product_short_name_f" ColumnName="product_short_name_f" />
-            <ScalarProperty Name="hot" ColumnName="hot" />
-            <ScalarProperty Name="new" ColumnName="new" />
-            <ScalarProperty Name="producter_serial_no_bak" ColumnName="producter_serial_no_bak" />
-            <ScalarProperty Name="product_compatibility" ColumnName="product_compatibility" />
-            <ScalarProperty Name="split_line" ColumnName="split_line" />
-            <ScalarProperty Name="product_name_long_en" ColumnName="product_name_long_en" />
-            <ScalarProperty Name="shopbot_info" ColumnName="shopbot_info" />
-            <ScalarProperty Name="product_img_sum" ColumnName="product_img_sum" />
-            <ScalarProperty Name="product_size_id" ColumnName="product_size_id" />
-            <ScalarProperty Name="is_non" ColumnName="is_non" />
-            <ScalarProperty Name="keywords" ColumnName="keywords" />
-            <ScalarProperty Name="shortcomment" ColumnName="shortcomment" />
-            <ScalarProperty Name="comment" ColumnName="comment" />
-            <ScalarProperty Name="producter_serial_no" ColumnName="producter_serial_no" />
-            <ScalarProperty Name="old_db_id" ColumnName="old_db_id" />
-            <ScalarProperty Name="agent_stock" ColumnName="agent_stock" />
-            <ScalarProperty Name="regdate" ColumnName="regdate" />
-            <ScalarProperty Name="other_product_sku" ColumnName="other_product_sku" />
-            <ScalarProperty Name="category_idss" ColumnName="category_idss" />
-            <ScalarProperty Name="export" ColumnName="export" />
-            <ScalarProperty Name="product_current_discount" ColumnName="product_current_discount" />
-            <ScalarProperty Name="last_regdate" ColumnName="last_regdate" />
-            <ScalarProperty Name="part_ebay_cost" ColumnName="part_ebay_cost" />
-            <ScalarProperty Name="part_ebay_price" ColumnName="part_ebay_price" />
-            <ScalarProperty Name="real_cost_regdate" ColumnName="real_cost_regdate" />
-            <ScalarProperty Name="issue" ColumnName="issue" />
-            <ScalarProperty Name="view_count" ColumnName="view_count" />
-            <ScalarProperty Name="model" ColumnName="model" />
-            <ScalarProperty Name="split_name" ColumnName="split_name" />
-            <ScalarProperty Name="adjustment" ColumnName="adjustment" />
-            <ScalarProperty Name="adjustment_regdate" ColumnName="adjustment_regdate" />
-            <ScalarProperty Name="adjustment_enddate" ColumnName="adjustment_enddate" />
-            <ScalarProperty Name="part_ebay_describe" ColumnName="part_ebay_describe" />
-            <ScalarProperty Name="screen_size" ColumnName="screen_size" />
-            <ScalarProperty Name="price_sku" ColumnName="price_sku" />
-            <ScalarProperty Name="price_sku_quantity" ColumnName="price_sku_quantity" />
-            <ScalarProperty Name="curr_change_cost" ColumnName="curr_change_cost" />
-            <ScalarProperty Name="curr_change_price" ColumnName="curr_change_price" />
-            <ScalarProperty Name="curr_change_ltd" ColumnName="curr_change_ltd" />
-            <ScalarProperty Name="curr_change_quantity" ColumnName="curr_change_quantity" />
-            <ScalarProperty Name="curr_change_regdate" ColumnName="curr_change_regdate" />
-            <ScalarProperty Name="ebay_system_short_name" ColumnName="ebay_system_short_name" />
-            <ScalarProperty Name="is_modify" ColumnName="is_modify" />
-            <ScalarProperty Name="is_top" ColumnName="is_top" />
-            <ScalarProperty Name="prodType" ColumnName="prodType" />
-            <ScalarProperty Name="img_url" ColumnName="img_url" />
-            <ScalarProperty Name="UPC" ColumnName="UPC" />
-            <ScalarProperty Name="ETA" ColumnName="ETA" />
-            <ScalarProperty Name="weight" ColumnName="weight" />
-            <ScalarProperty Name="href_url" ColumnName="href_url" />
-            <ScalarProperty Name="short_name_for_sys" ColumnName="short_name_for_sys" />
-            <ScalarProperty Name="is_fixed" ColumnName="is_fixed" />
-            <ScalarProperty Name="for_sys" ColumnName="for_sys" />
-            <ScalarProperty Name="new_href_url" ColumnName="new_href_url" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nicklu2ModelStoreContainer" CdmEntityContainer="nicklu2Entities1">
+          <EntitySetMapping Name="tb_product">
+            <EntityTypeMapping TypeName="nicklu2Model.tb_product">
+              <MappingFragment StoreEntitySet="tb_product">
+                <ScalarProperty Name="product_serial_no" ColumnName="product_serial_no" />
+                <ScalarProperty Name="product_name" ColumnName="product_name" />
+                <ScalarProperty Name="product_short_name" ColumnName="product_short_name" />
+                <ScalarProperty Name="product_store_sum" ColumnName="product_store_sum" />
+                <ScalarProperty Name="product_sale_sum" ColumnName="product_sale_sum" />
+                <ScalarProperty Name="menu_child_serial_no" ColumnName="menu_child_serial_no" />
+                <ScalarProperty Name="product_filename" ColumnName="product_filename" />
+                <ScalarProperty Name="tag" ColumnName="tag" />
+                <ScalarProperty Name="product_current_real_cost" ColumnName="product_current_real_cost" />
+                <ScalarProperty Name="product_current_special_cash_price" ColumnName="product_current_special_cash_price" />
+                <ScalarProperty Name="product_current_price" ColumnName="product_current_price" />
+                <ScalarProperty Name="product_current_cost" ColumnName="product_current_cost" />
+                <ScalarProperty Name="product_ship_price" ColumnName="product_ship_price" />
+                <ScalarProperty Name="producter_url" ColumnName="producter_url" />
+                <ScalarProperty Name="product_order" ColumnName="product_order" />
+                <ScalarProperty Name="supplier_sku" ColumnName="supplier_sku" />
+                <ScalarProperty Name="manufacturer_part_number" ColumnName="manufacturer_part_number" />
+                <ScalarProperty Name="ltd_stock" ColumnName="ltd_stock" />
+                <ScalarProperty Name="product_sale_sum_2" ColumnName="product_sale_sum_2" />
+                <ScalarProperty Name="product_current_cost_2" ColumnName="product_current_cost_2" />
+                <ScalarProperty Name="product_ship_price_2" ColumnName="product_ship_price_2" />
+                <ScalarProperty Name="product_ebay_name_2" ColumnName="product_ebay_name_2" />
+                <ScalarProperty Name="product_ebay_name" ColumnName="product_ebay_name" />
+                <ScalarProperty Name="product_short_name_f" ColumnName="product_short_name_f" />
+                <ScalarProperty Name="hot" ColumnName="hot" />
+                <ScalarProperty Name="new" ColumnName="new" />
+                <ScalarProperty Name="producter_serial_no_bak" ColumnName="producter_serial_no_bak" />
+                <ScalarProperty Name="product_compatibility" ColumnName="product_compatibility" />
+                <ScalarProperty Name="split_line" ColumnName="split_line" />
+                <ScalarProperty Name="product_name_long_en" ColumnName="product_name_long_en" />
+                <ScalarProperty Name="shopbot_info" ColumnName="shopbot_info" />
+                <ScalarProperty Name="product_img_sum" ColumnName="product_img_sum" />
+                <ScalarProperty Name="product_size_id" ColumnName="product_size_id" />
+                <ScalarProperty Name="is_non" ColumnName="is_non" />
+                <ScalarProperty Name="keywords" ColumnName="keywords" />
+                <ScalarProperty Name="shortcomment" ColumnName="shortcomment" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="producter_serial_no" ColumnName="producter_serial_no" />
+                <ScalarProperty Name="old_db_id" ColumnName="old_db_id" />
+                <ScalarProperty Name="agent_stock" ColumnName="agent_stock" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="other_product_sku" ColumnName="other_product_sku" />
+                <ScalarProperty Name="category_idss" ColumnName="category_idss" />
+                <ScalarProperty Name="export" ColumnName="export" />
+                <ScalarProperty Name="product_current_discount" ColumnName="product_current_discount" />
+                <ScalarProperty Name="last_regdate" ColumnName="last_regdate" />
+                <ScalarProperty Name="part_ebay_cost" ColumnName="part_ebay_cost" />
+                <ScalarProperty Name="part_ebay_price" ColumnName="part_ebay_price" />
+                <ScalarProperty Name="real_cost_regdate" ColumnName="real_cost_regdate" />
+                <ScalarProperty Name="issue" ColumnName="issue" />
+                <ScalarProperty Name="view_count" ColumnName="view_count" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="split_name" ColumnName="split_name" />
+                <ScalarProperty Name="adjustment" ColumnName="adjustment" />
+                <ScalarProperty Name="adjustment_regdate" ColumnName="adjustment_regdate" />
+                <ScalarProperty Name="adjustment_enddate" ColumnName="adjustment_enddate" />
+                <ScalarProperty Name="part_ebay_describe" ColumnName="part_ebay_describe" />
+                <ScalarProperty Name="screen_size" ColumnName="screen_size" />
+                <ScalarProperty Name="price_sku" ColumnName="price_sku" />
+                <ScalarProperty Name="price_sku_quantity" ColumnName="price_sku_quantity" />
+                <ScalarProperty Name="curr_change_cost" ColumnName="curr_change_cost" />
+                <ScalarProperty Name="curr_change_price" ColumnName="curr_change_price" />
+                <ScalarProperty Name="curr_change_ltd" ColumnName="curr_change_ltd" />
+                <ScalarProperty Name="curr_change_quantity" ColumnName="curr_change_quantity" />
+                <ScalarProperty Name="curr_change_regdate" ColumnName="curr_change_regdate" />
+                <ScalarProperty Name="ebay_system_short_name" ColumnName="ebay_system_short_name" />
+                <ScalarProperty Name="is_modify" ColumnName="is_modify" />
+                <ScalarProperty Name="is_top" ColumnName="is_top" />
+                <ScalarProperty Name="prodType" ColumnName="prodType" />
+                <ScalarProperty Name="img_url" ColumnName="img_url" />
+                <ScalarProperty Name="UPC" ColumnName="UPC" />
+                <ScalarProperty Name="ETA" ColumnName="ETA" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="href_url" ColumnName="href_url" />
+                <ScalarProperty Name="short_name_for_sys" ColumnName="short_name_for_sys" />
+                <ScalarProperty Name="is_fixed" ColumnName="is_fixed" />
+                <ScalarProperty Name="for_sys" ColumnName="for_sys" />
+                <ScalarProperty Name="new_href_url" ColumnName="new_href_url" />
+                <ScalarProperty Name="SpecificsCount" ColumnName="SpecificsCount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
@@ -281,15 +289,13 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="Nicklu2" ZoomLevel="36">
-        <EntityTypeShape EntityType="nicklu2Model.tb_product" Width="1.5" PointX="0.75" PointY="0.75" Height="16.018291015625003" IsExpanded="true" />
-      </Diagram>
-    </Diagrams>
+    <Diagrams></Diagrams>
   </Designer>
 </edmx:Edmx>

@@ -35,8 +35,12 @@ inner join tb_product_category pc on p.menu_child_serial_no=pc.menu_child_serial
 
     public tb_on_sale[] FindModelByProductSerialNo(nicklu2Entities context, int product_serial_no)
     {
-        //return OnSaleModel.FindAllByProperty("product_serial_no", product_serial_no);
-        return context.tb_on_sale.Where(me => me.product_serial_no.Equals(product_serial_no)).ToList().ToArray();
+        return context
+            .tb_on_sale.Where(me =>
+                me.product_serial_no.HasValue &&
+                me.product_serial_no == product_serial_no)
+            .ToList()
+            .ToArray();
     }
 
     public DataTable FindYestodayAndTodaySum()
@@ -77,7 +81,7 @@ update tb_on_sale set begin_datetime='" + begin_datetime.ToString() + "',end_dat
         //    osm[i].Update();
         //}
 
-        var query = context.tb_on_sale.Where(me => me.product_serial_no.Value.Equals(part_id)).ToList();
+        var query = context.tb_on_sale.Where(me => me.product_serial_no.HasValue && me.product_serial_no.Value.Equals(part_id)).ToList();
         foreach (var item in query)
         {
             item.cost = cost;

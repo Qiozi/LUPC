@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<GeteBayDetailsResponse xmlns="urn:ebay:apis:eBLBaseComponents"><Timestamp>2009-12-30T13:47:46.089Z</Timestamp><Ack>Success</Ack><Version>637</Version><Build>E637_INTL_BUNDLED_10223050_R1</Build><ShippingCarrierDetails><ShippingCarrierID>1</ShippingCarrierID><Description>UPS</Description><ShippingCarrier>UPS</ShippingCarrier><DetailVersion>1</DetailVersion><UpdateTime>2009-07-07T23:34:06.000Z</UpdateTime></ShippingCarrierDetails><UpdateTime>2009-07-07T23:34:06.000Z</UpdateTime></GeteBayDetailsResponse>

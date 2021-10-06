@@ -6,7 +6,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>ebay left menu</title>
-
     <script src="/js_css/jquery_lab/jquery-1.3.2.min.js" type="text/javascript"></script>
     <script src="/js_css/jquery_lab/jquery.tools.min.js" type="text/javascript"></script>
     <script src="/js_css/jquery_lab/tools.tabs.slideshow-1.0.2.js" type="text/javascript"></script>
@@ -77,11 +76,7 @@
         %>
     </div>
 
-    <%
-   
-   
-
-closeconn() %>
+    <% closeconn() %>
 
     <script type="text/javascript">
 

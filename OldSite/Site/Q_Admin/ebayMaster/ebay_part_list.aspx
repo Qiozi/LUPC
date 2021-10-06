@@ -25,7 +25,7 @@
                         </li>
                     </ul>
                 </td>
-                <td style="width: 502px">Keyword:<input type="text" value='' name="keyword" id="keyword" />
+                <td style="width: 600px">Keyword:<input type="text" value='' name="keyword" id="keyword" />
                     <select name="sql_type">
                         <option value="1" selected="selected">模糊</option>
                         <option value="2">精确</option>

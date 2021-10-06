@@ -122,11 +122,11 @@ public partial class Q_Admin_UC_SearchStockStatus : CtrlBase
                     this.lbl_store_sinotech.Text = StoreCost(store, cost);
                     this.lbl_last_regdate_sinotech.Text = last_regdate;
                 }
-                else if (ltd_id == lh.LtdHelperValue(Ltd.wholesaler_supercom))
-                {
-                    this.lbl_store_supercom.Text = StoreCost(store, cost);
-                    this.lbl_last_regdate_supercom.Text = last_regdate;
-                }                
+                //else if (ltd_id == lh.LtdHelperValue(Ltd.wholesaler_supercom))
+                //{
+                //    this.lbl_store_supercom.Text = StoreCost(store, cost);
+                //    this.lbl_last_regdate_supercom.Text = last_regdate;
+                //}                
             }
         }
     }

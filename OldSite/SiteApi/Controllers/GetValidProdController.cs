@@ -28,7 +28,7 @@ namespace SiteApi.Controllers
                 return valid;
             }
             var endDate = DateTime.Now.AddDays(6);
-            var cateIds = SiteDB.Product.GetValidCategory.GetValidCategoryIds(DBContext);
+            var cateIds = LU.Data.Product.GetValidCategory.GetValidCategoryIds(DBContext);
             var prods = (from c in DBContext.tb_product
                          where c.tag.HasValue && c.tag.Value.Equals(1) &&
                          c.is_non.HasValue && c.is_non.Value.Equals(0) &&

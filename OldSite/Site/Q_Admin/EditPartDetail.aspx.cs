@@ -266,7 +266,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
 
         DataTable dt = LH.LtdHelperToDataTableNoLU();
         dt.Columns.Add("other_inc_sku");
-        DataTable otherSKUDT = Config.ExecuteDataTable("select other_inc_sku, other_inc_type from tb_other_inc_match_lu_sku where lu_sku='" + Sku.ToString() + "'");
+        DataTable otherSKUDT = Config.ExecuteDataTable("select distinct other_inc_sku, other_inc_type from tb_other_inc_match_lu_sku where lu_sku='" + Sku.ToString() + "'");
         for (int i = 0; i < dt.Rows.Count; i++)
         {
             DataRow dr = dt.Rows[i];
@@ -379,7 +379,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
     {
         if (Sku > 0)
         {
-            Config.ExecuteNonQuery("delete from tb_other_inc_match_lu_sku where lu_sku='" + Sku.ToString() + "'");
+            Config.ExecuteNonQuery("delete from tb_other_inc_match_lu_sku where lu_sku='" + Sku.ToString() + "';");
             for (int i = 0; i < this.gv_inc_info.Items.Count; i++)
             {
                 HiddenField _hf_other_inc_id = (HiddenField)this.gv_inc_info.Items[i].FindControl("_hf_other_inc_id");
@@ -389,7 +389,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
                 string other_inc_sku = _txt_other_inc.Text.Trim();
                 if (other_inc_sku.Length > 0)
                 {
-                    var oims = new LU.Data.tb_other_inc_match_lu_sku();// OtherIncMatchLuSkuModel();
+                    var oims = new tb_other_inc_match_lu_sku();// OtherIncMatchLuSkuModel();
                     oims.lu_sku = Sku;
                     oims.other_inc_sku = other_inc_sku;
                     oims.other_inc_type = other_id;
@@ -566,7 +566,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
 
                 if (ReplaceHref.HaveWarnKeyword(comment))
                 {
-                    lblWarn.Text = "有非法字符 http, script, button, onload, onunload, onchange, onsubmit, onreset, onselect,onblur,onfocus,onabort, onkeydown,onkeypress,onkeyup,onclick,ondblclick,onmousedown,onmousemove,onmouseout,onmouseover,onmouseup 等等。";
+                    lblWarn.Text = "有非法字符 http, script, onload, onunload, onchange, onsubmit, onreset, onselect,onblur,onfocus,onabort, onkeydown,onkeypress,onkeyup,onclick,ondblclick,onmousedown,onmousemove,onmouseout,onmouseover,onmouseup 等等。";
                     lblWarn.ForeColor = System.Drawing.Color.Red;
                 }
                 else

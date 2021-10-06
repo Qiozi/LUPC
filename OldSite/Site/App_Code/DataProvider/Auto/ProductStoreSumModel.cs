@@ -42,10 +42,10 @@ public class ProductStoreSumModel
                 //ProductStoreSumModel.DeleteAll(" product_store_category = '1'");
                 break;
 
-            case Ltd.wholesaler_supercom:
-                Config.ExecuteNonQuery("delete from tb_product_store_sum where product_store_category = '2'");
-                //ProductStoreSumModel.DeleteAll(" product_store_category = '2'");
-                break;
+            //case Ltd.wholesaler_supercom:
+            //    Config.ExecuteNonQuery("delete from tb_product_store_sum where product_store_category = '2'");
+            //    //ProductStoreSumModel.DeleteAll(" product_store_category = '2'");
+            //    break;
         }
     }
 

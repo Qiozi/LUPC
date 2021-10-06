@@ -19,9 +19,9 @@ namespace LUComputers.DBProvider
 
             string shortName = tableName.Replace(DateTime.Now.ToString("yyyyMMdd"), "");
             DataTable dt = Config.ExecuteDateTable("show tables like '%"+ shortName +"%'");
-            for (int i = 0; i < dt.Rows.Count - 60; i++)
+            for (int i = 0; i < dt.Rows.Count - 10; i++)
             {
-                Config.ExecuteNonQuery("drop table " + dt.Rows[i][0].ToString() + ";");
+                Config.ExecuteNonQuery("drop table `ltd_info`.`" + dt.Rows[i][0].ToString() + "`;");
             }
             //
             // create table

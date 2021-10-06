@@ -94,7 +94,6 @@
         <EntityTypeShape EntityType="nicklu2Model.tb_modify_price_history" Width="1.5" PointX="28.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_news" Width="1.5" PointX="28.75" PointY="15.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_news_letter" Width="1.5" PointX="28.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="nicklu2Model.tb_on_sale" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_on_sale_history" Width="1.5" PointX="22.75" PointY="28.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_order" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_order_assigned_to" Width="1.5" PointX="6.75" PointY="29.75" IsExpanded="true" />
@@ -234,6 +233,7 @@
         <EntityTypeShape EntityType="nicklu2Model.tb_execute_day" Width="1.5" PointX="6.75" PointY="45.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_other_inc_amount_date" Width="1.5" PointX="34.75" PointY="45.75" IsExpanded="true" />
         <EntityTypeShape EntityType="nicklu2Model.tb_ebay_system_modify_backup" Width="1.5" PointX="37.375" PointY="45.75" />
+        <EntityTypeShape EntityType="nicklu2Model.tb_on_sale" Width="1.5" PointX="19.375" PointY="46.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

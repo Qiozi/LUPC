@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using OpenFlashChart;
 using System.Data;
 
 public partial class Q_Admin_OpenFlashChartData : PageBase
@@ -171,14 +166,13 @@ public partial class Q_Admin_OpenFlashChartData : PageBase
             LabelColor = new KeyValuePair<string, string>("eBay last year", _colorEbay2)
         });
         
-        Response.Write(ExportChartBar(listChart360, string.Format(@"  web last year (the same term): {0}; web year total: {1};
-        eBay last year (the same term): {2}; eBay year total: {3}; "
-                , lastYearWebTotal.ToString("##,###,##0.00$")
-                , webTotal.ToString("##,###,##0.00$")
-                , lastYearEbayTotal.ToString("##,###,##0.00$")
-                , eBayTotal.ToString("##,###,##0.00$"))
-            , title360.ToArray(), maxValue360 + 1000).ToPrettyString());
-        // Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(result));
+        //Response.Write(ExportChartBar(listChart360, string.Format(@"  web last year (the same term): {0}; web year total: {1};
+        //eBay last year (the same term): {2}; eBay year total: {3}; "
+        //        , lastYearWebTotal.ToString("##,###,##0.00$")
+        //        , webTotal.ToString("##,###,##0.00$")
+        //        , lastYearEbayTotal.ToString("##,###,##0.00$")
+        //        , eBayTotal.ToString("##,###,##0.00$"))
+        //    , title360.ToArray(), maxValue360 + 1000).ToPrettyString());
 
     }
 
@@ -238,14 +232,14 @@ public partial class Q_Admin_OpenFlashChartData : PageBase
             LabelColor = new KeyValuePair<string, string>("eBay", _coloreBay)
         });
 
-        Response.Write(ExportChartBar(listChart30, string.Format(@"web {0} total: {1}; web today: {2}
-ebay {0} total: {3}; eBay today;{4} "
-                , DateTime.Now.ToString("yyyy/MM")
-                , webCurrMonthTotal.ToString("##,###,##0.00$")
-                , webTodayTotal.ToString("##,###,##0.00$")
-                , ebayCurrMonthTotal.ToString("##,###,##0.00$")
-                , ebayTodayTotal.ToString("##,###,##0.00$"))
-            , title30.ToArray(), maxValue30 + 50).ToPrettyString());
+//        Response.Write(ExportChartBar(listChart30, string.Format(@"web {0} total: {1}; web today: {2}
+//ebay {0} total: {3}; eBay today;{4} "
+//                , DateTime.Now.ToString("yyyy/MM")
+//                , webCurrMonthTotal.ToString("##,###,##0.00$")
+//                , webTodayTotal.ToString("##,###,##0.00$")
+//                , ebayCurrMonthTotal.ToString("##,###,##0.00$")
+//                , ebayTodayTotal.ToString("##,###,##0.00$"))
+//            , title30.ToArray(), maxValue30 + 50).ToPrettyString());
     }
 
     void BindChart()
@@ -302,40 +296,40 @@ ebay {0} total: {3}; eBay today;{4} "
 
     }
 
-    public OpenFlashChart.OpenFlashChart ExportChartBar(List<ChartItem> data, string title, string[] xLabels, double maxValue)
-    {
-        OpenFlashChart.OpenFlashChart chart = new OpenFlashChart.OpenFlashChart();
-        chart.Title = new Title(title);
+    //public OpenFlashChart.OpenFlashChart ExportChartBar(List<ChartItem> data, string title, string[] xLabels, double maxValue)
+    //{
+    //    OpenFlashChart.OpenFlashChart chart = new OpenFlashChart.OpenFlashChart();
+    //    chart.Title = new Title(title);
 
-        for (int i = 0; i < data.Count; i++)
-        {
-            Bar bar = new OpenFlashChart.Bar();
+    //    for (int i = 0; i < data.Count; i++)
+    //    {
+    //        Bar bar = new OpenFlashChart.Bar();
 
-            Random random = new Random();
-            bar.Colour = data[i].LabelColor.Value;
+    //        Random random = new Random();
+    //        bar.Colour = data[i].LabelColor.Value;
 
-            bar.Alpha = 0.7;
-            bar.Text = data[i].LabelColor.Key;
-            bar.FontSize = 12;
-            bar.Values = data[i].Data;
+    //        bar.Alpha = 0.7;
+    //        bar.Text = data[i].LabelColor.Key;
+    //        bar.FontSize = 12;
+    //        bar.Values = data[i].Data;
 
-            chart.AddElement(bar);
-        }
-        XAxis xaxis = new XAxis();
-        xaxis.Labels.SetLabels(xLabels);
-        xaxis.Labels.Vertical = data.Count != 4 ? true : false;
-        xaxis.Labels.FontSize = 12;
-        //xaxis.Steps = 1;
-        //xaxis.Offset = true;
-        //xaxis.SetRange(-2, 15);
-        chart.X_Axis = xaxis;
-        chart.X_Axis.Axis3D = 1;
-        //YAxis yaxis = new YAxis();
-        //yaxis.Steps = 4;
-        //yaxis.SetRange(0, 20);
-        //chart.Y_Axis = yaxis;
-        chart.Y_Axis.SetRange(0, maxValue, 6);
-        //bar.Tooltip = "提示:label:#x_label#<br>#top#<br>#bottom#<br>#val#";
-        return chart;
-    }
+    //        chart.AddElement(bar);
+    //    }
+    //    XAxis xaxis = new XAxis();
+    //    xaxis.Labels.SetLabels(xLabels);
+    //    xaxis.Labels.Vertical = data.Count != 4 ? true : false;
+    //    xaxis.Labels.FontSize = 12;
+    //    //xaxis.Steps = 1;
+    //    //xaxis.Offset = true;
+    //    //xaxis.SetRange(-2, 15);
+    //    chart.X_Axis = xaxis;
+    //    chart.X_Axis.Axis3D = 1;
+    //    //YAxis yaxis = new YAxis();
+    //    //yaxis.Steps = 4;
+    //    //yaxis.SetRange(0, 20);
+    //    //chart.Y_Axis = yaxis;
+    //    chart.Y_Axis.SetRange(0, maxValue, 6);
+    //    //bar.Tooltip = "提示:label:#x_label#<br>#top#<br>#bottom#<br>#val#";
+    //    return chart;
+    //}
 }

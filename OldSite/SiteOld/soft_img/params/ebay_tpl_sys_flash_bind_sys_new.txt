@@ -1,8 +1,0 @@
-﻿<p align="center">
-	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="970" [lu_web_build_flash_height] id="FlashEbayCreateSys" align="middle">
-		<param name="allowScriptAccess" value="sameDomain" />
-		<param name="movie" value="http://www.lucomputers.com/images/flash/FlashEbayCreateSystemV5.swf?sid=[system_sku]" />
-		<param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />
-		<embed src="http://www.lucomputers.com/images/flash/FlashEbayCreateSystemV5.swf?sid=[system_sku]" quality="high" bgcolor="#ffffff" width="970" [lu_web_build_flash_height] name="FlashEbayCreateSys" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-	</object>
-</p>

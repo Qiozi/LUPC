@@ -98,7 +98,7 @@ namespace SiteApi.Controllers
             return false;
         }
 
-        Item GetItemInfo(SiteDB.tb_ebay_promotional_sale_id saleId)
+        Item GetItemInfo(LU.Data.tb_ebay_promotional_sale_id saleId)
         {
             return new Item
             {
@@ -130,7 +130,7 @@ namespace SiteApi.Controllers
             return DBContext.tb_ebay_selling.Where(p => p.luc_sku.HasValue && prodIds.Contains(p.luc_sku.Value)).Select(p => p.ItemID).ToList();
         }
 
-        string SetPromotionalSaleListings(SiteDB.nicklu2Entities context, int sku, string itemIdString, bool isSys, string promotionalSaleId)
+        string SetPromotionalSaleListings(LU.Data.nicklu2Entities context, int sku, string itemIdString, bool isSys, string promotionalSaleId)
         {
             #region settings
 
@@ -175,7 +175,7 @@ namespace SiteApi.Controllers
                       , promotionalSaleId
                       , itemIdString);
 
-            SiteDB.eBay.eBayOperationHistory.SaveSendXml(context, sendXml, isSys, -1);
+            LU.Data.eBay.eBayOperationHistory.SaveSendXml(context, sendXml, isSys, -1);
 
             //throw new Exception(ItemAttribates);
 
@@ -248,7 +248,7 @@ namespace SiteApi.Controllers
             sr.Close();
             str.Close();
 
-            SiteDB.eBay.eBayOperationHistory.SaveSendXmlResult(context, resultString, isSys, -1);
+            LU.Data.eBay.eBayOperationHistory.SaveSendXmlResult(context, resultString, isSys, -1);
 
             //get the root node, for ease of use
             XmlNode root = xmlDoc["SetPromotionalSaleListingsResponse"];

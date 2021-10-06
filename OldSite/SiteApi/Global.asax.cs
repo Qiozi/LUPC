@@ -14,16 +14,17 @@ namespace SiteApi
 
     public class WebApiApplication : System.Web.HttpApplication
     {
-        protected void Application_Start()
-        {
-            AreaRegistration.RegisterAllAreas();
+protected void Application_Start()
+{
+    AreaRegistration.RegisterAllAreas();
 
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles); ConfigJson();
+    WebApiConfig.Register(GlobalConfiguration.Configuration);
+    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+    RouteConfig.RegisterRoutes(RouteTable.Routes);
+    BundleConfig.RegisterBundles(BundleTable.Bundles); ConfigJson();
 
-        }
+    GlobalConfiguration.Configuration.EnsureInitialized();
+}
 
         void ConfigJson()
         {
