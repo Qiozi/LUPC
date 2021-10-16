@@ -72,11 +72,13 @@ namespace YunStore
             if (currDate.Length == 4) // 年
             {
                 var items = _dbList.Where(me => me.ProfitDate.StartsWith(currDate));
-
                 var remark = string.Empty;
+                
+                this.labelRemark.Text = string.Format("备注（{0}）", currDate);
+
                 foreach (var item in items)
                 {
-                    remark += "(" + item.ProfitDate + ")\r\n" + item.Remark + "\r\n\r\n";
+                    remark += "###################################### 日期：(" + item.ProfitDate + ") ###############################################\r\n\r\n" + item.Remark + "\r\n\r\n";
                 }
                 this.textBoxRemark.Text = remark;
 
@@ -153,12 +155,14 @@ namespace YunStore
 
                 var li9 = new ListViewItem("其他杂费");
                 li9.SubItems.Add(Util.FormatPrice(items.Sum(me => me.QiTaZaFei)));
-                li9.SubItems.Add("代付费用");
+                li9.SubItems.Add("个人代付费用");
                 li9.SubItems.Add(Util.FormatPrice(items.Sum(me => me.DaiFuFeiYong)));
                 listView2.Items.Add(li9);
 
                 var li10 = new ListViewItem("财务记账费");
                 li10.SubItems.Add(Util.FormatPrice(items.Sum(me => me.CaiWuJiZhangFei)));
+                li10.SubItems.Add("优易订购费");
+                li10.SubItems.Add(Util.FormatPrice(items.Sum(me => me.YouYiDingGouFei)));
                 listView2.Items.Add(li10);
 
                 var li11 = new ListViewItem("营销成本");
@@ -180,16 +184,20 @@ namespace YunStore
 
                 var li13_2 = new ListViewItem("超级推荐");
                 li13_2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ChaoJiTuiJian)));
-                li13_2.SubItems.Add("刷单费用");
+                li13_2.SubItems.Add("刷单佣金费");
                 li13_2.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ShuaDianFeiYou)));
                 listView2.Items.Add(li13_2);
+
+                var li13_3 = new ListViewItem("AI智能投放");
+                li13_3.SubItems.Add(Util.FormatPrice(items.Sum(me => me.AiZhiNengTouFang)));
+                listView2.Items.Add(li13_3);
 
                 var li14 = new ListViewItem("产品总成本");
                 li14.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ChanPinChengBen1)));
                 li14.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li14);
 
-                var li15 = new ListViewItem("进货成本v");
+                var li15 = new ListViewItem("进货成本");
                 li15.SubItems.Add(Util.FormatPrice(items.Sum(me => me.JinHuoChengBen)));
                 li15.SubItems.Add("尚尼成本");
                 li15.SubItems.Add(Util.FormatPrice(items.Sum(me => me.ShangNiChengBen)));
@@ -209,6 +217,8 @@ namespace YunStore
 
                 var li18 = new ListViewItem("nut防丢器");
                 li18.SubItems.Add(Util.FormatPrice(items.Sum(me => me.NutFangDiuQi)));
+                li18.SubItems.Add("仓库发货商品总成本");
+                li18.SubItems.Add(Util.FormatPrice(items.Sum(me => me.CangKuFaHuoShangPinZongChengBen)));
                 listView2.Items.Add(li18);
 
                 var li19 = new ListViewItem("秒仓（总费用）");
@@ -224,13 +234,17 @@ namespace YunStore
 
                 var li21 = new ListViewItem("定纸箱费用（第一月）");
                 li21.SubItems.Add(Util.FormatPrice(items.Sum(me => me.DingZhiXiangFeiYong)));
+                li21.SubItems.Add("护角费用");
+                li21.SubItems.Add(Util.FormatPrice(items.Sum(me => me.HuJiaoFeiYong)));
                 listView2.Items.Add(li21);
             }
             else// 月
             {
                 var item = _dbList.FirstOrDefault(me => me.ProfitDate.Equals(currDate));
 
-                this.textBoxRemark.Text = item.Remark;
+                this.labelRemark.Text = string.Format("备注（{0}）", currDate);
+                this.textBoxRemark.Text ="############################日期：(" + currDate + ")########################################################\r\n\r\n" + item.Remark + "\r\n\r\n";
+               
 
                 var li1 = new ListViewItem("月份");
                 li1.SubItems.Add(item.ProfitDate);
@@ -308,6 +322,8 @@ namespace YunStore
 
                 var li10 = new ListViewItem("财务记账费");
                 li10.SubItems.Add(Util.FormatPrice(item.CaiWuJiZhangFei));
+                li10.SubItems.Add("优易订购费");
+                li10.SubItems.Add(Util.FormatPrice(item.YouYiDingGouFei));
                 listView2.Items.Add(li10);
 
                 var li11 = new ListViewItem("营销成本");
@@ -329,16 +345,21 @@ namespace YunStore
 
                 var li13_2 = new ListViewItem("超级推荐");
                 li13_2.SubItems.Add(Util.FormatPrice(item.ChaoJiTuiJian));
-                li13_2.SubItems.Add("刷单费用");
+                li13_2.SubItems.Add("刷单佣金费");
                 li13_2.SubItems.Add(Util.FormatPrice(item.ShuaDianFeiYou));
                 listView2.Items.Add(li13_2);
+
+
+                var li13_3 = new ListViewItem("AI智能投放");
+                li13_3.SubItems.Add(Util.FormatPrice(item.AiZhiNengTouFang));
+                listView2.Items.Add(li13_3);
 
                 var li14 = new ListViewItem("产品总成本");
                 li14.SubItems.Add(Util.FormatPrice(item.ChanPinChengBen1));
                 li14.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li14);
 
-                var li15 = new ListViewItem("进货成本v");
+                var li15 = new ListViewItem("进货成本");
                 li15.SubItems.Add(Util.FormatPrice(item.JinHuoChengBen));
                 li15.SubItems.Add("尚尼成本");
                 li15.SubItems.Add(Util.FormatPrice(item.ShangNiChengBen));
@@ -358,6 +379,8 @@ namespace YunStore
 
                 var li18 = new ListViewItem("nut防丢器");
                 li18.SubItems.Add(Util.FormatPrice(item.NutFangDiuQi));
+                li18.SubItems.Add("仓库发货商品总成本");
+                li18.SubItems.Add(Util.FormatPrice(item.CangKuFaHuoShangPinZongChengBen));
                 listView2.Items.Add(li18);
 
                 var li19 = new ListViewItem("秒仓（总费用）");
@@ -373,6 +396,8 @@ namespace YunStore
 
                 var li21 = new ListViewItem("定纸箱费用（第一月）");
                 li21.SubItems.Add(Util.FormatPrice(item.DingZhiXiangFeiYong));
+                li21.SubItems.Add("护角费用");
+                li21.SubItems.Add(Util.FormatPrice(item.HuJiaoFeiYong));
                 listView2.Items.Add(li21);
             }
 

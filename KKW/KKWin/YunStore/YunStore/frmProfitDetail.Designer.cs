@@ -41,7 +41,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxRemark = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRemark = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -130,23 +130,24 @@
             this.textBoxRemark.MaxLength = 500;
             this.textBoxRemark.Multiline = true;
             this.textBoxRemark.Name = "textBoxRemark";
+            this.textBoxRemark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxRemark.Size = new System.Drawing.Size(654, 126);
             this.textBoxRemark.TabIndex = 26;
             // 
-            // label1
+            // labelRemark
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 608);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "备注";
+            this.labelRemark.AutoSize = true;
+            this.labelRemark.Location = new System.Drawing.Point(316, 608);
+            this.labelRemark.Name = "labelRemark";
+            this.labelRemark.Size = new System.Drawing.Size(29, 12);
+            this.labelRemark.TabIndex = 27;
+            this.labelRemark.Text = "备注";
             // 
             // frmProfitDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(984, 761);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRemark);
             this.Controls.Add(this.textBoxRemark);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -170,6 +171,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TextBox textBoxRemark;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRemark;
     }
 }

@@ -199,6 +199,11 @@ namespace YunStore
                 this.numericUpDownSheBaoGongJiJin.Value = query.SheBaoGongJiJin;
                 this.numericUpDownMaoLi.Value = query.MaoLi;
 
+                this.numericUpDownYouYiDingGouFei.Value = query.YouYiDingGouFei;
+                this.numericUpDownAiZhiNengTouFang.Value = query.AiZhiNengTouFang;
+                this.numericUpDownCangKuFaHuoShangPinZongChengBen.Value = query.CangKuFaHuoShangPinZongChengBen;
+                this.numericUpDownHuJiaoFeiYong.Value = query.HuJiaoFeiYong;
+
                 this.textBoxRemark.Text = query.Remark;
             }
         }
@@ -299,6 +304,12 @@ namespace YunStore
                 newModel.SheBaoGongJiJin = numericUpDownSheBaoGongJiJin.Value;
                 newModel.Remark = this.textBoxRemark.Text.Trim();
 
+                //新增(2021.10.15)
+                newModel.YouYiDingGouFei = numericUpDownYouYiDingGouFei.Value;
+                newModel.AiZhiNengTouFang = numericUpDownAiZhiNengTouFang.Value;
+                newModel.CangKuFaHuoShangPinZongChengBen = numericUpDownCangKuFaHuoShangPinZongChengBen.Value;
+                newModel.HuJiaoFeiYong = numericUpDownHuJiaoFeiYong.Value;
+
                 // 营业额—成本=毛利，这个公式你创建下，
                 newModel.MaoLi = (newModel.Sale_TianMao + newModel.Sale_Taobao) - newModel.ChanPinChengBen1;
 
@@ -357,11 +368,16 @@ namespace YunStore
                 this.numericUpDownShuiWuFeiYong.Value +
                 this.numericUpDownQiTaZaFei.Value +
                 this.numericUpDownDaiFuFeiYong.Value +
-                this.numericUpDownCaiWuJiZhangFei.Value;
+                this.numericUpDownCaiWuJiZhangFei.Value +
+                this.numericUpDownYouYiDingGouFei.Value;
 
             StatProfit();
         }
 
+        private void numericUpDownYouYiDingGouFei_ValueChanged(object sender, EventArgs e)
+        {
+            GuDingChengBen1Change();
+        }
         private void numericUpDownBanGongYongPin_ValueChanged(object sender, EventArgs e)
         {
             GuDingChengBen1Change();
@@ -377,7 +393,7 @@ namespace YunStore
             GuDingChengBen1Change();
         }
 
-       
+
         private void numericUpDownShuiWuFeiYong_ValueChanged(object sender, EventArgs e)
         {
             GuDingChengBen1Change();
@@ -409,7 +425,8 @@ namespace YunStore
                 numericUpDownQiTaFeiYong.Value +
                 numericUpDownCDianZhiTongChe.Value +
                 numericUpDownShuaDian.Value +
-                numericUpDownChaoJiTuiJian.Value;
+                numericUpDownChaoJiTuiJian.Value +
+                numericUpDownAiZhiNengTouFang.Value;
 
             StatProfit();
         }
@@ -442,6 +459,10 @@ namespace YunStore
         {
             YingXiaoChengBen1Change();
         }
+        private void numericUpDownAiZhiNengTouFang_ValueChanged(object sender, EventArgs e)
+        {
+            YingXiaoChengBen1Change();
+        }
         /// <summary>
         /// 产品成本
         /// </summary>
@@ -454,11 +475,16 @@ namespace YunStore
                 numericUpDownXinRuiChengBen.Value +
                 numericUpDownHongWeiWuLiuChengBen.Value +
                 numericUpDownEKOFaHuoShangPinChengBen.Value +
-                numericUpDownNutFangDiuQi.Value;
+                numericUpDownNutFangDiuQi.Value +
+                numericUpDownCangKuFaHuoShangPinZongChengBen.Value;
 
             StatProfit();
         }
 
+        private void numericUpDownCangKuFaHuoShangPinZongChengBen_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDownChanPinChengBen1Change();
+        }
         private void numericUpDownJinHuoChengBen_ValueChanged(object sender, EventArgs e)
         {
             numericUpDownChanPinChengBen1Change();
@@ -502,7 +528,9 @@ namespace YunStore
             this.numericUpDownYunCangChengBen1.Value =
                 numericUpDownCangChuFeiYuFaHuoFeiYong.Value +
                 numericUpDownHaoCaiFei.Value +
-                numericUpDownDingZhiXiangFeiYong.Value;
+                numericUpDownDingZhiXiangFeiYong.Value +
+                numericUpDownHuJiaoFeiYong.Value
+                ;
 
             StatProfit();
         }
@@ -564,6 +592,11 @@ namespace YunStore
         private void numericUpDownSheBaoGongJiJin_ValueChanged(object sender, EventArgs e)
         {
             RenLiChengBen1Change();
+        }
+
+        private void numericUpDownHuJiaoFeiYong_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDownYunCangChengBen1Change();
         }
 
     }
