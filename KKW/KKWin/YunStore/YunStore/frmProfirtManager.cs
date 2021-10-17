@@ -129,7 +129,7 @@ namespace YunStore
 
             var query = _context
                 .tb_profit
-                .OrderByDescending(me => me.Regdate)
+                .OrderByDescending(me => me.ProfitDate)
                 .ToList();
 
             foreach (var item in query)
