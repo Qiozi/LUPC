@@ -27,6 +27,7 @@ namespace YunStore.DB
         public decimal YingXiaoChengBen1 { get; set; }
         public decimal ChanPinChengBen1 { get; set; }
         public decimal YunCangChengBen1 { get; set; }
+        public decimal BanGongZaFei1 { get; set; }
         public decimal GongZi { get; set; }
         public decimal SiJiFeiYong { get; set; }
         public decimal DaiYunYingFeiYong { get; set; }
@@ -64,5 +65,12 @@ namespace YunStore.DB
         public decimal AiZhiNengTouFang { get; set; }
         public decimal CangKuFaHuoShangPinZongChengBen { get; set; }
         public decimal HuJiaoFeiYong { get; set; }
+        public decimal MiYaKeChengBen { get; set; }
+        public decimal CaiZhaoChengBen { get; set; }
+        public decimal KuangQuanShuiChengBen { get; set; }
+        public decimal YiSuiBiaoQian { get; set; }
+        public decimal QiPaoZhu { get; set; }
+        public decimal JiaoDai { get; set; }
+        public decimal MiaoCangOther { get; set; }
     }
 }

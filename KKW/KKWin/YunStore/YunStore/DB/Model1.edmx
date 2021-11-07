@@ -22,6 +22,7 @@
           <Property Name="YingXiaoChengBen1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="ChanPinChengBen1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="YunCangChengBen1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="BanGongZaFei1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="GongZi" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="SiJiFeiYong" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="DaiYunYingFeiYong" Type="decimal" Precision="18" Scale="2" Nullable="false" />
@@ -59,6 +60,13 @@
           <Property Name="AiZhiNengTouFang" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="CangKuFaHuoShangPinZongChengBen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="HuJiaoFeiYong" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="MiYaKeChengBen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="CaiZhaoChengBen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="KuangQuanShuiChengBen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="YiSuiBiaoQian" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="QiPaoZhu" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="JiaoDai" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="MiaoCangOther" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_user">
           <Key>
@@ -361,6 +369,7 @@
           <Property Name="YingXiaoChengBen1" Type="Decimal" Nullable="false" />
           <Property Name="ChanPinChengBen1" Type="Decimal" Nullable="false" />
           <Property Name="YunCangChengBen1" Type="Decimal" Nullable="false" />
+          <Property Name="BanGongZaFei1" Type="Decimal" Nullable="false" />
           <Property Name="GongZi" Type="Decimal" Nullable="false" />
           <Property Name="SiJiFeiYong" Type="Decimal" Nullable="false" />
           <Property Name="DaiYunYingFeiYong" Type="Decimal" Nullable="false" />
@@ -398,6 +407,13 @@
           <Property Name="AiZhiNengTouFang" Type="Decimal" Nullable="false" />
           <Property Name="CangKuFaHuoShangPinZongChengBen" Type="Decimal" Nullable="false" />
           <Property Name="HuJiaoFeiYong" Type="Decimal" Nullable="false" />
+          <Property Name="MiYaKeChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="CaiZhaoChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="KuangQuanShuiChengBen" Type="Decimal" Nullable="false" />
+          <Property Name="YiSuiBiaoQian" Type="Decimal" Nullable="false" />
+          <Property Name="QiPaoZhu" Type="Decimal" Nullable="false" />
+          <Property Name="JiaoDai" Type="Decimal" Nullable="false" />
+          <Property Name="MiaoCangOther" Type="Decimal" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -545,6 +561,13 @@
           <EntitySetMapping Name="tb_profit">
             <EntityTypeMapping TypeName="qstoreModel.tb_profit">
               <MappingFragment StoreEntitySet="tb_profit">
+                <ScalarProperty Name="MiaoCangOther" ColumnName="MiaoCangOther" />
+                <ScalarProperty Name="JiaoDai" ColumnName="JiaoDai" />
+                <ScalarProperty Name="QiPaoZhu" ColumnName="QiPaoZhu" />
+                <ScalarProperty Name="YiSuiBiaoQian" ColumnName="YiSuiBiaoQian" />
+                <ScalarProperty Name="KuangQuanShuiChengBen" ColumnName="KuangQuanShuiChengBen" />
+                <ScalarProperty Name="CaiZhaoChengBen" ColumnName="CaiZhaoChengBen" />
+                <ScalarProperty Name="MiYaKeChengBen" ColumnName="MiYaKeChengBen" />
                 <ScalarProperty Name="HuJiaoFeiYong" ColumnName="HuJiaoFeiYong" />
                 <ScalarProperty Name="CangKuFaHuoShangPinZongChengBen" ColumnName="CangKuFaHuoShangPinZongChengBen" />
                 <ScalarProperty Name="AiZhiNengTouFang" ColumnName="AiZhiNengTouFang" />
@@ -582,6 +605,7 @@
                 <ScalarProperty Name="DaiYunYingFeiYong" ColumnName="DaiYunYingFeiYong" />
                 <ScalarProperty Name="SiJiFeiYong" ColumnName="SiJiFeiYong" />
                 <ScalarProperty Name="GongZi" ColumnName="GongZi" />
+                <ScalarProperty Name="BanGongZaFei1" ColumnName="BanGongZaFei1" />
                 <ScalarProperty Name="YunCangChengBen1" ColumnName="YunCangChengBen1" />
                 <ScalarProperty Name="ChanPinChengBen1" ColumnName="ChanPinChengBen1" />
                 <ScalarProperty Name="YingXiaoChengBen1" ColumnName="YingXiaoChengBen1" />
