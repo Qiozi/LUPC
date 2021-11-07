@@ -22,6 +22,8 @@ namespace YunStore.DB
         public decimal Profit { get; set; }
         public decimal Sale_TianMao { get; set; }
         public decimal Sale_Taobao { get; set; }
+        public decimal WuLiuChengBen1 { get; set; }
+        public decimal MiaoCangFeiYong1 { get; set; }
         public decimal RenLiChengBen1 { get; set; }
         public decimal GuDingChengBen1 { get; set; }
         public decimal YingXiaoChengBen1 { get; set; }

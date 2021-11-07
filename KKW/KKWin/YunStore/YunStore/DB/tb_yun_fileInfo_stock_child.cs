@@ -29,5 +29,6 @@ namespace YunStore.DB
         public decimal Total { get; set; }
         public int Qty30DaySale { get; set; }
         public int QtyWarn { get; set; }
+        public string Brand { get; set; }
     }
 }

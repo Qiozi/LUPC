@@ -50,8 +50,9 @@ namespace YunStore
             this.listView1.Items.Clear();
             foreach (var item in query)
             {
-                var li = new ListViewItem(item.ProdCode);
+                var li = new ListViewItem(item.Brand);
                 li.Tag = item.Gid;
+                li.SubItems.Add(item.ProdCode);
                 li.SubItems.Add(item.SpecCode);
                 li.SubItems.Add(item.ProdName);
                 li.SubItems.Add(item.ProdSpec);

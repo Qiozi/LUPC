@@ -50,7 +50,7 @@ namespace YunStore
                                 FileName = Path.GetFileName(this.textBox1.Text),
                                 Gid = Guid.NewGuid(),
                                 Regdate = new Util().GetCurrDateTime,
-                                StaffId = BLL.Config.StaffGid ,
+                                StaffId = BLL.Config.StaffGid,
                                 StaffName = BLL.Config.StaffName ?? "",
                                 AllProdQty = 0,
                                 AllProdStock = 0,
@@ -72,6 +72,7 @@ namespace YunStore
                             var total = (dr["总货值"] ?? "").ToString();
                             var qty30day = (dr["30天销量"] ?? "").ToString();
                             var qtyWarn = (dr["警戒量"] ?? "").ToString();
+                            var brand = (dr["品牌"] ?? "").ToString();
 
                             var datetime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fffff");
                             var newModel = new DB.tb_yun_fileinfo_stock_child
@@ -90,7 +91,8 @@ namespace YunStore
                                 QtyWarn = ConvertHelper.CustomConvert<int>(qtyWarn),
                                 SpecCode = specCode,
                                 Regdate = datetime,
-                                Total = ConvertHelper.CustomConvert<decimal>(total)
+                                Total = ConvertHelper.CustomConvert<decimal>(total),
+                                Brand = brand ?? ""
                             };
                             _dbList.Add(newModel);
 
@@ -104,7 +106,8 @@ namespace YunStore
                     this.listView1.Items.Clear();
                     foreach (var item in _dbList)
                     {
-                        var li = new ListViewItem(item.ProdCode);
+                        var li = new ListViewItem(item.Brand);
+                        li.SubItems.Add(item.ProdCode);
                         li.SubItems.Add(item.SpecCode);
                         li.SubItems.Add(item.ProdName);
                         li.SubItems.Add(item.ProdSpec);

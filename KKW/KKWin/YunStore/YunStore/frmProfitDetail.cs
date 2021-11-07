@@ -216,16 +216,12 @@ namespace YunStore
                 li16.SubItems.Add(Util.FormatPrice(items.Sum(me => me.XinRuiChengBen)));
                 listView2.Items.Add(li16);
 
-                var li17 = new ListViewItem("宏伟物流成本");
-                li17.SubItems.Add(Util.FormatPrice(items.Sum(me => me.HongWeiWuLiuChengBen)));
-                li17.SubItems.Add("eko发货商品成本");
+                var li17 = new ListViewItem("eko发货商品成本");
                 li17.SubItems.Add(Util.FormatPrice(items.Sum(me => me.EKOFaHuoShangPinChengBen)));
                 listView2.Items.Add(li17);
 
                 var li18 = new ListViewItem("nut防丢器");
                 li18.SubItems.Add(Util.FormatPrice(items.Sum(me => me.NutFangDiuQi)));
-                li18.SubItems.Add("矿泉水成本");
-                li18.SubItems.Add(Util.FormatPrice(items.Sum(me => me.KuangQuanShuiChengBen)));
                 listView2.Items.Add(li18);
 
                 var li18_1 = new ListViewItem("米雅可成本");
@@ -235,15 +231,15 @@ namespace YunStore
                 listView2.Items.Add(li18_1);
 
 
-                var li19 = new ListViewItem("秒仓（总费用）");
+                var li19 = new ListViewItem("仓库耗材");
                 li19.SubItems.Add(Util.FormatPrice(items.Sum(me => me.YunCangChengBen1)));
                 li19.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li19);
 
-                var li20 = new ListViewItem("仓储费与发货费用");
-                li20.SubItems.Add(Util.FormatPrice(items.Sum(me => me.CangChuFeiYuFaHuoFeiYong)));
-                li20.SubItems.Add("耗材费");
+                var li20 = new ListViewItem("耗材费");
                 li20.SubItems.Add(Util.FormatPrice(items.Sum(me => me.HaoCaiFei)));
+                li20.SubItems.Add("矿泉水成本");
+                li20.SubItems.Add(Util.FormatPrice(items.Sum(me => me.KuangQuanShuiChengBen)));
                 listView2.Items.Add(li20);
 
                 var li21 = new ListViewItem("定纸箱费用（第一月）");
@@ -268,6 +264,27 @@ namespace YunStore
                 var li24 = new ListViewItem("其他");
                 li24.SubItems.Add(Util.FormatPrice(items.Sum(me => me.MiaoCangOther)));
                 listView2.Items.Add(li24);
+
+
+                var li28 = new ListViewItem("秒仓费用");
+                li28.SubItems.Add(Util.FormatPrice(items.Sum(me => me.MiaoCangFeiYong1)));
+                li28.BackColor = Color.WhiteSmoke;
+                listView2.Items.Add(li28);
+
+                var li29= new ListViewItem("定纸箱费用（第一月）");
+                li29.SubItems.Add(Util.FormatPrice(items.Sum(me => me.DingZhiXiangFeiYong)));                
+                listView2.Items.Add(li29);
+
+
+                var li33 = new ListViewItem("仓储费与发货费用");
+                li33.SubItems.Add(Util.FormatPrice(items.Sum(me => me.CangChuFeiYuFaHuoFeiYong)));
+                li33.BackColor = Color.WhiteSmoke;
+                listView2.Items.Add(li33);
+
+                var li34 = new ListViewItem("宏伟物流成本");
+                li34.SubItems.Add(Util.FormatPrice(items.Sum(me => me.HongWeiWuLiuChengBen)));
+                listView2.Items.Add(li34);
+
             }
             else// 月
             {
@@ -407,16 +424,13 @@ namespace YunStore
                 li16.SubItems.Add(Util.FormatPrice(item.XinRuiChengBen));
                 listView2.Items.Add(li16);
 
-                var li17 = new ListViewItem("宏伟物流成本");
-                li17.SubItems.Add(Util.FormatPrice(item.HongWeiWuLiuChengBen));
-                li17.SubItems.Add("eko发货商品成本");
+                var li17 = new ListViewItem("eko发货商品成本");
                 li17.SubItems.Add(Util.FormatPrice(item.EKOFaHuoShangPinChengBen));
                 listView2.Items.Add(li17);
 
                 var li18 = new ListViewItem("nut防丢器");
                 li18.SubItems.Add(Util.FormatPrice(item.NutFangDiuQi));
-                li18.SubItems.Add("矿泉水成本");
-                li18.SubItems.Add(Util.FormatPrice(item.KuangQuanShuiChengBen));
+               
                 listView2.Items.Add(li18);
 
                 var li18_1 = new ListViewItem("米雅可成本");
@@ -426,15 +440,15 @@ namespace YunStore
                 listView2.Items.Add(li18_1);
 
 
-                var li19 = new ListViewItem("秒仓（总费用）");
+                var li19 = new ListViewItem("仓库耗材");
                 li19.SubItems.Add(Util.FormatPrice(item.YunCangChengBen1));
                 li19.BackColor = Color.WhiteSmoke;
                 listView2.Items.Add(li19);
 
-                var li20 = new ListViewItem("仓储费与发货费用");
-                li20.SubItems.Add(Util.FormatPrice(item.CangChuFeiYuFaHuoFeiYong));
-                li20.SubItems.Add("耗材费");
+                var li20 = new ListViewItem("耗材费");
                 li20.SubItems.Add(Util.FormatPrice(item.HaoCaiFei));
+                li20.SubItems.Add("矿泉水成本");
+                li20.SubItems.Add(Util.FormatPrice(item.KuangQuanShuiChengBen));
                 listView2.Items.Add(li20);
 
                 var li21 = new ListViewItem("定纸箱费用（第一月）");
@@ -458,6 +472,25 @@ namespace YunStore
                 var li24 = new ListViewItem("其他");
                 li24.SubItems.Add(Util.FormatPrice(item.MiaoCangOther));
                 listView2.Items.Add(li24);
+
+                var li28 = new ListViewItem("秒仓费用");
+                li28.SubItems.Add(Util.FormatPrice(item.MiaoCangFeiYong1));
+                li28.BackColor = Color.WhiteSmoke;
+                listView2.Items.Add(li28);
+
+                var li29 = new ListViewItem("仓储费与发货费用");
+                li29.SubItems.Add(Util.FormatPrice(item.CangChuFeiYuFaHuoFeiYong));               
+                listView2.Items.Add(li29);
+
+
+                var li30 = new ListViewItem("物流费用");
+                li30.SubItems.Add(Util.FormatPrice(item.WuLiuChengBen1));
+                li30.BackColor = Color.WhiteSmoke;
+                listView2.Items.Add(li30);
+
+                var li33 = new ListViewItem("宏伟物流成本");
+                li33.SubItems.Add(Util.FormatPrice(item.HongWeiWuLiuChengBen));              
+                listView2.Items.Add(li33);
             }
 
         }
