@@ -40,15 +40,15 @@ public partial class Q_Admin_orders_edit_detail_modify_fee : PageBase
                     this.RadioButtonList1.SelectedValue = "CAD";
                 else
                     this.RadioButtonList1.SelectedValue = "USD";
-                this.CheckBox_lock_input_discount.Checked = OH.is_lock_input_order_discount.Value;
-                this.CheckBox_lock_input_ship_charge.Checked = OH.is_lock_shipping_charge.Value;
-                this.CheckBox_lock_tax_change.Checked = OH.is_lock_tax_change.Value;
+                this.CheckBox_lock_input_discount.Checked = OH.is_lock_input_order_discount ?? false;
+                this.CheckBox_lock_input_ship_charge.Checked = OH.is_lock_shipping_charge ?? false;
+                this.CheckBox_lock_tax_change.Checked = OH.is_lock_tax_change ?? false;
 
                 BindTaxRate((int)(OH.gst_rate + OH.pst_rate + OH.hst_rate));
             }
         }
     }
-    
+
 
     void BindTaxRate(int tax)
     {
@@ -133,7 +133,7 @@ public partial class Q_Admin_orders_edit_detail_modify_fee : PageBase
         }
         DBContext.SaveChanges();
         OH = orderHelper;
-   
+
         InsertTraceInfo(DBContext, string.Format("Save Order Price({0}) fee.", ReqOrderCode));
         OrdersSavePageRedirect(ReqOrderCode);
 

@@ -57,12 +57,16 @@
             {
                 try
                 {
+                    if (Directory.Exists(Server.MapPath("~/") + "..\\web.Log\\"))
+                    {
+                        Directory.CreateDirectory(Server.MapPath("~/") + "..\\web.Log\\");
+                    }
                     using (var writer = new StreamWriter(logpath, true))
                     {
                         writer.Write(errorString);
                     }
                 }
-                catch(Exception ex2)
+                catch (Exception ex2)
                 {
                     // 防止写文件时，文件被人为打开无法写入等
                     // 记录日志报错不做处理，不应影响用户继续使用
