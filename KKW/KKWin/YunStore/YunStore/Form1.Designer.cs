@@ -38,11 +38,16 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonCompWarehouse = new System.Windows.Forms.Button();
             this.buttonReadProfit = new System.Windows.Forms.Button();
             this.buttonProfitStat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonProfirt
@@ -108,7 +113,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(29, 184);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(694, 267);
+            this.listView1.Size = new System.Drawing.Size(694, 107);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -132,6 +137,11 @@
             // 
             this.columnHeader4.Text = "总成本";
             this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "最后更新时间";
+            this.columnHeader5.Width = 180;
             // 
             // buttonCompWarehouse
             // 
@@ -173,15 +183,49 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // columnHeader5
+            // listView2
             // 
-            this.columnHeader5.Text = "最后更新时间";
-            this.columnHeader5.Width = 180;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(29, 297);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(694, 166);
+            this.listView2.TabIndex = 11;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "秒仓品牌名称";
+            this.columnHeader6.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "总库存";
+            this.columnHeader8.Width = 150;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "总成本";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader9.Width = 150;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "最后更新时间";
+            this.columnHeader10.Width = 150;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(761, 475);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonProfitStat);
             this.Controls.Add(this.buttonReadProfit);
@@ -218,6 +262,11 @@
         private System.Windows.Forms.Button buttonProfitStat;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }
 

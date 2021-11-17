@@ -110,6 +110,21 @@ namespace YunStore
                 li.SubItems.Add(item.LastUpdateTime);
                 this.listView1.Items.Add(li);
             }
+
+            //
+            // 秒仓商品分类统计
+            #region 秒仓商品分类统计
+            var query3 = _context.view_get_miao_chang_total_by_brand.Where(me => me.ParentID == query2.Gid).ToList();
+            this.listView2.Items.Clear();
+            foreach(var item in query3)
+            {
+                ListViewItem li = new ListViewItem(item.brand ?? "--");
+                li.SubItems.Add((item.Stock.ToString("0")));
+                li.SubItems.Add(item.Total.ToString("##,###,###,##0.00"));
+                li.SubItems.Add(query2.Regdate);
+                this.listView2.Items.Add(li);
+            }
+            #endregion
         }
 
         private void buttonUpStock_Click(object sender, EventArgs e)
