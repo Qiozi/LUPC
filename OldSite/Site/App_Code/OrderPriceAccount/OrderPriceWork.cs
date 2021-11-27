@@ -100,7 +100,7 @@ public class OrderPriceWork
 
         //
         // 得到洲ID
-        int stateid = CS.customer_shipping_state.Value;
+        int stateid = CS.customer_shipping_state ?? 0;
         if (stateid < 1)
         {
             stateid = StateShippingModel.FindStatIDByCode(_context, CS.shipping_state_code);
@@ -321,7 +321,7 @@ select 	prod_shipping_fee_id, prod_Sku, is_system, shipping_fee_us, shipping_fee
         {
             if (OH.order_source != 3)
             {
-                if (ap_real_count > 0 && !OH.is_lock_shipping_charge.Value)
+                if (ap_real_count > 0 && !(OH.is_lock_shipping_charge ?? false))
                 {
 
                     if (OH.shipping_company != -1)
@@ -431,17 +431,17 @@ select 	prod_shipping_fee_id, prod_Sku, is_system, shipping_fee_us, shipping_fee
         if (OH != null)
         {
             //DataRow dr = dt.Rows[0];
-            is_lock_input_order_discount = OH.is_lock_input_order_discount.Value;
-            is_lock_shipping_charge = OH.is_lock_shipping_charge.Value;
+            is_lock_input_order_discount = OH.is_lock_input_order_discount ?? false;
+            is_lock_shipping_charge = OH.is_lock_shipping_charge ?? false;
 
             if (is_lock_input_order_discount == true)
-                input_order_discount = OH.input_order_discount.Value;
+                input_order_discount = OH.input_order_discount ?? 0M;
             if (is_lock_shipping_charge)
-                shipping_charge = OH.shipping_charge.Value;
+                shipping_charge = OH.shipping_charge ?? 0M;
             else
                 shipping_charge = _result;
 
-            weee_charge = OH.weee_charge.Value;
+            weee_charge = OH.weee_charge ?? 0M;
 
         }
         decimal _total;
@@ -591,7 +591,7 @@ select 	prod_shipping_fee_id, prod_Sku, is_system, shipping_fee_us, shipping_fee
             OH.sub_total_rate = sub_total;
             OH.Is_Modify = true;
             //  OH.Update();
-          //  _context.SaveChanges();
+            //  _context.SaveChanges();
 
             CS.state_serial_no = state_shipping;
             CS.customer_shipping_state = state_shipping;

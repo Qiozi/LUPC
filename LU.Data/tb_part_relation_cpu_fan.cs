@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_part_relation_cpu_fan
     {
         public int id { get; set; }

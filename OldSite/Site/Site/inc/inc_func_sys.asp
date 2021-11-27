@@ -1747,7 +1747,7 @@ Function CopyCartToOrder(order_code, customerID, cmd)
 		rs("order_source") 			= 1
 		rs("customer_serial_no") 	= LAYOUT_CCID
 		rs("is_ok") 				= 0
-		rs("discount") 				= save_price_total
+		rs("discount") 				= 0
 		rs("tag") 					= 0
 		rs("ready_date") 			= Date()
 		rs("pay_method") 			= copy_pay_method
@@ -1792,9 +1792,9 @@ Function CopyCartToOrder(order_code, customerID, cmd)
 			
 			rs("sur_charge") 		=  crs("sur_charge")
 			if instr(LAYOUT_RATE_PAY_METHODS, copy_pay_method) > 0 then 
-				rs("input_order_discount") = 0
+				rs("input_order_discount") = save_price_total
 			else
-				rs("input_order_discount") = crs("sur_charge")
+				rs("input_order_discount") = save_price_total + cdbl(crs("sur_charge"))
 			end if
 			
 			rs("taxable_total") = crs("taxable_total")
@@ -2157,4 +2157,4 @@ function SaveNewCountryState(country, stateName)
 	end if
 	rs.close : set rs = nothing
 end function
- %>
+%>

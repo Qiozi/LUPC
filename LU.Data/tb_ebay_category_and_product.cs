@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_ebay_category_and_product
     {
         public int ID { get; set; }

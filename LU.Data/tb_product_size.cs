@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_product_size
     {
         public int product_size_id { get; set; }

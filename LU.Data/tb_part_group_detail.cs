@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_part_group_detail
     {
         public int part_group_detail_id { get; set; }

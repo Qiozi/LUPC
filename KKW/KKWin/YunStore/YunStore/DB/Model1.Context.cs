@@ -30,9 +30,10 @@ namespace YunStore.DB
         public virtual DbSet<tb_yun_fileinfo_company_stock_record> tb_yun_fileinfo_company_stock_record { get; set; }
         public virtual DbSet<tb_yun_fileinfo_sale_child> tb_yun_fileinfo_sale_child { get; set; }
         public virtual DbSet<tb_yun_fileinfo_sale_main> tb_yun_fileinfo_sale_main { get; set; }
-        public virtual DbSet<tb_yun_fileinfo_stock_child> tb_yun_fileinfo_stock_child { get; set; }
         public virtual DbSet<tb_yun_fileinfo_stock_main> tb_yun_fileinfo_stock_main { get; set; }
         public virtual DbSet<tb_yun_fileinfo_company_stock_child> tb_yun_fileinfo_company_stock_child { get; set; }
         public virtual DbSet<tb_profit> tb_profit { get; set; }
+        public virtual DbSet<tb_yun_fileinfo_stock_child> tb_yun_fileinfo_stock_child { get; set; }
+        public virtual DbSet<view_get_miao_chang_total_by_brand> view_get_miao_chang_total_by_brand { get; set; }
     }
 }

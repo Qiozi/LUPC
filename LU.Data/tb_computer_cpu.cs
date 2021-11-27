@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_computer_cpu
     {
         public int computer_cpu_id { get; set; }

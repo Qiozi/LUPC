@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_update_table_fields
     {
         public int update_table_field_id { get; set; }

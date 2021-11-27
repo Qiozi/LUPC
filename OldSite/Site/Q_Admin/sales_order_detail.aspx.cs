@@ -100,7 +100,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             {
                 customer.customer_shipping_last_name = customer.customer_last_name;
             }
-           
+
             var state = customer.customer_shipping_state.HasValue
                             ? StateShippingModel.GetStateShippingModel(DBContext, customer.customer_shipping_state.Value)
                             : null;
@@ -187,15 +187,15 @@ public partial class Q_Admin_sales_order_detail : PageBase
                 this.lbl_payment.Text = PayMethodNewModel.GetPayMethodNewModel(DBContext, pay_method_id).pay_method_short_name;
             if (Config.pay_method_pick_up_ids.IndexOf("[" + pay_method_id.ToString() + "]") != -1)// == Config.pay_method_pick_up_id)
             {
-                this.lbl_prick_time.Text = "<table cellspacing='0' cellpadding='0'><tr><td><strong><span style=\"font-size: 9pt\">Pick Up Schedule:</strong></span></td><td>" + 
-                    (!orderHelper.prick_up_datetime1.HasValue || orderHelper.prick_up_datetime1.Value.Year == 1 || 
-                        (orderHelper.prick_up_datetime1.Value.Month == 1 && 
-                            orderHelper.prick_up_datetime1.Value.Day == 1 && 
-                            orderHelper.prick_up_datetime1.Value.Hour == 11) 
-                        ? "" 
-                        : string.Format("{0:t},{0:D}", orderHelper.prick_up_datetime1)) + "</td></tr><tr><td>&nbsp;</td><td>" + 
-                            (!orderHelper.prick_up_datetime2.HasValue || orderHelper.prick_up_datetime2.Value.Year == 1 || (orderHelper.prick_up_datetime2.Value.Month == 1 && orderHelper.prick_up_datetime2.Value.Day == 1 && orderHelper.prick_up_datetime2.Value.Hour == 11) 
-                            ? "" 
+                this.lbl_prick_time.Text = "<table cellspacing='0' cellpadding='0'><tr><td><strong><span style=\"font-size: 9pt\">Pick Up Schedule:</strong></span></td><td>" +
+                    (!orderHelper.prick_up_datetime1.HasValue || orderHelper.prick_up_datetime1.Value.Year == 1 ||
+                        (orderHelper.prick_up_datetime1.Value.Month == 1 &&
+                            orderHelper.prick_up_datetime1.Value.Day == 1 &&
+                            orderHelper.prick_up_datetime1.Value.Hour == 11)
+                        ? ""
+                        : string.Format("{0:t},{0:D}", orderHelper.prick_up_datetime1)) + "</td></tr><tr><td>&nbsp;</td><td>" +
+                            (!orderHelper.prick_up_datetime2.HasValue || orderHelper.prick_up_datetime2.Value.Year == 1 || (orderHelper.prick_up_datetime2.Value.Month == 1 && orderHelper.prick_up_datetime2.Value.Day == 1 && orderHelper.prick_up_datetime2.Value.Hour == 11)
+                            ? ""
                             : string.Format("{0:t},{0:D}", orderHelper.prick_up_datetime2)) + "</td></tr></table>";
 
                 if (orderHelper.shipping_charge == 0M)
@@ -203,7 +203,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
                 else
                 {
                     var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company.Value);
-                    if(scm == null)
+                    if (scm == null)
                     {
 
                     }
@@ -222,7 +222,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             }
             else
             {
-                var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company.HasValue ? orderHelper.shipping_company.Value: 0);
+                var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company.HasValue ? orderHelper.shipping_company.Value : 0);
                 this.lbl_shipping_company.Text = scm != null ? scm.shipping_company_name : "";
 
                 this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge.Value), price_unit_string);
@@ -235,7 +235,16 @@ public partial class Q_Admin_sales_order_detail : PageBase
 
 
             }
-            this.lbl_special_cash_discount.Text = string.Format("{0}{1}", orderHelper.input_order_discount.Value.ToString("$0.##"), price_unit_string);
+            var discount = 0M;
+            if (orderHelper.discount.HasValue && orderHelper.discount.Value > 0)
+            {
+                discount += orderHelper.discount.Value;
+            }
+            if (orderHelper.input_order_discount.HasValue && orderHelper.input_order_discount.Value > 0M)
+            {
+                discount += orderHelper.input_order_discount.Value;
+            }
+            this.lbl_special_cash_discount.Text = string.Format("{0}{1}", discount.ToString("$0.##"), price_unit_string);
             //    this.lbl_special_cash_discount.ForeColor = System.Drawing.Color.FromName("red");
 
             //
@@ -259,7 +268,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             //  card price
             //if (Config.pay_method_use_card_rate.IndexOf("[" + this.Pay_method.ToString() + "]") != -1 || this.Pay_method == -1)
             //if (Config.pay_method_use_card_rate.IndexOf("[" + pay_method_id + "]") != -1
-            if (orderHelper.input_order_discount == 0)
+            if (discount == 0M)
             {
                 this.lbl_special_cash_discount.Text = "$0.00" + price_unit_string;
                 this.panel_special_cash_discount.Visible = false;
@@ -377,7 +386,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             this.lbl_weee_charge.Text = string.Format("{0}{1}", ConvertPrice.RoundPrice(orderHelper.weee_charge.ToString()), price_unit_string);
 
 
-            var oem = DBContext.tb_order_ebay.Where(me =>me.order_code.HasValue && me.order_code.Value.Equals(orderCodeInt)).ToList();//                OrderEbayModel.FindAllByProperty("order_code", ReqOrderCode);
+            var oem = DBContext.tb_order_ebay.Where(me => me.order_code.HasValue && me.order_code.Value.Equals(orderCodeInt)).ToList();//                OrderEbayModel.FindAllByProperty("order_code", ReqOrderCode);
             if (oem != null && oem.Count > 0)
             {
                 this.lbl_shipping_service.Text = string.Format(@"<br><span style='font-weight:bold;'>Shipping Service:&nbsp;&nbsp;</span> {0}

@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_update_product_cost_history
     {
         public int product_cost_history_id { get; set; }

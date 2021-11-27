@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_pay_method_new
     {
         public int pay_method_serial_no { get; set; }

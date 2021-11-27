@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_part_relation_motherboard_video_audio_port
     {
         public int id { get; set; }

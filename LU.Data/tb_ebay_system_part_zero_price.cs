@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_ebay_system_part_zero_price
     {
         public int id { get; set; }

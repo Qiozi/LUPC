@@ -26,7 +26,7 @@ public partial class Q_Admin_sale_print_order : OrderPageBase
             SetControlsValue();
         }
     }
-    
+
 
     #region Methods
     public void SetControlsValue()
@@ -57,7 +57,7 @@ public partial class Q_Admin_sale_print_order : OrderPageBase
                 this.lbl_p_o_no.Text = model.my_purchase_order;
                 this.lbl_tax_exemption_no.Text = model.tax_execmtion;
                 this.lbl_customer_no.Text = Code.FilterCustomerCode(model.customer_serial_no.ToString());
-                this.CustomerState = model.customer_card_state.Value;
+                this.CustomerState = model.customer_card_state ?? 0;
                 if (model.customer_company != "")
                 {
                     this.lbl_customer_company.Text = model.customer_company + "<br/>";
@@ -84,7 +84,7 @@ public partial class Q_Admin_sale_print_order : OrderPageBase
 
                 }
 
-                if (ohms[0].order_invoice.ToString().Length == Config.OrderInvoiceLength && ohms[0].is_download_invoice.Value)
+                if (ohms[0].order_invoice.ToString().Length == Config.OrderInvoiceLength && (ohms[0].is_download_invoice ?? false))
                 {
                     this.lbl_order_no.Text = ohms[0].order_invoice.ToString();
                 }

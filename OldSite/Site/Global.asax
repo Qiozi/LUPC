@@ -49,17 +49,24 @@
             errorString.AppendLine("错误源：" + ex.Source);
             errorString.AppendLine("异常方法：" + ex.TargetSite);
             errorString.AppendLine("堆栈信息：" + ex.StackTrace);
+
+            errorString.AppendLine("==========  ===================");
+            errorString.AppendLine(Newtonsoft.Json.JsonConvert.SerializeObject(ex));
             errorString.AppendLine("========== Application_Error END ===================");
             lock (logpath)
             {
                 try
                 {
+                    if (Directory.Exists(Server.MapPath("~/") + "..\\web.Log\\"))
+                    {
+                        Directory.CreateDirectory(Server.MapPath("~/") + "..\\web.Log\\");
+                    }
                     using (var writer = new StreamWriter(logpath, true))
                     {
                         writer.Write(errorString);
                     }
                 }
-                catch
+                catch (Exception ex2)
                 {
                     // 防止写文件时，文件被人为打开无法写入等
                     // 记录日志报错不做处理，不应影响用户继续使用

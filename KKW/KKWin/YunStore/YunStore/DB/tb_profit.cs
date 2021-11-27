@@ -22,11 +22,14 @@ namespace YunStore.DB
         public decimal Profit { get; set; }
         public decimal Sale_TianMao { get; set; }
         public decimal Sale_Taobao { get; set; }
+        public decimal WuLiuChengBen1 { get; set; }
+        public decimal MiaoCangFeiYong1 { get; set; }
         public decimal RenLiChengBen1 { get; set; }
         public decimal GuDingChengBen1 { get; set; }
         public decimal YingXiaoChengBen1 { get; set; }
         public decimal ChanPinChengBen1 { get; set; }
         public decimal YunCangChengBen1 { get; set; }
+        public decimal BanGongZaFei1 { get; set; }
         public decimal GongZi { get; set; }
         public decimal SiJiFeiYong { get; set; }
         public decimal DaiYunYingFeiYong { get; set; }
@@ -60,9 +63,16 @@ namespace YunStore.DB
         public decimal Sale_TianMao_ShuaDian { get; set; }
         public decimal Sale_TianMao_Alipay { get; set; }
         public decimal Sale_TaoBao_Alipay { get; set; }
-        public Nullable<decimal> YouYiDingGouFei { get; set; }
-        public Nullable<decimal> AiZhiNengTouFang { get; set; }
-        public Nullable<decimal> CangKuFaHuoShangPinZongChengBen { get; set; }
-        public Nullable<decimal> HuJiaoFeiYong { get; set; }
+        public decimal YouYiDingGouFei { get; set; }
+        public decimal AiZhiNengTouFang { get; set; }
+        public decimal CangKuFaHuoShangPinZongChengBen { get; set; }
+        public decimal HuJiaoFeiYong { get; set; }
+        public decimal MiYaKeChengBen { get; set; }
+        public decimal CaiZhaoChengBen { get; set; }
+        public decimal KuangQuanShuiChengBen { get; set; }
+        public decimal YiSuiBiaoQian { get; set; }
+        public decimal QiPaoZhu { get; set; }
+        public decimal JiaoDai { get; set; }
+        public decimal MiaoCangOther { get; set; }
     }
 }

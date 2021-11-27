@@ -121,15 +121,15 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
         PriceInfo = new OrderPriceViewInfo();
 
         {
-            PriceInfo.ShipCharge = OH.shipping_charge.Value;// ConvertPrice.RoundPrice(dr["shipping_charge"].ToString());
+            PriceInfo.ShipCharge = OH.shipping_charge ?? 0M;// ConvertPrice.RoundPrice(dr["shipping_charge"].ToString());
             // _priceInfo this.lbl_order_code.Text = order_code;
-            PriceInfo.GrandTotal = OH.grand_total.Value;// this.lbl_grand_total.Text = ConvertPrice.RoundPrice(dr["grand_total"].ToString());
-            PriceInfo.SubTotal = OH.sub_total.Value;//  this.lbl_sub_total.Text = ConvertPrice.RoundPrice(dr["sub_total"].ToString());
+            PriceInfo.GrandTotal = OH.grand_total ?? 0M;// this.lbl_grand_total.Text = ConvertPrice.RoundPrice(dr["grand_total"].ToString());
+            PriceInfo.SubTotal = OH.sub_total ?? 0M;//  this.lbl_sub_total.Text = ConvertPrice.RoundPrice(dr["sub_total"].ToString());
             PriceInfo.SpecialCashDiscount = OH.input_order_discount.HasValue
                                                 ? OH.input_order_discount.Value
                                                 : 0M;//  this.lbl_special_cash_discount.Text = ConvertPrice.RoundPrice(dr["input_order_discount"].ToString());
-            PriceInfo.InputDiscount = OH.input_order_discount.Value;//
-            PriceInfo.TaxableTotal = OH.taxable_total.Value;// this.lbl_taxable_total.Text = ConvertPrice.RoundPrice(dr["taxable_total"].ToString());
+            PriceInfo.InputDiscount = OH.input_order_discount ?? 0M; ;//
+            PriceInfo.TaxableTotal = OH.taxable_total ?? 0M; ;// this.lbl_taxable_total.Text = ConvertPrice.RoundPrice(dr["taxable_total"].ToString());
             PriceInfo.Weee = OH.weee_charge.HasValue ? OH.weee_charge.Value : 0M;// this.lbl_weee.Text = ConvertPrice.RoundPrice(dr["weee_charge"].ToString());
             PriceInfo.PriceUnit = OH.price_unit;
             PriceInfo.Hst = OH.hst.HasValue
@@ -148,6 +148,7 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
                 ? OH.pst.Value
                 : 0M;
             PriceInfo.Pst_rate = OH.pst_rate.HasValue ? OH.pst_rate.Value : 0M;
+            PriceInfo.PartDiscount = OH.discount.HasValue ? OH.discount.Value : 0M;
 
         }
     }
@@ -168,19 +169,20 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
         return string.Format("<tr><td class='title'>{0}</td><td>{1}</td></tr>", title, text);
     }
 
-    string Tr2(string title, string text, string note, string btn)
+    string Tr2(string title, string text, string note, string btn, string prevChar = "")
     {
         return string.Format(@"
                 <tr>
                     <td class='titlePrice'>{0}</td>
-                    <td class='price1'>${1}</td>
+                    <td class='price1'>{4}${1}</td>
                     <td>{2}</td>
                     <td>{3}</td>
                 </tr>"
             , title
             , text
             , note
-            , btn);
+            , btn
+            , prevChar);
     }
     ///// <summary>
     ///// 电话格式
@@ -443,12 +445,12 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
         get
         {
             string shipCompanyName = "None";
-            var scm = DBContext.tb_shipping_company.SingleOrDefault(me => me.shipping_company_id.Equals(OH.shipping_company));// ShippingCompanyModel.GetShippingCompanyModel(OH.shipping_company);
+            var scm = DBContext.tb_shipping_company.SingleOrDefault(me => me.shipping_company_id == OH.shipping_company);// ShippingCompanyModel.GetShippingCompanyModel(OH.shipping_company);
             if (scm != null)
                 shipCompanyName = scm.shipping_company_name;
 
             string preStatusName = "";
-            var psm = DBContext.tb_pre_status.SingleOrDefault(me => me.pre_status_serial_no.Equals(OH.pre_status_serial_no));// PreStatusModel.GetPreStatusModel(OH.pre_status_serial_no);
+            var psm = DBContext.tb_pre_status.SingleOrDefault(me => me.pre_status_serial_no == OH.pre_status_serial_no);// PreStatusModel.GetPreStatusModel(OH.pre_status_serial_no);
             if (psm != null)
                 preStatusName = psm.pre_status_name;
 
@@ -474,9 +476,9 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
             </table>
             "
              , string.IsNullOrEmpty(CS.tax_execmtion) ? "None" : string.Format("{0}", CS.tax_execmtion).Trim()
-             , CS.pay_method < 1 ? "" : PayMethodNewModel.GetPayMethodNewModel(DBContext, CS.pay_method.Value).pay_method_name.ToString()
-             , OH.prick_up_datetime1.Value.Year == 1 || (OH.prick_up_datetime1.Value.Month == 1 && OH.prick_up_datetime1.Value.Day == 1 && OH.prick_up_datetime1.Value.Hour == 11) ? "" : Config.pay_method_pick_up_ids.IndexOf("[" + CS.pay_method.ToString() + "]") > -1 ? string.Format("{0:t},{0:D}", OH.prick_up_datetime1) : ""
-             , string.Format("{0} ({1}) {2}", shipCompanyName, OH.shipping_charge.Value.ToString("$0.00"), OH.is_lock_shipping_charge.Value ? "<span style='color:blue;'>Locked</span>" : "")
+             , (CS.pay_method ?? 0) < 1 ? "" : PayMethodNewModel.GetPayMethodNewModel(DBContext, CS.pay_method ?? 0).pay_method_name.ToString()
+             , (OH.prick_up_datetime1 == null || OH.prick_up_datetime1.Value.Year == 1 || (OH.prick_up_datetime1.Value.Month == 1 && OH.prick_up_datetime1.Value.Day == 1 && OH.prick_up_datetime1.Value.Hour == 11)) ? "" : Config.pay_method_pick_up_ids.IndexOf("[" + CS.pay_method.ToString() + "]") > -1 ? string.Format("{0:t},{0:D}", OH.prick_up_datetime1) : ""
+             , string.Format("{0} ({1}) {2}", shipCompanyName, (OH.shipping_charge ?? 0M).ToString("$0.00"), (OH.is_lock_shipping_charge ?? false) ? "<span style='color:blue;'>Locked</span>" : "")
              , preStatusName
               );
             return str;
@@ -506,8 +508,8 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
                 </table>
 "
                 , Tr2("Sub Total", ConvertPrice.RoundPrice(PriceInfo.SubTotal).ToString(), "", "")
-                , Tr2("Special Cash Discount", ConvertPrice.RoundPrice(PriceInfo.SpecialCashDiscount).ToString(), (OH.is_lock_input_order_discount.Value ? "<span title='Locked' style='color:blue'>L</span>" : ""), BtnInputDiscount)
-                , Tr2("Ship Charge", ConvertPrice.RoundPrice(PriceInfo.ShipCharge).ToString(), (OH.is_lock_shipping_charge.Value ? "<span title='Locked' style='color:blue'>L</span>" : ""), BtnInputShipCharge)
+                , Tr2("Special Cash Discount", ConvertPrice.RoundPrice(PriceInfo.SpecialCashDiscount).ToString(), (OH.is_lock_input_order_discount.HasValue ? "<span title='Locked' style='color:blue'>L</span>" : ""), BtnInputDiscount, "-")
+                , Tr2("Ship Charge", ConvertPrice.RoundPrice(PriceInfo.ShipCharge).ToString(), (OH.is_lock_shipping_charge.HasValue ? "<span title='Locked' style='color:blue'>L</span>" : ""), BtnInputShipCharge)
                 , Tr2("Taxable Total", ConvertPrice.RoundPrice(PriceInfo.TaxableTotal).ToString(), "", "")
                 , PriceInfo.Hst_rate > 0M ? Tr2("HST", ConvertPrice.RoundPrice(PriceInfo.Hst).ToString(), "(" + PriceInfo.Hst_rate.ToString("0") + "%)", BtnInputPriceUnit) : ""
                 , PriceInfo.Pst > 0M ? Tr2("PST", ConvertPrice.RoundPrice(PriceInfo.Pst).ToString(), "(" + PriceInfo.Pst_rate.ToString("0") + "%)", BtnInputPriceUnit) : ""
@@ -559,7 +561,7 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
         {
             return string.Format(@"<a 
 title=""Modify Fee""
-onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?is_new=1&OrderCode='+ $('#htmlOrderCode').val(),600,450); return false;""
+onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?is_new=1&OrderCode='+ $('#htmlOrderCode').val(),800,450); return false;""
 >Modify</a>");
         }
     }

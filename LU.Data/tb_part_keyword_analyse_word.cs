@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_part_keyword_analyse_word
     {
         public int ID { get; set; }

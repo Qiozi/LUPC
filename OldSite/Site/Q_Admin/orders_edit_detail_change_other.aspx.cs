@@ -31,7 +31,7 @@ public partial class Q_Admin_orders_edit_detail_change_other : PageBase
             InitPage();
         }
     }
-    
+
 
     void InitPage()
     {
@@ -47,13 +47,13 @@ public partial class Q_Admin_orders_edit_detail_change_other : PageBase
             StoreCustomerSerialNo = customer.serial_no;
 
             this.txt_tax_examp.Text = customer.tax_execmtion;
-            this.CheckBox1.Checked = customer.is_all_tax_execmtion.Value;
-            BindPayMethodDDL(customer.pay_method.Value);
+            this.CheckBox1.Checked = customer.is_all_tax_execmtion ?? false;
+            BindPayMethodDDL(customer.pay_method ?? 0);
 
             BindPickUpDay();
             BindPickUpHour();
             BindPickUpMonth();
-            BindShippingCompany(OH.shipping_company.Value);
+            BindShippingCompany(OH.shipping_company ?? 0);
 
             BindOrderStatus(OH.pre_status_serial_no, OH.out_status);
         }
@@ -105,7 +105,8 @@ public partial class Q_Admin_orders_edit_detail_change_other : PageBase
             li.Value = i.ToString();
             this.ddl_pick_up_day.Items.Add(li);
         }
-        ddl_pick_up_day.SelectedValue = OH.prick_up_datetime1.Value.Day.ToString();
+        if (OH.prick_up_datetime1.HasValue)
+            ddl_pick_up_day.SelectedValue = OH.prick_up_datetime1.Value.Day.ToString();
     }
     /// <summary>
     /// 
@@ -122,7 +123,8 @@ public partial class Q_Admin_orders_edit_detail_change_other : PageBase
             li.Value = i.ToString();
             this.ddl_pick_up_month.Items.Add(li);
         }
-        ddl_pick_up_month.SelectedValue = OH.prick_up_datetime1.Value.Month.ToString();
+        if (OH.prick_up_datetime1.HasValue)
+            ddl_pick_up_month.SelectedValue = OH.prick_up_datetime1.Value.Month.ToString();
     }
     /// <summary>
     /// 
@@ -139,7 +141,8 @@ public partial class Q_Admin_orders_edit_detail_change_other : PageBase
             li.Value = i.ToString();
             this.ddl_pick_up_hour.Items.Add(li);
         }
-        this.ddl_pick_up_hour.SelectedValue = OH.prick_up_datetime1.Value.Hour.ToString();
+        if (OH.prick_up_datetime1.HasValue)
+            this.ddl_pick_up_hour.SelectedValue = OH.prick_up_datetime1.Value.Hour.ToString();
     }
 
     #endregion
@@ -243,7 +246,7 @@ public partial class Q_Admin_orders_edit_detail_change_other : PageBase
 
         exist = true;
         var hm = OrderHelperModel.GetModelByOrderCode(DBContext, ReqOrderCode);
-        if(hm == null)
+        if (hm == null)
         {
             exist = false;
             hm = new tb_order_helper();

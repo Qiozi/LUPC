@@ -304,7 +304,8 @@ namespace LU.BLL
 
                 call_me = 0,
                 cost = cartPrice.cost,
-                discount = cartPrice.sub_total + cartPrice.shipping_and_handling - cartPrice.taxable_total,
+                discount = 0M,
+                //discount = cartPrice.sub_total + cartPrice.shipping_and_handling - cartPrice.taxable_total,
                 shipping_charge = cartPrice.shipping_and_handling,
                 pst = cartPrice.pst,
                 hst = cartPrice.hst,

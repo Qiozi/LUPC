@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_sp_tmp_backup
     {
         public int sys_tmp_serial_no { get; set; }

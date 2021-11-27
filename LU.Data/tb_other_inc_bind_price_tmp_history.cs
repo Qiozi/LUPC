@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_other_inc_bind_price_tmp_history
     {
         public int id { get; set; }

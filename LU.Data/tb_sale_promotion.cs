@@ -12,6 +12,7 @@ namespace LU.Data
     using System;
     using System.Collections.Generic;
     
+    [Serializable]
     public partial class tb_sale_promotion
     {
         public int sale_promotion_serial_no { get; set; }

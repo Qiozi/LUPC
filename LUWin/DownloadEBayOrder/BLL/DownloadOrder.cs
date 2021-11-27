@@ -6,6 +6,7 @@ using System.Xml;
 using System.Net;
 using System.IO;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace DownloadEBayOrder.BLL
 {
@@ -14,8 +15,8 @@ namespace DownloadEBayOrder.BLL
 
         public bool Download(nicklu2Entities context, int orderid, Logs log)
         {
-            try
-            {
+            //try
+            //{
                 if (orderid == 0)
                 {
                     Thread.Sleep(30 * 1000);
@@ -49,14 +50,14 @@ namespace DownloadEBayOrder.BLL
                 //if (DateTime.Now.Hour.Equals(9))
                 //    EmailHelper.Send("wu.th@qq.com", "ebay download OK", "LU Computer eBay Order Download OK");
                 ChangePaymentStatus(context);
-            }
-            catch (Exception ex)
-            {
-                log.WriteErrorLog(ex);
-                log.WriteLog(ex.StackTrace);
-                EmailHelper.Send("terryeah@gmail.com", "ebay download falid", "LU Computer eBay Order Download falid.");
-                return false;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    log.WriteErrorLog(ex);
+            //    log.WriteLog(JsonConvert.SerializeObject(ex));
+            //    //EmailHelper.Send("terryeah@gmail.com", "ebay download falid", "LU Computer eBay Order Download falid.");
+            //    return false;
+            //}
             return true;
         }
 
@@ -70,27 +71,27 @@ namespace DownloadEBayOrder.BLL
         public bool DownloadTest(nicklu2Entities context, int orderid, Logs log, string filename)
         {
             // 删除 旧的数据
-            var customerStore = context.tb_customer_store.FirstOrDefault(me => me.order_code.HasValue && me.order_code.Value.Equals(orderid));
-            if (customerStore != null)
-            {
-                var oc = orderid.ToString();
-                var orderHelper = context.tb_order_helper.FirstOrDefault(me => me.order_code.HasValue && me.order_code.Value.Equals(orderid));
-                var orderProduct = context.tb_order_product.Where(me => me.order_code.Equals(oc)).ToList();
-                foreach (var item in orderProduct)
-                {
-                    context.tb_order_product.Remove(item);
-                }
-                var orderEbay = context.tb_order_ebay.Where(me => me.order_code.HasValue && me.order_code.Value.Equals(orderid)).ToList();
-                foreach (var item in orderEbay)
-                {
-                    context.tb_order_ebay.Remove(item);
-                }
+            //var customerStore = context.tb_customer_store.FirstOrDefault(me => me.order_code.HasValue && me.order_code.Value.Equals(orderid));
+            //if (customerStore != null)
+            //{
+            //    var oc = orderid.ToString();
+            //    var orderHelper = context.tb_order_helper.FirstOrDefault(me => me.order_code.HasValue && me.order_code.Value.Equals(orderid));
+            //    var orderProduct = context.tb_order_product.Where(me => me.order_code.Equals(oc)).ToList();
+            //    foreach (var item in orderProduct)
+            //    {
+            //        context.tb_order_product.Remove(item);
+            //    }
+            //    var orderEbay = context.tb_order_ebay.Where(me => me.order_code.HasValue && me.order_code.Value.Equals(orderid)).ToList();
+            //    foreach (var item in orderEbay)
+            //    {
+            //        context.tb_order_ebay.Remove(item);
+            //    }
 
-                context.tb_customer_store.Remove(customerStore);
-                context.tb_order_helper.Remove(orderHelper);
-                context.SaveChanges();
-                // return false;
-            }
+            //    context.tb_customer_store.Remove(customerStore);
+            //    context.tb_order_helper.Remove(orderHelper);
+            //    context.SaveChanges();
+            //    // return false;
+            //}
             //   Down(context, orderid, filename);
             var ebayOrdersString = File.ReadAllText(filename);
             SaveToDB(context, ebayOrdersString, 0);
@@ -181,8 +182,9 @@ namespace DownloadEBayOrder.BLL
                 int.TryParse(xe["ShippingDetails"]["SellingManagerSalesRecordNumber"].InnerText, out orderCode);
 
                 SetStatus("download " + orderCode);
-                int paymeth = xe["PaymentMethods"].InnerText == "PayPal" ? 15 : 0;
-
+                int paymeth = 0;
+                if (xe["PaymentMethods"] != null)
+                    paymeth = xe["PaymentMethods"].InnerText == "PayPal" ? 15 : 0;
                 // LoadEBayOrderItemDescription(orderCode);
 
 
