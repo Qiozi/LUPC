@@ -55,6 +55,10 @@
           <Property Name="Sale_TianMao_ShuaDian" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Sale_TianMao_Alipay" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Sale_TaoBao_Alipay" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="YouYiDingGouFei" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AiZhiNengTouFang" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CangKuFaHuoShangPinZongChengBen" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HuJiaoFeiYong" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="tb_user">
           <Key>
@@ -390,6 +394,10 @@
           <Property Name="Sale_TianMao_ShuaDian" Type="Decimal" Nullable="false" />
           <Property Name="Sale_TianMao_Alipay" Type="Decimal" Nullable="false" />
           <Property Name="Sale_TaoBao_Alipay" Type="Decimal" Nullable="false" />
+          <Property Name="YouYiDingGouFei" Type="Decimal" />
+          <Property Name="AiZhiNengTouFang" Type="Decimal" />
+          <Property Name="CangKuFaHuoShangPinZongChengBen" Type="Decimal" />
+          <Property Name="HuJiaoFeiYong" Type="Decimal" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -537,6 +545,10 @@
           <EntitySetMapping Name="tb_profit">
             <EntityTypeMapping TypeName="qstoreModel.tb_profit">
               <MappingFragment StoreEntitySet="tb_profit">
+                <ScalarProperty Name="HuJiaoFeiYong" ColumnName="HuJiaoFeiYong" />
+                <ScalarProperty Name="CangKuFaHuoShangPinZongChengBen" ColumnName="CangKuFaHuoShangPinZongChengBen" />
+                <ScalarProperty Name="AiZhiNengTouFang" ColumnName="AiZhiNengTouFang" />
+                <ScalarProperty Name="YouYiDingGouFei" ColumnName="YouYiDingGouFei" />
                 <ScalarProperty Name="Sale_TaoBao_Alipay" ColumnName="Sale_TaoBao_Alipay" />
                 <ScalarProperty Name="Sale_TianMao_Alipay" ColumnName="Sale_TianMao_Alipay" />
                 <ScalarProperty Name="Sale_TianMao_ShuaDian" ColumnName="Sale_TianMao_ShuaDian" />

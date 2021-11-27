@@ -60,5 +60,9 @@ namespace YunStore.DB
         public decimal Sale_TianMao_ShuaDian { get; set; }
         public decimal Sale_TianMao_Alipay { get; set; }
         public decimal Sale_TaoBao_Alipay { get; set; }
+        public Nullable<decimal> YouYiDingGouFei { get; set; }
+        public Nullable<decimal> AiZhiNengTouFang { get; set; }
+        public Nullable<decimal> CangKuFaHuoShangPinZongChengBen { get; set; }
+        public Nullable<decimal> HuJiaoFeiYong { get; set; }
     }
 }
