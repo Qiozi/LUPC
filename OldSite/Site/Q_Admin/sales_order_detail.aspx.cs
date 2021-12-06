@@ -102,7 +102,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             }
 
             var state = customer.customer_shipping_state.HasValue
-                            ? StateShippingModel.GetStateShippingModel(DBContext, customer.customer_shipping_state.Value)
+                            ? StateShippingModel.GetStateShippingModel(DBContext, customer.customer_shipping_state ?? 0)
                             : null;
 
             OrderHelperID = orderHelper.order_helper_serial_no;
@@ -165,7 +165,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
 
             // this.lbl_customer_name.Text = customer.customer_shipping_first_name.Trim() + "&nbsp;" + customer.customer_shipping_last_name.Trim();
             this.lbl_customer_number.Text = Code.FilterCustomerCode(customer.customer_serial_no.ToString());
-            this.lbl_grand_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.grand_total.Value), price_unit_string);
+            this.lbl_grand_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.grand_total ?? 0), price_unit_string);
             this.lbl_order_date.Text = orderHelper.create_datetime.ToString();
 
 
@@ -202,7 +202,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
                     this.lbl_shipping_and_handling.Text = "$0.00" + price_unit_string;
                 else
                 {
-                    var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company.Value);
+                    var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company ?? 0);
                     if (scm == null)
                     {
 
@@ -210,7 +210,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
                     this.lbl_shipping_company.Text = scm != null ? scm.shipping_company_name : "";
 
 
-                    this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge.Value), price_unit_string);
+                    this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge ?? 0), price_unit_string);
 
                     this.lbl_shipping_address.Text = string.Format("{0}{1}{2}", customer.customer_shipping_first_name + " " + customer.customer_shipping_last_name
                         + " <br/>"
@@ -225,7 +225,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
                 var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company.HasValue ? orderHelper.shipping_company.Value : 0);
                 this.lbl_shipping_company.Text = scm != null ? scm.shipping_company_name : "";
 
-                this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge.Value), price_unit_string);
+                this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge ?? 0), price_unit_string);
 
                 this.lbl_shipping_address.Text = string.Format("{0}{1}{2}", customer.customer_shipping_first_name + " " + customer.customer_shipping_last_name
                     + " <br/>"
@@ -341,18 +341,18 @@ public partial class Q_Admin_sales_order_detail : PageBase
             #endregion
             // tax
             this.lbl_tax_rate.Text = tax_string;
-            this.lbl_sub_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.sub_total_rate.Value), price_unit_string);
+            this.lbl_sub_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.sub_total_rate ?? 0), price_unit_string);
 
             if (this.lbl_payment.Text == "-1")
             {
                 this.lbl_payment.Text = "NONE";
             }
 
-            if (orderHelper.is_old.Value)
+            if (orderHelper.is_old ?? false)
             {
                 this.lbl_is_old_order.Text = "This is Old Order.";
             }
-            this.lbl_taxable_total.Text = string.Format("{0}{1}", orderHelper.taxable_total.Value.ToString("$0.00"), price_unit_string);
+            this.lbl_taxable_total.Text = string.Format("{0}{1}", (orderHelper.taxable_total ?? 0).ToString("$0.00"), price_unit_string);
 
 
             this.lbl_email.Text = "<strong><span style=\"font-size: 9pt\">Email:&nbsp;&nbsp;</strong></span>";
@@ -383,7 +383,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             this.lbl_phone.Text = string.Format("{0}{1}{2}", ((customer.phone_d ?? "").Length > 4 ? " Business Phone: " + PhoneFormat.Format(customer.phone_d) : ""), ((customer.phone_n ?? "").Length > 4 ? " Home Phone: " + PhoneFormat.Format(customer.phone_n) : ""), ((customer.phone_c ?? "").Length > 4 ? " Mobile Phone: " + PhoneFormat.Format(customer.phone_c) : ""));
 
             //}        
-            this.lbl_weee_charge.Text = string.Format("{0}{1}", ConvertPrice.RoundPrice(orderHelper.weee_charge.ToString()), price_unit_string);
+            this.lbl_weee_charge.Text = string.Format("{0}{1}", ConvertPrice.RoundPrice((orderHelper.weee_charge ?? 0).ToString()), price_unit_string);
 
 
             var oem = DBContext.tb_order_ebay.Where(me => me.order_code.HasValue && me.order_code.Value.Equals(orderCodeInt)).ToList();//                OrderEbayModel.FindAllByProperty("order_code", ReqOrderCode);
@@ -417,8 +417,8 @@ public partial class Q_Admin_sales_order_detail : PageBase
             else
                 sb.Append("<td >" + opm[i].product_name + "(<a href=\"editPartDetail.aspx?id=" + opm[i].product_serial_no.ToString() + "\" onclick=\"winOpen(this.href, 'right_m',880,800,120,200);return false;\"><span style='color:#000000;'>" + opm[i].product_serial_no.ToString() + "</span></a>)" + (opm[i].product_serial_no.ToString().Length == 8 ? "" : pm.FindStockByLuSkuForOrder(opm[i].product_serial_no.Value, -1)) + "</td>  ");
             sb.Append("<td width=\"9%\" align=\"center\">" + opm[i].order_product_sum.ToString() + "</td> ");
-            sb.Append("<td width=\"11%\" align=\"right\" >" + Config.ConvertPrice(opm[i].order_product_sold.Value) + "</td> ");
-            sb.Append("<td width=\"9%\" align=\"right\" >" + Config.ConvertPrice(opm[i].order_product_sold.Value * opm[i].order_product_sum.Value) + "</td>  ");
+            sb.Append("<td width=\"11%\" align=\"right\" >" + Config.ConvertPrice((opm[i].order_product_sold ?? 0)) + "</td> ");
+            sb.Append("<td width=\"9%\" align=\"right\" >" + Config.ConvertPrice((opm[i].order_product_sold ?? 0) * (opm[i].order_product_sum ?? 1)) + "</td>  ");
             sb.Append("</tr>");
 
             if (show_price)
