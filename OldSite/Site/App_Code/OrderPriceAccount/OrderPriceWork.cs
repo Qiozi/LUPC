@@ -403,7 +403,7 @@ select 	prod_shipping_fee_id, prod_Sku, is_system, shipping_fee_us, shipping_fee
             }
             else
             {
-                tax_rate = (int)(OH.pst_rate + OH.gst_rate + OH.hst_rate);
+                tax_rate = (int)(OH.pst_rate ?? 0 + OH.gst_rate ?? 0 + OH.hst_rate ?? 0);
                 if (Config.pay_method_use_card_rate.IndexOf("[" + OH.pay_method + "]") != -1)
                     _sale_tax = (_price_sum + _result) * tax_rate / 100;
                 else
@@ -558,9 +558,9 @@ select 	prod_shipping_fee_id, prod_Sku, is_system, shipping_fee_us, shipping_fee
             //OH.gst = 0M;
             //OH.pst = 0M;
             //OH.hst = 0M;
-            OH.gst = (_sub_charge) * OH.gst_rate / 100;
-            OH.pst = (_sub_charge) * OH.pst_rate / 100;
-            OH.hst = (_sub_charge) * OH.hst_rate / 100;
+            OH.gst = (_sub_charge) * (OH.gst_rate ?? 0) / 100;
+            OH.pst = (_sub_charge) * (OH.pst_rate ?? 0) / 100;
+            OH.hst = (_sub_charge) * (OH.hst_rate ?? 0) / 100;
 
             //if (OH.gst_rate > 0M)
             //{

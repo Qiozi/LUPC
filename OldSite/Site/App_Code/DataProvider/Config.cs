@@ -145,9 +145,24 @@ public class Config
         return price.ToString("$###,###.00");
     }
 
+    public static string ConvertPrice(decimal? price)
+    {
+        if (price.HasValue)
+            return price.Value.ToString("$###,###.00");
+        return "0.00";
+    }
+
     public static string ConvertPrice2(decimal price)
     {
         return price.ToString("###,###.00");
+    }
+
+    public static string ConvertPrice2(decimal? price)
+    {
+        if (price.HasValue)
+            return price.Value.ToString("###,###.00");
+        else
+            return "0.00";
     }
 
     public static string GetDateTimeString
