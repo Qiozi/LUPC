@@ -49,8 +49,13 @@ namespace YunStore
             }
 
             foreach (var item in _monthList)
+            {
+                /**
+                 2021-09 之前的不适用新的编辑。项目有增减
+                 */
+                if (string.Compare(item, "2021-09") == -1) continue;
                 this.comboBoxProfitDate.Items.Add(item);
-
+            }
             this.comboBoxProfitDate.SelectedItem = string.IsNullOrEmpty(currDate)
                 ? DateTime.Now.ToString("yyyy-MM")
                 : currDate;
@@ -134,6 +139,11 @@ namespace YunStore
 
             foreach (var item in query)
             {
+                /**
+                 2021-09 之前的不适用新的编辑。项目有增减
+                 */
+                if (string.Compare(item.ProfitDate, "2021-09") == -1) continue;
+
                 var li = new ListViewItem(item.ProfitDate);
                 li.Tag = item.Gid;
                 li.SubItems.Add(item.Profit.ToString());
