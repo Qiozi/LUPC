@@ -5,6 +5,7 @@ using System.Data;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LU.Toolkit.Extensions;
 
 
 public partial class Q_Admin_EditPartDetail : PageBase
@@ -214,16 +215,16 @@ public partial class Q_Admin_EditPartDetail : PageBase
             this.txt_supplier_sku.Text = pm.supplier_sku;
             this.txt_priority.Text = pm.product_order.ToString();
             this.txt_model.Text = pm.model;
-            this.cb_export.Checked = pm.export.Value;
+            this.cb_export.Checked = pm.export.ToBool();
             this.cb_hot.Checked = pm.hot == 1;
-            this.cb_new.Checked = pm.@new.Value == 1;
+            this.cb_new.Checked = pm.@new.ToSbyte() == 1;
             this.cb_non.Checked = pm.is_non == 1;
             this.cb_split_line.Checked = pm.split_line == 1;
             this.cb_showit.Checked = pm.tag == 1;
-            this.cb_fixed.Checked = pm.is_fixed.Value;
-            this.cb_for_sys.Checked = pm.for_sys.Value;
+            this.cb_fixed.Checked = pm.is_fixed.ToBool();
+            this.cb_for_sys.Checked = pm.for_sys.ToBool();
             this.ddl_size.SelectedValue = pm.product_size_id.ToString();
-            this.txt_adjustment.Text = pm.adjustment.Value.ToString();
+            this.txt_adjustment.Text = pm.adjustment.ToDecimal().ToString();
             this.txt_part_ebay_describe.Text = pm.part_ebay_describe;
             this.txt_price_sku.Text = pm.price_sku.ToString();
             this.txt_price_sku_quantity.Text = pm.price_sku_quantity.ToString();
@@ -231,7 +232,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
             this.txt_UPC.Text = pm.UPC;
             this.txt_product_ebay_name_2.Text = pm.product_ebay_name_2;
             this.txt_weight.Text = pm.weight.ToString();
-            this.txtAdjustmentEndDate.Text = pm.adjustment_enddate.Value.Year < 2000 ? "" : pm.adjustment_enddate.Value.ToString("yyyy-MM-dd");
+            this.txtAdjustmentEndDate.Text = pm.adjustment_enddate.HasValue ? (pm.adjustment_enddate.Value.Year < 2000 ? "" : pm.adjustment_enddate.Value.ToString("yyyy-MM-dd")) : "";
 
         }
     }
@@ -547,7 +548,7 @@ public partial class Q_Admin_EditPartDetail : PageBase
                     DateTime.TryParse(this.txtAdjustmentEndDate.Text.Trim(), out adjustEndDate);
 
                 new PriceHelper().SaveAdjust(DBContext, pm.product_serial_no, adjustment, adjustEndDate);
-                new PriceHelper().ModifyRelevancePrice(DBContext, pm.product_serial_no, pm.product_current_cost.Value, adjustment, adjustEndDate);
+                new PriceHelper().ModifyRelevancePrice(DBContext, pm.product_serial_no, pm.product_current_cost.ToDecimal(), adjustment, adjustEndDate);
 
                 pm = ProductModel.GetProductModel(DBContext, pm.product_serial_no);
                 this.txt_product_current_price.Text = pm.product_current_price.ToString();

@@ -694,21 +694,21 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
 
                     order.menu_child_serial_no = product.menu_child_serial_no;
                     order.order_code = ReqOrderCode.ToString();
-                    order.order_product_cost = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_cost.Value);
-                    order.order_product_price = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_price.Value);
+                    order.order_product_cost = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, (product.product_current_cost??0));
+                    order.order_product_price = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, (product.product_current_price??0));
 
                     order.order_product_sum = 1;
                     order.product_name = product.product_name + (product.prodType.ToLower() != "new" ? " (" + product.prodType + ")" : "");
                     order.product_serial_no = _product_id;
                     order.sku = _product_id.ToString();
 
-                    order.order_product_sold = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_price.Value - product.product_current_discount.Value);// ProductModel.FindOnSaleDiscountByPID(_product_id);
+                    order.order_product_sold = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, (product.product_current_price ?? 0) - (product.product_current_discount ?? 0));// ProductModel.FindOnSaleDiscountByPID(_product_id);
                     //throw new Exception(CC.ToString());
                     order.tag = 1;
                     order.menu_pre_serial_no = product.menu_child_serial_no;
                     order.product_type = Product_category_helper.product_category_value(pc.is_noebook == byte.Parse("1") ? product_category.noebooks : product_category.part_product);
                     order.product_type_name = pc.is_noebook == byte.Parse("1") ? "Noebook" : "Unit";
-                    order.product_current_price_rate = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_price.Value);
+                    order.product_current_price_rate = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US,(product.product_current_price??0));
                     order.prodType = product.prodType;
                     DBContext.tb_order_product.Add(order);
                     DBContext.SaveChanges();
