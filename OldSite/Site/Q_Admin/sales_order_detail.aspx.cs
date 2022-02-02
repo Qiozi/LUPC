@@ -165,7 +165,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
 
             // this.lbl_customer_name.Text = customer.customer_shipping_first_name.Trim() + "&nbsp;" + customer.customer_shipping_last_name.Trim();
             this.lbl_customer_number.Text = Code.FilterCustomerCode(customer.customer_serial_no.ToString());
-            this.lbl_grand_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.grand_total.Value), price_unit_string);
+            this.lbl_grand_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.grand_total ?? 0), price_unit_string);
             this.lbl_order_date.Text = orderHelper.create_datetime.ToString();
 
 
@@ -210,7 +210,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
                     this.lbl_shipping_company.Text = scm != null ? scm.shipping_company_name : "";
 
 
-                    this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge.Value), price_unit_string);
+                    this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge ?? 0M), price_unit_string);
 
                     this.lbl_shipping_address.Text = string.Format("{0}{1}{2}", customer.customer_shipping_first_name + " " + customer.customer_shipping_last_name
                         + " <br/>"
@@ -225,7 +225,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
                 var scm = ShippingCompanyModel.GetShippingCompanyModel(DBContext, orderHelper.shipping_company.HasValue ? orderHelper.shipping_company.Value : 0);
                 this.lbl_shipping_company.Text = scm != null ? scm.shipping_company_name : "";
 
-                this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge.Value), price_unit_string);
+                this.lbl_shipping_and_handling.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.shipping_charge ?? 0), price_unit_string);
 
                 this.lbl_shipping_address.Text = string.Format("{0}{1}{2}", customer.customer_shipping_first_name + " " + customer.customer_shipping_last_name
                     + " <br/>"
@@ -236,13 +236,13 @@ public partial class Q_Admin_sales_order_detail : PageBase
 
             }
             var discount = 0M;
-            if (orderHelper.discount.HasValue && orderHelper.discount.Value > 0)
+            if (orderHelper.discount.HasValue && (orderHelper.discount ?? 0) > 0)
             {
-                discount += orderHelper.discount.Value;
+                discount += orderHelper.discount ?? 0;
             }
-            if (orderHelper.input_order_discount.HasValue && orderHelper.input_order_discount.Value > 0M)
+            if (orderHelper.input_order_discount.HasValue && (orderHelper.input_order_discount ?? 0) > 0M)
             {
-                discount += orderHelper.input_order_discount.Value;
+                discount += orderHelper.input_order_discount ?? 0;
             }
             this.lbl_special_cash_discount.Text = string.Format("{0}{1}", discount.ToString("$0.##"), price_unit_string);
             //    this.lbl_special_cash_discount.ForeColor = System.Drawing.Color.FromName("red");
@@ -341,18 +341,18 @@ public partial class Q_Admin_sales_order_detail : PageBase
             #endregion
             // tax
             this.lbl_tax_rate.Text = tax_string;
-            this.lbl_sub_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.sub_total_rate.Value), price_unit_string);
+            this.lbl_sub_total.Text = string.Format("{0}{1}", Config.ConvertPrice(orderHelper.sub_total_rate ?? 0), price_unit_string);
 
             if (this.lbl_payment.Text == "-1")
             {
                 this.lbl_payment.Text = "NONE";
             }
 
-            if (orderHelper.is_old.Value)
+            if (orderHelper.is_old ?? false)
             {
                 this.lbl_is_old_order.Text = "This is Old Order.";
             }
-            this.lbl_taxable_total.Text = string.Format("{0}{1}", orderHelper.taxable_total.Value.ToString("$0.00"), price_unit_string);
+            this.lbl_taxable_total.Text = string.Format("{0}{1}", (orderHelper.taxable_total ?? 0).ToString("$0.00"), price_unit_string);
 
 
             this.lbl_email.Text = "<strong><span style=\"font-size: 9pt\">Email:&nbsp;&nbsp;</strong></span>";
@@ -386,7 +386,7 @@ public partial class Q_Admin_sales_order_detail : PageBase
             this.lbl_weee_charge.Text = string.Format("{0}{1}", ConvertPrice.RoundPrice(orderHelper.weee_charge.ToString()), price_unit_string);
 
 
-            var oem = DBContext.tb_order_ebay.Where(me => me.order_code.HasValue && me.order_code.Value.Equals(orderCodeInt)).ToList();//                OrderEbayModel.FindAllByProperty("order_code", ReqOrderCode);
+            var oem = DBContext.tb_order_ebay.Where(me => me.order_code.HasValue && (me.order_code ?? 0).Equals(orderCodeInt)).ToList();//                OrderEbayModel.FindAllByProperty("order_code", ReqOrderCode);
             if (oem != null && oem.Count > 0)
             {
                 this.lbl_shipping_service.Text = string.Format(@"<br><span style='font-weight:bold;'>Shipping Service:&nbsp;&nbsp;</span> {0}
