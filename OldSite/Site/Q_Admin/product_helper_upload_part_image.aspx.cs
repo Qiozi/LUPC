@@ -9,11 +9,11 @@ using System.IO;
 public partial class Q_Admin_product_helper_upload_part_image : PageBase
 {
     int current_sku = 0;
-    string source_pathfile = Config.ProImgBasePath + "pro_img\\source_components\\";
-    string part_pathfile = Config.ProImgBasePath + "pro_img\\COMPONENTS\\";
-    string part_pathfile_no_shuiying = Config.ProImgBasePath + "pro_img\\not_shui_yin\\";
+    string source_pathfile = Path.Combine(Config.ProImgBasePath, "pro_img\\source_components\\");
+    string part_pathfile = Path.Combine(Config.ProImgBasePath, "pro_img\\COMPONENTS\\");
+    string part_pathfile_no_shuiying = Path.Combine(Config.ProImgBasePath, "pro_img\\not_shui_yin\\");
     string image_url = Config.http_domain + "pro_img/COMPONENTS/";//"http://www.lucomputers.com/pro_img/COMPONENTS/";
-    string ebay_path = Config.ProImgBasePath + "pro_img\\ebay_gallery\\";
+    string ebay_path = Path.Combine(Config.ProImgBasePath, "pro_img\\ebay_gallery\\");
     ArrayList AL = new ArrayList();
 
     public int CurrentSKU
@@ -29,7 +29,7 @@ public partial class Q_Admin_product_helper_upload_part_image : PageBase
             BindUploadDV();
         }
     }
-    
+
     public void BindUploadDV()
     {
         DataTable dt = new DataTable();
@@ -48,7 +48,7 @@ public partial class Q_Admin_product_helper_upload_part_image : PageBase
 
     void SaveUpload(int sku)
     {
-        string webfilename = source_pathfile + sku.ToString() + ".jpg";
+        string webfilename = Path.Combine(source_pathfile, sku.ToString(), ".jpg");
         if (File.Exists(webfilename))
         {
             SaveUpload(null, 1, false, webfilename);
@@ -79,7 +79,7 @@ public partial class Q_Admin_product_helper_upload_part_image : PageBase
                 //if (fileContentType == "image/bmp" || fileContentType == "image/gif" || fileContentType == "image/jpeg")
 
                 string fileName = FileUpload1.FileName;
-                webFilePath = source_pathfile + fileName;        // 服务器端文件路径
+                webFilePath = Path.Combine(source_pathfile, fileName);        // 服务器端文件路径
 
                 if (fileContentType == "image/jpeg")
                 {
@@ -219,7 +219,7 @@ public partial class Q_Admin_product_helper_upload_part_image : PageBase
         DataTable dt = Config.ExecuteDataTable("select menu_child_serial_no from tb_product where product_serial_no='" + sku.ToString() + "'");
         if (dt.Rows.Count > 0)
         {
-            string path =string.Format("{0}{1}/", part_pathfile_no_shuiying, dt.Rows[0][0].ToString());
+            string path = string.Format("{0}{1}/", part_pathfile_no_shuiying, dt.Rows[0][0].ToString());
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
@@ -627,10 +627,10 @@ public partial class Q_Admin_product_helper_upload_part_image : PageBase
                 int.TryParse(dr["product_img_sum"].ToString(), out sum);
                 for (int j = 0; j < sum; j++)
                 {
-                    string list_file =string.Format("{0}{1}_list_{2}.jpg", path, dr["product_serial_no"].ToString(), j + 1);
+                    string list_file = string.Format("{0}{1}_list_{2}.jpg", path, dr["product_serial_no"].ToString(), j + 1);
                     string big_file = string.Format("{0}{1}_g_{2}.jpg", path, dr["product_serial_no"].ToString(), j + 1);
 
-                    string source_list_file =string.Format("{0}{1}_list_{2}.jpg", part_pathfile, dr["product_serial_no"].ToString(), j + 1);
+                    string source_list_file = string.Format("{0}{1}_list_{2}.jpg", part_pathfile, dr["product_serial_no"].ToString(), j + 1);
                     string source_big_file = string.Format("{0}{1}_g_{2}.jpg", part_pathfile, dr["product_serial_no"].ToString(), j + 1);
 
                     if (!File.Exists(list_file) && File.Exists(source_list_file))

@@ -44,7 +44,7 @@ public partial class Q_Admin_orders_edit_detail_modify_fee : PageBase
                 this.CheckBox_lock_input_ship_charge.Checked = OH.is_lock_shipping_charge ?? false;
                 this.CheckBox_lock_tax_change.Checked = OH.is_lock_tax_change ?? false;
 
-                BindTaxRate((int)(OH.gst_rate + OH.pst_rate + OH.hst_rate));
+                BindTaxRate((int)(OH.gst_rate ?? 0 + OH.pst_rate ?? 0 + OH.hst_rate ??0));
             }
         }
     }

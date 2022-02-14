@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using LU.Data;
+using LU.Toolkit.Extensions;
 
 public partial class Q_Admin_orders_edit_detail_new : PageBase
 {
@@ -126,29 +127,29 @@ public partial class Q_Admin_orders_edit_detail_new : PageBase
             PriceInfo.GrandTotal = OH.grand_total ?? 0M;// this.lbl_grand_total.Text = ConvertPrice.RoundPrice(dr["grand_total"].ToString());
             PriceInfo.SubTotal = OH.sub_total ?? 0M;//  this.lbl_sub_total.Text = ConvertPrice.RoundPrice(dr["sub_total"].ToString());
             PriceInfo.SpecialCashDiscount = OH.input_order_discount.HasValue
-                                                ? OH.input_order_discount.Value
+                                                ? OH.input_order_discount.ToDecimal()
                                                 : 0M;//  this.lbl_special_cash_discount.Text = ConvertPrice.RoundPrice(dr["input_order_discount"].ToString());
             PriceInfo.InputDiscount = OH.input_order_discount ?? 0M; ;//
             PriceInfo.TaxableTotal = OH.taxable_total ?? 0M; ;// this.lbl_taxable_total.Text = ConvertPrice.RoundPrice(dr["taxable_total"].ToString());
-            PriceInfo.Weee = OH.weee_charge.HasValue ? OH.weee_charge.Value : 0M;// this.lbl_weee.Text = ConvertPrice.RoundPrice(dr["weee_charge"].ToString());
+            PriceInfo.Weee = OH.weee_charge.HasValue ? OH.weee_charge.ToDecimal() : 0M;// this.lbl_weee.Text = ConvertPrice.RoundPrice(dr["weee_charge"].ToString());
             PriceInfo.PriceUnit = OH.price_unit;
             PriceInfo.Hst = OH.hst.HasValue
-                                ? OH.hst.Value
+                                ? OH.hst.ToDecimal()
                                 : 0M;
             PriceInfo.Hst_rate = OH.hst_rate.HasValue
-                ? OH.hst_rate.Value
+                ? OH.hst_rate.ToDecimal()
                 : 0M;
             PriceInfo.Gst = OH.gst.HasValue
-                ? OH.gst.Value
+                ? OH.gst.ToDecimal()
                 : 0M;
             PriceInfo.Gst_rate = OH.gst_rate.HasValue
-                ? OH.gst_rate.Value
+                ? OH.gst_rate.ToDecimal()
                 : 0M;
             PriceInfo.Pst = OH.pst.HasValue
-                ? OH.pst.Value
+                ? OH.pst.ToDecimal()
                 : 0M;
-            PriceInfo.Pst_rate = OH.pst_rate.HasValue ? OH.pst_rate.Value : 0M;
-            PriceInfo.PartDiscount = OH.discount.HasValue ? OH.discount.Value : 0M;
+            PriceInfo.Pst_rate = OH.pst_rate.HasValue ? OH.pst_rate.ToDecimal() : 0M;
+            PriceInfo.PartDiscount = OH.discount.HasValue ? OH.discount.ToDecimal() : 0M;
 
         }
     }
@@ -689,26 +690,26 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
                 {
 
                     var product = ProductModel.GetProductModel(DBContext, _product_id);
-                    var pc = ProductCategoryModel.GetProductCategoryModel(DBContext, product.menu_child_serial_no.Value);
+                    var pc = ProductCategoryModel.GetProductCategoryModel(DBContext, product.menu_child_serial_no.ToInt32());
                     var order = new tb_order_product();// OrderProductModel();
 
                     order.menu_child_serial_no = product.menu_child_serial_no;
                     order.order_code = ReqOrderCode.ToString();
-                    order.order_product_cost = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_cost.Value);
-                    order.order_product_price = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_price.Value);
+                    order.order_product_cost = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, (product.product_current_cost??0));
+                    order.order_product_price = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, (product.product_current_price??0));
 
                     order.order_product_sum = 1;
                     order.product_name = product.product_name + (product.prodType.ToLower() != "new" ? " (" + product.prodType + ")" : "");
                     order.product_serial_no = _product_id;
                     order.sku = _product_id.ToString();
 
-                    order.order_product_sold = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_price.Value - product.product_current_discount.Value);// ProductModel.FindOnSaleDiscountByPID(_product_id);
+                    order.order_product_sold = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, (product.product_current_price ?? 0) - (product.product_current_discount ?? 0));// ProductModel.FindOnSaleDiscountByPID(_product_id);
                     //throw new Exception(CC.ToString());
                     order.tag = 1;
                     order.menu_pre_serial_no = product.menu_child_serial_no;
                     order.product_type = Product_category_helper.product_category_value(pc.is_noebook == byte.Parse("1") ? product_category.noebooks : product_category.part_product);
                     order.product_type_name = pc.is_noebook == byte.Parse("1") ? "Noebook" : "Unit";
-                    order.product_current_price_rate = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US, product.product_current_price.Value);
+                    order.product_current_price_rate = ConvertPrice.Price(OH.price_unit.ToLower().ToString() == "cad" ? CountryCategory.CA : CountryCategory.US,(product.product_current_price??0));
                     order.prodType = product.prodType;
                     DBContext.tb_order_product.Add(order);
                     DBContext.SaveChanges();
@@ -718,7 +719,7 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
                     //
                     //  if the order is OK then save a product after create.
                     //
-                    if (OH.is_ok.Value)
+                    if (OH.is_ok.ToBool())
                     {
                         string error = "";
                         var oh = new OrderHelper(DBContext);
@@ -801,7 +802,7 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
             int _product_id = pm.product_serial_no;
 
             var product = pm;
-            var pc = ProductCategoryModel.GetProductCategoryModel(DBContext, product.menu_child_serial_no.Value);
+            var pc = ProductCategoryModel.GetProductCategoryModel(DBContext, product.menu_child_serial_no.ToInt32());
             var order = new tb_order_product();// OrderProductModel();
             order.menu_child_serial_no = product.menu_child_serial_no;
             order.order_code = ReqOrderCode.ToString();
@@ -825,7 +826,7 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
             //
             //  if the order is OK then save a product after create.
             //
-            if (OH.is_ok.Value)
+            if (OH.is_ok.ToBool())
             {
                 string error = "";
                 var oh = new OrderHelper(DBContext);
@@ -968,7 +969,7 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
                     var p = ProductModel.GetProductModel(DBContext, product_id);
                     // throw new Exception((_sold + ((p.product_current_price - p.product_current_discount) * part_quantity)).ToString());
 
-                    ChangeSystemPrice(e.Item, _system_code, OH.order_source == 3, _sold + ((p.product_current_price.Value - p.product_current_discount.Value) * part_quantity));
+                    ChangeSystemPrice(e.Item, _system_code, OH.order_source == 3, _sold + ((p.product_current_price.ToDecimal() - p.product_current_discount.ToDecimal()) * part_quantity));
 
                     break;
 
@@ -1035,7 +1036,7 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
                     if (!ohelper.CopyProductToHistoryStore(pm, m, ReqOrderCode.ToString(), sum, false, ref error))
                         throw new Exception(error);
                     m = OrderProductSysDetailModel.GetOrderProductSysDetailModel(DBContext, sys_detail_id);
-                    part_quantity = m.part_quantity.Value;
+                    part_quantity = m.part_quantity.ToInt32();
 
                     DBContext.tb_order_product_sys_detail.Remove(m);
                     DBContext.SaveChanges();
@@ -1051,9 +1052,9 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
                             if (OH.order_source == 3)
                             {
                                 var ops = OrderProductModel.GetModelsByProductCode(DBContext, system_code);
-                                orderProductPrice = ops[0].order_product_sold.Value;
+                                orderProductPrice = ops[0].order_product_sold.ToDecimal();
                             }
-                            ChangeSystemPrice(this.lv_sys_list.Items[i], system_code, OH.order_source == 3, orderProductPrice - (pm.product_current_price.Value - pm.product_current_discount.Value) * part_quantity);
+                            ChangeSystemPrice(this.lv_sys_list.Items[i], system_code, OH.order_source == 3, orderProductPrice - (pm.product_current_price.ToDecimal() - pm.product_current_discount.ToDecimal()) * part_quantity);
                         }
                     }
                     break;
@@ -1104,8 +1105,8 @@ onclick=""ShowIframe('Modify fee','/q_admin/orders_edit_detail_modify_fee.aspx?i
             singlem = sdms[0];
 
         var p = ProductModel.GetProductModel(DBContext, product_id);
-        var pc = ProductCategoryModel.GetProductCategoryModel(DBContext, p.menu_child_serial_no.Value);
-        m.product_current_cost = p.product_current_cost.Value;
+        var pc = ProductCategoryModel.GetProductCategoryModel(DBContext, p.menu_child_serial_no.ToInt32());
+        m.product_current_cost = p.product_current_cost.ToDecimal();
         m.product_current_price = p.product_current_price;
         m.save_price = ProductModel.FindOnSaleDiscountByPID(product_id);
         m.product_current_price_rate = p.product_current_price;
