@@ -33,6 +33,8 @@ public class PDFHelper
     /// </summary>
     private void DeleteOldPDFFile(System.Web.UI.Page Page, string order_code)
     {
+        if (!Directory.Exists(Page.Server.MapPath(Config.path_pdf_order)))
+            Directory.CreateDirectory(Page.Server.MapPath(Config.path_pdf_order));
         DirectoryInfo dir = new DirectoryInfo(Page.Server.MapPath(Config.path_pdf_order));
         System.IO.FileInfo[] fis = dir.GetFiles();
         for (int i = 0; i < fis.Length; i++)
@@ -226,7 +228,8 @@ public class PDFHelper
                 tAddress.AddCell(new Phrase((csm[0].customer_shipping_address ?? "").Trim().Length > 5 ? csm[0].customer_shipping_address : "", font11));  // ship: address
 
                 tAddress.AddCell(new Phrase(" ", font11B));
-                tAddress.AddCell(new Phrase((csm[0].customer_address1 ?? "").Trim().Length < 5 ? "" : (csm[0].customer_city + " " + StateShippingModel.GetStateShippingModel(_context, csm[0].customer_card_state.Value).state_short_name + " " + csm[0].zip_code), font11));     // sale: city, state, zipcode
+
+                tAddress.AddCell(new Phrase((csm[0].customer_address1 ?? "").Trim().Length < 5 ? "" : (csm[0].customer_city + " " + (csm[0].customer_card_state == null ? "" : StateShippingModel.GetStateShippingModel(_context, csm[0].customer_card_state.Value).state_short_name) + " " + csm[0].zip_code), font11));     // sale: city, state, zipcode
                 tAddress.AddCell(new Phrase((csm[0].customer_shipping_address ?? "").Trim().Length > 5 ? (csm[0].customer_shipping_city + " " + csm[0].shipping_state_code + " " + csm[0].customer_shipping_zip_code) : "", font11));     // ship: city, state, zipcode
                 tAddress.AddCell(new Phrase(" ", font11B));
 
