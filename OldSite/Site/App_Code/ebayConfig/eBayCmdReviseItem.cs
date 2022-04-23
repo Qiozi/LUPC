@@ -370,6 +370,8 @@ public class eBayCmdReviseItem
         byte[] utf8Bytes = new byte[dataLen];
         Encoding.UTF8.GetBytes(xmlText, 0, xmlText.Length, utf8Bytes, 0);
         #endregion
+        ServicePointManager.Expect100Continue = true;
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
         #region Setup The Request (inc. HTTP Headers
         //Create a new HttpWebRequest object for the ServerUrl

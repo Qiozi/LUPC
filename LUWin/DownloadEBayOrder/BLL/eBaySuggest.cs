@@ -85,21 +85,23 @@ namespace DownloadEBayOrder.BLL
         /// <returns></returns>
         string GetSystemSuggestTitle(nicklu2Entities context, int sysSku)
         {
-            var sql = string.Format(@"select p.short_name_for_sys, sys.is_barebone,p.product_current_price, es.is_cpu, es.is_video
+            var sql = string.Format(@"select p.short_name_for_sys
 from tb_product p inner join tb_ebay_system_parts sp on sp.luc_sku=p.product_serial_no
 inner join tb_ebay_system_part_comment es on es.id=sp.comment_id 
 inner join tb_ebay_system sys on sys.id=sp.system_sku
-where p.short_name_for_sys <> '' and sp.system_sku='"+ sysSku + @"'
+where p.short_name_for_sys <> '' and sp.system_sku='" + sysSku + @"'
 order by priority asc");
-            var query = Config.ExecuteDataTable(sql);
-            var res = string.Empty;
-            foreach (DataRow dr in query.Rows)
+            using (nicklu2Entities DB = new nicklu2Entities())
             {
-                res += "," + dr["short_name_for_sys"].ToString();
+                var query = DB.Database.SqlQuery<string>(sql).ToList();// Config.ExecuteDataTable(sql);
+                var res = string.Join(",", query);
+
+
+                res = res.Replace(",,", "");
+                res = res.TrimEnd(',');
+
+                return res;
             }
-            res = res.Replace(",,", "");
-            res = res.TrimEnd(',');
-            return res;
         }
 
 
@@ -110,39 +112,46 @@ order by priority asc");
         /// <returns></returns>
         List<eBayProdInfo> GetMyWeAlsoSuggestNotebook(int sku)
         {
-            var cpuString = Config.ExecuteScalar(string.Format(@"
+            using (nicklu2Entities db = new nicklu2Entities())
+            {
+                var cpuString = db.Database.SqlQuery<string>(string.Format(@"
                 SELECT max(replace(replace(replace(lower(ItemSpecificsValue),'intel',''),'amd',''),'core','')) 
                 FROM tb_ebay_system_item_specifics where length(system_sku)=5 and ItemSpecificsName='Processor Type' and system_sku={0};", sku))
-                    .ToString();
-            if (!string.IsNullOrEmpty(cpuString))
-            {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                    .ToList();
+                if (cpuString != null && cpuString.Count > 0 && (cpuString[0] ?? "").Trim() != "")
+                {
+                    var query = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
 
                             where ItemSpecificsValue like '%{0}%' order by es.BuyItNowPrice asc;
-                            ", cpuString.Trim()));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
-                {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                            ", cpuString[0].Trim());
+
+
+                    var res = db.Database.SqlQuery<eBayProdInfo>(query).ToList();
+                    return res;
+
+                    //var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+                    //return res;
                 }
-                return res;
-            }
-            else
-            {
-                return new List<eBayProdInfo>();
+                else
+                {
+                    return new List<eBayProdInfo>();
+                }
             }
         }
 
@@ -153,39 +162,47 @@ order by priority asc");
         /// <returns></returns>
         List<eBayProdInfo> GetMyWeAlsoSuggestHDD(int sku)
         {
-            var cpuString = Config.ExecuteScalar(string.Format(@"
+            using (nicklu2Entities db = new nicklu2Entities())
+            {
+                var cpuString = db.Database.SqlQuery<string>(string.Format(@"
                 SELECT max(ItemSpecificsValue) 
                 FROM tb_ebay_system_item_specifics where length(system_sku)=5 and ItemSpecificsName='Brand' and system_sku={0};", sku))
-                    .ToString();
-            if (!string.IsNullOrEmpty(cpuString))
-            {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                    .ToList();
+
+                if (cpuString != null && cpuString.Count > 0 && (cpuString[0] ?? "").Trim() != "")
+                {
+                    var query = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
 
                             where ItemSpecificsValue like '%{0}%' and p.menu_child_serial_no=25 order by es.BuyItNowPrice asc;
-                            ", cpuString.Trim()));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
-                {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                            ", cpuString[0].Trim());
+
+
+                    var res = db.Database.SqlQuery<eBayProdInfo>(query).ToList();
+                    return res;
+
+                    //var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+                    //return res;
                 }
-                return res;
-            }
-            else
-            {
-                return new List<eBayProdInfo>();
+                else
+                {
+                    return new List<eBayProdInfo>();
+                }
             }
         }
 
@@ -196,39 +213,47 @@ order by priority asc");
         /// <returns></returns>
         List<eBayProdInfo> GetMyWeAlsoSuggestMotherboard(int sku)
         {
-            var cpuString = Config.ExecuteScalar(string.Format(@"
+            using (nicklu2Entities db = new nicklu2Entities())
+            {
+                var cpuString = db.Database.SqlQuery<string>(string.Format(@"
                 SELECT max(ItemSpecificsValue) as ItemSpecificsValue
                 FROM tb_ebay_system_item_specifics where length(system_sku)=5 and ItemSpecificsName='Socket Type' and system_sku={0};", sku))
-                    .ToString();
-            if (!string.IsNullOrEmpty(cpuString))
-            {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                    .ToList();
+                if (cpuString != null && cpuString.Count > 0 && (cpuString[0] ?? "").Trim() != "")
+                {
+                    var query = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
 
                             where ItemSpecificsValue like '%{0}%' order by es.BuyItNowPrice asc;
-                            ", cpuString.Trim()));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
-                {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                            ", cpuString[0].Trim());
+
+
+                    var res = db.Database.SqlQuery<eBayProdInfo>(query).ToList();
+                    return res;
+
+
+                    //var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+                    //return res;
                 }
-                return res;
-            }
-            else
-            {
-                return new List<eBayProdInfo>();
+                else
+                {
+                    return new List<eBayProdInfo>();
+                }
             }
         }
 
@@ -239,39 +264,46 @@ order by priority asc");
         /// <returns></returns>
         List<eBayProdInfo> GetMyWeAlsoSuggestVideoCard(int sku)
         {
-            var cpuString = Config.ExecuteScalar(string.Format(@"
+            using (nicklu2Entities db = new nicklu2Entities())
+            {
+                var cpuString = db.Database.SqlQuery<string>(string.Format(@"
                 SELECT max(ItemSpecificsValue) as ItemSpecificsValue
                 FROM tb_ebay_system_item_specifics where length(system_sku)=5 and ItemSpecificsName='Chipset/GPU Model' and system_sku={0};", sku))
-                    .ToString();
-            if (!string.IsNullOrEmpty(cpuString))
-            {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                    .ToList();
+                if (cpuString != null && cpuString.Count > 0 && (cpuString[0] ?? "").Trim() != "")
+                {
+                    var query = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
 
                             where ItemSpecificsValue like '%{0}%' order by es.BuyItNowPrice asc;
-                            ", cpuString.Trim()));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
-                {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                            ", cpuString[0].Trim());
+
+                    var res = db.Database.SqlQuery<eBayProdInfo>(query).ToList();
+                    return res;
+
+
+                    //var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+                    //return res;
                 }
-                return res;
-            }
-            else
-            {
-                return new List<eBayProdInfo>();
+                else
+                {
+                    return new List<eBayProdInfo>();
+                }
             }
         }
 
@@ -282,40 +314,48 @@ order by priority asc");
         /// <returns></returns>
         List<eBayProdInfo> GetMyWeAlsoSuggestCPU(int sku)
         {
-            var cpuString = Config.ExecuteScalar(string.Format(@"
+            using (nicklu2Entities db = new nicklu2Entities())
+            {
+                var cpuString = db.Database.SqlQuery<string>(string.Format(@"
                 SELECT max(ItemSpecificsValue) as ItemSpecificsValue
                 FROM tb_ebay_system_item_specifics where length(system_sku)=5 and ItemSpecificsName='Brand' and system_sku={0};", sku))
-                    .ToString();
-            if (!string.IsNullOrEmpty(cpuString))
-            {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                    .ToList();
+                if (cpuString != null && cpuString.Count > 0 && (cpuString[0] ?? "").Trim() != "")
+                {
+                    var query = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
 
                             where ItemSpecificsValue like '%{0}%' and p.menu_child_serial_no=22 order by es.BuyItNowPrice asc;
-                            ", cpuString.Trim()));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
-                {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                            ", cpuString[0].Trim());
+
+                    var res = db.Database.SqlQuery<eBayProdInfo>(query).ToList();
+                    return res;
+
+
+                    //var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+                    //return res;
                 }
-                return res;
+                else
+                {
+                    return new List<eBayProdInfo>();
+                }
             }
-            else
-            {
-                return new List<eBayProdInfo>();
-            }
+
         }
 
         /// <summary>
@@ -325,39 +365,48 @@ order by priority asc");
         /// <returns></returns>
         List<eBayProdInfo> GetMyWeAlsoSuggestPowerSupply(int sku)
         {
-            var cpuString = Config.ExecuteScalar(string.Format(@"
+            using (nicklu2Entities db = new nicklu2Entities())
+            {
+                System.IO.File.WriteAllText("C:\\Workspaces\\tt.txt", sku.ToString());
+                var cpuString = db.Database.SqlQuery<string>(string.Format(@"
                 SELECT max(ItemSpecificsValue) as ItemSpecificsValue
                 FROM tb_ebay_system_item_specifics where length(system_sku)=5 and ItemSpecificsName='Max. Output Power' and system_sku={0};", sku))
-                    .ToString();
-            if (!string.IsNullOrEmpty(cpuString))
-            {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                    .ToList();
+                if (cpuString != null && cpuString.Count > 0 && (cpuString[0] ?? "").Trim() != "")
+                {
+                    var query = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
 
                             where ItemSpecificsValue like '%{0}%' order by es.BuyItNowPrice asc;
-                            ", cpuString.Trim()));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
-                {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                            ", (cpuString[0] ?? "").Trim());
+
+
+                    var res = db.Database.SqlQuery<eBayProdInfo>(query).ToList();
+                    return res;
+
+
+                    //var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+                    //return res;
                 }
-                return res;
-            }
-            else
-            {
-                return new List<eBayProdInfo>();
+                else
+                {
+                    return new List<eBayProdInfo>();
+                }
             }
         }
 
@@ -375,29 +424,34 @@ order by priority asc");
             //        .ToString();
             if (true)
             {
-                var query = Config
-                                .ExecuteDataTable(string.Format(@"
-                            select distinct es.Title, es.ItemID, es.BuyItNowPrice,es.luc_sku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
+                var sql = string.Format(@"
+                            select distinct es.Title, es.ItemID as eBayItemId, es.BuyItNowPrice as eBayPrice,es.luc_sku as LUCSku, case when p.other_product_sku>0 then p.other_product_sku else p.product_serial_no end ImgSku
                             from 
 	                            tb_ebay_system_item_specifics sp 
                                 inner join tb_product p on sp.system_sku = p.product_serial_no
                                 inner join tb_ebay_selling es on es.luc_sku=sp.system_sku
                                 inner join (select sku from tb_ebay_category_and_product where eBayCateID_1 in (SELECT eBayCateID_1 FROM nicklu2.tb_ebay_category_and_product where sku={0})) as sku on sku.sku=sp.system_sku
                             where 1=1 order by es.BuyItNowPrice asc;
-                            ", sku));
-                var res = new List<eBayProdInfo>();
-                foreach (DataRow dr in query.Rows)
+                            ", sku);
+                using (nicklu2Entities DB = new nicklu2Entities())
                 {
-                    res.Add(new eBayProdInfo
-                    {
-                        eBayItemId = dr["ItemID"].ToString(),
-                        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
-                        LUCSku = int.Parse(dr["luc_sku"].ToString()),
-                        Title = dr["Title"].ToString(),
-                        ImgSku = int.Parse(dr["ImgSku"].ToString())
-                    });
+                    var query = DB.Database.SqlQuery<eBayProdInfo>(sql).ToList();
+
+                    ////var res = new List<eBayProdInfo>();
+                    //foreach (DataRow dr in query.Rows)
+                    //////{
+                    //    res.Add(new eBayProdInfo
+                    //    {
+                    //        eBayItemId = dr["ItemID"].ToString(),
+                    //        eBayPrice = decimal.Parse(dr["BuyItNowPrice"].ToString()),
+                    //        LUCSku = int.Parse(dr["luc_sku"].ToString()),
+                    //        Title = dr["Title"].ToString(),
+                    //        ImgSku = int.Parse(dr["ImgSku"].ToString())
+                    //    });
+                    //}
+
+                    return query;
                 }
-                return res;
             }
             //else
             //{
